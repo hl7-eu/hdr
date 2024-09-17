@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/hdr">
+<version code="current" url=""/>
+<artifactPageExtension value="-definitions"/>
+<artifactPageExtension value="-examples"/>
+<artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/HospitalDischargeReport" key="StructureDefinition-HospitalDischargeReport" name="A - Hospital Discharge Report (eHN)"/>
+<artifact id="StructureDefinition/AdvanceDirectives" key="StructureDefinition-AdvanceDirectives" name="A.2.1 - Advance Directives (eHN)"/>
+<artifact id="StructureDefinition/Alerts" key="StructureDefinition-Alerts" name="A.2.2 - Alerts (eHN)"/>
+<artifact id="StructureDefinition/Encounter" key="StructureDefinition-Encounter" name="A.2.3 - Encounter (eHN)"/>
+<artifact id="StructureDefinition/AdmissionEvaluation" key="StructureDefinition-AdmissionEvaluation" name="A.2.4 - Admission evaluation (eHN)"/>
+<artifact id="StructureDefinition/PatientHistory" key="StructureDefinition-PatientHistory" name="A.2.6 - Patient history (eHN)"/>
+<artifact id="StructureDefinition/HospitalStay" key="StructureDefinition-HospitalStay" name="A.2.7 - Hospital stay (eHN)"/>
+<artifact id="StructureDefinition/DischargeDetails" key="StructureDefinition-DischargeDetails" name="A.2.8 - Discharge details (eHN)"/>
+<artifact id="StructureDefinition/Recommendations" key="StructureDefinition-Recommendations" name="A.2.9 - Care plan and other recommendations after discharge (eHN)"/>
+<artifact id="ValueSet/admission-urgency-vs-hdr-eu" key="ValueSet-admission-urgency-vs-hdr-eu" name="Admission Urgency Value Set"/>
+<artifact id="ValueSet/allergy-intolerance-vs-hdr-eu" key="ValueSet-allergy-intolerance-vs-hdr-eu" name="Allergy Intolerance - Xpandh"/>
+<artifact id="ValueSet/allergy-intolerance-substances-vs-hdr-eu" key="ValueSet-allergy-intolerance-substances-vs-hdr-eu" name="AllergyIntoleranceSubstancesHdrVS"/>
+<artifact id="ValueSet/anthropometric-observation-vs" key="ValueSet-anthropometric-observation-vs" name="Anthropometric Observation Value Set"/>
+<artifact id="ValueSet/bmi-observation-unit-vs" key="ValueSet-bmi-observation-unit-vs" name="BMI Observation Unit Value Set"/>
+<artifact id="ValueSet/bmi-observation-vs" key="ValueSet-bmi-observation-vs" name="BMI Observation Value Set"/>
+<artifact id="ValueSet/body-height-observation-vs" key="ValueSet-body-height-observation-vs" name="Body Height Observation Value Set"/>
+<artifact id="ValueSet/body-weight-observation-vs" key="ValueSet-body-weight-observation-vs" name="Body Weight Observation Value Set"/>
+<artifact id="ValueSet/body-weight-units-vs" key="ValueSet-body-weight-units-vs" name="Body Weight Observation Value Set"/>
+<artifact id="StructureDefinition/Bundle-hdr-eu" key="StructureDefinition-Bundle-hdr-eu" name="Bundle: EU Hospital Discharge Report"/>
+<artifact id="ValueSet/cancer-stage-grading-vs" key="ValueSet-cancer-stage-grading-vs" name="Cancer Stage Grading: Snomed CT"/>
+<artifact id="ValueSet/cancer-stageGroup-vs" key="ValueSet-cancer-stageGroup-vs" name="Cancer Stage Group: SNOMED CT"/>
+<artifact id="ValueSet/circumference-observation-vs" key="ValueSet-circumference-observation-vs" name="Circumference Observation Value Set"/>
+<artifact id="StructureDefinition/Composition-hdr-eu" key="StructureDefinition-Composition-hdr-eu" name="Composition: Hospital Discharge Report"/>
+<artifact id="ValueSet/condition-vs-hdr-eu" key="ValueSet-condition-vs-hdr-eu" name="Condition Value Set"/>
+<artifact id="ValueSet/encounterClass-vs-hdr-eu" key="ValueSet-encounterClass-vs-hdr-eu" name="Encounter Class Value Set"/>
+<artifact id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
+<artifact id="ValueSet/encounter-type-vs-hdr-eu" key="ValueSet-encounter-type-vs-hdr-eu" name="In-patient Encounter Type Value Set"/>
+<artifact id="ValueSet/condition-mandatory-vs-hdr-eu" key="ValueSet-condition-mandatory-vs-hdr-eu" name="Mandatory Condition Value Set"/>
+<artifact id="ValueSet/medical-devices-vs-hdr-eu" key="ValueSet-medical-devices-vs-hdr-eu" name="Medical Devices (SNOMED CT) - Xpandh"/>
+<artifact id="ValueSet/medical-devices-snomed-absent-unknown-vs-hdr-eu" key="ValueSet-medical-devices-snomed-absent-unknown-vs-hdr-eu" name="Medical Devices - SNOMED CT + Absent/Unknown - IPS"/>
+<artifact id="ValueSet/mcode-observation-codes-distant-metastases-vs" key="ValueSet-mcode-observation-codes-distant-metastases-vs" name="Observation Codes for Distant Metastases Category"/>
+<artifact id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Observation Codes for Primary Tumor Category"/>
+<artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Observation Codes for Regional Node Category"/>
+<artifact id="ValueSet/procedure-snomed-vs-hdr-eu" key="ValueSet-procedure-snomed-vs-hdr-eu" name="Procedure codes: Snomed CT"/>
+<artifact id="ValueSet/procedures-snomed-absent-unknown-vs-hdr-eu" key="ValueSet-procedures-snomed-absent-unknown-vs-hdr-eu" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
+<artifact id="ValueSet/skinfold-thickness-units-vs" key="ValueSet-skinfold-thickness-units-vs" name="Skinfold Thickness Units Value Set"/>
+<artifact id="ValueSet/skinfold-thickness-vs" key="ValueSet-skinfold-thickness-vs" name="Skinfold Thickness Value Set"/>
+<artifact id="ValueSet/treated-vs-hdr-eu" key="ValueSet-treated-vs-hdr-eu" name="Treatment Class Value Set"/>
+<artifact id="ValueSet/vital-signs-observation-vs" key="ValueSet-vital-signs-observation-vs" name="Vital Signs Observation Value Set"/>
+<artifact id="ValueSet/functional-assessment-scales-vs" key="ValueSet-functional-assessment-scales-vs" name="Xpandh Functional Assessment Scales"/>
+<artifact id="ConceptMap/ConceptMap-HeaderMeta2FHIR-hdr-eu" key="ConceptMap-ConceptMap-HeaderMeta2FHIR-hdr-eu" name="eHN HDR header metadata to this guide Map"/>
+<artifact id="ConceptMap/ConceptMap-HeaderParticipants2FHIR-hdr-eu" key="ConceptMap-ConceptMap-HeaderParticipants2FHIR-hdr-eu" name="eHN Recipient to this guide Map"/>
+<artifact id="ConceptMap/ConceptMap-hdrEncounter2FHIR-hdr-eu" key="ConceptMap-ConceptMap-hdrEncounter2FHIR-hdr-eu" name="eHN Recipient to this guide Map"/>
+<artifact id="ConceptMap/ConceptMap-hdrHeader2FHIR-hdr-eu" key="ConceptMap-ConceptMap-hdrHeader2FHIR-hdr-eu" name="eHN Recipient to this guide Map"/>
+<page key="NA" name="(NA)"/>
+<page key="many" name="(many)"/>
+<page key="artifacts" name="Artifacts Summary"/>
+<page key="contributors" name="Authors and contributors"/>
+<page key="downloads" name="Downloads"/>
+<page key="index" name="Home"/>
+<page key="knownIusses" name="Known Issues"/>
+<page key="obligations" name="Obligations"/>
+<page key="toc" name="Table of Contents"/>
+<page key="logicalModel" name="eHN guideline data set"/>
+</specification>
