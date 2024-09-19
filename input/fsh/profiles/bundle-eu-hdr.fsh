@@ -74,7 +74,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[immunization].resource 1..
 * entry[immunization].resource only $Immunization-uv-ips
 * entry[media].resource 1..
-* entry[media].resource only $Media-observation-uv-ips
+* entry[media].resource only Media // $Media-observation-uv-ips
 * entry[medication].resource 1..
 * entry[medication].resource only $Medication-uv-ips
 * entry[medicationrequest].resource 1..
@@ -100,7 +100,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[observation-tobacco-use].resource 1..
 * entry[observation-tobacco-use].resource only $Observation-tobaccouse-uv-ips
 * entry[observation-results].resource 1..
-* entry[observation-results].resource only $Observation-results-uv-ips
+* entry[observation-results].resource only Observation // $Observation-results-uv-ips
 * entry[specimen].resource 1..
 * entry[specimen].resource only $Specimen-uv-ips
 * entry[medicationAdministration].resource 1..
