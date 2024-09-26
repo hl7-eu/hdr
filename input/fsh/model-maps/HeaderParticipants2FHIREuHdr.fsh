@@ -1,14 +1,14 @@
-Instance: ConceptMap-HeaderParticipants2FHIR-hdr-eu
+Instance: HeaderParticipants2FHIR-eu-hdr
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"
-* name = "HeaderParticipants2FHIR"
+* url = "http://hl7.eu/fhir/hdr/ConceptMap/HeaderParticipants2FHIR-eu-hdr"
+* name = "HeaderParticipants2FHIREuHdr"
 * title = "eHN Recipient to this guide Map"
 * status = #draft
-* experimental = false
+* experimental = true
 * description = """eHN HDR Encounter Model to this guide mapping"""
-* group[+].source = "http://hl7.eu/fhir/ig/xpandh/hdr/StructureDefinition/HospitalDischargeReport"
-* group[=].target = "http://hl7.eu/fhir/ig/xpandh/hdr/StructureDefinition/Composition-hdr-eu"
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalDischargeReport"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr"
 * group[=].element[+].code = #HospitalDischargeReport.header.payer					
 * group[=].element[=].display = "A.1.3 - Health insurance and payment information [Required]"
 * group[=].element[=].target.code = #Composition.extension:basedOn-order-or-requisition.insurance					

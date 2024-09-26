@@ -1,14 +1,14 @@
-Instance: ConceptMap-HeaderMeta2FHIR-hdr-eu
+Instance: HeaderMeta2FHIR-eu-hdr
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"
-* name = "HeaderMeta2FHIR"
+* url = "http://hl7.eu/fhir/hdr/ConceptMap/HeaderMeta2FHIR-eu-hdr"
+* name = "HeaderMeta2FHIREuHdr"
 * title = "eHN HDR header metadata to this guide Map"
 * status = #draft
-* experimental = false
+* experimental = true
 * description = """eHN eHN HDR header metadata Model to this guide mapping"""
-* group[+].source = "http://hl7.eu/fhir/ig/xpandh/hdr/StructureDefinition/HospitalDischargeReport"
-* group[=].target = "http://hl7.eu/fhir/ig/xpandh/hdr/StructureDefinition/Bundle-hdr-eu"
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalDischargeReport"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/Bundle-eu-hdr"
 * group[=].element[+].code = #HospitalDischargeReport.header.documentMetadata.type					
 * group[=].element[=].display = "A.1.8.2 - Document type [Mandatory]"
 * group[=].element[=].target.code = #Composition.type					
@@ -134,8 +134,8 @@ Usage: #definition
 * group[=].element[=].target.code = #nan
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[+].source = "http://hl7.eu/fhir/ig/xpandh/hdr/StructureDefinition/HospitalDischargeReport"
-* group[=].target = "http://hl7.eu/fhir/ig/xpandh/hdr/StructureDefinition/Composition-hdr-eu"
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalDischargeReport"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr"
 * group[=].element[+].code = #HospitalDischargeReport.header.documentMetadata					
 * group[=].element[=].display = "A.1.8 - Document metadata [Mandatory]"
 * group[=].element[=].target.code = #Composition					

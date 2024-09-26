@@ -1,6 +1,6 @@
 // --------------------------------------------------
 ValueSet:     EncounterClassHdrVS
-Id:	          encounterClass-vs-hdr-eu
+Id:	          encounterClass-vs-eu-hdr
 Title:	      "Encounter Class Value Set"
 Description:  """Hospital Discharge Report Encounter Class specifies a general class of inpatient encounter as being accute, nonaccute, emergency, short stay ... """
 
@@ -17,7 +17,7 @@ Description:  """Hospital Discharge Report Encounter Class specifies a general c
 
 // --------------------------------------------------
 ValueSet:     EncounterTypeHdrVS
-Id:	     encounter-type-vs-hdr-eu
+Id:	     encounter-type-vs-eu-hdr
 Title:      "In-patient Encounter Type Value Set"
 Description:  """Hospital Discharge Report Encounter Type allows to classify encounter using general type of care provision regimen during the inpatient encounter. Value set includes concepts from the SNOMED CT descendants of 225351009 (Care provision regime) but needs to be further dicsussed"""
 
@@ -28,7 +28,7 @@ Description:  """Hospital Discharge Report Encounter Type allows to classify enc
 
 // --------------------------------------------------
 ValueSet:     AdmissionUrgencyHdrVS
-Id:	     admission-urgency-vs-hdr-eu
+Id:	     admission-urgency-vs-eu-hdr
 Title:      "Admission Urgency Value Set"
 Description:  """Hospital Discharge Report Admission Urgency value set includes selected codes from HL7 v3-ActPriority code system."""
 * insert SetFmmandStatusRule (1, draft)
@@ -40,7 +40,7 @@ Description:  """Hospital Discharge Report Admission Urgency value set includes 
 
 // --------------------------------------------------
 ValueSet:     ConditionHdrVS
-Id:	     condition-vs-hdr-eu
+Id:	     condition-vs-eu-hdr
 Title:      "Condition Value Set"
 Description:  """Hospital Discharge Report Condition value set includes selected codes from recommended EU code systems for health conditions (WHO-ICD-10, SNOMED CT and Orphacodes)."""
 * insert SetFmmandStatusRule (1, draft)
@@ -55,7 +55,7 @@ Description:  """Hospital Discharge Report Condition value set includes selected
 
 // --------------------------------------------------
 ValueSet:     ConditionMandatoryHdrVS
-Id:	     condition-mandatory-vs-hdr-eu
+Id:	     condition-mandatory-vs-eu-hdr
 Title:      "Mandatory Condition Value Set"
 Description:  """Hospital Discharge Report Mandatory Condition value set includes selected codes from recommended EU code systems for health conditions (WHO-ICD-10, SNOMED CT and Orphacodes) and IPS Absent and Unknown Data."""
 * insert SetFmmandStatusRule (1, draft)
@@ -67,7 +67,7 @@ Description:  """Hospital Discharge Report Mandatory Condition value set include
 
 // --------------------------------------------------
 /* ValueSet:     POAIndicatorHdrVS
-Id:	     poa-indicator-vs-hdr-eu
+Id:	     poa-indicator-vs-eu-hdr
 Title:      "Condition Present on Admission (POA) Value Set"
 Description:  """Hospital Discharge Report Condition Present on Admission value set includes codes from Present on Admission code system."""
 * insert SetFmmandStatusRule (1, draft)
@@ -78,7 +78,7 @@ Description:  """Hospital Discharge Report Condition Present on Admission value 
 
 // --------------------------------------------------
 ValueSet:     TreatedHdrVS
-Id:	     treated-vs-hdr-eu
+Id:	     treated-vs-eu-hdr
 Title:      "Treatment Class Value Set"
 Description: "Value set for category of treatement of the conditoin during encounter."
 * insert SetFmmandStatusRule (1, draft)
@@ -371,7 +371,7 @@ Description: "Identifying codes based on the timing of classification for stage 
 
 // --------------------------------------------------
 ValueSet: ProcedureSnomedHdrVS
-Id: procedure-snomed-vs-hdr-eu
+Id: procedure-snomed-vs-eu-hdr
 Title: "Procedure codes: Snomed CT"
 Description: "This value set includes codes from SNOMED Clinical Terms®: descendants of 71388002 \\|Procedure (procedure)\\|, excluding [all subtypes of 14734007 \\|Administrative procedure (procedure)\\|, all subtypes of 59524001 \\|Blood bank procedure (procedure)\\|, all subtypes of 389067005 \\|Community health procedure (procedure)\\|, all subtypes of 442006003 \\|Determination of information related to transfusion (procedure)\\|, all subtypes of 225288009 \\|Environmental care procedure (procedure)\\|, all subtypes of 308335008 \\|Patient encounter procedure (procedure)\\|, all subtypes of 710135002 \\|Promotion (procedure)\\|, all subtypes of 389084004 \\|Staff related procedure (procedure)\\|]."
 * insert SetFmmandStatusRule (1, draft)
@@ -390,7 +390,7 @@ Description: "This value set includes codes from SNOMED Clinical Terms®: descen
 
 
 ValueSet: ProceduresSnomedAbsentUnknownHdrVS
-Id: procedures-snomed-absent-unknown-vs-hdr-eu
+Id: procedures-snomed-absent-unknown-vs-eu-hdr
 Title: "Procedures - SNOMED CT + Absent/Unknown - IPS"
 Description: "This value set includes codes from SNOMED Clinical Terms®: descendants of 71388002 \\|Procedure (procedure)\\|, excluding [all subtypes of 14734007 \\|Administrative procedure (procedure)\\|, all subtypes of 59524001 \\|Blood bank procedure (procedure)\\|, all subtypes of 389067005 \\|Community health procedure (procedure)\\|, all subtypes of 442006003 \\|Determination of information related to transfusion (procedure)\\|, all subtypes of 225288009 \\|Environmental care procedure (procedure)\\|, all subtypes of 308335008 \\|Patient encounter procedure (procedure)\\|, all subtypes of 710135002 \\|Promotion (procedure)\\|, all subtypes of 389084004 \\|Staff related procedure (procedure)\\|], plus IPS codes for absent/unknown procedures."
 * insert SetFmmandStatusRule (1, draft)
@@ -402,7 +402,7 @@ Description: "This value set includes codes from SNOMED Clinical Terms®: descen
 
 
 ValueSet: MedicalDevicesSnomedCtHdrVS
-Id: medical-devices-vs-hdr-eu
+Id: medical-devices-vs-eu-hdr
 Title: "Medical Devices (SNOMED CT) - Xpandh"
 Description: "This value set includes codes from SNOMED Clinical Terms®: all descendants of 49062001 \\|Device (physical object)\\|."
 * insert SetFmmandStatusRule (1, draft)
@@ -412,7 +412,7 @@ Description: "This value set includes codes from SNOMED Clinical Terms®: all de
 * include codes from system $sct where concept descendent-of #49062001 "Device (physical object)"
 
 ValueSet: MedicalDevicesSnomedAbsentUnknownHdrVS
-Id: medical-devices-snomed-absent-unknown-vs-hdr-eu
+Id: medical-devices-snomed-absent-unknown-vs-eu-hdr
 Title: "Medical Devices - SNOMED CT + Absent/Unknown - IPS"
 Description: "This value set includes codes from SNOMED Clinical Terms (SNOMED CT®) that are included in: all descendants of 49062001 \\|Device (physical object)\\|, plus IPS codes for absent/unknown devices."
 * insert SetFmmandStatusRule (1, draft)
@@ -423,7 +423,7 @@ Description: "This value set includes codes from SNOMED Clinical Terms (SNOMED C
 /* * include codes from valueset $AbsentOrUnknownDevicesUvIps */
 
 ValueSet: AllergyIntoleranceSubstancesHdrVS
-Id: allergy-intolerance-substances-vs-hdr-eu
+Id: allergy-intolerance-substances-vs-eu-hdr
 Title: "Allergy Intolerance Substances"
 Description: "This value set includes codes from SNOMED Clinical Terms (SNOMED CT®) that are included in: all descendants of 105590001 \\|Substance\\|, 373873005 \\|Pharmaceutical / biologic product\\|, #420134006 \\|Propensity to adverse reaction\\|."
 
@@ -436,7 +436,7 @@ Description: "This value set includes codes from SNOMED Clinical Terms (SNOMED C
 * include codes from system $sct where concept descendent-of #420134006 "Propensity to adverse reaction (finding)"
 
 ValueSet: AllergyIntoleranceHdrVS
-Id: allergy-intolerance-vs-hdr-eu
+Id: allergy-intolerance-vs-eu-hdr
 Title: "Allergy Intolerance - Xpandh"
 Description: "Xpandh allergy intolerance codes value set. This value set includes codes from SNOMED Clinical Terms®: all descendants of 373873005 \\|Pharmaceutical / biologic product (product)\\|; all descendants of 105590001 \\|Substance (substance)\\|; all descendants of 418038007 \\|Propensity to adverse reactions to substance (finding)\\| plus codes for absent and unknown allergies."
 * insert SetFmmandStatusRule (1, draft)

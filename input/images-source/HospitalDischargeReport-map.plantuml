@@ -1,0 +1,26 @@
+@startuml
+skinparam class {
+    BackgroundColor<<LogicalModel>> #FFCC00
+    BackgroundColor<<Profile>> #CCCCFF
+}
+skinparam linetype ortho
+legend right
+  | <#FFCC00> | Logical Model |
+  | <#CCCCFF> | Profile |
+endlegend
+class "HospitalDischargeReport" <<LogicalModel>> [[StructureDefinition-HospitalDischargeReport.html]]
+note right #PaleTurquoise [[ConceptMap-hdrHeader2FHIR-eu-hdr.html]]
+Concept Map
+endnote
+class "patient-eu-hdr" <<Profile>> [[StructureDefinition-patient-eu-hdr.html]]
+"HospitalDischargeReport" --> "patient-eu-hdr"
+class "Bundle-eu-hdr" <<Profile>> [[StructureDefinition-Bundle-eu-hdr.html]]
+"HospitalDischargeReport" --> "Bundle-eu-hdr"
+"patient-eu-hdr" -[hidden]-> "Bundle-eu-hdr"
+class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
+"HospitalDischargeReport" --> "composition-eu-hdr"
+"Bundle-eu-hdr" -[hidden]-> "composition-eu-hdr"
+class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
+"HospitalDischargeReport" --> "composition-eu-hdr"
+"composition-eu-hdr" -[hidden]-> "composition-eu-hdr"
+@enduml

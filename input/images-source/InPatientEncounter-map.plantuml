@@ -1,0 +1,17 @@
+@startuml
+skinparam class {
+    BackgroundColor<<LogicalModel>> #FFCC00
+    BackgroundColor<<Profile>> #CCCCFF
+}
+skinparam linetype ortho
+legend right
+  | <#FFCC00> | Logical Model |
+  | <#CCCCFF> | Profile |
+endlegend
+class "InPatientEncounter" <<LogicalModel>> [[StructureDefinition-InPatientEncounter.html]]
+note right #PaleTurquoise [[ConceptMap-encounter2FHIR-eu-hdr.html]]
+Concept Map
+endnote
+class "encounter-eu-hdr" <<Profile>> [[StructureDefinition-encounter-eu-hdr.html]]
+"InPatientEncounter" --> "encounter-eu-hdr"
+@enduml

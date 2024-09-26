@@ -1,7 +1,7 @@
-Profile: CompositionHdrEu
+Profile: CompositionEuHdr
 // Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
 Parent: Composition
-Id: Composition-hdr-eu
+Id: Composition-eu-hdr
 Title: "Composition: Hospital Discharge Report"
 Description: "Clinical document used to represent a Hospital Discharge Report (HDR) for the scope of the XpanDH project."
 * . ^short = "Hospital Discharge Report composition"
@@ -10,7 +10,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 /* HK: Is order still relevant in case of discharge report?
 * extension contains $composition-basedOn-order-or-requisition named basedOn-order-or-requisition 0..*
 * extension[basedOn-order-or-requisition]
-* extension[basedOn-order-or-requisition].valueReference only Reference ( ServiceRequestHdrEu )
+* extension[basedOn-order-or-requisition].valueReference only Reference ( ServiceRequestEuHdr )
 */
 
 * extension contains $information-recipient named information-recipient 0..*
@@ -35,7 +35,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * type ^short = "Kind of composition (\"Hospital Discharge Report\")"
 * type ^definition = "Specifies that this composition refer to a Hospital Discharge Report"
 * type = $loinc#34105-7 "Hospital Discharge summary"
-* subject only Reference(Patient)
+* subject only Reference(PatientEuHdr)
 * subject 1..1
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the hdr the subject is always the patient."
 
@@ -102,7 +102,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     * ^slicing.ordered = false
     * ^slicing.rules = #open
   * entry 1..1
-/*   * entry only Reference(Encounter) // InpatientEncounterHdrEu */
+/*   * entry only Reference(Encounter) // EncounterEuHdr */
 
   * section contains diagnosticSummaryDescription 1..1
   * section[diagnosticSummaryDescription]

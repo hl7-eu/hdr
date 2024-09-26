@@ -1,14 +1,14 @@
-Instance: ConceptMap-hdrHeader2FHIR-hdr-eu
+Instance: hdrHeader2FHIR-eu-hdr
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "http://terminology.hl7.it/ConceptMap/ConceptMap-subject2osiris"
-* name = "HdrHeader2FHIR"
+* url = "http://hl7.eu/fhir/hdr/ConceptMap/hdrHeader2FHIR-eu-hdr"
+* name = "Header2FHIREuHdr"
 * title = "eHN Recipient to this guide Map"
 * status = #draft
-* experimental = false
+* experimental = true
 * description = """eHN HDR Encounter Model to this guide mapping"""
-* group[+].source = "http://hl7.eu/fhir/ig/xpandh/hdr/StructureDefinition/HospitalDischargeReport"
-* group[=].target = "http://hl7.eu/fhir/ig/xpandh/hdr/StructureDefinition/Patient-hdr-eu"
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalDischargeReport"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/patient-eu-hdr"
 * group[=].element[+].code = #HospitalDischargeReport.header.subjectIdentification					
 * group[=].element[=].display = "A.1.1 - Identification of the patient/subject [Mandatory]"
 * group[=].element[=].target.code = #Patient					

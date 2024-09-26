@@ -1,6 +1,6 @@
-Profile: BundleHdrEu
+Profile: BundleEuHdr
 Parent: Bundle
-Id: Bundle-hdr-eu
+Id: Bundle-eu-hdr
 Title: "Bundle: EU Hospital Discharge Report"
 Description: "Clinical document used to represent a Hospital Discharge Report for the scope of the XpanDH project."
 * . ^short = "Hospital Discharge Report bundle"
@@ -56,9 +56,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     flag 0..*
 
 * entry[composition].resource 1..
-* entry[composition].resource only CompositionHdrEu
+* entry[composition].resource only CompositionEuHdr
 * entry[patient].resource 1..
-* entry[patient].resource only Patient // EU ?
+* entry[patient].resource only PatientEuHdr // EU ?
 * entry[allergyintolerance].resource 1..
 * entry[allergyintolerance].resource only $AllergyIntolerance-uv-ips
 * entry[condition].resource 1..

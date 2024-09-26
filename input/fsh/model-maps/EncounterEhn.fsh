@@ -1,5 +1,5 @@
 Logical: EncounterEhn
-Id: Encounter
+Id: InPatientEncounter
 Title: "A.2.3 - Encounter (eHN)"
 Description: """Hospital Discharge Report - Encounter - A.2.3 eHN
 Maturity Level: 0 Draft"""
