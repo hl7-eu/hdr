@@ -1,8 +1,7 @@
 Logical: RecommendationsEhn
 Id: Recommendations
 Title: "A.2.9 - Care plan and other recommendations after discharge (eHN)"
-Description: """Hospital Discharge Report - Care plan and other recommendations after discharge - A.2.9 eHN
-Maturity Level: 0 Draft"""
+Description: """Hospital Discharge Report - Care plan and other recommendations after discharge - A.2.9 eHN"""
 * carePlan 0..* BackboneElement "A.2.9.1 - Care plan" """Care plan after discharge. Multiple care plans could be provided."""
 * carePlan.title 0..1 string "A.2.9.1.1 - Title" """Human-friendly name for the care plan (e.g. Hip replacement care plan)"""
 * carePlan.addresses 0..* CodeableConcept "A.2.9.1.2 - Addresses" """Identifies the conditions/problems/concerns/diagnoses/etc. whose management and/or mitigation are handled by this plan. This element provides a linkage to the conditions recorded in the diagnostic summary section."""

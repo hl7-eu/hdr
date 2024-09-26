@@ -1,8 +1,7 @@
 Logical: AlertsEhn
 Id: Alerts
 Title: "A.2.2 - Alerts (eHN)"
-Description: """Hospital Discharge Report - Alerts - A.2.2 eHN
-Maturity Level: 0 Draft"""
+Description: """Hospital Discharge Report - Alerts - A.2.2 eHN"""
 * allergy 1..* BackboneElement "A.2.2.1 - Allergy and Intolerance" """A record of allergies and intolerances (primarily to be used for new allergies or intolerances that occurred during the hospital stay)."""
 * allergy.description 0..1 string "A.2.2.1.1 - Allergy description" """Textual description of the allergy or intolerance"""
 * allergy.typeOfPropensity 0..1 CodeableConcept "A.2.2.1.2 - Type of propensity" """This element describes whether this condition refers to an allergy, non-allergy intolerance, or unknown class of intolerance (not known to be allergy or intolerance)"""

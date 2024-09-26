@@ -5,6 +5,7 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="StructureDefinition/HospitalDischargeReport" key="StructureDefinition-HospitalDischargeReport" name="A - Hospital Discharge Report (eHN)"/>
+<artifact id="StructureDefinition/Header" key="StructureDefinition-Header" name="A.1 - Hospital Discharge Report header data element"/>
 <artifact id="StructureDefinition/AdvanceDirectives" key="StructureDefinition-AdvanceDirectives" name="A.2.1 - Advance Directives (eHN)"/>
 <artifact id="StructureDefinition/Alerts" key="StructureDefinition-Alerts" name="A.2.2 - Alerts (eHN)"/>
 <artifact id="StructureDefinition/InPatientEncounter" key="StructureDefinition-InPatientEncounter" name="A.2.3 - Encounter (eHN)"/>
@@ -22,11 +23,11 @@
 <artifact id="ValueSet/body-height-observation-vs" key="ValueSet-body-height-observation-vs" name="Body Height Observation Value Set"/>
 <artifact id="ValueSet/body-weight-observation-vs" key="ValueSet-body-weight-observation-vs" name="Body Weight Observation Value Set"/>
 <artifact id="ValueSet/body-weight-units-vs" key="ValueSet-body-weight-units-vs" name="Body Weight Observation Value Set"/>
-<artifact id="StructureDefinition/Bundle-eu-hdr" key="StructureDefinition-Bundle-eu-hdr" name="Bundle: EU Hospital Discharge Report"/>
+<artifact id="StructureDefinition/bundle-eu-hdr" key="StructureDefinition-bundle-eu-hdr" name="Bundle: EU Hospital Discharge Report"/>
 <artifact id="ValueSet/cancer-stage-grading-vs" key="ValueSet-cancer-stage-grading-vs" name="Cancer Stage Grading: Snomed CT"/>
 <artifact id="ValueSet/cancer-stageGroup-vs" key="ValueSet-cancer-stageGroup-vs" name="Cancer Stage Group: SNOMED CT"/>
 <artifact id="ValueSet/circumference-observation-vs" key="ValueSet-circumference-observation-vs" name="Circumference Observation Value Set"/>
-<artifact id="StructureDefinition/Composition-eu-hdr" key="StructureDefinition-Composition-eu-hdr" name="Composition: Hospital Discharge Report"/>
+<artifact id="StructureDefinition/composition-eu-hdr" key="StructureDefinition-composition-eu-hdr" name="Composition: Hospital Discharge Report"/>
 <artifact id="ValueSet/condition-vs-eu-hdr" key="ValueSet-condition-vs-eu-hdr" name="Condition Value Set"/>
 <artifact id="ValueSet/encounterClass-vs-eu-hdr" key="ValueSet-encounterClass-vs-eu-hdr" name="Encounter Class Value Set"/>
 <artifact id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
@@ -38,7 +39,7 @@
 <artifact id="ValueSet/mcode-observation-codes-distant-metastases-vs" key="ValueSet-mcode-observation-codes-distant-metastases-vs" name="Observation Codes for Distant Metastases Category"/>
 <artifact id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Observation Codes for Primary Tumor Category"/>
 <artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Observation Codes for Regional Node Category"/>
-<artifact id="StructureDefinition/Patient-eu-lab" key="StructureDefinition-Patient-eu-lab" name="Patient: Person"/>
+<artifact id="StructureDefinition/patient-eu-hdr" key="StructureDefinition-patient-eu-hdr" name="Patient: Person"/>
 <artifact id="ValueSet/procedure-snomed-vs-eu-hdr" key="ValueSet-procedure-snomed-vs-eu-hdr" name="Procedure codes: Snomed CT"/>
 <artifact id="ValueSet/procedures-snomed-absent-unknown-vs-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-vs-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="ValueSet/skinfold-thickness-units-vs" key="ValueSet-skinfold-thickness-units-vs" name="Skinfold Thickness Units Value Set"/>
@@ -55,6 +56,7 @@
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="contributors" name="Authors and contributors"/>
 <page key="downloads" name="Downloads"/>
+<page key="Header-map" name="Header Relationships"/>
 <page key="index" name="Home"/>
 <page key="HospitalDischargeReport-map" name="HospitalDischargeReport Relationships"/>
 <page key="InPatientEncounter-map" name="InPatientEncounter Relationships"/>

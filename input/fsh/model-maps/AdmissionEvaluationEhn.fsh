@@ -1,8 +1,7 @@
 Logical: AdmissionEvaluationEhn
 Id: AdmissionEvaluation
 Title: "A.2.4 - Admission evaluation (eHN)"
-Description: """Hospital Discharge Report - Admission evaluation - A.2.4 eHN
-Maturity Level: 0 Draft"""
+Description: """Hospital Discharge Report - Admission evaluation - A.2.4 eHN"""
 * objectiveFindings 0..1 BackboneElement "A.2.4.1 - Objective findings" """Objective findings"""
 * objectiveFindings.date 0..1 dateTime "A.2.4.1.1 - Date and time" """Date and time of the examination"""
 * objectiveFindings.anthropometricObservations 0..* BackboneElement "A.2.4.1.3 - Anthropometric observations" """Observation of Body weight and height of the patient, BMI, circumference of head, waist, hip, limbs and skin fold thickness.

@@ -1,8 +1,7 @@
 Logical: DischargeDetailsEhn
 Id: DischargeDetails
 Title: "A.2.8 - Discharge details (eHN)"
-Description: """Hospital Discharge Report - Discharge details - A.2.8 eHN
-Maturity Level: 0 Draft"""
+Description: """Hospital Discharge Report - Discharge details - A.2.8 eHN"""
 * dischargeDetails 1..1 BackboneElement "A.2.8 - Discharge details (structured information should be provided, however if not available, at least a summary note should be present)." """Discharge details (structured information should be provided, however if not available, at least a summary note should be present)."""
 * dischargeDetails.objectiveFindings 0..1 BackboneElement "A.2.8.1 - Objective findings" """Objective findings"""
 * dischargeDetails.objectiveFindings.date 1..1 dateTime "A.2.8.1.1 - Date" """Date and time of the examination at or before discharge"""

@@ -1,6 +1,6 @@
 Profile: BundleEuHdr
 Parent: Bundle
-Id: Bundle-eu-hdr
+Id: bundle-eu-hdr
 Title: "Bundle: EU Hospital Discharge Report"
 Description: "Clinical document used to represent a Hospital Discharge Report for the scope of the XpanDH project."
 * . ^short = "Hospital Discharge Report bundle"

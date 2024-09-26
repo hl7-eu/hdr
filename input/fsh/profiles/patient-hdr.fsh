@@ -1,6 +1,6 @@
 Profile: PatientEuHdr
 Parent: Patient
-Id: Patient-eu-lab
+Id: patient-eu-hdr
 Title:    "Patient: Person"
 Description: """This profile defines how to represent a human Patient in FHIR for the purpose of this guide.
 When the ips-pat-1 invariant is satisfied \(Patient.name.given, Patient.name.family or Patient.name.text SHALL be present\) then this profile complies with the IPS patient profile."""

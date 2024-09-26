@@ -8,7 +8,7 @@ Usage: #definition
 * experimental = true
 * description = """eHN eHN HDR header metadata Model to this guide mapping"""
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalDischargeReport"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/Bundle-eu-hdr"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/bundle-eu-hdr"
 * group[=].element[+].code = #HospitalDischargeReport.header.documentMetadata.type					
 * group[=].element[=].display = "A.1.8.2 - Document type [Mandatory]"
 * group[=].element[=].target.code = #Composition.type					

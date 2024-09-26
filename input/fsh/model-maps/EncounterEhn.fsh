@@ -1,8 +1,7 @@
 Logical: EncounterEhn
 Id: InPatientEncounter
 Title: "A.2.3 - Encounter (eHN)"
-Description: """Hospital Discharge Report - Encounter - A.2.3 eHN
-Maturity Level: 0 Draft"""
+Description: """Hospital Discharge Report - Encounter - A.2.3 eHN"""
 * type 1..1 CodeableConcept "A.2.3.1 - Encounter type" """The type of the encounter whether inpatient or short stay encounter."""
 * note 0..1 string "A.2.3.2 - Encounter note" """A narrative description of the encounter course."""
 * admission 1..1 BackboneElement "A.2.3.3 - Admission" """Admission"""

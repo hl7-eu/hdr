@@ -8,7 +8,7 @@ Alias: $consumer = http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab
 
 // --- EU Lab Profiles
 Alias: $Composition-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab
-Alias: $Patient-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab
+Alias: $patient-eu-hdr = http://hl7.eu/fhir/laboratory/StructureDefinition/patient-eu-hdr
 
 // --- Code Systems
 Alias: $obligation-cs = http://hl7.org/fhir/CodeSystem/obligation

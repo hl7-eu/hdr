@@ -1,7 +1,7 @@
 Profile: CompositionEuHdr
 // Parent: http://hl7.org/fhir/StructureDefinition/clinicaldocument
 Parent: Composition
-Id: Composition-eu-hdr
+Id: composition-eu-hdr
 Title: "Composition: Hospital Discharge Report"
 Description: "Clinical document used to represent a Hospital Discharge Report (HDR) for the scope of the XpanDH project."
 * . ^short = "Hospital Discharge Report composition"
