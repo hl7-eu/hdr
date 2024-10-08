@@ -58,7 +58,7 @@ RuleSet: SectionElementsRules
 * text ^short = "Text summary of the section, for human interpretation."
 * entry only Reference (ObservationResultsLaboratoryEu )
 // * entry only Reference (ObservationResultsLaboratoryEu or DiagnosticReport)
-// * entry ^comment = "The DiagnosticReport referred in the entry SHALL NOT be that representing the whole Laboratory Report"
+// * entry ^comment = "The DiagnosticReport referred in the entry SHALL NOT be that representing the whole Hospital Discharge Report"
 * entry 1..
 * section ..0
 

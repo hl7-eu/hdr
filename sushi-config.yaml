@@ -60,13 +60,12 @@ pages:
     title: Obligations
   knownIusses.md:
     title: Known Issues
-  InPatientEncounter-map.html:
-    title: InPatientEncounter Relationships
-  HospitalDischargeReport-map.html:
-    title: HospitalDischargeReport Relationships
+  # === MAP ====
   Header-map.html:
     title: Header Relationships
-
+  InPatientEncounter-map.html:
+    title: InPatientEncounter Relationships
+# === MAP ====
 
  # overview.md:
  #   title: Profiles overview
@@ -141,9 +140,8 @@ menu:
     eHN Guideline dataset: logicalModel.html
     Obligations: obligations.html
   Model Maps:
-    InPatientEncounter: InPatientEncounter-map.html
-    HospitalDischargeReport: HospitalDischargeReport-map.html
     Header: Header-map.html
+    InPatientEncounter: InPatientEncounter-map.html
   Artifacts: artifacts.html
   About:
     Downloads: downloads.html

@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 * url = "http://hl7.eu/fhir/hdr/ConceptMap/hdrHeader2FHIR-eu-hdr"
 * name = "Header2FHIREuHdr"
-* title = "eHN Recipient to this guide Map"
+* title = "eHN Header Model to this guide Map"
 * status = #draft
 * experimental = true
 * description = """eHN HDR Encounter Model to this guide mapping"""

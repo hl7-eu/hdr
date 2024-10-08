@@ -1,0 +1,23 @@
+@startuml
+skinparam class {
+    BackgroundColor<<LogicalModel>> #FFCC00
+    BackgroundColor<<Profile>> #CCCCFF
+}
+skinparam linetype ortho
+legend right
+  | <#FFCC00> | Logical Model |
+  | <#CCCCFF> | Profile |
+endlegend
+class "Header" <<LogicalModel>> [[StructureDefinition-Header.html]]
+note right #PaleTurquoise [[ConceptMap-hdrHeader2FHIR-eu-hdr.html]]
+Concept Map
+endnote
+class "bundle-eu-hdr" <<Profile>> [[StructureDefinition-bundle-eu-hdr.html]]
+"Header" --> "bundle-eu-hdr"
+class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
+"Header" --> "composition-eu-hdr"
+"bundle-eu-hdr" -[hidden]-> "composition-eu-hdr"
+class "patient-eu-hdr" <<Profile>> [[StructureDefinition-patient-eu-hdr.html]]
+"Header" --> "patient-eu-hdr"
+"composition-eu-hdr" -[hidden]-> "patient-eu-hdr"
+@enduml

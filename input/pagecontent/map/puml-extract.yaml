@@ -1,0 +1,7 @@
+Header: Header-map.html
+InPatientEncounter: InPatientEncounter-map.html
+
+  Header-map.html:
+    title: Header Relationships
+  InPatientEncounter-map.html:
+    title: InPatientEncounter Relationships

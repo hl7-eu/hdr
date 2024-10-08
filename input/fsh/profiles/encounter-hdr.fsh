@@ -1,15 +1,21 @@
 Profile: EncounterEuHdr
 Parent: Encounter
 Id: encounter-eu-hdr
-Title:    "Inpatient Encounter Xpandh"
-Description: "This profile defines how to represent Inpatient Encounter in FHIR for the purpose of the XpanDH Hospital Discharge Report."
+Title:    "Encounter: hospitalization"
+Description: "This profile defines how to represent Inpatient Encounter in HL7 FHIR for the scope of this guide."
+
+* insert SetFmmandStatusRule (1, draft)
+
+* extension contains $note named note 0..*
+* extension[note].valueAnnotation ^short = "Enconter note"
+
 * identifier ^short = "Identifier(s) by which this encounter is known."
 * status = #finished  // always #finished in discharge letter
   * ^short = "Status of this Hospital stay"
   * ^definition = "At the discharge report status of the encounter should be always = \"finished\""
 * class from EncounterClassHdrVS (extensible)
   * ^definition = "Concepts representing classification of inpatient encounter such as inpatient, emergency or others due to local variations."
-* type from EncounterTypeHdrVS (extensible)
+* type from EncounterTypeHdrVS (example)
   * ^short = "Specific type of Hospital stay"
   * ^definition = "Allows to classify encounter using information about care provision regimen during an inpatient encounter."
 * serviceType
@@ -28,6 +34,10 @@ Description: "This profile defines how to represent Inpatient Encounter in FHIR 
 * reasonReference only Reference ( Observation or Condition or Procedure)
 
 * participant
+  * individual 0..1
+  * individual only Reference (PractitionerEuHdr or PractitionerRoleEuHdr) 
+
+* participant
   * ^short = "List of participants involved in the encounters"
   * ^definition = """Slice per type of participant: admitter, discharger,.."""
   * ^slicing.discriminator[0].type = #value
@@ -39,22 +49,18 @@ Description: "This profile defines how to represent Inpatient Encounter in FHIR 
 * participant[admitter]
   * ^short = "Admitting professional"
   * type = $v3-ParticipationType#ADM
-  * individual 0..1
-  * individual only Reference (Practitioner or PractitionerRole) // add profiles
+ 
 
 * participant contains discharger 0..*
 * participant[discharger]
   * ^short = "Discharging professional"
   * type = $v3-ParticipationType#DIS
-  * individual 0..1
-  * individual only Reference (Practitioner or PractitionerRole) // add profiles
 
 * participant contains refferer 0..*
 * participant[refferer]
   * ^short = "Referring professional"
   * type = $v3-ParticipationType#REF
-  * individual 0..1
-  * individual only Reference (Practitioner or PractitionerRole) // add profiles
+
 
 /* Admission diagnosis and discharge diagnosis as such does not exist in the EHN HDR data set.
 All information about diagnosis should be included in diagnostic summary, which could be represented by diagnosis element of the Encounter.
@@ -99,4 +105,11 @@ otherwise there might be discrepancies and confusion.
 * hospitalization
   * admitSource ^short = "From where patient was admitted (physician referral, transfer)."
   * dischargeDisposition ^short = "Category or kind of location after discharge"
+  * destination only Reference (OrganizationEuHdr or LocationEuHdr)
   // add voc binding
+
+* location ^short = "Locations where the patient stayed"
+  * location only Reference ( LocationEuHdr )
+  * period ^short = "Location period"
+
+* serviceProvider only Reference ( OrganizationEuHdr )
