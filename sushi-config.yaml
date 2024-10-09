@@ -66,6 +66,10 @@ pages:
   InPatientEncounter-map.html:
     title: InPatientEncounter Relationships
 # === MAP ====
+# === MINDMAP ====
+  hdr-mindmap.html:
+    title: Hospital Discharge Report
+
 
  # overview.md:
  #   title: Profiles overview
@@ -138,6 +142,7 @@ menu:
   Table of Contents: toc.html
   Functional Specifications:
     eHN Guideline dataset: logicalModel.html
+    HDR conceptual view:  hdr-mindmap.html
     Obligations: obligations.html
   Model Maps:
     Header: Header-map.html

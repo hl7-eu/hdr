@@ -42,8 +42,8 @@
 <artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Observation Codes for Regional Node Category"/>
 <artifact id="StructureDefinition/organization-eu-hdr" key="StructureDefinition-organization-eu-hdr" name="Organization: HDR"/>
 <artifact id="StructureDefinition/patient-eu-hdr" key="StructureDefinition-patient-eu-hdr" name="Patient: Person"/>
-<artifact id="StructureDefinition/practitioner-eu-hdr" key="StructureDefinition-practitioner-eu-hdr" name="Practitioner: Laboratory Report"/>
-<artifact id="StructureDefinition/practitionerRole-eu-hdr" key="StructureDefinition-practitionerRole-eu-hdr" name="PractitionerRole: Laboratory Report"/>
+<artifact id="StructureDefinition/practitioner-eu-hdr" key="StructureDefinition-practitioner-eu-hdr" name="Practitioner: Hospital Discharge Report"/>
+<artifact id="StructureDefinition/practitionerRole-eu-hdr" key="StructureDefinition-practitionerRole-eu-hdr" name="PractitionerRole: Hospital Discharge Report"/>
 <artifact id="ValueSet/procedure-snomed-vs-eu-hdr" key="ValueSet-procedure-snomed-vs-eu-hdr" name="Procedure codes: Snomed CT"/>
 <artifact id="ValueSet/procedures-snomed-absent-unknown-vs-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-vs-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="ValueSet/skinfold-thickness-units-vs" key="ValueSet-skinfold-thickness-units-vs" name="Skinfold Thickness Units Value Set"/>
@@ -60,6 +60,7 @@
 <page key="downloads" name="Downloads"/>
 <page key="Header-map" name="Header Relationships"/>
 <page key="index" name="Home"/>
+<page key="hdr-mindmap" name="Hospital Discharge Report"/>
 <page key="InPatientEncounter-map" name="InPatientEncounter Relationships"/>
 <page key="knownIusses" name="Known Issues"/>
 <page key="obligations" name="Obligations"/>
