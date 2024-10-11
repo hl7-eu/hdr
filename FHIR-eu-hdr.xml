@@ -30,9 +30,9 @@
 <artifact id="StructureDefinition/composition-eu-hdr" key="StructureDefinition-composition-eu-hdr" name="Composition (HDR)"/>
 <artifact id="ValueSet/condition-vs-eu-hdr" key="ValueSet-condition-vs-eu-hdr" name="Condition Value Set"/>
 <artifact id="StructureDefinition/encounter-eu-hdr" key="StructureDefinition-encounter-eu-hdr" name="Encounter (HDR)"/>
-<artifact id="StructureDefinition/encounter-eu-hdr-opt2" key="StructureDefinition-encounter-eu-hdr-opt2" name="Encounter (HDR)"/>
 <artifact id="ValueSet/encounterClass-vs-eu-hdr" key="ValueSet-encounterClass-vs-eu-hdr" name="Encounter Class Value Set"/>
 <artifact id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
+<artifact id="ValueSet/encounter-status-vs-eu-hdr" key="ValueSet-encounter-status-vs-eu-hdr" name="In-patient Encounter Type Value Set"/>
 <artifact id="ValueSet/encounter-type-vs-eu-hdr" key="ValueSet-encounter-type-vs-eu-hdr" name="In-patient Encounter Type Value Set"/>
 <artifact id="StructureDefinition/location-eu-hdr" key="StructureDefinition-location-eu-hdr" name="Location (HDR)"/>
 <artifact id="ValueSet/condition-mandatory-vs-eu-hdr" key="ValueSet-condition-mandatory-vs-eu-hdr" name="Mandatory Condition Value Set"/>
