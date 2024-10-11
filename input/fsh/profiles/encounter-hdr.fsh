@@ -10,7 +10,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 * extension[note].valueAnnotation ^short = "Enconter note"
 
 * identifier ^short = "Identifier(s) by which this encounter is known."
-* status = #finished  // always #finished in discharge letter
+* status from EncounterStatusHdrVS
   * ^short = "Status of this Hospital stay"
   * ^definition = "At the discharge report status of the encounter should be always = \"finished\""
 * class from EncounterClassHdrVS (extensible)
@@ -24,7 +24,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
   * ^short = "Encounter priority" // add voc binding
 * subject only Reference (PatientEuHdr)
 * subject 1..
-  * ^short = "The pateint preesent at the encounter"
+  * ^short = "The patient present at the encounter"
 * basedOn ^short = "The request for which this encounter has been made"
 * period
   * ^short = "The start and end time of this encounter."
@@ -62,47 +62,8 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
   * type = $v3-ParticipationType#REF
 
 
-/* Admission diagnosis and discharge diagnosis as such does not exist in the EHN HDR data set.
-All information about diagnosis should be included in diagnostic summary, which could be represented by diagnosis element of the Encounter.
-Diagnosti summary according to the EHN HDR guideline uses two different categories of conditions:
-1. category
-- POA Present on admission
-- HAC Hospital acquired condition
-- NA Not applicable or unknown
-
-2. Treatement class
-- treated
-- other
-
-Category and treatement class should be mandatory (1..1).
-I propose to model it at the condition resource level and don't use encounter diagnosis.use element
-otherwise there might be discrepancies and confusion.
-*/
-
-/* 
-* diagnosis 1..
+* diagnosis ^short = "The list of diagnosis relevant to this encounter, see Use Notes"
 * diagnosis.condition only Reference(Condition) // ConditionEncounterHdrXpandh
-* diagnosis.use 0..0 
-*/
-
-* diagnosis
-  * ^short = "The list of diagnosis relevant to this encounter."
-  * ^definition = """Slice per type of diagnosis: admission, discharge,..."""
-  * ^slicing.discriminator[0].type = #pattern
-  * ^slicing.discriminator[0].path = "use"
-  * ^slicing.ordered = false
-  * ^slicing.rules = #open
-
-* diagnosis contains admission 0..*
-* diagnosis[admission]
-  * ^short = "Diagnosis known at admission"
-  * condition only Reference ( Condition )
-  * use = $diagnosis-role#AD
-
-* diagnosis contains discharge 0..*
-* diagnosis[discharge]
-  * condition only Reference ( Condition )
-  * use = $diagnosis-role#DD
 
 
 * hospitalization

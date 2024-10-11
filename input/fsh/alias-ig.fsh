@@ -36,6 +36,7 @@ Alias: $data-absent-reason-cs =  http://terminology.hl7.org/CodeSystem/data-abse
 Alias: $nibsc = http://nibsc.org
 Alias: $pei = http://pei.de
 Alias: $niaid = http://niaid.nih.gov
+Alias: $encounter-status = http://hl7.org/fhir/encounter-status
 
 // --- SID
 Alias: $uri = urn:ietf:rfc:3986
