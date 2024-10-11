@@ -14,13 +14,11 @@ Usage: #definition
 * group[=].element[=].target.code = #Encounter.class
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "to be checked"
 * group[=].element[+].code = #Encounter.note
 * group[=].element[=].display = "A.2.3.2 - Encounter note"
 * group[=].element[=].target.code = #Encounter.extension:note
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "to be checked"
 * group[=].element[+].code = #Encounter.admission
 * group[=].element[=].display = "A.2.3.3 - Admission"
 * group[=].element[=].target.code = #Encounter
@@ -47,7 +45,6 @@ Usage: #definition
 * group[=].element[=].target.code = #Encounter.serviceProvider
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "to be checked"
 * group[=].element[+].code = #Encounter.admission.admitter.organization
 * group[=].element[=].display = "A.2.3.3.6 - Admitting organisation"
 * group[=].element[=].target.code = #Encounter.participant.individual.organization
@@ -104,7 +101,6 @@ Usage: #definition
 * group[=].element[=].target.code = #Encounter
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be checked"
 * group[=].element[+].code = #Encounter.discharge.date
 * group[=].element[=].display = "A.2.3.5.1 - Discharge date"
 * group[=].element[=].target.code = #Encounter.period.end
@@ -120,7 +116,6 @@ Usage: #definition
 * group[=].element[=].target.code = #Encounter.hospitalization.destination
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "of type Location ?"
 * group[=].element[+].code = #Encounter.location
 * group[=].element[=].display = "A.2.3.6 - Location - All locations/departments where the patient stayed (was boarded) within the hospital."
 * group[=].element[=].target.code = #Encounter.location
@@ -131,7 +126,6 @@ Usage: #definition
 * group[=].element[=].target.code = #Encounter.location.period
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be checked"
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/InPatientEncounter"
 * group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/location-eu-hdr"
 * group[=].element[+].code = #Encounter.location.organization
