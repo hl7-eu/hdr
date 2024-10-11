@@ -1,6 +1,6 @@
-Profile: EncounterEuHdr
+Profile: EncounterEuHdrOpt2
 Parent: Encounter
-Id: encounter-eu-hdr
+Id: encounter-eu-hdr-opt2
 Title:    "Encounter (HDR)"
 Description: "This profile defines how to represent Inpatient Encounter in HL7 FHIR for the scope of this guide."
 
@@ -78,13 +78,10 @@ Category and treatement class should be mandatory (1..1).
 I propose to model it at the condition resource level and don't use encounter diagnosis.use element
 otherwise there might be discrepancies and confusion.
 */
-
-/* 
 * diagnosis 1..
 * diagnosis.condition only Reference(Condition) // ConditionEncounterHdrXpandh
-* diagnosis.use 0..0 
-*/
-
+* diagnosis.use 0..0
+/*
 * diagnosis
   * ^short = "The list of diagnosis relevant to this encounter."
   * ^definition = """Slice per type of diagnosis: admission, discharge,..."""
@@ -103,7 +100,7 @@ otherwise there might be discrepancies and confusion.
 * diagnosis[discharge]
   * condition only Reference ( Condition )
   * use = $diagnosis-role#DD
-
+*/
 
 * hospitalization
   * admitSource ^short = "From where patient was admitted (physician referral, transfer)."

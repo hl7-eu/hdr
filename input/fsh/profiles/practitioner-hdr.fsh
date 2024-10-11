@@ -5,7 +5,7 @@
 Profile:  PractitionerEuHdr
 Parent:   Practitioner // http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips
 Id:       practitioner-eu-hdr
-Title:    "Practitioner: Hospital Discharge Report"
+Title:    "Practitioner (HDR)"
 Description: "This profile defines how to represent Practitioners in FHIR for the purpose of the  HL7 Europe project."
 //-------------------------------------------------------------------------------------------
 * insert SetFmmandStatusRule (1, draft)
@@ -17,7 +17,7 @@ Description: "This profile defines how to represent Practitioners in FHIR for th
 Profile:  PractitionerRoleEuHdr
 Parent:   PractitionerRole // http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips
 Id:       practitionerRole-eu-hdr
-Title:    "PractitionerRole: Hospital Discharge Report"
+Title:    "PractitionerRole: (HDR)"
 Description: "This profile defines how to represent Practitioners (with their roles) in FHIR for the purpose of the  HL7 Europe project."
 //-------------------------------------------------------------------------------------------
 

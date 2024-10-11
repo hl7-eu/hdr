@@ -11,6 +11,7 @@ Alias: $Composition-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/C
 Alias: $patient-eu-hdr = http://hl7.eu/fhir/laboratory/StructureDefinition/patient-eu-hdr
 
 // --- Code Systems
+Alias: $diagnosis-role = http://terminology.hl7.org/CodeSystem/diagnosis-role
 Alias: $obligation-cs = http://hl7.org/fhir/CodeSystem/obligation
 Alias: $ajcc = http://cancerstaging.org
 Alias: $atc = http://www.whocc.no/atc

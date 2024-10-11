@@ -1,7 +1,7 @@
 Profile: OrganizationEuHdr
 Parent: Organization // http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips
 Id: organization-eu-hdr
-Title: "Organization: HDR"
+Title: "Organization (HDR)"
 Description: "This profile sets minimum expectations for the Organization resource to searching for and fetching an Organization associated with a patient or provider for the purpose of this guide."
 
 * insert SetFmmandStatusRule (1, draft)
