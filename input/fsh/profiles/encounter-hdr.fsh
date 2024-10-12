@@ -35,7 +35,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 
 * participant
   * individual 0..1
-  * individual only Reference (PractitionerEuHdr or PractitionerRoleEuHdr) 
+  * individual only Reference (PractitionerEuHdr or PractitionerRoleEuHdr or RelatedPerson) 
 
 * participant
   * ^short = "List of participants involved in the encounters"
