@@ -7,7 +7,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 * insert SetFmmandStatusRule (1, draft)
 
 * extension contains $note named note 0..*
-* extension[note].valueAnnotation ^short = "Enconter note"
+* extension[note] ^short = "Enconter note"
 
 * identifier ^short = "Identifier(s) by which this encounter is known."
 * status from EncounterStatusHdrVS
