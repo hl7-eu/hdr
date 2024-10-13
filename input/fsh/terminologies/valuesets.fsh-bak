@@ -420,7 +420,7 @@ Description: "This value set includes codes from SNOMED Clinical Terms (SNOMED C
 * insert SNOMEDCopyrightForVS
 * ^experimental = false
 * include codes from valueset MedicalDevicesSnomedCtHdrVS
-/* * include codes from valueset $AbsentOrUnknownDevicesUvIps */
+/* * include codes from valueset $absent-or-unknown-devices-uv-ips */
 
 ValueSet: AllergyIntoleranceSubstancesHdrVS
 Id: allergy-intolerance-substances-vs-eu-hdr
@@ -444,4 +444,4 @@ Description: "Xpandh allergy intolerance codes value set. This value set include
 * insert SNOMEDCopyrightForVS
 * ^experimental = false
 * include codes from valueset AllergyIntoleranceSubstancesHdrVS
-/* * include codes from valueset $AbsentOrUnknownAllergiesUvIps */
+/* * include codes from valueset $absent-or-unknown-allergies-uv-ips */

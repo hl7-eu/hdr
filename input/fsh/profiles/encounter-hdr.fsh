@@ -62,7 +62,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
   * type = $v3-ParticipationType#REF
 
 
-* diagnosis ^short = "The list of diagnosis relevant to this encounter, see commnent"
+* diagnosis ^short = "The list of diagnosis relevant to this encounter, see comment"
 * diagnosis ^comment = "While Encounter.diagnosis could be optionally populated, mainly for administrative purposes, we strongly recommend to put all clinical relevant diagnoses, stated at start, during and at the end of the hospital stay, into the corresponding section(s) of the HDR."
 * diagnosis.condition only Reference(Condition) // ConditionEncounterHdrXpandh
 
