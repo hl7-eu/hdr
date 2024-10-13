@@ -56,8 +56,8 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
   * ^short = "Discharging professional"
   * type = $v3-ParticipationType#DIS
 
-* participant contains refferer 0..*
-* participant[refferer]
+* participant contains referrer 0..*
+* participant[referrer]
   * ^short = "Referring professional"
   * type = $v3-ParticipationType#REF
 
