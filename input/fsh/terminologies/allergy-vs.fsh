@@ -1,5 +1,9 @@
 ValueSet: AllergyIntoleranceSubstancesHdrVS
 Id: allergy-intolerance-substances-eu-hdr
+// do we really need this ?
+Title: "Allergy Intolerance"
+Description: "Allergy intolerance substances value set. This value set includes codes from SNOMED Clinical Terms®: all descendants of 373873005 \\|Pharmaceutical / biologic product (product)\\|; all descendants of 105590001 \\|Substance (substance)\\|; all descendants of 418038007 \\|Propensity to adverse reactions to substance (finding)\\|"
+
 * insert SetFmmandStatusRule (1, draft)
 * insert SNOMEDCopyrightForVS
 * ^experimental = false
@@ -9,8 +13,8 @@ Id: allergy-intolerance-substances-eu-hdr
 
 ValueSet: AllergyIntoleranceHdrVS
 Id: allergy-intolerance-eu-hdr
-Title: "Allergy Intolerance - Xpandh"
-Description: "Xpandh allergy intolerance codes value set. This value set includes codes from SNOMED Clinical Terms®: all descendants of 373873005 \\|Pharmaceutical / biologic product (product)\\|; all descendants of 105590001 \\|Substance (substance)\\|; all descendants of 418038007 \\|Propensity to adverse reactions to substance (finding)\\| plus codes for absent and unknown allergies."
+Title: "Allergy Intolerance (with exceptions)"
+Description: "Allergy intolerance codes value set. This value set includes codes from SNOMED Clinical Terms®: all descendants of 373873005 \\|Pharmaceutical / biologic product (product)\\|; all descendants of 105590001 \\|Substance (substance)\\|; all descendants of 418038007 \\|Propensity to adverse reactions to substance (finding)\\| plus codes for absent and unknown allergies."
 * insert SetFmmandStatusRule (1, draft)
 * insert SNOMEDCopyrightForVS
 * ^experimental = false

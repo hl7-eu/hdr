@@ -10,41 +10,6 @@ Alias: $consumer = http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab
 Alias: $Composition-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab
 Alias: $patient-eu-hdr = http://hl7.eu/fhir/laboratory/StructureDefinition/patient-eu-hdr
 
-// --- Code Systems
-Alias: $diagnosis-role = http://terminology.hl7.org/CodeSystem/diagnosis-role
-Alias: $obligation-cs = http://hl7.org/fhir/CodeSystem/obligation
-Alias: $ajcc = http://cancerstaging.org
-Alias: $atc = http://www.whocc.no/atc
-Alias: $dicomOntology = http://dicom.nema.org/resources/ontology/DCM
-Alias: $edqm = https://standardterms.edqm.eu
-Alias: $icd03 = http://terminology.hl7.org/CodeSystem/icd-o-3
-Alias: $loinc =  http://loinc.org
-Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
-Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
-Alias: $sct = http://snomed.info/sct
-Alias: $ucum =  http://unitsofmeasure.org
-Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
-Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
-Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
-Alias: $obs-interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation
-Alias: $reference-range-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
-Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
-Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
-Alias: $v3-ActPriority = http://terminology.hl7.org/CodeSystem/v3-ActPriority
-Alias: $data-absent-reason-cs =  http://terminology.hl7.org/CodeSystem/data-absent-reason
-Alias: $nibsc = http://nibsc.org
-Alias: $pei = http://pei.de
-Alias: $niaid = http://niaid.nih.gov
-Alias: $encounter-status = http://hl7.org/fhir/encounter-status
-Alias: $absent-unknown-uv-ips = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips
-Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category
-Alias: $orpha = https://www.orpha.net
-
-// --- SID
-Alias: $uri = urn:ietf:rfc:3986
-Alias: $oid = urn:ietf:rfc:1155
-
 // --- Value Sets
 Alias: $absent-or-unknown-procedures-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-procedures-uv-ips
 Alias: $absent-or-unknown-devices-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-devices-uv-ips
@@ -53,6 +18,7 @@ Alias: $v3-ClassNullFlavor = http://terminology.hl7.org/ValueSet/v3-ClassNullFla
 Alias: $results-laboratory-observations-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-observations-uv-ips
 Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips
 Alias: $iso3166-1-2 = http://hl7.org/fhir/ValueSet/iso3166-1-2
+Alias: $medication-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/medication-uv-ips
 
 // ---- Extensions
 

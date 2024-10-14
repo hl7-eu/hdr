@@ -62,7 +62,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * attester.party ^short = "Who attested the composition"
 
 * section 1..
-* section ^slicing.discriminator[0].type = #value
+* section ^slicing.discriminator[0].type = #pattern
 * section ^slicing.discriminator[0].path = "code"
 * section ^slicing.ordered = false
 * section ^slicing.rules = #open

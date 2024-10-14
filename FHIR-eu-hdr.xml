@@ -15,8 +15,8 @@
 <artifact id="StructureDefinition/DischargeDetails" key="StructureDefinition-DischargeDetails" name="A.2.8 - Discharge details (eHN)"/>
 <artifact id="StructureDefinition/Recommendations" key="StructureDefinition-Recommendations" name="A.2.9 - Care plan and other recommendations after discharge (eHN)"/>
 <artifact id="ValueSet/admission-urgency-eu-hdr" key="ValueSet-admission-urgency-eu-hdr" name="Admission Urgency Value Set"/>
-<artifact id="ValueSet/allergy-intolerance-eu-hdr" key="ValueSet-allergy-intolerance-eu-hdr" name="Allergy Intolerance - Xpandh"/>
-<artifact id="ValueSet/allergy-intolerance-substances-eu-hdr" key="ValueSet-allergy-intolerance-substances-eu-hdr" name="AllergyIntoleranceSubstancesHdrVS"/>
+<artifact id="ValueSet/allergy-intolerance-substances-eu-hdr" key="ValueSet-allergy-intolerance-substances-eu-hdr" name="Allergy Intolerance"/>
+<artifact id="ValueSet/allergy-intolerance-eu-hdr" key="ValueSet-allergy-intolerance-eu-hdr" name="Allergy Intolerance (with exceptions)"/>
 <artifact id="ValueSet/anthropometric-observation-vs" key="ValueSet-anthropometric-observation-vs" name="Anthropometric Observation Value Set"/>
 <artifact id="ValueSet/bmi-observation-unit-vs" key="ValueSet-bmi-observation-unit-vs" name="BMI Observation Unit Value Set"/>
 <artifact id="ValueSet/bmi-observation-vs" key="ValueSet-bmi-observation-vs" name="BMI Observation Value Set"/>
