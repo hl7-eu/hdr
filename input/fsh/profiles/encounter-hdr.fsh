@@ -35,7 +35,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 
 * participant
   * individual 0..1
-  * individual only Reference (PractitionerEuHdr or PractitionerRoleEuHdr or RelatedPerson) 
+  * individual only Reference (PractitionerEuHdr or PractitionerRoleEuHdr or RelatedPerson)
 
 * participant
   * ^short = "List of participants involved in the encounters"
@@ -49,7 +49,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 * participant[admitter]
   * ^short = "Admitting professional"
   * type = $v3-ParticipationType#ADM
- 
+
 
 * participant contains discharger 0..*
 * participant[discharger]
@@ -64,7 +64,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 
 * diagnosis ^short = "The list of diagnosis relevant to this encounter, see comment"
 * diagnosis ^comment = "While Encounter.diagnosis could be optionally populated, mainly for administrative purposes, we strongly recommend to put all clinical relevant diagnoses, stated at start, during and at the end of the hospital stay, into the corresponding section(s) of the HDR."
-* diagnosis.condition only Reference(Condition) // ConditionEncounterHdrXpandh
+* diagnosis.condition only Reference(Condition)
 
 
 * hospitalization
