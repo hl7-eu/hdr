@@ -80,9 +80,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
       Hospital Admission evaluation,
       $loinc#67852-4 "Hospital Admission evaluation note")   // SHORT, DESC, CODE
   * ^comment = "Admission evaluation should be reported only exceptionally, if it is relevant to ensure continuity of care."
- 
+
   * insert EvaluationSubSectionRules
- 
+
   * entry 0..
 
 // -------------------------------------
@@ -110,7 +110,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
       Problem specification in narrative form,
       All problems/diagnoses that affect care during the inpatient case or are important to be recorded to ensure continuity of care. The diagnostic summary differentiates\, in accordance with the international recommendation\, between problems treated during hospital stay and other (untreated\) problems. Treated problems are problems that were the subject of diagnostics\, therapy\, nursing\, or (continuous\) monitoring during the hospitalisation. Furthermore problems could be divided into three categories: problems present on admission (POA\)\, conditions acquired during hospital stay (HAC\) and problems that cannot be classified as being of any of the two (N/A\). The diagnostic summary contains all conditions as they were recognised at the end of hospitalisation\, after all examinations. This section contains concise\, well specified\, codeable\, summary of problems. Problems are ordered by importance (main problems first\) during hospital stay. Description of the problem might be completed with additional details in the medical history section and/or in the Synthesis section.	,
       $sct#721981007)
-    * entry ..0
+    * entry 0..*
     //* entry only Reference(ConditionEncounter)
     * section ..0
 
