@@ -9,7 +9,10 @@ When the ips-pat-1 invariant is satisfied \(Patient.name.given, Patient.name.fam
 
 * extension contains
     $patient-birthPlace named birthPlace 0..1 and
-    $sexForClinicalUse named sex-for-clinical-use 0..*
+    $sexForClinicalUse named sex-for-clinical-use 0..* and // from Lab Report
+    $patient-citizenship named patient-citizenship 0..* and
+    $patient-nationality named patient-nationality 0..*
+    
 * extension[birthPlace].valueAddress only $Address-eu
 
 * identifier ^short = "Patient identifiers" // MS according to IPS
@@ -34,9 +37,7 @@ When the ips-pat-1 invariant is satisfied \(Patient.name.given, Patient.name.fam
 * telecom ^short = "A contact detail for the patient" // MS according to IPS
 * gender ^short = "Administrative Gender" // MS according to IPS
 * birthDate 1.. // MS according to IPS
-// * address MS
 * address only $Address-eu // MS according to IPS
-* address obeys pat-cnt-2or3-char
 * contact.relationship only $CodeableConcept-uv-ips
 * contact.relationship ^short = "Relationship between a patient and a contact person for that patient"
 * contact.address only $Address-eu
@@ -48,11 +49,4 @@ Description: "given, family, text or a data-absent-reason extension SHALL be pre
 Severity: #error
 Expression: "family.exists() or given.exists() or text.exists() or extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"
 /* XPath: "f:given or f:family or f:text" */
-
-Invariant: pat-cnt-2or3-char
-Description: "The content of the country element (if present) SHALL be selected EITHER from ValueSet ISO Country Alpha-2 http://hl7.org/fhir/ValueSet/iso3166-1-2 OR MAY be selected from ISO Country Alpha-3 Value Set http://hl7.org/fhir/ValueSet/iso3166-1-3, IF the country is not specified in value Set ISO Country Alpha-2 http://hl7.org/fhir/ValueSet/iso3166-1-2."
-Severity: #warning
-Expression: "country.empty() or (country.memberOf('http://hl7.org/fhir/ValueSet/iso3166-1-2') or country.memberOf('http://hl7.org/fhir/ValueSet/iso3166-1-3'))"
-
-
 

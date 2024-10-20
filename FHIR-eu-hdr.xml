@@ -6,6 +6,7 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="StructureDefinition/HospitalDischargeReport" key="StructureDefinition-HospitalDischargeReport" name="A - Hospital Discharge Report (eHN)"/>
 <artifact id="StructureDefinition/Header" key="StructureDefinition-Header" name="A.1 - Hospital Discharge Report header data element"/>
+<artifact id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"/>
 <artifact id="StructureDefinition/AdvanceDirectives" key="StructureDefinition-AdvanceDirectives" name="A.2.1 - Advance Directives (eHN)"/>
 <artifact id="StructureDefinition/Alerts" key="StructureDefinition-Alerts" name="A.2.2 - Alerts (eHN)"/>
 <artifact id="StructureDefinition/InPatientEncounter" key="StructureDefinition-InPatientEncounter" name="A.2.3 - Encounter (eHN)"/>
@@ -64,7 +65,8 @@
 <artifact id="ValueSet/assessment-observation-category-vs" key="ValueSet-assessment-observation-category-vs" name="Xpandh Assessment Observation Category"/>
 <artifact id="ValueSet/functional-assessment-scales-vs" key="ValueSet-functional-assessment-scales-vs" name="Xpandh Functional Assessment Scales"/>
 <artifact id="ConceptMap/encounter2FHIR-eu-hdr" key="ConceptMap-encounter2FHIR-eu-hdr" name="eHN Encounter Model to this guide Map"/>
-<artifact id="ConceptMap/hdrHeader2FHIR-eu-hdr" key="ConceptMap-hdrHeader2FHIR-eu-hdr" name="eHN Header Model to this guide Map"/>
+<artifact id="ConceptMap/hdrHeader2FHIR-eu-hdr" key="ConceptMap-hdrHeader2FHIR-eu-hdr" name="eHN Header Model to this guide Map (TO BE COMPLETED)"/>
+<artifact id="ConceptMap/subject2FHIR-eu-hdr" key="ConceptMap-subject2FHIR-eu-hdr" name="eHN Subject Model to this guide Map"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
@@ -76,6 +78,7 @@
 <page key="InPatientEncounter-map" name="InPatientEncounter Relationships"/>
 <page key="knownIusses" name="Known Issues"/>
 <page key="obligations" name="Obligations"/>
+<page key="Subject-map" name="Subject Relationships"/>
 <page key="toc" name="Table of Contents"/>
 <page key="logicalModel" name="eHN guideline data set"/>
 </specification>

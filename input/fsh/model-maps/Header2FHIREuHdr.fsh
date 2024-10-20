@@ -11,55 +11,55 @@ Usage: #definition
 * group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/bundle-eu-hdr"
 * group[=].element[+].code = #Header.documentMetadata
 * group[=].element[=].display = "A.1.8 - Document metadata"
-* group[=].element[=].target.code = #nan
+* group[=].element[=].target.code = #Bundle
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[=].target.comment = "the Signature datatype requires to record Who signed and and the type of signature "
 * group[=].element[+].code = #Header.documentMetadata.identifier
 * group[=].element[=].display = "A.1.8.1 - Document ID"
-* group[=].element[=].target.code = #nan
+* group[=].element[=].target.code = #Bundle
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[+].code = #Header.documentMetadata.type
 * group[=].element[=].display = "A.1.8.2 - Document type"
-* group[=].element[=].target.code = #nan
+* group[=].element[=].target.code = #Bundle
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[+].code = #Header.documentMetadata.status
 * group[=].element[=].display = "A.1.8.3 - Document status"
-* group[=].element[=].target.code = #Composition.status					
+* group[=].element[=].target.code = #Bundle
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[+].code = #Header.documentMetadata.dateTime
 * group[=].element[=].display = "A.1.8.4 - Report date and time"
-* group[=].element[=].target.code = #Bundle.timeStamp					
+* group[=].element[=].target.code = #Bundle
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[+].code = #Header.documentMetadata.title
 * group[=].element[=].display = "A.1.8.5 - Document title"
-* group[=].element[=].target.code = #Composition.title					
+* group[=].element[=].target.code = #Bundle
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[+].code = #Header.documentMetadata.custodian
 * group[=].element[=].display = "A.1.8.6 - Report custodian"
-* group[=].element[=].target.code = #Composition.custodian					
+* group[=].element[=].target.code = #Bundle
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[+].code = #Header.documentMetadata.confidentiality
 * group[=].element[=].display = "A.1.8.7 - Confidentiality"
-* group[=].element[=].target.code = #Composition.confidentiality					
+* group[=].element[=].target.code = #Bundle
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[+].code = #Header.documentMetadata.language
 * group[=].element[=].display = "A.1.8.8 - Language"
-* group[=].element[=].target.code = #Composition.language				
+* group[=].element[=].target.code = #Bundle
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[+].code = #Header.documentMetadata.version
 * group[=].element[=].display = "A.1.8.9 - Version"
-* group[=].element[=].target.code = #Composition.extension:versionNumber.valueString					
+* group[=].element[=].target.code = #Bundle
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.equivalence = #unmatched					
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
 * group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr"
 * group[=].element[+].code = #Header.payer
@@ -117,19 +117,19 @@ Usage: #definition
 * group[=].element[=].target.comment = "If PractictionerRole"
 * group[=].element[+].code = #Header.informationRecipient.address
 * group[=].element[=].display = "A.1.4.5 - Address"
-* group[=].element[=].target.code = #nan
+* group[=].element[=].target.code = #Composition.extension:information-recipient					
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #nan
+* group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[+].code = #Header.informationRecipient.country
 * group[=].element[=].display = "A.1.4.6 - Country"
-* group[=].element[=].target.code = #nan
+* group[=].element[=].target.code = #Composition.extension:information-recipient					
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #nan
+* group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[+].code = #Header.informationRecipient.telecom
 * group[=].element[=].display = "A.1.4.7 - Telecom"
-* group[=].element[=].target.code = #nan
+* group[=].element[=].target.code = #Composition.extension:information-recipient					
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #nan
+* group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[+].code = #Header.author
 * group[=].element[=].display = "A.1.5 - Author (by whom the Hospital discharge report was/were authored). Multiple authors could be provided."
 * group[=].element[=].target.code = #Composition.author					

@@ -47,7 +47,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equal					
 * group[=].element[+].code = #subjectIdentification.countryOfAffiliation
 * group[=].element[=].display = "A.1.1.7 - Country of affiliation"
-* group[=].element[=].target.code = #nan
+* group[=].element[=].target.code = #Patient
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[=].target.comment = "to be checked"
@@ -83,7 +83,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[+].code = #subjectContact.contactPerson.role
 * group[=].element[=].display = "A.1.2.3.1 - Role of that person"
-* group[=].element[=].target.code = #nan
+* group[=].element[=].target.code = #Patient
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #unmatched					
 * group[=].element[+].code = #subjectContact.contactPerson.relationship
@@ -137,12 +137,12 @@ Usage: #definition
 * group[=].element[=].display = "A.1.2.2.5 - Address"
 * group[=].element[=].target.code = #Practictioner.address
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #nan
+* group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #subjectContact.preferredHP.telecom
 * group[=].element[=].display = "A.1.2.2.6 - Telecom"
 * group[=].element[=].target.code = #Practictioner.telecom
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #nan
+* group[=].element[=].target.equivalence = #equivalent					
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Subject"
 * group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/practitionerRole-eu-hdr"
 * group[=].element[+].code = #subjectContact.preferredHP
