@@ -1,1 +1,0 @@
- c:/workspace/___Python/env/Scripts/python.exe c:/workspace/___Python/extract-fsh-files/run_all_scripts.py -config C:/workspace/hl7eu-hdr/scripts/generateMapDiagramsFiles/config.py
