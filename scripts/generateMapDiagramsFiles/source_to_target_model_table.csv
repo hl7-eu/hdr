@@ -1,0 +1,12 @@
+ConceptMap ID,Source Profile,Target Profile
+encounter2FHIR-eu-hdr,http://hl7.eu/fhir/hdr/StructureDefinition/InPatientEncounter,http://hl7.eu/fhir/hdr/StructureDefinition/encounter-eu-hdr
+encounter2FHIR-eu-hdr,http://hl7.eu/fhir/hdr/StructureDefinition/InPatientEncounter,http://hl7.eu/fhir/hdr/StructureDefinition/location-eu-hdr
+encounter2FHIR-eu-hdr,http://hl7.eu/fhir/hdr/StructureDefinition/InPatientEncounter,http://hl7.eu/fhir/hdr/StructureDefinition/organization-eu-hdr
+encounter2FHIR-eu-hdr,http://hl7.eu/fhir/hdr/StructureDefinition/InPatientEncounter,http://hl7.eu/fhir/hdr/StructureDefinition/practitioner-eu-hdr
+encounter2FHIR-eu-hdr,http://hl7.eu/fhir/hdr/StructureDefinition/InPatientEncounter,http://hl7.eu/fhir/hdr/StructureDefinition/practitionerRole-eu-hdr
+hdrHeader2FHIR-eu-hdr,http://hl7.eu/fhir/hdr/StructureDefinition/Header,http://hl7.eu/fhir/hdr/StructureDefinition/bundle-eu-hdr
+hdrHeader2FHIR-eu-hdr,http://hl7.eu/fhir/hdr/StructureDefinition/Header,http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr
+hdrHeader2FHIR-eu-hdr,http://hl7.eu/fhir/hdr/StructureDefinition/Header,http://hl7.eu/fhir/hdr/StructureDefinition/patient-eu-hdr
+subject2FHIR-eu-hdr,http://hl7.eu/fhir/hdr/StructureDefinition/Subject,http://hl7.eu/fhir/hdr/StructureDefinition/patient-eu-hdr
+subject2FHIR-eu-hdr,http://hl7.eu/fhir/hdr/StructureDefinition/Subject,http://hl7.eu/fhir/hdr/StructureDefinition/practitioner-eu-hdr
+subject2FHIR-eu-hdr,http://hl7.eu/fhir/hdr/StructureDefinition/Subject,http://hl7.eu/fhir/hdr/StructureDefinition/practitionerRole-eu-hdr

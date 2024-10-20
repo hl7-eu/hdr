@@ -63,8 +63,11 @@ pages:
   # === MAP ====
   Header-map.html:
     title: Header Relationships
+  Subject-map.html:
+    title: Subject Relationships
   InPatientEncounter-map.html:
     title: InPatientEncounter Relationships
+
 # === MAP ====
 # === MINDMAP ====
   hdr-mindmap.html:
@@ -146,6 +149,7 @@ menu:
     Obligations: obligations.html
   Model Maps:
     Header: Header-map.html
+    Subject: Subject-map.html
     InPatientEncounter: InPatientEncounter-map.html
   Artifacts: artifacts.html
   About:

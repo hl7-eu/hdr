@@ -1,0 +1,23 @@
+@startuml
+skinparam class {
+    BackgroundColor<<LogicalModel>> #FFCC00
+    BackgroundColor<<Profile>> #CCCCFF
+}
+skinparam linetype ortho
+legend right
+  | <#FFCC00> | Logical Model |
+  | <#CCCCFF> | Profile |
+endlegend
+class "Subject" <<LogicalModel>> [[StructureDefinition-Subject.html]]
+note right #PaleTurquoise [[ConceptMap-subject2FHIR-eu-hdr.html]]
+Concept Map
+endnote
+class "patient-eu-hdr" <<Profile>> [[StructureDefinition-patient-eu-hdr.html]]
+"Subject" --> "patient-eu-hdr"
+class "practitioner-eu-hdr" <<Profile>> [[StructureDefinition-practitioner-eu-hdr.html]]
+"Subject" --> "practitioner-eu-hdr"
+"patient-eu-hdr" -[hidden]-> "practitioner-eu-hdr"
+class "practitionerRole-eu-hdr" <<Profile>> [[StructureDefinition-practitionerRole-eu-hdr.html]]
+"Subject" --> "practitionerRole-eu-hdr"
+"practitioner-eu-hdr" -[hidden]-> "practitionerRole-eu-hdr"
+@enduml
