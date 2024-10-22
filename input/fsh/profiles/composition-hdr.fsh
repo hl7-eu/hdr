@@ -7,13 +7,33 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * . ^short = "Hospital Discharge Report composition"
 * . ^definition = "Hospital Discharge Report composition. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 
-/* HK: Is order still relevant in case of discharge report?
-* extension contains $composition-basedOn-order-or-requisition named basedOn-order-or-requisition 0..*
-* extension[basedOn-order-or-requisition]
-* extension[basedOn-order-or-requisition].valueReference only Reference ( ServiceRequestEuHdr )
+* extension contains $event-basedOn named basedOn 0..*
+* extension[basedOn].valueReference only Reference ( Resource or ServiceRequest ) /// add profile
+
+
+/* GC return a warning
+* extension[basedOn].valueReference ^slicing.discriminator[0].type = #type
+* extension[basedOn].valueReference ^slicing.discriminator[0].path = "$this.valueReference.resolve()"
+* extension[basedOn].valueReference ^slicing.ordered = false
+* extension[basedOn].valueReference ^slicing.rules = #open
+* extension[basedOn].valueReference ^short = "Sliced per type"
+* extension[basedOn].valueReference ^definition = "Sliced per type"
+* extension[basedOn].valueReference contains order 0..1
+* extension[basedOn].valueReference[order] only Reference ( ServiceRequest ) /// add profile
 */
 
 * extension contains $information-recipient named information-recipient 0..*
+* extension[information-recipient]
+* extension[information-recipient].valueReference only Reference( PractitionerRoleEuHdr or PractitionerEuHdr or Device or PatientEuHdr or RelatedPerson or  Organization)
+
+/* GC TO DO
+- revise information-recipient extesion (there are two of them now)
+- add a link between composition and order
+- check if we need a R5 composition.status
+- add section title 1..1
+- should we add a slice for the attester as legalAUtehnticator ? should we add  
+* extension contains $information-recipient named information-recipient 0..*
+
 /* //HK: Commented, because causing error during build
 * extension[information-recipient]
   * ^slicing.discriminator[0].type = #type
@@ -22,12 +42,13 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * ^slicing.rules = #open
   * ^short = "Sliced per type of recipient"
   * ^definition = "Sliced per type of recipient"
-*/
+
 * extension[information-recipient] contains practictionerRole 0..*
-* extension[information-recipient][practictionerRole].valueReference only Reference ( PractitionerRole )
+* extension[information-recipient][practictionerRole].valueReference only Reference ( PractitionerRoleEuHdr )
 
+*/
 
-//* extension[composition-clinicaldocument-versionNumber]
+* extension[composition-clinicaldocument-versionNumber]
 
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
@@ -41,7 +62,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 // * encounter only Reference (Encounter)
 
-/* * encounter only Reference (Encounter or InpatientEncounter) */
+* encounter only Reference (EncounterEuHdr)
 
 * date ^short = "HDR date"
 * author ^short = "Who and/or what authored the Hospital Discharge Report"
@@ -53,13 +74,13 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * ^short = "Sliced per type of author"
   * ^definition = "Sliced per type of author"
 * author contains practictionerRole 0..*
-* author[practictionerRole] only Reference ( PractitionerRole )
+* author[practictionerRole] only Reference ( PractitionerRoleEuHdr )
 
 * title ^short = "Hospital Discharge Report"
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Hospital Discharge Report\" or any equivalent translation"
 * attester.mode ^short = "The type of attestation"
-* attester.time ^short = "When the composition was attested"
-* attester.party ^short = "Who attested the composition"
+* attester.time ^short = "When the composition was attested."
+* attester.party ^short = "Who attested the composition."
 
 * section 1..
 * section ^slicing.discriminator[0].type = #pattern

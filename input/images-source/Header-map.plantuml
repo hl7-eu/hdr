@@ -12,12 +12,18 @@ class "Header" <<LogicalModel>> [[StructureDefinition-Header.html]]
 note right #PaleTurquoise [[ConceptMap-hdrHeader2FHIR-eu-hdr.html]]
 Concept Map
 endnote
+class "PractitionerRole-eu-hdr" <<Profile>> [[StructureDefinition-PractitionerRole-eu-hdr.html]]
+"Header" --> "PractitionerRole-eu-hdr"
 class "bundle-eu-hdr" <<Profile>> [[StructureDefinition-bundle-eu-hdr.html]]
 "Header" --> "bundle-eu-hdr"
+"PractitionerRole-eu-hdr" -[hidden]-> "bundle-eu-hdr"
 class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
 "Header" --> "composition-eu-hdr"
 "bundle-eu-hdr" -[hidden]-> "composition-eu-hdr"
 class "patient-eu-hdr" <<Profile>> [[StructureDefinition-patient-eu-hdr.html]]
 "Header" --> "patient-eu-hdr"
 "composition-eu-hdr" -[hidden]-> "patient-eu-hdr"
+class "ServiceRequest" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/ServiceRequest]]
+"Header" --> "ServiceRequest"
+"patient-eu-hdr" -[hidden]-> "ServiceRequest"
 @enduml
