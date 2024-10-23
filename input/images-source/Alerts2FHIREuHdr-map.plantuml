@@ -1,0 +1,20 @@
+@startuml
+skinparam class {
+    BackgroundColor<<LogicalModel>> #FFCC00
+    BackgroundColor<<Profile>> #CCCCFF
+}
+skinparam linetype ortho
+legend right
+  | <#FFCC00> | Logical Model |
+  | <#CCCCFF> | Profile |
+endlegend
+class "Alerts2FHIREuHdr" <<LogicalModel>> [[StructureDefinition-Alerts2FHIREuHdr.html]]
+note right #PaleTurquoise [[ConceptMap-alerts2FHIR-eu-hdr.html]]
+Concept Map
+endnote
+class "allergyIntolerance-eu-hdr" <<Profile>> [[StructureDefinition-allergyIntolerance-eu-hdr.html]]
+"Alerts2FHIREuHdr" --> "allergyIntolerance-eu-hdr"
+class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
+"Alerts2FHIREuHdr" --> "composition-eu-hdr"
+"allergyIntolerance-eu-hdr" -[hidden]-> "composition-eu-hdr"
+@enduml

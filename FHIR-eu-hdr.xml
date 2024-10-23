@@ -17,6 +17,7 @@
 <artifact id="StructureDefinition/Recommendations" key="StructureDefinition-Recommendations" name="A.2.9 - Care plan and other recommendations after discharge (eHN)"/>
 <artifact id="ValueSet/admission-urgency-eu-hdr" key="ValueSet-admission-urgency-eu-hdr" name="Admission Urgency Value Set"/>
 <artifact id="ValueSet/allergy-intolerance-substances-eu-hdr" key="ValueSet-allergy-intolerance-substances-eu-hdr" name="Allergy Intolerance"/>
+<artifact id="StructureDefinition/allergyIntolerance-eu-eps" key="StructureDefinition-allergyIntolerance-eu-eps" name="Allergy Intolerance (EU PS)"/>
 <artifact id="ValueSet/allergy-intolerance-eu-hdr" key="ValueSet-allergy-intolerance-eu-hdr" name="Allergy Intolerance (with exceptions)"/>
 <artifact id="ValueSet/anthropometric-observation-vs" key="ValueSet-anthropometric-observation-vs" name="Anthropometric Observation Value Set"/>
 <artifact id="ValueSet/bmi-observation-unit-vs" key="ValueSet-bmi-observation-unit-vs" name="BMI Observation Unit Value Set"/>
@@ -37,6 +38,7 @@
 <artifact id="StructureDefinition/encounter-eu-hdr" key="StructureDefinition-encounter-eu-hdr" name="Encounter (HDR)"/>
 <artifact id="ValueSet/hdr-encounterClass-eu-hdr" key="ValueSet-hdr-encounterClass-eu-hdr" name="Encounter Class Value Set"/>
 <artifact id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
+<artifact id="StructureDefinition/flag-eu-eps" key="StructureDefinition-flag-eu-eps" name="Flag (EU PS)"/>
 <artifact id="ValueSet/encounter-status-eu-hdr" key="ValueSet-encounter-status-eu-hdr" name="In-patient Encounter Type Value Set"/>
 <artifact id="ValueSet/hdr-encounter-type-eu-hdr" key="ValueSet-hdr-encounter-type-eu-hdr" name="In-patient Encounter Type Value Set"/>
 <artifact id="StructureDefinition/location-eu-hdr" key="StructureDefinition-location-eu-hdr" name="Location (HDR)"/>
@@ -64,8 +66,9 @@
 <artifact id="CodeSystem/assessment-category-eu-hdr" key="CodeSystem-assessment-category-eu-hdr" name="Xpandh Assessment Category"/>
 <artifact id="ValueSet/assessment-observation-category-vs" key="ValueSet-assessment-observation-category-vs" name="Xpandh Assessment Observation Category"/>
 <artifact id="ValueSet/functional-assessment-scales-vs" key="ValueSet-functional-assessment-scales-vs" name="Xpandh Functional Assessment Scales"/>
+<artifact id="ConceptMap/alerts2FHIR-eu-hdr" key="ConceptMap-alerts2FHIR-eu-hdr" name="eHN Alerts Model to this guide Map"/>
 <artifact id="ConceptMap/encounter2FHIR-eu-hdr" key="ConceptMap-encounter2FHIR-eu-hdr" name="eHN Encounter Model to this guide Map"/>
-<artifact id="ConceptMap/hdrHeader2FHIR-eu-hdr" key="ConceptMap-hdrHeader2FHIR-eu-hdr" name="eHN Header Model to this guide Map (TO BE COMPLETED)"/>
+<artifact id="ConceptMap/hdrHeader2FHIR-eu-hdr" key="ConceptMap-hdrHeader2FHIR-eu-hdr" name="eHN Header Model to this guide Map"/>
 <artifact id="ConceptMap/subject2FHIR-eu-hdr" key="ConceptMap-subject2FHIR-eu-hdr" name="eHN Subject Model to this guide Map"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>

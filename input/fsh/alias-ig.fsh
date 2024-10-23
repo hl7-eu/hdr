@@ -22,6 +22,9 @@ Alias: $medication-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/medication-uv-ip
 
 // ---- Extensions
 
+Alias: $flag-detail = http://hl7.org/fhir/StructureDefinition/flag-detail
+Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
+Alias: $allergyintolerance-abatement = http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement
 Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
 Alias: $patient-nationality = http://hl7.org/fhir/StructureDefinition/patient-nationality
 Alias: $patient-citizenship = http://hl7.org/fhir/StructureDefinition/patient-citizenship

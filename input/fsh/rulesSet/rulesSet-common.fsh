@@ -1,3 +1,7 @@
+RuleSet: ImposeProfile ( profile, index )
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile][{index}].valueCanonical = {profile}
+
+
 RuleSet: ExtensionContext(path)
 // copied by mCode
 * ^context[+].type = #element
@@ -58,7 +62,7 @@ RuleSet: SectionElementsRules
 * text ^short = "Text summary of the section, for human interpretation."
 * entry only Reference (ObservationResultsLaboratoryEu )
 // * entry only Reference (ObservationResultsLaboratoryEu or DiagnosticReport)
-// * entry ^comment = "The DiagnosticReport referred in the entry SHALL NOT be that representing the whole Hospital Discharge Report"
+// * entry ^comment = "The DiagnosticReport referred in the entry SHALL NOT be that representing the whole Laboratory Report"
 * entry 1..
 * section ..0
 
