@@ -1,29 +1,33 @@
 @startuml
-skinparam class {
-    BackgroundColor<<LogicalModel>> #FFCC00
-    BackgroundColor<<Profile>> #CCCCFF
-}
+hide circle
+hide stereotype
+hide members
+hide methods
 skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
 legend right
-  | <#FFCC00> | Logical Model |
-  | <#CCCCFF> | Profile |
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
 endlegend
 class "InPatientEncounter" <<LogicalModel>> [[StructureDefinition-InPatientEncounter.html]]
-note right #PaleTurquoise [[ConceptMap-encounter2FHIR-eu-hdr.html]]
+note top #PaleTurquoise [[ConceptMap-encounter2FHIR-eu-hdr.html]]
 Concept Map
 endnote
 class "encounter-eu-hdr" <<Profile>> [[StructureDefinition-encounter-eu-hdr.html]]
-"InPatientEncounter" --> "encounter-eu-hdr"
+"InPatientEncounter" <|. "encounter-eu-hdr"
 class "location-eu-hdr" <<Profile>> [[StructureDefinition-location-eu-hdr.html]]
-"InPatientEncounter" --> "location-eu-hdr"
-"encounter-eu-hdr" -[hidden]-> "location-eu-hdr"
+"InPatientEncounter" <|. "location-eu-hdr"
+"encounter-eu-hdr" -d[hidden]-> "location-eu-hdr"
 class "organization-eu-hdr" <<Profile>> [[StructureDefinition-organization-eu-hdr.html]]
-"InPatientEncounter" --> "organization-eu-hdr"
-"location-eu-hdr" -[hidden]-> "organization-eu-hdr"
+"InPatientEncounter" <|. "organization-eu-hdr"
+"location-eu-hdr" -d[hidden]-> "organization-eu-hdr"
 class "practitioner-eu-hdr" <<Profile>> [[StructureDefinition-practitioner-eu-hdr.html]]
-"InPatientEncounter" --> "practitioner-eu-hdr"
-"organization-eu-hdr" -[hidden]-> "practitioner-eu-hdr"
+"InPatientEncounter" <|. "practitioner-eu-hdr"
+"organization-eu-hdr" -d[hidden]-> "practitioner-eu-hdr"
 class "practitionerRole-eu-hdr" <<Profile>> [[StructureDefinition-practitionerRole-eu-hdr.html]]
-"InPatientEncounter" --> "practitionerRole-eu-hdr"
-"practitioner-eu-hdr" -[hidden]-> "practitionerRole-eu-hdr"
+"InPatientEncounter" <|. "practitionerRole-eu-hdr"
+"practitioner-eu-hdr" -d[hidden]-> "practitionerRole-eu-hdr"
 @enduml
