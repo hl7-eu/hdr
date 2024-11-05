@@ -21,13 +21,19 @@ class "bundle-eu-hdr" <<Profile>> [[StructureDefinition-bundle-eu-hdr.html]]
 class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
 "Header" <|. "composition-eu-hdr"
 "bundle-eu-hdr" -d[hidden]-> "composition-eu-hdr"
+class "organization-eu-hdr" <<Profile>> [[StructureDefinition-organization-eu-hdr.html]]
+"Header" <|. "organization-eu-hdr"
+"composition-eu-hdr" -d[hidden]-> "organization-eu-hdr"
 class "patient-eu-hdr" <<Profile>> [[StructureDefinition-patient-eu-hdr.html]]
 "Header" <|. "patient-eu-hdr"
-"composition-eu-hdr" -d[hidden]-> "patient-eu-hdr"
+"organization-eu-hdr" -d[hidden]-> "patient-eu-hdr"
 class "practitionerRole-eu-hdr" <<Profile>> [[StructureDefinition-practitionerRole-eu-hdr.html]]
 "Header" <|. "practitionerRole-eu-hdr"
 "patient-eu-hdr" -d[hidden]-> "practitionerRole-eu-hdr"
+class "Coverage" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Coverage]]
+"Header" <|. "Coverage"
+"practitionerRole-eu-hdr" -d[hidden]-> "Coverage"
 class "ServiceRequest" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/ServiceRequest]]
 "Header" <|. "ServiceRequest"
-"practitionerRole-eu-hdr" -d[hidden]-> "ServiceRequest"
+"Coverage" -d[hidden]-> "ServiceRequest"
 @enduml

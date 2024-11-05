@@ -61,12 +61,16 @@ pages:
   knownIusses.md:
     title: Known Issues
   # === MAP ====
+  HospitalDischargeReport-map.html:
+    title: HospitalDischargeReport Relationships
   Header-map.html:
     title: Header Relationships
   Subject-map.html:
     title: Subject Relationships
   InPatientEncounter-map.html:
     title: InPatientEncounter Relationships
+  Alerts-map.html:
+    title: Alerts Relationships
 
 # === MAP ====
 # === MINDMAP ====
@@ -148,9 +152,11 @@ menu:
     HDR conceptual view:  hdr-mindmap.html
     Obligations: obligations.html
   Model Maps:
+    HospitalDischargeReport: HospitalDischargeReport-map.html
     Header: Header-map.html
     Subject: Subject-map.html
     InPatientEncounter: InPatientEncounter-map.html
+    Alerts: Alerts-map.html    
   Artifacts: artifacts.html
   About:
     Downloads: downloads.html
@@ -250,19 +256,25 @@ menu:
 # is specified by id or name, SUSHI will replace it with the correct
 # URL when generating the IG JSON.
 #
-#  groups:
-#    eHNGuidelines:
-#      name:  eHN Laboratory Guidelines (Informative)
-#      description: Logical models representing the eHN Laboratory Guidelines. This is informative material.
-#      resources:
-#        - StructureDefinition/LabReport
+groups:
+    eHNGuidelines:
+      name:  eHN Hospital Discharge Report Guidelines (Informative)
+      description: Logical models representing the eHN Hospital Discharge Report Guidelines. This is informative material.
+      resources:
+        - StructureDefinition/HospitalDischargeReport
+        - StructureDefinition/Header
+        - StructureDefinition/Subject
+        - StructureDefinition/Alerts 
 #  
-#  
-#    logicalModelsMaps:
-#      name:  eHN Logical Model mappings (Informative)
-#      description: Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide.
-#      resources:
-#        - ConceptMap/labRpt2FHIR-eu-lab
+    logicalModelsMaps:
+      name:  eHN Logical Model mappings (Informative)
+      description: Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide.
+      resources:
+        - ConceptMap/encounter2FHIR-eu-hdr
+        - ConceptMap/hdrHeader2FHIR-eu-hdr
+        - ConceptMap/subject2FHIR-eu-hdr
+        - ConceptMap/alerts2FHIR-eu-hdr
+
 #  
 #    obligations:
 #      name:  Actors and Obligations (Informative)

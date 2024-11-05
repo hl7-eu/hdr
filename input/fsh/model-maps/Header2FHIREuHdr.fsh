@@ -34,6 +34,13 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "To be disucssed if the payor data are conveyed with the request or thorugh other means. Check also the extension to be used."
+* group[=].element[+].code = #Header.payer
+* group[=].element[=].display = "A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care."
+* group[=].element[=].target.code = #Composition.section:payors.entry	
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "Section Payer to be added (To be checkedù).
+Composition.section:payors.entry.ofType(Coverage)	"
 * group[=].element[+].code = #Header.informationRecipient
 * group[=].element[=].display = "A.1.4 - Information recipient - (intended recipient or recipients of the report), if applicable"
 * group[=].element[=].target.code = #Composition.extension:information-recipient					
@@ -157,6 +164,18 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "As business version, not as resource version"
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/organization-eu-hdr"
+* group[=].element[+].code = #Header.payer.insuranceCode
+* group[=].element[=].display = "A.1.3.1 - Health insurance code"
+* group[=].element[=].target.code = #Organization.identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #Header.payer.insuranceName
+* group[=].element[=].display = "A.1.3.2 - Health insurance name"
+* group[=].element[=].target.code = #Organization.name
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
 * group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/patient-eu-hdr"
 * group[=].element[+].code = #Header.subject
 * group[=].element[=].display = "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"
@@ -263,27 +282,30 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "where attester.mode = 'legal'"
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
+* group[=].target = "http://hl7.org/fhir/StructureDefinition/Coverage"
+* group[=].element[+].code = #Header.payer.insuranceCode
+* group[=].element[=].display = "A.1.3.1 - Health insurance code"
+* group[=].element[=].target.code = #Coverage.payor
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "Coverage.payor.ofType(Organization)"
+* group[=].element[+].code = #Header.payer.insuranceName
+* group[=].element[=].display = "A.1.3.2 - Health insurance name"
+* group[=].element[=].target.code = #Coverage.payor
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "Coverage.payor.ofType(Organization)"
+* group[=].element[+].code = #Header.payer.insuranceNumber
+* group[=].element[=].display = "A.1.3.3 - Health insurance number"
+* group[=].element[=].target.code = #Coverage.beneficiary
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "Coverage.beneficiary.ofType(Patient)"
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
 * group[=].element[+].code = #Header.payer
 * group[=].element[=].display = "A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care."
 * group[=].element[=].target.code = #ServiceRequest.insurance
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[+].code = #Header.payer.insuranceCode
-* group[=].element[=].display = "A.1.3.1 - Health insurance code"
-* group[=].element[=].target.code = #ServiceRequest.insurance.xxxxx
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "with payor as Organization"
-* group[=].element[+].code = #Header.payer.insuranceName
-* group[=].element[=].display = "A.1.3.2 - Health insurance name"
-* group[=].element[=].target.code = #ServiceRequest.insurance.payor.xxxxx
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "to be discussed"
-* group[=].element[+].code = #Header.payer.insuranceNumber
-* group[=].element[=].display = "A.1.3.3 - Health insurance number"
-* group[=].element[=].target.code = #ServiceRequest.insurance.payor.xxxxx
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "to be discussed"
+* group[=].element[=].target.comment = "ServiceRequest.insurance.ofType(Coverage)"

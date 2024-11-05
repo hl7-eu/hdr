@@ -5,11 +5,11 @@
 
     <a> </a>
 
-    <p>Hereafter a browseable diagram showing how the Alerts2FHIREuHdr model is realized by the HL7 FHIR Profiles of this guide</p>
+    <p>Hereafter a browseable diagram showing how the HospitalDischargeReport model is realized by the HL7 FHIR Profiles of this guide</p>
 
     <h4 id="model">Model Overview</h4>
 <a> </a>
-<p>{% include Alerts2FHIREuHdr-map.svg %}</p>
+<p>{% include HospitalDischargeReport-map.svg %}</p>
 
     
 

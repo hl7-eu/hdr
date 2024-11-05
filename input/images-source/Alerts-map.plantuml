@@ -12,13 +12,16 @@ legend right
 | <#APPLICATION>  Logical Model |
 | <#TECHNOLOGY>  Profile |
 endlegend
-class "Alerts2FHIREuHdr" <<LogicalModel>> [[StructureDefinition-Alerts2FHIREuHdr.html]]
+class "Alerts" <<LogicalModel>> [[StructureDefinition-Alerts.html]]
 note top #PaleTurquoise [[ConceptMap-alerts2FHIR-eu-hdr.html]]
 Concept Map
 endnote
-class "allergyIntolerance-eu-hdr" <<Profile>> [[StructureDefinition-allergyIntolerance-eu-hdr.html]]
-"Alerts2FHIREuHdr" <|. "allergyIntolerance-eu-hdr"
+class "allergyIntolerance-eu-eps" <<Profile>> [[StructureDefinition-allergyIntolerance-eu-eps.html]]
+"Alerts" <|. "allergyIntolerance-eu-eps"
 class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
-"Alerts2FHIREuHdr" <|. "composition-eu-hdr"
-"allergyIntolerance-eu-hdr" -d[hidden]-> "composition-eu-hdr"
+"Alerts" <|. "composition-eu-hdr"
+"allergyIntolerance-eu-eps" -d[hidden]-> "composition-eu-hdr"
+class "flag-eu-eps" <<Profile>> [[StructureDefinition-flag-eu-eps.html]]
+"Alerts" <|. "flag-eu-eps"
+"composition-eu-hdr" -d[hidden]-> "flag-eu-eps"
 @enduml
