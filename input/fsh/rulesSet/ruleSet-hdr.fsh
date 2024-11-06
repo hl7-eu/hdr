@@ -3,7 +3,7 @@
 //====================================
 RuleSet: AlertSectionRules
 // Alert Section used for the HDR and PS composition
-* section contains alertSection ..1 MS
+* section contains alertSection ..1
 * section[alertSection]
   * insert SectionComRules (
     Health Concern Section, // SHORT
@@ -24,7 +24,7 @@ RuleSet: AlertSectionRules
 //========================================================
 
 RuleSet: CareTeamSectionRules
-* section contains CareTeamSection ..1 MS
+* section contains CareTeamSection ..1
 
 * section[CareTeamSection]
   * insert SectionComRules (

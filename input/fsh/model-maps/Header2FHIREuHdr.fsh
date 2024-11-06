@@ -36,11 +36,10 @@ Usage: #definition
 * group[=].element[=].target.comment = "To be disucssed if the payor data are conveyed with the request or thorugh other means. Check also the extension to be used."
 * group[=].element[+].code = #Header.payer
 * group[=].element[=].display = "A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care."
-* group[=].element[=].target.code = #Composition.section:payors.entry	
+* group[=].element[=].target.code = #Composition.section:sectionPayers.entry	
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Section Payer to be added (To be checkedù).
-Composition.section:payors.entry.ofType(Coverage)	"
+* group[=].element[=].target.comment = "Composition.section:sectionPayers.entry.ofType(Coverage)	"
 * group[=].element[+].code = #Header.informationRecipient
 * group[=].element[=].display = "A.1.4 - Information recipient - (intended recipient or recipients of the report), if applicable"
 * group[=].element[=].target.code = #Composition.extension:information-recipient					

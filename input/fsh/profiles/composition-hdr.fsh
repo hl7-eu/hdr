@@ -10,17 +10,15 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * extension contains $event-basedOn named basedOn 0..*
 * extension[basedOn].valueReference only Reference ( Resource or ServiceRequest ) /// add profile
 
+* extension contains $artifact-relatedArtifact named relatedArtifact 0..*
+* extension[relatedArtifact] 
+  * ^short = "Related artefacts: e.g. presented form"
+* extension[relatedArtifact].valueRelatedArtifact.type 
+  * ^example[0].label = "presented form"
+  * ^example[0].valueCodeableConcept  = http://hl7.org/fhir/related-artifact-type#transformed-into
+* extension[relatedArtifact].valueRelatedArtifact.document  
 
-/* GC return a warning
-* extension[basedOn].valueReference ^slicing.discriminator[0].type = #type
-* extension[basedOn].valueReference ^slicing.discriminator[0].path = "$this.valueReference.resolve()"
-* extension[basedOn].valueReference ^slicing.ordered = false
-* extension[basedOn].valueReference ^slicing.rules = #open
-* extension[basedOn].valueReference ^short = "Sliced per type"
-* extension[basedOn].valueReference ^definition = "Sliced per type"
-* extension[basedOn].valueReference contains order 0..1
-* extension[basedOn].valueReference[order] only Reference ( ServiceRequest ) /// add profile
-*/
+
 
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient]
@@ -797,6 +795,39 @@ Medicinal products\, the administration of which was started during hospitalisat
 * section[sectionAdvanceDirectives].entry only Reference(Consent or DocumentReference)
 * section[sectionAdvanceDirectives].emptyReason ..0
 * section[sectionAdvanceDirectives].emptyReason ^mustSupport = false
+
+
+// -------------------------------------
+// Health Insurance (Coverage) and payment section
+// Payers for alignment with C-CDA
+// -------------------------------------
+* section contains sectionPayers 0..1
+* section[sectionPayers]
+  * insert SectionComRules (
+      Health insurance and payment information section.,
+      Health insurance information is not always required\, however\, in some jurisdictions\, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.,
+      $loinc#48768-6 "Payment sources Document" ) 
+  * ^short = "Health insurance and payment information."
+  * ^definition = "This section includes heath insurance and payment information."
+  * entry only Reference(Coverage) // ==> Add Profile
+
+// -------------------------------------
+
+
+
+// -------------------------------------------------------------
+// Attachmnets section
+// Library of documents and attachments associated to this report
+// -------------------------------------------------------------
+* section contains sectionAttachments 0..1
+* section[sectionAttachments]
+  * insert SectionComRules (
+      Library of attachments.,
+      List documents related and attachments to this report.,
+      $loinc#X-TBD-1 "Attachments" ) 
+  * ^short = "Attachments."
+  * ^definition = "This section lists documents and attachments associated to this report."
+  * entry only Reference(DocumentReference or Binary) // Add Bundle ?
 
 // -------------------------------------
 

@@ -66,6 +66,7 @@
 <artifact id="CodeSystem/assessment-category-eu-hdr" key="CodeSystem-assessment-category-eu-hdr" name="Xpandh Assessment Category"/>
 <artifact id="ValueSet/assessment-observation-category-vs" key="ValueSet-assessment-observation-category-vs" name="Xpandh Assessment Observation Category"/>
 <artifact id="ValueSet/functional-assessment-scales-vs" key="ValueSet-functional-assessment-scales-vs" name="Xpandh Functional Assessment Scales"/>
+<artifact id="ConceptMap/advanceDirectives2FHIR-eu-hdr" key="ConceptMap-advanceDirectives2FHIR-eu-hdr" name="eHN Advance Directives Model to this guide Map"/>
 <artifact id="ConceptMap/alerts2FHIR-eu-hdr" key="ConceptMap-alerts2FHIR-eu-hdr" name="eHN Alerts Model to this guide Map"/>
 <artifact id="ConceptMap/encounter2FHIR-eu-hdr" key="ConceptMap-encounter2FHIR-eu-hdr" name="eHN Encounter Model to this guide Map"/>
 <artifact id="ConceptMap/hdr2FHIR-eu-hdr" key="ConceptMap-hdr2FHIR-eu-hdr" name="eHN HDR Model to this guide Map"/>
@@ -73,6 +74,7 @@
 <artifact id="ConceptMap/subject2FHIR-eu-hdr" key="ConceptMap-subject2FHIR-eu-hdr" name="eHN Subject Model to this guide Map"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
+<page key="AdvanceDirectives-map" name="AdvanceDirectives Relationships"/>
 <page key="Alerts-map" name="Alerts Relationships"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="contributors" name="Authors and contributors"/>

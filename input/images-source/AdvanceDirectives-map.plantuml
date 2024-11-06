@@ -1,0 +1,24 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "AdvanceDirectives" <<LogicalModel>> [[StructureDefinition-AdvanceDirectives.html]]
+note top #PaleTurquoise [[ConceptMap-advanceDirectives2FHIR-eu-hdr.html]]
+Concept Map
+endnote
+class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
+"AdvanceDirectives" <|. "composition-eu-hdr"
+class "Consent" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Consent]]
+"AdvanceDirectives" <|. "Consent"
+"composition-eu-hdr" -d[hidden]-> "Consent"
+@enduml

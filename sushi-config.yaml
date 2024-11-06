@@ -71,6 +71,8 @@ pages:
     title: InPatientEncounter Relationships
   Alerts-map.html:
     title: Alerts Relationships
+  AdvanceDirectives-map.html:
+    title: AdvanceDirectives Relationships
 
 # === MAP ====
 # === MINDMAP ====
@@ -156,7 +158,8 @@ menu:
     Header: Header-map.html
     Subject: Subject-map.html
     InPatientEncounter: InPatientEncounter-map.html
-    Alerts: Alerts-map.html    
+    Alerts: Alerts-map.html
+    AdvanceDirectives: AdvanceDirectives-map.html 
   Artifacts: artifacts.html
   About:
     Downloads: downloads.html
@@ -264,18 +267,29 @@ groups:
         - StructureDefinition/HospitalDischargeReport
         - StructureDefinition/Header
         - StructureDefinition/Subject
-        - StructureDefinition/Alerts 
+        - StructureDefinition/InPatientEncounter        
+        - StructureDefinition/AdmissionEvaluation
+        - StructureDefinition/Alerts
+        - StructureDefinition/AdvanceDirectives
+        - StructureDefinition/PatientHistory
+        - StructureDefinition/HospitalStay
+        - StructureDefinition/DischargeDetails
+        - StructureDefinition/Recommendations
 #  
     logicalModelsMaps:
       name:  eHN Logical Model mappings (Informative)
       description: Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide.
       resources:
-        - ConceptMap/encounter2FHIR-eu-hdr
+        - ConceptMap/hdr2FHIR-eu-hdr
         - ConceptMap/hdrHeader2FHIR-eu-hdr
+        - ConceptMap/encounter2FHIR-eu-hdr
         - ConceptMap/subject2FHIR-eu-hdr
         - ConceptMap/alerts2FHIR-eu-hdr
+        - ConceptMap/advanceDirectives2FHIR-eu-hdr
 
 #  
+
+
 #    obligations:
 #      name:  Actors and Obligations (Informative)
 #      description: Actors and Obligations used to describe the Hospital Discharge Report functional requirements for the specified data elements. Informative for this version of the guide.
