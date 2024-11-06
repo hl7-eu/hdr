@@ -58,7 +58,7 @@ pages:
     title: Authors and contributors
   obligations.md:
     title: Obligations
-  knownIusses.md:
+  knownIssues.md:
     title: Known Issues
   # === MAP ====
   HospitalDischargeReport-map.html:
@@ -164,7 +164,7 @@ menu:
   About:
     Downloads: downloads.html
     Authors and contributors: contributors.html
-    Known Issues: knownIusses.html
+    Known Issues: knownIssues.html
 
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
