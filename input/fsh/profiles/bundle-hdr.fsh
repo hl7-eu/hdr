@@ -7,11 +7,11 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * . ^definition = "Hospital Discharge Report bundle."
 * obeys bdl-hdr-1
 
-* identifier 1.. MS
+* identifier 1.. ^short = "Instance identifier"
 * type = #document (exactly)
-* timestamp 1.. MS
+* timestamp 1.. ^short = "Instance identifier"
 * link ..0
-* entry 1.. MS
+* entry 1..
 * entry ^slicing.discriminator[0].type = #type
 * entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.discriminator[+].type = #profile
@@ -20,7 +20,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry ^short = "Entry resource in the Hospital Discharge Report bundle"
 * entry ^definition = "An entry resource included in the Hospital Discharge Report document bundle resource."
 * entry ^comment = "Must contain the HDR Composition as the first entry (only a single Composition resource instance may be included).  Additional constraints are specified in the HDR Composition profile."
-* entry.fullUrl 1.. MS
+* entry.fullUrl 1..
 * entry.search ..0
 * entry.request ..0
 * entry.response ..0

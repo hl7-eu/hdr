@@ -46,7 +46,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 */
 
-* extension[composition-clinicaldocument-versionNumber]
+* extension[composition-clinicaldocument-versionNumber] // check the extension used
 
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
@@ -331,7 +331,7 @@ Medicinal products\, the administration of which was started during hospitalisat
       This section documents the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\nIf no information about allergies is available\, or if no allergies are known this should be clearly documented in the section.,
       $loinc#48765-2 )   // CODE
   * entry 1..
-  * entry only Reference(AllergyIntolerance or DocumentReference  )
+  * entry only Reference(AllergyIntoleranceEpsEu or DocumentReference )
   * insert SectionEntrySliceComRules(Relevant allergies or intolerances (conditions\) for that patient.,
     It lists the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available\, or that no allergies are known .)
   // entry slices

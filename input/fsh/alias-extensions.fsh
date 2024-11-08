@@ -8,6 +8,7 @@ Alias: $artifact-relatedArtifact = http://hl7.org/fhir/StructureDefinition/artif
 Alias: $bodySite-reference = http://hl7.org/fhir/StructureDefinition/bodySite
 Alias: $bodyStructure-laterality-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure.laterality
 Alias: $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
+Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
 Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction
 Alias: $event-statusReason = http://hl7.org/fhir/StructureDefinition/event-statusReason
