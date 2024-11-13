@@ -84,7 +84,7 @@
 <page key="hdr-mindmap" name="Hospital Discharge Report"/>
 <page key="HospitalDischargeReport-map" name="HospitalDischargeReport Relationships"/>
 <page key="InPatientEncounter-map" name="InPatientEncounter Relationships"/>
-<page key="knownIusses" name="Known Issues"/>
+<page key="knownIssues" name="Known Issues"/>
 <page key="obligations" name="Obligations"/>
 <page key="Subject-map" name="Subject Relationships"/>
 <page key="toc" name="Table of Contents"/>

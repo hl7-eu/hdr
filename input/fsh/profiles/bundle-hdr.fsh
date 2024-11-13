@@ -7,9 +7,11 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * . ^definition = "Hospital Discharge Report bundle."
 * obeys bdl-hdr-1
 
-* identifier 1.. ^short = "Instance identifier"
+* identifier 1.. 
+  * ^short = "Instance identifier"
 * type = #document (exactly)
-* timestamp 1.. ^short = "Instance identifier"
+* timestamp 1.. 
+  * ^short = "Instance identifier"
 * link ..0
 * entry 1..
 * entry ^slicing.discriminator[0].type = #type

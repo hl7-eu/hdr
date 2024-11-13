@@ -18,7 +18,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * ^example[0].valueCodeableConcept  = http://hl7.org/fhir/related-artifact-type#transformed-into
 * extension[relatedArtifact].valueRelatedArtifact.document  
 
-
+* extension contains $composition.version-r5 named compositionVersionR5 0..
+* extension[compositionVersionR5].valueString ^short = "Business version"
 
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient]
@@ -45,8 +46,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * extension[information-recipient][practictionerRole].valueReference only Reference ( PractitionerRoleEuHdr )
 
 */
-
-* extension[composition-clinicaldocument-versionNumber] // check the extension used
 
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
@@ -336,7 +335,7 @@ Medicinal products\, the administration of which was started during hospitalisat
     It lists the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available\, or that no allergies are known .)
   // entry slices
   * insert SectionEntrySliceDefRules (allergyIntolerance, 0.. , HDR Allergy entry,
-    HDR Allergy entry, $AllergyIntolerance-uv-ips)
+    HDR Allergy entry, AllergyIntoleranceEpsEu)
 
 
 // -------------------------------------
