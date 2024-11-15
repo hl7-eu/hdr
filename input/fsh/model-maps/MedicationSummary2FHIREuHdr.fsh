@@ -37,6 +37,7 @@ Usage: #definition
 * group[=].element[=].target.code = #MedicationRequest.status
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equal
+* group[=].element[=].target.comment = "As reason for ordering"
 * group[=].element[+].code = #MedicationSummary.changeReason
 * group[=].element[=].display = "A.2.9.2.2 - Reason for change"
 * group[=].element[=].target.code = #MedicationRequest.statusReason
@@ -66,7 +67,6 @@ Usage: #definition
 * group[=].element[=].target.comment = "CHECK it is used the name period but the imression is that is the duration not the period "
 * group[=].element[+].code = #MedicationSummary.daysSupplied
 * group[=].element[=].display = "A.2.9.2.11 - Days supplied"
-* group[=].element[=].target.code = #nan
+* group[=].element[=].target.code = #MedicationDispense.daysSupply
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "CLARIFY"
+* group[=].element[=].target.equivalence = #equivalent

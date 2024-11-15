@@ -1,7 +1,7 @@
 Logical: PlanOfCareHdrEhn
 Id: PlanOfCare
-Title: "A.2.9.1 - Care plan"
-Description: """Hospital Discharge Report - Care plan after discharge - A.2.9.1 eHN"""
+Title: "A.2.8.1 - Care plan"
+Description: """Hospital Discharge Report - Care plan after discharge - A.2.8.1 eHN"""
 * title 0..1 string "A.2.9.1.1 - Title" """Human-friendly name for the care plan (e.g. Hip replacement care plan)"""
 * addresses 0..* CodeableConcept "A.2.9.1.2 - Addresses" """Identifies the conditions/problems/concerns/diagnoses/etc. whose management and/or mitigation are handled by this plan. This element provides a linkage to the conditions recorded in the diagnostic summary section."""
 * description 0..1 string "A.2.9.1.3 - Description" """A description of the scope and nature of the plan."""

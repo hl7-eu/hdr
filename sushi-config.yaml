@@ -74,12 +74,11 @@ pages:
     title: Alerts Relationships
   AdvanceDirectives-map.html:
     title: AdvanceDirectives Relationships
-  Recommendations-map.html:
-    title: Recommendations Relationships
   PlanOfCare-map.html:
     title: PlanOfCare Relationships
   MedicationSummary-map.html:
-    title: MedicationSummary Relationships    
+    title: MedicationSummary Relationships   
+
 # === MAP ====
 
 # === MINDMAP ====
@@ -167,7 +166,6 @@ menu:
     InPatientEncounter: InPatientEncounter-map.html
     Alerts: Alerts-map.html
     AdvanceDirectives: AdvanceDirectives-map.html
-    Recommendations: Recommendations-map.html
     MedicationSummary: MedicationSummary-map.html
     PlanOfCare: PlanOfCare-map.html  
 
@@ -278,14 +276,17 @@ groups:
         - StructureDefinition/HospitalDischargeReport
         - StructureDefinition/Header
         - StructureDefinition/Subject
-        - StructureDefinition/InPatientEncounter        
-        - StructureDefinition/AdmissionEvaluation
-        - StructureDefinition/Alerts
         - StructureDefinition/AdvanceDirectives
+        - StructureDefinition/Alerts
+        - StructureDefinition/InPatientEncounter
+        - StructureDefinition/AdmissionEvaluation
         - StructureDefinition/PatientHistory
         - StructureDefinition/HospitalStay
         - StructureDefinition/DischargeDetails
-        - StructureDefinition/Recommendations
+        - StructureDefinition/ObjectiveFindings
+        - StructureDefinition/FunctionalStatus
+        - StructureDefinition/PlanOfCare
+        - StructureDefinition/MedicationSummary
 #  
     logicalModelsMaps:
       name:  eHN Logical Model mappings (Informative)
@@ -293,10 +294,12 @@ groups:
       resources:
         - ConceptMap/hdr2FHIR-eu-hdr
         - ConceptMap/hdrHeader2FHIR-eu-hdr
-        - ConceptMap/encounter2FHIR-eu-hdr
         - ConceptMap/subject2FHIR-eu-hdr
+        - ConceptMap/encounter2FHIR-eu-hdr
         - ConceptMap/alerts2FHIR-eu-hdr
         - ConceptMap/advanceDirectives2FHIR-eu-hdr
+        - ConceptMap/planOfCare2FHIR-eu-hdr
+        - ConceptMap/medicationSummary2FHIR-eu-hdr
 
 #  
 

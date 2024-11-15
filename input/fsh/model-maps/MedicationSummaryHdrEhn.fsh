@@ -1,7 +1,7 @@
 Logical: MedicationSummaryHdrEhn
 Id: MedicationSummary
-Title: "A.2.9.2 - Medication summary"
-Description: """Hospital Discharge Report - Medication Summary after discharge - A.2.9.2 eHN"""
+Title: "A.2.8.2 - Medication summary"
+Description: """Hospital Discharge Report - Medication Summary after discharge - A.2.8.2 eHN"""
 * reason 0..* CodeableConcept "A.2.9.2.1 - Medication reason" """The reason why the medication is or was prescribed or used. It provides a link to the Past or current health condition(s) or problem(s) that the patient has had or has and for which this medication was prescribed."""
 * changeReason 0..1 CodeableConcept "A.2.9.2.2 - Reason for change" """Reason for change of medication"""
 * productCode 1..1 CodeableConcept "A.2.9.2.3 - Code" """Product code."""

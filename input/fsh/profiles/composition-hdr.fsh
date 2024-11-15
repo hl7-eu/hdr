@@ -497,31 +497,6 @@ Medicinal products\, the administration of which was started during hospitalisat
 /* * section[sectionPastIllnessHx].emptyReason ..0
 * section[sectionPastIllnessHx].emptyReason ^mustSupport = false */
 
-
-/*
-// -------------------------------------
-// Functional Status Section 0 … 1
-// -------------------------------------
-
-* section contains sectionFunctionalStatus ..1
-* section[sectionFunctionalStatus] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionFunctionalStatus] ^extension[0].valueString = "Section"
-* section[sectionFunctionalStatus] ^short = "IPS Functional Status"
-* section[sectionFunctionalStatus] ^definition = "The functional status section shall contain a narrative description of capability of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide."
-* section[sectionFunctionalStatus].title 1..
-* section[sectionFunctionalStatus].code 1..
-* section[sectionFunctionalStatus].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[sectionFunctionalStatus].code = http://loinc.org#47420-5 (exactly)
-* section[sectionFunctionalStatus].text 1..
-* section[sectionFunctionalStatus].text only Narrative
-* section[sectionFunctionalStatus].entry
-* section[sectionFunctionalStatus].entry only Reference(Condition or $Condition-uv-ips or ClinicalImpression or DocumentReference)
-* section[sectionFunctionalStatus].entry ^short = "Optional entry used to represent disabilities and functional assessments"
-* section[sectionFunctionalStatus].entry ^definition = "It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide."
-* section[sectionFunctionalStatus].emptyReason ..0
-* section[sectionFunctionalStatus].emptyReason ^mustSupport = false
-*/
-
 // -------------------------------------
 // Care Team 0 … 1
 // -------------------------------------
@@ -731,7 +706,7 @@ Medicinal products\, the administration of which was started during hospitalisat
     Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge, 
     $loinc#10183-2 )   //  "Hospital discharge medications Narrative"
   * entry 1..
-  * entry only Reference(MedicationRequestEuHdr)
+  * entry only Reference(MedicationRequestEuHdr or MedicationDispense)
 
 // -------------------------------------
 // Discharge Instructions Section 0 … 1

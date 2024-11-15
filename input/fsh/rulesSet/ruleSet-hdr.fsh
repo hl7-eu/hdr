@@ -41,6 +41,11 @@ RuleSet: CareTeamSectionRules
 
 RuleSet: EvaluationSubSectionRules
 * section
+  * title 1..
+  * text 1..
+  * text only Narrative
+  * section ..0
+* section
   * ^slicing.discriminator[+].type = #type
   * ^slicing.discriminator[=].path = "resolve()"
   * ^slicing.ordered = false
@@ -48,19 +53,21 @@ RuleSet: EvaluationSubSectionRules
   * ^short = "Objective findings"
   * ^definition = "Findings made by healthcare practitioner"
 
-* section contains anthropometry 0..1
-* section[anthropometry]
+// ==> TO BE REVIEWED
+* section contains sectionAnthropometry 0..1
+* section[sectionAnthropometry]
   * insert SectionComRules (
     Anthropometric observations,
     Anthropometric Observations sub-section,
-    $sct#248326004)
+    $sct#248326004) // to be updated
   * entry 1..
   /* * entry only Reference(BodyHeightXpandh or BodyWeightXpandh or BMIProfileXpandh or SkinfoldThicknessXpandh or CircumferenceMeasurementXpandh)
    */
   * section ..0
 
-* section contains vitalSigns 0..1
-* section[vitalSigns]
+// ==> TO BE REVIEWED
+* section contains sectionVitalSigns 0..1
+* section[sectionVitalSigns]
   * title = "Vital signs"
   * code = $sct#1184593002 "Vital sign document section (record artifact)"
   * entry 1..
@@ -69,18 +76,27 @@ RuleSet: EvaluationSubSectionRules
  */
   * section ..0
 
-* section contains physicalExamination 0..1  // ToDo: add structure
-* section[physicalExamination]
+// ==> TO BE REVIEWED
+* section contains sectionPhysicalExamination 0..1  // ToDo: add structure
+* section[sectionPhysicalExamination]
   * title = "Physical examination"
   * code = $sct#425044008 "Physical exam section (record artifact)"
   * text 1..    // now only textual section, should we use questionnair resource for structuring per body part? Maybe as on option?
   * entry 0..   // now only textual section, should we use questionnair response or Observation for structuring per body part?
   * section ..0
 
-* section contains functionalStatus 0..1
-* section[functionalStatus]
-  * section[functionalStatus]
-  * title = "Functional status assessment"
-  * code = $sct#1184588000 "Functional status document section (record artifact)"
+* section contains sectionFunctionalStatus 0..1
+* section[sectionFunctionalStatus]
+  * insert SectionComRules (
+    Functional status,
+    The functional status section shall contain a narrative description of capability of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide.,
+    $loinc#47420-5) // Functional status assessment note
+
+/*   * code = $sct#1184588000 "Functional status document section (record artifact)" */
   /* * entry only Reference(FunctionalStatusAssessment) */
-  * section ..0
+
+  * entry only Reference(Condition or ClinicalImpression or Observation or DocumentReference or QuestionnaireResponse)
+    * ^short = "Optional entry used to represent disabilities and functional assessments"
+    * ^definition = "It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide."
+  
+  // => add slices for diability or functional assessment ?

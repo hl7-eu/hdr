@@ -1,7 +1,7 @@
 Logical: HospitalStayEhn
 Id: HospitalStay
-Title: "A.2.7 - Hospital stay (eHN)"
-Description: """Hospital Discharge Report - Hospital stay - A.2.7 eHN"""
+Title: "A.2.6 - Hospital stay (eHN)"
+Description: """Hospital Discharge Report - Hospital stay - A.2.6 eHN"""
 * diagnosticSummary 1..* BackboneElement "A.2.7.1 - Diagnostic summary" """All problems/diagnoses that affect care during the inpatient case or are important to be recorded to ensure continuity of care. The diagnostic summary differentiates, in accordance with the international recommendation, between problems treated during hospital stay and other (untreated) problems. Treated problems are problems that were the subject of diagnostics, therapy, nursing, or (continuous) monitoring during the hospitalisation. Furthermore problems could be divided into three categories: problems present on admission (POA), conditions acquired during hospital stay (HAC) and problems that cannot be classified as being of any of the two (N/A). The diagnostic summary contains all conditions as they were recognised at the end of hospitalisation, after all examinations. This section contains concise, well specified, codeable, summary of problems. Problems are ordered by importance (main problems first) during hospital stay. Description of the problem might be completed with additional details in the medical history section and/or in the Synthesis section."""
 * diagnosticSummary.problemDescription 1..1 string "A.2.7.1.1 - Problem description" """Problem specification in narrative form"""
 * diagnosticSummary.problemDetails 0..* BackboneElement "A.2.7.1.2 - Problem details" """Problem details include code that identifies problem, specification of the body structure, laterality, and other aspects of the problem."""

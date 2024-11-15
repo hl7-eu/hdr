@@ -1,7 +1,7 @@
 Logical: PatientHistoryEhn
 Id: PatientHistory
-Title: "A.2.6 - Patient history (eHN)"
-Description: """Hospital Discharge Report - Patient history - A.2.6 eHN"""
+Title: "A.2.5 - Patient history (eHN)"
+Description: """Hospital Discharge Report - Patient history - A.2.5 eHN"""
 * medicalHistory 1..1 BackboneElement "A.2.6.1 - Medical history" """Medical history"""
 * medicalHistory.historyOfConditions 1..* BackboneElement "A.2.6.1.1 - History of problems" """A list of conditions of a patient that the patient suffered in the past or still suffers. Unlike diagnostic summary, medical history is not only a list of problems, but could contain broader description of the condition and its progress, details about treatment including medication and patient response to treatment. Past problem section (unlike the same section of the patient summary) should include only conditions that are important for continuity of care. This section, if provided, complements the diagnostic summary section of the discharge report."""
 * medicalHistory.historyOfConditions.conditionSpecification 1..1 string "A.2.6.1.1.1 - Problem description" """Problem specification"""
