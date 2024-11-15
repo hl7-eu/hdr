@@ -50,7 +50,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Patient
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #unmatched					
-* group[=].element[=].target.comment = "to be checked"
+* group[=].element[=].target.comment = "Not mapped on purpose"
 * group[=].element[+].code = #subjectContact
 * group[=].element[=].display = "A.1.2 - Patient/subject related contact information"
 * group[=].element[=].target.code = #Patient					

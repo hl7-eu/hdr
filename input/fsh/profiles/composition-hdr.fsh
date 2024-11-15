@@ -111,7 +111,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRules (
     HDR Hospital course,
     Hospital course describes the sequence of events from admission to discharge in a hospital facility.,
-    $loinc#8648-8 "Hospital course Narrative")   // CODE
+    $loinc#8648-8 )   // "Hospital course Narrative"
   * ^short = "Significant information about course of hospital stay"
   * ^definition = "This section includes basic information about hospital staty (encounter), diagnostic summary in narrative form, pharmacotherapy, major procedures, medical devices, significant findings during hospital stay and clinical synthesis."
   * section
@@ -494,8 +494,8 @@ Medicinal products\, the administration of which was started during hospitalisat
 * section[sectionPastIllnessHx].entry only Reference($Condition-uv-ips)
 * section[sectionPastIllnessHx].entry ^short = "Conditions the patient suffered in the past."
 * section[sectionPastIllnessHx].entry ^definition = "It contains a description of the conditions the patient suffered in the past."
-* section[sectionPastIllnessHx].emptyReason ..0
-* section[sectionPastIllnessHx].emptyReason ^mustSupport = false
+/* * section[sectionPastIllnessHx].emptyReason ..0
+* section[sectionPastIllnessHx].emptyReason ^mustSupport = false */
 
 
 /*
@@ -708,44 +708,44 @@ Medicinal products\, the administration of which was started during hospitalisat
 * section[dischargeDiagnosisSection].emptyReason ^mustSupport = false
 */
 
-/*
+// -------------------------------------
+// Plan of Care Section
+// -------------------------------------
+* section contains sectionPlanOfCare ..1
+* section[sectionPlanOfCare]
+  * insert SectionComRules (
+    Plan of Care Section,
+    The plan of care section contains a narrative description of the expectations for care including proposals\, goals\, and order requests for monitoring\, tracking\, or improving the condition of the patient.,
+    $loinc#18776-5 )   // Plan of care note
+  * entry only Reference( CarePlan or DocumentReference) // Check profiles
+
 // -------------------------------------
 // Discharge Medications Section 0 … 1
 // -------------------------------------
 * section contains sectionDischargeMedications ..1
-* section[sectionDischargeMedications] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionDischargeMedications] ^extension[0].valueString = "Section"
-* section[sectionDischargeMedications] ^short = "Admission Medications"
-* section[sectionDischargeMedications].title 1..
-* section[sectionDischargeMedications].code 1..
-* section[sectionDischargeMedications].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[sectionDischargeMedications].code = http://loinc.org#42346-7 (exactly)
-* section[sectionDischargeMedications].text 1..
-* section[sectionDischargeMedications].entry
-* section[sectionDischargeMedications].entry only Reference($MedicationStatement-uv-ips or $MedicationRequest-uv-ips or MedicationAdministration or MedicationDispense)
-* section[sectionDischargeMedications].emptyReason ..0
-* section[sectionDischargeMedications].emptyReason ^mustSupport = false
-*/
 
+* section[sectionDischargeMedications]
+
+  * insert SectionComRules (
+    Hospital discharge medications,
+    Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge, 
+    $loinc#10183-2 )   //  "Hospital discharge medications Narrative"
+  * entry 1..
+  * entry only Reference(MedicationRequestEuHdr)
 
 // -------------------------------------
-// Plan of Care Section
-// ToDo: Review
+// Discharge Instructions Section 0 … 1
 // -------------------------------------
-* section contains sectionPlanOfCare ..1
-* section[sectionPlanOfCare] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionPlanOfCare] ^extension[0].valueString = "Section"
-* section[sectionPlanOfCare] ^short = "IPS Plan of Care Section"
-* section[sectionPlanOfCare] ^definition = "The plan of care section contains a narrative description of the expectations for care including proposals, goals, and order requests for monitoring, tracking, or improving the condition of the patient."
-* section[sectionPlanOfCare].title 1..
-* section[sectionPlanOfCare].code 1..
-* section[sectionPlanOfCare].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[sectionPlanOfCare].code = http://loinc.org#18776-5 (exactly)
-* section[sectionPlanOfCare].text 1..
-* section[sectionPlanOfCare].text only Narrative
-* section[sectionPlanOfCare].entry only Reference( CarePlan or DocumentReference)
-* section[sectionPlanOfCare].emptyReason ..0
-* section[sectionPlanOfCare].emptyReason ^mustSupport = false
+* section contains sectionDischargeInstructions ..1
+
+* section[sectionDischargeInstructions]
+  * insert SectionComRules (
+    Hospital Discharge instructions,
+    Hospital Discharge instructions,
+    $loinc#8653-8 )   //  Hospital Discharge instructions
+  
+
+
 
 // -------------------------------------
 // Hospital Discharge Studies Summary Section
@@ -770,30 +770,17 @@ Medicinal products\, the administration of which was started during hospitalisat
 */
 // -------------------------------------
 
-// -------------------------------------
-
-// to be classified
-
-// -------------------------------------
-
 
 
 // -------------------------------------
 * section contains sectionAdvanceDirectives ..1
-* section[sectionAdvanceDirectives] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionAdvanceDirectives] ^extension[0].valueString = "Section"
-* section[sectionAdvanceDirectives] ^short = "IPS Advance Directives Section"
-* section[sectionAdvanceDirectives] ^definition = "The advance directives section contains a narrative description of patient's advance directive."
-* section[sectionAdvanceDirectives].title 1..
-* section[sectionAdvanceDirectives].code 1..
-* section[sectionAdvanceDirectives].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[sectionAdvanceDirectives].code = http://loinc.org#42348-3 (exactly)
-* section[sectionAdvanceDirectives].text 1..
-* section[sectionAdvanceDirectives].text only Narrative
-* section[sectionAdvanceDirectives].entry
-* section[sectionAdvanceDirectives].entry only Reference(Consent or DocumentReference)
-* section[sectionAdvanceDirectives].emptyReason ..0
-* section[sectionAdvanceDirectives].emptyReason ^mustSupport = false
+
+* section[sectionAdvanceDirectives]
+  * insert SectionComRules (
+    Advance Directives Section,
+    The advance directives section contains a narrative description of patient's advance directive.,
+    $loinc#42348-3 )  // 	Advance directives
+  * entry only Reference(Consent or DocumentReference) // ==> Add Profile
 
 
 // -------------------------------------

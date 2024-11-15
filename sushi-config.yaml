@@ -60,6 +60,7 @@ pages:
     title: Obligations
   knownIssues.md:
     title: Known Issues
+
   # === MAP ====
   HospitalDischargeReport-map.html:
     title: HospitalDischargeReport Relationships
@@ -73,8 +74,14 @@ pages:
     title: Alerts Relationships
   AdvanceDirectives-map.html:
     title: AdvanceDirectives Relationships
-
+  Recommendations-map.html:
+    title: Recommendations Relationships
+  PlanOfCare-map.html:
+    title: PlanOfCare Relationships
+  MedicationSummary-map.html:
+    title: MedicationSummary Relationships    
 # === MAP ====
+
 # === MINDMAP ====
   hdr-mindmap.html:
     title: Hospital Discharge Report
@@ -159,7 +166,11 @@ menu:
     Subject: Subject-map.html
     InPatientEncounter: InPatientEncounter-map.html
     Alerts: Alerts-map.html
-    AdvanceDirectives: AdvanceDirectives-map.html 
+    AdvanceDirectives: AdvanceDirectives-map.html
+    Recommendations: Recommendations-map.html
+    MedicationSummary: MedicationSummary-map.html
+    PlanOfCare: PlanOfCare-map.html  
+
   Artifacts: artifacts.html
   About:
     Downloads: downloads.html

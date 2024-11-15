@@ -32,8 +32,8 @@ RuleSet: SectionComRules (short, def, code)
 * code = {code} (exactly)
 * text 1..
 * text only Narrative
-* emptyReason ..0
-* emptyReason ^mustSupport = false
+/* * emptyReason ..0
+* emptyReason ^mustSupport = false */
 
 RuleSet: SectionEntrySliceComRules (short, def)
 * entry ^slicing.discriminator[0].type = #type

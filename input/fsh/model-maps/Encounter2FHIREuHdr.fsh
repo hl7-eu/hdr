@@ -78,7 +78,6 @@ Usage: #definition
 * group[=].element[=].target.code = #Encounter.reasonReference
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "to be checked"
 * group[=].element[+].code = #Encounter.admissionReason.code
 * group[=].element[=].display = "A.2.3.4.1 - Admission reason"
 * group[=].element[=].target.code = #Encounter.reasonCode

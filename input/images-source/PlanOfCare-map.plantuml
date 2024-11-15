@@ -1,0 +1,21 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "PlanOfCare" <<LogicalModel>> [[StructureDefinition-PlanOfCare.html]]
+note top #PaleTurquoise [[ConceptMap-planOfCare2FHIR-eu-hdr.html]]
+Concept Map
+endnote
+class "CarePlan" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/CarePlan]]
+"PlanOfCare" <|. "CarePlan"
+@enduml
