@@ -91,8 +91,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 // Admission Evaluation Section 0 … 1 R
 // -------------------------------------
 
-* section contains admissionEvaluationSection ..1
-* section[admissionEvaluationSection]
+* section contains sectionAdmissionEvaluation ..1
+* section[sectionAdmissionEvaluation]
   * insert SectionComRules (
     Hospital Admission evaluation,
       Hospital Admission evaluation,
@@ -122,8 +122,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * entry 1..1
 /*   * entry only Reference(Encounter) // EncounterEuHdr */
 
-  * section contains diagnosticSummaryDescription 1..1
-  * section[diagnosticSummaryDescription]
+  * section contains sectionDiagnosticSummaryDesc 1..1
+  * section[sectionDiagnosticSummaryDesc]
     * insert SectionComRules (
       Problem specification in narrative form,
       All problems/diagnoses that affect care during the inpatient case or are important to be recorded to ensure continuity of care. The diagnostic summary differentiates\, in accordance with the international recommendation\, between problems treated during hospital stay and other (untreated\) problems. Treated problems are problems that were the subject of diagnostics\, therapy\, nursing\, or (continuous\) monitoring during the hospitalisation. Furthermore problems could be divided into three categories: problems present on admission (POA\)\, conditions acquired during hospital stay (HAC\) and problems that cannot be classified as being of any of the two (N/A\). The diagnostic summary contains all conditions as they were recognised at the end of hospitalisation\, after all examinations. This section contains concise\, well specified\, codeable\, summary of problems. Problems are ordered by importance (main problems first\) during hospital stay. Description of the problem might be completed with additional details in the medical history section and/or in the Synthesis section.	,
@@ -132,8 +132,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     //* entry only Reference(ConditionEncounter)
     * section ..0
 
-  * section contains significantProcedures 1..1
-  * section[significantProcedures]
+  * section contains sectionSignificantProcedures 1..1
+  * section[sectionSignificantProcedures]
     * insert SectionComRules (
       Significant procedures,
       Significant surgical and non-surgical procedures performed during hospitalisation which are significant for continuity of care\, e.g. surgeries and other \"instrumental\"interventions (endoscopic\, intravascular\)\, chemotherapy\, radiotherapy\, purification methods (dialysis\, hemoperfusion\)\, circulation support methods (counterpulsation\, etc.\)\, administration of blood derivatives or others.\r\nThis section does not include purely diagnostic procedures (MRI\, CT\, etc.\). If no significant performance has been performed\, this fact must be explicitly stated using the IPS Absent and Unknown Data. ,
@@ -142,8 +142,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     * entry only Reference(Procedure)
     * section ..0
 
-  * section contains medicalDevices 1..1
-  * section[medicalDevices]
+  * section contains sectionMedicalDevices 1..1
+  * section[sectionMedicalDevices]
     * insert SectionComRules (
       Medical devices and implants,
       Implants and used medical devices that affected or may affect the provision of health services (diagnosis and treatment\). Also medical devices explanted\, or its use was stopped during hospitalisation. If the section is blank\, the reason must be explicitly stated using the IPS Absent and Unknown Data coding system. ,
@@ -152,8 +152,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     * entry only Reference(Device)
     * section ..0
 
-  * section contains medications 1..1
-  * section[medications]
+  * section contains sectionMedications 1..1
+  * section[sectionMedications]
     * insert SectionComRules (
       Pharmacotherapy,
       Selected drug treatment during hospitalisation. Medicinal products that were administered during hospitalisation and whose administration has already been discontinued before discharge. Only products which are important for continuity of care (antibiotics other than completely routine\, corticosteroids in high doses\, etc.\) will be listed. Products which administration will continue after discharge will be also recorder in the Medication summary section.
@@ -163,8 +163,8 @@ Medicinal products\, the administration of which was started during hospitalisat
     * entry only Reference(MedicationStatement)
     * section ..0
 
-  * section contains significantResults 0..1
-  * section[significantResults]
+  * section contains sectionSignificantResults 0..1
+  * section[sectionSignificantResults]
     * insert SectionComRules (
       Significant Observation Results,
       Results of significant functional\, diagnostic\, and imaging examinations to ensure continuity of care\, performed during hospitalisation. Results of examinations ordered but not yet delivered should be presented separately from results already delivered.,
@@ -173,8 +173,8 @@ Medicinal products\, the administration of which was started during hospitalisat
     * entry only Reference(Observation) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)
     * section ..0
 
-  * section contains synthesis 1..1
-  * section[synthesis]
+  * section contains sectionSynthesis 1..1
+  * section[sectionSynthesis]
     * insert SectionComRules (
       Synthesis,
       This section provides clinical synthesis (e.g. description of reasons and course of hospital stay\) clustered by managed conditions. Clinical synthesis may include clinical reasoning (differential diagnostics\, explanation of clinical context\) in clinically complex conditions.,
@@ -187,15 +187,15 @@ Medicinal products\, the administration of which was started during hospitalisat
     * section ^slicing.rules = #open
     * section ^short = "Subsections of the Hospital Discharge Report Synthesis"
 
-    * section contains problemSynthesis 1..
-    * section[problemSynthesis]
+    * section contains sectionProblemSynthesis 1..
+    * section[sectionProblemSynthesis]
       * insert SectionComRules (
       Problem synthesis,
       Summary description of the reason and course of hospitalisation for a specific problem.,
       $sct#423016009 "Clinical statement entry (record artifact\)")
       * entry only Reference(Condition)
-    * section contains clinicalReasoning 1..
-    * section[clinicalReasoning]
+    * section contains sectionClinicalReasoning 1..
+    * section[sectionClinicalReasoning]
       * insert SectionComRules (
       Clinical reasoning,
       The clinical summary can be concluded with a clinical consideration (diff. diagnosis\, explanation of context\, etc.\) for clinically complex conditions.,
@@ -206,8 +206,8 @@ Medicinal products\, the administration of which was started during hospitalisat
 // -------------------------------------
 // Discharge Details Section 1 … 1 R
 // -------------------------------------
-* section contains dischargeDetails 1..1
-* section[dischargeDetails]
+* section contains sectionDischargeDetails 1..1
+* section[sectionDischargeDetails]
   * insert SectionComRules (
       Discharge details,
       The hospital discharge status or disposition of the patient having a hospitalization.,
@@ -220,8 +220,8 @@ Medicinal products\, the administration of which was started during hospitalisat
 // ToDo: Review
 // -------------------------------------
 
-* section contains patientHxSection ..1
-* section[patientHxSection]
+* section contains sectionPatientHx ..1
+* section[sectionPatientHx]
   * insert SectionComRules (
     Patient History Section,
     This Section describes all aspects of the medical history of the patient even if not pertinent to the current procedure\, and may include chief complaint\, past medical history\, social history\, family history\, surgical or procedure history\, medication history\, and other history information. The history may be limited to information pertinent to the current procedure or may be more comprehensive. The history may be reported as a collection of random clinical statements or it may be reported categorically. Categorical report formats may be divided into multiple subsections including Past Medical History\, Social History.,
