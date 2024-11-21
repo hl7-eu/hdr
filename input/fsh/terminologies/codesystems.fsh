@@ -108,7 +108,7 @@ applicable”."
   * #D3.2 "Getting dressed?" "This question includes all aspects of dressing the upper and lower body. Ask respondents to
 consider activities such as gathering clothing from storage areas (i.e. closet, dressers) and
 securing buttons, tying knots, etc., when making the rating."
-  * #D3.3 " Eating?" "This item refers to:
+  * #D3.3 "Eating?" "This item refers to:
 • feeding oneself: that is, cutting food, and getting food or drink from a plate or glass to the
 mouth
 • swallowing both food and drink
@@ -134,7 +134,7 @@ does not know at all (e.g. strangers)."
 • people from whom one is asking directions.
 When making the rating, ask respondents to consider both approaching such individuals, and
 interacting successfully with them to obtain a desired outcome."
-  * #D4.2 " Maintaining a friendship?" "This item includes:
+  * #D4.2 "Maintaining a friendship?" "This item includes:
 • staying in touch
 • interacting with friends in customary ways
 • initiating activities with friends
@@ -199,7 +199,7 @@ and any other relevant activities."
 teacher, by respondents’ own standards or as specified in the performance criteria for a job or
 school."
   * #D5.7 "Getting all the work done that you need to do?"
-  * #D5.8 " Getting your work done as quickly as needed?"
+  * #D5.8 "Getting your work done as quickly as needed?"
 * #D6 "Participation" "Domain 6 represents a shift from the line of questioning used in the first five domains. In this domain,
 respondents are asked to consider how other people and the world around them make it difficult for them
 to take part in society. Here, they are reporting not on their activity limitations but rather on the restrictions they experience from people, laws and other features of the world in which they find themselves.
@@ -231,14 +231,14 @@ attitudes of other people that create barriers."
   * #D6.3 "How much of a problem did you have living with dignity because of the attitudes and actions of
 others?" "Ask respondents to consider problems they have had in living with dignity or pride in who they
 are, what they are doing and how they live their lives."
-  * #D6.4 " How much time did you spend on your health condition, or its consequences?" "This question seeks to capture an overall rating or snapshot of the portion of the past 30 days
+  * #D6.4 "How much time did you spend on your health condition, or its consequences?" "This question seeks to capture an overall rating or snapshot of the portion of the past 30 days
 spent by respondents in dealing with any aspect of their health condition. This may include time
 spent in activities such as:
 • visiting a treatment centre;
 • managing financial matters related to their health condition, such as payment of bills,
 reimbursement of insurance or benefits; and
 • obtaining information about the health condition or in educating others about it."
-  * #D6.5 " How much have you been emotionally affected by your health condition?" "This question refers to the degree to which respondents have felt an emotional impact due to
+  * #D6.5 "How much have you been emotionally affected by your health condition?" "This question refers to the degree to which respondents have felt an emotional impact due to
 their health condition. Emotions may include anger, sorrow, regret, thankfulness, appreciation, or
 any other positive or negative emotions."
   * #D6.6 "How much has your health been a drain on the financial resources of you or your family?" "Family is broadly defined to include relatives; however, it also includes those to whom
@@ -251,7 +251,7 @@ they should respond to the question based on the drain experienced by either par
 the world in which the person lives. The question seeks information on problems that are borne
 by the family; these might include financial, emotional, physical problems, etc. The term “family”
 is defined above in D6.6."
-  * #D6.8 " How much of a problem did you have in doing things by yourself for relaxation or pleasure?" "Ask respondents to consider leisure interests that they currently pursue and those they would
+  * #D6.8 "How much of a problem did you have in doing things by yourself for relaxation or pleasure?" "Ask respondents to consider leisure interests that they currently pursue and those they would
 like to pursue but cannot due to the health condition and restrictions imposed by society.
 Examples might include a respondent who:
 • would like to read novels but is restricted from doing so because the local library does not

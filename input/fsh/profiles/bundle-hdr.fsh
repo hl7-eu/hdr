@@ -31,19 +31,20 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry contains
     composition 1..1 and
     patient 1..1 and
-    allergyintolerance 0..* and
+    allergyIntolerance 0..* and
     condition 0..* and
     device 0..* and
-    deviceusestatement 0..* and
-    diagnosticreport 0..* and
-    imagingstudy 0..* and
+    deviceUseStatement 0..* and
+    diagnosticReport 0..* and
+    encounter 0..* and
+    imagingStudy 0..* and
     immunization 0..* and
     media 0..* and
     medication 0..* and
-    medicationrequest 0..* and
-    medicationstatement 0..* and
+    medicationRequest 0..* and
+    medicationStatement 0..* and
     practitioner 0..* and
-    practitionerrole 0..* and
+    practitionerRole 0..* and
     procedure 0..* and
     organization 0..* and
 /*     observation-pregnancy-edd 0..* and
@@ -61,21 +62,24 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 
 * entry[composition].resource only CompositionEuHdr
 * entry[patient].resource only PatientEuHdr // EU ?
-* entry[allergyintolerance].resource only $AllergyIntolerance-uv-ips
+* entry[allergyIntolerance].resource only $AllergyIntolerance-uv-ips
 * entry[condition].resource only $Condition-uv-ips
 * entry[device].resource only Device
-* entry[deviceusestatement].resource only $DeviceUseStatement-uv-ips
-* entry[diagnosticreport].resource only $DiagnosticReport-uv-ips
-* entry[imagingstudy].resource only $ImagingStudy-uv-ips
+* entry[deviceUseStatement].resource only $DeviceUseStatement-uv-ips
+* entry[diagnosticReport].resource only $DiagnosticReport-uv-ips
+* entry[encounter].resource only EncounterEuHdr
+* entry[imagingStudy].resource only $ImagingStudy-uv-ips
 * entry[immunization].resource only $Immunization-uv-ips
 * entry[media].resource only Media // $Media-observation-uv-ips
-* entry[medication].resource only $Medication-uv-ips
-* entry[medicationrequest].resource only $MedicationRequest-uv-ips
-* entry[medicationstatement].resource only $MedicationStatement-uv-ips
-* entry[practitioner].resource only $Practitioner-uv-ips   //$Practitioner-uv-ips
-* entry[practitionerrole].resource only $PractitionerRole-uv-ips  //$PractitionerRole-uv-ips
+* entry[medication].resource only MedicationEuHdr
+* entry[medicationRequest].resource only MedicationRequestEuHdr
+* entry[medicationStatement].resource only $MedicationStatement-uv-ips
+* entry[medicationAdministration].resource only MedicationAdministration
+* entry[medicationDispense].resource only MedicationDispense
+* entry[practitioner].resource only PractitionerEuHdr
+* entry[practitionerRole].resource only PractitionerRoleEuHdr
 * entry[procedure].resource only $Procedure-uv-ips
-* entry[organization].resource only $Organization-uv-ips
+* entry[organization].resource only OrganizationEuHdr
 /* * entry[observation-pregnancy-edd].resource only $Observation-pregnancy-edd-uv-ips
 * entry[observation-pregnancy-outcome].resource only $Observation-pregnancy-outcome-uv-ips
 * entry[observation-pregnancy-status].resource only $Observation-pregnancy-status-uv-ips
@@ -83,8 +87,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[observation-tobacco-use].resource only $Observation-tobaccouse-uv-ips */
 * entry[observation].resource only Observation // $Observation-results-uv-ips
 * entry[specimen].resource only $Specimen-uv-ips
-* entry[medicationAdministration].resource only MedicationAdministration
-* entry[medicationDispense].resource only MedicationDispense
+
 * entry[flag].resource only Flag
 * entry[familyMemberHistory].resource only FamilyMemberHistory
 * entry[documentReference].resource only DocumentReference

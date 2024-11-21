@@ -45,13 +45,7 @@ RuleSet: EvaluationSubSectionRules
   * text 1..
   * text only Narrative
   * section ..0
-* section
-  * ^slicing.discriminator[+].type = #type
-  * ^slicing.discriminator[=].path = "resolve()"
-  * ^slicing.ordered = false
-  * ^slicing.rules = #open
-  * ^short = "Objective findings"
-  * ^definition = "Findings made by healthcare practitioner"
+* insert SectionSliceComRules (Objective findings, Findings made by healthcare practitioner)
 
 // ==> TO BE REVIEWED
 * section contains sectionAnthropometry 0..1
@@ -63,7 +57,6 @@ RuleSet: EvaluationSubSectionRules
   * entry 1..
   /* * entry only Reference(BodyHeightXpandh or BodyWeightXpandh or BMIProfileXpandh or SkinfoldThicknessXpandh or CircumferenceMeasurementXpandh)
    */
-  * section ..0
 
 // ==> TO BE REVIEWED
 * section contains sectionVitalSigns 0..1
@@ -74,7 +67,6 @@ RuleSet: EvaluationSubSectionRules
   
   /* * entry only Reference(BloodPressureXpandh or HeartRateXpandh or RespiratoryRateXpandh or BodyTemperatureXpandh or OxygenSaturationXpandh )
  */
-  * section ..0
 
 // ==> TO BE REVIEWED
 * section contains sectionPhysicalExamination 0..1  // ToDo: add structure
@@ -83,7 +75,6 @@ RuleSet: EvaluationSubSectionRules
   * code = $sct#425044008 "Physical exam section (record artifact)"
   * text 1..    // now only textual section, should we use questionnair resource for structuring per body part? Maybe as on option?
   * entry 0..   // now only textual section, should we use questionnair response or Observation for structuring per body part?
-  * section ..0
 
 * section contains sectionFunctionalStatus 0..1
 * section[sectionFunctionalStatus]

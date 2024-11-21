@@ -15,7 +15,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * ^short = "Related artefacts: e.g. presented form"
 * extension[relatedArtifact].valueRelatedArtifact.type 
   * ^example[0].label = "presented form"
-  * ^example[0].valueCodeableConcept  = http://hl7.org/fhir/related-artifact-type#transformed-into
+  * ^example[0].valueCodeableConcept  = http://hl7.org/fhir/related-artifact-type#documentation
+  // ItT seems not appropriate as code... to be changed if this solution is used
 * extension[relatedArtifact].valueRelatedArtifact.document  
 
 * extension contains $composition.version-r5 named compositionVersionR5 0..
@@ -26,26 +27,10 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * extension[information-recipient].valueReference only Reference( PractitionerRoleEuHdr or PractitionerEuHdr or Device or PatientEuHdr or RelatedPerson or  Organization)
 
 /* GC TO DO
-- revise information-recipient extesion (there are two of them now)
-- add a link between composition and order
 - check if we need a R5 composition.status
-- add section title 1..1
-- should we add a slice for the attester as legalAUtehnticator ? should we add  
-* extension contains $information-recipient named information-recipient 0..*
-
-/* //HK: Commented, because causing error during build
-* extension[information-recipient]
-  * ^slicing.discriminator[0].type = #type
-  * ^slicing.discriminator[0].path = "valueReference.resolve()"
-  * ^slicing.ordered = false
-  * ^slicing.rules = #open
-  * ^short = "Sliced per type of recipient"
-  * ^definition = "Sliced per type of recipient"
-
-* extension[information-recipient] contains practictionerRole 0..*
-* extension[information-recipient][practictionerRole].valueReference only Reference ( PractitionerRoleEuHdr )
-
+- revise the section.code used
 */
+
 
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
@@ -64,14 +49,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * date ^short = "HDR date"
 * author ^short = "Who and/or what authored the Hospital Discharge Report"
 * author ^definition = "Identifies who is responsible for the information in the Hospital Discharge Report, not necessarily who typed it in."
-  * ^slicing.discriminator[0].type = #type
-  * ^slicing.discriminator[0].path = "valueReference.resolve()"
-  * ^slicing.ordered = false
-  * ^slicing.rules = #open
-  * ^short = "Sliced per type of author"
-  * ^definition = "Sliced per type of author"
-* author contains practictionerRole 0..*
-* author[practictionerRole] only Reference ( PractitionerRoleEuHdr )
+* author only Reference( PractitionerEuHdr or PractitionerRoleEuHdr or Device or Patient or RelatedPerson or Organization)
+
 
 * title ^short = "Hospital Discharge Report"
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Hospital Discharge Report\" or any equivalent translation"
@@ -80,12 +59,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * attester.party ^short = "Who attested the composition."
 
 * section 1..
-* section ^slicing.discriminator[0].type = #pattern
-* section ^slicing.discriminator[0].path = "code"
-* section ^slicing.ordered = false
-* section ^slicing.rules = #open
-* section ^short = "Sections composing the Hospital Discharge Report"
-* section ^definition = "The root of the sections that make up the Hospital Discharge Report composition."
+
+* insert SectionSliceComRules (Sections composing the Hospital Discharge Report,
+        The root of the sections that make up the Hospital Discharge Report composition.)
 
 // -------------------------------------
 // Admission Evaluation Section 0 … 1 R
@@ -114,51 +90,53 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     $loinc#8648-8 )   // "Hospital course Narrative"
   * ^short = "Significant information about course of hospital stay"
   * ^definition = "This section includes basic information about hospital staty (encounter), diagnostic summary in narrative form, pharmacotherapy, major procedures, medical devices, significant findings during hospital stay and clinical synthesis."
-  * section
-    * ^slicing.discriminator[+].type = #type
-    * ^slicing.discriminator[=].path = "resolve()"
-    * ^slicing.ordered = false
-    * ^slicing.rules = #open
-  * entry 1..1
-/*   * entry only Reference(Encounter) // EncounterEuHdr */
+  
+  * insert SectionSliceComRules (Hospital Course sub sections,Hospital Course sub sections)
 
-  * section contains sectionDiagnosticSummaryDesc 1..1
+  /* * entry 1..1 
+   * entry only Reference(Encounter) // EncounterEuHdr */
+
+  * section contains sectionDiagnosticSummaryDesc 0..1
   * section[sectionDiagnosticSummaryDesc]
     * insert SectionComRules (
       Problem specification in narrative form,
       All problems/diagnoses that affect care during the inpatient case or are important to be recorded to ensure continuity of care. The diagnostic summary differentiates\, in accordance with the international recommendation\, between problems treated during hospital stay and other (untreated\) problems. Treated problems are problems that were the subject of diagnostics\, therapy\, nursing\, or (continuous\) monitoring during the hospitalisation. Furthermore problems could be divided into three categories: problems present on admission (POA\)\, conditions acquired during hospital stay (HAC\) and problems that cannot be classified as being of any of the two (N/A\). The diagnostic summary contains all conditions as they were recognised at the end of hospitalisation\, after all examinations. This section contains concise\, well specified\, codeable\, summary of problems. Problems are ordered by importance (main problems first\) during hospital stay. Description of the problem might be completed with additional details in the medical history section and/or in the Synthesis section.	,
-      $sct#721981007)
+      $loinc#11450-4) // Problem list
+      // $sct#721981007)
     * entry 0..*
     //* entry only Reference(ConditionEncounter)
     * section ..0
 
-  * section contains sectionSignificantProcedures 1..1
+  * section contains sectionSignificantProcedures 0..1
   * section[sectionSignificantProcedures]
     * insert SectionComRules (
       Significant procedures,
       Significant surgical and non-surgical procedures performed during hospitalisation which are significant for continuity of care\, e.g. surgeries and other \"instrumental\"interventions (endoscopic\, intravascular\)\, chemotherapy\, radiotherapy\, purification methods (dialysis\, hemoperfusion\)\, circulation support methods (counterpulsation\, etc.\)\, administration of blood derivatives or others.\r\nThis section does not include purely diagnostic procedures (MRI\, CT\, etc.\). If no significant performance has been performed\, this fact must be explicitly stated using the IPS Absent and Unknown Data. ,
-      $sct#721981007)
+      $loinc#10185-7) // Hospital discharge procedures
+      // $sct#721981007)
     * entry 1..
     * entry only Reference(Procedure)
     * section ..0
 
-  * section contains sectionMedicalDevices 1..1
+  * section contains sectionMedicalDevices 0..1
   * section[sectionMedicalDevices]
     * insert SectionComRules (
       Medical devices and implants,
       Implants and used medical devices that affected or may affect the provision of health services (diagnosis and treatment\). Also medical devices explanted\, or its use was stopped during hospitalisation. If the section is blank\, the reason must be explicitly stated using the IPS Absent and Unknown Data coding system. ,
-      $sct#1184586001 "Medical device document section (record artifact\)")
+      $loinc#46264-8) // History of medical device use
+      // $sct#1184586001) //"Medical device document section (record artifact\)
     * entry 1..
     * entry only Reference(Device)
     * section ..0
 
-  * section contains sectionMedications 1..1
+  * section contains sectionMedications 0..1
   * section[sectionMedications]
     * insert SectionComRules (
       Pharmacotherapy,
       Selected drug treatment during hospitalisation. Medicinal products that were administered during hospitalisation and whose administration has already been discontinued before discharge. Only products which are important for continuity of care (antibiotics other than completely routine\, corticosteroids in high doses\, etc.\) will be listed. Products which administration will continue after discharge will be also recorder in the Medication summary section.
 Medicinal products\, the administration of which was started during hospitalisation but is also recommended after discharge\, will be listed in the summary table in the recommendation section. ,
-      $sct#1003606003 "Medication history section (record artifact\)")
+$loinc#10160-0 ) // 	History of Medication use Narrative
+      // $sct#1003606003 ) // "Medication history section (record artifact\)"
     * entry 1..
     * entry only Reference(MedicationStatement)
     * section ..0
@@ -168,33 +146,30 @@ Medicinal products\, the administration of which was started during hospitalisat
     * insert SectionComRules (
       Significant Observation Results,
       Results of significant functional\, diagnostic\, and imaging examinations to ensure continuity of care\, performed during hospitalisation. Results of examinations ordered but not yet delivered should be presented separately from results already delivered.,
-      $sct#423100009 "Results section (record artifact\)")
+      $loinc#30954-2 ) // Relevant diagnostic tests/laboratory data Narrative
+      // $sct#423100009 ) // "Results section (record artifact\)"
     * entry 1..
     * entry only Reference(Observation) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)
     * section ..0
 
-  * section contains sectionSynthesis 1..1
+  * section contains sectionSynthesis 0..1
   * section[sectionSynthesis]
     * insert SectionComRules (
       Synthesis,
       This section provides clinical synthesis (e.g. description of reasons and course of hospital stay\) clustered by managed conditions. Clinical synthesis may include clinical reasoning (differential diagnostics\, explanation of clinical context\) in clinically complex conditions.,
-      $sct#424836000 "Assessment section (record artifact\)")
+      $sct#424836000 ) // "Assessment section (record artifact\)"
     * entry ..0
 
-    * section ^slicing.discriminator[0].type = #value
-    * section ^slicing.discriminator[0].path = "code"
-    * section ^slicing.ordered = false
-    * section ^slicing.rules = #open
-    * section ^short = "Subsections of the Hospital Discharge Report Synthesis"
+    * insert SectionSliceComRules (HDR Synthesis sub-sections,Subsections of the Hospital Discharge Report Synthesis)
 
-    * section contains sectionProblemSynthesis 1..
+    * section contains sectionProblemSynthesis 0..
     * section[sectionProblemSynthesis]
       * insert SectionComRules (
       Problem synthesis,
       Summary description of the reason and course of hospitalisation for a specific problem.,
-      $sct#423016009 "Clinical statement entry (record artifact\)")
+      $sct#423016009 ) // "Clinical statement entry (record artifact\)"
       * entry only Reference(Condition)
-    * section contains sectionClinicalReasoning 1..
+    * section contains sectionClinicalReasoning 0..
     * section[sectionClinicalReasoning]
       * insert SectionComRules (
       Clinical reasoning,
@@ -785,9 +760,9 @@ Medicinal products\, the administration of which was started during hospitalisat
   * insert SectionComRules (
       Library of attachments.,
       List documents related and attachments to this report.,
-      $loinc#X-TBD-1 "Attachments" ) 
-  * ^short = "Attachments."
-  * ^definition = "This section lists documents and attachments associated to this report."
+      $loinc#77599-9 ) // "Additional documentation" 
+  * ^short = "Attachments"
+  * ^definition = "This section lists documents and attachments associated to this report"
   * entry only Reference(DocumentReference or Binary) // Add Bundle ?
 
 // -------------------------------------

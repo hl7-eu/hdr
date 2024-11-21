@@ -29,11 +29,22 @@ RuleSet: SectionComRules (short, def, code)
 * title 1..
 * code 1..
 * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* code = {code} (exactly)
+* code = {code}
 * text 1..
 * text only Narrative
 /* * emptyReason ..0
 * emptyReason ^mustSupport = false */
+
+
+RuleSet: SectionSliceComRules (short, def)
+// Slicing rules for section based on code value
+* section ^slicing.discriminator[0].type = #value
+* section ^slicing.discriminator[0].path = "code"
+* section ^slicing.ordered = false
+* section ^slicing.rules = #open
+* section ^short = "{short}"
+* section ^definition = "{def}"
+
 
 RuleSet: SectionEntrySliceComRules (short, def)
 * entry ^slicing.discriminator[0].type = #type

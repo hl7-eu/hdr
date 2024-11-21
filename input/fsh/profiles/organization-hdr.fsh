@@ -7,6 +7,7 @@ Description: "This profile sets minimum expectations for the Organization resour
 * insert SetFmmandStatusRule (1, draft)
 
 * type ^short = "Organization type"
+* name ^short = "Name of the organization"
 * telecom ^short = "Organization telecom"
 * address only AddressEu
 * partOf ^short = "The organization of which this organization is part of: e.g. an ERN"

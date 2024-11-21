@@ -4,6 +4,7 @@ ValueSet:   BodyHeightObservationVS
 Id:         body-height-observation-vs
 Title:      "Body Height Observation Value Set"
 Description: "Body height observation codes from the XpanDH body height observations."
+* ^experimental = false
 * insert SetFmmandStatusRule (1, draft)
 * insert SNOMEDCopyrightForVS
 * $sct#1153637007 "Body height (observable entity)"
@@ -15,6 +16,7 @@ ValueSet:   BodyWeightObservationVS
 Id:         body-weight-observation-vs
 Title:      "Body Weight Observation Value Set"
 Description: "Body weight observation codes from the XpanDH body weight observations."
+* ^experimental = false
 * insert SetFmmandStatusRule (1, draft)
 * insert SNOMEDCopyrightForVS
 * $sct#27113001 "Body weight (observable entity)"
@@ -26,6 +28,7 @@ ValueSet:   BodyWeightUnitsVS
 Id:         body-weight-units-vs
 Title:      "Body Weight Observation Value Set"
 Description: "Body weight observation codes from the XpanDH body weight observations."
+* ^experimental = false
 * insert SetFmmandStatusRule (1, draft)
 * $ucum#kg "kilogram"
 * $ucum#g "gram"
@@ -50,6 +53,7 @@ Id:         skinfold-thickness-vs
 Title:      "Skinfold Thickness Value Set"
 Description: "Skinfold Thickness observation codes from the XpanDH Skinfold Thickness observations."
 * insert SetFmmandStatusRule (1, draft)
+* ^experimental = false
 * insert SNOMEDCopyrightForVS
 * codes from system $sct where concept is-a $sct#165186003 "Skin-fold thickness (observable entity)"
 * $sct#1162538001 "Triceps skinfold percentile (observable entity)"
@@ -62,6 +66,7 @@ Id:         skinfold-thickness-units-vs
 Title:      "Skinfold Thickness Units Value Set"
 Description: "Skinfold Thickness observation units for the XpanDH Skinfold Thickness observations."
 * insert SetFmmandStatusRule (1, draft)
+* ^experimental = false
 * $ucum#mm "millimeter"
 * $ucum#1 "1"
 
@@ -72,6 +77,7 @@ Id:         anthropometric-observation-vs
 Title:      "Anthropometric Observation Value Set"
 Description: "Anthropometric observation codes from the XpanDH anthropometric observations."
 * insert SetFmmandStatusRule (1, draft)
+* ^experimental = false
 * insert SNOMEDCopyrightForVS
 * codes from valueset BMIObservationVS
 * codes from valueset BodyHeightObservationVS

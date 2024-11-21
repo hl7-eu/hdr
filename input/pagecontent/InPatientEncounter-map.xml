@@ -9,10 +9,6 @@
 
     <h4 id="model">Model Overview</h4>
 <a> </a>
-<p>{% include InPatientEncounter-map.svg %}</p>
-
-    
-
-    
+<p>{% include InPatientEncounter-map.svg %}</p>   
 
 </div>
