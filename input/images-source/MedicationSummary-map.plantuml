@@ -18,7 +18,13 @@ Concept Map
 endnote
 class "medication-eu-hdr" <<Profile>> [[StructureDefinition-medication-eu-hdr.html]]
 "MedicationSummary" <|. "medication-eu-hdr"
+class "medicationDispense-eu-hdr" <<Profile>> [[StructureDefinition-medicationDispense-eu-hdr.html]]
+"MedicationSummary" <|. "medicationDispense-eu-hdr"
+"medication-eu-hdr" -d[hidden]-> "medicationDispense-eu-hdr"
 class "medicationRequest-eu-hdr" <<Profile>> [[StructureDefinition-medicationRequest-eu-hdr.html]]
 "MedicationSummary" <|. "medicationRequest-eu-hdr"
-"medication-eu-hdr" -d[hidden]-> "medicationRequest-eu-hdr"
+"medicationDispense-eu-hdr" -d[hidden]-> "medicationRequest-eu-hdr"
+class "Dosage" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Dosage]]
+"MedicationSummary" <|. "Dosage"
+"medicationRequest-eu-hdr" -d[hidden]-> "Dosage"
 @enduml

@@ -9,6 +9,12 @@ Usage: #definition
 * description = """eHN HDR Medication Summary Model to this guide Map"""
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/MedicationSummary"
 * group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/medication-eu-hdr"
+* group[=].element[+].code = #MedicationSummary.productCode
+* group[=].element[=].display = "A.2.9.2.3 - Code"
+* group[=].element[=].target.code = #Medication.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "Preferred mapping"
 * group[=].element[+].code = #MedicationSummary.productName
 * group[=].element[=].display = "A.2.9.2.4 - Brand name"
 * group[=].element[=].target.code = #Medication.extension:productName
@@ -31,6 +37,14 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equal
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/MedicationSummary"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/medicationDispense-eu-hdr"
+* group[=].element[+].code = #MedicationSummary.productCode
+* group[=].element[=].display = "A.2.9.2.3 - Code"
+* group[=].element[=].target.code = #MedicationDispense.medicationCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "If no details about the medication are provided"
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/MedicationSummary"
 * group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-eu-hdr"
 * group[=].element[+].code = #MedicationSummary.reason
 * group[=].element[=].display = "A.2.9.2.1 - Medication reason"
@@ -49,24 +63,27 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "If no details about the medication are provided"
-* group[=].element[+].code = #MedicationSummary.dosageRegimen
-* group[=].element[=].display = "A.2.9.2.8 - Dosage Regimen"
-* group[=].element[=].target.code = #MedicationRequest.dosageInstruction
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equal
-* group[=].element[+].code = #MedicationSummary.route
-* group[=].element[=].display = "A.2.9.2.9 - Route of administration"
-* group[=].element[=].target.code = #MedicationRequest.dosageInstruction.route
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equal
-* group[=].element[+].code = #MedicationSummary.period
-* group[=].element[=].display = "A.2.9.2.10 - Period of treatment"
-* group[=].element[=].target.code = #MedicationRequest.dosageInstruction.timing.repeat.duration
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "CHECK it is used the name period but the imression is that is the duration not the period "
 * group[=].element[+].code = #MedicationSummary.daysSupplied
 * group[=].element[=].display = "A.2.9.2.11 - Days supplied"
 * group[=].element[=].target.code = #MedicationDispense.daysSupply
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/MedicationSummary"
+* group[=].target = "http://hl7.org/fhir/StructureDefinition/Dosage"
+* group[=].element[+].code = #MedicationSummary.dosageRegimen
+* group[=].element[=].display = "A.2.9.2.8 - Dosage Regimen"
+* group[=].element[=].target.code = #Dosage
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "MedicationRequest.dosageInstruction or MedicationDispense.dosageInstruction"
+* group[=].element[+].code = #MedicationSummary.route
+* group[=].element[=].display = "A.2.9.2.9 - Route of administration"
+* group[=].element[=].target.code = #Dosage.route
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #MedicationSummary.period
+* group[=].element[=].display = "A.2.9.2.10 - Period of treatment"
+* group[=].element[=].target.code = #Dosage.timing.repeat.duration
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "CHECK it is used the name period but the imression is that is the duration not the period "

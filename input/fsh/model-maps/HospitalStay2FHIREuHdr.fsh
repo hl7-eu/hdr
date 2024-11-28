@@ -26,101 +26,13 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:sectionMedicalDevices
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #HospitalStay.medicalDevices.description
-* group[=].element[=].display = "HospitalStay.A.2.7.3.1 - Device and implant description"
-* group[=].element[=].target.code = #Composition.section:sectionMedicalDevices
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
-* group[=].element[+].code = #HospitalStay.medicalDevices.identifier
-* group[=].element[=].display = "HospitalStay.A.2.7.3.2 - Device ID"
-* group[=].element[=].target.code = #Composition.section:sectionMedicalDevices
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
-* group[=].element[+].code = #HospitalStay.medicalDevices.implantDate
-* group[=].element[=].display = "HospitalStay.A.2.7.3.3 - Implant date"
-* group[=].element[=].target.code = #Composition.section:sectionMedicalDevices
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
-* group[=].element[+].code = #HospitalStay.medicalDevices.endDate
-* group[=].element[=].display = "HospitalStay.A.2.7.3.4 - End date"
-* group[=].element[=].target.code = #Composition.section:sectionMedicalDevices
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
-* group[=].element[+].code = #HospitalStay.medicalDevices.reason
-* group[=].element[=].display = "HospitalStay.A.2.7.3.5 - Reason"
-* group[=].element[=].target.code = #Composition.section:sectionMedicalDevices
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
+* group[=].element[=].target.comment = "Details in the Composition.section:sectionMedicalDevices.entry of type DeviceUseStatement. See dedicated groups"
 * group[=].element[+].code = #HospitalStay.pharmacotherapy
 * group[=].element[=].display = "HospitalStay.A.2.7.5 - Pharmacotherapy"
 * group[=].element[=].target.code = #Composition.section:sectionMedications
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #HospitalStay.pharmacotherapy.reason
-* group[=].element[=].display = "HospitalStay.A.2.7.5.1 - Medication reason"
-* group[=].element[=].target.code = #Composition.section:sectionMedications
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
-* group[=].element[+].code = #HospitalStay.pharmacotherapy.productCode
-* group[=].element[=].display = "HospitalStay.A.2.7.5.2 - Code"
-* group[=].element[=].target.code = #Composition.section:sectionMedications
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
-* group[=].element[+].code = #HospitalStay.pharmacotherapy.intendedUse
-* group[=].element[=].display = "HospitalStay.A.2.7.5.3 - Intended use"
-* group[=].element[=].target.code = #Composition.section:sectionMedications
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
-* group[=].element[+].code = #HospitalStay.pharmacotherapy.productName
-* group[=].element[=].display = "HospitalStay.A.2.7.5.4 - Brand name"
-* group[=].element[=].target.code = #Composition.section:sectionMedications
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
-* group[=].element[+].code = #HospitalStay.pharmacotherapy.activeIngredient
-* group[=].element[=].display = "HospitalStay.A.2.7.5.5 - Active ingredient list"
-* group[=].element[=].target.code = #Composition.section:sectionMedications
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
-* group[=].element[+].code = #HospitalStay.pharmacotherapy.strength
-* group[=].element[=].display = "HospitalStay.A.2.7.5.6 - Strength"
-* group[=].element[=].target.code = #Composition.section:sectionMedications
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
-* group[=].element[+].code = #HospitalStay.pharmacotherapy.doseForm
-* group[=].element[=].display = "HospitalStay.A.2.7.5.7 - Pharmaceutical dose form"
-* group[=].element[=].target.code = #Composition.section:sectionMedications
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
-* group[=].element[+].code = #HospitalStay.pharmacotherapy.dosageRegimen
-* group[=].element[=].display = "HospitalStay.A.2.7.5.8 - Dosage Regimen"
-* group[=].element[=].target.code = #Composition.section:sectionMedications
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
-* group[=].element[+].code = #HospitalStay.pharmacotherapy.route
-* group[=].element[=].display = "HospitalStay.A.2.7.5.9 - Route of administration"
-* group[=].element[=].target.code = #Composition.section:sectionMedications
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
-* group[=].element[+].code = #HospitalStay.pharmacotherapy.period
-* group[=].element[=].display = "HospitalStay.A.2.7.5.10 - Period of treatment"
-* group[=].element[=].target.code = #Composition.section:sectionMedications
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
+* group[=].element[=].target.comment = "Details in the Composition.section:sectionMedications.entry. See dedicated groups"
 * group[=].element[+].code = #HospitalStay.significantResults
 * group[=].element[=].display = "HospitalStay.A.2.7.6 - Significant Observation Results"
 * group[=].element[=].target.code = #Composition.section:sectionSignificantResults
@@ -233,6 +145,121 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalStay"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/device-eu-hdr"
+* group[=].element[+].code = #HospitalStay.medicalDevices.description
+* group[=].element[=].display = "HospitalStay.A.2.7.3.1 - Device and implant description"
+* group[=].element[=].target.code = #Device.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "if referring to the description of the device"
+* group[=].element[+].code = #HospitalStay.medicalDevices.identifier
+* group[=].element[=].display = "HospitalStay.A.2.7.3.2 - Device ID"
+* group[=].element[=].target.code = #Device.identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "if generic identifier"
+* group[=].element[+].code = #HospitalStay.medicalDevices.identifier
+* group[=].element[=].display = "HospitalStay.A.2.7.3.2 - Device ID"
+* group[=].element[=].target.code = #Device.udiCarrier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "if it is the udiCarrier"
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalStay"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/deviceUseStatement-eu-hdr"
+* group[=].element[+].code = #HospitalStay.medicalDevices.description
+* group[=].element[=].display = "HospitalStay.A.2.7.3.1 - Device and implant description"
+* group[=].element[=].target.code = #DeviceUseStatement.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "if referring to the description of the usage of the device"
+* group[=].element[+].code = #HospitalStay.medicalDevices.implantDate
+* group[=].element[=].display = "HospitalStay.A.2.7.3.3 - Implant date"
+* group[=].element[=].target.code = #DeviceUseStatement.timing[x]
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "If the usage period is highlighted"
+* group[=].element[+].code = #HospitalStay.medicalDevices.endDate
+* group[=].element[=].display = "HospitalStay.A.2.7.3.4 - End date"
+* group[=].element[=].target.code = #DeviceUseStatement.timingPeriod.end
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[+].code = #HospitalStay.medicalDevices.reason
+* group[=].element[=].display = "HospitalStay.A.2.7.3.5 - Reason"
+* group[=].element[=].target.code = #DeviceUseStatement.reasonCode
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[+].code = #HospitalStay.medicalDevices.reason
+* group[=].element[=].display = "HospitalStay.A.2.7.3.5 - Reason"
+* group[=].element[=].target.code = #DeviceUseStatement.reasonReference
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalStay"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/medication-eu-hdr"
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.productCode
+* group[=].element[=].display = "HospitalStay.A.2.7.5.2 - Code"
+* group[=].element[=].target.code = #Medication.code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.intendedUse
+* group[=].element[=].display = "HospitalStay.A.2.7.5.3 - Intended use"
+* group[=].element[=].target.code = #Composition.section:sectionMedications
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.productName
+* group[=].element[=].display = "HospitalStay.A.2.7.5.4 - Brand name"
+* group[=].element[=].target.code = #Medication.extension:productName
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.activeIngredient
+* group[=].element[=].display = "HospitalStay.A.2.7.5.5 - Active ingredient list"
+* group[=].element[=].target.code = #Medication.ingredient.item[x]
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.strength
+* group[=].element[=].display = "HospitalStay.A.2.7.5.6 - Strength"
+* group[=].element[=].target.code = #Medication.ingredient.strength
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.doseForm
+* group[=].element[=].display = "HospitalStay.A.2.7.5.7 - Pharmaceutical dose form"
+* group[=].element[=].target.code = #Medication.form
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalStay"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/medicationDispense-eu-hdr"
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.reason
+* group[=].element[=].display = "HospitalStay.A.2.7.5.1 - Medication reason"
+* group[=].element[=].target.code = #MedicationDispense.reasonCode
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.reason
+* group[=].element[=].display = "HospitalStay.A.2.7.5.1 - Medication reason"
+* group[=].element[=].target.code = #MedicationDispense.reasonReference
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.productCode
+* group[=].element[=].display = "HospitalStay.A.2.7.5.2 - Code"
+* group[=].element[=].target.code = #MedicationDispense.medicationCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalStay"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-eu-hdr"
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.reason
+* group[=].element[=].display = "HospitalStay.A.2.7.5.1 - Medication reason"
+* group[=].element[=].target.code = #MedicationRequest.reasonCode
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.reason
+* group[=].element[=].display = "HospitalStay.A.2.7.5.1 - Medication reason"
+* group[=].element[=].target.code = #MedicationRequest.reasonReference
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.productCode
+* group[=].element[=].display = "HospitalStay.A.2.7.5.2 - Code"
+* group[=].element[=].target.code = #MedicationRequest.medicationCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalStay"
 * group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/procedure-eu-hdr"
 * group[=].element[+].code = #HospitalStay.significantProcedures.procedureCode
 * group[=].element[=].display = "HospitalStay.A.2.7.2.1 - Procedure code"
@@ -288,5 +315,84 @@ Usage: #definition
 * group[=].element[+].code = #HospitalStay.significantProcedures.focalDevice
 * group[=].element[=].display = "HospitalStay.A.2.7.2.8 - Focal device"
 * group[=].element[=].target.code = #Procedure.focalDevice	
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.medicalDevices.implantDate
+* group[=].element[=].display = "HospitalStay.A.2.7.3.3 - Implant date"
+* group[=].element[=].target.code = #Procedure.perfomed[x]
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "if the implantation procedure is described"
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalStay"
+* group[=].target = "http://hl7.org/fhir/StructureDefinition/Dosage"
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.dosageRegimen
+* group[=].element[=].display = "HospitalStay.A.2.7.5.8 - Dosage Regimen"
+* group[=].element[=].target.code = #Dosage
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "MedicationDispense.dosageInstruction or MedicationRequest.dosageInstruction or MedicationStatement.dosage"
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.route
+* group[=].element[=].display = "HospitalStay.A.2.7.5.9 - Route of administration"
+* group[=].element[=].target.code = #Dosage.route
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.period
+* group[=].element[=].display = "HospitalStay.A.2.7.5.10 - Period of treatment"
+* group[=].element[=].target.code = #Dosage.timing.repeat.duration
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalStay"
+* group[=].target = "http://hl7.org/fhir/StructureDefinition/MedicationAdministration"
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.reason
+* group[=].element[=].display = "HospitalStay.A.2.7.5.1 - Medication reason"
+* group[=].element[=].target.code = #MedicationAdministration.reasonCode
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.reason
+* group[=].element[=].display = "HospitalStay.A.2.7.5.1 - Medication reason"
+* group[=].element[=].target.code = #MedicationAdministration.reasonReference
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.productCode
+* group[=].element[=].display = "HospitalStay.A.2.7.5.2 - Code"
+* group[=].element[=].target.code = #MedicationAdministration.medicationCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.dosageRegimen
+* group[=].element[=].display = "HospitalStay.A.2.7.5.8 - Dosage Regimen"
+* group[=].element[=].target.code = #MedicationAdministration
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "several elements used"
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.route
+* group[=].element[=].display = "HospitalStay.A.2.7.5.9 - Route of administration"
+* group[=].element[=].target.code = #MedicationAdministration.dosage.route
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.period
+* group[=].element[=].display = "HospitalStay.A.2.7.5.10 - Period of treatment"
+* group[=].element[=].target.code = #MedicationAdministration.occurencePeriod
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalStay"
+* group[=].target = "http://hl7.org/fhir/StructureDefinition/MedicationStatement"
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.reason
+* group[=].element[=].display = "HospitalStay.A.2.7.5.1 - Medication reason"
+* group[=].element[=].target.code = #MedicationStatement.reasonReference
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.reason
+* group[=].element[=].display = "HospitalStay.A.2.7.5.1 - Medication reason"
+* group[=].element[=].target.code = #MedicationStatement.reasonCode
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.productCode
+* group[=].element[=].display = "HospitalStay.A.2.7.5.2 - Code"
+* group[=].element[=].target.code = #MedicationStatement.medicationCodeableConcept
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.pharmacotherapy.period
+* group[=].element[=].display = "HospitalStay.A.2.7.5.10 - Period of treatment"
+* group[=].element[=].target.code = #MedicationStatement.effectivePeriod
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent

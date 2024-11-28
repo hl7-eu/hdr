@@ -218,7 +218,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     $loinc#46264-8) // History of medical device use
     // $sct#1184586001) //"Medical device document section (record artifact\)
   * entry 1..
-  * entry only Reference(DeviceUseStatement or DocumentReference )
+  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuHdr ) // DeviceUseStatementEuHdr also ?
   * section ..0
 
 * section contains sectionMedications 0..1

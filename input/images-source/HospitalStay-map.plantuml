@@ -21,7 +21,31 @@ class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.
 class "condition-eu-hdr" <<Profile>> [[StructureDefinition-condition-eu-hdr.html]]
 "HospitalStay" <|. "condition-eu-hdr"
 "composition-eu-hdr" -d[hidden]-> "condition-eu-hdr"
+class "device-eu-hdr" <<Profile>> [[StructureDefinition-device-eu-hdr.html]]
+"HospitalStay" <|. "device-eu-hdr"
+"condition-eu-hdr" -d[hidden]-> "device-eu-hdr"
+class "deviceUseStatement-eu-hdr" <<Profile>> [[StructureDefinition-deviceUseStatement-eu-hdr.html]]
+"HospitalStay" <|. "deviceUseStatement-eu-hdr"
+"device-eu-hdr" -d[hidden]-> "deviceUseStatement-eu-hdr"
+class "medication-eu-hdr" <<Profile>> [[StructureDefinition-medication-eu-hdr.html]]
+"HospitalStay" <|. "medication-eu-hdr"
+"deviceUseStatement-eu-hdr" -d[hidden]-> "medication-eu-hdr"
+class "medicationDispense-eu-hdr" <<Profile>> [[StructureDefinition-medicationDispense-eu-hdr.html]]
+"HospitalStay" <|. "medicationDispense-eu-hdr"
+"medication-eu-hdr" -d[hidden]-> "medicationDispense-eu-hdr"
+class "medicationRequest-eu-hdr" <<Profile>> [[StructureDefinition-medicationRequest-eu-hdr.html]]
+"HospitalStay" <|. "medicationRequest-eu-hdr"
+"medicationDispense-eu-hdr" -d[hidden]-> "medicationRequest-eu-hdr"
 class "procedure-eu-hdr" <<Profile>> [[StructureDefinition-procedure-eu-hdr.html]]
 "HospitalStay" <|. "procedure-eu-hdr"
-"condition-eu-hdr" -d[hidden]-> "procedure-eu-hdr"
+"medicationRequest-eu-hdr" -d[hidden]-> "procedure-eu-hdr"
+class "Dosage" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Dosage]]
+"HospitalStay" <|. "Dosage"
+"procedure-eu-hdr" -d[hidden]-> "Dosage"
+class "MedicationAdministration" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/MedicationAdministration]]
+"HospitalStay" <|. "MedicationAdministration"
+"Dosage" -d[hidden]-> "MedicationAdministration"
+class "MedicationStatement" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/MedicationStatement]]
+"HospitalStay" <|. "MedicationStatement"
+"MedicationAdministration" -d[hidden]-> "MedicationStatement"
 @enduml

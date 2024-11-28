@@ -46,6 +46,7 @@ Description: "This profile represents the constraints applied to the Procedure r
 * complication ^short = "Complications that occurred during the procedure (code)"
 * complicationDetail ^short = "Complications that occurred during the procedure (details)"
 * focalDevice ^short = "Device implanted, removed or otherwise manipulated"
+* focalDevice.manipulated only Reference ( DeviceEuHdr)
 * bodySite only CodeableConceptIPS
 * bodySite from SNOMEDCTBodyStructures (preferred)
 * bodySite

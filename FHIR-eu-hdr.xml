@@ -40,6 +40,8 @@
 <artifact id="StructureDefinition/condition-eu-hdr" key="StructureDefinition-condition-eu-hdr" name="Condition (HDR)"/>
 <artifact id="ValueSet/poa-indicator-eu-hdr" key="ValueSet-poa-indicator-eu-hdr" name="Condition Present on Admission (POA) Value Set"/>
 <artifact id="ValueSet/condition-eu-hdr" key="ValueSet-condition-eu-hdr" name="Condition Value Set"/>
+<artifact id="StructureDefinition/device-eu-hdr" key="StructureDefinition-device-eu-hdr" name="Device (HDR)"/>
+<artifact id="StructureDefinition/deviceUseStatement-eu-hdr" key="StructureDefinition-deviceUseStatement-eu-hdr" name="DeviceUseStatement (HDR)"/>
 <artifact id="StructureDefinition/encounter-eu-hdr" key="StructureDefinition-encounter-eu-hdr" name="Encounter (HDR)"/>
 <artifact id="ValueSet/hdr-encounterClass-eu-hdr" key="ValueSet-hdr-encounterClass-eu-hdr" name="Encounter Class Value Set"/>
 <artifact id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
@@ -71,6 +73,9 @@
 <artifact id="StructureDefinition/practitionerRole-eu-hdr" key="StructureDefinition-practitionerRole-eu-hdr" name="PractitionerRole: (HDR)"/>
 <artifact id="CodeSystem/poa-indicator-eu-hdr" key="CodeSystem-poa-indicator-eu-hdr" name="Present on Admission (POA) Indicator"/>
 <artifact id="ValueSet/TNM-T-category-vs" key="ValueSet-TNM-T-category-vs" name="Primary tumor T"/>
+<artifact id="StructureDefinition/procedure-eu-hdr" key="StructureDefinition-procedure-eu-hdr" name="Procedure (HDR)"/>
+<artifact id="ValueSet/procedure-snomed-eu-hdr" key="ValueSet-procedure-snomed-eu-hdr" name="Procedure codes: Snomed CT"/>
+<artifact id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="ValueSet/skinfold-thickness-units-vs" key="ValueSet-skinfold-thickness-units-vs" name="Skinfold Thickness Units Value Set"/>
 <artifact id="ValueSet/skinfold-thickness-vs" key="ValueSet-skinfold-thickness-vs" name="Skinfold Thickness Value Set"/>
 <artifact id="ValueSet/TNM-M-category-vs" key="ValueSet-TNM-M-category-vs" name="TNM M Category"/>
@@ -101,6 +106,7 @@
 <page key="index" name="Home"/>
 <page key="hdr-mindmap" name="Hospital Discharge Report"/>
 <page key="HospitalDischargeReport-map" name="HospitalDischargeReport Relationships"/>
+<page key="HospitalStay-map" name="HospitalStay Relationships"/>
 <page key="InPatientEncounter-map" name="InPatientEncounter Relationships"/>
 <page key="knownIssues" name="Known Issues"/>
 <page key="MedicationSummary-map" name="MedicationSummary Relationships"/>

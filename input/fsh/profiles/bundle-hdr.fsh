@@ -47,11 +47,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     practitionerRole 0..* and
     procedure 0..* and
     organization 0..* and
-/*     observation-pregnancy-edd 0..* and
-    observation-pregnancy-outcome 0..* and
-    observation-pregnancy-status 0..* and
-    observation-alcohol-use 0..* and
-    observation-tobacco-use 0..* and */
     observation 0..* and
     specimen 0..* and
     medicationDispense 0..* and
@@ -64,8 +59,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[patient].resource only PatientEuHdr // EU ?
 * entry[allergyIntolerance].resource only AllergyIntoleranceEpsEu
 * entry[condition].resource only ConditionEuHdr
-* entry[device].resource only Device
-* entry[deviceUseStatement].resource only $DeviceUseStatement-uv-ips
+* entry[device].resource only DeviceEuHdr
+* entry[deviceUseStatement].resource only DeviceUseStatementEuHdr
 * entry[diagnosticReport].resource only $DiagnosticReport-uv-ips
 * entry[encounter].resource only EncounterEuHdr
 * entry[imagingStudy].resource only $ImagingStudy-uv-ips
@@ -78,16 +73,10 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[medicationDispense].resource only MedicationDispense
 * entry[practitioner].resource only PractitionerEuHdr
 * entry[practitionerRole].resource only PractitionerRoleEuHdr
-* entry[procedure].resource only $Procedure-uv-ips
+* entry[procedure].resource only ProcedureEuHdr
 * entry[organization].resource only OrganizationEuHdr
-/* * entry[observation-pregnancy-edd].resource only $Observation-pregnancy-edd-uv-ips
-* entry[observation-pregnancy-outcome].resource only $Observation-pregnancy-outcome-uv-ips
-* entry[observation-pregnancy-status].resource only $Observation-pregnancy-status-uv-ips
-* entry[observation-alcohol-use].resource only $Observation-alcoholuse-uv-ips
-* entry[observation-tobacco-use].resource only $Observation-tobaccouse-uv-ips */
 * entry[observation].resource only Observation // $Observation-results-uv-ips
 * entry[specimen].resource only $Specimen-uv-ips
-
 * entry[flag].resource only Flag
 * entry[familyMemberHistory].resource only FamilyMemberHistory
 * entry[documentReference].resource only DocumentReference
