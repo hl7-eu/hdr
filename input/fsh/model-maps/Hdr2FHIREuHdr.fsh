@@ -73,28 +73,35 @@ Usage: #definition
 * group[=].element[=].target.comment = "TO BE REVIEWED"
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.objectiveFindings
 * group[=].element[=].display = "A.2.7.1 - Objective findings"
-* group[=].element[=].target.code = #Composition.section.section
+* group[=].element[=].target.code = #Composition.section:sectionDischargeDetails
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "TO BE REVIEWED"
+* group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.objectiveFindings
+* group[=].element[=].display = "A.2.7.1 - Objective findings"
+* group[=].element[=].target.code = #Composition.section:sectionDischargeFindings
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.functionalStatus
 * group[=].element[=].display = "A.2.7.2 - Functional status"
-* group[=].element[=].target.code = #Composition.section.section
+* group[=].element[=].target.code = #Composition.section:sectionDischargeDetails
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "TO BE REVIEWED"
+* group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.functionalStatus
+* group[=].element[=].display = "A.2.7.2 - Functional status"
+* group[=].element[=].target.code = #Composition.section:sectionFunctionalStatus
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.dischargeNote
 * group[=].element[=].display = "A.2.7.3 - Discharge note"
+* group[=].element[=].target.code = #Composition.section:sectionDischargeDetails.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[+].code = #HospitalDischargeReport.body.recommendations
+* group[=].element[=].display = "A.2.8 - Care plan and other recommendations after discharge."
 * group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "TO BE REVIEWED"
-* group[=].element[+].code = #HospitalDischargeReport.body.recommendations
-* group[=].element[=].display = "A.2.8 - Care plan and other recommendations after discharge."
-* group[=].element[=].target.code = #Composition.section:sectionPlanOfCare
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Internal structure to be decided"
+* group[=].element[=].target.comment = "Potentially covered by several sections"
 * group[=].element[+].code = #HospitalDischargeReport.body.recommendations.carePlan
 * group[=].element[=].display = "A.2.8.1 - Care plan"
 * group[=].element[=].target.code = #Composition.section:sectionPlanOfCare

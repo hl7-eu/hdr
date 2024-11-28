@@ -1,0 +1,27 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "HospitalStay" <<LogicalModel>> [[StructureDefinition-HospitalStay.html]]
+note top #PaleTurquoise [[ConceptMap-hospitalStay2FHIR-eu-hdr.html]]
+Concept Map
+endnote
+class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
+"HospitalStay" <|. "composition-eu-hdr"
+class "condition-eu-hdr" <<Profile>> [[StructureDefinition-condition-eu-hdr.html]]
+"HospitalStay" <|. "condition-eu-hdr"
+"composition-eu-hdr" -d[hidden]-> "condition-eu-hdr"
+class "procedure-eu-hdr" <<Profile>> [[StructureDefinition-procedure-eu-hdr.html]]
+"HospitalStay" <|. "procedure-eu-hdr"
+"condition-eu-hdr" -d[hidden]-> "procedure-eu-hdr"
+@enduml

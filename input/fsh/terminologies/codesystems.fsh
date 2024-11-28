@@ -1,12 +1,12 @@
 
 // should we define our own coding or reuse CMS
 //(https://www.cms.gov/medicare/payment/fee-for-service-providers/hospital-aquired-conditions-hac/coding) ?
-CodeSystem: POAIndicatorXpanDHCS
+CodeSystem: POAIndicatorEuHdrCs
 Id: poa-indicator-eu-hdr
 Title: "Present on Admission (POA) Indicator"
 Description: """This code system consists of Present on Admission (POA) indicators which are assigned to the diagnoses and the external cause of injury codes to indicate the presence or absence of the diagnosis at the time of inpatient admission."""
 * ^version = "2022.12.02"
-* ^status = #draft
+
 //* ^date = "2022-12-02"
 * ^experimental = false
 //* ^publisher = ""
@@ -19,11 +19,11 @@ Description: """This code system consists of Present on Admission (POA) indicato
 * #NA "Not applicable or unknown"
 
 
-CodeSystem: AssessmentCategoryXpanDHCS
+CodeSystem: AssessmentCategoryEuHdrCs
 Id: assessment-category-eu-hdr
 Title: "Xpandh Assessment Category"
 Description: """Category codes used in Xpandh Profiles such as the Xpandh Assessment Observation Profile. The are typically used when there is a need for categorization for searching and finding resources or workflow hints."""
-* ^status = #active
+
 * ^experimental = false
 //* ^date = "2022-04-20"
 //* ^copyright = "Used by permission of HL7 International, all rights reserved Creative Commons License"
@@ -40,7 +40,7 @@ Id: whodas-20-cs
 Title: "WHO Disability Assessment Schedule 2.0"
 Description: """WHODAS 2.0 provides a common metric of the impact of any health condition in terms of functioning. HODAS 2.0 produces domain-specific scores for six different functioning domains – cognition, mobility,
 self-care, getting along, life activities (household and work) and participation."""
-* ^status = #active
+
 * ^experimental = false
 //* ^date = "2022-04-20"
 //* ^copyright = "Used by permission of HL7 International, all rights reserved Creative Commons License"

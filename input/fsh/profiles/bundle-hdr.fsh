@@ -62,8 +62,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 
 * entry[composition].resource only CompositionEuHdr
 * entry[patient].resource only PatientEuHdr // EU ?
-* entry[allergyIntolerance].resource only $AllergyIntolerance-uv-ips
-* entry[condition].resource only $Condition-uv-ips
+* entry[allergyIntolerance].resource only AllergyIntoleranceEpsEu
+* entry[condition].resource only ConditionEuHdr
 * entry[device].resource only Device
 * entry[deviceUseStatement].resource only $DeviceUseStatement-uv-ips
 * entry[diagnosticReport].resource only $DiagnosticReport-uv-ips

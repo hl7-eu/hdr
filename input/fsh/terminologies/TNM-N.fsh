@@ -6,7 +6,7 @@ Description: "Regional lymph nodes (N) clinical category"
 //-------------------------------------------------------------------------------------------
 * insert SetFmmandStatusRule (1, draft)
 * insert SNOMEDCopyrightForVS
-* ^status = #active
+
 * ^experimental = true
 * codes from system $sct where concept is-a $sct#1222588006 "American Joint Committee on Cancer clinical N category allowable value (qualifier value)"
 
@@ -18,7 +18,7 @@ Description: "Regional lymph nodes (N) pathological category"
 //-------------------------------------------------------------------------------------------
 * insert SetFmmandStatusRule (1, draft)
 * insert SNOMEDCopyrightForVS
-* ^status = #active
+
 * ^experimental = true
 * codes from system $sct where concept is-a $sct#1222590007 "American Joint Committee on Cancer pathology N category allowable value (qualifier value)"
 
@@ -30,7 +30,7 @@ Description: "Regional lymph nodes (N) category"
 //-------------------------------------------------------------------------------------------
 * insert SetFmmandStatusRule (1, draft)
 * insert SNOMEDCopyrightForVS
-* ^status = #active
+
 * ^experimental = true
 * codes from valueset TNM_N_ClinicalCategoryVS
 * codes from valueset TNM_N_PathologicalCategoryVS

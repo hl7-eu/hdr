@@ -1,6 +1,6 @@
 // --------------------------------------------------
-ValueSet:   HdrTreatedHdrVS
-Id:         hdr-treated-eu-hdr
+ValueSet:   TreatedProblemHdrVS
+Id:         treated-problem-eu-hdr
 Title:      "Treatment Class Value Set"
 Description: "Value set for category of treatement of the conditoin during encounter."
 * insert SetFmmandStatusRule (1, draft)

@@ -70,6 +70,8 @@ pages:
     title: Subject Relationships
   InPatientEncounter-map.html:
     title: InPatientEncounter Relationships
+  HospitalStay-map.html:
+    title: HospitalStay Relationships
   Alerts-map.html:
     title: Alerts Relationships
   AdvanceDirectives-map.html:
@@ -163,6 +165,7 @@ menu:
     HospitalDischargeReport: HospitalDischargeReport-map.html
     Header: Header-map.html
     Subject: Subject-map.html
+    HospitalStay: HospitalStay-map.html
     InPatientEncounter: InPatientEncounter-map.html
     Alerts: Alerts-map.html
     AdvanceDirectives: AdvanceDirectives-map.html

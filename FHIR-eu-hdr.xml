@@ -37,6 +37,8 @@
 <artifact id="ValueSet/TNM-T-clinical-category-vs" key="ValueSet-TNM-T-clinical-category-vs" name="Clinical T"/>
 <artifact id="ValueSet/TNM-T-pathological-category-vs" key="ValueSet-TNM-T-pathological-category-vs" name="Clinical T"/>
 <artifact id="StructureDefinition/composition-eu-hdr" key="StructureDefinition-composition-eu-hdr" name="Composition (HDR)"/>
+<artifact id="StructureDefinition/condition-eu-hdr" key="StructureDefinition-condition-eu-hdr" name="Condition (HDR)"/>
+<artifact id="ValueSet/poa-indicator-eu-hdr" key="ValueSet-poa-indicator-eu-hdr" name="Condition Present on Admission (POA) Value Set"/>
 <artifact id="ValueSet/condition-eu-hdr" key="ValueSet-condition-eu-hdr" name="Condition Value Set"/>
 <artifact id="StructureDefinition/encounter-eu-hdr" key="StructureDefinition-encounter-eu-hdr" name="Encounter (HDR)"/>
 <artifact id="ValueSet/hdr-encounterClass-eu-hdr" key="ValueSet-hdr-encounterClass-eu-hdr" name="Encounter Class Value Set"/>
@@ -73,7 +75,7 @@
 <artifact id="ValueSet/skinfold-thickness-vs" key="ValueSet-skinfold-thickness-vs" name="Skinfold Thickness Value Set"/>
 <artifact id="ValueSet/TNM-M-category-vs" key="ValueSet-TNM-M-category-vs" name="TNM M Category"/>
 <artifact id="ValueSet/TNM-N-category-vs" key="ValueSet-TNM-N-category-vs" name="TNM N Category"/>
-<artifact id="ValueSet/hdr-treated-eu-hdr" key="ValueSet-hdr-treated-eu-hdr" name="Treatment Class Value Set"/>
+<artifact id="ValueSet/treated-problem-eu-hdr" key="ValueSet-treated-problem-eu-hdr" name="Treatment Class Value Set"/>
 <artifact id="ValueSet/vital-signs-observation-vs" key="ValueSet-vital-signs-observation-vs" name="Vital Signs Observation Value Set"/>
 <artifact id="CodeSystem/whodas-20-cs" key="CodeSystem-whodas-20-cs" name="WHO Disability Assessment Schedule 2.0"/>
 <artifact id="CodeSystem/assessment-category-eu-hdr" key="CodeSystem-assessment-category-eu-hdr" name="Xpandh Assessment Category"/>
@@ -84,6 +86,7 @@
 <artifact id="ConceptMap/encounter2FHIR-eu-hdr" key="ConceptMap-encounter2FHIR-eu-hdr" name="eHN Encounter Model to this guide Map"/>
 <artifact id="ConceptMap/hdr2FHIR-eu-hdr" key="ConceptMap-hdr2FHIR-eu-hdr" name="eHN HDR Model to this guide Map"/>
 <artifact id="ConceptMap/hdrHeader2FHIR-eu-hdr" key="ConceptMap-hdrHeader2FHIR-eu-hdr" name="eHN Header Model to this guide Map"/>
+<artifact id="ConceptMap/hospitalStay2FHIR-eu-hdr" key="ConceptMap-hospitalStay2FHIR-eu-hdr" name="eHN Hospital Stay Model to this guide Map"/>
 <artifact id="ConceptMap/medicationSummary2FHIR-eu-hdr" key="ConceptMap-medicationSummary2FHIR-eu-hdr" name="eHN Medication Summary Model to this guide Map"/>
 <artifact id="ConceptMap/planOfCare2FHIR-eu-hdr" key="ConceptMap-planOfCare2FHIR-eu-hdr" name="eHN Plan of Care Model to this guide Map"/>
 <artifact id="ConceptMap/subject2FHIR-eu-hdr" key="ConceptMap-subject2FHIR-eu-hdr" name="eHN Subject Model to this guide Map"/>

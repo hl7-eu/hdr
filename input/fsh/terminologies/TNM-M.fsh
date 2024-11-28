@@ -6,7 +6,7 @@ Description: "Distant metastazis (M) clinical category"
 //-------------------------------------------------------------------------------------------
 * insert SetFmmandStatusRule (1, draft)
 * insert SNOMEDCopyrightForVS
-* ^status = #active
+
 * ^experimental = true
 * codes from system $sct where concept is-a $sct#1222587001 "American Joint Committee on Cancer clinical M category allowable value (qualifier value)"
 /*
@@ -22,7 +22,7 @@ Description: "Distant metastazis (M) pathological category"
 //-------------------------------------------------------------------------------------------
 * insert SetFmmandStatusRule (1, draft)
 * insert SNOMEDCopyrightForVS
-* ^status = #active
+
 * ^experimental = true
 * codes from system $sct where concept is-a $sct#1222591006 "American Joint Committee on Cancer pathological M category allowable value (qualifier value)"
 
@@ -35,7 +35,7 @@ Description: "Distant metastazis (M) category"
 //-------------------------------------------------------------------------------------------
 * insert SetFmmandStatusRule (1, draft)
 * insert SNOMEDCopyrightForVS
-* ^status = #active
+
 * ^experimental = true
 * codes from valueset TNM_M_ClinicalCategoryVS
 * codes from valueset TNM_M_PathologicalCategoryVS
