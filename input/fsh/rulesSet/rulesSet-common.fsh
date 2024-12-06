@@ -46,6 +46,15 @@ RuleSet: SectionSliceComRules (short, def)
 * section ^definition = "{def}"
 
 
+RuleSet: OpenReferenceSlicePerTypeRules (short, def)
+* ^slicing.discriminator[0].type = #type
+* ^slicing.discriminator[0].path = "resolve()"
+* ^slicing.ordered = false
+* ^slicing.rules = #open
+* ^short = "{short}"
+* ^definition = "{def}"
+
+
 RuleSet: SectionEntrySliceComRules (short, def)
 * entry ^slicing.discriminator[0].type = #type
 * entry ^slicing.discriminator[0].path = "resolve()"

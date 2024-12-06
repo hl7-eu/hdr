@@ -32,7 +32,7 @@ Usage: #definition
 * group[=].element[+].code = #PlanOfCare.details
 * group[=].element[=].display = "A.2.9.1.5 - Other details"
 * group[=].element[=].target.code = #CarePlan.activity.detail
-* group[=].element[=].target.display = "These are the details of the activity not of the Care Plan"
+* group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #PlanOfCare.activity
 * group[=].element[=].display = "A.2.9.1.6 - Activity"

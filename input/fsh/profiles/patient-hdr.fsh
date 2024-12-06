@@ -21,7 +21,7 @@ When the ips-pat-1 invariant is satisfied \(Patient.name.given, Patient.name.fam
 * identifier ^short = "Patient identifiers" // MS according to IPS
 
 * name 1..*
-* name only HumanNameEu
+* name only $HumanName-eu
 * name obeys eu-pat-1
 * name ^requirements = "Need to be able to track the patient by multiple names. Examples are your official name and a partner name.\r\nThe Alphabetic representation of the name SHALL be always provided"
 * name ^requirements = "Need to be able to track the patient by multiple names. Examples are your official name and a partner name.\r\nThe Alphabetic representation of the name SHALL be always provided"
@@ -42,15 +42,28 @@ When the ips-pat-1 invariant is satisfied \(Patient.name.given, Patient.name.fam
 * birthDate 0.. // MS according to IPS
   * ^short = "The date of birth for the patient"
 * address only $Address-eu // MS according to IPS
+
 * contact
   * relationship only $CodeableConcept-uv-ips
+    * ^slicing.discriminator[0].type = #value
+    * ^slicing.discriminator[0].path = "code"
+    * ^slicing.ordered = false
+    * ^slicing.rules = #open
+    * ^short = "Slice per value"
+    * ^definition = "Slice per value"
+  * relationship contains role ..*
+  * relationship[role] ^short = "Role of the contect (e.g. Legal Guardian)"
+  // MISSING BINDING 
+  * relationship contains type ..*
+  * relationship[type] ^short = "Relationship type (e.g. father)"
+  // * relationship[type] from $eHDSIPersonalRelationship
   * address ^short = "Contact person address"
   * address only $Address-eu
   * telecom ^short = "Contact details for the person"
   * name ^short = "Contact name"
 
 * generalPractitioner ^short = "Patient's nominated primary care provider."
-* generalPractitioner only Reference(Organization or PractitionerRole) // Add profiles
+* generalPractitioner only Reference(OrganizationEu or PractitionerRoleEu) // Add profiles
 * communication.language ^short = "Communication language"
 
 

@@ -71,10 +71,10 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[medicationStatement].resource only $MedicationStatement-uv-ips
 * entry[medicationAdministration].resource only MedicationAdministration
 * entry[medicationDispense].resource only MedicationDispense
-* entry[practitioner].resource only PractitionerEuHdr
-* entry[practitionerRole].resource only PractitionerRoleEuHdr
+* entry[practitioner].resource only PractitionerEu
+* entry[practitionerRole].resource only PractitionerRoleEu
 * entry[procedure].resource only ProcedureEuHdr
-* entry[organization].resource only OrganizationEuHdr
+* entry[organization].resource only OrganizationEu
 * entry[observation].resource only Observation // $Observation-results-uv-ips
 * entry[specimen].resource only $Specimen-uv-ips
 * entry[flag].resource only Flag

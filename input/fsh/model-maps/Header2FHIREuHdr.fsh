@@ -8,6 +8,110 @@ Usage: #definition
 * experimental = true
 * description = """eHN HDR Header Model to this guide mapping"""
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
+* group[=].target = "http://hl7.eu/fhir/base/StructureDefinition/organization-eu"
+* group[=].element[+].code = #Header.payer.insuranceCode
+* group[=].element[=].display = "A.1.3.1 - Health insurance code"
+* group[=].element[=].target.code = #Organization.identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #Header.payer.insuranceName
+* group[=].element[=].display = "A.1.3.2 - Health insurance name"
+* group[=].element[=].target.code = #Organization.name
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
+* group[=].target = "http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu"
+* group[=].element[+].code = #Header.informationRecipient.identifier
+* group[=].element[=].display = "A.1.4.1 - Recipient identifier"
+* group[=].element[=].target.code = #PractitionerRole.identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "Composition.extension:information-recipient.valueReference.resolve()"
+* group[=].element[+].code = #Header.author
+* group[=].element[=].display = "A.1.5 - Author (by whom the Hospital discharge report was/were authored). Multiple authors could be provided."
+* group[=].element[=].target.code = #PractitionerRole
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "Composition.author.resolve().ofType(PractitionerRole)"
+* group[=].element[+].code = #Header.author.identifier
+* group[=].element[=].display = "A.1.5.1 - Author identifier"
+* group[=].element[=].target.code = #PractitionerRole.identifier					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #Header.author.name
+* group[=].element[=].display = "A.1.5.2 - Author name"
+* group[=].element[=].target.code = #PractitionerRole.practictioner.name					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "If PractitionerRole"
+* group[=].element[+].code = #Header.author.organizationID
+* group[=].element[=].display = "A.1.5.3 - Author organisation ID"
+* group[=].element[=].target.code = #PractitionerRole.organization.identifier					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "If Organization"
+* group[=].element[+].code = #Header.author.organization
+* group[=].element[=].display = "A.1.5.4 - Author organisation"
+* group[=].element[=].target.code = #PractitionerRole.organization					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[+].code = #Header.attester
+* group[=].element[=].display = "A.1.6 - Attester (multiple attesters could be provided)"
+* group[=].element[=].target.code = #PractitionerRole
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "where attester.mode = 'professional' AND Composition.attester.party.resolve().ofType(PractitionerRole)"
+* group[=].element[+].code = #Header.attester.identifier
+* group[=].element[=].display = "A.1.6.1 - Attester identifier"
+* group[=].element[=].target.code = #PractitionerRole.identifier					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #Header.attester.name
+* group[=].element[=].display = "A.1.6.2 - Attester name"
+* group[=].element[=].target.code = #PractitionerRole.practictioner.name					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #Header.attester.organizationID
+* group[=].element[=].display = "A.1.6.3 - Attester organisation ID"
+* group[=].element[=].target.code = #PractitionerRole.organization.identifier					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #Header.attester.organization
+* group[=].element[=].display = "A.1.6.4 - Attester organisation"
+* group[=].element[=].target.code = #PractitionerRole.organization					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #Header.legalAuthenticator
+* group[=].element[=].display = "A.1.7 - Legal authenticator (The person taking responsibility for the medical content of the document)"
+* group[=].element[=].target.code = #PractitionerRole					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "where attester.mode = 'legal' AND Composition.attester.party.resolve().ofType(PractitionerRole)"
+* group[=].element[+].code = #Header.legalAuthenticator.identifier
+* group[=].element[=].display = "A.1.7.1 - Legal authenticator identifier"
+* group[=].element[=].target.code = #PractitionerRole.identifier					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "where attester.mode = 'legal'"
+* group[=].element[+].code = #Header.legalAuthenticator.name
+* group[=].element[=].display = "A.1.7.2 - Legal authenticator name"
+* group[=].element[=].target.code = #PractitionerRole.practictioner.name					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "where attester.mode = 'legal'"
+* group[=].element[+].code = #Header.legalAuthenticator.organizationID
+* group[=].element[=].display = "A.1.7.3 - Legal authenticator organisation ID"
+* group[=].element[=].target.code = #PractitionerRole.organization.identifier					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "where attester.mode = 'legal'"
+* group[=].element[+].code = #Header.legalAuthenticator.organization
+* group[=].element[=].display = "A.1.7.4 - Legal authenticator organisation"
+* group[=].element[=].target.code = #PractitionerRole.organization					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "where attester.mode = 'legal'"
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
 * group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/bundle-eu-hdr"
 * group[=].element[+].code = #Header.documentMetadata.identifier
 * group[=].element[=].display = "A.1.8.1 - Document ID"
@@ -163,18 +267,6 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "As business version, not as resource version"
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/organization-eu-hdr"
-* group[=].element[+].code = #Header.payer.insuranceCode
-* group[=].element[=].display = "A.1.3.1 - Health insurance code"
-* group[=].element[=].target.code = #Organization.identifier
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Header.payer.insuranceName
-* group[=].element[=].display = "A.1.3.2 - Health insurance name"
-* group[=].element[=].target.code = #Organization.name
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
 * group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/patient-eu-hdr"
 * group[=].element[+].code = #Header.subject
 * group[=].element[=].display = "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"
@@ -188,98 +280,6 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "If treated as one of the Patient identifiers; this applies in some jurisdictions."
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/practitionerRole-eu-hdr"
-* group[=].element[+].code = #Header.informationRecipient.identifier
-* group[=].element[=].display = "A.1.4.1 - Recipient identifier"
-* group[=].element[=].target.code = #PractitionerRole.identifier
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "Composition.extension:information-recipient.valueReference.resolve()"
-* group[=].element[+].code = #Header.author
-* group[=].element[=].display = "A.1.5 - Author (by whom the Hospital discharge report was/were authored). Multiple authors could be provided."
-* group[=].element[=].target.code = #PractitionerRole
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "Composition.author.resolve().ofType(PractitionerRole)"
-* group[=].element[+].code = #Header.author.identifier
-* group[=].element[=].display = "A.1.5.1 - Author identifier"
-* group[=].element[=].target.code = #PractitionerRole.identifier					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Header.author.name
-* group[=].element[=].display = "A.1.5.2 - Author name"
-* group[=].element[=].target.code = #PractitionerRole.practictioner.name					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "If PractitionerRole"
-* group[=].element[+].code = #Header.author.organizationID
-* group[=].element[=].display = "A.1.5.3 - Author organisation ID"
-* group[=].element[=].target.code = #PractitionerRole.organization.identifier					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "If Organization"
-* group[=].element[+].code = #Header.author.organization
-* group[=].element[=].display = "A.1.5.4 - Author organisation"
-* group[=].element[=].target.code = #PractitionerRole.organization					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[+].code = #Header.attester
-* group[=].element[=].display = "A.1.6 - Attester (multiple attesters could be provided)"
-* group[=].element[=].target.code = #PractitionerRole
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "where attester.mode = 'professional' AND Composition.attester.party.resolve().ofType(PractitionerRole)"
-* group[=].element[+].code = #Header.attester.identifier
-* group[=].element[=].display = "A.1.6.1 - Attester identifier"
-* group[=].element[=].target.code = #PractitionerRole.identifier					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Header.attester.name
-* group[=].element[=].display = "A.1.6.2 - Attester name"
-* group[=].element[=].target.code = #PractitionerRole.practictioner.name					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Header.attester.organizationID
-* group[=].element[=].display = "A.1.6.3 - Attester organisation ID"
-* group[=].element[=].target.code = #PractitionerRole.organization.identifier					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Header.attester.organization
-* group[=].element[=].display = "A.1.6.4 - Attester organisation"
-* group[=].element[=].target.code = #PractitionerRole.organization					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Header.legalAuthenticator
-* group[=].element[=].display = "A.1.7 - Legal authenticator (The person taking responsibility for the medical content of the document)"
-* group[=].element[=].target.code = #PractitionerRole					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "where attester.mode = 'legal' AND Composition.attester.party.resolve().ofType(PractitionerRole)"
-* group[=].element[+].code = #Header.legalAuthenticator.identifier
-* group[=].element[=].display = "A.1.7.1 - Legal authenticator identifier"
-* group[=].element[=].target.code = #PractitionerRole.identifier					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "where attester.mode = 'legal'"
-* group[=].element[+].code = #Header.legalAuthenticator.name
-* group[=].element[=].display = "A.1.7.2 - Legal authenticator name"
-* group[=].element[=].target.code = #PractitionerRole.practictioner.name					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "where attester.mode = 'legal'"
-* group[=].element[+].code = #Header.legalAuthenticator.organizationID
-* group[=].element[=].display = "A.1.7.3 - Legal authenticator organisation ID"
-* group[=].element[=].target.code = #PractitionerRole.organization.identifier					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "where attester.mode = 'legal'"
-* group[=].element[+].code = #Header.legalAuthenticator.organization
-* group[=].element[=].display = "A.1.7.4 - Legal authenticator organisation"
-* group[=].element[=].target.code = #PractitionerRole.organization					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "where attester.mode = 'legal'"
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/Coverage"
 * group[=].element[+].code = #Header.payer.insuranceCode

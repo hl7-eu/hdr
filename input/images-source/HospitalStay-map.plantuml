@@ -39,9 +39,12 @@ class "medicationRequest-eu-hdr" <<Profile>> [[StructureDefinition-medicationReq
 class "procedure-eu-hdr" <<Profile>> [[StructureDefinition-procedure-eu-hdr.html]]
 "HospitalStay" <|. "procedure-eu-hdr"
 "medicationRequest-eu-hdr" -d[hidden]-> "procedure-eu-hdr"
+class "Observation-resultslab-eu-lab" <<Profile>> [[StructureDefinition-Observation-resultslab-eu-lab.html]]
+"HospitalStay" <|. "Observation-resultslab-eu-lab"
+"procedure-eu-hdr" -d[hidden]-> "Observation-resultslab-eu-lab"
 class "Dosage" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Dosage]]
 "HospitalStay" <|. "Dosage"
-"procedure-eu-hdr" -d[hidden]-> "Dosage"
+"Observation-resultslab-eu-lab" -d[hidden]-> "Dosage"
 class "MedicationAdministration" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/MedicationAdministration]]
 "HospitalStay" <|. "MedicationAdministration"
 "Dosage" -d[hidden]-> "MedicationAdministration"

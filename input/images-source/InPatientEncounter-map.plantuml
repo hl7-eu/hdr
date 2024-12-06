@@ -16,18 +16,18 @@ class "InPatientEncounter" <<LogicalModel>> [[StructureDefinition-InPatientEncou
 note top #PaleTurquoise [[ConceptMap-encounter2FHIR-eu-hdr.html]]
 Concept Map
 endnote
+class "organization-eu" <<Profile>> [[StructureDefinition-organization-eu.html]]
+"InPatientEncounter" <|. "organization-eu"
+class "practitioner-eu" <<Profile>> [[StructureDefinition-practitioner-eu.html]]
+"InPatientEncounter" <|. "practitioner-eu"
+"organization-eu" -d[hidden]-> "practitioner-eu"
+class "practitionerRole-eu" <<Profile>> [[StructureDefinition-practitionerRole-eu.html]]
+"InPatientEncounter" <|. "practitionerRole-eu"
+"practitioner-eu" -d[hidden]-> "practitionerRole-eu"
 class "encounter-eu-hdr" <<Profile>> [[StructureDefinition-encounter-eu-hdr.html]]
 "InPatientEncounter" <|. "encounter-eu-hdr"
+"practitionerRole-eu" -d[hidden]-> "encounter-eu-hdr"
 class "location-eu-hdr" <<Profile>> [[StructureDefinition-location-eu-hdr.html]]
 "InPatientEncounter" <|. "location-eu-hdr"
 "encounter-eu-hdr" -d[hidden]-> "location-eu-hdr"
-class "organization-eu-hdr" <<Profile>> [[StructureDefinition-organization-eu-hdr.html]]
-"InPatientEncounter" <|. "organization-eu-hdr"
-"location-eu-hdr" -d[hidden]-> "organization-eu-hdr"
-class "practitioner-eu-hdr" <<Profile>> [[StructureDefinition-practitioner-eu-hdr.html]]
-"InPatientEncounter" <|. "practitioner-eu-hdr"
-"organization-eu-hdr" -d[hidden]-> "practitioner-eu-hdr"
-class "practitionerRole-eu-hdr" <<Profile>> [[StructureDefinition-practitionerRole-eu-hdr.html]]
-"InPatientEncounter" <|. "practitionerRole-eu-hdr"
-"practitioner-eu-hdr" -d[hidden]-> "practitionerRole-eu-hdr"
 @enduml

@@ -6,9 +6,14 @@ Alias: $server = http://hl7.eu/fhir/laboratory/actor-repos-eu-lab
 Alias: $creator = http://hl7.eu/fhir/laboratory/actor-creator-eu-lab
 Alias: $consumer = http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab
 
+// --- EU Base profiles
+Alias: $Address-eu = http://hl7.eu/fhir/base/StructureDefinition/Address-eu
+Alias: $HumanName-eu = http://hl7.eu/fhir/base/StructureDefinition/HumanName-eu
+
+
 // --- EU Lab Profiles
 Alias: $Composition-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab
-Alias: $patient-eu-hdr = http://hl7.eu/fhir/laboratory/StructureDefinition/patient-eu-hdr
+Alias: $Observation-resultslab-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab
 
 // --- Value Sets
 Alias: $absent-or-unknown-procedures-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-procedures-uv-ips
@@ -45,7 +50,8 @@ Alias: $Observation-pregnancy-outcome-uv-ips = http://hl7.org/fhir/uv/ips/Struct
 Alias: $Observation-pregnancy-status-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips
 Alias: $Observation-alcoholuse-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips
 Alias: $Observation-tobaccouse-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips
-Alias: $Observation-results-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips
+// Alias: $Observation-results-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips
+Alias: $Observation-results-radiology-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips
 //Alias: $Specimen-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips
 Alias: $Bundle-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips
 Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns

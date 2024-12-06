@@ -24,7 +24,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient]
-* extension[information-recipient].valueReference only Reference( PractitionerRoleEuHdr or PractitionerEuHdr or Device or PatientEuHdr or RelatedPerson or  OrganizationEuHdr)
+* extension[information-recipient].valueReference only Reference( PractitionerRoleEu or PractitionerEu or Device or PatientEuHdr or RelatedPerson or  OrganizationEu)
 
 /* GC TO DO
 - check if we need a R5 composition.status
@@ -49,7 +49,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * date ^short = "HDR date"
 * author ^short = "Who and/or what authored the Hospital Discharge Report"
 * author ^definition = "Identifies who is responsible for the information in the Hospital Discharge Report, not necessarily who typed it in."
-* author only Reference( PractitionerEuHdr or PractitionerRoleEuHdr or Device or Patient or RelatedPerson or Organization)
+* author only Reference( PractitionerEu or PractitionerRoleEu or Device or Patient or RelatedPerson or Organization)
 
 
 * title ^short = "Hospital Discharge Report"
@@ -240,8 +240,17 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
     Results of significant functional\, diagnostic\, and imaging examinations to ensure continuity of care\, performed during hospitalisation. Results of examinations ordered but not yet delivered should be presented separately from results already delivered.,
     $loinc#30954-2 ) // Relevant diagnostic tests/laboratory data Narrative or it is 11493-4 Hospital discharge studies summary Narrative or we need both ?
     // $sct#423100009 ) // "Results section (record artifact\)"
-  * entry 1..
-  * entry only Reference(Observation) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)
+  * entry 0..
+  * entry only Reference(Observation or DiagnosticReport or DocumentReference)
+
+  * entry insert OpenReferenceSlicePerTypeRules (significant results, significant results)
+  * insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result ,
+    Laboratory Result  , $Observation-resultslab-eu-lab)
+  * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result ,
+    Radiology Result  ,$Observation-results-radiology-uv-ips)
+    
+    
+  // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)
 
 
 * section contains sectionSynthesis 0..1

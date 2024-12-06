@@ -16,12 +16,12 @@ class "Subject" <<LogicalModel>> [[StructureDefinition-Subject.html]]
 note top #PaleTurquoise [[ConceptMap-subject2FHIR-eu-hdr.html]]
 Concept Map
 endnote
+class "practitioner-eu" <<Profile>> [[StructureDefinition-practitioner-eu.html]]
+"Subject" <|. "practitioner-eu"
+class "practitionerRole-eu" <<Profile>> [[StructureDefinition-practitionerRole-eu.html]]
+"Subject" <|. "practitionerRole-eu"
+"practitioner-eu" -d[hidden]-> "practitionerRole-eu"
 class "patient-eu-hdr" <<Profile>> [[StructureDefinition-patient-eu-hdr.html]]
 "Subject" <|. "patient-eu-hdr"
-class "practitioner-eu-hdr" <<Profile>> [[StructureDefinition-practitioner-eu-hdr.html]]
-"Subject" <|. "practitioner-eu-hdr"
-"patient-eu-hdr" -d[hidden]-> "practitioner-eu-hdr"
-class "practitionerRole-eu-hdr" <<Profile>> [[StructureDefinition-practitionerRole-eu-hdr.html]]
-"Subject" <|. "practitionerRole-eu-hdr"
-"practitioner-eu-hdr" -d[hidden]-> "practitionerRole-eu-hdr"
+"practitionerRole-eu" -d[hidden]-> "patient-eu-hdr"
 @enduml

@@ -16,23 +16,23 @@ class "Header" <<LogicalModel>> [[StructureDefinition-Header.html]]
 note top #PaleTurquoise [[ConceptMap-hdrHeader2FHIR-eu-hdr.html]]
 Concept Map
 endnote
+class "organization-eu" <<Profile>> [[StructureDefinition-organization-eu.html]]
+"Header" <|. "organization-eu"
+class "practitionerRole-eu" <<Profile>> [[StructureDefinition-practitionerRole-eu.html]]
+"Header" <|. "practitionerRole-eu"
+"organization-eu" -d[hidden]-> "practitionerRole-eu"
 class "bundle-eu-hdr" <<Profile>> [[StructureDefinition-bundle-eu-hdr.html]]
 "Header" <|. "bundle-eu-hdr"
+"practitionerRole-eu" -d[hidden]-> "bundle-eu-hdr"
 class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
 "Header" <|. "composition-eu-hdr"
 "bundle-eu-hdr" -d[hidden]-> "composition-eu-hdr"
-class "organization-eu-hdr" <<Profile>> [[StructureDefinition-organization-eu-hdr.html]]
-"Header" <|. "organization-eu-hdr"
-"composition-eu-hdr" -d[hidden]-> "organization-eu-hdr"
 class "patient-eu-hdr" <<Profile>> [[StructureDefinition-patient-eu-hdr.html]]
 "Header" <|. "patient-eu-hdr"
-"organization-eu-hdr" -d[hidden]-> "patient-eu-hdr"
-class "practitionerRole-eu-hdr" <<Profile>> [[StructureDefinition-practitionerRole-eu-hdr.html]]
-"Header" <|. "practitionerRole-eu-hdr"
-"patient-eu-hdr" -d[hidden]-> "practitionerRole-eu-hdr"
+"composition-eu-hdr" -d[hidden]-> "patient-eu-hdr"
 class "Coverage" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Coverage]]
 "Header" <|. "Coverage"
-"practitionerRole-eu-hdr" -d[hidden]-> "Coverage"
+"patient-eu-hdr" -d[hidden]-> "Coverage"
 class "ServiceRequest" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/ServiceRequest]]
 "Header" <|. "ServiceRequest"
 "Coverage" -d[hidden]-> "ServiceRequest"

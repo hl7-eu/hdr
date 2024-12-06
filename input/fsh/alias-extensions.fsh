@@ -2,7 +2,6 @@
 
 // ---- Extensions
 
-Alias: $Address-eu = http://hl7.eu/fhir/laboratory/StructureDefinition/Address-eu
 Alias: $allergyintolerance-abatement = http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement
 Alias: $artifact-relatedArtifact = http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact
 Alias: $bodySite-reference = http://hl7.org/fhir/StructureDefinition/bodySite

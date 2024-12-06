@@ -1,28 +1,28 @@
+PlanOfCare: PlanOfCare-map.html
+Header: Header-map.html
 MedicationSummary: MedicationSummary-map.html
-InPatientEncounter: InPatientEncounter-map.html
-HospitalStay: HospitalStay-map.html
+Subject: Subject-map.html
 AdvanceDirectives: AdvanceDirectives-map.html
 HospitalDischargeReport: HospitalDischargeReport-map.html
-PlanOfCare: PlanOfCare-map.html
-Subject: Subject-map.html
-Header: Header-map.html
+HospitalStay: HospitalStay-map.html
+InPatientEncounter: InPatientEncounter-map.html
 Alerts: Alerts-map.html
 
+  PlanOfCare-map.html:
+    title: PlanOfCare Relationships
+  Header-map.html:
+    title: Header Relationships
   MedicationSummary-map.html:
     title: MedicationSummary Relationships
-  InPatientEncounter-map.html:
-    title: InPatientEncounter Relationships
-  HospitalStay-map.html:
-    title: HospitalStay Relationships
+  Subject-map.html:
+    title: Subject Relationships
   AdvanceDirectives-map.html:
     title: AdvanceDirectives Relationships
   HospitalDischargeReport-map.html:
     title: HospitalDischargeReport Relationships
-  PlanOfCare-map.html:
-    title: PlanOfCare Relationships
-  Subject-map.html:
-    title: Subject Relationships
-  Header-map.html:
-    title: Header Relationships
+  HospitalStay-map.html:
+    title: HospitalStay Relationships
+  InPatientEncounter-map.html:
+    title: InPatientEncounter Relationships
   Alerts-map.html:
     title: Alerts Relationships

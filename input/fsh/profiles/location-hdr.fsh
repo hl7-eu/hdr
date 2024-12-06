@@ -9,4 +9,4 @@ Description: "This profile sets minimum expectations for the Location resource t
 * physicalType ^short = "Location type"
 * name ^short = "Location name"
 * telecom ^short = "Location telecom"
-* address only AddressEu
+* address only $Address-eu

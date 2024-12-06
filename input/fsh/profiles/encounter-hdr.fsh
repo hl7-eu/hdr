@@ -35,7 +35,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 
 * participant
   * individual 0..1
-  * individual only Reference (PractitionerEuHdr or PractitionerRoleEuHdr or RelatedPerson)
+  * individual only Reference (PractitionerEu or PractitionerRoleEu or RelatedPerson)
 
 * participant
   * ^short = "List of participants involved in the encounters"
@@ -70,11 +70,11 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 * hospitalization
   * admitSource ^short = "From where patient was admitted (physician referral, transfer)."
   * dischargeDisposition ^short = "Category or kind of location after discharge"
-  * destination only Reference (OrganizationEuHdr or LocationEuHdr)
+  * destination only Reference (OrganizationEu or LocationEuHdr)
   // add voc binding
 
 * location ^short = "Locations where the patient stayed"
   * location only Reference ( LocationEuHdr )
   * period ^short = "Location period"
 
-* serviceProvider only Reference ( OrganizationEuHdr )
+* serviceProvider only Reference ( OrganizationEu )
