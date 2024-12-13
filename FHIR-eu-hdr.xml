@@ -31,6 +31,7 @@
 <artifact id="StructureDefinition/bundle-eu-hdr" key="StructureDefinition-bundle-eu-hdr" name="Bundle (HDR)"/>
 <artifact id="ValueSet/cancer-stage-grading-vs" key="ValueSet-cancer-stage-grading-vs" name="Cancer Stage Grading: Snomed CT"/>
 <artifact id="ValueSet/cancer-stageGroup-vs" key="ValueSet-cancer-stageGroup-vs" name="Cancer Stage Group: SNOMED CT"/>
+<artifact id="StructureDefinition/carePlan-eu-eps" key="StructureDefinition-carePlan-eu-eps" name="Care Plan (HDR)"/>
 <artifact id="ValueSet/circumference-observation-vs" key="ValueSet-circumference-observation-vs" name="Circumference Observation Value Set"/>
 <artifact id="ValueSet/TNM-M-clinical-category-vs" key="ValueSet-TNM-M-clinical-category-vs" name="Clinical M"/>
 <artifact id="ValueSet/TNM-N-clinical-category-vs" key="ValueSet-TNM-N-clinical-category-vs" name="Clinical N"/>
@@ -59,7 +60,6 @@
 <artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Observation Codes for Regional Node Category"/>
 <artifact id="ValueSet/TNM-M-pathologycal-category-vs" key="ValueSet-TNM-M-pathologycal-category-vs" name="Pathological M"/>
 <artifact id="ValueSet/TNM-N-pathological-category-vs" key="ValueSet-TNM-N-pathological-category-vs" name="Pathological N"/>
-<artifact id="StructureDefinition/patient-eu-hdr" key="StructureDefinition-patient-eu-hdr" name="Patient (HDR)"/>
 <artifact id="CodeSystem/poa-indicator-eu-hdr" key="CodeSystem-poa-indicator-eu-hdr" name="Present on Admission (POA) Indicator"/>
 <artifact id="ValueSet/TNM-T-category-vs" key="ValueSet-TNM-T-category-vs" name="Primary tumor T"/>
 <artifact id="StructureDefinition/procedure-eu-hdr" key="StructureDefinition-procedure-eu-hdr" name="Procedure (HDR)"/>

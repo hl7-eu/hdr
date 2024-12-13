@@ -3,7 +3,6 @@ Parent: AllergyIntolerance
 Id: allergyIntolerance-eu-eps
 Title:    "Allergy Intolerance (EU PS)"
 Description: """This profile constrains the AllergyIntolerance resource for the purpose of the European patient summary."""
-* ^experimental = false
 * ^purpose = "This profile constrains the AllergyIntolerance resource for the purpose of the European patient summary."
 
 * insert SetFmmandStatusRule (1, draft)
@@ -35,7 +34,7 @@ Description: """This profile constrains the AllergyIntolerance resource for the 
 * criticality ^short = "Criticality"
 
 * patient.reference 1..
-* patient only Reference(PatientEuHdr)
+* patient only Reference(PatientEuCore)
 
 // * onset[x] only dateTime // is this needed ?
 * onsetDateTime ^short = "Onset date"

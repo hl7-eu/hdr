@@ -32,14 +32,14 @@ Description: "This profile represents the constraints applied to the Procedure r
 * code ^binding.extension[=].extension[=].valueMarkdown = "Codes for absent or unknown procedures"
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * code ^binding.description = "SNOMED CT procedure code set or a code for absent/unknown procedure"
-* subject only Reference(PatientEuHdr)
+* subject only Reference(PatientEuCore)
 * subject.reference 1..
 * performed[x] 1..1
 * performed[x].extension contains $data-absent-reason named data-absent-reason 0..1
 * performed[x].extension[data-absent-reason] ^short = "performed[x] absence reason"
 * performed[x].extension[data-absent-reason] ^definition = "Provides a reason why the performed is missing."
-* performer.actor only Reference(PractitionerRoleEu or PractitionerEu or Device or PatientEuHdr or RelatedPerson or  OrganizationEu)
-* performer.onBehalfOf only Reference(OrganizationEu)
+* performer.actor only Reference(PractitionerRoleEuCore or PractitionerEuCore or Device or PatientEuCore or RelatedPerson or  OrganizationEuCore)
+* performer.onBehalfOf only Reference(OrganizationEuCore)
 * reasonCode ^short = "Why the procedure was performed (code)"
 * reasonReference ^short = "Why the procedure was performed (details)"
 * outcome ^short = "Outcome of the procedure"

@@ -7,7 +7,7 @@ Description: "This profile represents the constraints applied to the DeviceUseSt
 
 * insert ImposeProfile ( $DeviceUseStatement-uv-ips, 0 )  // Check if this is appropriate (see  support)
 * text ^short = "Device usage description"
-* subject only Reference(PatientEuHdr)
+* subject only Reference(PatientEuCore)
 * subject ^definition = "The patient using the device."
 * subject.reference 1.. 
 * timing[x] 1..1 

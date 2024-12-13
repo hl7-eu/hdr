@@ -14,4 +14,4 @@ Description: "This profile constrains the Flag resource to represent alerts or w
 * extension[flagPriorityExt]
 * status ^short = "Alert status"
 * code ^short = "Coded or textual message to display to user."
-* subject only Reference(PatientEuHdr)
+* subject only Reference(PatientEuCore)

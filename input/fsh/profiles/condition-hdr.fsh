@@ -58,7 +58,7 @@ Description: """This profile represents the constraint applied to the Condition 
   * ^definition = "The verification status to support the clinical status of the condition."
 
 
-* subject only Reference(PatientEuHdr)
+* subject only Reference(PatientEuCore)
 * subject.reference 1..
 
 * onset[x] only dateTime or Age or Period or Range or string

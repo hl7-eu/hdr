@@ -22,7 +22,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
   * ^short = "Specific type of service." // voc binding needs to be descissed as it is only example
 * priority from AdmissionUrgencyHdrVS (preferred)
   * ^short = "Encounter priority" // add voc binding
-* subject only Reference (PatientEuHdr)
+* subject only Reference (PatientEuCore)
 * subject 1..
   * ^short = "The patient present at the encounter"
 * basedOn ^short = "The request for which this encounter has been made"
@@ -35,7 +35,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 
 * participant
   * individual 0..1
-  * individual only Reference (PractitionerEu or PractitionerRoleEu or RelatedPerson)
+  * individual only Reference (PractitionerEuCore or PractitionerRoleEuCore or RelatedPerson)
 
 * participant
   * ^short = "List of participants involved in the encounters"
@@ -70,11 +70,11 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 * hospitalization
   * admitSource ^short = "From where patient was admitted (physician referral, transfer)."
   * dischargeDisposition ^short = "Category or kind of location after discharge"
-  * destination only Reference (OrganizationEu or LocationEuHdr)
+  * destination only Reference (OrganizationEuCore or LocationEuHdr)
   // add voc binding
 
 * location ^short = "Locations where the patient stayed"
   * location only Reference ( LocationEuHdr )
   * period ^short = "Location period"
 
-* serviceProvider only Reference ( OrganizationEu )
+* serviceProvider only Reference ( OrganizationEuCore )

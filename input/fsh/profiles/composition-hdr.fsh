@@ -24,7 +24,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient]
-* extension[information-recipient].valueReference only Reference( PractitionerRoleEu or PractitionerEu or Device or PatientEuHdr or RelatedPerson or  OrganizationEu)
+* extension[information-recipient].valueReference only Reference( PractitionerRoleEuCore or PractitionerEuCore or Device or PatientEuCore or RelatedPerson or  OrganizationEuCore)
 
 /* GC TO DO
 - check if we need a R5 composition.status
@@ -38,7 +38,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * type ^short = "Kind of composition (\"Hospital Discharge Report\")"
 * type ^definition = "Specifies that this composition refer to a Hospital Discharge Report"
 * type = $loinc#34105-7 "Hospital Discharge summary"
-* subject only Reference(PatientEuHdr)
+* subject only Reference(PatientEuCore)
 * subject 1..1
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the hdr the subject is always the patient."
 
@@ -49,7 +49,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * date ^short = "HDR date"
 * author ^short = "Who and/or what authored the Hospital Discharge Report"
 * author ^definition = "Identifies who is responsible for the information in the Hospital Discharge Report, not necessarily who typed it in."
-* author only Reference( PractitionerEu or PractitionerRoleEu or Device or Patient or RelatedPerson or Organization)
+* author only Reference( PractitionerEuCore or PractitionerRoleEuCore or Device or Patient or RelatedPerson or Organization)
 
 
 * title ^short = "Hospital Discharge Report"
@@ -618,7 +618,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
     Plan of Care Section,
     The plan of care section contains a narrative description of the expectations for care including proposals\, goals\, and order requests for monitoring\, tracking\, or improving the condition of the patient.,
     $loinc#18776-5 )   // Plan of care note
-  * entry only Reference( CarePlan or DocumentReference) // Check profiles
+  * entry only Reference( CarePlanEpsEu or DocumentReference) // Check profiles
 
 // -------------------------------------
 // Discharge Medications Section 0 … 1

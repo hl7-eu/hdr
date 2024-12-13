@@ -56,7 +56,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     flag 0..*
 
 * entry[composition].resource only CompositionEuHdr
-* entry[patient].resource only PatientEuHdr // EU ?
+* entry[patient].resource only PatientEuCore // EU ?
 * entry[allergyIntolerance].resource only AllergyIntoleranceEpsEu
 * entry[condition].resource only ConditionEuHdr
 * entry[device].resource only DeviceEuHdr
@@ -71,10 +71,10 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[medicationStatement].resource only $MedicationStatement-uv-ips
 * entry[medicationAdministration].resource only MedicationAdministration
 * entry[medicationDispense].resource only MedicationDispense
-* entry[practitioner].resource only PractitionerEu
-* entry[practitionerRole].resource only PractitionerRoleEu
+* entry[practitioner].resource only PractitionerEuCore
+* entry[practitionerRole].resource only PractitionerRoleEuCore
 * entry[procedure].resource only ProcedureEuHdr
-* entry[organization].resource only OrganizationEu
+* entry[organization].resource only OrganizationEuCore
 * entry[observation].resource only Observation // $Observation-results-uv-ips
 * entry[specimen].resource only $Specimen-uv-ips
 * entry[flag].resource only Flag

@@ -29,5 +29,5 @@ Description: "This profile represents the constraints applied to the Device reso
 * type ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * type ^binding.description = "The type of device or a code for absent/unknown device"
 * patient 1.. 
-* patient only Reference(PatientEuHdr)
+* patient only Reference(PatientEuCore)
 * patient.reference 1.. 

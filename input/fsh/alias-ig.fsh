@@ -6,9 +6,14 @@ Alias: $server = http://hl7.eu/fhir/laboratory/actor-repos-eu-lab
 Alias: $creator = http://hl7.eu/fhir/laboratory/actor-creator-eu-lab
 Alias: $consumer = http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab
 
-// --- EU Base profiles
+// -- EU BASE
 Alias: $Address-eu = http://hl7.eu/fhir/base/StructureDefinition/Address-eu
 Alias: $HumanName-eu = http://hl7.eu/fhir/base/StructureDefinition/HumanName-eu
+Alias: $patient-eu-core = http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core
+Alias: $patient-eu = http://hl7.eu/fhir/base/StructureDefinition/patient-eu
+Alias: $practitioner-eu-core = http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu-core
+Alias: $practitioner-eu = http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu
+Alias: $practitionerRole-eu = http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu
 
 
 // --- EU Lab Profiles
