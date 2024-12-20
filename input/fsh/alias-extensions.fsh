@@ -50,6 +50,7 @@ Alias: $specimen-feature-type-r5 = http://hl7.org/fhir/5.0/StructureDefinition/e
 Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo
 
 
+
 Alias: $ihe-ext-medication-device = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-device
 Alias: $ihe-ext-medication-strengthsubstance = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-strengthsubstance
 Alias: $ihe-ext-medication-strengthtype = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-strengthtype

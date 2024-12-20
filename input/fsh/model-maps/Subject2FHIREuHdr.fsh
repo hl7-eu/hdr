@@ -8,76 +8,7 @@ Usage: #definition
 * experimental = true
 * description = """eHN HDR Subject Model to this guide mapping"""
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Subject"
-* group[=].target = "http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu"
-* group[=].element[+].code = #subjectContact.preferredHP
-* group[=].element[=].display = "A.1.2.2 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."
-* group[=].element[=].target.code = #Practictioner
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #subjectContact.preferredHP.identifier
-* group[=].element[=].display = "A.1.2.2.1 - Identifier of the HP"
-* group[=].element[=].target.code = #Practictioner.identifier
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #subjectContact.preferredHP.name
-* group[=].element[=].display = "A.1.2.2.2 - Name of the HP"
-* group[=].element[=].target.code = #Practictioner.name					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #subjectContact.preferredHP.address
-* group[=].element[=].display = "A.1.2.2.5 - Address"
-* group[=].element[=].target.code = #Practictioner.address
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #subjectContact.preferredHP.telecom
-* group[=].element[=].display = "A.1.2.2.6 - Telecom"
-* group[=].element[=].target.code = #Practictioner.telecom
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Subject"
-* group[=].target = "http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu"
-* group[=].element[+].code = #subjectContact.preferredHP
-* group[=].element[=].display = "A.1.2.2 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."
-* group[=].element[=].target.code = #PractictionerRole
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "preferred"
-* group[=].element[+].code = #subjectContact.preferredHP.identifier
-* group[=].element[=].display = "A.1.2.2.1 - Identifier of the HP"
-* group[=].element[=].target.code = #PractictionerRole.identifier
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "preferred"
-* group[=].element[+].code = #subjectContact.preferredHP.name
-* group[=].element[=].display = "A.1.2.2.2 - Name of the HP"
-* group[=].element[=].target.code = #PractictionerRole.practictioner.name					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "preferred"
-* group[=].element[+].code = #subjectContact.preferredHP.role
-* group[=].element[=].display = "A.1.2.2.3 - Role of the HP"
-* group[=].element[=].target.code = #PractictionerRole.code					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #subjectContact.preferredHP.organization
-* group[=].element[=].display = "A.1.2.2.4 - HP Organisation"
-* group[=].element[=].target.code = #PractictionerRole.organization					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #subjectContact.preferredHP.address
-* group[=].element[=].display = "A.1.2.2.5 - Address"
-* group[=].element[=].target.code = #PractictionerRole.address
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "preferred"
-* group[=].element[+].code = #subjectContact.preferredHP.telecom
-* group[=].element[=].display = "A.1.2.2.6 - Telecom"
-* group[=].element[=].target.code = #PractictionerRole.telecom
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "preferred"
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Subject"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/patient-eu-hdr"
+* group[=].target = "http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core"
 * group[=].element[+].code = #subjectIdentification
 * group[=].element[=].display = "A.1.1 - Identification of the patient/subject"
 * group[=].element[=].target.code = #Patient
@@ -185,3 +116,72 @@ Usage: #definition
 * group[=].element[=].target.code = #Patient.contact					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Subject"
+* group[=].target = "http://hl7.eu/fhir/core/StructureDefinition/practitioner-eu-core"
+* group[=].element[+].code = #subjectContact.preferredHP
+* group[=].element[=].display = "A.1.2.2 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."
+* group[=].element[=].target.code = #Practictioner
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #subjectContact.preferredHP.identifier
+* group[=].element[=].display = "A.1.2.2.1 - Identifier of the HP"
+* group[=].element[=].target.code = #Practictioner.identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #subjectContact.preferredHP.name
+* group[=].element[=].display = "A.1.2.2.2 - Name of the HP"
+* group[=].element[=].target.code = #Practictioner.name					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #subjectContact.preferredHP.address
+* group[=].element[=].display = "A.1.2.2.5 - Address"
+* group[=].element[=].target.code = #Practictioner.address
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #subjectContact.preferredHP.telecom
+* group[=].element[=].display = "A.1.2.2.6 - Telecom"
+* group[=].element[=].target.code = #Practictioner.telecom
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Subject"
+* group[=].target = "http://hl7.eu/fhir/core/StructureDefinition/practitionerRole-eu-core"
+* group[=].element[+].code = #subjectContact.preferredHP
+* group[=].element[=].display = "A.1.2.2 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."
+* group[=].element[=].target.code = #PractictionerRole
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "preferred"
+* group[=].element[+].code = #subjectContact.preferredHP.identifier
+* group[=].element[=].display = "A.1.2.2.1 - Identifier of the HP"
+* group[=].element[=].target.code = #PractictionerRole.identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "preferred"
+* group[=].element[+].code = #subjectContact.preferredHP.name
+* group[=].element[=].display = "A.1.2.2.2 - Name of the HP"
+* group[=].element[=].target.code = #PractictionerRole.practictioner.name					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "preferred"
+* group[=].element[+].code = #subjectContact.preferredHP.role
+* group[=].element[=].display = "A.1.2.2.3 - Role of the HP"
+* group[=].element[=].target.code = #PractictionerRole.code					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #subjectContact.preferredHP.organization
+* group[=].element[=].display = "A.1.2.2.4 - HP Organisation"
+* group[=].element[=].target.code = #PractictionerRole.organization					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #subjectContact.preferredHP.address
+* group[=].element[=].display = "A.1.2.2.5 - Address"
+* group[=].element[=].target.code = #PractictionerRole.address
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "preferred"
+* group[=].element[+].code = #subjectContact.preferredHP.telecom
+* group[=].element[=].display = "A.1.2.2.6 - Telecom"
+* group[=].element[=].target.code = #PractictionerRole.telecom
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "preferred"

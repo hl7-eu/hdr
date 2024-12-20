@@ -59,6 +59,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * attester.party ^short = "Who attested the composition."
 
 * section 1..
+  // add invariant or text or section
 
 * insert SectionSliceComRules (Sections composing the Hospital Discharge Report,
         The root of the sections that make up the Hospital Discharge Report composition.)
@@ -406,7 +407,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
       The Immunizations Section defines a patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nThe section includes current immunization status\, and may contain the entire immunization history that is relevant to the period of time being summarized.
       , $loinc#11369-6 "History of Immunization Narrative")   // CODE
   * entry 1..
-  * entry only Reference(Immunization
+  * entry only Reference(ImmunizationEuHdr  or ImmunizationRecommendationEuHdr
                           or DocumentReference  )
   * insert SectionEntrySliceComRules ( Patient's immunization status and pertinent history.
     , It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\n It may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. ) //'
@@ -414,14 +415,14 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 
   // entry slices
   * insert SectionEntrySliceDefRules (immunization, 0.. , Immunization entry ,
-    Immunization entry  , $Immunization-uv-ips)
+    Immunization entry  , ImmunizationEuHdr)
 
-/*
+
 // -------------------------------------
 // Family History Section 0 … 1
 // -------------------------------------
-* section contains familyHistorySection ..1
-* section[familyHistorySection]
+* section contains sectionFamilyHistory ..1
+* section[sectionFamilyHistory]
   * insert SectionComRules (
     Family History Section,
       This section contains data defining the patient’s genetic relatives in terms of possible or relevant health risk factors that have a potential impact on the patient’s healthcare risk profile.
@@ -430,26 +431,6 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * entry only Reference(FamilyMemberHistory)
   * entry ^short = "Family History"
   * entry ^definition = "Family History"
-*/
-/* * section[familyHistorySection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[familyHistorySection] ^extension[0].valueString = "Section"
-* section[familyHistorySection] ^short = "Family History Section"
-* section[familyHistorySection] ^definition = "This section contains data defining the patient’s genetic relatives in terms of possible or relevant health risk factors that have a potential impact on the patient’s healthcare risk profile."
-* section[familyHistorySection].title 1..
-* section[familyHistorySection].code 1..
-* section[familyHistorySection].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[familyHistorySection].code = http://loinc.org#10157-6 (exactly)
-* section[familyHistorySection].text 1..
-* section[familyHistorySection].text only Narrative
-* section[familyHistorySection].entry 0..
-* section[familyHistorySection].entry only Reference(FamilyMemberHistory)
-* section[familyHistorySection].entry ^short = "Family History"
-* section[familyHistorySection].entry ^definition = "Family History"
-* section[familyHistorySection].emptyReason ..0
-* section[familyHistorySection].emptyReason ^mustSupport = false
-*/
-
-/*
 
 
 // -------------------------------------
@@ -500,14 +481,26 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 * section[sectionPregnancyHx].emptyReason ^mustSupport = false
 */
 
-/*
+
 // -------------------------------------
 // Social History Section
 // -------------------------------------
 * section contains sectionSocialHistory ..1
+* section[sectionSocialHistory]
+  * insert SectionComRules (
+    Social History Section,
+    The social history section contains a description of the person Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits., 
+    $loinc#29762-2  )   // CODE
+
+// \’s Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
+
+  * entry 0..
+  * entry only Reference(Observation or DocumentReference)    // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips)
+
+/* 
 * section[sectionSocialHistory] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionSocialHistory] ^extension[0].valueString = "Section"
-* section[sectionSocialHistory] ^short = "HDR Social History Section"
+* section[sectionSocialHistory] ^short = "Social History Section"
 * section[sectionSocialHistory] ^definition = "The social history section contains a description of the person’s Health related “lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)"
 * section[sectionSocialHistory].title 1..
 * section[sectionSocialHistory].code 1..
@@ -517,10 +510,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 * section[sectionSocialHistory].entry
 * section[sectionSocialHistory].entry only Reference(Observation or DocumentReference or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips)
 * section[sectionSocialHistory].entry ^short = "Health related \"lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)"
-* section[sectionSocialHistory].entry ^definition = "Description of the person’s Health related “lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)"
-* section[sectionSocialHistory].emptyReason ..0
-* section[sectionSocialHistory].emptyReason ^mustSupport = false
-*/
+* section[sectionSocialHistory].entry ^definition = "Description of the person’s Health related “lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)" */
 
 
 // OR THIS ONE ???
@@ -669,7 +659,6 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 
 // -------------------------------------
 * section contains sectionAdvanceDirectives ..1
-
 * section[sectionAdvanceDirectives]
   * insert SectionComRules (
     Advance Directives Section,
@@ -677,6 +666,13 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
     $loinc#42348-3 )  // 	Advance directives
   * entry only Reference(Consent or DocumentReference) // ==> Add Profile
 
+
+* section contains sectionTravelHx ..1
+* section[sectionTravelHx]
+  * insert SectionComRules ( 
+        Travel History Section, 
+        This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
+        $loinc#10182-4 )
 
 // -------------------------------------
 // Health Insurance (Coverage) and payment section
@@ -687,7 +683,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * insert SectionComRules (
       Health insurance and payment information section.,
       Health insurance information is not always required\, however\, in some jurisdictions\, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.,
-      $loinc#48768-6 "Payment sources Document" ) 
+      $loinc#48768-6  ) // "Payment sources Document"
   * ^short = "Health insurance and payment information."
   * ^definition = "This section includes heath insurance and payment information."
   * entry only Reference(Coverage) // ==> Add Profile
@@ -714,14 +710,35 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 
 
 * section contains sectionEncounters ..1
-* section[sectionEncounters] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* section[sectionEncounters]
+  * insert SectionComRules (
+      Encounters sections,
+      This section lists and describes any healthcare encounters pertinent to the patient’s current health status or historical health history.  ,
+      $loinc#46240-8 )  
+  * ^short = "Encounters sections"
+  * ^definition = "This section lists documents and attachments associated to this report"
+
+// An encounter is an interaction\, regardless of the setting\, between a patient and a practitioner who is vested with primary responsibility for diagnosing\, evaluating\, or treating the patient\’s condition. It may include visits\, appointments\, or non-face-to-face interactions. It is also a contact between a patient and a practitioner who has primary responsibility - exercising independent judgment - for assessing and treating the patient at a given contact. From C-CDA specifications.,
+
+
+
+
+/* * section[sectionEncounters] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * section[sectionEncounters] ^extension[0].valueString = "Section"
 * section[sectionEncounters] ^short = "Encounters sections"
 * section[sectionEncounters] ^definition = "This section lists and describes any healthcare encounters pertinent to the patient’s current health status or historical health history. An encounter is an interaction, regardless of the setting, between a patient and a practitioner who is vested with primary responsibility for diagnosing, evaluating, or treating the patient’s condition. It may include visits, appointments, or non-face-to-face interactions. It is also a contact between a patient and a practitioner who has primary responsibility (exercising independent judgment) for assessing and treating the patient at a given contact.“ (from C-CDA specifications)."
 * section[sectionEncounters].title 1..
 * section[sectionEncounters].code 1..
-* section[sectionEncounters].code = http://loinc.org#46240-8 (exactly)
-* section[sectionEncounters].text 1..
+* section[sectionEncounters].code = http://loinc.org#46240-8 (exactly) */
+
+
+
+
+/* * section contains sectionTravelHx ..1
+* section[sectionTravelHx]
+  * insert SectionComRules ( Travel History Section, 
+        This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
+        $loinc#10182-4 ) */
 
 
 // -------------------------------------

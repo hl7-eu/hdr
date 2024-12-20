@@ -20,7 +20,21 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
-* group[=].target = "http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu"
+* group[=].target = "http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core"
+* group[=].element[+].code = #Header.subject
+* group[=].element[=].display = "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"
+* group[=].element[=].target.code = #Patient
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "Composition.subject.ofType(Patient).conformsTo('http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core')"
+* group[=].element[+].code = #Header.payer.insuranceNumber
+* group[=].element[=].display = "A.1.3.3 - Health insurance number"
+* group[=].element[=].target.code = #Patient.identifier
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "If treated as one of the Patient identifiers; this applies in some jurisdictions."
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
+* group[=].target = "http://hl7.eu/fhir/core/StructureDefinition/practitionerRole-eu-core"
 * group[=].element[+].code = #Header.informationRecipient.identifier
 * group[=].element[=].display = "A.1.4.1 - Recipient identifier"
 * group[=].element[=].target.code = #PractitionerRole.identifier
@@ -266,20 +280,6 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "As business version, not as resource version"
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/patient-eu-hdr"
-* group[=].element[+].code = #Header.subject
-* group[=].element[=].display = "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"
-* group[=].element[=].target.code = #Patient
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "Composition.subject.ofType(Patient).conformsTo('http://hl7.eu/fhir/hdr/StructureDefinition/patient-eu-hdr')"
-* group[=].element[+].code = #Header.payer.insuranceNumber
-* group[=].element[=].display = "A.1.3.3 - Health insurance number"
-* group[=].element[=].target.code = #Patient.identifier
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "If treated as one of the Patient identifiers; this applies in some jurisdictions."
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Header"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/Coverage"
 * group[=].element[+].code = #Header.payer.insuranceCode

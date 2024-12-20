@@ -47,6 +47,9 @@
 <artifact id="ValueSet/hdr-encounterClass-eu-hdr" key="ValueSet-hdr-encounterClass-eu-hdr" name="Encounter Class Value Set"/>
 <artifact id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
 <artifact id="StructureDefinition/flag-eu-eps" key="StructureDefinition-flag-eu-eps" name="Flag (EU PS)"/>
+<artifact id="StructureDefinition/immunization-eu-hdr" key="StructureDefinition-immunization-eu-hdr" name="Immunization (HDR)"/>
+<artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
+<artifact id="StructureDefinition/immunizationRecommendation-eu-hdr" key="StructureDefinition-immunizationRecommendation-eu-hdr" name="ImmunizationRecommendation (EU PS)"/>
 <artifact id="ValueSet/encounter-status-eu-hdr" key="ValueSet-encounter-status-eu-hdr" name="In-patient Encounter Type Value Set"/>
 <artifact id="ValueSet/hdr-encounter-type-eu-hdr" key="ValueSet-hdr-encounter-type-eu-hdr" name="In-patient Encounter Type Value Set"/>
 <artifact id="StructureDefinition/location-eu-hdr" key="StructureDefinition-location-eu-hdr" name="Location (HDR)"/>

@@ -40,7 +40,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "Encounter.location.location.managingOrganization; to be checked"
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/InPatientEncounter"
-* group[=].target = "http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu"
+* group[=].target = "http://hl7.eu/fhir/core/StructureDefinition/practitioner-eu-core"
 * group[=].element[+].code = #Encounter.admission.admitter.identifier
 * group[=].element[=].display = "A.2.3.3.3 - Admitting professional ID"
 * group[=].element[=].target.code = #Practitioner.identifier
@@ -68,7 +68,7 @@ Encounter.participant.individual.ofType(PractitionerRole).practitioner"
 * group[=].element[=].target.comment = "Encounter.participant.individual.ofType(Practitioner) or
 Encounter.participant.individual.ofType(PractitionerRole).practitioner"
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/InPatientEncounter"
-* group[=].target = "http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu"
+* group[=].target = "http://hl7.eu/fhir/core/StructureDefinition/practitionerRole-eu-core"
 * group[=].element[+].code = #Encounter.admission.admitter.identifier
 * group[=].element[=].display = "A.2.3.3.3 - Admitting professional ID"
 * group[=].element[=].target.code = #PractitionerRole.identifier

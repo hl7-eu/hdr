@@ -32,6 +32,7 @@ RuleSet: SectionComRules (short, def, code)
 * code = {code}
 * text 1..
 * text only Narrative
+* section.section ..0
 /* * emptyReason ..0
 * emptyReason ^mustSupport = false */
 
