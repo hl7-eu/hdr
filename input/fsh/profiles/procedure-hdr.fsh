@@ -20,18 +20,10 @@ Description: "This profile represents the constraints applied to the Procedure r
 * code ^binding.extension[0].extension[0].url = "purpose"
 * code ^binding.extension[=].extension[=].valueCode = #candidate
 * code ^binding.extension[=].extension[+].url = "valueSet"
-* code ^binding.extension[=].extension[=].valueCanonical = "http://hl7.eu/fhir/ig/xpandh/hdr/ValueSet/procedure-snomed-eu-hdr"
+* code ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips"
 * code ^binding.extension[=].extension[+].url = "documentation"
-* code ^binding.extension[=].extension[=].valueMarkdown = "Codes for procedures in SNOMED CT Xpandh valueset"
+* code ^binding.extension[=].extension[=].valueMarkdown = "Codes for procedures in IPS"
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-* code ^binding.extension[+].extension[0].url = "purpose"
-* code ^binding.extension[=].extension[=].valueCode = #candidate
-* code ^binding.extension[=].extension[+].url = "valueSet"
-* code ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-procedures-uv-ips"
-* code ^binding.extension[=].extension[+].url = "documentation"
-* code ^binding.extension[=].extension[=].valueMarkdown = "Codes for absent or unknown procedures"
-* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
-* code ^binding.description = "SNOMED CT procedure code set or a code for absent/unknown procedure"
 * subject only Reference(PatientEuCore)
 * subject.reference 1..
 * performed[x] 1..1

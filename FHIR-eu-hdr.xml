@@ -84,6 +84,7 @@
 <artifact id="ConceptMap/hdr2FHIR-eu-hdr" key="ConceptMap-hdr2FHIR-eu-hdr" name="eHN HDR Model to this guide Map"/>
 <artifact id="ConceptMap/hdrHeader2FHIR-eu-hdr" key="ConceptMap-hdrHeader2FHIR-eu-hdr" name="eHN Header Model to this guide Map"/>
 <artifact id="ConceptMap/hospitalStay2FHIR-eu-hdr" key="ConceptMap-hospitalStay2FHIR-eu-hdr" name="eHN Hospital Stay Model to this guide Map"/>
+<artifact id="ConceptMap/patientHistory2FHIR-eu-hdr" key="ConceptMap-patientHistory2FHIR-eu-hdr" name="eHN Hospital Stay Model to this guide Map"/>
 <artifact id="ConceptMap/medicationSummary2FHIR-eu-hdr" key="ConceptMap-medicationSummary2FHIR-eu-hdr" name="eHN Medication Summary Model to this guide Map"/>
 <artifact id="ConceptMap/planOfCare2FHIR-eu-hdr" key="ConceptMap-planOfCare2FHIR-eu-hdr" name="eHN Plan of Care Model to this guide Map"/>
 <artifact id="ConceptMap/subject2FHIR-eu-hdr" key="ConceptMap-subject2FHIR-eu-hdr" name="eHN Subject Model to this guide Map"/>

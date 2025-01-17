@@ -208,7 +208,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     $loinc#10185-7) // Hospital discharge procedures
     // $sct#721981007)
   * entry 1..
-  * entry only Reference(Procedure)
+  * entry only Reference(ProcedureEuHdr)
   * section ..0
 
 * section contains sectionMedicalDevices 0..1

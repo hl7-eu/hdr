@@ -15,6 +15,12 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Details in the Composition.section:sectionDiagnosticSummary.entry of type Condition. See dedicated group"
+* group[=].element[+].code = #HospitalStay.diagnosticSummary.resolution
+* group[=].element[=].display = "A.2.7.1.8 - Resolution circumstances"
+* group[=].element[=].target.code = #Composition.section:sectionDiagnosticSummary.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "to be mapped"
 * group[=].element[+].code = #HospitalStay.significantProcedures
 * group[=].element[=].display = "A.2.7.2 - Significant procedures"
 * group[=].element[=].target.code = #Composition.section:sectionSignificantProcedures
@@ -50,12 +56,12 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #HospitalStay.synthesis.description
 * group[=].element[=].display = "A.2.7.7.1 - Problem synthesis"
-* group[=].element[=].target.code = #Composition.section:sectionSynthesis
+* group[=].element[=].target.code = #Composition.section:sectionSynthesis.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #HospitalStay.synthesis.reasoning
 * group[=].element[=].display = "A.2.7.7.2 - Clinical reasoning"
-* group[=].element[=].target.code = #Composition.section:sectionSynthesis
+* group[=].element[=].target.code = #Composition.section:sectionSynthesis.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalStay"
@@ -82,33 +88,27 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equal
 * group[=].element[+].code = #HospitalStay.diagnosticSummary.category
 * group[=].element[=].display = "A.2.7.1.5 - Category"
-* group[=].element[=].target.code = #Composition.category:poa
+* group[=].element[=].target.code = #Condition.category:poa
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #HospitalStay.diagnosticSummary.treatmentClass
 * group[=].element[=].display = "A.2.7.1.6 - Treatment class"
-* group[=].element[=].target.code = #Composition.category:treated
+* group[=].element[=].target.code = #Condition.category:treated
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #HospitalStay.diagnosticSummary.clinicalStatus
 * group[=].element[=].display = "A.2.7.1.7 - Clinical status"
-* group[=].element[=].target.code = #Composition.clinicalStatus
+* group[=].element[=].target.code = #Condition.clinicalStatus
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #HospitalStay.diagnosticSummary.resolution
-* group[=].element[=].display = "A.2.7.1.8 - Resolution circumstances"
-* group[=].element[=].target.code = #Composition
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
 * group[=].element[+].code = #HospitalStay.diagnosticSummary.severity
 * group[=].element[=].display = "A.2.7.1.9 - Severity"
-* group[=].element[=].target.code = #Composition.severity
+* group[=].element[=].target.code = #Condition.severity
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #HospitalStay.diagnosticSummary.stage
 * group[=].element[=].display = "A.2.7.1.10 - Stage"
-* group[=].element[=].target.code = #Composition.stage
+* group[=].element[=].target.code = #Condition.stage
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalStay"
