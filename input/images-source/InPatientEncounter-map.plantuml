@@ -18,15 +18,15 @@ Concept Map
 endnote
 class "organization-eu" <<Profile>> [[StructureDefinition-organization-eu.html]]
 "InPatientEncounter" <|. "organization-eu"
-class "practitioner-eu" <<Profile>> [[StructureDefinition-practitioner-eu.html]]
-"InPatientEncounter" <|. "practitioner-eu"
-"organization-eu" -d[hidden]-> "practitioner-eu"
-class "practitionerRole-eu" <<Profile>> [[StructureDefinition-practitionerRole-eu.html]]
-"InPatientEncounter" <|. "practitionerRole-eu"
-"practitioner-eu" -d[hidden]-> "practitionerRole-eu"
+class "practitioner-eu-core" <<Profile>> [[StructureDefinition-practitioner-eu-core.html]]
+"InPatientEncounter" <|. "practitioner-eu-core"
+"organization-eu" -d[hidden]-> "practitioner-eu-core"
+class "practitionerRole-eu-core" <<Profile>> [[StructureDefinition-practitionerRole-eu-core.html]]
+"InPatientEncounter" <|. "practitionerRole-eu-core"
+"practitioner-eu-core" -d[hidden]-> "practitionerRole-eu-core"
 class "encounter-eu-hdr" <<Profile>> [[StructureDefinition-encounter-eu-hdr.html]]
 "InPatientEncounter" <|. "encounter-eu-hdr"
-"practitionerRole-eu" -d[hidden]-> "encounter-eu-hdr"
+"practitionerRole-eu-core" -d[hidden]-> "encounter-eu-hdr"
 class "location-eu-hdr" <<Profile>> [[StructureDefinition-location-eu-hdr.html]]
 "InPatientEncounter" <|. "location-eu-hdr"
 "encounter-eu-hdr" -d[hidden]-> "location-eu-hdr"

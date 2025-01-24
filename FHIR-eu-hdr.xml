@@ -62,6 +62,7 @@
 <artifact id="ValueSet/mcode-observation-codes-distant-metastases-vs" key="ValueSet-mcode-observation-codes-distant-metastases-vs" name="Observation Codes for Distant Metastases Category"/>
 <artifact id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Observation Codes for Primary Tumor Category"/>
 <artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Observation Codes for Regional Node Category"/>
+<artifact id="StructureDefinition/observation-sdoh-eu-hdr" key="StructureDefinition-observation-sdoh-eu-hdr" name="Observation: SDOH (EU HDR))"/>
 <artifact id="ValueSet/TNM-M-pathologycal-category-vs" key="ValueSet-TNM-M-pathologycal-category-vs" name="Pathological M"/>
 <artifact id="ValueSet/TNM-N-pathological-category-vs" key="ValueSet-TNM-N-pathological-category-vs" name="Pathological N"/>
 <artifact id="CodeSystem/poa-indicator-eu-hdr" key="CodeSystem-poa-indicator-eu-hdr" name="Present on Admission (POA) Indicator"/>
@@ -69,6 +70,7 @@
 <artifact id="StructureDefinition/procedure-eu-hdr" key="StructureDefinition-procedure-eu-hdr" name="Procedure (HDR)"/>
 <artifact id="ValueSet/procedure-snomed-eu-hdr" key="ValueSet-procedure-snomed-eu-hdr" name="Procedure codes: Snomed CT"/>
 <artifact id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
+<artifact id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
 <artifact id="ValueSet/skinfold-thickness-units-vs" key="ValueSet-skinfold-thickness-units-vs" name="Skinfold Thickness Units Value Set"/>
 <artifact id="ValueSet/skinfold-thickness-vs" key="ValueSet-skinfold-thickness-vs" name="Skinfold Thickness Value Set"/>
 <artifact id="ValueSet/TNM-M-category-vs" key="ValueSet-TNM-M-category-vs" name="TNM M Category"/>

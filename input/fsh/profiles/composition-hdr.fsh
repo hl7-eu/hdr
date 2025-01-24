@@ -495,7 +495,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 // \’s Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
 
   * entry 0..
-  * entry only Reference(Observation or DocumentReference)    // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips)
+  * entry only Reference(Observation or DocumentReference or ObservationSdohEuHdr or QuestionnaireResponse) // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips
 
 /* 
 * section[sectionSocialHistory] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
