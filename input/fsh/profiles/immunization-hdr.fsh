@@ -97,7 +97,7 @@ Description: """This profile constrains the Immunization resource for the purpos
 Profile:  ImmunizationRecommendationEuHdr
 Parent:   ImmunizationRecommendation
 Id:       immunizationRecommendation-eu-hdr
-Title:    "ImmunizationRecommendation (EU PS)"
+Title:    "ImmunizationRecommendation (EU HDR)"
 Description: """This profile defines how to represent Immunization Recommandations for the purpose of this guide."""
 //-------------------------------------------------------------------------------------------
 
@@ -131,13 +131,3 @@ Description: """This profile defines how to represent Immunization Recommandatio
 * recommendation.seriesDosesPositiveInt ^short = "Number of doses"
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-/* Profile:  LocationEuHdr
-Parent:   Location
-Id:       Location-eu-hdr
-Title:    "Location (EU PS)"
-Description: """This profile defines how to represent Location in FHIR for the purpose of this guide."""
-
-//-------------------------------------------------------------------------------------------
-* address.country 1..1 */

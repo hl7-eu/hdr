@@ -1,8 +1,8 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  FlagEpsEu
+Profile:  FlagEuHdr
 Parent:   Flag
-Id:       flag-eu-eps
-Title:    "Flag (EU PS)"
+Id:       flag-eu-hdr
+Title:    "Flag (EU HDR)"
 Description: "This profile constrains the Flag resource to represent alerts or warnings in FHIR for the purpose of this project."
 //-------------------------------------------------------------------------------------------
 

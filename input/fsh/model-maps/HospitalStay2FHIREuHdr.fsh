@@ -15,12 +15,6 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "Details in the Composition.section:sectionDiagnosticSummary.entry of type Condition. See dedicated group"
-* group[=].element[+].code = #HospitalStay.diagnosticSummary.resolution
-* group[=].element[=].display = "A.2.7.1.8 - Resolution circumstances"
-* group[=].element[=].target.code = #Composition.section:sectionDiagnosticSummary.text
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
 * group[=].element[+].code = #HospitalStay.significantProcedures
 * group[=].element[=].display = "A.2.7.2 - Significant procedures"
 * group[=].element[=].target.code = #Composition.section:sectionSignificantProcedures
@@ -101,6 +95,12 @@ Usage: #definition
 * group[=].element[=].target.code = #Condition.clinicalStatus
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #HospitalStay.diagnosticSummary.resolution
+* group[=].element[=].display = "A.2.7.1.8 - Resolution circumstances"
+* group[=].element[=].target.code = #Condition.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "The resolution circumstances may be described as resource or composiiton.section text ; or indirectly determined by the resource (e.g. Procedure) that has been perfomed in reason of this Condition no more active"
 * group[=].element[+].code = #HospitalStay.diagnosticSummary.severity
 * group[=].element[=].display = "A.2.7.1.9 - Severity"
 * group[=].element[=].target.code = #Condition.severity

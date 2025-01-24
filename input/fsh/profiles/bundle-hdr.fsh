@@ -57,7 +57,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 
 * entry[composition].resource only CompositionEuHdr
 * entry[patient].resource only PatientEuCore // EU ?
-* entry[allergyIntolerance].resource only AllergyIntoleranceEpsEu
+* entry[allergyIntolerance].resource only AllergyIntoleranceEuHdr
 * entry[condition].resource only ConditionEuHdr
 * entry[device].resource only DeviceEuHdr
 * entry[deviceUseStatement].resource only DeviceUseStatementEuHdr

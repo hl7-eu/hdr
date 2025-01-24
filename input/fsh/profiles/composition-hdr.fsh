@@ -158,12 +158,12 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
       This section documents the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\nIf no information about allergies is available\, or if no allergies are known this should be clearly documented in the section.,
       $loinc#48765-2 )   // CODE
   * entry 1..
-  * entry only Reference(AllergyIntoleranceEpsEu or DocumentReference )
+  * entry only Reference(AllergyIntoleranceEuHdr or DocumentReference )
   * insert SectionEntrySliceComRules(Relevant allergies or intolerances (conditions\) for that patient.,
     It lists the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available\, or that no allergies are known .)
   // entry slices
   * insert SectionEntrySliceDefRules (allergyIntolerance, 0.. , Allergy entry,
-    Allergy entry, AllergyIntoleranceEpsEu)
+    Allergy entry, AllergyIntoleranceEuHdr)
 
 
 // -------------------------------------
@@ -428,7 +428,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
       This section contains data defining the patient’s genetic relatives in terms of possible or relevant health risk factors that have a potential impact on the patient’s healthcare risk profile.
       ,  http://loinc.org#10157-6  )   // CODE
   * entry 0..
-  * entry only Reference(FamilyMemberHistory)
+  * entry only Reference(FamilyMemberHistoryEuHdr or DocumentReference  )
   * entry ^short = "Family History"
   * entry ^definition = "Family History"
 

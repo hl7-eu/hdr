@@ -24,10 +24,10 @@ Usage: #definition
 * group[=].element[=].target.comment = "several sections"
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfConditions
 * group[=].element[=].display = "A.2.6.1.1 - History of problems"
-* group[=].element[=].target.code = #section:sectionDiagnosticSummary
+* group[=].element[=].target.code = #Composiiton.section:sectionDiagnosticSummary
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "The same section usd by the hospital stay ?"
+* group[=].element[=].target.comment = "The same section used by the hospital stay ?"
 * group[=].element[+].code = #PatientHistory.medicalHistory.medicalDevices
 * group[=].element[=].display = "A.2.6.1.2 - Devices and Implants"
 * group[=].element[=].target.code = #Composition.section:sectionMedicalDevices
@@ -106,7 +106,7 @@ Usage: #definition
 * group[=].element[=].target.comment = "To be specified"
 * group[=].element[+].code = #PatientHistory.familyHistory
 * group[=].element[=].display = "A.2.6.2 - Family history"
-* group[=].element[=].target.code = #Composition.section:sectionFamilyHistory
+* group[=].element[=].target.code = #Composition.section:sectionFamilyMemberHistory
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #PatientHistory.socialDeterminants
@@ -275,15 +275,15 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfConditions.resolution
 * group[=].element[=].display = "A.2.6.1.1.6 - Resolution circumstances"
-* group[=].element[=].target.code = #Composition
+* group[=].element[=].target.code = #Condition.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be mapped"
+* group[=].element[=].target.comment = "The resolution circumstances may be described as resource or composiiton.section text ; or indirectly determined by the resource (e.g. Procedure) that has been perfomed in reason of this Condition no more active"
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfConditions.severity
 * group[=].element[=].display = "A.2.6.1.1.7 - Severity"
 * group[=].element[=].target.code = #Composition.severity
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #PatientHistory.medicalHistory.historyOfConditions.stage
 * group[=].element[=].display = "A.2.6.1.1.8 - Stage"
 * group[=].element[=].target.code = #Composition.stage
@@ -403,34 +403,30 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistoryEhn"
-* group[=].target = "http://hl7.org/fhir/StructureDefinition/FamilyHistory"
+* group[=].target = "http://hl7.org/fhir/StructureDefinition/familyMemberHistory-eu-hdr"
 * group[=].element[+].code = #PatientHistory.familyHistory.relationship
 * group[=].element[=].display = "A.2.6.2.1 - Patient relationship"
-* group[=].element[=].target.code = #FamilyHistory
+* group[=].element[=].target.code = #FamilyMemberHistory.relationship
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "To be specified"
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PatientHistory.familyHistory.birthDate
 * group[=].element[=].display = "A.2.6.2.2 - Date of birth"
-* group[=].element[=].target.code = #FamilyHistory
+* group[=].element[=].target.code = #FamilyMemberHistory.bornDate
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "To be specified"
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PatientHistory.familyHistory.deathDateOrAge
 * group[=].element[=].display = "A.2.6.2.3 - Age or date of death"
-* group[=].element[=].target.code = #FamilyHistory
+* group[=].element[=].target.code = #FamilyMemberHistory.deceased[x]
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "To be specified"
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PatientHistory.familyHistory.conditions
 * group[=].element[=].display = "A.2.6.2.5 - Condition"
-* group[=].element[=].target.code = #FamilyHistory
+* group[=].element[=].target.code = #FamilyMemberHistory.condition.code
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "To be specified"
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #PatientHistory.familyHistory.causeOfDeath
 * group[=].element[=].display = "A.2.6.2.6 - Cause of death"
-* group[=].element[=].target.code = #FamilyHistory
+* group[=].element[=].target.code = #FamilyMemberHistory.condition.code
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "To be specified"
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[=].target.comment = "If FamilyMemberHistory.condition.contributedToDeath is true"

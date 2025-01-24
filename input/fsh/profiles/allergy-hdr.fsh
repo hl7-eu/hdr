@@ -1,9 +1,9 @@
-Profile: AllergyIntoleranceEpsEu
+Profile: AllergyIntoleranceEuHdr
 Parent: AllergyIntolerance
-Id: allergyIntolerance-eu-eps
-Title:    "Allergy Intolerance (EU PS)"
-Description: """This profile constrains the AllergyIntolerance resource for the purpose of the European patient summary."""
-* ^purpose = "This profile constrains the AllergyIntolerance resource for the purpose of the European patient summary."
+Id: allergyIntolerance-eu-hdr
+Title:    "Allergy Intolerance (EU HDR)"
+Description: """This profile constrains the AllergyIntolerance resource for the purpose of this project."""
+* ^purpose = "This profile constrains the AllergyIntolerance resource for the purpose of project."
 
 * insert SetFmmandStatusRule (1, draft)
 * insert ImposeProfile($AllergyIntolerance-uv-ips, 0)
@@ -20,7 +20,7 @@ Description: """This profile constrains the AllergyIntolerance resource for the 
 * type ^short = "Type of propensity"
 * code 1..1
 * code only CodeableConceptIPS
-* code ^short = "Add Voc binding"
+* code from $allergy-intolerance-uv-ips (preferred)
 /* * code from EHDSIAllergyCode (preferred) */
 * code ^binding.extension[0].extension[0].url = "purpose"
 * code ^binding.extension[=].extension[=].valueCode = #candidate
@@ -36,12 +36,11 @@ Description: """This profile constrains the AllergyIntolerance resource for the 
 * patient.reference 1..
 * patient only Reference(PatientEuCore)
 
-// * onset[x] only dateTime // is this needed ?
 * onsetDateTime ^short = "Onset date"
 
 /* * reaction.substance from EHDSIAllergens  (preferred) */
 
 /* * reaction.manifestation from EHDSIReactionAllergy (preferred) */
 
-* reaction.manifestation ^short = "Add Voc binding" 
-* reaction.severity ^short = "Severity"
+* reaction.manifestation from $allergy-reaction-uv-ips (preferred)
+* reaction.severity ^short = "Reaction severity"
