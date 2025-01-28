@@ -667,6 +667,19 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * entry only Reference(Consent or DocumentReference) // ==> Add Profile
 
 
+* section contains infectiousContacts ..1
+* section[infectiousContacts]
+  * insert SectionComRules (
+    Infectious contacts,
+    Infectious contacts of the patient,
+    $sct#444071008 ) //"Exposure to organism (event\)"
+  * entry 0..*
+  * entry only Reference(ObservationInfectiousContactEuHdr)
+    * ^short = "Exposure to an infectious agent."
+    * ^definition = "Information about a suspected infectious agent or agents the person was exposed to."
+  * section ..0
+
+
 * section contains sectionTravelHx ..1
 * section[sectionTravelHx]
   * insert SectionComRules ( 
