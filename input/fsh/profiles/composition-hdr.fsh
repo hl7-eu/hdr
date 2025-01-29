@@ -497,20 +497,17 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * entry 0..
   * entry only Reference(Observation or DocumentReference or ObservationSdohEuHdr or QuestionnaireResponse) // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips
 
-/* 
-* section[sectionSocialHistory] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionSocialHistory] ^extension[0].valueString = "Section"
-* section[sectionSocialHistory] ^short = "Social History Section"
-* section[sectionSocialHistory] ^definition = "The social history section contains a description of the person’s Health related “lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)"
-* section[sectionSocialHistory].title 1..
-* section[sectionSocialHistory].code 1..
-* section[sectionSocialHistory].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[sectionSocialHistory].code = http://loinc.org#29762-2 (exactly)
-* section[sectionSocialHistory].text 1..
-* section[sectionSocialHistory].entry
-* section[sectionSocialHistory].entry only Reference(Observation or DocumentReference or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips)
-* section[sectionSocialHistory].entry ^short = "Health related \"lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)"
-* section[sectionSocialHistory].entry ^definition = "Description of the person’s Health related “lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets, risky habits.)" */
+// -------------------------------------
+// Use of substances Section
+// -------------------------------------
+* section contains sectionSubstanceUse ..1
+* section[sectionSubstanceUse]
+  * insert SectionComRules (
+    Use of Substances Section,
+    The Use of Substances Section contains a description of the use abuse of substances E.g. tobacco; alcohol; drugs,  
+    TemporaryHDRSystem#substance-use  )   // CODE
+  * entry 0..
+  * entry only Reference(Observation ) // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips
 
 
 // OR THIS ONE ???
