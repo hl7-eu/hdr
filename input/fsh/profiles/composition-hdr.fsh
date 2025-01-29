@@ -672,7 +672,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * insert SectionComRules (
     Infectious contacts,
     Infectious contacts of the patient,
-    $sct#444071008 ) //"Exposure to organism (event\)"
+     TemporaryHDRSystem#infection-contact ) // $sct#444071008"Exposure to organism (event\)"
   * entry 0..*
   * entry only Reference(ObservationInfectiousContactEuHdr)
     * ^short = "Exposure to an infectious agent."
@@ -722,6 +722,8 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 // -------------------------------------
 
 
+/* 
+
 * section contains sectionEncounters ..1
 * section[sectionEncounters]
   * insert SectionComRules (
@@ -729,7 +731,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
       This section lists and describes any healthcare encounters pertinent to the patient’s current health status or historical health history.  ,
       $loinc#46240-8 )  
   * ^short = "Encounters sections"
-  * ^definition = "This section lists documents and attachments associated to this report"
+  * ^definition = "This section lists documents and attachments associated to this report" */
 
 // An encounter is an interaction\, regardless of the setting\, between a patient and a practitioner who is vested with primary responsibility for diagnosing\, evaluating\, or treating the patient\’s condition. It may include visits\, appointments\, or non-face-to-face interactions. It is also a contact between a patient and a practitioner who has primary responsibility - exercising independent judgment - for assessing and treating the patient at a given contact. From C-CDA specifications.,
 
