@@ -683,6 +683,9 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
         Travel History Section, 
         This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
         $loinc#10182-4 )
+  * entry 0..*
+  * entry only Reference(ObservationTravelEuHdr)
+        
 
 // -------------------------------------
 // Health Insurance (Coverage) and payment section
