@@ -14,7 +14,7 @@ Description: "This profile represents the constraints applied to the DeviceUseSt
 * timing[x].extension contains $data-absent-reason named data-absent-reason 0..1 
 * timing[x].extension[data-absent-reason] ^definition = "Provides a reason why the timing is missing."
 * reasonCode ^short = "Why is used (code)"
-* reasonReference only Reference ( ConditionEuHdr or Observation or ProcedureEuHdr or DiagnosticReport or DocumentReference)
+* reasonReference only Reference ( ConditionEuHdr or Observation or Media or  DiagnosticReport or DocumentReference)
   * ^short = "Why is used (details)"
 * device only Reference(DeviceEuHdr)
 * bodySite only CodeableConceptIPS
