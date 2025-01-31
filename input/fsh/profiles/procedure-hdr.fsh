@@ -16,14 +16,14 @@ Description: "This profile represents the constraints applied to the Procedure r
 * code 1.. 
   * ^binding.description = "Codes describing the type of  Procedure"
   * ^definition = "Identification of the procedure or recording of \"absence of relevant procedures\" or of \"procedures unknown\"."
-* code from ProceduresSnomedAbsentUnknownHdrVS (preferred)
-* code ^binding.extension[0].extension[0].url = "purpose"
+* code from $procedures-uv-ips // ProceduresSnomedAbsentUnknownHdrVS (preferred)
+/* * code ^binding.extension[0].extension[0].url = "purpose"
 * code ^binding.extension[=].extension[=].valueCode = #candidate
 * code ^binding.extension[=].extension[+].url = "valueSet"
 * code ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips"
 * code ^binding.extension[=].extension[+].url = "documentation"
 * code ^binding.extension[=].extension[=].valueMarkdown = "Codes for procedures in IPS"
-* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding" */
 * subject only Reference(PatientEuCore)
 * subject.reference 1..
 * performed[x] 1..1
@@ -38,7 +38,7 @@ Description: "This profile represents the constraints applied to the Procedure r
 * complication ^short = "Complications that occurred during the procedure (code)"
 * complicationDetail ^short = "Complications that occurred during the procedure (details)"
 * focalDevice ^short = "Device implanted, removed or otherwise manipulated"
-* focalDevice.manipulated only Reference ( DeviceEuHdr)
+* focalDevice.manipulated only Reference ( DeviceEuHdr )
 * bodySite only CodeableConceptIPS
 * bodySite from SNOMEDCTBodyStructures (preferred)
 * bodySite
