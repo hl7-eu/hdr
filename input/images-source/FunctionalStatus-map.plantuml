@@ -1,0 +1,27 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "FunctionalStatus" <<LogicalModel>> [[StructureDefinition-FunctionalStatus.html]]
+note top #PaleTurquoise [[ConceptMap-functionalStatus2FHIR-eu-hdr.html]]
+Concept Map
+endnote
+class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
+"FunctionalStatus" <|. "composition-eu-hdr"
+class "ClinicalImpression" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/ClinicalImpression]]
+"FunctionalStatus" <|. "ClinicalImpression"
+"composition-eu-hdr" -d[hidden]-> "ClinicalImpression"
+class "Condition" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Condition]]
+"FunctionalStatus" <|. "Condition"
+"ClinicalImpression" -d[hidden]-> "Condition"
+@enduml

@@ -144,7 +144,7 @@ Usage: #definition
 * group[=].element[=].target.code = #DeviceUseStatement.timing[x]
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "If the usage period is highlighted"
+* group[=].element[=].target.comment = "If it refer to the usage period"
 * group[=].element[+].code = #HospitalStay.medicalDevices.endDate
 * group[=].element[=].display = "A.2.7.3.4 - End date"
 * group[=].element[=].target.code = #DeviceUseStatement.timingPeriod.end
@@ -232,7 +232,7 @@ Usage: #definition
 * group[=].element[=].display = "A.2.7.2.1 - Procedure code"
 * group[=].element[=].target.code = #Procedure.code
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #HospitalStay.significantProcedures.description
 * group[=].element[=].display = "A.2.7.2.2 - Procedure description"
 * group[=].element[=].target.code = #Procedure.text
@@ -253,7 +253,7 @@ Usage: #definition
 * group[=].element[=].display = "A.2.7.2.4 - Procedure date"
 * group[=].element[=].target.code = #Procedure.perfomedDateTime	
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #HospitalStay.significantProcedures.reason
 * group[=].element[=].display = "A.2.7.2.5 - Procedure reason"
 * group[=].element[=].target.code = #Procedure.reasonCode	
@@ -273,12 +273,12 @@ Usage: #definition
 * group[=].element[=].display = "A.2.7.2.7 - Complication"
 * group[=].element[=].target.code = #Procedure.complication	
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #HospitalStay.significantProcedures.complication
 * group[=].element[=].display = "A.2.7.2.7 - Complication"
 * group[=].element[=].target.code = #Procedure.complicationDetail	
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #HospitalStay.significantProcedures.focalDevice
 * group[=].element[=].display = "A.2.7.2.8 - Focal device"
 * group[=].element[=].target.code = #Procedure.focalDevice	
@@ -289,7 +289,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Procedure.perfomed[x]
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "if the implantation procedure is described"
+* group[=].element[=].target.comment = "if the implantation procedure date is recorded"
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/HospitalStay"
 * group[=].target = "http://hl7.eu/fhir/laboratory/StructureDefinition/Observation-resultslab-eu-lab"
 * group[=].element[+].code = #HospitalStay.significantResults.date

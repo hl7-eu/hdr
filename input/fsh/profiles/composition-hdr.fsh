@@ -571,31 +571,6 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 
 // -------------------------------------
 
-
-/*
-// -------------------------------------
-// Discharge Diagnosis Section 0 … 1 R
-// -------------------------------------
-
-* section contains dischargeDiagnosisSection ..1
-* section[dischargeDiagnosisSection] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[dischargeDiagnosisSection] ^extension[0].valueString = "Section"
-* section[dischargeDiagnosisSection] ^short = "Discharge Diagnosis Section"
-* section[dischargeDiagnosisSection] ^definition = "The discharge diagnosis section shall contain a narrative description of the conditions that need to be monitored after discharge from the hospital and those that were resolved during the hospital course. It shall include entries for patient conditions as described in the Entry Content Module."
-* section[dischargeDiagnosisSection].title 1..
-* section[dischargeDiagnosisSection].code 1..
-* section[dischargeDiagnosisSection].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[dischargeDiagnosisSection].code = http://loinc.org#11535-2 (exactly)
-* section[dischargeDiagnosisSection].text 1..
-* section[dischargeDiagnosisSection].text only Narrative
-* section[dischargeDiagnosisSection].entry 0..
-* section[dischargeDiagnosisSection].entry only Reference(Condition) // define specialized profiles
-* section[dischargeDiagnosisSection].entry ^short = "Discharge Diagnosis"
-* section[dischargeDiagnosisSection].entry ^definition = "Discharge Diagnosis"
-* section[dischargeDiagnosisSection].emptyReason ..0
-* section[dischargeDiagnosisSection].emptyReason ^mustSupport = false
-*/
-
 // -------------------------------------
 // Plan of Care Section
 // -------------------------------------

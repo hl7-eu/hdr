@@ -65,7 +65,7 @@
 <artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Observation Codes for Regional Node Category"/>
 <artifact id="StructureDefinition/observation-infectious-contact-eu-hdr" key="StructureDefinition-observation-infectious-contact-eu-hdr" name="Observation: Infectious Contact (HDR))"/>
 <artifact id="StructureDefinition/observation-sdoh-eu-hdr" key="StructureDefinition-observation-sdoh-eu-hdr" name="Observation: SDOH (EU HDR))"/>
-<artifact id="StructureDefinition/observation-travel-eu-hdr" key="StructureDefinition-observation-travel-eu-hdr" name="Observation: travel history (HDR)"/>
+<artifact id="StructureDefinition/observation-travel-eu-hdr" key="StructureDefinition-observation-travel-eu-hdr" name="Observation: country visited (HDR)"/>
 <artifact id="ValueSet/TNM-M-pathologycal-category-vs" key="ValueSet-TNM-M-pathologycal-category-vs" name="Pathological M"/>
 <artifact id="ValueSet/TNM-N-pathological-category-vs" key="ValueSet-TNM-N-pathological-category-vs" name="Pathological N"/>
 <artifact id="CodeSystem/poa-indicator-eu-hdr" key="CodeSystem-poa-indicator-eu-hdr" name="Present on Admission (POA) Indicator"/>
@@ -85,23 +85,28 @@
 <artifact id="CodeSystem/assessment-category-eu-hdr" key="CodeSystem-assessment-category-eu-hdr" name="Xpandh Assessment Category"/>
 <artifact id="ValueSet/assessment-observation-category-vs" key="ValueSet-assessment-observation-category-vs" name="Xpandh Assessment Observation Category"/>
 <artifact id="ValueSet/functional-assessment-scales-vs" key="ValueSet-functional-assessment-scales-vs" name="Xpandh Functional Assessment Scales"/>
+<artifact id="ConceptMap/admissionEvaluation2FHIR-eu-hdr" key="ConceptMap-admissionEvaluation2FHIR-eu-hdr" name="eHN Admission Evaluation Model to this guide Map"/>
 <artifact id="ConceptMap/advanceDirectives2FHIR-eu-hdr" key="ConceptMap-advanceDirectives2FHIR-eu-hdr" name="eHN Advance Directives Model to this guide Map"/>
 <artifact id="ConceptMap/alerts2FHIR-eu-hdr" key="ConceptMap-alerts2FHIR-eu-hdr" name="eHN Alerts Model to this guide Map"/>
 <artifact id="ConceptMap/encounter2FHIR-eu-hdr" key="ConceptMap-encounter2FHIR-eu-hdr" name="eHN Encounter Model to this guide Map"/>
+<artifact id="ConceptMap/functionalStatus2FHIR-eu-hdr" key="ConceptMap-functionalStatus2FHIR-eu-hdr" name="eHN Functional Status Model to this guide Map"/>
 <artifact id="ConceptMap/hdr2FHIR-eu-hdr" key="ConceptMap-hdr2FHIR-eu-hdr" name="eHN HDR Model to this guide Map"/>
 <artifact id="ConceptMap/hdrHeader2FHIR-eu-hdr" key="ConceptMap-hdrHeader2FHIR-eu-hdr" name="eHN Header Model to this guide Map"/>
 <artifact id="ConceptMap/hospitalStay2FHIR-eu-hdr" key="ConceptMap-hospitalStay2FHIR-eu-hdr" name="eHN Hospital Stay Model to this guide Map"/>
 <artifact id="ConceptMap/patientHistory2FHIR-eu-hdr" key="ConceptMap-patientHistory2FHIR-eu-hdr" name="eHN Hospital Stay Model to this guide Map"/>
 <artifact id="ConceptMap/medicationSummary2FHIR-eu-hdr" key="ConceptMap-medicationSummary2FHIR-eu-hdr" name="eHN Medication Summary Model to this guide Map"/>
+<artifact id="ConceptMap/objectiveFindings2FHIR-eu-hdr" key="ConceptMap-objectiveFindings2FHIR-eu-hdr" name="eHN Objective Findings Model to this guide Map"/>
 <artifact id="ConceptMap/planOfCare2FHIR-eu-hdr" key="ConceptMap-planOfCare2FHIR-eu-hdr" name="eHN Plan of Care Model to this guide Map"/>
 <artifact id="ConceptMap/subject2FHIR-eu-hdr" key="ConceptMap-subject2FHIR-eu-hdr" name="eHN Subject Model to this guide Map"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
+<page key="AdmissionEvaluation-map" name="AdmissionEvaluation Relationships"/>
 <page key="AdvanceDirectives-map" name="AdvanceDirectives Relationships"/>
 <page key="Alerts-map" name="Alerts Relationships"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="contributors" name="Authors and contributors"/>
 <page key="downloads" name="Downloads"/>
+<page key="FunctionalStatus-map" name="FunctionalStatus Relationships"/>
 <page key="Header-map" name="Header Relationships"/>
 <page key="index" name="Home"/>
 <page key="hdr-mindmap" name="Hospital Discharge Report"/>
@@ -110,7 +115,9 @@
 <page key="InPatientEncounter-map" name="InPatientEncounter Relationships"/>
 <page key="knownIssues" name="Known Issues"/>
 <page key="MedicationSummary-map" name="MedicationSummary Relationships"/>
+<page key="ObjectiveFindings-map" name="ObjectiveFindings Relationships"/>
 <page key="obligations" name="Obligations"/>
+<page key="PatientHistoryEhn-map" name="PatientHistoryEhn Relationships"/>
 <page key="PlanOfCare-map" name="PlanOfCare Relationships"/>
 <page key="Subject-map" name="Subject Relationships"/>
 <page key="toc" name="Table of Contents"/>

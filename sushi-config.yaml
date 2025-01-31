@@ -70,9 +70,17 @@ pages:
   Subject-map.html:
     title: Subject Relationships
   InPatientEncounter-map.html:
-    title: InPatientEncounter Relationships
+    title: InPatientEncounter Relationships  
+  AdmissionEvaluation-map.html:
+    title: AdmissionEvaluation Relationships
+  ObjectiveFindings-map.html:
+    title: ObjectiveFindings Relationships
+  FunctionalStatus-map.html:
+    title: FunctionalStatus Relationships
   HospitalStay-map.html:
     title: HospitalStay Relationships
+  PatientHistoryEhn-map.html:
+    title: PatientHistoryEhn Relationships
   Alerts-map.html:
     title: Alerts Relationships
   AdvanceDirectives-map.html:
@@ -81,6 +89,7 @@ pages:
     title: PlanOfCare Relationships
   MedicationSummary-map.html:
     title: MedicationSummary Relationships   
+
 
 # === MAP ====
 
@@ -166,13 +175,16 @@ menu:
     HospitalDischargeReport: HospitalDischargeReport-map.html
     Header: Header-map.html
     Subject: Subject-map.html
-    HospitalStay: HospitalStay-map.html
     InPatientEncounter: InPatientEncounter-map.html
+    AdmissionEvaluation: AdmissionEvaluation-map.html
+    ObjectiveFindings: ObjectiveFindings-map.html
+    FunctionalStatus: FunctionalStatus-map.html
+    PatientHistoryEhn: PatientHistoryEhn-map.html
+    HospitalStay: HospitalStay-map.html
     Alerts: Alerts-map.html
     AdvanceDirectives: AdvanceDirectives-map.html
     MedicationSummary: MedicationSummary-map.html
-    PlanOfCare: PlanOfCare-map.html  
-
+    PlanOfCare: PlanOfCare-map.html
   Artifacts: artifacts.html
   About:
     Downloads: downloads.html
