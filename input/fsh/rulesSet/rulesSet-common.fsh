@@ -32,7 +32,7 @@ RuleSet: SectionComRules (short, def, code)
 * code = {code}
 * text 1..
 * text only Narrative
-* section.section ..0
+// * section.section ..0
 /* * emptyReason ..0
 * emptyReason ^mustSupport = false */
 
@@ -67,7 +67,7 @@ RuleSet: SectionEntrySliceComRules (short, def)
 RuleSet: SectionEntrySliceDefRules (name, card, short, def, profiles)
 // SectionEntrySliceDefRules (flags, 0.., "Care Team", "Care Team", CareTeamEu)
 
-* entry contains {name} 0..1
+* entry contains {name} 0..*
 * entry[{name}] {card}
 * entry[{name}] ^short = "{short}"
 * entry[{name}] ^definition = "{def}"
