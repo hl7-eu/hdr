@@ -33,7 +33,8 @@ Description: "This profile represents the constraints applied to the Procedure r
 * performer.actor only Reference(PractitionerRoleEuCore or PractitionerEuCore or Device or PatientEuCore or RelatedPerson or  OrganizationEuCore)
 * performer.onBehalfOf only Reference(OrganizationEuCore)
 * reasonCode ^short = "Why the procedure was performed (code)"
-* reasonReference ^short = "Why the procedure was performed (details)"
+* reasonReference only Reference ( ConditionEuHdr or Observation or ProcedureEuHdr or DiagnosticReport or DocumentReference)
+  * ^short = "Why the procedure was performed (details)"
 * outcome ^short = "Outcome of the procedure"
 * complication ^short = "Complications that occurred during the procedure (code)"
 * complicationDetail ^short = "Complications that occurred during the procedure (details)"
