@@ -9,7 +9,7 @@
 
 ### Scope
 
-Specify a set of rules to be applied to HL7 FHIR to define how to represent a **Hospital Discahrge Report** in the **European** Context, coherently with the European eHN Guidelines (see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) ).
+Specify a set of rules to be applied to HL7 FHIR to define how to represent a **Hospital Discharge Report** in the **European** Context, coherently with the European eHN Guidelines (see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) ).
 
 Its main goal is to define the content components and a preferable structure to be used for composing an Hospital Discharge Report. 
 
@@ -18,7 +18,7 @@ This includes both jurisdictional and cross border scenarios.
 This guide doesn't describe how this report is exchanged.
 
 ### Purpose
-The goal of this Implementation Guide is to define an European standard for the Hospital Discahrge Report to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (E-EHRxF).
+The goal of this Implementation Guide is to define an European standard for the Hospital Discharge Report to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (E-EHRxF).
 
 This project is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and projects.
 
