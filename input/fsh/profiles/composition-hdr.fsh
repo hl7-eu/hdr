@@ -207,7 +207,7 @@ Medicinal products\, the administration of which was started during hospitalisat
 $loinc#10160-0 ) // 	History of Medication use Narrative
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
   * entry 1..
-  * entry only Reference(MedicationStatement or MedicationRequestEuHdr or MedicationDispense or MedicationAdministration)
+  * entry only Reference(MedicationStatementEuHdr or MedicationRequestEuHdr or MedicationDispenseEuHdr or MedicationAdministrationEuHdr)
 
 // -------------------------------------
 * section contains sectionSignificantResults 0..1
@@ -239,7 +239,48 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
     $loinc#51848-0 ) // Evaluation note 
  
 
+// -------------------------------------
+// === SHould we add a plan of care container section 
+// -------------------------------------
+
+
+// -------------------------------------
+// Plan of Care Section
+// -------------------------------------
+* section contains sectionPlanOfCare ..1
+* section[sectionPlanOfCare]
+  * insert SectionComRules (
+    Plan of Care Section,
+    The plan of care section contains a narrative description of the expectations for care including proposals\, goals\, and order requests for monitoring\, tracking\, or improving the condition of the patient.,
+    $loinc#18776-5 )   // Plan of care note
+  * entry only Reference( CarePlanEpsEu or DocumentReference) // Check profiles
+
+// -------------------------------------
+// Discharge Medications Section 0 … 1
+// -------------------------------------
+* section contains sectionDischargeMedications ..1
+
+* section[sectionDischargeMedications]
+
+  * insert SectionComRules (
+    Hospital discharge medications,
+    Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge, 
+    $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital discharge medications Narrative" or 	Discharge medications Narrative
+  * entry 1..
+  * entry only Reference(MedicationRequestEuHdr or MedicationDispenseEuHdr)
+
  
+// -------------------------------------
+// Discharge instructions Section 0 … 1
+// -------------------------------------
+* section contains sectionDischargeInstructions ..1
+
+* section[sectionDischargeInstructions]
+  * insert SectionComRules (
+    Hospital Discharge Instructions,
+    Hospital Discharge Instructions,
+    $loinc#8653-8 )   //  Hospital Discharge instructions
+
 // -------------------------------------
 // Health Concern 0 .. 1
 // -------------------------------------
@@ -384,18 +425,21 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
   * entry 1..
   * entry only Reference(ImmunizationEuHdr  or ImmunizationRecommendationEuHdr
                           or DocumentReference  )
+  
+  /*
   * insert SectionEntrySliceComRules ( Patient's immunization status and pertinent history.
-    , It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\n It may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. ) //'
-/* // entry slices
+    , It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\n It may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. )
+ // entry slices
   * insert SectionEntrySliceDefRules (immunization, 0.. , Immunization entry ,
     Immunization entry  , ImmunizationEuHdr) */
 
 // -------------------------------------
 // Epidemiological history realized with these two sections
+// should we merge them in a singol one ?
 // -------------------------------------
 
-* section contains infectiousContacts ..1
-* section[infectiousContacts]
+* section contains sectionInfectiousContacts ..1
+* section[sectionInfectiousContacts]
   * insert SectionComRules (
     Infectious contacts,
     Infectious contacts of the patient,
@@ -445,7 +489,14 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 // \’s Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
 
   * entry 0..
-  * entry only Reference(Observation or DocumentReference or ObservationSdohEuHdr or QuestionnaireResponse) // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips
+  * entry only Reference(Observation or DocumentReference or QuestionnaireResponse) 
+
+  * insert SectionEntrySliceComRules ( Information about social determinants of health.
+    , Information about social determinants of health. )
+ // entry slices
+  * insert SectionEntrySliceDefRules (sdoh, 0.. , SDOH entry ,
+    Social determinants of health entry , ObservationSdohEuHdr)
+
 
 // -------------------------------------
 // Use of substances Section
@@ -527,48 +578,9 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
 // --- Functional status assessment see above
 
 
-// -------------------------------------
-// Discharge Instructions Section 0 … 1
-// -------------------------------------
-* section contains sectionDischargeInstructions ..1
-
-* section[sectionDischargeInstructions]
-  * insert SectionComRules (
-    Hospital Discharge instructions,
-    Hospital Discharge instructions,
-    $loinc#8653-8 )   //  Hospital Discharge instructions
 
 
 
-// -------------------------------------
-// === SHould we add a plan of care container section 
-// -------------------------------------
-
-
-// -------------------------------------
-// Plan of Care Section
-// -------------------------------------
-* section contains sectionPlanOfCare ..1
-* section[sectionPlanOfCare]
-  * insert SectionComRules (
-    Plan of Care Section,
-    The plan of care section contains a narrative description of the expectations for care including proposals\, goals\, and order requests for monitoring\, tracking\, or improving the condition of the patient.,
-    $loinc#18776-5 )   // Plan of care note
-  * entry only Reference( CarePlanEpsEu or DocumentReference) // Check profiles
-
-// -------------------------------------
-// Discharge Medications Section 0 … 1
-// -------------------------------------
-* section contains sectionDischargeMedications ..1
-
-* section[sectionDischargeMedications]
-
-  * insert SectionComRules (
-    Hospital discharge medications,
-    Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge, 
-    $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital discharge medications Narrative" or 	Discharge medications Narrative
-  * entry 1..
-  * entry only Reference(MedicationRequestEuHdr or MedicationDispense)
 
 
 // -------------------------------------
@@ -616,32 +628,6 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
       $loinc#46240-8 )  
   * ^short = "Encounters sections"
   * ^definition = "This section lists documents and attachments associated to this report" */
-
-// An encounter is an interaction\, regardless of the setting\, between a patient and a practitioner who is vested with primary responsibility for diagnosing\, evaluating\, or treating the patient\’s condition. It may include visits\, appointments\, or non-face-to-face interactions. It is also a contact between a patient and a practitioner who has primary responsibility - exercising independent judgment - for assessing and treating the patient at a given contact. From C-CDA specifications.,
-
-
-
-
-/* * section[sectionEncounters] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionEncounters] ^extension[0].valueString = "Section"
-* section[sectionEncounters] ^short = "Encounters sections"
-* section[sectionEncounters] ^definition = "This section lists and describes any healthcare encounters pertinent to the patient’s current health status or historical health history. An encounter is an interaction, regardless of the setting, between a patient and a practitioner who is vested with primary responsibility for diagnosing, evaluating, or treating the patient’s condition. It may include visits, appointments, or non-face-to-face interactions. It is also a contact between a patient and a practitioner who has primary responsibility (exercising independent judgment) for assessing and treating the patient at a given contact.“ (from C-CDA specifications)."
-* section[sectionEncounters].title 1..
-* section[sectionEncounters].code 1..
-* section[sectionEncounters].code = http://loinc.org#46240-8 (exactly) */
-
-
-
-
-/* * section contains sectionTravelHx ..1
-* section[sectionTravelHx]
-  * insert SectionComRules ( Travel History Section, 
-        This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
-        $loinc#10182-4 ) */
-
-
-// -------------------------------------
-
 
 
 /*
@@ -695,26 +681,6 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
                           This section records the patient's chief complaint (the patient’s own description\) and/or the reason for the patient's visit (the provider’s description of the reason for visit\). Local policy determines whether the information is divided into two sections or recorded in one section serving both purposes.,
                              http://loinc.org#46239-0  )
 */
-
-
-/* * section[sectionProblems] ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-* section[sectionProblems] ^extension[0].valueString = "Section"
-* section[sectionProblems] ^short = "Problems Section"
-* section[sectionProblems] ^definition = "The problem section lists and describes clinical problems or conditions currently being monitored for the patient."
-* section[sectionProblems].title 1..
-* section[sectionProblems].code 1..
-* section[sectionProblems].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[sectionProblems].code = http://loinc.org#11450-4 (exactly)
-* section[sectionProblems].text 1..
-* section[sectionProblems].text only Narrative
-* section[sectionProblems].entry 1.. */
-
-/* * section[sectionProblems].entry only Reference($Condition-uv-ips)
-* section[sectionProblems].entry ^short = "Clinical problems or conditions currently being monitored for the patient."
-* section[sectionProblems].entry ^definition = "It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available, or that no relevant problems are known."
-* section[sectionProblems].emptyReason ..0
-* section[sectionProblems].emptyReason ^mustSupport = false */
-
 
 
 /// ========= INVARIANTS =========

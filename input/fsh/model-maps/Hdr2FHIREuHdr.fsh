@@ -33,14 +33,13 @@ Usage: #definition
 * group[=].element[=].display = "A.2.1 - Advance directives"
 * group[=].element[=].target.code = #Composition.section:sectionAdvanceDirectives
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "TO BE REVIEWED"
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #HospitalDischargeReport.body.alerts
 * group[=].element[=].display = "A.2.2 - Alerts"
-* group[=].element[=].target.code = #Composition.section:sectionAlert
+* group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "See the Alerts model and map for details"
+* group[=].element[=].target.comment = "Covered by more sections. See the Alerts model and map for details"
 * group[=].element[+].code = #HospitalDischargeReport.body.encounter
 * group[=].element[=].display = "A.2.3 - Encounter"
 * group[=].element[=].target.code = #Composition.encounter
@@ -49,53 +48,58 @@ Usage: #definition
 * group[=].element[=].target.comment = "See the InPatientEncounter model and map for details"
 * group[=].element[+].code = #HospitalDischargeReport.body.admissionEvaluation
 * group[=].element[=].display = "A.2.4 - Admission evaluation"
-* group[=].element[=].target.code = #Composition.section:sectionAdmissionEvaluation
+* group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "TO BE REVIEWED"
+* group[=].element[=].target.comment = "Covered by more sections. See the Admission Evaluation model and map for details"
 * group[=].element[+].code = #HospitalDischargeReport.body.patientHistory
 * group[=].element[=].display = "A.2.5 - Patient history"
-* group[=].element[=].target.code = #Composition.section:sectionPatientHx
+* group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "TO BE REVIEWED"
+* group[=].element[=].target.comment = "Covered by more sections. See the Patient History model and map for details"
 * group[=].element[+].code = #HospitalDischargeReport.body.hospitalStay
 * group[=].element[=].display = "A.2.6 - Course of hospitalisation (Hospital stay)"
-* group[=].element[=].target.code = #Composition.section:sectionHospitalCourse
+* group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "TO BE REVIEWED"
+* group[=].element[=].target.comment = "Covered by more sections. See the Hospital Course model and map for details"
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails
 * group[=].element[=].display = "A.2.7 - Discharge details"
-* group[=].element[=].target.code = #Composition.section:sectionDischargeDetails
+* group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "TO BE REVIEWED"
+* group[=].element[=].target.comment = "Covered by more sections. See the below for details"
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.objectiveFindings
 * group[=].element[=].display = "A.2.7.1 - Objective findings"
 * group[=].element[=].target.code = #Composition.section:sectionDischargeDetails
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "If not structured in sections (TBC)"
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.objectiveFindings
 * group[=].element[=].display = "A.2.7.1 - Objective findings"
 * group[=].element[=].target.code = #Composition.section:sectionDischargeFindings
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "TBC"
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.functionalStatus
 * group[=].element[=].display = "A.2.7.2 - Functional status"
 * group[=].element[=].target.code = #Composition.section:sectionDischargeDetails
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "If not structured in sections (TBC)"
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.functionalStatus
 * group[=].element[=].display = "A.2.7.2 - Functional status"
 * group[=].element[=].target.code = #Composition.section:sectionFunctionalStatus
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "Is the same section of the Admission Evaluation ? TBC"
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.dischargeNote
 * group[=].element[=].display = "A.2.7.3 - Discharge note"
 * group[=].element[=].target.code = #Composition.section:sectionDischargeDetails.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "TBC"
 * group[=].element[+].code = #HospitalDischargeReport.body.recommendations
 * group[=].element[=].display = "A.2.8 - Care plan and other recommendations after discharge."
 * group[=].element[=].target.code = #Composition.section

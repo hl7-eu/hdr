@@ -43,14 +43,14 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     medication 0..* and
     medicationRequest 0..* and
     medicationStatement 0..* and
+    medicationDispense 0..* and
+    medicationAdministration  0..* and
     practitioner 0..* and
     practitionerRole 0..* and
     procedure 0..* and
     organization 0..* and
     observation 0..* and
     specimen 0..* and
-    medicationDispense 0..* and
-    medicationAdministration  0..* and
     familyMemberHistory 0..* and
     documentReference 0..* and
     flag 0..*
@@ -68,9 +68,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[media].resource only Media // $Media-observation-uv-ips
 * entry[medication].resource only MedicationEuHdr
 * entry[medicationRequest].resource only MedicationRequestEuHdr
-* entry[medicationStatement].resource only $MedicationStatement-uv-ips
-* entry[medicationAdministration].resource only MedicationAdministration
-* entry[medicationDispense].resource only MedicationDispense
+* entry[medicationStatement].resource only MedicationStatementEuHdr
+* entry[medicationAdministration].resource only MedicationAdministrationEuHdr
+* entry[medicationDispense].resource only MedicationDispenseEuHdr
 * entry[practitioner].resource only PractitionerEuCore
 * entry[practitionerRole].resource only PractitionerRoleEuCore
 * entry[procedure].resource only ProcedureEuHdr

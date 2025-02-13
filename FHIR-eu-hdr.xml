@@ -59,7 +59,10 @@
 <artifact id="ValueSet/medical-devices-eu-hdr" key="ValueSet-medical-devices-eu-hdr" name="Medical Devices (SNOMED CT) - Xpandh"/>
 <artifact id="ValueSet/medical-devices-snomed-absent-unknown-eu-hdr" key="ValueSet-medical-devices-snomed-absent-unknown-eu-hdr" name="Medical Devices - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="StructureDefinition/Medication-eu-hdr" key="StructureDefinition-Medication-eu-hdr" name="Medication (HDR)"/>
+<artifact id="StructureDefinition/medicationAdministration-eu-hdr" key="StructureDefinition-medicationAdministration-eu-hdr" name="MedicationAdministration (HDR)"/>
+<artifact id="StructureDefinition/medicationDispense-eu-hdr" key="StructureDefinition-medicationDispense-eu-hdr" name="MedicationDispense (HDR)"/>
 <artifact id="StructureDefinition/medicationRequest-eu-hdr" key="StructureDefinition-medicationRequest-eu-hdr" name="MedicationRequest (HDR)"/>
+<artifact id="StructureDefinition/medicationStatement-eu-hdr" key="StructureDefinition-medicationStatement-eu-hdr" name="MedicationStatement (HDR)"/>
 <artifact id="ValueSet/mcode-observation-codes-distant-metastases-vs" key="ValueSet-mcode-observation-codes-distant-metastases-vs" name="Observation Codes for Distant Metastases Category"/>
 <artifact id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Observation Codes for Primary Tumor Category"/>
 <artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Observation Codes for Regional Node Category"/>
