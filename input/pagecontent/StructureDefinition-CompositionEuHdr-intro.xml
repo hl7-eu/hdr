@@ -1,0 +1,8 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+   	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<h3>Entry  optionality</h3>
+	<a> </a>
+	<p>In order to provide support to the different maturity levels foreseen for the European EHR eXchange format (structured, only text, unstructured), this version of the guide doesn't impose the presence of entries in the HDR sections.</p>
+	<p>However the presence of entries in the HDR sections is in general recommended in order to provide a more structured and interoperable document.</p>
+	<p>This recomandation is expressed in this guide thorugh specific obligations</p>
+</div>

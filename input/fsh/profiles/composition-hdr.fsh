@@ -87,7 +87,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Anthropometric observations,
     Anthropometric Observations sub-section,
     $sct#248326004) // to be updated
-  * entry 1..
+  * entry 0..
    * entry only Reference(BodyHeightXpandh or BodyWeightXpandh or BMIProfileXpandh or SkinfoldThicknessXpandh or CircumferenceMeasurementXpandh)
    */
 
@@ -98,7 +98,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Vital signs,
     The Vital signs section includes blood pressure\, body temperature\, heart rate\, and respiratory rate. It may also include other clinical findings\, such as height\, weight\, body mass index\, head circumference\, and pulse oximetry. In particular\, notable vital signs or physical findings such as the most recent\, maximum and/or minimum\, baseline\, or relevant trends may be included,
     $loinc#8716-3) //  "Vital signs"  
-  * entry 1..
+  * entry 0..
   * entry only Reference(Observation or DocumentReference or $vitalsigns)
 
 // ===============================
@@ -177,7 +177,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Significant surgical and non-surgical procedures performed during hospitalisation which are significant for continuity of care\, e.g. surgeries and other \"instrumental\"interventions (endoscopic\, intravascular\)\, chemotherapy\, radiotherapy\, purification methods (dialysis\, hemoperfusion\)\, circulation support methods (counterpulsation\, etc.\)\, administration of blood derivatives or others.\r\nThis section does not include purely diagnostic procedures (MRI\, CT\, etc.\). If no significant performance has been performed\, this fact must be explicitly stated using the IPS Absent and Unknown Data. ,
     $loinc#10185-7) // Hospital discharge procedures
     // $sct#721981007)
-  * entry 1..
+  * entry 0..
   * entry only Reference(ProcedureEuHdr)
   * section ..0
 
@@ -190,7 +190,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Implants and used medical devices that affected or may affect the provision of health services (diagnosis and treatment\). Also medical devices explanted\, or its use was stopped during hospitalisation. If the section is blank\, the reason must be explicitly stated using the IPS Absent and Unknown Data coding system. ,
     $loinc#46264-8) // History of medical device use
     // $sct#1184586001) //"Medical device document section (record artifact\)
-  * entry 1..
+  * entry 0..
   * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuHdr ) // DeviceUseStatementEuHdr also ?
   * section ..0
 
@@ -206,7 +206,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 Medicinal products\, the administration of which was started during hospitalisation but is also recommended after discharge\, will be listed in the summary table in the recommendation section. ,
 $loinc#10160-0 ) // 	History of Medication use Narrative
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
-  * entry 1..
+  * entry 0..
   * entry only Reference(MedicationStatementEuHdr or MedicationRequestEuHdr or MedicationDispenseEuHdr or MedicationAdministrationEuHdr)
 
 // -------------------------------------
@@ -266,7 +266,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
     Hospital discharge medications,
     Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge, 
     $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital discharge medications Narrative" or 	Discharge medications Narrative
-  * entry 1..
+  * entry 0..
   * entry only Reference(MedicationRequestEuHdr or MedicationDispenseEuHdr)
 
  
@@ -305,7 +305,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
       Allergies and Intolerances Section,
       This section documents the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\nIf no information about allergies is available\, or if no allergies are known this should be clearly documented in the section.,
       $loinc#48765-2 )   // CODE
-  * entry 1..
+  * entry 0..
   * entry only Reference(AllergyIntoleranceEuHdr or DocumentReference )
   * insert SectionEntrySliceComRules(Relevant allergies or intolerances (conditions\) for that patient.,
     It lists the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available\, or that no allergies are known .)
@@ -422,7 +422,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
     Immunizations Section,
       The Immunizations Section defines a patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nThe section includes current immunization status\, and may contain the entire immunization history that is relevant to the period of time being summarized.
       , $loinc#11369-6 "History of Immunization Narrative")   // CODE
-  * entry 1..
+  * entry 0..
   * entry only Reference(ImmunizationEuHdr  or ImmunizationRecommendationEuHdr
                           or DocumentReference  )
   
