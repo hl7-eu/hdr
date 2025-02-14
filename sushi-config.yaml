@@ -61,6 +61,17 @@ pages:
     title: Obligations
   knownIssues.md:
     title: Known Issues
+  scope.md:
+    title: Scope and content
+  background.md:
+    title: Background
+  challenges.md:
+    title: Challenges
+  design.md:
+    title: Design Approach 
+  references.md:
+    title: References 
+
 
   # === MAP ====
   HospitalDischargeReport-map.html:
@@ -166,12 +177,17 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Table of Contents: toc.html
-  Functional Specifications:
+  Introduction:
+    Scope and content: scope.html
+    Background: background.html
+    Challenges: challenges.html
+    Design: design.html
+    References: references.html
+  Functional:
     eHN Guideline dataset: logicalModel.html
     HDR conceptual view:  hdr-mindmap.html
     Obligations: obligations.html
-  Model Maps:
+  Implementation:
     HospitalDischargeReport: HospitalDischargeReport-map.html
     Header: Header-map.html
     Subject: Subject-map.html
@@ -185,12 +201,11 @@ menu:
     AdvanceDirectives: AdvanceDirectives-map.html
     MedicationSummary: MedicationSummary-map.html
     PlanOfCare: PlanOfCare-map.html
-  Artifacts: artifacts.html
   About:
-    Downloads: downloads.html
     Authors and contributors: contributors.html
+    Downloads: downloads.html
     Known Issues: knownIssues.html
-
+  Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

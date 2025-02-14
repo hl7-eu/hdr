@@ -9,6 +9,10 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 * extension contains $note named note 0..*
 * extension[note] ^short = "Enconter note"
 
+* extension contains EncounterLegalStatus named legalStatus 0..*
+* extension[legalStatus] ^short = "Legal status/situation at admission"
+
+
 * identifier ^short = "Identifier(s) by which this encounter is known."
 * status from EncounterStatusHdrVS
   * ^short = "Status of this Hospital stay"
