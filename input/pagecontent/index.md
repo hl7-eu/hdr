@@ -28,27 +28,8 @@ The aspiration of this guide is that of being used as basis for European Nationa
 
 The project background is described in the background page.
 
-### Design choices
+### Design approach
 
-The project sesign choices is described in the Design choices page.
+The project design approach is described in the Design approach page.
 
 
-### Dependencies
-
-{% include dependency-table.xhtml %}
-
-### Cross Version Analysis
-
-{% include cross-version-analysis.xhtml %}
-
-### Global Profiles
-
-{% include globals-table.xhtml %}
-
-### IP statements
-
-{% include ip-statements.xhtml %}
-
-### Authors and Contributors
-
-Please refer to the [Authors and Contributors](contributors.html) page.

@@ -73,6 +73,13 @@ pages:
     title: References 
   model-map.md:
     title: Model Maps
+  dependencies.md:
+    title: Dependencies
+  copyright.md:
+    title: Copyright
+  x-version.md:
+    title: Cross version analysis
+    
 
   # === MAP ====
   HospitalDischargeReport-map.html:
@@ -100,7 +107,8 @@ pages:
   PlanOfCare-map.html:
     title: PlanOfCare Relationships
   MedicationSummary-map.html:
-    title: MedicationSummary Relationships   
+    title: MedicationSummary Relationships
+    
 
 
 # === MAP ====
@@ -186,12 +194,15 @@ menu:
     References: references.html
   Functional:
     eHN Guideline dataset: logicalModel.html
-    HDR conceptual view:  hdr-mindmap.html
+    HDR Conceptual view:  hdr-mindmap.html
     Obligations: obligations.html
   Implementation:
     Model Maps: model-map.html
   About:
     Authors and contributors: contributors.html
+    Dependencies: dependencies.html
+    Copyright: copyright.html
+    Cross version:  x-version.html
     Downloads: downloads.html
     Known Issues: knownIssues.html
   Artifacts: artifacts.html

@@ -41,10 +41,13 @@
 <artifact id="StructureDefinition/condition-eu-hdr" key="StructureDefinition-condition-eu-hdr" name="Condition (HDR)"/>
 <artifact id="ValueSet/poa-indicator-eu-hdr" key="ValueSet-poa-indicator-eu-hdr" name="Condition Present on Admission (POA) Value Set"/>
 <artifact id="ValueSet/condition-eu-hdr" key="ValueSet-condition-eu-hdr" name="Condition Value Set"/>
+<artifact id="StructureDefinition/consent-eu-hdr" key="StructureDefinition-consent-eu-hdr" name="Consent (Advance Directives HDR)"/>
+<artifact id="StructureDefinition/consent-relatedCondition" key="StructureDefinition-consent-relatedCondition" name="Consent Related Condition"/>
 <artifact id="StructureDefinition/device-eu-hdr" key="StructureDefinition-device-eu-hdr" name="Device (HDR)"/>
 <artifact id="StructureDefinition/deviceUseStatement-eu-hdr" key="StructureDefinition-deviceUseStatement-eu-hdr" name="DeviceUseStatement (HDR)"/>
 <artifact id="StructureDefinition/encounter-eu-hdr" key="StructureDefinition-encounter-eu-hdr" name="Encounter (HDR)"/>
 <artifact id="ValueSet/hdr-encounterClass-eu-hdr" key="ValueSet-hdr-encounterClass-eu-hdr" name="Encounter Class Value Set"/>
+<artifact id="StructureDefinition/encounter-legalStatus" key="StructureDefinition-encounter-legalStatus" name="Encounter Legal Status"/>
 <artifact id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
 <artifact id="ValueSet/exposureAgent-eu-hdr" key="ValueSet-exposureAgent-eu-hdr" name="Exposure of transmissible agents"/>
 <artifact id="StructureDefinition/familyMemberHistory-eu-hdr" key="StructureDefinition-familyMemberHistory-eu-hdr" name="FamilyMemberHistory (HDR)"/>
@@ -108,6 +111,12 @@
 <page key="Alerts-map" name="Alerts Relationships"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="contributors" name="Authors and contributors"/>
+<page key="background" name="Background"/>
+<page key="challenges" name="Challenges"/>
+<page key="copyright" name="Copyright"/>
+<page key="x-version" name="Cross version analysis"/>
+<page key="dependencies" name="Dependencies"/>
+<page key="design" name="Design Approach"/>
 <page key="downloads" name="Downloads"/>
 <page key="FunctionalStatus-map" name="FunctionalStatus Relationships"/>
 <page key="Header-map" name="Header Relationships"/>
@@ -118,10 +127,13 @@
 <page key="InPatientEncounter-map" name="InPatientEncounter Relationships"/>
 <page key="knownIssues" name="Known Issues"/>
 <page key="MedicationSummary-map" name="MedicationSummary Relationships"/>
+<page key="model-map" name="Model Maps"/>
 <page key="ObjectiveFindings-map" name="ObjectiveFindings Relationships"/>
 <page key="obligations" name="Obligations"/>
 <page key="PatientHistoryEhn-map" name="PatientHistoryEhn Relationships"/>
 <page key="PlanOfCare-map" name="PlanOfCare Relationships"/>
+<page key="references" name="References"/>
+<page key="scope" name="Scope and content"/>
 <page key="Subject-map" name="Subject Relationships"/>
 <page key="toc" name="Table of Contents"/>
 <page key="logicalModel" name="eHN guideline data set"/>
