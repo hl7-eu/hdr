@@ -71,7 +71,8 @@ pages:
     title: Design Approach 
   references.md:
     title: References 
-
+  model-map.md:
+    title: Model Maps
 
   # === MAP ====
   HospitalDischargeReport-map.html:
@@ -188,19 +189,7 @@ menu:
     HDR conceptual view:  hdr-mindmap.html
     Obligations: obligations.html
   Implementation:
-    HospitalDischargeReport: HospitalDischargeReport-map.html
-    Header: Header-map.html
-    Subject: Subject-map.html
-    InPatientEncounter: InPatientEncounter-map.html
-    AdmissionEvaluation: AdmissionEvaluation-map.html
-    ObjectiveFindings: ObjectiveFindings-map.html
-    FunctionalStatus: FunctionalStatus-map.html
-    PatientHistoryEhn: PatientHistoryEhn-map.html
-    HospitalStay: HospitalStay-map.html
-    Alerts: Alerts-map.html
-    AdvanceDirectives: AdvanceDirectives-map.html
-    MedicationSummary: MedicationSummary-map.html
-    PlanOfCare: PlanOfCare-map.html
+    Model Maps: model-map.html
   About:
     Authors and contributors: contributors.html
     Downloads: downloads.html
