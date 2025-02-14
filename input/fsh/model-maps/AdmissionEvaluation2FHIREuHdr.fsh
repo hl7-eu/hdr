@@ -14,7 +14,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "To be specified"
+* group[=].element[=].target.comment = "Details in the Objective Findings Map"
 * group[=].element[+].code = #AdmissionEvaluation.functionalStatus
 * group[=].element[=].display = "A.2.4.2 - Functional status"
 * group[=].element[=].target.code = #Composition.section:sectionFunctionalStatus

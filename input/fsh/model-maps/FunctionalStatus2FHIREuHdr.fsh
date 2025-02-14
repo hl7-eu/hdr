@@ -14,12 +14,6 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:sectionFunctionalStatus.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #FunctionalStatus.description
-* group[=].element[=].display = "A.2.8.2.1 - Description"
-* group[=].element[=].target.code = #Composition.section:sectionFunctionalStatus.entry.text
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "entry could be of different type"
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/FunctionalStatus"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/ClinicalImpression"
 * group[=].element[+].code = #FunctionalStatus.assessmentType
@@ -39,6 +33,11 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/FunctionalStatus"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/Condition"
+* group[=].element[+].code = #FunctionalStatus.description
+* group[=].element[=].display = "A.2.8.2.1 - Description"
+* group[=].element[=].target.code = #Condition.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #FunctionalStatus.onsetDate
 * group[=].element[=].display = "A.2.8.2.2 - Onset Date"
 * group[=].element[=].target.code = #Condition.onsetDateTime

@@ -167,7 +167,7 @@ Usage: #definition
 * group[=].element[=].display = "A.1.2.2.3 - Role of the HP"
 * group[=].element[=].target.code = #PractictionerRole.code					
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.equivalence = #equivalent				
 * group[=].element[+].code = #subjectContact.preferredHP.organization
 * group[=].element[=].display = "A.1.2.2.4 - HP Organisation"
 * group[=].element[=].target.code = #PractictionerRole.organization					

@@ -44,6 +44,11 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "If no details about the medication are provided"
+* group[=].element[+].code = #MedicationSummary.daysSupplied
+* group[=].element[=].display = "A.2.9.2.11 - Days supplied"
+* group[=].element[=].target.code = #MedicationDispense.daysSupply
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/MedicationSummary"
 * group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-eu-hdr"
 * group[=].element[+].code = #MedicationSummary.reason
@@ -63,11 +68,6 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[=].target.comment = "If no details about the medication are provided"
-* group[=].element[+].code = #MedicationSummary.daysSupplied
-* group[=].element[=].display = "A.2.9.2.11 - Days supplied"
-* group[=].element[=].target.code = #MedicationDispense.daysSupply
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/MedicationSummary"
 * group[=].target = "http://hl7.org/fhir/StructureDefinition/Dosage"
 * group[=].element[+].code = #MedicationSummary.dosageRegimen

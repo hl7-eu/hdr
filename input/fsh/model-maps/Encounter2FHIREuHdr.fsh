@@ -162,13 +162,11 @@ Encounter.participant.individual.ofType(PractitionerRole).practitioner"
 * group[=].element[=].target.code = #Encounter.reasonCode.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "to be checked"
 * group[=].element[+].code = #Encounter.admissionReason.legalStatus
 * group[=].element[=].display = "A.2.3.4.3 - Admission legal status"
-* group[=].element[=].target.code = #XXXX
+* group[=].element[=].target.code = #Encounter.extension:legalStatus
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #unmatched
-* group[=].element[=].target.comment = "to be checked"
+* group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Encounter.discharge
 * group[=].element[=].display = "A.2.3.5 - Discharge"
 * group[=].element[=].target.code = #Encounter
@@ -194,13 +192,14 @@ Encounter.participant.individual.ofType(PractitionerRole).practitioner"
 * group[=].element[=].target.code = #Encounter.location
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #Encounter.location.period
-* group[=].element[=].display = "A.2.3.6.1 - Period"
-* group[=].element[=].target.code = #Encounter.location.period
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/InPatientEncounter"
 * group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/location-eu-hdr"
+* group[=].element[+].code = #Encounter.location.period
+* group[=].element[=].display = "A.2.3.6.1 - Period"
+* group[=].element[=].target.code = #Location.period
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[=].target.comment = "Encounter.location"
 * group[=].element[+].code = #Encounter.location.organization
 * group[=].element[=].display = "Organization"
 * group[=].element[=].target.code = #Location.managingOrganization
