@@ -26,7 +26,7 @@ Description: """This profile constrains the AllergyIntolerance resource for the 
 * code ^binding.extension[+].extension[0].url = "purpose"
 * code ^binding.extension[=].extension[=].valueCode = #candidate
 * code ^binding.extension[=].extension[+].url = "valueSet"
-* code ^binding.extension[=].extension[=].valueCanonical = $eHDSIAllergyCode
+* code ^binding.extension[=].extension[=].valueCanonical = Canonical(AllergensHdrVS)
 * code ^binding.extension[=].extension[+].url = "documentation"
 * code ^binding.extension[=].extension[=].valueMarkdown = "Type of the substance/product for MyHealth@EU"
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
@@ -49,7 +49,7 @@ Description: """This profile constrains the AllergyIntolerance resource for the 
 
 * onsetDateTime ^short = "Onset date"
 
-* reaction.substance from $eHDSIAllergens  (preferred)
+* reaction.substance from AllergensHdrVS  (preferred)
 
 /* * reaction.manifestation from EHDSIReactionAllergy (preferred) */
 
