@@ -267,7 +267,7 @@ $loinc#10160-0 ) // 	History of Medication use Narrative
     Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge, 
     $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital discharge medications Narrative" or 	Discharge medications Narrative
   * entry 0..
-  * entry only Reference(MedicationRequestEuHdr or MedicationDispenseEuHdr)
+  * entry only Reference(MedicationRequestEuHdr or MedicationDispenseEuHdr or MedicationStatementEuHdr)
 
  
 // -------------------------------------
