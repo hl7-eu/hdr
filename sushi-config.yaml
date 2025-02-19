@@ -54,6 +54,8 @@ pages:
   downloads.md:
     title: Downloads
   logicalModel.md:
+    title: Logical Models
+  ehn-guidelines.md:
     title: eHN guideline data set
   contributors.md:
     title: Authors and contributors
@@ -193,8 +195,8 @@ menu:
     Design: design.html
     References: references.html
   Functional:
-    eHN Guideline dataset: logicalModel.html
-    HDR Conceptual view:  hdr-mindmap.html
+    eHN Guideline: ehn-guidelines.html
+    Logical Models: logicalModel.html
     Obligations: obligations.html
   Implementation:
     Model Maps: model-map.html
