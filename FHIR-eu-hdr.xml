@@ -57,7 +57,6 @@
 <artifact id="ValueSet/encounter-status-eu-hdr" key="ValueSet-encounter-status-eu-hdr" name="In-patient Encounter Type Value Set"/>
 <artifact id="ValueSet/hdr-encounter-type-eu-hdr" key="ValueSet-hdr-encounter-type-eu-hdr" name="In-patient Encounter Type Value Set"/>
 <artifact id="StructureDefinition/location-eu-hdr" key="StructureDefinition-location-eu-hdr" name="Location (HDR)"/>
-<artifact id="ValueSet/condition-mandatory-eu-hdr" key="ValueSet-condition-mandatory-eu-hdr" name="Mandatory Condition Value Set"/>
 <artifact id="ValueSet/medical-devices-eu-hdr" key="ValueSet-medical-devices-eu-hdr" name="Medical Devices (SNOMED CT) - Xpandh"/>
 <artifact id="ValueSet/medical-devices-snomed-absent-unknown-eu-hdr" key="ValueSet-medical-devices-snomed-absent-unknown-eu-hdr" name="Medical Devices - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="StructureDefinition/Medication-eu-hdr" key="StructureDefinition-Medication-eu-hdr" name="Medication (HDR)"/>
@@ -89,7 +88,6 @@
 <artifact id="CodeSystem/whodas-20-cs" key="CodeSystem-whodas-20-cs" name="WHO Disability Assessment Schedule 2.0"/>
 <artifact id="CodeSystem/assessment-category-eu-hdr" key="CodeSystem-assessment-category-eu-hdr" name="Xpandh Assessment Category"/>
 <artifact id="ValueSet/assessment-observation-category-vs" key="ValueSet-assessment-observation-category-vs" name="Xpandh Assessment Observation Category"/>
-<artifact id="ValueSet/functional-assessment-scales-vs" key="ValueSet-functional-assessment-scales-vs" name="Xpandh Functional Assessment Scales"/>
 <artifact id="ConceptMap/admissionEvaluation2FHIR-eu-hdr" key="ConceptMap-admissionEvaluation2FHIR-eu-hdr" name="eHN Admission Evaluation Model to this guide Map"/>
 <artifact id="ConceptMap/advanceDirectives2FHIR-eu-hdr" key="ConceptMap-advanceDirectives2FHIR-eu-hdr" name="eHN Advance Directives Model to this guide Map"/>
 <artifact id="ConceptMap/alerts2FHIR-eu-hdr" key="ConceptMap-alerts2FHIR-eu-hdr" name="eHN Alerts Model to this guide Map"/>

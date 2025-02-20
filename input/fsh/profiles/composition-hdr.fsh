@@ -9,14 +9,14 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * extension contains $event-basedOn named basedOn 0..*
 * extension[basedOn].valueReference only Reference ( Resource or ServiceRequest ) /// add profile
 
-* extension contains $artifact-relatedArtifact named relatedArtifact 0..*
-* extension[relatedArtifact] 
-  * ^short = "Related artefacts: e.g. presented form"
-* extension[relatedArtifact].valueRelatedArtifact.type 
-  * ^example[0].label = "presented form"
-  * ^example[0].valueCodeableConcept  = http://hl7.org/fhir/related-artifact-type#documentation
-  // ItT seems not appropriate as code... to be changed if this solution is used
-* extension[relatedArtifact].valueRelatedArtifact.document  
+* extension contains DocumentPresentedForm named presentedForm 0..*
+* extension[presentedForm] ^short = "Presented form"
+* extension[presentedForm].valueAttachment
+  * contentType
+    * ^example[0].label = "pdf"
+    * ^example[0].valueCodeableConcept  = $mime#application/pdf
+  * data ^short = "B64 in-line data"
+  * url ^short = "URL of the document"
 
 * extension contains $composition.version-r5 named compositionVersionR5 0..
 * extension[compositionVersionR5].valueString ^short = "Business version"

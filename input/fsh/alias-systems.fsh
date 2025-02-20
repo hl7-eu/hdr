@@ -42,5 +42,6 @@ Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 // --- SID
 Alias: $oid = urn:ietf:rfc:1155
 Alias: $uri = urn:ietf:rfc:3986
+Alias: $mime = urn:ietf:bcp:13
 
 //=========================
