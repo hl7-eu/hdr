@@ -97,7 +97,7 @@ Description: """This profile constrains the Immunization resource for the purpos
 Profile:  ImmunizationRecommendationEuHdr
 Parent:   ImmunizationRecommendation
 Id:       immunizationRecommendation-eu-hdr
-Title:    "ImmunizationRecommendation (EU HDR)"
+Title:    "ImmunizationRecommendation (HDR)"
 Description: """This profile defines how to represent Immunization Recommandations for the purpose of this guide."""
 //-------------------------------------------------------------------------------------------
 

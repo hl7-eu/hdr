@@ -21,19 +21,12 @@
 <artifact id="ValueSet/admission-urgency-eu-hdr" key="ValueSet-admission-urgency-eu-hdr" name="Admission Urgency Value Set"/>
 <artifact id="ValueSet/allergens-eu-hdr" key="ValueSet-allergens-eu-hdr" name="Allergens Value Set"/>
 <artifact id="ValueSet/allergy-intolerance-substances-eu-hdr" key="ValueSet-allergy-intolerance-substances-eu-hdr" name="Allergy Intolerance"/>
-<artifact id="StructureDefinition/allergyIntolerance-eu-hdr" key="StructureDefinition-allergyIntolerance-eu-hdr" name="Allergy Intolerance (EU HDR)"/>
+<artifact id="StructureDefinition/allergyIntolerance-eu-hdr" key="StructureDefinition-allergyIntolerance-eu-hdr" name="Allergy Intolerance (HDR)"/>
 <artifact id="ValueSet/allergy-intolerance-eu-hdr" key="ValueSet-allergy-intolerance-eu-hdr" name="Allergy Intolerance (with exceptions)"/>
-<artifact id="ValueSet/anthropometric-observation-vs" key="ValueSet-anthropometric-observation-vs" name="Anthropometric Observation Value Set"/>
-<artifact id="ValueSet/bmi-observation-unit-vs" key="ValueSet-bmi-observation-unit-vs" name="BMI Observation Unit Value Set"/>
-<artifact id="ValueSet/bmi-observation-vs" key="ValueSet-bmi-observation-vs" name="BMI Observation Value Set"/>
-<artifact id="ValueSet/body-height-observation-vs" key="ValueSet-body-height-observation-vs" name="Body Height Observation Value Set"/>
-<artifact id="ValueSet/body-weight-observation-vs" key="ValueSet-body-weight-observation-vs" name="Body Weight Observation Value Set"/>
-<artifact id="ValueSet/body-weight-units-vs" key="ValueSet-body-weight-units-vs" name="Body Weight Observation Value Set"/>
 <artifact id="StructureDefinition/bundle-eu-hdr" key="StructureDefinition-bundle-eu-hdr" name="Bundle (HDR)"/>
 <artifact id="ValueSet/cancer-stage-grading-vs" key="ValueSet-cancer-stage-grading-vs" name="Cancer Stage Grading: Snomed CT"/>
 <artifact id="ValueSet/cancer-stageGroup-vs" key="ValueSet-cancer-stageGroup-vs" name="Cancer Stage Group: SNOMED CT"/>
 <artifact id="StructureDefinition/carePlan-eu-eps" key="StructureDefinition-carePlan-eu-eps" name="Care Plan (HDR)"/>
-<artifact id="ValueSet/circumference-observation-vs" key="ValueSet-circumference-observation-vs" name="Circumference Observation Value Set"/>
 <artifact id="ValueSet/TNM-M-clinical-category-vs" key="ValueSet-TNM-M-clinical-category-vs" name="Clinical M"/>
 <artifact id="ValueSet/TNM-N-clinical-category-vs" key="ValueSet-TNM-N-clinical-category-vs" name="Clinical N"/>
 <artifact id="ValueSet/TNM-T-clinical-category-vs" key="ValueSet-TNM-T-clinical-category-vs" name="Clinical T"/>
@@ -50,10 +43,10 @@
 <artifact id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
 <artifact id="ValueSet/exposureAgent-eu-hdr" key="ValueSet-exposureAgent-eu-hdr" name="Exposure of transmissible agents"/>
 <artifact id="StructureDefinition/familyMemberHistory-eu-hdr" key="StructureDefinition-familyMemberHistory-eu-hdr" name="FamilyMemberHistory (HDR)"/>
-<artifact id="StructureDefinition/flag-eu-hdr" key="StructureDefinition-flag-eu-hdr" name="Flag (EU HDR)"/>
+<artifact id="StructureDefinition/flag-eu-hdr" key="StructureDefinition-flag-eu-hdr" name="Flag (HDR)"/>
 <artifact id="StructureDefinition/immunization-eu-hdr" key="StructureDefinition-immunization-eu-hdr" name="Immunization (HDR)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
-<artifact id="StructureDefinition/immunizationRecommendation-eu-hdr" key="StructureDefinition-immunizationRecommendation-eu-hdr" name="ImmunizationRecommendation (EU HDR)"/>
+<artifact id="StructureDefinition/immunizationRecommendation-eu-hdr" key="StructureDefinition-immunizationRecommendation-eu-hdr" name="ImmunizationRecommendation (HDR)"/>
 <artifact id="ValueSet/encounter-status-eu-hdr" key="ValueSet-encounter-status-eu-hdr" name="In-patient Encounter Type Value Set"/>
 <artifact id="ValueSet/hdr-encounter-type-eu-hdr" key="ValueSet-hdr-encounter-type-eu-hdr" name="In-patient Encounter Type Value Set"/>
 <artifact id="StructureDefinition/location-eu-hdr" key="StructureDefinition-location-eu-hdr" name="Location (HDR)"/>
@@ -67,27 +60,20 @@
 <artifact id="ValueSet/mcode-observation-codes-distant-metastases-vs" key="ValueSet-mcode-observation-codes-distant-metastases-vs" name="Observation Codes for Distant Metastases Category"/>
 <artifact id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Observation Codes for Primary Tumor Category"/>
 <artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Observation Codes for Regional Node Category"/>
-<artifact id="StructureDefinition/observation-infectious-contact-eu-hdr" key="StructureDefinition-observation-infectious-contact-eu-hdr" name="Observation: Infectious Contact (HDR))"/>
-<artifact id="StructureDefinition/observation-sdoh-eu-hdr" key="StructureDefinition-observation-sdoh-eu-hdr" name="Observation: SDOH (EU HDR))"/>
+<artifact id="StructureDefinition/observation-infectious-contact-eu-hdr" key="StructureDefinition-observation-infectious-contact-eu-hdr" name="Observation: Infectious Contact (HDR)"/>
+<artifact id="StructureDefinition/observation-sdoh-eu-hdr" key="StructureDefinition-observation-sdoh-eu-hdr" name="Observation: SDOH (HDR)"/>
 <artifact id="StructureDefinition/observation-travel-eu-hdr" key="StructureDefinition-observation-travel-eu-hdr" name="Observation: country visited (HDR)"/>
 <artifact id="ValueSet/TNM-M-pathologycal-category-vs" key="ValueSet-TNM-M-pathologycal-category-vs" name="Pathological M"/>
 <artifact id="ValueSet/TNM-N-pathological-category-vs" key="ValueSet-TNM-N-pathological-category-vs" name="Pathological N"/>
-<artifact id="CodeSystem/poa-indicator-eu-hdr" key="CodeSystem-poa-indicator-eu-hdr" name="Present on Admission (POA) Indicator"/>
 <artifact id="ValueSet/TNM-T-category-vs" key="ValueSet-TNM-T-category-vs" name="Primary tumor T"/>
 <artifact id="StructureDefinition/procedure-eu-hdr" key="StructureDefinition-procedure-eu-hdr" name="Procedure (HDR)"/>
 <artifact id="ValueSet/procedure-snomed-eu-hdr" key="ValueSet-procedure-snomed-eu-hdr" name="Procedure codes: Snomed CT"/>
 <artifact id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
-<artifact id="ValueSet/skinfold-thickness-units-vs" key="ValueSet-skinfold-thickness-units-vs" name="Skinfold Thickness Units Value Set"/>
-<artifact id="ValueSet/skinfold-thickness-vs" key="ValueSet-skinfold-thickness-vs" name="Skinfold Thickness Value Set"/>
 <artifact id="ValueSet/TNM-M-category-vs" key="ValueSet-TNM-M-category-vs" name="TNM M Category"/>
 <artifact id="ValueSet/TNM-N-category-vs" key="ValueSet-TNM-N-category-vs" name="TNM N Category"/>
 <artifact id="CodeSystem/temporarySystem-hdr-eu" key="CodeSystem-temporarySystem-hdr-eu" name="Temporary HDR Code System"/>
 <artifact id="ValueSet/treated-problem-eu-hdr" key="ValueSet-treated-problem-eu-hdr" name="Treatment Class Value Set"/>
-<artifact id="ValueSet/vital-signs-observation-vs" key="ValueSet-vital-signs-observation-vs" name="Vital Signs Observation Value Set"/>
-<artifact id="CodeSystem/whodas-20-cs" key="CodeSystem-whodas-20-cs" name="WHO Disability Assessment Schedule 2.0"/>
-<artifact id="CodeSystem/assessment-category-eu-hdr" key="CodeSystem-assessment-category-eu-hdr" name="Xpandh Assessment Category"/>
-<artifact id="ValueSet/assessment-observation-category-vs" key="ValueSet-assessment-observation-category-vs" name="Xpandh Assessment Observation Category"/>
 <artifact id="ConceptMap/admissionEvaluation2FHIR-eu-hdr" key="ConceptMap-admissionEvaluation2FHIR-eu-hdr" name="eHN Admission Evaluation Model to this guide Map"/>
 <artifact id="ConceptMap/advanceDirectives2FHIR-eu-hdr" key="ConceptMap-advanceDirectives2FHIR-eu-hdr" name="eHN Advance Directives Model to this guide Map"/>
 <artifact id="ConceptMap/alerts2FHIR-eu-hdr" key="ConceptMap-alerts2FHIR-eu-hdr" name="eHN Alerts Model to this guide Map"/>
