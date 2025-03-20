@@ -86,4 +86,3 @@ Usage: #definition
 * group[=].element[=].target.code = #Dosage.timing.repeat.duration
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "CHECK it is used the name period but the imression is that is the duration not the period "

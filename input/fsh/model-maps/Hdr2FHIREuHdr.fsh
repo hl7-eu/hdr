@@ -25,10 +25,9 @@ Usage: #definition
 * group[=].element[=].target.comment = "See details below"
 * group[=].element[+].code = #HospitalDischargeReport.body.presentedForm
 * group[=].element[=].display = "A.2.0 - Hospital Discharge Report in its narrative form"
-* group[=].element[=].target.code = #Composition.extension:relatedArtefact.valueRelatedArtefact.document
+* group[=].element[=].target.code = #Composition.extension:presentedForm
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "TO BE checked; valueRelatedArtefact.type = 'transformed-into'"
 * group[=].element[+].code = #HospitalDischargeReport.body.advanceDirectives
 * group[=].element[=].display = "A.2.1 - Advance directives"
 * group[=].element[=].target.code = #Composition.section:sectionAdvanceDirectives

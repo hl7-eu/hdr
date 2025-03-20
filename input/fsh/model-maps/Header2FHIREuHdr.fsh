@@ -151,7 +151,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.extension:basedOn:order			
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "To be disucssed if the payor data are conveyed with the request or thorugh other means. Check also the extension to be used."
+* group[=].element[=].target.comment = "Information about the payer are mapped into a Coverage resource that can be listed in the section payers or referred thìrough the admission request (if present)"
 * group[=].element[+].code = #Header.payer
 * group[=].element[=].display = "A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care."
 * group[=].element[=].target.code = #Composition.section:sectionPayers.entry	

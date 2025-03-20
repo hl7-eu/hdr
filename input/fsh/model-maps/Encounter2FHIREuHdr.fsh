@@ -38,7 +38,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Organization
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Encounter.location.location.managingOrganization; to be checked"
+* group[=].element[=].target.comment = "Encounter.location.location.managingOrganization"
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/InPatientEncounter"
 * group[=].target = "http://hl7.eu/fhir/core/StructureDefinition/practitioner-eu-core"
 * group[=].element[+].code = #Encounter.admission.admitter.identifier
