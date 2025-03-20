@@ -6,6 +6,7 @@ Description: """This is a temporary code system defined to collect concepts expe
 * ^experimental = true
 
 * #infection-contact "Infectious contacts" "Infectious contacts Section"
+* #anthropometry "Anthropometry Section" "Anthropometry Section"
 * #substance-use "Use of Substances Section" "Use of Substances Section"
-* #significant-results "Significant Results Section" "Significant Results Section"
+// * #significant-results "Significant Results Section" "Significant Results Section"
   

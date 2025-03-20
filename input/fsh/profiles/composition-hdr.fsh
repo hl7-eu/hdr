@@ -74,17 +74,15 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 // Anthropometric Observations is an indipendet section or is part of the Vital Signs ? 
 
-/*
-// ==> TO BE REVIEWED IF THEY ARE PART OF THE VITAL SIGNS
+
 * section contains sectionAnthropometry 0..1
 * section[sectionAnthropometry]
   * insert SectionComRules (
     Anthropometric observations,
     Anthropometric Observations sub-section,
-    $sct#248326004) // to be updated
+    TemporaryHDRSystem#anthropometry) // to be updated
   * entry 0..
-   * entry only Reference(BodyHeightXpandh or BodyWeightXpandh or BMIProfileXpandh or SkinfoldThicknessXpandh or CircumferenceMeasurementXpandh)
-   */
+  * entry only Reference(Observation or DocumentReference or $vitalsigns)
 
 
 * section contains sectionVitalSigns 0..1
@@ -187,7 +185,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRules (
     Medical devices and implants,
     Implants and used medical devices that affected or may affect the provision of health services (diagnosis and treatment\). Also medical devices explanted\, or its use was stopped during hospitalisation. If the section is blank\, the reason must be explicitly stated using the IPS Absent and Unknown Data coding system. ,
-    $lonic#57080-4) // Implanted medical device (to be changed)
+    $loinc#57080-4) // Implanted medical device (to be changed)
     // $loinc#46264-8) // History of medical device use
     // $sct#1184586001) //"Medical device document section (record artifact\)
   * entry 0..
