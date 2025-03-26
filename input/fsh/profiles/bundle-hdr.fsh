@@ -31,14 +31,15 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry contains
     composition 1..1 and
     patient 1..1 and
+    encounter 1..* and
     allergyIntolerance 0..* and
     condition 0..* and
     device 0..* and
     deviceUseStatement 0..* and
     diagnosticReport 0..* and
-    encounter 0..* and
     imagingStudy 0..* and
     immunization 0..* and
+    immunizationRecommendation 0..* and
     media 0..* and
     medication 0..* and
     medicationRequest 0..* and
@@ -56,15 +57,16 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     flag 0..*
 
 * entry[composition].resource only CompositionEuHdr
-* entry[patient].resource only PatientEuCore // EU ?
+* entry[patient].resource only PatientEuCore
+* entry[encounter].resource only EncounterEuHdr
 * entry[allergyIntolerance].resource only AllergyIntoleranceEuHdr
 * entry[condition].resource only ConditionEuHdr
 * entry[device].resource only DeviceEuHdr
 * entry[deviceUseStatement].resource only DeviceUseStatementEuHdr
 * entry[diagnosticReport].resource only $DiagnosticReport-uv-ips
-* entry[encounter].resource only EncounterEuHdr
 * entry[imagingStudy].resource only $ImagingStudy-uv-ips
-* entry[immunization].resource only $Immunization-uv-ips
+* entry[immunization].resource only ImmunizationEuHdr
+* entry[immunizationRecommendation].resource only ImmunizationRecommendationEuHdr
 * entry[media].resource only Media // $Media-observation-uv-ips
 * entry[medication].resource only MedicationEuHdr
 * entry[medicationRequest].resource only MedicationRequestEuHdr
@@ -77,8 +79,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[organization].resource only OrganizationEuCore
 * entry[observation].resource only Observation // $Observation-results-uv-ips
 * entry[specimen].resource only $Specimen-uv-ips
-* entry[flag].resource only Flag
-* entry[familyMemberHistory].resource only FamilyMemberHistory
+* entry[flag].resource only FlagEuHdr
+* entry[familyMemberHistory].resource only FamilyMemberHistoryEuHdr
 * entry[documentReference].resource only DocumentReference
 
 * signature ^short = "Report Digital Signature"

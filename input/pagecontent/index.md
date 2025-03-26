@@ -1,8 +1,19 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<blockquote class="stu-note">		
+	<blockquote class="stu-note">
+	<p><b>Obligations</b></p>
 		<p>Obligations have been added to this version of the guide only as <b>Informative</b> material to collect feedback about their usage.</p>		
 		<p>For more details about obligations please refer to the <a href="obligations.html">Obligations page</a></p>
+	</blockquote>
+</div>
+
+<div xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<blockquote class="stu-note">
+<p><b>Section Codes</b></p>
+<p>Not all the LOINC codes used in this version align with the purpose of the sections, and in some cases, temporary 'local' codes have been assigned.</p>
+<p>A collaboration with LOINC has been established to identify the most appropriate codes for the HDR sections.</p>
+<p><b>Adopters should be aware that codes may be subject to change.</b></p>
 	</blockquote>
 </div>
 

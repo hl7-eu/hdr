@@ -51,12 +51,13 @@ Alias: $workflow-supportingInfo = http://hl7.org/fhir/StructureDefinition/workfl
 
 
 
-Alias: $ihe-ext-medication-device = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-device
-Alias: $ihe-ext-medication-strengthsubstance = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-strengthsubstance
-Alias: $ihe-ext-medication-strengthtype = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-strengthtype
-Alias: $ihe-ext-medication-classification = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-classification
-Alias: $ihe-ext-medication-productname = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-productname
-Alias: $ihe-ext-medication-sizeofitem = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-sizeofitem
-Alias: $ihe-ext-medication-characteristic = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-characteristic
-Alias: $ihe-ext-medication-unitofpresentation = http://profiles.ihe.net/PHARM/ihe.pharm.mpd/StructureDefinition/ihe-ext-medication-unitofpresentation
+Alias: $ihe-ext-medication-device = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-device
+Alias: $ihe-ext-medication-strengthsubstance = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-strengthsubstance
+Alias: $ihe-ext-medication-strengthtype = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-strengthtype
+Alias: $ihe-ext-medication-classification = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-classification
+Alias: $ihe-ext-medication-productname = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-productname
+Alias: $ihe-ext-medication-sizeofitem = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-sizeofitem
+Alias: $ihe-ext-medication-characteristic = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-characteristic
+Alias: $ihe-ext-medication-unitofpresentation = http://profiles.ihe.net/PHARM/MPD/StructureDefinition/ihe-ext-medication-unitofpresentation
+
 

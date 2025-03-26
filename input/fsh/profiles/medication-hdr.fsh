@@ -15,9 +15,9 @@ Description: "This profile constrains the Medication resource for the purpose of
   * itemReference only Reference (MedicationEuHdr)
   * strength ^short = "Amount of substance in product (presentation or concentration strength)"
   * strength ^definition = """Definitional resources should be used for specifying the different types of strengths: presentation; concentration."""
-  * strength  // item.ingredient.strengthInfo (does not map exactly)
+  * strength  // item.ingredient.strengthInfo (does not map exactly)  
     * extension contains $ihe-ext-medication-strengthsubstance named strengthSubstance 0..1 
-    * extension[strengthSubstance] ^short = "Substance for which the strength is provided (this could be different from the precise active ingredient)."
+    * extension[strengthSubstance] ^short = "Substance for which the strength is provided (this could be different from the precise active ingredient)." 
 //* form from $eHDSIDoseForm (example)
 //  * ^short = "Dose form. For a branded product, this would most likely be authorised dose form, but it could also be administrable dose form. For package items, it could be item's individual dose form." // doseForm
 

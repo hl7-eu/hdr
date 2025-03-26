@@ -10,7 +10,8 @@ Description: "This profile represents the constraints applied to the Procedure r
 * extension contains $procedure-targetBodyStructure named bodySite 0..1
 * extension[bodySite].valueReference only Reference(BodyStructureEuLab)
 
-* text 1..1  // textual representation of the procedure should be provided according to the EHN data set
+* text ^short = "Textual representation of the procedur"
+ // textual representation of the procedure should be provided according to the EHN data set
 * status
 * code only CodeableConceptIPS
 * code 1.. 
