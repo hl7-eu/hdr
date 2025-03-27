@@ -1,13 +1,48 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-		<h3>Entry  optionality</h3>
-	<a></a>
-	<p>In order to provide support to the different maturity levels foreseen for the European EHR eXchange format (structured, only text, unstructured), this version of the guide doesn't impose the presence of entries in the HDR sections.</p>
-	<p>However the presence of entries in the HDR sections is in general recommended in order to provide a more structured and interoperable document.</p>
-	<p>This recomandation is expressed in this guide thorugh specific obligations</p>
+	<h3>Entry  optionality</h3>
 
-	<p> </p>
+	<a> </a>
+
+	<p>In order to support the different maturity levels foreseen for the <b>European EHR eXchange format</b> (structured, text-only, unstructured), this version of the guide does not impose the mandatory presence of entries in the HDR sections.</p>
+	<p>HHowever, the presence of entries in the HDR sections is generally recommended to ensure a more structured and interoperable document.</p>
+	<p>This recommendation is expressed in this guide through <b>specific obligations</b> which guide implementers toward achieving a higher level of data quality and interoperability.</p>
+
+
+    <h3>Hospital Discharge Report Structure Challenge</h3>
+
+    <a> </a>
+
+    <p>
+        To address the <a href="challenges.html"><strong>Hospital Discharge Report Structure Challenge</strong></a>, 
+        we have opted for a <strong>flexible approach</strong> rather than imposing a rigid format.
+    </p>
+    <p>
+        The <strong>"flat structure"</strong> documented in the guide should be understood as a sort of 
+        <strong>"section library"</strong> that can be reused in both <strong>flat and nested structures</strong>. 
+        This approach allows implementers to organize the report according to local or institutional needs 
+        while maintaining a standardized content model.
+    </p>
+    <p>In practice:</p>
+    <ol>
+        <li>A few sections are required.</li>
+        <li>
+            <strong>Section slices are open</strong>, meaning that implementers have the freedom to include 
+            additional <strong>"first-level" sections</strong>.
+        </li>
+        <li>
+            With the exception of a few specific cases, <strong>sub-sections are allowed</strong>, giving healthcare 
+            providers the ability to create a structure that best fits their clinical context.
+        </li>
+    </ol>
+    <p>
+        By offering this level of flexibility, the implementation guide supports diverse healthcare environments 
+        while promoting consistency in content and interoperability.
+    </p>
+
+	<p></p>
+	
 	<blockquote class="stu-note">
 		<p>
 			<b>Section Codes</b>
@@ -18,4 +53,5 @@
 			<b>Adopters should be aware that codes may be subject to change.</b>
 		</p>
 	</blockquote>
+
 </div>

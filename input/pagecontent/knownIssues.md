@@ -1,10 +1,14 @@
-### Change requests not applied
+### Section LOINC codes
 
-Future version of the FHIR IG Publisher tool should fix this issue.
+Not all the coded concepts used for the Hospital Discharge Report (HDR) sections fully align with the purpose of the HDR model and its implementation.  
+
+A collaboration with **LOINC** has been established to identify the most appropriate codes for the HDR sections.  
+
+This version uses temporary local codes where concepts were missing, and the closest available concepts have been used where possible, even though some issues have been identified in certain cases.  
+
+**Adopters should be aware that codes may be subject to change.**
+
 
 ### Obligations
 
-1. For each Actor defined an error is raised in the guide QA log.
-This is due to a required used code, not present in the R4 value set version.
-1. Obligations are only informative for this version of the guide. Further analysis are needed for consolidating them.
-
+Obligations are only informative for this version of the guide. Further analysis are needed for consolidating them.
