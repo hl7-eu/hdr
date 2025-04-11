@@ -8,7 +8,7 @@ Usage: #definition
 * experimental = true
 * description = """eHN HDR Plan of Care Model to this guide Map"""
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PlanOfCare"
-* group[=].target = "http://hl7.org/fhir/StructureDefinition/CarePlan"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/carePlan-eu-hdr"
 * group[=].element[+].code = #PlanOfCare.title
 * group[=].element[=].display = "A.2.9.1.1 - Title"
 * group[=].element[=].target.code = #CarePlan.title

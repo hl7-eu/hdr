@@ -33,7 +33,6 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:sectionMedicalDevices
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "The same section usd by the hospital stay ?"
 * group[=].element[+].code = #PatientHistory.medicalHistory.vaccination
 * group[=].element[=].display = "A.2.6.1.4 - Vaccination"
 * group[=].element[=].target.code = #Composition.section:sectionImmunizations
@@ -43,8 +42,8 @@ Usage: #definition
 * group[=].element[=].display = "A.2.6.1.5 - Epidemiological history"
 * group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "several sections"
+* group[=].element[=].target.equivalence = #unmatched					
+* group[=].element[=].target.comment = "decison not to have as distict section"
 * group[=].element[+].code = #PatientHistory.medicalHistory.epidemiologicalHistory.infectiousContacts
 * group[=].element[=].display = "A.2.6.1.5.1 - Infectious contacts"
 * group[=].element[=].target.code = #Composition.section:infectiousContacts
@@ -157,7 +156,6 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:sectionSignificantProcedures
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "The same section usd by the hospital stay ?"
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistoryEhn"
 * group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/immunization-eu-hdr"
 * group[=].element[+].code = #PatientHistory.medicalHistory.vaccination.diseaseOrAgent

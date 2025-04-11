@@ -42,7 +42,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * date ^short = "HDR date"
 * author ^short = "Who and/or what authored the Hospital Discharge Report"
 * author ^definition = "Identifies who is responsible for the information in the Hospital Discharge Report, not necessarily who typed it in."
-* author only Reference( PractitionerEuCore or PractitionerRoleEuCore or Device or Patient or RelatedPerson or Organization)
+* author only Reference( PractitionerEuCore or PractitionerRoleEuCore or Device  or OrganizationEuCore) // or Patient or RelatedPerson
 
 
 * title ^short = "Hospital Discharge Report"
@@ -239,7 +239,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     Plan of Care Section,
     The plan of care section contains a narrative description of the expectations for care including proposals\, goals\, and order requests for monitoring\, tracking\, or improving the condition of the patient.,
     $loinc#18776-5 )   // Plan of care note
-  * entry only Reference( CarePlanEpsEu or DocumentReference) // Check profiles
+  * entry only Reference( CarePlanEuHdr or DocumentReference) // Check profiles
 
 
   // -------------------------------------

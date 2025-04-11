@@ -1,6 +1,6 @@
-Profile: CarePlanEpsEu
+Profile: CarePlanEuHdr
 Parent: CarePlan
-Id: carePlan-eu-eps
+Id: carePlan-eu-hdr
 Title:    "Care Plan (HDR)"
 Description: """This profile constrains the CarePlan resource for the purpose of this guide."""
 

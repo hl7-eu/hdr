@@ -54,7 +54,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     specimen 0..* and
     familyMemberHistory 0..* and
     documentReference 0..* and
-    flag 0..*
+    flag 0..* and
+    location 0..*
 
 * entry[composition].resource only CompositionEuHdr
 * entry[patient].resource only PatientEuCore
@@ -82,6 +83,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[flag].resource only FlagEuHdr
 * entry[familyMemberHistory].resource only FamilyMemberHistoryEuHdr
 * entry[documentReference].resource only DocumentReference
+* entry[location].resource only LocationEu
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"

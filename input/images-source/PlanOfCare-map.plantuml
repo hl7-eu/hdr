@@ -16,6 +16,6 @@ class "PlanOfCare" <<LogicalModel>> [[StructureDefinition-PlanOfCare.html]]
 note top #PaleTurquoise [[ConceptMap-planOfCare2FHIR-eu-hdr.html]]
 Concept Map
 endnote
-class "CarePlan" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/CarePlan]]
-"PlanOfCare" <|. "CarePlan"
+class "carePlan-eu-hdr" <<Profile>> [[StructureDefinition-carePlan-eu-hdr.html]]
+"PlanOfCare" <|. "carePlan-eu-hdr"
 @enduml
