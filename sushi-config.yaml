@@ -138,6 +138,7 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
 #  produce-jekyll-data: true
   special-url:
     - http://terminology.ehdsi.eu/ValueSet/eHDSIConditionPOA
+    - http://terminology.ehdsi.eu/ValueSet/eHDSITreatmentClass
 #    - http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
 #    - http://example.org/lab-codes
 
