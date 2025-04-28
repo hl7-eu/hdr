@@ -29,8 +29,8 @@ dependencies:
   hl7.fhir.extensions.r5: 4.0.1
   hl7.fhir.eu.extensions: 0.1.1-ballot
   hl7.fhir.eu.laboratory: 0.1.1
-  hl7.fhir.eu.r4.base: 0.1.0-ballot
-
+  hl7.fhir.eu.base: 0.1.0-ballot
+  ihe.pharm.mpd.r4: 1.0.0-ballot
 #   hl7.fhir.us.mcode:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
@@ -136,8 +136,8 @@ pages:
 #
 parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #  produce-jekyll-data: true
-#  special-url:
-#    - http://hl7.eu/fhir/StructureDefinition/information-recipient
+  special-url:
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIConditionPOA
 #    - http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
 #    - http://example.org/lab-codes
 

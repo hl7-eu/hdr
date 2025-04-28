@@ -30,7 +30,7 @@ RuleSet: SectionComRules (short, def, code)
 * code 1..
 * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * code = {code}
-* text 1..
+// * text 1..
 * text only Narrative
 // * section.section ..0
 /* * emptyReason ..0

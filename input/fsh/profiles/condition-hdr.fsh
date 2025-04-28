@@ -21,7 +21,7 @@ Description: """This profile represents the constraint applied to the Condition 
 * category[hdr-core] = $condition-category#encounter-diagnosis
   * ^short = "encounter-diagnosis" */
 * category contains poa 0..1
-* category[poa] from PoaIndicatorHdrVS
+* category[poa] from EHDSIConditionPOA
   * ^short = "POA, HAC, NA"
   * ^definition = "Present on admission, Hospital acquired condition, Not applicable or unknown"
 * category contains treated 0..1

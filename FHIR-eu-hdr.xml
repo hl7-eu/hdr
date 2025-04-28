@@ -27,10 +27,6 @@
 <artifact id="ValueSet/cancer-stage-grading-vs" key="ValueSet-cancer-stage-grading-vs" name="Cancer Stage Grading: Snomed CT"/>
 <artifact id="ValueSet/cancer-stageGroup-vs" key="ValueSet-cancer-stageGroup-vs" name="Cancer Stage Group: SNOMED CT"/>
 <artifact id="StructureDefinition/carePlan-eu-hdr" key="StructureDefinition-carePlan-eu-hdr" name="Care Plan (HDR)"/>
-<artifact id="ValueSet/TNM-M-clinical-category-vs" key="ValueSet-TNM-M-clinical-category-vs" name="Clinical M"/>
-<artifact id="ValueSet/TNM-N-clinical-category-vs" key="ValueSet-TNM-N-clinical-category-vs" name="Clinical N"/>
-<artifact id="ValueSet/TNM-T-clinical-category-vs" key="ValueSet-TNM-T-clinical-category-vs" name="Clinical T"/>
-<artifact id="ValueSet/TNM-T-pathological-category-vs" key="ValueSet-TNM-T-pathological-category-vs" name="Clinical T"/>
 <artifact id="StructureDefinition/composition-eu-hdr" key="StructureDefinition-composition-eu-hdr" name="Composition (HDR)"/>
 <artifact id="StructureDefinition/condition-eu-hdr" key="StructureDefinition-condition-eu-hdr" name="Condition (HDR)"/>
 <artifact id="ValueSet/poa-indicator-eu-hdr" key="ValueSet-poa-indicator-eu-hdr" name="Condition Present on Admission (POA) Value Set"/>
@@ -62,15 +58,10 @@
 <artifact id="StructureDefinition/observation-infectious-contact-eu-hdr" key="StructureDefinition-observation-infectious-contact-eu-hdr" name="Observation: Infectious Contact (HDR)"/>
 <artifact id="StructureDefinition/observation-sdoh-eu-hdr" key="StructureDefinition-observation-sdoh-eu-hdr" name="Observation: SDOH (HDR)"/>
 <artifact id="StructureDefinition/observation-travel-eu-hdr" key="StructureDefinition-observation-travel-eu-hdr" name="Observation: country visited (HDR)"/>
-<artifact id="ValueSet/TNM-M-pathologycal-category-vs" key="ValueSet-TNM-M-pathologycal-category-vs" name="Pathological M"/>
-<artifact id="ValueSet/TNM-N-pathological-category-vs" key="ValueSet-TNM-N-pathological-category-vs" name="Pathological N"/>
-<artifact id="ValueSet/TNM-T-category-vs" key="ValueSet-TNM-T-category-vs" name="Primary tumor T"/>
 <artifact id="StructureDefinition/procedure-eu-hdr" key="StructureDefinition-procedure-eu-hdr" name="Procedure (HDR)"/>
 <artifact id="ValueSet/procedure-snomed-eu-hdr" key="ValueSet-procedure-snomed-eu-hdr" name="Procedure codes: Snomed CT"/>
 <artifact id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
-<artifact id="ValueSet/TNM-M-category-vs" key="ValueSet-TNM-M-category-vs" name="TNM M Category"/>
-<artifact id="ValueSet/TNM-N-category-vs" key="ValueSet-TNM-N-category-vs" name="TNM N Category"/>
 <artifact id="CodeSystem/temporarySystem-hdr-eu" key="CodeSystem-temporarySystem-hdr-eu" name="Temporary HDR Code System"/>
 <artifact id="ValueSet/treated-problem-eu-hdr" key="ValueSet-treated-problem-eu-hdr" name="Treatment Class Value Set"/>
 <artifact id="ConceptMap/admissionEvaluation2FHIR-eu-hdr" key="ConceptMap-admissionEvaluation2FHIR-eu-hdr" name="eHN Admission Evaluation Model to this guide Map"/>

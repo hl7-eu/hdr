@@ -1,5 +1,3 @@
-### Authors and Contributors
-
 
 This guide is the result of a multi-stakeholder effort involving experts from various European countries, projects, and initiatives.
 
@@ -18,7 +16,8 @@ This initiative brought together more than 160 participants from around 25 count
 
 
 <div>
-
-<img src="experts.png" class="figure-img img-responsive img-rounded center-block" width="70%">
+<p>  </p>
+<img src="experts.png" class="figure-img img-responsive img-rounded center-block" width="40%">
+<p> </p>
 <p><strong>Fig. 1: Experts Distribution (Europe)</strong></p>
 </div>
