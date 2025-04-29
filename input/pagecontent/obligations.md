@@ -26,6 +26,8 @@ The first is the actor creating the report. This report can be send to a consume
 The second actor is the system maintaining a copy of the report received, to store and make it available for the consumers.
 The last actor is the system using the report received or retrieved.
 
+<p>{% include actors.svg %}</p>
+
 ### Obligations List
 
 <div>
@@ -41,6 +43,25 @@ The last actor is the system using the report received or retrieved.
             </td>
             <td>
 <p>This profile defines obligations for the AllergyIntolerance resource for the purpose of this project.</p>
+</td>
+         </tr>
+
+ <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-carePlan-obl-eu-hdr.html"
+                  title="StructureDefinition/carePlan-obl-eu-hdr">Care Plan: obligations</a>
+            </td>
+            <td>
+<p>This profile defines obligations for the CarePlan resource for the purpose of this guide.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-encounter-obl-eu-hdr.html"
+                  title="StructureDefinition/encounter-obl-eu-hdr">Encounter: Obligations</a>
+            </td>
+            <td>
+<p>This profile defines obligations for Inpatient Encounter in HL7 FHIR for the scope of this guide.</p>
 </td>
          </tr>
 
@@ -68,6 +89,7 @@ The last actor is the system using the report received or retrieved.
 <p>This profile defines obligations for Specimen in FHIR for the purpose of this guide.</p>
 </td>
          </tr>
+
       </tbody>
    </table>
 

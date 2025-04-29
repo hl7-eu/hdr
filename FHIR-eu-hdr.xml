@@ -24,11 +24,12 @@
 <artifact id="StructureDefinition/allergyIntolerance-eu-hdr" key="StructureDefinition-allergyIntolerance-eu-hdr" name="Allergy Intolerance (HDR)"/>
 <artifact id="ValueSet/allergy-intolerance-eu-hdr" key="ValueSet-allergy-intolerance-eu-hdr" name="Allergy Intolerance (with exceptions)"/>
 <artifact id="StructureDefinition/allergyIntolerance-obl-eu-hdr" key="StructureDefinition-allergyIntolerance-obl-eu-hdr" name="Allergy Intolerance: Obligations"/>
-<artifact id="StructureDefinition/bundle-eu-hdr" key="StructureDefinition-bundle-eu-hdr" name="Bundle (HDR)"/>
 <artifact id="StructureDefinition/bundle-obl-eu-hdr" key="StructureDefinition-bundle-obl-eu-hdr" name="Bundle (HDR)"/>
+<artifact id="StructureDefinition/bundle-eu-hdr" key="StructureDefinition-bundle-eu-hdr" name="Bundle (HDR)"/>
 <artifact id="ValueSet/cancer-stage-grading-vs" key="ValueSet-cancer-stage-grading-vs" name="Cancer Stage Grading: Snomed CT"/>
 <artifact id="ValueSet/cancer-stageGroup-vs" key="ValueSet-cancer-stageGroup-vs" name="Cancer Stage Group: SNOMED CT"/>
 <artifact id="StructureDefinition/carePlan-eu-hdr" key="StructureDefinition-carePlan-eu-hdr" name="Care Plan (HDR)"/>
+<artifact id="StructureDefinition/carePlan-obl-eu-hdr" key="StructureDefinition-carePlan-obl-eu-hdr" name="Care Plan: obligations"/>
 <artifact id="StructureDefinition/composition-eu-hdr" key="StructureDefinition-composition-eu-hdr" name="Composition (HDR)"/>
 <artifact id="StructureDefinition/condition-eu-hdr" key="StructureDefinition-condition-eu-hdr" name="Condition (HDR)"/>
 <artifact id="ValueSet/condition-eu-hdr" key="ValueSet-condition-eu-hdr" name="Condition Value Set"/>
@@ -38,12 +39,14 @@
 <artifact id="StructureDefinition/encounter-eu-hdr" key="StructureDefinition-encounter-eu-hdr" name="Encounter (HDR)"/>
 <artifact id="ValueSet/hdr-encounterClass-eu-hdr" key="ValueSet-hdr-encounterClass-eu-hdr" name="Encounter Class Value Set"/>
 <artifact id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
+<artifact id="StructureDefinition/encounter-obl-eu-hdr" key="StructureDefinition-encounter-obl-eu-hdr" name="Encounter: Obligations"/>
 <artifact id="ValueSet/exposureAgent-eu-hdr" key="ValueSet-exposureAgent-eu-hdr" name="Exposure of transmissible agents"/>
 <artifact id="StructureDefinition/familyMemberHistory-eu-hdr" key="StructureDefinition-familyMemberHistory-eu-hdr" name="FamilyMemberHistory (HDR)"/>
 <artifact id="StructureDefinition/flag-eu-hdr" key="StructureDefinition-flag-eu-hdr" name="Flag (HDR)"/>
 <artifact id="ActorDefinition/actor-consumer-eu-hdr" key="ActorDefinition-actor-consumer-eu-hdr" name="HDR Consumer"/>
 <artifact id="ActorDefinition/actor-creator-eu-hdr" key="ActorDefinition-actor-creator-eu-hdr" name="HDR Creator"/>
 <artifact id="ActorDefinition/actor-repos-eu-hdr" key="ActorDefinition-actor-repos-eu-hdr" name="HDR Repository"/>
+<artifact id="StructureDefinition/HumanName-obl-eu-hdr" key="StructureDefinition-HumanName-obl-eu-hdr" name="Human Name: Obligations"/>
 <artifact id="StructureDefinition/immunization-eu-hdr" key="StructureDefinition-immunization-eu-hdr" name="Immunization (HDR)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
 <artifact id="StructureDefinition/immunizationRecommendation-eu-hdr" key="StructureDefinition-immunizationRecommendation-eu-hdr" name="ImmunizationRecommendation (HDR)"/>

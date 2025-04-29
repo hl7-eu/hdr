@@ -1,7 +1,7 @@
 Profile: BundleEuHdrObligation
 Parent: BundleEuHdr
 Id: bundle-obl-eu-hdr
-Title: "Bundle (HDR)"
+Title: "Bundle: obligations"
 Description: """This profile defines obligations for the Hospital Discharge Report for the scope of this guide."""
 
 

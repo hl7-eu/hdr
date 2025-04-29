@@ -1,5 +1,5 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  FlagEuHdr
+Profile:  FlagEuHdrObligation
 Parent:   FlagEuHdr
 Id:       flag-obl-eu-hdr
 Title:    "Flag: obligations"
@@ -8,10 +8,8 @@ Description: "This profile defines obligations for the Flag resource to represen
 
 * insert SetFmmandStatusRule ( 0, informative)
 
-* extension contains $flag-detail named flagDetailExt 0..*
-* extension contains $flag-priority named flagPriorityExt 0..1
-* extension[flagDetailExt]
-* extension[flagPriorityExt]
-* status ^short = "Alert status"
-* code ^short = "Coded or textual message to display to user."
-* subject only Reference(PatientEuCore)
+* extension[flagDetailExt] insert ObligationSet3
+* extension[flagPriorityExt] insert ObligationSet3
+* status insert ObligationSet2
+* code insert ObligationSet1
+* subject insert ObligationSet1
