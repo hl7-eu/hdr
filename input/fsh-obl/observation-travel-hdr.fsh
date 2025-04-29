@@ -1,7 +1,7 @@
 Profile: ObservationTravelEuHdr
-Parent: Observation
-Id: observation-travel-eu-hdr
-Title: "Observation: country visited (HDR)"
+Parent: ObservationTravelEuHdr
+Id: observation-travel-obl-eu-hdr
+Title: "Observation: country visited: obligations"
 Description: "This profile sets minimum expectations for the Observation resource to record, search, and fetch travel history."
 * ^experimental = false
 * code = $loinc#82753-5  //"Country of Travel"

@@ -1,16 +1,16 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  ImmunizationEuHdr
-Parent:   Immunization
-Id:       immunization-eu-hdr
-Title:    "Immunization (HDR)"
-Description: """This profile constrains the Immunization resource for the purpose of this guide."""
+Profile:  ImmunizationEuHdrObligation
+Parent:   ImmunizationEuHdr
+Id:       immunization-obl-eu-hdr
+Title:    "Immunization: obligations"
+Description: """This profile defines obligations for the Immunization resource for the purpose of this guide."""
 
 //-------------------------------------------------------------------------------------------
 
 * ^experimental = false
-* ^purpose = "This profile constrains the Immunization resource for the purpose of this guide."
+* ^purpose = "This profile defines obligations for the Immunization resource for the purpose of this guide."
 
-* insert ImposeProfile($Immunization-uv-ips, 0)
+* insert SetFmmandStatusRule ( 0, informative)
 
 * extension contains $immunization-basedOn-r5 named basedOn 0..1
 * extension[basedOn].valueReference only Reference ( ImmunizationRecommendationEuHdr )
@@ -96,8 +96,8 @@ Description: """This profile constrains the Immunization resource for the purpos
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  ImmunizationRecommendationEuHdr
 Parent:   ImmunizationRecommendation
-Id:       immunizationRecommendation-eu-hdr
-Title:    "ImmunizationRecommendation (HDR)"
+Id:       immunizationRecommendation-obl-eu-hdr
+Title:    "ImmunizationRecommendation: obligations"
 Description: """This profile defines how to represent Immunization Recommandations for the purpose of this guide."""
 //-------------------------------------------------------------------------------------------
 

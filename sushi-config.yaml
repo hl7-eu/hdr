@@ -338,11 +338,17 @@ groups:
 #  
 
 
-#    obligations:
-#      name:  Actors and Obligations (Informative)
-#      description: Actors and Obligations used to describe the Hospital Discharge Report functional requirements for the specified data elements. Informative for this version of the guide.
-#      resources:
-#        - ActorDefinition/actor-consumer-eu-lab
+    obligations:
+      name:  Actors and Obligations (Informative)
+      description: Actors and Obligations used to describe the Hospital Discharge Report functional requirements for the specified data elements. Informative for this version of the guide.
+      resources:
+        - ActorDefinition/actor-consumer-eu-hdr
+        - ActorDefinition/actor-creator-eu-hdr
+        - ActorDefinition/actor-repos-eu-hdr
+        - StructureDefinition/allergyIntolerance-obl-eu-hdr
+        - StructureDefinition/bundle-obl-eu-hdr
+        - StructureDefinition/Patient-obl-eu-hdr
+        - StructureDefinition/Specimen-obl-eu-hdr
 
 
 

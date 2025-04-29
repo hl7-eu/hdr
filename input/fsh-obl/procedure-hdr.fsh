@@ -1,8 +1,8 @@
 Profile: ProcedureEuHdr
-Parent: Procedure
+Parent: ProcedureEuHdr
 // Parent: ProcedureUvIps
-Id: procedure-eu-hdr
-Title:    "Procedure (HDR)"
+Id: procedure-obl-eu-hdr
+Title:    "Procedure: obligations"
 Description: "This profile represents the constraints applied to the Procedure resource by this guide."
 
 * insert ImposeProfile ( $Procedure-uv-ips, 0 )  // Check if this is appropriate (see  support)

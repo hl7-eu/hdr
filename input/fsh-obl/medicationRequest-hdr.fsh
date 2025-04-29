@@ -1,9 +1,9 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  MedicationRequestEuHdr
-Parent:   MedicationRequest
-Id:       medicationRequest-eu-hdr
-Title:    "MedicationRequest (HDR)"
-Description: "This profile constrains the MedicationRequest resource for the purpose of this guide, adapted from the MPD work."
+Parent:   MedicationRequestEuHdr
+Id:       medicationRequest-obl-eu-hdr
+Title:    "MedicationRequest: obligations"
+Description: "This profile defines obligations for the MedicationRequest resource for the purpose of this guide, adapted from the MPD work."
 //-------------------------------------------------------------------------------------------
 
 * insert SetFmmandStatusRule (1, draft)

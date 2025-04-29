@@ -1,15 +1,12 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  MedicationAdministrationEuHdr
-Parent:   MedicationAdministration
-Id:       medicationAdministration-eu-hdr
-Title:    "MedicationAdministration (HDR)"
-Description: "This profile constrains the MedicationAdministration resource for the purpose of this guide, adapted from the MPD work."
+Parent:   MedicationAdministrationEuHdr
+Id:       medicationAdministration-obl-eu-hdr
+Title:    "MedicationAdministration: obligations"
+Description: "This profile defines obligations for the MedicationAdministration resource for the purpose of this guide, adapted from the MPD work."
 //-------------------------------------------------------------------------------------------
 
-* insert SetFmmandStatusRule (1, draft)
-
-
-
+* insert SetFmmandStatusRule ( 0, informative)
 
 * identifier 
   * ^short = "Medication Administration Identifier"

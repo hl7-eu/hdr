@@ -1,13 +1,13 @@
-Profile: DeviceEuHdr
-Parent: Device
+Profile: DeviceEuHdrObligation
+Parent: DeviceEuHdr
 // Parent: DeviceUvIps
-Id: device-eu-hdr
-Title: "Device (HDR)"
+Id: device-obl-eu-hdr
+Title: "Device: obligations"
 Description: "This profile represents the constraints applied to the Device resource for the purpose of this guide. A device used by or implanted on the patient is described in the hospital discharge report as an instance of a Device resource constrained by this profile."
 //* type 0..1 
 //* type only CodeableConceptIPS
 
-* insert ImposeProfile ( $Device-uv-ips, 0 )  // Check if this is appropriate (see  support)
+* insert SetFmmandStatusRule ( 0, informative)
 
 * identifier ^short = "Device Identifier"
 * udiCarrier ^short = "Unique Device Identifier (UDI)"

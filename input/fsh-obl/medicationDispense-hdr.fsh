@@ -1,9 +1,9 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  MedicationDispenseEuHdr
-Parent:   MedicationDispense
-Id:       medicationDispense-eu-hdr
-Title:    "MedicationDispense (HDR)"
-Description: "This profile constrains the MedicationDispense resource for the purpose of this guide, adapted from the MPD work."
+Parent:   MedicationDispenseEuHdr
+Id:       medicationDispense-obl-eu-hdr
+Title:    "MedicationDispense: obligations"
+Description: "This profile defines obligations for the MedicationDispense resource for the purpose of this guide, adapted from the MPD work."
 //-------------------------------------------------------------------------------------------
 
 * insert SetFmmandStatusRule (1, draft)

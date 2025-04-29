@@ -1,11 +1,11 @@
 Profile: FamilyMemberHistoryEuHdr
-Parent: FamilyMemberHistory
-Id: familyMemberHistory-eu-hdr
-Title: "FamilyMemberHistory (HDR)"
+Parent: FamilyMemberHistoryEuHdr
+Id: familyMemberHistory-obl-eu-hdr
+Title: "FamilyMemberHistory: obligations"
 Description: "This profile represents the constraints applied to the FamilyMemberHistory resource by this guide."
 
 
-// * status ^short = "Status of the family history record"
+* insert SetFmmandStatusRule ( 0, informative)
 * dataAbsentReason ^short = "Reason for missing data"
 * patient 1..1 
 * patient only Reference(PatientEuCore)

@@ -1,12 +1,12 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  FlagEuHdr
-Parent:   Flag
-Id:       flag-eu-hdr
-Title:    "Flag (HDR)"
-Description: "This profile constrains the Flag resource to represent alerts or warnings in FHIR for the purpose of this project."
+Parent:   FlagEuHdr
+Id:       flag-obl-eu-hdr
+Title:    "Flag: obligations"
+Description: "This profile defines obligations for the Flag resource to represent alerts or warnings in FHIR for the purpose of this project."
 //-------------------------------------------------------------------------------------------
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmandStatusRule ( 0, informative)
 
 * extension contains $flag-detail named flagDetailExt 0..*
 * extension contains $flag-priority named flagPriorityExt 0..1

@@ -1,7 +1,7 @@
 Profile: ObservationSdohEuHdr
-Parent: Observation
-Id: observation-sdoh-eu-hdr
-Title: "Observation: SDOH (HDR)"
+Parent: ObservationSdohEuHdr
+Id: observation-sdoh-obl-eu-hdr
+Title: "Observation: SDOH: obligations"
 Description: "Profile for Social Determinants of Health (SDOH) observations that involve assessment (e.g., by a provider, payer, etc.) as opposed to being derived only from screening surveys (as is the case for the SDOHCC Screening Response Observation)."
 
 * status ^short = "Observation status"

@@ -1,7 +1,7 @@
 Profile: ConditionEuHdr
 Parent: Condition
-Id: condition-eu-hdr
-Title: "Condition (HDR)"
+Id: condition-obl-eu-hdr
+Title: "Condition: obligations"
 Description: """This profile represents the constraint applied to the Condition in the scope of this guide. It support the Diagnostic summary part of the eHN data model adding two additional categories: First category distingueshes conditions present at admission and acquired during hospital stay, while second category is used to indicate impact of the condition to the treatement during hospital stay (treated, untreated)."""
 
 * insert ImposeProfile ( $Condition-uv-ips, 0 )  // Check if this is appropriate (see MS support)
@@ -9,7 +9,7 @@ Description: """This profile represents the constraint applied to the Condition 
 // follow the same apporach of lab for collection or add laterality to the bodySite ?
 * extension contains $bodySite-reference named bodySite 0..1
 * extension[bodySite].valueReference only Reference(BodyStructureEu)
-
+* insert SetFmmandStatusRule ( 0, informative)
 * category only CodeableConceptIPS
 * category
   * ^slicing.discriminator.type = #value
