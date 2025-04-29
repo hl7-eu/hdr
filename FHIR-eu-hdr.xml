@@ -23,13 +23,14 @@
 <artifact id="ValueSet/allergy-intolerance-substances-eu-hdr" key="ValueSet-allergy-intolerance-substances-eu-hdr" name="Allergy Intolerance"/>
 <artifact id="StructureDefinition/allergyIntolerance-eu-hdr" key="StructureDefinition-allergyIntolerance-eu-hdr" name="Allergy Intolerance (HDR)"/>
 <artifact id="ValueSet/allergy-intolerance-eu-hdr" key="ValueSet-allergy-intolerance-eu-hdr" name="Allergy Intolerance (with exceptions)"/>
+<artifact id="StructureDefinition/allergyIntolerance-obl-eu-hdr" key="StructureDefinition-allergyIntolerance-obl-eu-hdr" name="Allergy Intolerance: Obligations"/>
 <artifact id="StructureDefinition/bundle-eu-hdr" key="StructureDefinition-bundle-eu-hdr" name="Bundle (HDR)"/>
+<artifact id="StructureDefinition/bundle-obl-eu-hdr" key="StructureDefinition-bundle-obl-eu-hdr" name="Bundle (HDR)"/>
 <artifact id="ValueSet/cancer-stage-grading-vs" key="ValueSet-cancer-stage-grading-vs" name="Cancer Stage Grading: Snomed CT"/>
 <artifact id="ValueSet/cancer-stageGroup-vs" key="ValueSet-cancer-stageGroup-vs" name="Cancer Stage Group: SNOMED CT"/>
 <artifact id="StructureDefinition/carePlan-eu-hdr" key="StructureDefinition-carePlan-eu-hdr" name="Care Plan (HDR)"/>
 <artifact id="StructureDefinition/composition-eu-hdr" key="StructureDefinition-composition-eu-hdr" name="Composition (HDR)"/>
 <artifact id="StructureDefinition/condition-eu-hdr" key="StructureDefinition-condition-eu-hdr" name="Condition (HDR)"/>
-<artifact id="ValueSet/poa-indicator-eu-hdr" key="ValueSet-poa-indicator-eu-hdr" name="Condition Present on Admission (POA) Value Set"/>
 <artifact id="ValueSet/condition-eu-hdr" key="ValueSet-condition-eu-hdr" name="Condition Value Set"/>
 <artifact id="StructureDefinition/consent-eu-hdr" key="StructureDefinition-consent-eu-hdr" name="Consent (Advance Directives HDR)"/>
 <artifact id="StructureDefinition/device-eu-hdr" key="StructureDefinition-device-eu-hdr" name="Device (HDR)"/>
@@ -40,6 +41,9 @@
 <artifact id="ValueSet/exposureAgent-eu-hdr" key="ValueSet-exposureAgent-eu-hdr" name="Exposure of transmissible agents"/>
 <artifact id="StructureDefinition/familyMemberHistory-eu-hdr" key="StructureDefinition-familyMemberHistory-eu-hdr" name="FamilyMemberHistory (HDR)"/>
 <artifact id="StructureDefinition/flag-eu-hdr" key="StructureDefinition-flag-eu-hdr" name="Flag (HDR)"/>
+<artifact id="ActorDefinition/actor-consumer-eu-hdr" key="ActorDefinition-actor-consumer-eu-hdr" name="HDR Consumer"/>
+<artifact id="ActorDefinition/actor-creator-eu-hdr" key="ActorDefinition-actor-creator-eu-hdr" name="HDR Creator"/>
+<artifact id="ActorDefinition/actor-repos-eu-hdr" key="ActorDefinition-actor-repos-eu-hdr" name="HDR Repository"/>
 <artifact id="StructureDefinition/immunization-eu-hdr" key="StructureDefinition-immunization-eu-hdr" name="Immunization (HDR)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
 <artifact id="StructureDefinition/immunizationRecommendation-eu-hdr" key="StructureDefinition-immunizationRecommendation-eu-hdr" name="ImmunizationRecommendation (HDR)"/>
@@ -58,12 +62,16 @@
 <artifact id="StructureDefinition/observation-infectious-contact-eu-hdr" key="StructureDefinition-observation-infectious-contact-eu-hdr" name="Observation: Infectious Contact (HDR)"/>
 <artifact id="StructureDefinition/observation-sdoh-eu-hdr" key="StructureDefinition-observation-sdoh-eu-hdr" name="Observation: SDOH (HDR)"/>
 <artifact id="StructureDefinition/observation-travel-eu-hdr" key="StructureDefinition-observation-travel-eu-hdr" name="Observation: country visited (HDR)"/>
+<artifact id="StructureDefinition/Patient-obl-eu-hdr" key="StructureDefinition-Patient-obl-eu-hdr" name="Patient: Obligations"/>
 <artifact id="StructureDefinition/procedure-eu-hdr" key="StructureDefinition-procedure-eu-hdr" name="Procedure (HDR)"/>
 <artifact id="ValueSet/procedure-snomed-eu-hdr" key="ValueSet-procedure-snomed-eu-hdr" name="Procedure codes: Snomed CT"/>
 <artifact id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
+<artifact id="StructureDefinition/Specimen-obl-eu-hdr" key="StructureDefinition-Specimen-obl-eu-hdr" name="Specimen: Obligations"/>
 <artifact id="CodeSystem/temporarySystem-hdr-eu" key="CodeSystem-temporarySystem-hdr-eu" name="Temporary HDR Code System"/>
 <artifact id="ValueSet/treated-problem-eu-hdr" key="ValueSet-treated-problem-eu-hdr" name="Treatment Class Value Set"/>
+<artifact id="ValueSet/eHDSIConditionPOA" key="ValueSet-eHDSIConditionPOA" name="eHDSI Condition Present On Admission"/>
+<artifact id="ValueSet/eHDSITreatmentClass" key="ValueSet-eHDSITreatmentClass" name="eHDSI Treatment Class"/>
 <artifact id="ConceptMap/admissionEvaluation2FHIR-eu-hdr" key="ConceptMap-admissionEvaluation2FHIR-eu-hdr" name="eHN Admission Evaluation Model to this guide Map"/>
 <artifact id="ConceptMap/advanceDirectives2FHIR-eu-hdr" key="ConceptMap-advanceDirectives2FHIR-eu-hdr" name="eHN Advance Directives Model to this guide Map"/>
 <artifact id="ConceptMap/alerts2FHIR-eu-hdr" key="ConceptMap-alerts2FHIR-eu-hdr" name="eHN Alerts Model to this guide Map"/>

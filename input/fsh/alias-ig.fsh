@@ -2,9 +2,9 @@
 
 // Actor Canonical
 
-Alias: $server = http://hl7.eu/fhir/laboratory/actor-repos-eu-lab
-Alias: $creator = http://hl7.eu/fhir/laboratory/actor-creator-eu-lab
-Alias: $consumer = http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab
+Alias: $server = http://hl7.eu/fhir/laboratory/actor-repos-eu-hdr
+Alias: $creator = http://hl7.eu/fhir/laboratory/actor-creator-eu-hdr
+Alias: $consumer = http://hl7.eu/fhir/laboratory/actor-consumer-eu-hdr
 
 // -- EU BASE
 Alias: $Address-eu = http://hl7.eu/fhir/base/StructureDefinition/Address-eu
