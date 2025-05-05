@@ -4,6 +4,7 @@ Id: bundle-obl-eu-hdr
 Title: "Bundle: obligations"
 Description: """This profile defines obligations for the Hospital Discharge Report for the scope of this guide."""
 
+* insert SetFmmandStatusRule ( 0, informative)
 
 * identifier insert ObligationSet1
 * type insert ObligationSet1

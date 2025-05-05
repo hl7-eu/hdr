@@ -1,5 +1,5 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  MedicationAdministrationEuHdr
+Profile:  MedicationAdministrationEuHdrObligation
 Parent:   MedicationAdministrationEuHdr
 Id:       medicationAdministration-obl-eu-hdr
 Title:    "MedicationAdministration: obligations"
@@ -9,8 +9,6 @@ Description: "This profile defines obligations for the MedicationAdministration 
 * insert SetFmmandStatusRule ( 0, informative)
 
 * identifier 
-  * ^short = "Medication Administration Identifier"
-// * status ^short = "Current state of the dispensation"
-* subject only Reference( PatientEuCore )
-* medicationReference only Reference(MedicationEuHdr)
+* subject insert ObligationSet1
+* medication[x] insert ObligationSet2
 

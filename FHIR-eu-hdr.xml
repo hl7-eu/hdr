@@ -24,50 +24,68 @@
 <artifact id="StructureDefinition/allergyIntolerance-eu-hdr" key="StructureDefinition-allergyIntolerance-eu-hdr" name="Allergy Intolerance (HDR)"/>
 <artifact id="ValueSet/allergy-intolerance-eu-hdr" key="ValueSet-allergy-intolerance-eu-hdr" name="Allergy Intolerance (with exceptions)"/>
 <artifact id="StructureDefinition/allergyIntolerance-obl-eu-hdr" key="StructureDefinition-allergyIntolerance-obl-eu-hdr" name="Allergy Intolerance: Obligations"/>
-<artifact id="StructureDefinition/bundle-obl-eu-hdr" key="StructureDefinition-bundle-obl-eu-hdr" name="Bundle (HDR)"/>
 <artifact id="StructureDefinition/bundle-eu-hdr" key="StructureDefinition-bundle-eu-hdr" name="Bundle (HDR)"/>
+<artifact id="StructureDefinition/bundle-obl-eu-hdr" key="StructureDefinition-bundle-obl-eu-hdr" name="Bundle: obligations"/>
 <artifact id="ValueSet/cancer-stage-grading-vs" key="ValueSet-cancer-stage-grading-vs" name="Cancer Stage Grading: Snomed CT"/>
 <artifact id="ValueSet/cancer-stageGroup-vs" key="ValueSet-cancer-stageGroup-vs" name="Cancer Stage Group: SNOMED CT"/>
 <artifact id="StructureDefinition/carePlan-eu-hdr" key="StructureDefinition-carePlan-eu-hdr" name="Care Plan (HDR)"/>
 <artifact id="StructureDefinition/carePlan-obl-eu-hdr" key="StructureDefinition-carePlan-obl-eu-hdr" name="Care Plan: obligations"/>
 <artifact id="StructureDefinition/composition-eu-hdr" key="StructureDefinition-composition-eu-hdr" name="Composition (HDR)"/>
+<artifact id="StructureDefinition/composition-obl-eu-hdr" key="StructureDefinition-composition-obl-eu-hdr" name="Composition: obligations"/>
 <artifact id="StructureDefinition/condition-eu-hdr" key="StructureDefinition-condition-eu-hdr" name="Condition (HDR)"/>
 <artifact id="ValueSet/condition-eu-hdr" key="ValueSet-condition-eu-hdr" name="Condition Value Set"/>
+<artifact id="StructureDefinition/condition-obl-eu-hdr" key="StructureDefinition-condition-obl-eu-hdr" name="Condition: obligations"/>
 <artifact id="StructureDefinition/consent-eu-hdr" key="StructureDefinition-consent-eu-hdr" name="Consent (Advance Directives HDR)"/>
+<artifact id="StructureDefinition/consent-obl-eu-hdr" key="StructureDefinition-consent-obl-eu-hdr" name="Consent: obligations"/>
 <artifact id="StructureDefinition/device-eu-hdr" key="StructureDefinition-device-eu-hdr" name="Device (HDR)"/>
+<artifact id="StructureDefinition/device-obl-eu-hdr" key="StructureDefinition-device-obl-eu-hdr" name="Device: obligations"/>
 <artifact id="StructureDefinition/deviceUseStatement-eu-hdr" key="StructureDefinition-deviceUseStatement-eu-hdr" name="DeviceUseStatement (HDR)"/>
+<artifact id="StructureDefinition/deviceUseStatement-obl-eu-hdr" key="StructureDefinition-deviceUseStatement-obl-eu-hdr" name="DeviceUseStatement: obligations"/>
 <artifact id="StructureDefinition/encounter-eu-hdr" key="StructureDefinition-encounter-eu-hdr" name="Encounter (HDR)"/>
 <artifact id="ValueSet/hdr-encounterClass-eu-hdr" key="ValueSet-hdr-encounterClass-eu-hdr" name="Encounter Class Value Set"/>
 <artifact id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
 <artifact id="StructureDefinition/encounter-obl-eu-hdr" key="StructureDefinition-encounter-obl-eu-hdr" name="Encounter: Obligations"/>
 <artifact id="ValueSet/exposureAgent-eu-hdr" key="ValueSet-exposureAgent-eu-hdr" name="Exposure of transmissible agents"/>
 <artifact id="StructureDefinition/familyMemberHistory-eu-hdr" key="StructureDefinition-familyMemberHistory-eu-hdr" name="FamilyMemberHistory (HDR)"/>
+<artifact id="StructureDefinition/familyMemberHistory-obl-eu-hdr" key="StructureDefinition-familyMemberHistory-obl-eu-hdr" name="FamilyMemberHistory: obligations"/>
 <artifact id="StructureDefinition/flag-eu-hdr" key="StructureDefinition-flag-eu-hdr" name="Flag (HDR)"/>
+<artifact id="StructureDefinition/flag-obl-eu-hdr" key="StructureDefinition-flag-obl-eu-hdr" name="Flag: obligations"/>
 <artifact id="ActorDefinition/actor-consumer-eu-hdr" key="ActorDefinition-actor-consumer-eu-hdr" name="HDR Consumer"/>
 <artifact id="ActorDefinition/actor-creator-eu-hdr" key="ActorDefinition-actor-creator-eu-hdr" name="HDR Creator"/>
 <artifact id="ActorDefinition/actor-repos-eu-hdr" key="ActorDefinition-actor-repos-eu-hdr" name="HDR Repository"/>
 <artifact id="StructureDefinition/HumanName-obl-eu-hdr" key="StructureDefinition-HumanName-obl-eu-hdr" name="Human Name: Obligations"/>
 <artifact id="StructureDefinition/immunization-eu-hdr" key="StructureDefinition-immunization-eu-hdr" name="Immunization (HDR)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
+<artifact id="StructureDefinition/immunization-obl-eu-hdr" key="StructureDefinition-immunization-obl-eu-hdr" name="Immunization: obligations"/>
 <artifact id="StructureDefinition/immunizationRecommendation-eu-hdr" key="StructureDefinition-immunizationRecommendation-eu-hdr" name="ImmunizationRecommendation (HDR)"/>
+<artifact id="StructureDefinition/immunizationRecommendation-obl-eu-hdr" key="StructureDefinition-immunizationRecommendation-obl-eu-hdr" name="ImmunizationRecommendation: obligations"/>
 <artifact id="ValueSet/encounter-status-eu-hdr" key="ValueSet-encounter-status-eu-hdr" name="In-patient Encounter Type Value Set"/>
 <artifact id="ValueSet/hdr-encounter-type-eu-hdr" key="ValueSet-hdr-encounter-type-eu-hdr" name="In-patient Encounter Type Value Set"/>
 <artifact id="ValueSet/medical-devices-eu-hdr" key="ValueSet-medical-devices-eu-hdr" name="Medical Devices (SNOMED CT) - Xpandh"/>
 <artifact id="ValueSet/medical-devices-snomed-absent-unknown-eu-hdr" key="ValueSet-medical-devices-snomed-absent-unknown-eu-hdr" name="Medical Devices - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="StructureDefinition/Medication-eu-hdr" key="StructureDefinition-Medication-eu-hdr" name="Medication (HDR)"/>
+<artifact id="StructureDefinition/Medication-obl-eu-hdr" key="StructureDefinition-Medication-obl-eu-hdr" name="Medication: obligations"/>
 <artifact id="StructureDefinition/medicationAdministration-eu-hdr" key="StructureDefinition-medicationAdministration-eu-hdr" name="MedicationAdministration (HDR)"/>
+<artifact id="StructureDefinition/medicationAdministration-obl-eu-hdr" key="StructureDefinition-medicationAdministration-obl-eu-hdr" name="MedicationAdministration: obligations"/>
 <artifact id="StructureDefinition/medicationDispense-eu-hdr" key="StructureDefinition-medicationDispense-eu-hdr" name="MedicationDispense (HDR)"/>
+<artifact id="StructureDefinition/medicationDispense-obl-eu-hdr" key="StructureDefinition-medicationDispense-obl-eu-hdr" name="MedicationDispense: obligations"/>
 <artifact id="StructureDefinition/medicationRequest-eu-hdr" key="StructureDefinition-medicationRequest-eu-hdr" name="MedicationRequest (HDR)"/>
+<artifact id="StructureDefinition/medicationRequest-obl-eu-hdr" key="StructureDefinition-medicationRequest-obl-eu-hdr" name="MedicationRequest: obligations"/>
 <artifact id="StructureDefinition/medicationStatement-eu-hdr" key="StructureDefinition-medicationStatement-eu-hdr" name="MedicationStatement (HDR)"/>
+<artifact id="StructureDefinition/medicationStatement-obl-eu-hdr" key="StructureDefinition-medicationStatement-obl-eu-hdr" name="MedicationStatement: obligations"/>
 <artifact id="ValueSet/mcode-observation-codes-distant-metastases-vs" key="ValueSet-mcode-observation-codes-distant-metastases-vs" name="Observation Codes for Distant Metastases Category"/>
 <artifact id="ValueSet/mcode-observation-codes-primary-tumor-vs" key="ValueSet-mcode-observation-codes-primary-tumor-vs" name="Observation Codes for Primary Tumor Category"/>
 <artifact id="ValueSet/mcode-observation-codes-regional-nodes-vs" key="ValueSet-mcode-observation-codes-regional-nodes-vs" name="Observation Codes for Regional Node Category"/>
 <artifact id="StructureDefinition/observation-infectious-contact-eu-hdr" key="StructureDefinition-observation-infectious-contact-eu-hdr" name="Observation: Infectious Contact (HDR)"/>
+<artifact id="StructureDefinition/observation-infectious-contact-obl-eu-hdr" key="StructureDefinition-observation-infectious-contact-obl-eu-hdr" name="Observation: Infectious Contact: obligations"/>
 <artifact id="StructureDefinition/observation-sdoh-eu-hdr" key="StructureDefinition-observation-sdoh-eu-hdr" name="Observation: SDOH (HDR)"/>
+<artifact id="StructureDefinition/observation-sdoh-obl-eu-hdr" key="StructureDefinition-observation-sdoh-obl-eu-hdr" name="Observation: SDOH: obligations"/>
 <artifact id="StructureDefinition/observation-travel-eu-hdr" key="StructureDefinition-observation-travel-eu-hdr" name="Observation: country visited (HDR)"/>
+<artifact id="StructureDefinition/observation-travel-obl-eu-hdr" key="StructureDefinition-observation-travel-obl-eu-hdr" name="Observation: country visited: obligations"/>
 <artifact id="StructureDefinition/Patient-obl-eu-hdr" key="StructureDefinition-Patient-obl-eu-hdr" name="Patient: Obligations"/>
 <artifact id="StructureDefinition/procedure-eu-hdr" key="StructureDefinition-procedure-eu-hdr" name="Procedure (HDR)"/>
 <artifact id="ValueSet/procedure-snomed-eu-hdr" key="ValueSet-procedure-snomed-eu-hdr" name="Procedure codes: Snomed CT"/>
+<artifact id="StructureDefinition/procedure-obl-eu-hdr" key="StructureDefinition-procedure-obl-eu-hdr" name="Procedure: obligations"/>
 <artifact id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
 <artifact id="StructureDefinition/Specimen-obl-eu-hdr" key="StructureDefinition-Specimen-obl-eu-hdr" name="Specimen: Obligations"/>
