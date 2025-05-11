@@ -2,22 +2,29 @@ Instance: HDR-Paolo-Marcheschi-Example
 InstanceOf: Bundle
 Usage: #example
 * type = #collection
-* entry[+].fullUrl = "urn:uuid:ftgm-discharge-letter"
+
+* entry[+].fullUrl = "urn:uuid:130ed4e9-30f3-4a09-b9b1-ad8fd12237cb"
 * entry[=].resource = ftgm-discharge-letter
-* entry[+].fullUrl = "urn:uuid:patient-ftgm"
+
+* entry[+].fullUrl = "urn:uuid:445a0ff8-556d-4be2-bdde-6de668edf019"
 * entry[=].resource = patient-ftgm
-* entry[+].fullUrl = "urn:uuid:encounter-ftgm-example"
+
+* entry[+].fullUrl = "urn:uuid:e4d7ab9d-2b9c-42f8-95ef-08ff5e260a8e"
 * entry[=].resource = encounter-ftgm-example
-* entry[+].fullUrl = "urn:uuid:practitioner-ftgm-author"
+
+* entry[+].fullUrl = "urn:uuid:b61b7a93-2965-427a-96b9-972ac7d89997"
 * entry[=].resource = practitioner-ftgm-author
-* entry[+].fullUrl = "urn:uuid:organization-ftgm"
+
+* entry[+].fullUrl = "urn:uuid:57b3eb50-9187-4b5d-acd1-9e793c734bc0"
 * entry[=].resource = organization-ftgm
-* entry[+].fullUrl = "urn:uuid:insufficienza-respiratoria-acuta"
+
+* entry[+].fullUrl = "urn:uuid:abddc069-eda4-44c0-bd68-37e65a7bcb74"
 * entry[=].resource = insufficienza-respiratoria-acuta
 
 Instance: patient-ftgm
 InstanceOf: Patient
 Usage: #inline
+* id = "445a0ff8-556d-4be2-bdde-6de668edf019"
 * identifier[+].type = $v2-0203#NI
 * identifier[=].system = "http://ec.europa.eu/identifier/eci"
 * identifier[=].value = "9977-888840-8"
@@ -40,6 +47,7 @@ Usage: #inline
 Instance: practitioner-ftgm-author
 InstanceOf: Practitioner
 Usage: #inline
+* id = "b61b7a93-2965-427a-96b9-972ac7d89997"
 * identifier.id = "12345"
 * name.family = "Dottore"
 * name.given = "Ftgm"
@@ -51,6 +59,7 @@ Usage: #inline
 Instance: organization-ftgm
 InstanceOf: Organization
 Usage: #inline
+* id = "57b3eb50-9187-4b5d-acd1-9e793c734bc0"
 * name = "FONDAZIONE GABRIELE MONASTERIO"
 * address[+].line[+] = "Via G. Moruzzi 1,  57126 Pisa"
 * address[=].city = "Pisa"
@@ -59,17 +68,18 @@ Usage: #inline
 Instance: ftgm-discharge-letter
 InstanceOf: Composition
 Usage: #inline
+* id = "130ed4e9-30f3-4a09-b9b1-ad8fd12237cb"
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge Summary"
 * date = "2025-02-02T13:30:00+01:00"
-* subject = Reference(urn:uuid:patient-ftgm)
+* subject = Reference(urn:uuid:445a0ff8-556d-4be2-bdde-6de668edf019)
 * encounter = Reference(urn:uuid:encounter-example-ftgm)
 * author[0] = Reference(urn:uuid:practitioner-author-ftgm)
 * title = "Lettera di dimissione"
 * attester.mode = #legal
 * attester.time = "2025-02-02T00:00:00+01:00"
 * attester.party = Reference(urn:uuid:practitioner-author)
-* custodian = Reference(urn:uuid:organization-ftgm)
+* custodian = Reference(urn:uuid:57b3eb50-9187-4b5d-acd1-9e793c734bc0)
 * section[0].title = "Admission Narrative Diagnosis"
 * section[=].code.coding[0] = $loinc#46241-6 "Hospital admission diagnosis Narrative - Reported"
 * section[=].code.coding[+] = $loinc#47039-3 "Ricovero Ospedaliero, anamnesi ed esame obiettivo"
@@ -113,7 +123,7 @@ Usage: #inline
   </table>
 </div>
 """
-* section[=].entry[+] = Reference(urn:uuid:insufficienza-respiratoria-acuta)
+* section[=].entry[+] = Reference(urn:uuid:abddc069-eda4-44c0-bd68-37e65a7bcb74)
 * section[7].title = "Terapia farmacologica alla dimissione"
 * section[=].code = $loinc#11535-2 "Hospital discharge medications Narrative"
 * section[=].text.status = #generated
@@ -152,6 +162,7 @@ Usage: #inline
 Instance: encounter-ftgm-example
 InstanceOf: Encounter
 Usage: #inline
+* id = "e4d7ab9d-2b9c-42f8-95ef-08ff5e260a8e"
 * status = #finished*
 * extension.url = "http://hl7.eu/fhir/ig/xpandh/hdr/StructureDefinition/HDREncounter"
 * extension.valueBoolean = true
@@ -159,16 +170,17 @@ Usage: #inline
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
 * period.start = "2025-01-21T10:00:00+01:00"
 * period.end = "2025-02-02T09:00:00+01:00"
-* subject = Reference(urn:uuid:patient-ftgm)
+* subject = Reference(urn:uuid:445a0ff8-556d-4be2-bdde-6de668edf019)
 
 Instance: insufficienza-respiratoria-acuta
 InstanceOf: Condition
 // add? 7678002 Cytomegaloviral pneumonia
 // add? 721804002 Infection of lung caused by Pneumocystis (disorder)
 Usage: #inline
+* id = "abddc069-eda4-44c0-bd68-37e65a7bcb74"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * code[0].coding[+] = http://hl7.org/fhir/sid/icd-10#J96.0 "Acute respiratory failure"
 * code[=].coding[+] = http://snomed.info/sct#65710008 "Acute respiratory failure"
-* subject = Reference(urn:uuid:patient-ftgm)
+* subject = Reference(urn:uuid:445a0ff8-556d-4be2-bdde-6de668edf019)
 * onsetDateTime = "2025-01-10"
 
