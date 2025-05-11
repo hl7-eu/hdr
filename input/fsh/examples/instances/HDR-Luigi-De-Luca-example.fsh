@@ -3,10 +3,13 @@ InstanceOf: BundleEuHdr
 Title: "Complete HL7 Europe Hospital Discharge Report Bundle"
 Description: "FHIR Bundle example for HL7 Europe Hospital Discharge Report"
 Usage: #example
+
 * type = #document
+
 * identifier[+].type = $v2-0203#PRN
 * identifier[=].system = "http://local.setting.eu/identifier"
-* identifier[=].value = "b6b4291d-4f78-4c5e-a8e6-c4355c1cc4f5" // Persistent identifier for the bundle
+* identifier[=].value = "f3022407-11df-4964-9458-221b2f5c6954"
+
 * timestamp = "2025-04-29T14:00:00Z"
 
 * entry[composition].fullUrl = "urn:uuid:b9dc409d-ec81-4556-9fac-4dc3f731c199"
@@ -66,7 +69,7 @@ Instance: patient-luca-example
 InstanceOf: Patient
 Usage: #inline
 * id = "b01a2623-e219-41d2-8e78-1fa1439751d0"
-* identifier[+].type = $v2-0203#NI
+* identifier[+].type = $v2-0203#JHN
 * identifier[=].system = "http://ec.europa.eu/identifier/eci"
 * identifier[=].value = "3332-386800-1"
 * identifier[+].type = $v2-0203#MR
@@ -185,8 +188,8 @@ Usage: #inline
         </tr>
         <tr>
             <td>Blood Pressure</td>
-            <td>155 / 95 mm[Hg]</td>
-            <td>150 / 90 mm[Hg]</td>
+            <td>155 / 95 mmHg</td>
+            <td>150 / 90 mmHg</td>
         </tr>
     </tbody>
   </table>
@@ -412,7 +415,7 @@ Usage: #example
 * title = "Diabetes Management Plan"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * period.start = "2025-04-10"
-* category[0] = http://terminology.hl7.org/CodeSystem/care-plan-category#assess-plan "Assessment and Plan of Treatment"
+* category[0] = $sct#736284000 "Diabetes clinical management plan"
 * activity[0].detail.code = $sct#306118006 "Referral to endocrinology service"
 * activity[0].detail.status = #not-started
 * activity[1].detail.code = $sct#103699006 "Referral to dietitian"
