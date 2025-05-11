@@ -5,40 +5,50 @@ Description: "FHIR Bundle example for HL7 Europe Hospital Discharge Report"
 Usage: #example
 * type = #document
 * timestamp = "2025-04-29T14:00:00+01:00"
-* entry[0].fullUrl = "urn:uuid:composition-hdr-wolff-example"
+
+* entry[0].fullUrl = "urn:uuid:bd69ab8e-3835-4fb6-be83-1852a2893a65"
 * entry[0].resource = composition-hdr-wolff-example
-* entry[+].fullUrl = "urn:uuid:patient-wolff-example"
+
+* entry[+].fullUrl = "urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e"
 * entry[=].resource = patient-wolff-example
-* entry[+].fullUrl = "urn:uuid:practitionerrole-wolff-author"
+
+* entry[+].fullUrl = "urn:uuid:cc0ae2a0-980d-4a2b-a4fb-9c71ecc70a15"
 * entry[=].resource = practitionerrole-wolff-author
-* entry[+].fullUrl = "urn:uuid:practitioner-wolff-author"
+
+* entry[+].fullUrl = "urn:uuid:b60f89db-36c7-4a23-ab59-ace7089d2387"
 * entry[=].resource = practitioner-wolff-author
-* entry[+].fullUrl = "urn:uuid:organization-wolff-hospital"
+
+* entry[+].fullUrl = "urn:uuid:3f30e341-19c6-484f-827a-0c58545fb2bc"
 * entry[=].resource = organization-wolff-hospital
-* entry[+].fullUrl = "urn:uuid:encounter-wolff-example"
+
+* entry[+].fullUrl = "urn:uuid:12fef60c-1fe7-4988-8286-af691889a3f3"
 * entry[=].resource = encounter-wolff-example
-* entry[+].fullUrl = "urn:uuid:fracture-left-leg"
+
+* entry[+].fullUrl = "urn:uuid:38d0593b-7949-489e-9306-95df81a109df"
 * entry[=].resource = fracture-left-leg
-* entry[+].fullUrl = "urn:uuid:external-fixator"
+
+* entry[+].fullUrl = "urn:uuid:1493fed2-e9ed-4dc1-b107-f077cb1d0d40"
 * entry[=].resource = external-fixator
-* entry[+].fullUrl = "urn:uuid:paracetamol"
+
+* entry[+].fullUrl = "urn:uuid:1bcfb26f-6958-4604-a40b-712170c1e536"
 * entry[=].resource = paracetamol
-* entry[+].fullUrl = "urn:uuid:cefazolin"
+
+* entry[+].fullUrl = "urn:uuid:4578e7cd-0d00-4221-9a7f-3e3d6e14a21b"
 * entry[=].resource = cefazolin
 
 Instance: composition-hdr-wolff-example
 InstanceOf: Composition
-
 Title: "HDR Composition"
 Usage: #inline
+* id = "bd69ab8e-3835-4fb6-be83-1852a2893a65"
 * status = #final
 * type = http://loinc.org#18842-5 "Discharge Summary"
-* subject = Reference(urn:uuid:patient-wolff-example)
-* encounter = Reference(urn:uuid:encounter-wolff-example)
+* subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
+* encounter = Reference(urn:uuid:12fef60c-1fe7-4988-8286-af691889a3f3)
 * date = "2025-04-29T13:30:00+01:00"
-* author = Reference(urn:uuid:practitionerrole-wolff-author)
+* author = Reference(urn:uuid:cc0ae2a0-980d-4a2b-a4fb-9c71ecc70a15)
 * title = "Hospital Discharge Report"
-* custodian = Reference(urn:uuid:organization-wolff-hospital)
+* custodian = Reference(urn:uuid:3f30e341-19c6-484f-827a-0c58545fb2bc)
 // section
 * section[0].title = "Admission evaluation"
 * section[=].code = http://loinc.org#67851-6 "Admission evaluation"
@@ -78,7 +88,7 @@ Usage: #inline
   </table>
 </div>
 """
-* section[=].entry[+] = Reference(urn:uuid:external-fixator)
+* section[=].entry[+] = Reference(urn:uuid:1493fed2-e9ed-4dc1-b107-f077cb1d0d40)
 // section
 * section[2].title = "Medications"
 * section[=].code = http://loinc.org#87232-5 "Medication administration.brief"
@@ -101,8 +111,8 @@ Usage: #inline
   </table>
 </div>
 """
-* section[=].entry[+] = Reference(urn:uuid:paracetamol)
-* section[=].entry[+] = Reference(urn:uuid:cefazolin)
+* section[=].entry[+] = Reference(urn:uuid:1bcfb26f-6958-4604-a40b-712170c1e536)
+* section[=].entry[+] = Reference(urn:uuid:4578e7cd-0d00-4221-9a7f-3e3d6e14a21b)
 // section
 * section[3].title = "Hospital Course"
 * section[=].code = http://loinc.org#8648-8 "Hospital Course"
@@ -127,6 +137,7 @@ Usage: #inline
 Instance: patient-wolff-example
 InstanceOf: Patient
 Usage: #inline
+* id = "a1438872-05b1-4868-857d-521c9d586a7e"
 * identifier[+].type = $v2-0203#NI
 * identifier[=].system = "http://ec.europa.eu/identifier/eci"
 * identifier[=].value = "6077-888840-8"
@@ -150,12 +161,14 @@ Usage: #inline
 Instance: practitionerrole-wolff-author
 InstanceOf: PractitionerRole
 Usage: #inline
-* practitioner = Reference(urn:uuid:practitioner-wolff-author)
+* id = "cc0ae2a0-980d-4a2b-a4fb-9c71ecc70a15"
+* practitioner = Reference(urn:uuid:b60f89db-36c7-4a23-ab59-ace7089d2387)
 * organization = Reference(urn:uuid:organization-wolff-hospital)
 
 Instance: practitioner-wolff-author
 InstanceOf: Practitioner
 Usage: #inline
+* id = "b60f89db-36c7-4a23-ab59-ace7089d2387"
 * name.prefix = "dr"
 * name.given = "Anna"
 * name.family = "Smit"
@@ -165,6 +178,7 @@ Usage: #inline
 Instance: organization-wolff-hospital
 InstanceOf: Organization
 Usage: #inline
+* id = "3f30e341-19c6-484f-827a-0c58545fb2bc"
 * name = "Onze Lieve Lucas Gasthuis Hulst"
 * address.city = "Hulst"
 * address.postalCode = "4561"
@@ -173,44 +187,49 @@ Usage: #inline
 Instance: encounter-wolff-example
 InstanceOf: Encounter
 Usage: #inline
+* id = "12fef60c-1fe7-4988-8286-af691889a3f3"
 * status = #finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP
 * period.start = "2025-04-20T10:00:00+01:00"
 * period.end = "2025-04-29T11:00:00+01:00"
-* subject = Reference(urn:uuid:patient-wolff-example)
-* serviceProvider = Reference(urn:uuid:organization-wolff-hospital)
-* reasonReference = Reference(urn:uuid:fracture-left-leg)
+* subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
+* serviceProvider = Reference(urn:uuid:3f30e341-19c6-484f-827a-0c58545fb2bc)
+* reasonReference = Reference(urn:uuid:38d0593b-7949-489e-9306-95df81a109df)
 
 Instance: fracture-left-leg
 InstanceOf: Condition
 Usage: #inline
+* id = "38d0593b-7949-489e-9306-95df81a109df"
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
 * code = http://snomed.info/sct#82423001 "Fracture of lower leg"
 * bodySite = http://snomed.info/sct#83738005 "Left lower limb"
-* subject = Reference(urn:uuid:patient-wolff-example)
+* subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
 * onsetDateTime = "2025-04-20"
 
 Instance: external-fixator
 InstanceOf: Procedure
 Usage: #inline
+* id = "1493fed2-e9ed-4dc1-b107-f077cb1d0d40"
 * status = #completed
 * code = http://snomed.info/sct#304527002 "Application of external fixator device"
 * bodySite = http://snomed.info/sct#83738005 "Left lower limb"
-* subject = Reference(urn:uuid:patient-wolff-example)
+* subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
 * performedDateTime = "2025-04-23"
 
 Instance: paracetamol
 InstanceOf: MedicationAdministration
 Usage: #inline
+* id = "1bcfb26f-6958-4604-a40b-712170c1e536"
 * status = #completed
 * medicationCodeableConcept = http://snomed.info/sct#387517004 "Paracetamol"
-* subject = Reference(urn:uuid:patient-wolff-example)
+* subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
 * effectiveDateTime = "2025-04-21"
 
 Instance: cefazolin
 InstanceOf: MedicationAdministration
 Usage: #inline
+* id = "4578e7cd-0d00-4221-9a7f-3e3d6e14a21b"
 * status = #completed
 * medicationCodeableConcept = http://snomed.info/sct#387458008 "Cefazolin"
-* subject = Reference(urn:uuid:patient-wolff-example)
+* subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
 * effectiveDateTime = "2025-04-23"
