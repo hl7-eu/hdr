@@ -34,7 +34,7 @@ Usage: #inline
 * name[=].text = "Paolo Marcheschi"
 * gender = #male
 * birthDate = "1990-01-01"
-* maritalStatus = $v3-MartialStatus#M
+* maritalStatus = $v3-MaritalStatus#M
 * communication.language = urn:ietf:bcp:47#it-IT
 * address[+].use = #home
 * address[=].type = #physical
