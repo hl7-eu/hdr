@@ -4,7 +4,8 @@
 Alias: $absent-unknown-uv-ips = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unknown-uv-ips
 Alias: $ajcc = http://cancerstaging.org
 Alias: $atc = http://www.whocc.no/atc
-Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category
+Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category ===> to be checked <====
+Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias: $data-absent-reason-cs =  http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $diagnosis-role = http://terminology.hl7.org/CodeSystem/diagnosis-role
 Alias: $dicomOntology = http://dicom.nema.org/resources/ontology/DCM
