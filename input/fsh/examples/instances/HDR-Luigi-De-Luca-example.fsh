@@ -115,13 +115,13 @@ InstanceOf: EncounterEuHdr
 Usage: #inline
 * id = "7c9a2bf1-507f-4d43-b06e-d78e9670379d"
 * status = #finished
-* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP
+* class = $v3-ActCode#IMP
 * period.start = "2025-04-01T08:45:00+01:00"
 * period.end = "2025-04-10T11:00:00+01:00"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * serviceProvider = Reference(urn:uuid:organization-luca-hospital)
-* reasonCode = http://snomed.info/sct#714628002 "Prediabetes (finding)"
-* serviceType = http://snomed.info/sct#171183004 "Diabetes mellitus screening (procedure)"
+* reasonCode = $sct#714628002 "Prediabetes (finding)"
+* serviceType = $sct#171183004 "Diabetes mellitus screening (procedure)"
 
 Instance: composition-hdr-luca-example
 InstanceOf: CompositionEuHdr
@@ -129,7 +129,7 @@ Title: "HDR Composition"
 Usage: #inline
 * id = "b9dc409d-ec81-4556-9fac-4dc3f731c199"
 * status = #final
-* type = http://loinc.org#34105-7 "Hospital Discharge summary"
+* type = $loinc#34105-7 "Hospital Discharge summary"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * encounter = Reference(urn:uuid:7c9a2bf1-507f-4d43-b06e-d78e9670379d)
 * date = "2025-04-29T13:30:00+01:00"
@@ -138,7 +138,7 @@ Usage: #inline
 * custodian = Reference(urn:uuid:organization-luca-hospital)
 // section
 * section[sectionAdmissionEvaluation].title = "Admission evaluation"
-* section[=].code = http://loinc.org#67852-4 "Admission evaluation"
+* section[=].code = $loinc#67852-4 "Admission evaluation"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -155,7 +155,7 @@ Usage: #inline
 """
 // section
 * section[sectionFamilyHistory].title = "Family History"
-* section[=].code = http://loinc.org#10157-6 "Family History"
+* section[=].code = $loinc#10157-6 "Family History"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -166,7 +166,7 @@ Usage: #inline
 * section[=].entry[+] = Reference(urn:uuid:familyhistory-grandmother-luca-example)
 // section
 * section[sectionVitalSigns].title = "Vital signs"
-* section[=].code = http://loinc.org#8716-3 "Vital signs"
+* section[=].code = $loinc#8716-3 "Vital signs"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -185,8 +185,8 @@ Usage: #inline
         </tr>
         <tr>
             <td>Blood Pressure</td>
-            <td>155 / 95 mmHg</td>
-            <td>150 / 90 mmHg</td>
+            <td>155 / 95 mm[Hg]</td>
+            <td>150 / 90 mm[Hg]</td>
         </tr>
     </tbody>
   </table>
@@ -200,7 +200,7 @@ Usage: #inline
 
 // section
 * section[sectionTobaccoUse].title = "Tobacco use"
-* section[=].code = http://loinc.org#11367-0 "Tobacco use"
+* section[=].code = $loinc#11367-0 "Tobacco use"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -211,7 +211,7 @@ Usage: #inline
 
 // section
 * section[sectionHospitalCourse].title = "Hospital Course"
-* section[=].code = http://loinc.org#8648-8 "Hospital Course"
+* section[=].code = $loinc#8648-8 "Hospital Course"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -225,7 +225,7 @@ Usage: #inline
 """
 // section
 * section[sectionSignificantResults].title = "Significant Observation Results"
-* section[=].code = http://loinc.org#87232-5 "Significant Observation Results"
+* section[=].code = $loinc#87232-5 "Significant Observation Results"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -283,7 +283,7 @@ Usage: #inline
 """
 // section
 * section[sectionSignificantProcedures].title = "Significant procedures"
-* section[=].code = http://loinc.org#10185-7 "Significant procedures"
+* section[=].code = $loinc#10185-7 "Significant procedures"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -299,7 +299,7 @@ Usage: #inline
 * section[=].entry[+] = Reference(urn:uuid:metformin-therapy-luca)
 // section
 * section[sectionPharmacotherapy].title = "Medications"
-* section[=].code = http://loinc.org#87232-5 "Medication administration.brief"
+* section[=].code = $loinc#87232-5 "Medication administration.brief"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -324,7 +324,7 @@ Usage: #inline
 * section[=].entry[+] = Reference(urn:uuid:metformin-luca)
 // section
 * section[sectionPlanOfCare].title = "Follow-up"
-* section[=].code = http://loinc.org#18776-5 "Follow-up"
+* section[=].code = $loinc#18776-5 "Follow-up"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -354,7 +354,7 @@ Usage: #inline
 
 // section
 * section[sectionDiagnosticSummary].title = "Diagnosis at Discharge"
-* section[=].code = http://loinc.org#11535-2 "Problem specification in narrative form"
+* section[=].code = $loinc#11535-2 "Problem specification in narrative form"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -377,7 +377,7 @@ Usage: #inline
 * section[=].entry[+] = Reference(urn:uuid:diabetis-condition-luca)
 // section
 * section[sectionDischargeInstructions].title = "Hospital Discharge Instructions"
-* section[=].code = http://loinc.org#8653-8 "Hospital Discharge Instructions"
+* section[=].code = $loinc#8653-8 "Hospital Discharge Instructions"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -396,9 +396,9 @@ Usage: #inline
 Instance: diabetis-condition-luca
 InstanceOf: ConditionEuHdr
 Usage: #inline
-* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
-* code[0].coding[+] = http://hl7.org/fhir/sid/icd-10#E11 "Type 2 diabetes mellitus"
-* code[0].coding[+] = http://snomed.info/sct#44054006 "Diabetes mellitus type 2 (disorder)"
+* clinicalStatus = $condition-clinical#active
+* code[0].coding[+] = $icd10#E11 "Type 2 diabetes mellitus"
+* code[0].coding[+] = $sct#44054006 "Diabetes mellitus type 2 (disorder)"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * onsetDateTime = "2025-04-04"
 
@@ -413,18 +413,18 @@ Usage: #example
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * period.start = "2025-04-10"
 * category[0] = http://terminology.hl7.org/CodeSystem/care-plan-category#assess-plan "Assessment and Plan of Treatment"
-* activity[0].detail.code = http://snomed.info/sct#306118006 "Referral to endocrinology service"
+* activity[0].detail.code = $sct#306118006 "Referral to endocrinology service"
 * activity[0].detail.status = #not-started
-* activity[1].detail.code = http://snomed.info/sct#103699006 "Referral to dietitian"
+* activity[1].detail.code = $sct#103699006 "Referral to dietitian"
 * activity[1].detail.status = #not-started
-* activity[2].detail.code = http://snomed.info/sct#43396009 "Hemoglobin A1c measurement"
+* activity[2].detail.code = $sct#43396009 "Hemoglobin A1c measurement"
 * activity[2].detail.status = #not-started
 
 Instance: lifestyle-consultation-luca
 InstanceOf: ProcedureEuHdr
 Usage: #inline
 * status = #completed
-* code = http://snomed.info/sct#313204009 "Lifestyle education (procedure)"
+* code = $sct#313204009 "Lifestyle education (procedure)"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * performedDateTime = "2025-04-05"
 
@@ -432,7 +432,7 @@ Instance: diabetes-education-luca
 InstanceOf: ProcedureEuHdr
 Usage: #inline
 * status = #completed
-* code = http://snomed.info/sct#6143009 "Diabetic education (procedure)"
+* code = $sct#6143009 "Diabetic education (procedure)"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * performedDateTime = "2025-04-04"
 
@@ -440,7 +440,7 @@ Instance: metformin-therapy-luca
 InstanceOf: ProcedureEuHdr
 Usage: #inline
 * status = #active
-* code = http://snomed.info/sct#340186004 "Metformin therapy (procedure)"
+* code = $sct#340186004 "Metformin therapy (procedure)"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * performedDateTime = "2025-04-04"
 
@@ -451,8 +451,8 @@ Description: "Mother has a history of type 2 diabetes mellitus."
 Usage: #example
 * status = #completed
 * patient = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
-* relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MTH "mother"
-* condition[0].code = http://snomed.info/sct#430679000 "Family history of diabetes mellitus type 2 (situation)"
+* relationship = $v3-RoleCode#MTH "mother"
+* condition[0].code = $sct#430679000 "Family history of diabetes mellitus type 2 (situation)"
 
 Instance: familyhistory-grandmother-luca-example
 InstanceOf: FamilyMemberHistoryEuHdr
@@ -461,8 +461,8 @@ Description: "Maternal grandmother has a history of type 2 diabetes mellitus."
 Usage: #example
 * status = #completed
 * patient = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
-* relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#GMTH "maternal grandmother"
-* condition[0].code = http://snomed.info/sct#430679000 "Family history of diabetes mellitus type 2 (situation)"
+* relationship = $v3-RoleCode#MGRMTH "maternal grandmother"
+* condition[0].code = $sct#430679000 "Family history of diabetes mellitus type 2 (situation)"
 
 Instance: bodyweight-luca-1-example
 InstanceOf: Observation
@@ -470,13 +470,14 @@ Title: "Body Weight Observation - 109 kg"
 Description: "Vital sign observation for body weight of 109 kg measured on April 1st."
 Usage: #example
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
-* code = http://loinc.org#29463-7 "Body weight"
+* category[0] = $observation-category#vital-signs "Vital Signs"
+* code = $loinc#29463-7 "Body weight"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-01"
 * valueQuantity.value = 109
 * valueQuantity.unit = "kg"
-* valueQuantity.code = http://unitsofmeasure.org#kg
+* valueQuantity.system = $ucum
+* valueQuantity.code = $ucum#kg
 
 Instance: bodyweight-luca-2-example
 InstanceOf: Observation
@@ -484,13 +485,14 @@ Title: "Body Weight Observation - 108 kg"
 Description: "Vital sign observation for body weight of 108 kg measured on April 10th."
 Usage: #example
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
-* code = http://loinc.org#29463-7 "Body weight"
+* category[0] = $observation-category#vital-signs "Vital Signs"
+* code = $loinc#29463-7 "Body weight"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-19"
 * valueQuantity.value = 108
 * valueQuantity.unit = "kg"
-* valueQuantity.code = http://unitsofmeasure.org#kg
+* valueQuantity.system = $ucum
+* valueQuantity.code = $ucum#kg
 
 Instance: bodyheight-luca-1-example
 InstanceOf: Observation
@@ -498,34 +500,37 @@ Title: "Body Height Observation - 177 cm"
 Description: "Vital sign observation for body height of 177 cm measured on April 1st."
 Usage: #example
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
-* code = http://loinc.org#8302-2 "Body height"
+* category[0] = $observation-category#vital-signs "Vital Signs"
+* code = $loinc#8302-2 "Body height"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-01"
 * valueQuantity.value = 177
 * valueQuantity.unit = "cm"
-* valueQuantity.code = http://unitsofmeasure.org#cm
+* valueQuantity.system = $ucum
+* valueQuantity.code = $ucum#cm
 
 Instance: bloodpressure-luca-1-example
 InstanceOf: Observation
-Title: "Blood Pressure Observation - 155/95 mmHg"
-Description: "Vital sign observation for blood pressure (155/95 mmHg) measured on April 1st."
+Title: "Blood Pressure Observation - 155/95 mm[Hg]"
+Description: "Vital sign observation for blood pressure (155/95 mm[Hg]) measured on April 1st."
 Usage: #example
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
-* code = http://loinc.org#85354-9 "Blood pressure panel with all children optional"
+* category[0] = $observation-category#vital-signs "Vital Signs"
+* code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-01"
 // Systolic component
-* component[0].code = http://loinc.org#8480-6 "Systolic blood pressure"
+* component[0].code = $loinc#8480-6 "Systolic blood pressure"
 * component[=].valueQuantity.value = 155
 * component[=].valueQuantity.unit = "mm[Hg]"
-* component[=].valueQuantity.code = http://unitsofmeasure.org#mmHg
+* component[=].valueQuantity.system = $ucum
+* component[=].valueQuantity.code = $ucum#mm[Hg]
 // Diastolic component
-* component[1].code = http://loinc.org#8462-4 "Diastolic blood pressure"
+* component[1].code = $loinc#8462-4 "Diastolic blood pressure"
 * component[=].valueQuantity.value = 95
 * component[=].valueQuantity.unit = "mm[Hg]"
-* component[=].valueQuantity.code = http://unitsofmeasure.org#mmHg
+* component[=].valueQuantity.system = $ucum
+* component[=].valueQuantity.code = $ucum#mm[Hg]
 
 Instance: bloodpressure-luca-2-example
 InstanceOf: Observation
@@ -533,20 +538,23 @@ Title: "Blood Pressure Observation - 150/90 mmHg"
 Description: "Vital sign observation for blood pressure (155/95 mmHg) measured on April 1st."
 Usage: #example
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
-* code = http://loinc.org#85354-9 "Blood pressure panel with all children optional"
+* category[0] = $observation-category#vital-signs "Vital Signs"
+* code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-10"
 // Systolic component
-* component[0].code = http://loinc.org#8480-6 "Systolic blood pressure"
+* component[0].code = $loinc#8480-6 "Systolic blood pressure"
 * component[=].valueQuantity.value = 150
 * component[=].valueQuantity.unit = "mm[Hg]"
-* component[=].valueQuantity.code = http://unitsofmeasure.org#mmHg
+* component[=].valueQuantity.system = $ucum
+* component[=].valueQuantity.code = $ucum#mm[Hg]
 // Diastolic component
-* component[1].code = http://loinc.org#8462-4 "Diastolic blood pressure"
+* component[1].code = $loinc#8462-4 "Diastolic blood pressure"
 * component[=].valueQuantity.value = 90
 * component[=].valueQuantity.unit = "mm[Hg]"
-* component[=].valueQuantity.code = http://unitsofmeasure.org#mmHg
+* component[=].valueQuantity.system = $ucum
+* component[=].valueQuantity.code = $ucum#mm[Hg]
+
 
 Instance: tobaccouse-luca-example
 InstanceOf: Observation
@@ -554,22 +562,22 @@ Title: "Tobacco Use - A Few Cigarettes a Day"
 Description: "Observation recording tobacco use: a few cigarettes a day."
 Usage: #example
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#social-history "Social History"
-* code = http://loinc.org#11367-0 "History of tobacco use"
+* category[0] = $observation-category#social-history "Social History"
+* code = $loinc#11367-0 "History of tobacco use"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-01"
 * effectiveDateTime = "2025-04-01"
-* valueCodeableConcept = http://snomed.info/sct#771000119104 "Current smoker"
+* valueCodeableConcept = $sct#771000119104 "Current smoker"
 * note[0].text = "Patient smokes a few cigarettes a day"
 
 Instance: metformin-luca
 InstanceOf: MedicationAdministrationEuHdr
 Usage: #inline
 * status = #active
-* medicationCodeableConcept = http://snomed.info/sct#765507008 "Product containing precisely metformin hydrochloride 500 milligram/1 each prolonged-release oral tablet (clinical drug)"
+* medicationCodeableConcept = $sct#765507008 "Product containing precisely metformin hydrochloride 500 milligram/1 each prolonged-release oral tablet (clinical drug)"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectivePeriod.start = "2025-04-03"
 * dosage.dose.value = 500
 * dosage.dose.unit = "mg"
-* dosage.route = http://snomed.info/sct#36672002 "Oral route"
+* dosage.route = $sct#36672002 "Oral route"
 * dosage.text = "500 mg, twice a day"

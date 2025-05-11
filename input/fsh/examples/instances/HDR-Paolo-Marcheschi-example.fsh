@@ -167,7 +167,7 @@ Usage: #inline
 * extension.url = "http://hl7.eu/fhir/ig/xpandh/hdr/StructureDefinition/HDREncounter"
 * extension.valueBoolean = true
 * status = #finished
-* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "inpatient encounter"
+* class = $v3-ActCode#IMP "inpatient encounter"
 * period.start = "2025-01-21T10:00:00+01:00"
 * period.end = "2025-02-02T09:00:00+01:00"
 * subject = Reference(urn:uuid:445a0ff8-556d-4be2-bdde-6de668edf019)
@@ -178,9 +178,9 @@ InstanceOf: Condition
 // add? 721804002 Infection of lung caused by Pneumocystis (disorder)
 Usage: #inline
 * id = "abddc069-eda4-44c0-bd68-37e65a7bcb74"
-* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
-* code[0].coding[+] = http://hl7.org/fhir/sid/icd-10#J96.0 "Acute respiratory failure"
-* code[=].coding[+] = http://snomed.info/sct#65710008 "Acute respiratory failure"
+* clinicalStatus = $condition-clinical#active
+* code[0].coding[+] = $icd10#J96.0 "Acute respiratory failure"
+* code[=].coding[+] = $sct#65710008 "Acute respiratory failure"
 * subject = Reference(urn:uuid:445a0ff8-556d-4be2-bdde-6de668edf019)
 * onsetDateTime = "2025-01-10"
 

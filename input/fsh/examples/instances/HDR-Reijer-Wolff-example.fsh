@@ -42,7 +42,7 @@ Title: "HDR Composition"
 Usage: #inline
 * id = "bd69ab8e-3835-4fb6-be83-1852a2893a65"
 * status = #final
-* type = http://loinc.org#18842-5 "Discharge Summary"
+* type = $loinc#18842-5 "Discharge Summary"
 * subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
 * encounter = Reference(urn:uuid:12fef60c-1fe7-4988-8286-af691889a3f3)
 * date = "2025-04-29T13:30:00+01:00"
@@ -51,7 +51,7 @@ Usage: #inline
 * custodian = Reference(urn:uuid:3f30e341-19c6-484f-827a-0c58545fb2bc)
 // section
 * section[0].title = "Admission evaluation"
-* section[=].code = http://loinc.org#67851-6 "Admission evaluation"
+* section[=].code = $loinc#67851-6 "Admission evaluation"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -70,8 +70,8 @@ Usage: #inline
 """
 // section
 * section[1].title = "Procedures"
-* section[=].code = http://loinc.org#10185-7 "Hospital discharge procedures Narrative"
-// * section[1].code[+] = http://loinc.org#29554-3 "Surgical operation note"
+* section[=].code = $loinc#10185-7 "Hospital discharge procedures Narrative"
+// * section[1].code[+] = $loinc#29554-3 "Surgical operation note"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -91,7 +91,7 @@ Usage: #inline
 * section[=].entry[+] = Reference(urn:uuid:1493fed2-e9ed-4dc1-b107-f077cb1d0d40)
 // section
 * section[2].title = "Medications"
-* section[=].code = http://loinc.org#87232-5 "Medication administration.brief"
+* section[=].code = $loinc#87232-5 "Medication administration.brief"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -115,7 +115,7 @@ Usage: #inline
 * section[=].entry[+] = Reference(urn:uuid:4578e7cd-0d00-4221-9a7f-3e3d6e14a21b)
 // section
 * section[3].title = "Hospital Course"
-* section[=].code = http://loinc.org#8648-8 "Hospital Course"
+* section[=].code = $loinc#8648-8 "Hospital Course"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -125,7 +125,7 @@ Usage: #inline
 """
 // section
 * section[4].title = "Discharge and Follow-up"
-* section[=].code = http://loinc.org#8653-8 "Hospital Discharge instructions"
+* section[=].code = $loinc#8653-8 "Hospital Discharge instructions"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -189,7 +189,7 @@ InstanceOf: Encounter
 Usage: #inline
 * id = "12fef60c-1fe7-4988-8286-af691889a3f3"
 * status = #finished
-* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP
+* class = $v3-ActCode#IMP
 * period.start = "2025-04-20T10:00:00+01:00"
 * period.end = "2025-04-29T11:00:00+01:00"
 * subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
@@ -200,9 +200,9 @@ Instance: fracture-left-leg
 InstanceOf: Condition
 Usage: #inline
 * id = "38d0593b-7949-489e-9306-95df81a109df"
-* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
-* code = http://snomed.info/sct#82423001 "Fracture of lower leg"
-* bodySite = http://snomed.info/sct#83738005 "Left lower limb"
+* clinicalStatus = $condition-clinical#active
+* code = $sct#82423001 "Fracture of lower leg"
+* bodySite = $sct#83738005 "Left lower limb"
 * subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
 * onsetDateTime = "2025-04-20"
 
@@ -211,8 +211,8 @@ InstanceOf: Procedure
 Usage: #inline
 * id = "1493fed2-e9ed-4dc1-b107-f077cb1d0d40"
 * status = #completed
-* code = http://snomed.info/sct#304527002 "Application of external fixator device"
-* bodySite = http://snomed.info/sct#83738005 "Left lower limb"
+* code = $sct#304527002 "Application of external fixator device"
+* bodySite = $sct#83738005 "Left lower limb"
 * subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
 * performedDateTime = "2025-04-23"
 
@@ -221,7 +221,7 @@ InstanceOf: MedicationAdministration
 Usage: #inline
 * id = "1bcfb26f-6958-4604-a40b-712170c1e536"
 * status = #completed
-* medicationCodeableConcept = http://snomed.info/sct#387517004 "Paracetamol"
+* medicationCodeableConcept = $sct#387517004 "Paracetamol"
 * subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
 * effectiveDateTime = "2025-04-21"
 
@@ -230,6 +230,6 @@ InstanceOf: MedicationAdministration
 Usage: #inline
 * id = "4578e7cd-0d00-4221-9a7f-3e3d6e14a21b"
 * status = #completed
-* medicationCodeableConcept = http://snomed.info/sct#387458008 "Cefazolin"
+* medicationCodeableConcept = $sct#387458008 "Cefazolin"
 * subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
 * effectiveDateTime = "2025-04-23"
