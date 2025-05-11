@@ -1,7 +1,8 @@
 Instance: HDR-Paolo-Marcheschi-Example
 InstanceOf: Bundle
 Usage: #example
-* type = #collection
+
+* type = #document
 
 * entry[+].fullUrl = "urn:uuid:130ed4e9-30f3-4a09-b9b1-ad8fd12237cb"
 * entry[=].resource = ftgm-discharge-letter
@@ -33,7 +34,7 @@ Usage: #inline
 * name[=].text = "Paolo Marcheschi"
 * gender = #male
 * birthDate = "1990-01-01"
-* maritalStatus = $v3-MaritalStatus#M
+* maritalStatus = $v3-MartialStatus#M
 * communication.language = urn:ietf:bcp:47#it-IT
 * address[+].use = #home
 * address[=].type = #physical
