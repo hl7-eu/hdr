@@ -344,9 +344,9 @@ $loinc#87232-5 ) // 	Medication administration.brief
 * section contains sectionPatientHx ..1
 * section[sectionPatientHx]
   * insert SectionComRules (
-    Problem list Section,
+    Patient history Section,
     This Section describes all aspects of the medical history of the patient even if not pertinent to the current procedure\, and may include chief complaint\, past medical history\, social history\, family history\, surgical or procedure history\, medication history\, and other history information. The history may be limited to information pertinent to the current procedure or may be more comprehensive. The history may be reported as a collection of random clinical statements or it may be reported categorically. Categorical report formats may be divided into multiple subsections including Past Medical History\, Social History.,
-    $loinc#11450-4 ) // Problem list - Reported
+    $loinc#35090-0 ) // Patient history
 
 
 
@@ -360,7 +360,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules (
     Problem List Section,
     The IPS derived problem section lists and describes clinical problems or conditions currently being monitored for the patient.,
-    $loinc#11348-0 ) // History of Past illness Narrative
+    $loinc#11450-4 ) // 11450-4 Problem list - Reported
   * entry 0..
   * entry only Reference(ConditionEuHdr)  // do we need another profile ?
     * ^short = "Conditions the patient suffered in the past."
@@ -377,7 +377,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules (
     History of Past Illness Section,
     The History of Past Illness section contains a narrative description and coded entries of the conditions the patient suffered in the past,
-    $loinc#11348-0 ) // History of Past illness Narrative
+    $loinc#11348-0 ) // 11348-0 History of Past illness Narrative
   * entry 0..
   * entry only Reference(ConditionEuHdr)  // do we need another profile ?
     * ^short = "Conditions the patient suffered in the past."
