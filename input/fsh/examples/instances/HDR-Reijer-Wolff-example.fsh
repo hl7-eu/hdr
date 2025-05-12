@@ -130,7 +130,7 @@ Usage: #inline
 </div>
 """
 // section
-* section[sectionPlanOfCare].title = "Discharge and Follow-up"
+* section[sectionDischargeInstructions].title = "Discharge and Follow-up"
 * section[=].code = $loinc#8653-8 "Hospital Discharge instructions"
 * section[=].text.status = #generated
 * section[=].text.div = """
