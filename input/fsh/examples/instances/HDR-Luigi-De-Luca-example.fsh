@@ -3,10 +3,13 @@ InstanceOf: BundleEuHdr
 Title: "Complete HL7 Europe Hospital Discharge Report Bundle"
 Description: "FHIR Bundle example for HL7 Europe Hospital Discharge Report"
 Usage: #example
+
 * type = #document
+
 * identifier[+].type = $v2-0203#PRN
 * identifier[=].system = "http://local.setting.eu/identifier"
-* identifier[=].value = "b6b4291d-4f78-4c5e-a8e6-c4355c1cc4f5" // Persistent identifier for the bundle
+* identifier[=].value = "f3022407-11df-4964-9458-221b2f5c6954"
+
 * timestamp = "2025-04-29T14:00:00Z"
 
 * entry[composition].fullUrl = "urn:uuid:b9dc409d-ec81-4556-9fac-4dc3f731c199"
@@ -18,47 +21,55 @@ Usage: #example
 * entry[encounter].fullUrl = "urn:uuid:7c9a2bf1-507f-4d43-b06e-d78e9670379d"
 * entry[encounter].resource = encounter-luca-example
 
-* entry[+].fullUrl = "urn:uuid:74403dd8-bb1b-45f9-bb69-e843dfaf45e9"
+* entry[practitionerRole].fullUrl = "urn:uuid:74403dd8-bb1b-45f9-bb69-e843dfaf45e9"
 * entry[=].resource = practitionerrole-luca-author
-* entry[+].fullUrl = "urn:uuid:0710d9e7-3f1a-4e16-a9b3-5c991fe23c95"
+
+* entry[practitioner].fullUrl = "urn:uuid:0710d9e7-3f1a-4e16-a9b3-5c991fe23c95"
 * entry[=].resource = practitioner-luca-author
-* entry[+].fullUrl = "urn:uuid:organization-luca-hospital"
+
+* entry[organization].fullUrl = "urn:uuid:a61a91f8-b8f2-4947-9a64-5165ea380a38"
 * entry[=].resource = organization-luca-hospital
 
-* entry[+].fullUrl = "urn:uuid:diabetis-condition-luca"
+* entry[+].fullUrl = "urn:uuid:a5bf69e4-24db-48a8-9eda-71516dcaf1d9"
 * entry[=].resource = diabetis-condition-luca
 
-* entry[+].fullUrl = "urn:uuid:careplan-luca"
+* entry[+].fullUrl = "urn:uuid:b84038f8-9541-4c5b-93b0-a7f1b8e55bd3"
 * entry[=].resource = careplan-luca
 
-* entry[+].fullUrl = "urn:uuid:lifestyle-consultation-luca"
+* entry[+].fullUrl = "urn:uuid:92ffc1fd-71ff-4d54-bc06-25d9e1e1fea0"
 * entry[=].resource = lifestyle-consultation-luca
 
-* entry[+].fullUrl = "urn:uuid:diabetes-education-luca"
+* entry[+].fullUrl = "urn:uuid:a74a3dca-92fa-4b71-8e70-89a07ac74bc3"
 * entry[=].resource = diabetes-education-luca
 
-* entry[+].fullUrl = "urn:uuid:metformin-therapy-luca"
+* entry[+].fullUrl = "urn:uuid:53a8c3c3-5d1b-4950-87bc-fddae2ebc079"
 * entry[=].resource = metformin-therapy-luca
 
-* entry[+].fullUrl = "urn:uuid:familyhistory-mother-luca-example"
+* entry[+].fullUrl = "urn:uuid:635c22e7-d7f1-45ad-9b4d-d4fe35239085"
 * entry[=].resource = familyhistory-mother-luca-example
-* entry[+].fullUrl = "urn:uuid:familyhistory-grandmother-luca-example"
+
+* entry[+].fullUrl = "urn:uuid:3fbdfbe1-9d70-47ec-ac05-3e30b063365a"
 * entry[=].resource = familyhistory-grandmother-luca-example
-* entry[+].fullUrl = "urn:uuid:familyhistory-grandmother-luca-example"
+
+* entry[+].fullUrl = "urn:uuid:f0113857-b9b7-429b-8893-b645a38ae20a"
 * entry[=].resource = bodyweight-luca-1-example
-* entry[+].fullUrl = "urn:uuid:bodyweight-luca-1-example"
-* entry[=].resource = bodyweight-luca-1-example
-* entry[+].fullUrl = "urn:uuid:bodyweight-luca-2-example"
+
+* entry[+].fullUrl = "urn:uuid:065c918f-730a-47f8-938a-7ad54618037b"
 * entry[=].resource = bodyweight-luca-2-example
-* entry[+].fullUrl = "urn:uuid:bodyheight-luca-1-example"
+
+* entry[+].fullUrl = "urn:uuid:81783ae4-c36d-424f-8cea-fe7d3407a36b"
 * entry[=].resource = bodyheight-luca-1-example
-* entry[+].fullUrl = "urn:uuid:bloodpressure-luca-1-example"
+
+* entry[+].fullUrl = "urn:uuid:a19e48e1-2271-4cdb-9c76-b0626c7a5363"
 * entry[=].resource = bloodpressure-luca-1-example
-* entry[+].fullUrl = "urn:uuid:bloodpressure-luca-2-example"
+
+* entry[+].fullUrl = "urn:uuid:fd7f7580-5788-45dd-88ec-dca615d69c7d"
 * entry[=].resource = bloodpressure-luca-2-example
-* entry[+].fullUrl = "urn:uuid:tobaccouse-luca-example"
+
+* entry[+].fullUrl = "urn:uuid:67152b1b-0ffa-4b8f-8b6a-a3d71d4d58b6"
 * entry[=].resource = tobaccouse-luca-example
-* entry[+].fullUrl = "urn:uuid:metformin-luca"
+
+* entry[+].fullUrl = "urn:uuid:bda0b497-c9f2-47ca-8339-da1d379cb2f4"
 * entry[=].resource = metformin-luca
 
 
@@ -66,7 +77,7 @@ Instance: patient-luca-example
 InstanceOf: Patient
 Usage: #inline
 * id = "b01a2623-e219-41d2-8e78-1fa1439751d0"
-* identifier[+].type = $v2-0203#NI
+* identifier[+].type = $v2-0203#JHN
 * identifier[=].system = "http://ec.europa.eu/identifier/eci"
 * identifier[=].value = "3332-386800-1"
 * identifier[+].type = $v2-0203#MR
@@ -90,12 +101,13 @@ Instance: practitionerrole-luca-author
 InstanceOf: PractitionerRole
 Usage: #inline
 * id = "74403dd8-bb1b-45f9-bb69-e843dfaf45e9"
-* practitioner = Reference(urn:uuid:practitioner-luca-author)
-* organization = Reference(urn:uuid:organization-luca-hospital)
+* practitioner = Reference(urn:uuid:0710d9e7-3f1a-4e16-a9b3-5c991fe23c95)
+* organization = Reference(urn:uuid:a61a91f8-b8f2-4947-9a64-5165ea380a38)
 
 Instance: practitioner-luca-author
 InstanceOf: Practitioner
 Usage: #inline
+* id = "0710d9e7-3f1a-4e16-a9b3-5c991fe23c95"
 * name.prefix = "dr"
 * name.given = "Augusto"
 * name.family = "Zucchero-Combattente"
@@ -105,6 +117,7 @@ Usage: #inline
 Instance: organization-luca-hospital
 InstanceOf: Organization
 Usage: #inline
+* id = "a61a91f8-b8f2-4947-9a64-5165ea380a38"
 * name = "Casa di cura Villa S. Giuliana"
 * address.postalCode = "37128"
 * address.city = "Verona"
@@ -115,13 +128,13 @@ InstanceOf: EncounterEuHdr
 Usage: #inline
 * id = "7c9a2bf1-507f-4d43-b06e-d78e9670379d"
 * status = #finished
-* class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP
-* period.start = "2025-04-01T08:45:00+01:00"
-* period.end = "2025-04-10T11:00:00+01:00"
+* class = $v3-ActCode#IMP
+* period.start = "2025-04-01T08:45:00Z"
+* period.end = "2025-04-10T11:00:00Z"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
-* serviceProvider = Reference(urn:uuid:organization-luca-hospital)
-* reasonCode = http://snomed.info/sct#714628002 "Prediabetes (finding)"
-* serviceType = http://snomed.info/sct#171183004 "Diabetes mellitus screening (procedure)"
+* serviceProvider = Reference(urn:uuid:a61a91f8-b8f2-4947-9a64-5165ea380a38)
+* reasonCode = $sct#714628002 "Prediabetes (finding)"
+* serviceType = $sct#171183004 "Diabetes mellitus screening (procedure)"
 
 Instance: composition-hdr-luca-example
 InstanceOf: CompositionEuHdr
@@ -129,16 +142,18 @@ Title: "HDR Composition"
 Usage: #inline
 * id = "b9dc409d-ec81-4556-9fac-4dc3f731c199"
 * status = #final
-* type = http://loinc.org#34105-7 "Hospital Discharge summary"
+* type = $loinc#34105-7 "Hospital Discharge summary"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * encounter = Reference(urn:uuid:7c9a2bf1-507f-4d43-b06e-d78e9670379d)
 * date = "2025-04-29T13:30:00+01:00"
-* author = Reference(urn:uuid:practitionerrole-luca-author)
+* author = Reference(urn:uuid:74403dd8-bb1b-45f9-bb69-e843dfaf45e9)
 * title = "Hospital Discharge Report"
-* custodian = Reference(urn:uuid:organization-luca-hospital)
+* custodian = Reference(urn:uuid:a61a91f8-b8f2-4947-9a64-5165ea380a38)
+// 
 // section
+//
 * section[sectionAdmissionEvaluation].title = "Admission evaluation"
-* section[=].code = http://loinc.org#67852-4 "Admission evaluation"
+* section[=].code = $loinc#67852-4 "Hospital Admission evaluation note"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -153,20 +168,24 @@ Usage: #inline
   substitution.
 </div>
 """
+// 
 // section
+//
 * section[sectionFamilyHistory].title = "Family History"
-* section[=].code = http://loinc.org#10157-6 "Family History"
+* section[=].code = $loinc#10157-6 "History of family member diseases Narrative"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   Mr. Luigi has a family history of diabetes (type 2, mother and maternal grandmother).
 </div>
 """
-* section[=].entry[+] = Reference(urn:uuid:familyhistory-mother-luca-example)
-* section[=].entry[+] = Reference(urn:uuid:familyhistory-grandmother-luca-example)
+* section[=].entry[+] = Reference(urn:uuid:635c22e7-d7f1-45ad-9b4d-d4fe35239085)
+* section[=].entry[+] = Reference(urn:uuid:3fbdfbe1-9d70-47ec-ac05-3e30b063365a)
+// 
 // section
+//
 * section[sectionVitalSigns].title = "Vital signs"
-* section[=].code = http://loinc.org#8716-3 "Vital signs"
+* section[=].code = $loinc#8716-3 "Vital signs"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -192,26 +211,28 @@ Usage: #inline
   </table>
 </div>
 """
-* section[=].entry[+] = Reference(urn:uuid:bodyweight-luca-1-example)
-* section[=].entry[+] = Reference(urn:uuid:bodyweight-luca-2-example)
-* section[=].entry[+] = Reference(urn:uuid:bodyheight-luca-1-example)
-* section[=].entry[+] = Reference(urn:uuid:bloodpressure-luca-1-example)
-* section[=].entry[+] = Reference(urn:uuid:bloodpressure-luca-2-example)
-
+* section[=].entry[+] = Reference(urn:uuid:f0113857-b9b7-429b-8893-b645a38ae20a)
+* section[=].entry[+] = Reference(urn:uuid:065c918f-730a-47f8-938a-7ad54618037b)
+* section[=].entry[+] = Reference(urn:uuid:81783ae4-c36d-424f-8cea-fe7d3407a36b)
+* section[=].entry[+] = Reference(urn:uuid:a19e48e1-2271-4cdb-9c76-b0626c7a5363)
+* section[=].entry[+] = Reference(urn:uuid:fd7f7580-5788-45dd-88ec-dca615d69c7d)
+// 
 // section
+//
 * section[sectionTobaccoUse].title = "Tobacco use"
-* section[=].code = http://loinc.org#11367-0 "Tobacco use"
+* section[=].code = $loinc#11367-0 "History of Tobacco use"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   The patient smokes "a few" cigarettes per day.
 </div>
 """
-* section[=].entry[+] = Reference(urn:uuid:tobaccouse-luca-example)
-
+* section[=].entry[+] = Reference(urn:uuid:67152b1b-0ffa-4b8f-8b6a-a3d71d4d58b6)
+// 
 // section
+//
 * section[sectionHospitalCourse].title = "Hospital Course"
-* section[=].code = http://loinc.org#8648-8 "Hospital Course"
+* section[=].code = $loinc#8648-8 "Hospital Course"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -223,9 +244,11 @@ Usage: #inline
   and no acute complications were observed.
 </div>
 """
+// 
 // section
+//
 * section[sectionSignificantResults].title = "Significant Observation Results"
-* section[=].code = http://loinc.org#87232-5 "Significant Observation Results"
+* section[=].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -281,9 +304,11 @@ Usage: #inline
   </table>
 </div>
 """
+// 
 // section
+//
 * section[sectionSignificantProcedures].title = "Significant procedures"
-* section[=].code = http://loinc.org#10185-7 "Significant procedures"
+* section[=].code = $loinc#10185-7 "Hospital discharge procedures Narrative"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -294,12 +319,14 @@ Usage: #inline
   Starting Pharmacotherapy with Metformin.
 </div>
 """
-* section[=].entry[+] = Reference(urn:uuid:lifestyle-consultation-luca)
-* section[=].entry[+] = Reference(urn:uuid:diabetes-education-luca)
-* section[=].entry[+] = Reference(urn:uuid:metformin-therapy-luca)
+* section[=].entry[+] = Reference(urn:uuid:92ffc1fd-71ff-4d54-bc06-25d9e1e1fea0)
+* section[=].entry[+] = Reference(urn:uuid:a74a3dca-92fa-4b71-8e70-89a07ac74bc3)
+* section[=].entry[+] = Reference(urn:uuid:53a8c3c3-5d1b-4950-87bc-fddae2ebc079)
+// 
 // section
+//
 * section[sectionPharmacotherapy].title = "Medications"
-* section[=].code = http://loinc.org#87232-5 "Medication administration.brief"
+* section[=].code = $loinc#87232-5 "Medication administration.brief"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -321,10 +348,12 @@ Usage: #inline
   </table>
 </div>
 """
-* section[=].entry[+] = Reference(urn:uuid:metformin-luca)
+* section[=].entry[+] = Reference(urn:uuid:bda0b497-c9f2-47ca-8339-da1d379cb2f4)
+// 
 // section
+//
 * section[sectionPlanOfCare].title = "Follow-up"
-* section[=].code = http://loinc.org#18776-5 "Follow-up"
+* section[=].code = $loinc#18776-5 "Plan of care note"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -350,11 +379,12 @@ Usage: #inline
   </table>
 </div>
 """
-* section[=].entry[+] = Reference(urn:uuid:careplan-luca)
-
+* section[=].entry[+] = Reference(urn:uuid:b84038f8-9541-4c5b-93b0-a7f1b8e55bd3)
+// 
 // section
+//
 * section[sectionDiagnosticSummary].title = "Diagnosis at Discharge"
-* section[=].code = http://loinc.org#11535-2 "Problem specification in narrative form"
+* section[=].code = $loinc#11535-2 "Hospital discharge Dx Narrative"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -374,10 +404,12 @@ Usage: #inline
   </table>
 </div>
 """
-* section[=].entry[+] = Reference(urn:uuid:diabetis-condition-luca)
+* section[=].entry[+] = Reference(urn:uuid:a5bf69e4-24db-48a8-9eda-71516dcaf1d9)
+// 
 // section
+//
 * section[sectionDischargeInstructions].title = "Hospital Discharge Instructions"
-* section[=].code = http://loinc.org#8653-8 "Hospital Discharge Instructions"
+* section[=].code = $loinc#8653-8 "Hospital Discharge Instructions"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -396,9 +428,10 @@ Usage: #inline
 Instance: diabetis-condition-luca
 InstanceOf: ConditionEuHdr
 Usage: #inline
-* clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active
-* code[0].coding[+] = http://hl7.org/fhir/sid/icd-10#E11 "Type 2 diabetes mellitus"
-* code[0].coding[+] = http://snomed.info/sct#44054006 "Diabetes mellitus type 2 (disorder)"
+* id = "a5bf69e4-24db-48a8-9eda-71516dcaf1d9"
+* clinicalStatus = $condition-clinical#active
+* code[0].coding[+] = $icd10#E11 "Type 2 diabetes mellitus"
+* code[0].coding[+] = $sct#44054006 "Diabetes mellitus type 2 (disorder)"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * onsetDateTime = "2025-04-04"
 
@@ -406,41 +439,45 @@ Instance: careplan-luca
 InstanceOf: CarePlan
 Title: "Diabetes Management Care Plan"
 Description: "Care plan for diabetes including referrals and HbA1c measurement."
-Usage: #example
+Usage: #inline
+* id = "b84038f8-9541-4c5b-93b0-a7f1b8e55bd3"
 * status = #active
 * intent = #plan
 * title = "Diabetes Management Plan"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * period.start = "2025-04-10"
-* category[0] = http://terminology.hl7.org/CodeSystem/care-plan-category#assess-plan "Assessment and Plan of Treatment"
-* activity[0].detail.code = http://snomed.info/sct#306118006 "Referral to endocrinology service"
+* category[0] = $sct#736284000 "Diabetes clinical management plan"
+* activity[0].detail.code = $sct#306118006 "Referral to endocrinology service"
 * activity[0].detail.status = #not-started
-* activity[1].detail.code = http://snomed.info/sct#103699006 "Referral to dietitian"
+* activity[1].detail.code = $sct#103699006 "Referral to dietitian"
 * activity[1].detail.status = #not-started
-* activity[2].detail.code = http://snomed.info/sct#43396009 "Hemoglobin A1c measurement"
+* activity[2].detail.code = $sct#43396009 "Hemoglobin A1c measurement"
 * activity[2].detail.status = #not-started
 
 Instance: lifestyle-consultation-luca
 InstanceOf: ProcedureEuHdr
 Usage: #inline
+* id = "92ffc1fd-71ff-4d54-bc06-25d9e1e1fea0"
 * status = #completed
-* code = http://snomed.info/sct#313204009 "Lifestyle education (procedure)"
+* code = $sct#313204009 "Lifestyle education (procedure)"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * performedDateTime = "2025-04-05"
 
 Instance: diabetes-education-luca
 InstanceOf: ProcedureEuHdr
 Usage: #inline
+* id = "a74a3dca-92fa-4b71-8e70-89a07ac74bc3"
 * status = #completed
-* code = http://snomed.info/sct#6143009 "Diabetic education (procedure)"
+* code = $sct#6143009 "Diabetic education (procedure)"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * performedDateTime = "2025-04-04"
 
 Instance: metformin-therapy-luca
 InstanceOf: ProcedureEuHdr
 Usage: #inline
-* status = #active
-* code = http://snomed.info/sct#340186004 "Metformin therapy (procedure)"
+* id = "53a8c3c3-5d1b-4950-87bc-fddae2ebc079"
+* status = #in-progress
+* code = $sct#1340186004 "Metformin therapy (procedure)"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * performedDateTime = "2025-04-04"
 
@@ -448,128 +485,144 @@ Instance: familyhistory-mother-luca-example
 InstanceOf: FamilyMemberHistoryEuHdr
 Title: "Family History of Type 2 Diabetes Mellitus - Mother"
 Description: "Mother has a history of type 2 diabetes mellitus."
-Usage: #example
+Usage: #inline
+* id = "635c22e7-d7f1-45ad-9b4d-d4fe35239085"
 * status = #completed
 * patient = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
-* relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#MTH "mother"
-* condition[0].code = http://snomed.info/sct#430679000 "Family history of diabetes mellitus type 2 (situation)"
+* relationship = $v3-RoleCode#MTH "mother"
+* condition[0].code = $sct#430679000 "Family history of diabetes mellitus type 2 (situation)"
 
 Instance: familyhistory-grandmother-luca-example
 InstanceOf: FamilyMemberHistoryEuHdr
 Title: "Family History of Type 2 Diabetes Mellitus - Maternal Grandmother"
 Description: "Maternal grandmother has a history of type 2 diabetes mellitus."
-Usage: #example
+Usage: #inline
+* id = "3fbdfbe1-9d70-47ec-ac05-3e30b063365a"
 * status = #completed
 * patient = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
-* relationship = http://terminology.hl7.org/CodeSystem/v3-RoleCode#GMTH "maternal grandmother"
-* condition[0].code = http://snomed.info/sct#430679000 "Family history of diabetes mellitus type 2 (situation)"
+* relationship = $v3-RoleCode#MGRMTH "maternal grandmother"
+* condition[0].code = $sct#430679000 "Family history of diabetes mellitus type 2 (situation)"
 
 Instance: bodyweight-luca-1-example
 InstanceOf: Observation
 Title: "Body Weight Observation - 109 kg"
 Description: "Vital sign observation for body weight of 109 kg measured on April 1st."
-Usage: #example
+Usage: #inline
+* id = "f0113857-b9b7-429b-8893-b645a38ae20a"
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
-* code = http://loinc.org#29463-7 "Body weight"
+* category[0] = $observation-category#vital-signs "Vital Signs"
+* code = $loinc#29463-7 "Body weight"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-01"
 * valueQuantity.value = 109
 * valueQuantity.unit = "kg"
-* valueQuantity.code = http://unitsofmeasure.org#kg
+* valueQuantity.system = $ucum
+* valueQuantity.code = $ucum#kg
 
 Instance: bodyweight-luca-2-example
 InstanceOf: Observation
 Title: "Body Weight Observation - 108 kg"
 Description: "Vital sign observation for body weight of 108 kg measured on April 10th."
-Usage: #example
+Usage: #inline
+* id = "065c918f-730a-47f8-938a-7ad54618037b"
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
-* code = http://loinc.org#29463-7 "Body weight"
+* category[0] = $observation-category#vital-signs "Vital Signs"
+* code = $loinc#29463-7 "Body weight"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-19"
 * valueQuantity.value = 108
 * valueQuantity.unit = "kg"
-* valueQuantity.code = http://unitsofmeasure.org#kg
+* valueQuantity.system = $ucum
+* valueQuantity.code = $ucum#kg
 
 Instance: bodyheight-luca-1-example
 InstanceOf: Observation
 Title: "Body Height Observation - 177 cm"
 Description: "Vital sign observation for body height of 177 cm measured on April 1st."
-Usage: #example
+Usage: #inline
+* id = "81783ae4-c36d-424f-8cea-fe7d3407a36b"
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
-* code = http://loinc.org#8302-2 "Body height"
+* category[0] = $observation-category#vital-signs "Vital Signs"
+* code = $loinc#8302-2 "Body height"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-01"
 * valueQuantity.value = 177
 * valueQuantity.unit = "cm"
-* valueQuantity.code = http://unitsofmeasure.org#cm
+* valueQuantity.system = $ucum
+* valueQuantity.code = $ucum#cm
 
 Instance: bloodpressure-luca-1-example
 InstanceOf: Observation
 Title: "Blood Pressure Observation - 155/95 mmHg"
 Description: "Vital sign observation for blood pressure (155/95 mmHg) measured on April 1st."
-Usage: #example
+Usage: #inline
+* id = "a19e48e1-2271-4cdb-9c76-b0626c7a5363"
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
-* code = http://loinc.org#85354-9 "Blood pressure panel with all children optional"
+* category[0] = $observation-category#vital-signs "Vital Signs"
+* code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-01"
 // Systolic component
-* component[0].code = http://loinc.org#8480-6 "Systolic blood pressure"
+* component[0].code = $loinc#8480-6 "Systolic blood pressure"
 * component[=].valueQuantity.value = 155
-* component[=].valueQuantity.unit = "mm[Hg]"
-* component[=].valueQuantity.code = http://unitsofmeasure.org#mmHg
+* component[=].valueQuantity.unit = "mmHg"
+* component[=].valueQuantity.system = $ucum
+* component[=].valueQuantity.code = $ucum#mm[Hg]
 // Diastolic component
-* component[1].code = http://loinc.org#8462-4 "Diastolic blood pressure"
+* component[1].code = $loinc#8462-4 "Diastolic blood pressure"
 * component[=].valueQuantity.value = 95
-* component[=].valueQuantity.unit = "mm[Hg]"
-* component[=].valueQuantity.code = http://unitsofmeasure.org#mmHg
+* component[=].valueQuantity.unit = "mmHg"
+* component[=].valueQuantity.system = $ucum
+* component[=].valueQuantity.code = $ucum#mm[Hg]
 
 Instance: bloodpressure-luca-2-example
 InstanceOf: Observation
 Title: "Blood Pressure Observation - 150/90 mmHg"
 Description: "Vital sign observation for blood pressure (155/95 mmHg) measured on April 1st."
-Usage: #example
+Usage: #inline
+* id = "fd7f7580-5788-45dd-88ec-dca615d69c7d"
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
-* code = http://loinc.org#85354-9 "Blood pressure panel with all children optional"
+* category[0] = $observation-category#vital-signs "Vital Signs"
+* code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-10"
 // Systolic component
-* component[0].code = http://loinc.org#8480-6 "Systolic blood pressure"
+* component[0].code = $loinc#8480-6 "Systolic blood pressure"
 * component[=].valueQuantity.value = 150
-* component[=].valueQuantity.unit = "mm[Hg]"
-* component[=].valueQuantity.code = http://unitsofmeasure.org#mmHg
+* component[=].valueQuantity.unit = "mmHg"
+* component[=].valueQuantity.system = $ucum
+* component[=].valueQuantity.code = $ucum#mm[Hg]
 // Diastolic component
-* component[1].code = http://loinc.org#8462-4 "Diastolic blood pressure"
+* component[1].code = $loinc#8462-4 "Diastolic blood pressure"
 * component[=].valueQuantity.value = 90
-* component[=].valueQuantity.unit = "mm[Hg]"
-* component[=].valueQuantity.code = http://unitsofmeasure.org#mmHg
+* component[=].valueQuantity.unit = "mmHg"
+* component[=].valueQuantity.system = $ucum
+* component[=].valueQuantity.code = $ucum#mm[Hg]
 
 Instance: tobaccouse-luca-example
 InstanceOf: Observation
 Title: "Tobacco Use - A Few Cigarettes a Day"
 Description: "Observation recording tobacco use: a few cigarettes a day."
-Usage: #example
+Usage: #inline
+* id = "67152b1b-0ffa-4b8f-8b6a-a3d71d4d58b6"
 * status = #final
-* category[0] = http://terminology.hl7.org/CodeSystem/observation-category#social-history "Social History"
-* code = http://loinc.org#11367-0 "History of tobacco use"
+* category[0] = $observation-category#social-history "Social History"
+* code = $loinc#11367-0 "History of Tobacco use"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-01"
 * effectiveDateTime = "2025-04-01"
-* valueCodeableConcept = http://snomed.info/sct#771000119104 "Current smoker"
+* valueCodeableConcept = $sct#77176002 "Current smoker"
 * note[0].text = "Patient smokes a few cigarettes a day"
 
 Instance: metformin-luca
 InstanceOf: MedicationAdministrationEuHdr
 Usage: #inline
-* status = #active
-* medicationCodeableConcept = http://snomed.info/sct#765507008 "Product containing precisely metformin hydrochloride 500 milligram/1 each prolonged-release oral tablet (clinical drug)"
+* id = "bda0b497-c9f2-47ca-8339-da1d379cb2f4"
+* status = #in-progress
+* medicationCodeableConcept = $sct#765507008 "Product containing precisely metformin hydrochloride 500 milligram/1 each prolonged-release oral tablet (clinical drug)"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectivePeriod.start = "2025-04-03"
 * dosage.dose.value = 500
 * dosage.dose.unit = "mg"
-* dosage.route = http://snomed.info/sct#36672002 "Oral route"
+* dosage.route = $sct#26643006 "Oral route"
 * dosage.text = "500 mg, twice a day"
