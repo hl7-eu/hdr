@@ -14,7 +14,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * extension[presentedForm].valueAttachment
   * contentType
     * ^example[0].label = "pdf"
-    * ^example[0].valueCodeableConcept  = $mime#application/pdf
+    * ^example[0].valueCode  = $mime#application/pdf
   * data ^short = "B64 in-line data"
   * url ^short = "URL of the document"
 
