@@ -1,7 +1,8 @@
 Instance: HDR-Paolo-Marcheschi-Example
 InstanceOf: Bundle
 Usage: #example
-* type = #collection
+
+* type = #document
 
 * entry[+].fullUrl = "urn:uuid:130ed4e9-30f3-4a09-b9b1-ad8fd12237cb"
 * entry[=].resource = ftgm-discharge-letter
@@ -25,7 +26,7 @@ Instance: patient-ftgm
 InstanceOf: Patient
 Usage: #inline
 * id = "445a0ff8-556d-4be2-bdde-6de668edf019"
-* identifier[+].type = $v2-0203#NI
+* identifier[+].type = $v2-0203#JHN
 * identifier[=].system = "http://ec.europa.eu/identifier/eci"
 * identifier[=].value = "9977-888840-8"
 * name[+].family = "Marcheschi"
@@ -183,4 +184,3 @@ Usage: #inline
 * code[=].coding[+] = $sct#65710008 "Acute respiratory failure"
 * subject = Reference(urn:uuid:445a0ff8-556d-4be2-bdde-6de668edf019)
 * onsetDateTime = "2025-01-10"
-
