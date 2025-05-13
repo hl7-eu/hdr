@@ -8,12 +8,11 @@ Description: "This profile constrains the MedicationAdministration resource for 
 
 * insert SetFmmandStatusRule (1, draft)
 
-
-
-
 * identifier 
   * ^short = "Medication Administration Identifier"
 // * status ^short = "Current state of the dispensation"
 * subject only Reference( PatientEuCore )
-* medicationReference only Reference(MedicationEuHdr)
+* medication[x] only CodeableConcept or Reference(MedicationEuHdr)
+
+// * medicationReference only Reference(MedicationEuHdr)
 

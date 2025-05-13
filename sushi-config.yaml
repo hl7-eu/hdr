@@ -30,7 +30,7 @@ dependencies:
   hl7.fhir.eu.extensions.r4: 0.1.1-ballot
   hl7.fhir.eu.laboratory: 0.1.1
   hl7.fhir.eu.base: current # 0.1.0-ballot
-  ihe.pharm.mpd: current # local cache
+  ihe.pharm.mpd.r4: current # local cache
 #   hl7.fhir.us.mcode:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
