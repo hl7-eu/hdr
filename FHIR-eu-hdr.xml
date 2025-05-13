@@ -24,11 +24,6 @@
 <artifact id="StructureDefinition/allergyIntolerance-eu-hdr" key="StructureDefinition-allergyIntolerance-eu-hdr" name="Allergy Intolerance (HDR)"/>
 <artifact id="ValueSet/allergy-intolerance-eu-hdr" key="ValueSet-allergy-intolerance-eu-hdr" name="Allergy Intolerance (with exceptions)"/>
 <artifact id="StructureDefinition/allergyIntolerance-obl-eu-hdr" key="StructureDefinition-allergyIntolerance-obl-eu-hdr" name="Allergy Intolerance: Obligations"/>
-<artifact id="Observation/bloodpressure-luca-2-example" key="Observation-bloodpressure-luca-2-example" name="Blood Pressure Observation - 150/90 mmHg"/>
-<artifact id="Observation/bloodpressure-luca-1-example" key="Observation-bloodpressure-luca-1-example" name="Blood Pressure Observation - 155/95 mmHg"/>
-<artifact id="Observation/bodyheight-luca-1-example" key="Observation-bodyheight-luca-1-example" name="Body Height Observation - 177 cm"/>
-<artifact id="Observation/bodyweight-luca-2-example" key="Observation-bodyweight-luca-2-example" name="Body Weight Observation - 108 kg"/>
-<artifact id="Observation/bodyweight-luca-1-example" key="Observation-bodyweight-luca-1-example" name="Body Weight Observation - 109 kg"/>
 <artifact id="StructureDefinition/bundle-eu-hdr" key="StructureDefinition-bundle-eu-hdr" name="Bundle (HDR)"/>
 <artifact id="StructureDefinition/bundle-obl-eu-hdr" key="StructureDefinition-bundle-obl-eu-hdr" name="Bundle: obligations"/>
 <artifact id="ValueSet/cancer-stage-grading-vs" key="ValueSet-cancer-stage-grading-vs" name="Cancer Stage Grading: Snomed CT"/>
@@ -48,14 +43,11 @@
 <artifact id="StructureDefinition/device-obl-eu-hdr" key="StructureDefinition-device-obl-eu-hdr" name="Device: obligations"/>
 <artifact id="StructureDefinition/deviceUseStatement-eu-hdr" key="StructureDefinition-deviceUseStatement-eu-hdr" name="DeviceUseStatement (HDR)"/>
 <artifact id="StructureDefinition/deviceUseStatement-obl-eu-hdr" key="StructureDefinition-deviceUseStatement-obl-eu-hdr" name="DeviceUseStatement: obligations"/>
-<artifact id="CarePlan/careplan-luca" key="CarePlan-careplan-luca" name="Diabetes Management Care Plan"/>
 <artifact id="StructureDefinition/encounter-eu-hdr" key="StructureDefinition-encounter-eu-hdr" name="Encounter (HDR)"/>
 <artifact id="ValueSet/hdr-encounterClass-eu-hdr" key="ValueSet-hdr-encounterClass-eu-hdr" name="Encounter Class Value Set"/>
 <artifact id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
 <artifact id="StructureDefinition/encounter-obl-eu-hdr" key="StructureDefinition-encounter-obl-eu-hdr" name="Encounter: Obligations"/>
 <artifact id="ValueSet/exposureAgent-eu-hdr" key="ValueSet-exposureAgent-eu-hdr" name="Exposure of transmissible agents"/>
-<artifact id="FamilyMemberHistory/familyhistory-grandmother-luca-example" key="FamilyMemberHistory-familyhistory-grandmother-luca-example" name="Family History of Type 2 Diabetes Mellitus - Maternal Grandmother"/>
-<artifact id="FamilyMemberHistory/familyhistory-mother-luca-example" key="FamilyMemberHistory-familyhistory-mother-luca-example" name="Family History of Type 2 Diabetes Mellitus - Mother"/>
 <artifact id="StructureDefinition/familyMemberHistory-eu-hdr" key="StructureDefinition-familyMemberHistory-eu-hdr" name="FamilyMemberHistory (HDR)"/>
 <artifact id="StructureDefinition/familyMemberHistory-obl-eu-hdr" key="StructureDefinition-familyMemberHistory-obl-eu-hdr" name="FamilyMemberHistory: obligations"/>
 <artifact id="StructureDefinition/flag-eu-hdr" key="StructureDefinition-flag-eu-hdr" name="Flag (HDR)"/>
@@ -101,7 +93,6 @@
 <artifact id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
 <artifact id="StructureDefinition/Specimen-obl-eu-hdr" key="StructureDefinition-Specimen-obl-eu-hdr" name="Specimen: Obligations"/>
 <artifact id="CodeSystem/temporarySystem-hdr-eu" key="CodeSystem-temporarySystem-hdr-eu" name="Temporary HDR Code System"/>
-<artifact id="Observation/tobaccouse-luca-example" key="Observation-tobaccouse-luca-example" name="Tobacco Use - A Few Cigarettes a Day"/>
 <artifact id="ValueSet/treated-problem-eu-hdr" key="ValueSet-treated-problem-eu-hdr" name="Treatment Class Value Set"/>
 <artifact id="ValueSet/eHDSIConditionPOA" key="ValueSet-eHDSIConditionPOA" name="eHDSI Condition Present On Admission"/>
 <artifact id="ValueSet/eHDSITreatmentClass" key="ValueSet-eHDSITreatmentClass" name="eHDSI Treatment Class"/>
