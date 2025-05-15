@@ -1,5 +1,7 @@
 Instance: HDR-Paolo-Marcheschi-Example
 InstanceOf: BundleEuHdr
+Title: "Complete HL7 Europe Hospital Discharge Report Bundle"
+Description: "FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Paolo Marcheschi"
 Usage: #example
 
 * type = #document
