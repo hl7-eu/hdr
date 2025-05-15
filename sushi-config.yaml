@@ -303,6 +303,16 @@ menu:
 # URL when generating the IG JSON.
 #
 groups:
+
+
+    eHNHospitalDishargeReport:
+      name:  Hospital Discharge Report
+      description: Hospital Discharge Report entry profiles.
+      resources:
+        - StructureDefinition/bundle-eu-hdr
+        - StructureDefinition/composition-eu-hdr
+
+
     eHNGuidelines:
       name:  eHN Hospital Discharge Report Guidelines (Informative)
       description: Logical models representing the eHN Hospital Discharge Report Guidelines. This is informative material.
@@ -349,7 +359,27 @@ groups:
         - StructureDefinition/bundle-obl-eu-hdr
         - StructureDefinition/Patient-obl-eu-hdr
         - StructureDefinition/Specimen-obl-eu-hdr
-
+        - StructureDefinition/carePlan-obl-eu-hdr
+        - StructureDefinition/composition-obl-eu-hdr
+        - StructureDefinition/condition-obl-eu-hdr
+        - StructureDefinition/consent-obl-eu-hdr
+        - StructureDefinition/device-obl-eu-hdr
+        - StructureDefinition/deviceUseStatement-obl-eu-hdr
+        - StructureDefinition/encounter-obl-eu-hdr
+        - StructureDefinition/familyMemberHistory-obl-eu-hdr
+        - StructureDefinition/flag-obl-eu-hdr
+        - StructureDefinition/immunization-obl-eu-hdr
+        - StructureDefinition/immunizationRecommendation-obl-eu-hdr
+        - StructureDefinition/Medication-obl-eu-hdr
+        - StructureDefinition/medicationAdministration-obl-eu-hdr
+        - StructureDefinition/medicationDispense-obl-eu-hdr
+        - StructureDefinition/medicationRequest-obl-eu-hdr
+        - StructureDefinition/medicationStatement-obl-eu-hdr
+        - StructureDefinition/observation-infectious-contact-obl-eu-hdr
+        - StructureDefinition/observation-sdoh-obl-eu-hdr
+        - StructureDefinition/observation-travel-obl-eu-hdr
+        - StructureDefinition/procedure-obl-eu-hdr
+        - StructureDefinition/HumanName-obl-eu-hdr
 
 
 #

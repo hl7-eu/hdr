@@ -1,7 +1,7 @@
 Profile: SpecimenEuObligations
 Parent: SpecimenEu
 Id: Specimen-obl-eu-hdr
-Title:    "Specimen: Obligations"
+Title:    "Specimen: obligations"
 Description: "This profile defines obligations for Specimen in FHIR for the purpose of this guide."
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
