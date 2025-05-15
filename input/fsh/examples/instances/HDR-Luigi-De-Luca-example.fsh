@@ -1,7 +1,7 @@
 Instance: HDR-Luigi-De-Luca-Example
 InstanceOf: BundleEuHdr
 Title: "Complete HL7 Europe Hospital Discharge Report Bundle"
-Description: "FHIR Bundle example for HL7 Europe Hospital Discharge Report"
+Description: "FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca"
 Usage: #example
 
 * type = #document
@@ -10,7 +10,7 @@ Usage: #example
 * identifier[=].system = "http://local.setting.eu/identifier"
 * identifier[=].value = "f3022407-11df-4964-9458-221b2f5c6954"
 
-* timestamp = "2025-04-29T14:00:00Z"
+* timestamp = "2025-04-11T14:00:00Z"
 
 * entry[composition].fullUrl = "urn:uuid:b9dc409d-ec81-4556-9fac-4dc3f731c199"
 * entry[composition].resource = composition-hdr-luca-example
