@@ -1,7 +1,7 @@
 Instance: HDR-Reijer-Wolff-Example
 InstanceOf: BundleEuHdr
 Title: "Complete HL7 Europe Hospital Discharge Report Bundle"
-Description: "FHIR Bundle example for HL7 Europe Hospital Discharge Report"
+Description: "FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff"
 Usage: #example
 
 * type = #document
@@ -55,7 +55,9 @@ Usage: #inline
 * author = Reference(urn:uuid:cc0ae2a0-980d-4a2b-a4fb-9c71ecc70a15)
 * title = "Hospital Discharge Report"
 * custodian = Reference(urn:uuid:3f30e341-19c6-484f-827a-0c58545fb2bc)
+// 
 // section
+//
 * section[sectionAdmissionEvaluation].title = "Admission evaluation"
 * section[=].code = $loinc#67851-6 "Admission evaluation note"
 * section[=].text.status = #generated
@@ -74,7 +76,9 @@ Usage: #inline
   </table>
 </div>
 """
+// 
 // section
+//
 * section[sectionSignificantProcedures].title = "Procedures"
 * section[=].code = $loinc#10185-7 "Hospital discharge procedures Narrative"
 // * section[1].code[+] = $loinc#29554-3 "Surgical operation note"
@@ -95,7 +99,9 @@ Usage: #inline
 </div>
 """
 * section[=].entry[+] = Reference(urn:uuid:1493fed2-e9ed-4dc1-b107-f077cb1d0d40)
+// 
 // section
+//
 * section[sectionPharmacotherapy].title = "Medications"
 * section[=].code = $loinc#87232-5 "Medication administration.brief"
 * section[=].text.status = #generated
@@ -119,7 +125,9 @@ Usage: #inline
 """
 * section[=].entry[+] = Reference(urn:uuid:1bcfb26f-6958-4604-a40b-712170c1e536)
 * section[=].entry[+] = Reference(urn:uuid:4578e7cd-0d00-4221-9a7f-3e3d6e14a21b)
+// 
 // section
+//
 * section[sectionHospitalCourse].title = "Hospital Course"
 * section[=].code = $loinc#8648-8 "Hospital Course"
 * section[=].text.status = #generated
@@ -129,7 +137,9 @@ Usage: #inline
   started physiotherapy during the stay. No adverse events occurred.
 </div>
 """
+// 
 // section
+//
 * section[sectionDischargeInstructions].title = "Discharge and Follow-up"
 * section[=].code = $loinc#8653-8 "Hospital Discharge instructions"
 * section[=].text.status = #generated
