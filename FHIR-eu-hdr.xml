@@ -18,13 +18,18 @@
 <artifact id="StructureDefinition/FunctionalStatus" key="StructureDefinition-FunctionalStatus" name="A.2.7.2 - Functional status"/>
 <artifact id="StructureDefinition/PlanOfCare" key="StructureDefinition-PlanOfCare" name="A.2.8.1 - Care plan"/>
 <artifact id="StructureDefinition/MedicationSummary" key="StructureDefinition-MedicationSummary" name="A.2.8.2 - Medication summary"/>
+<artifact id="Observation/lab-swart-3" key="Observation-lab-swart-3" name="ABO group"/>
 <artifact id="ValueSet/admission-urgency-eu-hdr" key="ValueSet-admission-urgency-eu-hdr" name="Admission Urgency Value Set"/>
+<artifact id="Observation/alcohol-swart" key="Observation-alcohol-swart" name="Alcohol consumption"/>
 <artifact id="ValueSet/allergens-eu-hdr" key="ValueSet-allergens-eu-hdr" name="Allergens Value Set"/>
 <artifact id="ValueSet/allergy-intolerance-substances-eu-hdr" key="ValueSet-allergy-intolerance-substances-eu-hdr" name="Allergy Intolerance"/>
 <artifact id="StructureDefinition/allergyIntolerance-eu-hdr" key="StructureDefinition-allergyIntolerance-eu-hdr" name="Allergy Intolerance (HDR)"/>
 <artifact id="ValueSet/allergy-intolerance-eu-hdr" key="ValueSet-allergy-intolerance-eu-hdr" name="Allergy Intolerance (with exceptions)"/>
 <artifact id="StructureDefinition/allergyIntolerance-obl-eu-hdr" key="StructureDefinition-allergyIntolerance-obl-eu-hdr" name="Allergy Intolerance: obligations"/>
+<artifact id="Observation/bloeddruk-swart" key="Observation-bloeddruk-swart" name="Blood pressure"/>
+<artifact id="Observation/gewicht-swart" key="Observation-gewicht-swart" name="Body weight"/>
 <artifact id="StructureDefinition/bundle-eu-hdr" key="StructureDefinition-bundle-eu-hdr" name="Bundle (HDR)"/>
+<artifact id="Bundle/bundle-swart" key="Bundle-bundle-swart" name="Bundle for Fiona Swart HDR"/>
 <artifact id="StructureDefinition/bundle-obl-eu-hdr" key="StructureDefinition-bundle-obl-eu-hdr" name="Bundle: obligations"/>
 <artifact id="StructureDefinition/carePlan-eu-hdr" key="StructureDefinition-carePlan-eu-hdr" name="Care Plan (HDR)"/>
 <artifact id="StructureDefinition/carePlan-obl-eu-hdr" key="StructureDefinition-carePlan-obl-eu-hdr" name="Care Plan: obligations"/>
@@ -46,15 +51,20 @@
 <artifact id="ValueSet/hdr-encounterClass-eu-hdr" key="ValueSet-hdr-encounterClass-eu-hdr" name="Encounter Class Value Set"/>
 <artifact id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
 <artifact id="StructureDefinition/encounter-obl-eu-hdr" key="StructureDefinition-encounter-obl-eu-hdr" name="Encounter: obligations"/>
+<artifact id="Organization/organization-sophia" key="Organization-organization-sophia" name="Erasmus MC, Sophia kinderziekenhuis"/>
 <artifact id="ValueSet/exposureAgent-eu-hdr" key="ValueSet-exposureAgent-eu-hdr" name="Exposure of transmissible agents"/>
 <artifact id="StructureDefinition/familyMemberHistory-eu-hdr" key="StructureDefinition-familyMemberHistory-eu-hdr" name="FamilyMemberHistory (HDR)"/>
 <artifact id="StructureDefinition/familyMemberHistory-obl-eu-hdr" key="StructureDefinition-familyMemberHistory-obl-eu-hdr" name="FamilyMemberHistory: obligations"/>
+<artifact id="Observation/levenvoelen-swart" key="Observation-levenvoelen-swart" name="Fetal movement"/>
 <artifact id="StructureDefinition/flag-eu-hdr" key="StructureDefinition-flag-eu-hdr" name="Flag (HDR)"/>
 <artifact id="StructureDefinition/flag-obl-eu-hdr" key="StructureDefinition-flag-obl-eu-hdr" name="Flag: obligations"/>
 <artifact id="ActorDefinition/actor-consumer-eu-hdr" key="ActorDefinition-actor-consumer-eu-hdr" name="HDR Consumer"/>
 <artifact id="ActorDefinition/actor-creator-eu-hdr" key="ActorDefinition-actor-creator-eu-hdr" name="HDR Creator"/>
 <artifact id="ActorDefinition/actor-repos-eu-hdr" key="ActorDefinition-actor-repos-eu-hdr" name="HDR Repository"/>
-<artifact id="StructureDefinition/HumanName-obl-eu-hdr" key="StructureDefinition-HumanName-obl-eu-hdr" name="Human Name: obligations"/>
+<artifact id="Observation/lab-swart-6" key="Observation-lab-swart-6" name="HIV 1 As [aanwezigheid] in serum of plasma d.m.v. immunoassay"/>
+<artifact id="Observation/lab-swart-5" key="Observation-lab-swart-5" name="Hemoglobine"/>
+<artifact id="Composition/composition-swart" key="Composition-composition-swart" name="Hospital Discharge summary"/>
+<artifact id="StructureDefinition/humanName-obl-eu-hdr" key="StructureDefinition-humanName-obl-eu-hdr" name="Human Name: obligations"/>
 <artifact id="StructureDefinition/immunization-eu-hdr" key="StructureDefinition-immunization-eu-hdr" name="Immunization (HDR)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
 <artifact id="StructureDefinition/immunization-obl-eu-hdr" key="StructureDefinition-immunization-obl-eu-hdr" name="Immunization: obligations"/>
@@ -65,7 +75,7 @@
 <artifact id="ValueSet/medical-devices-eu-hdr" key="ValueSet-medical-devices-eu-hdr" name="Medical Devices (SNOMED CT)"/>
 <artifact id="ValueSet/medical-devices-snomed-absent-unknown-eu-hdr" key="ValueSet-medical-devices-snomed-absent-unknown-eu-hdr" name="Medical Devices - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="StructureDefinition/Medication-eu-hdr" key="StructureDefinition-Medication-eu-hdr" name="Medication (HDR)"/>
-<artifact id="StructureDefinition/Medication-obl-eu-hdr" key="StructureDefinition-Medication-obl-eu-hdr" name="Medication: obligations"/>
+<artifact id="StructureDefinition/medication-obl-eu-hdr" key="StructureDefinition-medication-obl-eu-hdr" name="Medication: obligations"/>
 <artifact id="StructureDefinition/medicationAdministration-eu-hdr" key="StructureDefinition-medicationAdministration-eu-hdr" name="MedicationAdministration (HDR)"/>
 <artifact id="StructureDefinition/medicationAdministration-obl-eu-hdr" key="StructureDefinition-medicationAdministration-obl-eu-hdr" name="MedicationAdministration: obligations"/>
 <artifact id="StructureDefinition/medicationDispense-eu-hdr" key="StructureDefinition-medicationDispense-eu-hdr" name="MedicationDispense (HDR)"/>
@@ -80,14 +90,21 @@
 <artifact id="StructureDefinition/observation-sdoh-obl-eu-hdr" key="StructureDefinition-observation-sdoh-obl-eu-hdr" name="Observation: SDOH: obligations"/>
 <artifact id="StructureDefinition/observation-travel-eu-hdr" key="StructureDefinition-observation-travel-eu-hdr" name="Observation: country visited (HDR)"/>
 <artifact id="StructureDefinition/observation-travel-obl-eu-hdr" key="StructureDefinition-observation-travel-obl-eu-hdr" name="Observation: country visited: obligations"/>
-<artifact id="StructureDefinition/Patient-obl-eu-hdr" key="StructureDefinition-Patient-obl-eu-hdr" name="Patient: obligations"/>
+<artifact id="Patient/patient-swart" key="Patient-patient-swart" name="Patient Fiona F XXX_Swart"/>
+<artifact id="StructureDefinition/patient-obl-eu-hdr" key="StructureDefinition-patient-obl-eu-hdr" name="Patient: obligations"/>
+<artifact id="Encounter/ziekenhuisopname-swart" key="Encounter-ziekenhuisopname-swart" name="Planned hospital admission for twin delivery"/>
 <artifact id="StructureDefinition/procedure-eu-hdr" key="StructureDefinition-procedure-eu-hdr" name="Procedure (HDR)"/>
 <artifact id="ValueSet/procedure-snomed-eu-hdr" key="ValueSet-procedure-snomed-eu-hdr" name="Procedure codes: Snomed CT"/>
 <artifact id="StructureDefinition/procedure-obl-eu-hdr" key="StructureDefinition-procedure-obl-eu-hdr" name="Procedure: obligations"/>
 <artifact id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
+<artifact id="Observation/lab-swart-4" key="Observation-lab-swart-4" name="Rh D factor"/>
 <artifact id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
-<artifact id="StructureDefinition/Specimen-obl-eu-hdr" key="StructureDefinition-Specimen-obl-eu-hdr" name="Specimen: obligations"/>
+<artifact id="Procedure/sectio-swart" key="Procedure-sectio-swart" name="Sectio caesarea"/>
+<artifact id="StructureDefinition/specimen-obl-eu-hdr" key="StructureDefinition-specimen-obl-eu-hdr" name="Specimen: obligations"/>
 <artifact id="CodeSystem/temporarySystem-hdr-eu" key="CodeSystem-temporarySystem-hdr-eu" name="Temporary HDR Code System"/>
+<artifact id="Observation/tobacco-swart" key="Observation-tobacco-swart" name="Tobacco smoking"/>
+<artifact id="Condition/condition-growth" key="Condition-condition-growth" name="Twin pregnancy"/>
+<artifact id="Condition/condition-meerling" key="Condition-condition-meerling" name="Twin pregnancy"/>
 <artifact id="ValueSet/eHDSIConditionPOA" key="ValueSet-eHDSIConditionPOA" name="eHDSI Condition Present On Admission"/>
 <artifact id="ValueSet/eHDSITreatmentClass" key="ValueSet-eHDSITreatmentClass" name="eHDSI Treatment Class"/>
 <artifact id="ConceptMap/admissionEvaluation2FHIR-eu-hdr" key="ConceptMap-admissionEvaluation2FHIR-eu-hdr" name="eHN Admission Evaluation Model to this guide Map"/>

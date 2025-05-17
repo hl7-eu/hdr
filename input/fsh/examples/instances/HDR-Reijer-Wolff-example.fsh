@@ -7,7 +7,7 @@ Usage: #example
 * type = #document
 
 * identifier[+].type = $v2-0203#PRN
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "http://example.org/eu/identifier"
 * identifier[=].value = "8fd082b6-5d99-42de-988f-955a8ebac0cb"
 
 * timestamp = "2025-04-29T14:00:00+01:00"
@@ -155,10 +155,10 @@ InstanceOf: Patient
 Usage: #inline
 * id = "a1438872-05b1-4868-857d-521c9d586a7e"
 * identifier[+].type = $v2-0203#JHN
-* identifier[=].system = "http://ec.europa.eu/identifier/eci"
+* identifier[=].system = "http://example.org/eu/identifier/eci"
 * identifier[=].value = "6077-888840-8"
 * identifier[+].type = $v2-0203#MR
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "http://example.org/eu/identifier"
 * identifier[=].value = "395922e4-846a-4c18-81e8-9121c77e7bf9"
 * name[+].family = "Wolff"
 * name[=].given[+] = "Reijer"

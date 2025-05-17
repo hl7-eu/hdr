@@ -17,7 +17,9 @@ Description: "This profile represents the constraints applied to the Procedure r
 * code 1.. 
   * ^binding.description = "Codes describing the type of  Procedure"
   * ^definition = "Identification of the procedure or recording of \"absence of relevant procedures\" or of \"procedures unknown\"."
-* code from $procedures-uv-ips // ProceduresSnomedAbsentUnknownHdrVS (preferred)
+* code from $procedures-uv-ips (preferred) 
+
+// ProceduresSnomedAbsentUnknownHdrVS 
 /* * code ^binding.extension[0].extension[0].url = "purpose"
 * code ^binding.extension[=].extension[=].valueCode = #candidate
 * code ^binding.extension[=].extension[+].url = "valueSet"
