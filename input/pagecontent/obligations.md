@@ -48,7 +48,7 @@ The last actor is the system using the report received or retrieved.
       <tr><td><a href="StructureDefinition-flag-obl-eu-hdr.html">Flag: obligations</a></td><td>This profile defines obligations for the Flag resource.</td></tr>
       <tr><td><a href="StructureDefinition-immunization-obl-eu-hdr.html">Immunization: obligations</a></td><td>This profile defines obligations for the Immunization resource.</td></tr>
       <tr><td><a href="StructureDefinition-immunizationRecommendation-obl-eu-hdr.html">ImmunizationRecommendation: obligations</a></td><td>This profile defines obligations for Immunization Recommendations.</td></tr>
-      <tr><td><a href="StructureDefinition-Medication-obl-eu-hdr.html">Medication: obligations</a></td><td>This profile defines obligations for the Medication resource.</td></tr>
+      <tr><td><a href="StructureDefinition-medication-obl-eu-hdr.html">Medication: obligations</a></td><td>This profile defines obligations for the Medication resource.</td></tr>
       <tr><td><a href="StructureDefinition-medicationAdministration-obl-eu-hdr.html">MedicationAdministration: obligations</a></td><td>This profile defines obligations for the MedicationAdministration resource.</td></tr>
       <tr><td><a href="StructureDefinition-medicationDispense-obl-eu-hdr.html">MedicationDispense: obligations</a></td><td>This profile defines obligations for the MedicationDispense resource.</td></tr>
       <tr><td><a href="StructureDefinition-medicationRequest-obl-eu-hdr.html">MedicationRequest: obligations</a></td><td>This profile defines obligations for the MedicationRequest resource.</td></tr>
@@ -57,10 +57,10 @@ The last actor is the system using the report received or retrieved.
       <tr><td><a href="StructureDefinition-observation-sdoh-obl-eu-hdr.html">Observation: SDOH: obligations</a></td><td>This profile defines obligations for the Social Determinants of Health profile.</td></tr>
       <tr><td><a href="StructureDefinition-observation-travel-obl-eu-hdr.html">Observation: country visited: obligations</a></td><td>This profile defines obligations for the travel history profile.</td></tr>
       <tr><td><a href="StructureDefinition-procedure-obl-eu-hdr.html">Procedure: obligations</a></td><td>This profile defines obligations for the Procedure resource.</td></tr>
-      <tr><td><a href="StructureDefinition-Patient-obl-eu-hdr.html">Patient: Obligations</a></td><td>This profile defines obligations for the Patient resource.</td></tr>
-      <tr><td><a href="StructureDefinition-Specimen-obl-eu-hdr.html">Specimen: Obligations</a></td><td>This profile defines obligations for the Specimen resource.</td></tr>
+      <tr><td><a href="StructureDefinition-patient-obl-eu-hdr.html">Patient: Obligations</a></td><td>This profile defines obligations for the Patient resource.</td></tr>
+      <tr><td><a href="StructureDefinition-specimen-obl-eu-hdr.html">Specimen: Obligations</a></td><td>This profile defines obligations for the Specimen resource.</td></tr>
       <tr><td><a href="StructureDefinition-allergyIntolerance-obl-eu-hdr.html">Allergy Intolerance: Obligations</a></td><td>This profile defines obligations for the AllergyIntolerance resource.</td></tr>
-      <tr><td><a href="StructureDefinition-HumanName-obl-eu-hdr.html">Human Name: Obligations</a></td><td>This profile defines obligations for the HumanName data type.</td></tr>
+      <tr><td><a href="StructureDefinition-humanName-obl-eu-hdr.html">Human Name: Obligations</a></td><td>This profile defines obligations for the HumanName data type.</td></tr>
     </tbody>   </table>
 
 </div>

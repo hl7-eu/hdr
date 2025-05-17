@@ -596,7 +596,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     Advance Directives Section,
     The advance directives section contains a narrative description of patient's advance directive.,
     $loinc#42348-3 )  // 	Advance directives
-  * entry only Reference(Consent or DocumentReference) // ==> Add Profile
+  * entry only Reference(ConsentHdrEu or DocumentReference) 
 
 
 // -------------------------------------

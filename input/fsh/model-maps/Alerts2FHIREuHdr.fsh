@@ -8,7 +8,7 @@ Usage: #definition
 * experimental = true
 * description = """eHN HDR Alerts Model to this guide mapping"""
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Alerts"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/allergyIntolerance-eu-eps"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/allergyIntolerance-eu-hdr"
 * group[=].element[+].code = #Alerts.allergy
 * group[=].element[=].display = "A.2.2.1 - Allergy and Intolerance"
 * group[=].element[=].target.code = #AllergyIntolerance

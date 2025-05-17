@@ -7,7 +7,7 @@ Usage: #example
 * type = #document
 
 * identifier[+].type = $v2-0203#PRN
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "http://example.org/eu/identifier"
 * identifier[=].value = "9ea3fdb2-155c-4da7-9fce-4f24da356e13"
 
 * timestamp = "2025-02-02T14:00:00Z"
@@ -35,7 +35,7 @@ InstanceOf: Patient
 Usage: #inline
 * id = "445a0ff8-556d-4be2-bdde-6de668edf019"
 * identifier[+].type = $v2-0203#JHN
-* identifier[=].system = "http://ec.europa.eu/identifier/eci"
+* identifier[=].system = "http://example.org/eu/identifier/eci"
 * identifier[=].value = "9977-888840-8"
 * name[+].family = "Marcheschi"
 * name[=].given[+] = "Paolo"
@@ -99,10 +99,14 @@ Usage: #inline
 // 
 // section
 //
+
+
 * section[+].title = "Terapia Farmacologica All'Ingresso"
 * section[=].code = $loinc#8677-7 "History of Medication use"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Flecainide (Flecainide auro), cpr. divisibili, 100 mg (ore 8), 100 mg (ore 20); Bisoprololo (Congescor), cpr. riv. divisibili, 3,75 mg (ore 8); Edoxaban (Lixiana), cp.riv., 60 mg (ore 8); Rosuvastatina (Rosuvastatina eg), cp.riv., 10 mg (ore 22).</div>"
+
+
 // 
 // section
 //
@@ -114,7 +118,7 @@ Usage: #inline
 // section
 //
 * section[sectionPatientHx].title = "Anamnesi"
-* section[=].code = $loinc#11450-4 "Problem list - Reported"
+* section[=].code = $loinc#35090-0 "Patient history"
 * section[=].text.status = #generated
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Non fumatore. Nel 2003 riscontro di Extrasistolia Ventricolare asintomatica e disfunzione sistolica del ventricolo sinistro (FE 35%), con albero coronarico indenne. Nel 2006 impianto di ICD. Alla RM FE 51% con circoscritta fibrosi intra-miocardica. Successivi episodi di fibrillazione atriale parossistica. Nel 2013: FE 28%, EDD 68 mm, IM lieve-moderata. Ai controlli dell'ICD nel 2014 e 2015: TVNS asintomatiche. Nel gennaio 2015 riscontro di trombosi atriale destra adesa al catetere del defibrillatore, dimesso con TAO. Nel giugno 2015: non pià segni di trombosi atriale. Nell'aprile 2016 introdotta mexiletina 200 mg x 2, apixaban 5 mg x 2 e sacubitril/valsartan. Nel 2017 endoplastite, trattata con estrazione reimpianto di EC da defibrillazione e sostituzione di ICD bicamerale. Nel 2018 plurime scariche dell'ICD su TV rapida dopo sforzo fisico. All'ecocardiogramma FE 23-25%. Valutato presso il Centro Trapianti dell'Ospedale di Siena. Iniziato amiodarone. Nel 2020 cateterismo destro (pressioni polmonari nei limiti). In seguito, stabilità clinica: mexiletina 200 mg x 3/die e amiodarone a 1 cpr (lunedà-venerdà). Ad aprile 2021 tireotossicosi di tipo 2 da amiodarone. Nel 2022 test genetico positivo per mutazione probabilmente patogenetica del gene DES (c.833 G&gt;A). Ultimo controllo presso Centro Trapianti di Siena a ottobre 2023 (ndn). Dal 22/11/2023 comparsa di febbre associata a brivido e astenia con accesso al  PS a Grosseto in data 24/11, positivo per SARS-CoV-2, PCR 1,63, crea 1,27 mg/dl, RX torace negativo per lesioni a focolaio. Iniziato remdesevir.  In data 25/11 shock dell'ICD in zona TV. Dimesso il 26/11. In data 01/12 /23  per nuovo episodio di tachicardia ventricolare trattata con shock del defibrillatore ricovero presso la Cardiologia e Medicina Cardiovascolare di questo Istituto. All'ingresso in reparto paziente ancora positivo al COVID (negativizzato il 7/12/23). In data 2/12 altre due TV sostenute interrotte da ATP. Sospesa mexiletina ed introdotta lidocaina per via infusionale. Ecocardiogramma con disfunzione severa e reperti invariati rispetto al precedente di maggio 2023. Positività al tampone rettale per KPC. Sospesa infusione di lidocaina in data 7 dicembre reintroducendo mexiletina con altri due shock il 9/12. Reintrodotta lidocaina ev. Massimizzata terapia anti-infiammatoria, gastroprotettiva e ansiolitica. In data 11/12 positiva al tampone per KPC. Consulenza infettivologica che in previsione di eventuale trapianto cardiaco consigliava tampone nasale (negativo). Sospesa lidocaina ev il 13/12. La sera del 14/12 TV polimorfa con falliti tentativi di ATP e nuovo shock efficace. Reintrodotta lidocaina e midazolam ev. In previsione del trasferimento presso centro trapianti, due episodi di TVS con 2 shock dopo multipli ATP inefficaci. Sottoposto la sera del 15/12 a procedura di blocco percutaneo del ganglio stellato sotto guida ecografica. Non pià aritmie sostenute dalle 17 del 15 dicembre. Trasferito presso UO Cardiochirurgia AOU Siena, vigile ed orientato, asintomatico ed emodinamicamente stabile, dove in data 21.04.2024 veniva sottoposto a trapianto cardiaco ortotopico. Nel decorso post-operatorio segnalato delirium ipercinetico, tamponamento cardiaco post-HTx (drenato il 01.05), versamento pleurico bilaterale in terapia medica, trombosi giugulare parziale bilaterale, FA parossistica. Si segnalano elettrocateteri abbandonati. In terapia antirigetto con tacrolimus, everolimus e prednisone (micofenolato sospeso per rialzo copie CMV), ultima BEM il 20 agosto 2024: rigetto cellulare 0-1.</div>"
 // 

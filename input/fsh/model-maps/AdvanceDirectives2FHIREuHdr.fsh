@@ -21,7 +21,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "Composition.section:sectionAdvanceDirectives.entry.ofType(DocumentReference)"
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/AdvanceDirectives"
-* group[=].target = "http://hl7.org/fhir/StructureDefinition/consent-eu-hdr"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/consent-eu-hdr"
 * group[=].element[+].code = #AdvanceDirectives.livingWill
 * group[=].element[=].display = "A.2.1.1 - Living will"
 * group[=].element[=].target.code = #Consent

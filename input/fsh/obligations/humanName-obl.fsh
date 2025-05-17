@@ -1,6 +1,6 @@
 Profile: HumanNameEuObligations
 Parent: HumanName
-Id: HumanName-obl-eu-hdr
+Id: humanName-obl-eu-hdr
 Title:    "Human Name: obligations"
 Description: "This profile defines obligations for an human Patient name in FHIR for the purpose of this guide."
 // * ^publisher = "HL7 Europe"
