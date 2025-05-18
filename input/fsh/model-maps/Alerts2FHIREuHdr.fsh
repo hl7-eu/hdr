@@ -87,7 +87,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Alerts"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/flag-eu-eps"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/flag-eu-hdr"
 * group[=].element[+].code = #Alerts.medicalAlerts.description
 * group[=].element[=].display = "A.2.2.2.1 - Healthcare alert description"
 * group[=].element[=].target.code = #Flag.text

@@ -1,3 +1,4 @@
+/* COMMENTED DUE TO A VAKLIDATION ERROR NOT FIXED YET*/
 Instance: patient-swart
 InstanceOf: Patient
 Title: "Patient Fiona F XXX_Swart"
@@ -96,7 +97,7 @@ Usage: #example
 * valueCodeableConcept = $sct#289431008 "Fetal movements present"
 
 Instance: condition-meerling
-InstanceOf: Condition
+InstanceOf: ConditionEuHdr
 Title: "Twin pregnancy"
 Usage: #example
 * clinicalStatus = $condition-clinical#resolved
@@ -107,14 +108,14 @@ Usage: #example
 Instance: condition-growth
 InstanceOf: Condition
 Title: "Twin pregnancy"
-Usage: #example
+Usage: #inline
 * clinicalStatus = $condition-clinical#resolved
 * code = $sct#22033007 "Fetal growth restriction"
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * onsetDateTime = 2025-02-08
 
 Instance: ziekenhuisopname-swart
-InstanceOf: Encounter
+InstanceOf: EncounterEuHdr
 Title: "Planned hospital admission for twin delivery"
 Usage: #example
 * status = $encounter-status#finished
@@ -188,6 +189,7 @@ Title: "ABO group"
 Usage: #example
 * status = #final
 * code = $loinc#883-9 "ABO group [Type] in Blood"
+* category = $observation-category#laboratory "Laboratory"
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * valueCodeableConcept = $sct#58460004 "Blood group O"
@@ -198,6 +200,7 @@ Title: "Rh D factor"
 Usage: #example
 * status = #final
 * code = $loinc#1305-2 "D Ag [Presence] in Blood"
+* category = $observation-category#laboratory "Laboratory"
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * valueCodeableConcept = $sct#165747007 "RhD positive"
@@ -208,6 +211,7 @@ Title: "Hemoglobine"
 Usage: #example
 * status = #final
 * code = $loinc#93846-4 "Hemoglobin [Moles/volume] in Venous blood"
+* category = $observation-category#laboratory "Laboratory"
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * valueQuantity = 7.3 $ucum#mmol/L "mmol/L"
@@ -218,12 +222,13 @@ Title: "HIV 1 As [aanwezigheid] in serum of plasma d.m.v. immunoassay"
 Usage: #example
 * status = #final
 * code = $loinc#29893-5 "HIV 1 Ab [Presence] in Serum or Plasma by Immunoassay"
+* category = $observation-category#laboratory "Laboratory"
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * valueCodeableConcept = $sct#165815009 "HIV not detected"
 
 Instance: composition-swart
-InstanceOf: Composition
+InstanceOf: CompositionEuHdr
 Usage: #example
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
@@ -233,14 +238,14 @@ Usage: #example
 * author = Reference(http://example.org/Organization/organization-sophia)
 * title = "Hospital Discharge summary"
 * confidentiality = #N
-* section[+].title = "Admission evaluation"
-* section[=].code = $loinc#67851-6 "Admission evaluation note"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Fiona Swart was admitted to the hospital for a planned cesarean section.</div>"
-* section[=].section[0].title = "Vital signs"
-* section[=].section[=].code = $loinc#8716-3 "Vital signs"
-* section[=].section[=].text.status = #generated
-* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+* section[sectionAdmissionEvaluation].title = "Admission evaluation"
+* section[sectionAdmissionEvaluation].code = $loinc#67851-6 "Admission evaluation note"
+* section[sectionAdmissionEvaluation].text.status = #generated
+* section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Fiona Swart was admitted to the hospital for a planned cesarean section.</div>"
+* section[sectionAdmissionEvaluation].section[0].title = "Vital signs"
+* section[sectionAdmissionEvaluation].section[=].code = $loinc#8716-3 "Vital signs"
+* section[sectionAdmissionEvaluation].section[=].text.status = #generated
+* section[sectionAdmissionEvaluation].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
    <table>
       <tr>
          <td>Body weight</td>
@@ -264,13 +269,18 @@ Usage: #example
       </tr>
    </table>
 </div>"
-* section[=].section[=].entry[0] = Reference(http://example.org/Observation/gewicht-swart) "63 kg"
-* section[=].section[=].entry[+] = Reference(http://example.org/Observation/bloeddruk-swart) "70/120 mmHg"
-* section[=].section[=].entry[+] = Reference(http://example.org/Observation/levenvoelen-swart) "foetale bewegingen aanwezig"
-* section[=].section[+].title = "Social history"
-* section[=].section[=].code = $loinc#29762-2 "Social history Narrative"
-* section[=].section[=].text.status = #generated
-* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+
+* section[sectionAdmissionEvaluation].section[=].entry[0] = Reference(http://example.org/Observation/gewicht-swart) "63 kg"
+* section[sectionAdmissionEvaluation].section[=].entry[+] = Reference(http://example.org/Observation/bloeddruk-swart) "70/120 mmHg"
+* section[sectionAdmissionEvaluation].section[=].entry[+] = Reference(http://example.org/Observation/levenvoelen-swart) "foetale bewegingen aanwezig"
+
+
+* section[sectionPatientHx].title = "35090-0"
+* section[sectionPatientHx].code = $loinc#35090-0 "Patient History"
+* section[sectionPatientHx].section[+].title = "Social history"
+* section[sectionPatientHx].section[=].code = $loinc#29762-2 "Social history Narrative"
+* section[sectionPatientHx].section[=].text.status = #generated
+* section[sectionPatientHx].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
    <table>
       <tr>
          <td>Alcohol drinking behaviour</td>
@@ -290,12 +300,14 @@ Usage: #example
       </tr>
    </table>
 </div>"
-* section[=].section[=].entry[0] = Reference(http://example.org/Observation/alcohol-swart) "does not drink alcohol"
-* section[=].section[=].entry[+] = Reference(http://example.org/Observation/tobacco-swart) "smokes occasionally cigarettes"
-* section[=].section[+].title = "Significant procedures"
-* section[=].section[=].code = $loinc#10185-7 "Hospital discharge procedures Narrative"
-* section[=].section[=].text.status = #generated
-* section[=].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+* section[sectionPatientHx].section[=].entry[0] = Reference(http://example.org/Observation/alcohol-swart) "does not drink alcohol"
+* section[sectionPatientHx].section[=].entry[+] = Reference(http://example.org/Observation/tobacco-swart) "smokes occasionally cigarettes"
+
+
+* section[sectionPatientHx].section[+].title = "Significant procedures"
+* section[sectionPatientHx].section[=].code = $loinc#10185-7 "Hospital discharge procedures Narrative"
+* section[sectionPatientHx].section[=].text.status = #generated
+* section[sectionPatientHx].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
    <table>
       <tr>
          <td>Obstetric procedure</td>
@@ -303,11 +315,11 @@ Usage: #example
       </tr>
    </table>
    </div>"
-* section[=].section[=].entry[0] = Reference(http://example.org/Procedure/sectio-swart) "planned primary sectio caesarea"
-* section[+].title = "Problem List"
-* section[=].code = $loinc#11450-4 "Problem list - Reported"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+* section[sectionPatientHx].section[=].entry[0] = Reference(http://example.org/Procedure/sectio-swart) "planned primary sectio caesarea"
+* section[sectionProblemList].title = "Problem List"
+* section[sectionProblemList].code = $loinc#11450-4 "Problem list - Reported"
+* section[sectionProblemList].text.status = #generated
+* section[sectionProblemList].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
    <table>
       <tr>
          <td>Monochorionic diamniotic twin pregnancy</td>
@@ -319,12 +331,24 @@ Usage: #example
       </tr>
    </table>
 </div>"
-* section[=].entry[0] = Reference(http://example.org/Condition/condition-meerling)
-* section[=].entry[+] = Reference(http://example.org/Condition/condition-growth)
-* section[+].title = "Results"
-* section[=].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+* section[sectionProblemList].entry[0] = Reference(http://example.org/Condition/condition-meerling)
+* section[sectionProblemList].entry[+] = Reference(http://example.org/Condition/condition-growth)
+
+
+* section[sectionHospitalCourse].title = "Hospital Course"
+* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital Course"
+* section[sectionHospitalCourse].text.status = #generated
+* section[sectionHospitalCourse].text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml">
+  The scheduled cesarean section procedure was performed on the day of admission without complications. Intraoperative and postoperative courses were uneventful. Postoperative pain was managed effectively with standard analgesia. Vital signs remained stable throughout the stay, and there were no signs of infection or other complications. The patient was mobilized on postoperative day one and tolerated oral intake well. Mother and newborn received routine postnatal care.
+</div>
+"""
+
+
+* section[sectionSignificantResults].title = "Results"
+* section[sectionSignificantResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
+* section[sectionSignificantResults].text.status = #generated
+* section[sectionSignificantResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
    <table>
       <tr>
          <td>ABO group [Type] in Blood</td>
@@ -346,14 +370,14 @@ Usage: #example
 </div>"
 // * section[=].entry[0] = Reference(http://example.org/Observation/lab-swart-1)  "HBsAg"
 // * section[=].entry[+] = Reference(http://example.org/Observation/lab-swart-2)  "Toxoplasma IgG"
-* section[=].entry[+] = Reference(http://example.org/Observation/lab-swart-3)  "ABO group"
-* section[=].entry[+] = Reference(http://example.org/Observation/lab-swart-4)  "Rh D factor"
-* section[=].entry[+] = Reference(http://example.org/Observation/lab-swart-5)  "hemoglobin"
-* section[=].entry[+] = Reference(http://example.org/Observation/lab-swart-6)  "HIV 1 As"
-* section[+].title = "Discharge details"
-* section[=].code = $loinc#8650-4 "Hospital discharge disposition Narrative"
-* section[=].text.status = #generated
-* section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Fiona Swart was discharged after cesarean section with healthy twin.</div>"
+* section[sectionSignificantResults].entry[+] = Reference(http://example.org/Observation/lab-swart-3)  "ABO group"
+* section[sectionSignificantResults].entry[+] = Reference(http://example.org/Observation/lab-swart-4)  "Rh D factor"
+* section[sectionSignificantResults].entry[+] = Reference(http://example.org/Observation/lab-swart-5)  "hemoglobin"
+* section[sectionSignificantResults].entry[+] = Reference(http://example.org/Observation/lab-swart-6)  "HIV 1 As"
+* section[sectionDischargeDetails].title = "Discharge details"
+* section[sectionDischargeDetails].code = $loinc#8650-4 "Hospital discharge disposition Narrative"
+* section[sectionDischargeDetails].text.status = #generated
+* section[sectionDischargeDetails].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Fiona Swart was discharged after cesarean section with healthy twin.</div>"
 
 Instance: bundle-swart
 InstanceOf: Bundle

@@ -1,7 +1,7 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  MedicationEuHdr
 Parent:   Medication
-Id:       Medication-eu-hdr
+Id:       medication-eu-hdr
 Title:    "Medication (HDR)"
 Description: "This profile constrains the Medication resource for the purpose of this guide, adapted from the MPD work."
 //-------------------------------------------------------------------------------------------

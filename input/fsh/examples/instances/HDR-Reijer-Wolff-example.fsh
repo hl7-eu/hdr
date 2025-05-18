@@ -151,7 +151,7 @@ Usage: #inline
 """
 
 Instance: patient-wolff-example
-InstanceOf: Patient
+InstanceOf: PatientEuCore
 Usage: #inline
 * id = "a1438872-05b1-4868-857d-521c9d586a7e"
 * identifier[+].type = $v2-0203#JHN
@@ -176,7 +176,7 @@ Usage: #inline
 
 
 Instance: practitionerrole-wolff-author
-InstanceOf: PractitionerRole
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "cc0ae2a0-980d-4a2b-a4fb-9c71ecc70a15"
 * practitioner = Reference(urn:uuid:b60f89db-36c7-4a23-ab59-ace7089d2387)
@@ -203,7 +203,7 @@ Usage: #inline
 
 Instance: encounter-wolff-example
 InstanceOf: EncounterEuHdr
-Usage: #inline
+Usage: #example
 * id = "12fef60c-1fe7-4988-8286-af691889a3f3"
 * status = #finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP
@@ -235,7 +235,7 @@ Usage: #inline
 
 Instance: paracetamol
 InstanceOf: MedicationAdministrationEuHdr
-Usage: #inline
+Usage: #example
 * id = "1bcfb26f-6958-4604-a40b-712170c1e536"
 * status = #completed
 * medicationCodeableConcept = $sct#387517004 "Paracetamol (substance)"

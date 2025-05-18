@@ -15,7 +15,7 @@ The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-Con
 
 # Warnings referred to an Obligation profile
 The extension http://hl7.org/fhir/tools/StructureDefinition/obligation|0.1.0 is deprecated
-The Implementation Guide contains no examples for this profile
+
 
 # Reference to deprecated ValueSet
 Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
