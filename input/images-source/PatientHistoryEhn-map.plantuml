@@ -30,9 +30,12 @@ class "device-eu-hdr" <<Profile>> [[StructureDefinition-device-eu-hdr.html]]
 class "deviceUseStatement-eu-hdr" <<Profile>> [[StructureDefinition-deviceUseStatement-eu-hdr.html]]
 "PatientHistoryEhn" <|. "deviceUseStatement-eu-hdr"
 "device-eu-hdr" -d[hidden]-> "deviceUseStatement-eu-hdr"
+class "familyMemberHistory-eu-hdr" <<Profile>> [[StructureDefinition-familyMemberHistory-eu-hdr.html]]
+"PatientHistoryEhn" <|. "familyMemberHistory-eu-hdr"
+"deviceUseStatement-eu-hdr" -d[hidden]-> "familyMemberHistory-eu-hdr"
 class "immunization-eu-hdr" <<Profile>> [[StructureDefinition-immunization-eu-hdr.html]]
 "PatientHistoryEhn" <|. "immunization-eu-hdr"
-"deviceUseStatement-eu-hdr" -d[hidden]-> "immunization-eu-hdr"
+"familyMemberHistory-eu-hdr" -d[hidden]-> "immunization-eu-hdr"
 class "observation-infectious-contact-eu-hdr" <<Profile>> [[StructureDefinition-observation-infectious-contact-eu-hdr.html]]
 "PatientHistoryEhn" <|. "observation-infectious-contact-eu-hdr"
 "immunization-eu-hdr" -d[hidden]-> "observation-infectious-contact-eu-hdr"
@@ -48,7 +51,4 @@ class "procedure-eu-hdr" <<Profile>> [[StructureDefinition-procedure-eu-hdr.html
 class "Observation" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Observation]]
 "PatientHistoryEhn" <|. "Observation"
 "procedure-eu-hdr" -d[hidden]-> "Observation"
-class "familyMemberHistory-eu-hdr" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/familyMemberHistory-eu-hdr]]
-"PatientHistoryEhn" <|. "familyMemberHistory-eu-hdr"
-"Observation" -d[hidden]-> "familyMemberHistory-eu-hdr"
 @enduml

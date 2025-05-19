@@ -117,7 +117,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Subject"
-* group[=].target = "http://hl7.eu/fhir/core/StructureDefinition/practitioner-eu-core"
+* group[=].target = "http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu-core"
 * group[=].element[+].code = #subjectContact.preferredHP
 * group[=].element[=].display = "A.1.2.2 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."
 * group[=].element[=].target.code = #Practictioner
@@ -144,7 +144,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/Subject"
-* group[=].target = "http://hl7.eu/fhir/core/StructureDefinition/practitionerRole-eu-core"
+* group[=].target = "http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu-core"
 * group[=].element[+].code = #subjectContact.preferredHP
 * group[=].element[=].display = "A.1.2.2 - Preferred health professional (HP) - This section can be repeated and linked to any specific information in the document, for example a link between a rare disease problem and the rare disease specialist responsible for the care of the individual patient (this section)."
 * group[=].element[=].target.code = #PractictionerRole

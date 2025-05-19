@@ -139,7 +139,7 @@ Usage: #inline
 Instance: composition-hdr-luca-example
 InstanceOf: CompositionEuHdr
 Title: "HDR Composition"
-Usage: #inline
+Usage: #example
 * id = "b9dc409d-ec81-4556-9fac-4dc3f731c199"
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
@@ -427,7 +427,7 @@ Usage: #inline
 
 Instance: diabetis-condition-luca
 InstanceOf: ConditionEuHdr
-Usage: #inline
+Usage: #example
 * id = "a5bf69e4-24db-48a8-9eda-71516dcaf1d9"
 * clinicalStatus = $condition-clinical#active
 * code[0].coding[+] = $icd10#E11 "Type 2 diabetes mellitus"
@@ -439,7 +439,7 @@ Instance: careplan-luca
 InstanceOf: CarePlan
 Title: "Diabetes Management Care Plan"
 Description: "Care plan for diabetes including referrals and HbA1c measurement."
-Usage: #inline
+Usage: #example
 * id = "b84038f8-9541-4c5b-93b0-a7f1b8e55bd3"
 * status = #active
 * intent = #plan
@@ -485,7 +485,7 @@ Instance: familyhistory-mother-luca-example
 InstanceOf: FamilyMemberHistoryEuHdr
 Title: "Family History of Type 2 Diabetes Mellitus - Mother"
 Description: "Mother has a history of type 2 diabetes mellitus."
-Usage: #inline
+Usage: #example
 * id = "635c22e7-d7f1-45ad-9b4d-d4fe35239085"
 * status = #completed
 * patient = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
