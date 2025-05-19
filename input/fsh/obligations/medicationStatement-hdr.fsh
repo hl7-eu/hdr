@@ -6,7 +6,7 @@ Title:    "MedicationStatement: obligations"
 Description: "This profile defines obligations for the MedicationStatement resource for the purpose of this guide, adapted from the MPD work."
 //-------------------------------------------------------------------------------------------
 
-* insert SetFmmandStatusRule ( 0, informative)
+* insert SetFmmAndStatusRule ( 0, informative)
 
 
 * subject insert ObligationSet1

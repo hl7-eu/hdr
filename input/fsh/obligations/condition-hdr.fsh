@@ -4,7 +4,7 @@ Id: condition-obl-eu-hdr
 Title: "Condition: obligations"
 Description: """This profile defines obligations for the Condition in the scope of this guide. It support the Diagnostic summary part of the eHN data model adding two additional categories: First category distingueshes conditions present at admission and acquired during hospital stay, while second category is used to indicate impact of the condition to the treatement during hospital stay (treated, untreated)."""
 
-* insert SetFmmandStatusRule ( 0, informative)
+* insert SetFmmAndStatusRule ( 0, informative)
 
 * extension[bodySite] 
 * category 

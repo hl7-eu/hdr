@@ -64,10 +64,9 @@
 <artifact id="ActorDefinition/actor-consumer-eu-hdr" key="ActorDefinition-actor-consumer-eu-hdr" name="HDR Consumer"/>
 <artifact id="ActorDefinition/actor-creator-eu-hdr" key="ActorDefinition-actor-creator-eu-hdr" name="HDR Creator"/>
 <artifact id="ActorDefinition/actor-repos-eu-hdr" key="ActorDefinition-actor-repos-eu-hdr" name="HDR Repository"/>
-<artifact id="Observation/lab-swart-6" key="Observation-lab-swart-6" name="HIV 1 As [aanwezigheid] in serum of plasma d.m.v. immunoassay"/>
-<artifact id="Observation/lab-swart-5" key="Observation-lab-swart-5" name="Hemoglobine"/>
 <artifact id="Composition/composition-swart" key="Composition-composition-swart" name="Hospital Discharge summary"/>
 <artifact id="StructureDefinition/humanName-obl-eu-hdr" key="StructureDefinition-humanName-obl-eu-hdr" name="Human Name: obligations"/>
+<artifact id="StructureDefinition/identifier-accession-number-myhealtheu" key="StructureDefinition-identifier-accession-number-myhealtheu" name="Imaging Accession Number Identifier"/>
 <artifact id="StructureDefinition/immunization-eu-hdr" key="StructureDefinition-immunization-eu-hdr" name="Immunization (HDR)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
 <artifact id="StructureDefinition/immunization-obl-eu-hdr" key="StructureDefinition-immunization-obl-eu-hdr" name="Immunization: obligations"/>
@@ -87,6 +86,7 @@
 <artifact id="StructureDefinition/medicationRequest-obl-eu-hdr" key="StructureDefinition-medicationRequest-obl-eu-hdr" name="MedicationRequest: obligations"/>
 <artifact id="StructureDefinition/medicationStatement-eu-hdr" key="StructureDefinition-medicationStatement-eu-hdr" name="MedicationStatement (HDR)"/>
 <artifact id="StructureDefinition/medicationStatement-obl-eu-hdr" key="StructureDefinition-medicationStatement-obl-eu-hdr" name="MedicationStatement: obligations"/>
+<artifact id="StructureDefinition/observation-imgFinding-eu-hdr" key="StructureDefinition-observation-imgFinding-eu-hdr" name="Observation: Imaging Finding (HDR)"/>
 <artifact id="StructureDefinition/observation-infectious-contact-eu-hdr" key="StructureDefinition-observation-infectious-contact-eu-hdr" name="Observation: Infectious Contact (HDR)"/>
 <artifact id="StructureDefinition/observation-infectious-contact-obl-eu-hdr" key="StructureDefinition-observation-infectious-contact-obl-eu-hdr" name="Observation: Infectious Contact: obligations"/>
 <artifact id="StructureDefinition/observation-sdoh-eu-hdr" key="StructureDefinition-observation-sdoh-eu-hdr" name="Observation: SDOH (HDR)"/>
@@ -100,7 +100,6 @@
 <artifact id="ValueSet/procedure-snomed-eu-hdr" key="ValueSet-procedure-snomed-eu-hdr" name="Procedure codes: Snomed CT"/>
 <artifact id="StructureDefinition/procedure-obl-eu-hdr" key="StructureDefinition-procedure-obl-eu-hdr" name="Procedure: obligations"/>
 <artifact id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
-<artifact id="Observation/lab-swart-4" key="Observation-lab-swart-4" name="Rh D factor"/>
 <artifact id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
 <artifact id="Procedure/sectio-swart" key="Procedure-sectio-swart" name="Sectio caesarea"/>
 <artifact id="StructureDefinition/specimen-obl-eu-hdr" key="StructureDefinition-specimen-obl-eu-hdr" name="Specimen: obligations"/>

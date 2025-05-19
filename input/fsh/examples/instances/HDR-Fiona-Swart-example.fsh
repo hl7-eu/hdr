@@ -1,4 +1,3 @@
-/* COMMENTED DUE TO A VAKLIDATION ERROR NOT FIXED YET*/
 Instance: patient-swart
 InstanceOf: Patient
 Title: "Patient Fiona F XXX_Swart"
@@ -184,47 +183,51 @@ Usage: #example
 // * valueQuantity = 9 $ucum#k[arb'U]/L "k[arb'U]/L"
 
 Instance: lab-swart-3
-InstanceOf: Observation
+InstanceOf: ObservationResultsLaboratoryEu
 Title: "ABO group"
 Usage: #example
 * status = #final
 * code = $loinc#883-9 "ABO group [Type] in Blood"
-* category = $observation-category#laboratory "Laboratory"
+* category[laboratory] = $observation-category#laboratory "Laboratory"
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
+* performer = Reference(http://example.org/Organization/organization-sophia)
 * valueCodeableConcept = $sct#58460004 "Blood group O"
 
 Instance: lab-swart-4
-InstanceOf: Observation
+InstanceOf: ObservationResultsLaboratoryEu
 Title: "Rh D factor"
-Usage: #example
+Usage: #inline
 * status = #final
 * code = $loinc#1305-2 "D Ag [Presence] in Blood"
-* category = $observation-category#laboratory "Laboratory"
+* category[laboratory] = $observation-category#laboratory "Laboratory"
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
+* performer = Reference(http://example.org/Organization/organization-sophia)
 * valueCodeableConcept = $sct#165747007 "RhD positive"
 
 Instance: lab-swart-5
-InstanceOf: Observation
+InstanceOf: ObservationResultsLaboratoryEu
 Title: "Hemoglobine"
-Usage: #example
+Usage: #inline
 * status = #final
 * code = $loinc#93846-4 "Hemoglobin [Moles/volume] in Venous blood"
-* category = $observation-category#laboratory "Laboratory"
+* category[laboratory] = $observation-category#laboratory "Laboratory"
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
+* performer = Reference(http://example.org/Organization/organization-sophia)
 * valueQuantity = 7.3 $ucum#mmol/L "mmol/L"
 
 Instance: lab-swart-6
-InstanceOf: Observation
+InstanceOf: ObservationResultsLaboratoryEu
 Title: "HIV 1 As [aanwezigheid] in serum of plasma d.m.v. immunoassay"
-Usage: #example
+Usage: #inline
 * status = #final
 * code = $loinc#29893-5 "HIV 1 Ab [Presence] in Serum or Plasma by Immunoassay"
-* category = $observation-category#laboratory "Laboratory"
+* category[laboratory] = $observation-category#laboratory "Laboratory"
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
+* performer = Reference(http://example.org/Organization/organization-sophia)
 * valueCodeableConcept = $sct#165815009 "HIV not detected"
 
 Instance: composition-swart
@@ -370,10 +373,12 @@ Usage: #example
 </div>"
 // * section[=].entry[0] = Reference(http://example.org/Observation/lab-swart-1)  "HBsAg"
 // * section[=].entry[+] = Reference(http://example.org/Observation/lab-swart-2)  "Toxoplasma IgG"
-* section[sectionSignificantResults].entry[+] = Reference(http://example.org/Observation/lab-swart-3)  "ABO group"
-* section[sectionSignificantResults].entry[+] = Reference(http://example.org/Observation/lab-swart-4)  "Rh D factor"
-* section[sectionSignificantResults].entry[+] = Reference(http://example.org/Observation/lab-swart-5)  "hemoglobin"
-* section[sectionSignificantResults].entry[+] = Reference(http://example.org/Observation/lab-swart-6)  "HIV 1 As"
+* section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-3)  "ABO group"
+* section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-4)  "Rh D factor"
+* section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-5)  "hemoglobin"
+* section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-6)  "HIV 1 As"
+
+
 * section[sectionDischargeDetails].title = "Discharge details"
 * section[sectionDischargeDetails].code = $loinc#8650-4 "Hospital discharge disposition Narrative"
 * section[sectionDischargeDetails].text.status = #generated

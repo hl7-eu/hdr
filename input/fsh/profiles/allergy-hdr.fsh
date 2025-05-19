@@ -5,7 +5,7 @@ Title:    "Allergy Intolerance (HDR)"
 Description: """This profile constrains the AllergyIntolerance resource for the purpose of this project."""
 * ^purpose = "This profile constrains the AllergyIntolerance resource for the purpose of project."
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 * insert ImposeProfile($AllergyIntolerance-uv-ips, 0)
 
 * extension contains $allergyintolerance-abatement named abatement 0..1

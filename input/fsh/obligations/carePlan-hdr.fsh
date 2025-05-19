@@ -4,7 +4,7 @@ Id: carePlan-obl-eu-hdr
 Title:    "Care Plan: obligations"
 Description: """This profile defines obligations for the CarePlan resource for the purpose of this guide."""
 
-* insert SetFmmandStatusRule ( 0, informative)
+* insert SetFmmAndStatusRule ( 0, informative)
 * text insert ObligationSet1
 * title insert ObligationSet2
 * addresses 

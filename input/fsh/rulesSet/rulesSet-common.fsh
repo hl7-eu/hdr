@@ -8,12 +8,12 @@ RuleSet: ExtensionContext(path)
 * ^context[=].expression = "{path}"
 
 
-RuleSet: SetFmmandStatusRule ( fmm, status )
+RuleSet: SetFmmAndStatusRule ( fmm, status )
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = {fmm}
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
 
 
-RuleSet: SetFmmandStatusRuleInstance ( fmm, status )
+RuleSet: SetFmmAndStatusRuleInstance ( fmm, status )
 // Rule to be used for Instances
 * extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = {fmm}
 * extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
@@ -49,6 +49,14 @@ RuleSet: SectionSliceComRules (short, def)
 
 RuleSet: OpenReferenceSlicePerTypeRules (short, def)
 * ^slicing.discriminator[0].type = #type
+* ^slicing.discriminator[0].path = "resolve()"
+* ^slicing.ordered = false
+* ^slicing.rules = #open
+* ^short = "{short}"
+* ^definition = "{def}"
+
+RuleSet: OpenReferenceSlicePerProfileRules (short, def)
+* ^slicing.discriminator[0].type = #profile
 * ^slicing.discriminator[0].path = "resolve()"
 * ^slicing.ordered = false
 * ^slicing.rules = #open
@@ -119,3 +127,39 @@ RuleSet: ObligationActorAndCode(actor, code)
 RuleSet: ObligationElement(element)
 // Used for profile level obligations. Insert after obligation code and actor
 * ^extension[$obligation][=].extension[elementId].valueString = {element}
+
+
+RuleSet: SetObligation( code, actor, source, documentation )
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = {code}
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical({actor})
+* ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "Source: {source}, {documentation}"
+
+RuleSet: SetObligationWithPath( path, code, actor, source, documentation )
+* {path}
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = {code}
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical({actor})
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "{documentation}"
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "Source: {source}, {documentation}"
+
+
+RuleSet: ElementMapping( code, display, targetCode, targetDisplay, relationship )
+* element[+]
+  * code = {code}
+  * display = {display}
+  * target 
+    * code = {targetCode}
+    * display = {targetDisplay}
+    * relationship = {relationship}
+
+RuleSet: SliceElement( type, path )
+* ^slicing.discriminator.type = {type}
+* ^slicing.discriminator.path = "{path}"
+* ^slicing.rules = #open
+* ^slicing.ordered = false
+
+RuleSet: SliceElementWithDescription( type, path, description )
+* ^slicing.discriminator.type = {type}
+* ^slicing.discriminator.path = "{path}"
+* ^slicing.rules = #open
+* ^slicing.description = "{description}"
+* ^slicing.ordered = false
