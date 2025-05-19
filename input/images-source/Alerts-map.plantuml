@@ -21,7 +21,7 @@ class "allergyIntolerance-eu-hdr" <<Profile>> [[StructureDefinition-allergyIntol
 class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
 "Alerts" <|. "composition-eu-hdr"
 "allergyIntolerance-eu-hdr" -d[hidden]-> "composition-eu-hdr"
-class "flag-eu-eps" <<Profile>> [[StructureDefinition-flag-eu-eps.html]]
-"Alerts" <|. "flag-eu-eps"
-"composition-eu-hdr" -d[hidden]-> "flag-eu-eps"
+class "flag-eu-hdr" <<Profile>> [[StructureDefinition-flag-eu-hdr.html]]
+"Alerts" <|. "flag-eu-hdr"
+"composition-eu-hdr" -d[hidden]-> "flag-eu-hdr"
 @enduml
