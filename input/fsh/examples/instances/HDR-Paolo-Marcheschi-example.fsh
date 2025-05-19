@@ -26,7 +26,7 @@ InstanceOf: Patient
 Usage: #inline
 * id = "445a0ff8-556d-4be2-bdde-6de668edf019"
 * identifier[+].type = $v2-0203#NI
-* identifier[=].system = "http://ec.europa.eu/identifier/eci"
+* identifier[=].system = "https://hl7europe.org/example-identifier"
 * identifier[=].value = "9977-888840-8"
 * name[+].family = "Marcheschi"
 * name[=].given[+] = "Paolo"

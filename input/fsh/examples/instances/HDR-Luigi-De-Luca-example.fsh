@@ -5,7 +5,7 @@ Description: "FHIR Bundle example for HL7 Europe Hospital Discharge Report"
 Usage: #example
 * type = #document
 * identifier[+].type = $v2-0203#PRN
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "https://hl7europe.org/example-identifier"
 * identifier[=].value = "b6b4291d-4f78-4c5e-a8e6-c4355c1cc4f5" // Persistent identifier for the bundle
 * timestamp = "2025-04-29T14:00:00Z"
 
@@ -67,10 +67,10 @@ InstanceOf: Patient
 Usage: #inline
 * id = "b01a2623-e219-41d2-8e78-1fa1439751d0"
 * identifier[+].type = $v2-0203#NI
-* identifier[=].system = "http://ec.europa.eu/identifier/eci"
+* identifier[=].system = "https://hl7europe.org/example-identifier"
 * identifier[=].value = "3332-386800-1"
 * identifier[+].type = $v2-0203#MR
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "https://hl7europe.org/example-identifier"
 * identifier[=].value = "8121c77e7bf9"
 * name[+].family = "De Luca"
 * name[=].given[+] = "Luigi"
