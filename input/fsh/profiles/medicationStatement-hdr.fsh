@@ -6,7 +6,7 @@ Title:    "MedicationStatement (HDR)"
 Description: "This profile constrains the MedicationStatement resource for the purpose of this guide, adapted from the MPD work."
 //-------------------------------------------------------------------------------------------
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 
 
 * identifier 

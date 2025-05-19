@@ -2,7 +2,7 @@ ValueSet: ExposureAgentHdrVs
 Id: exposureAgent-eu-hdr
 Title: "Exposure of transmissible agents"
 Description: "HDR exposure agent value set. This value set includes codes from SNOMED Clinical Terms®: all descendants of 40733004 \"Infectious disease (disorder)\" and ICD-10 all descendants of chapter I: \"Certain infectious and parasitic diseases\""
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 * insert SNOMEDCopyrightForVS
 * ^experimental = false
 

@@ -4,7 +4,7 @@ Id: encounter-eu-hdr
 Title:    "Encounter (HDR)"
 Description: "This profile defines how to represent Inpatient Encounter in HL7 FHIR for the scope of this guide."
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 
 * extension contains $note named note 0..*
 * extension[note] ^short = "Enconter note"

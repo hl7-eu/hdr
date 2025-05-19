@@ -6,7 +6,7 @@ Title:    "Medication (HDR)"
 Description: "This profile constrains the Medication resource for the purpose of this guide, adapted from the MPD work."
 //-------------------------------------------------------------------------------------------
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 
 // Only R4 rules
 

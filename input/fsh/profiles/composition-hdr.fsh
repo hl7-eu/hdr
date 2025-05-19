@@ -207,11 +207,11 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * entry 0..
   * entry only Reference(Observation or DiagnosticReport or DocumentReference)
 
-  * entry insert OpenReferenceSlicePerTypeRules (significant results, significant results)
+  * entry insert OpenReferenceSlicePerProfileRules (significant results, significant results)
   * insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result ,
     Laboratory Result  , $Observation-resultslab-eu-lab)
   * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result ,
-    Radiology Result  ,$Observation-results-radiology-uv-ips)
+    Radiology Result, ObservationImgFindingEuHdr)
     
     
   // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)

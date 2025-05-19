@@ -8,7 +8,7 @@ Description: "The Value set is used to encode category of treatment of the condi
 * ^experimental = false
 
 * insert SNOMEDCopyrightForVS
-* insert SetFmmandStatusRule ( 1, draft )
+* insert SetFmmAndStatusRule ( 1, draft )
 
 
 * ^url = "http://terminology.ehdsi.eu/ValueSet/eHDSITreatmentClass"

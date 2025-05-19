@@ -4,7 +4,7 @@ Id: composition-obl-eu-hdr
 Title: "Composition: obligations"
 Description: "This profile defines obligations for a Hospital Discharge Report (HDR) for the scope of this guide."
 
-* insert SetFmmandStatusRule ( 0, informative)
+* insert SetFmmAndStatusRule ( 0, informative)
 
 * extension[basedOn]
 

@@ -7,7 +7,7 @@ Description: """This profile defines obligations for the Immunization resource f
 
 //-------------------------------------------------------------------------------------------
 
-* insert SetFmmandStatusRule ( 0, informative)
+* insert SetFmmAndStatusRule ( 0, informative)
 
 * extension[basedOn]
 

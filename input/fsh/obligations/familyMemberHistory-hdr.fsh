@@ -5,7 +5,7 @@ Title: "FamilyMemberHistory: obligations"
 Description: "This profile represents the constraints applied to the FamilyMemberHistory resource by this guide."
 
 
-* insert SetFmmandStatusRule ( 0, informative)
+* insert SetFmmAndStatusRule ( 0, informative)
 * dataAbsentReason  insert ObligationSet2
 * patient  insert ObligationSet1
 * relationship  insert ObligationSet2

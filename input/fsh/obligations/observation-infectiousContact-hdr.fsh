@@ -4,7 +4,7 @@ Id: observation-infectious-contact-obl-eu-hdr
 Title: "Observation: Infectious Contact: obligations"
 Description: "This profile defines obligations for the Infectious Contact profile."
 
-* insert SetFmmandStatusRule ( 0, informative)
+* insert SetFmmAndStatusRule ( 0, informative)
 
 * text insert ObligationSet2
 * status insert ObligationSet2
