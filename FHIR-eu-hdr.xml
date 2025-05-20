@@ -151,7 +151,7 @@
 <page key="model-map" name="Model Maps"/>
 <page key="ObjectiveFindings-map" name="ObjectiveFindings Relationships"/>
 <page key="obligations" name="Obligations"/>
-<page key="PatientHistoryEhn-map" name="PatientHistoryEhn Relationships"/>
+<page key="PatientHistory-map" name="PatientHistory Relationships"/>
 <page key="PlanOfCare-map" name="PlanOfCare Relationships"/>
 <page key="references" name="References"/>
 <page key="scope" name="Scope and content"/>

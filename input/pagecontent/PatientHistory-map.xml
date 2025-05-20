@@ -5,11 +5,11 @@
 
     <a> </a>
 
-    <p>Hereafter a browseable diagram showing how the PatientHistoryEhn model is realized by the HL7 FHIR Profiles of this guide</p>
+    <p>Hereafter a browseable diagram showing how the PatientHistory model is realized by the HL7 FHIR Profiles of this guide</p>
 
     <h4 id="model">Model Overview</h4>
 <a> </a>
-<p>{% include PatientHistoryEhn-map.svg %}</p>
+<p>{% include PatientHistory-map.svg %}</p>
 
     
 

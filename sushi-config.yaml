@@ -100,8 +100,8 @@ pages:
     title: FunctionalStatus Relationships
   HospitalStay-map.html:
     title: HospitalStay Relationships
-  PatientHistoryEhn-map.html:
-    title: PatientHistoryEhn Relationships
+  PatientHistory-map.html:
+    title: PatientHistory Relationships
   Alerts-map.html:
     title: Alerts Relationships
   AdvanceDirectives-map.html:
