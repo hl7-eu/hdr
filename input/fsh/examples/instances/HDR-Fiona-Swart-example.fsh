@@ -151,7 +151,7 @@ Usage: #example
 * component[=].valueQuantity = 6 '{keer per dag inhaleren}' "keer per dag inhaleren"
 
 Instance: sectio-swart
-InstanceOf: Procedure
+InstanceOf: ProcedureEuHdr
 Title: "Sectio caesarea"
 Usage: #example
 * status = #completed
