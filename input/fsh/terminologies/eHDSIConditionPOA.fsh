@@ -8,7 +8,7 @@ Description: "The Value Set is used to assert if a condition is Present on Admis
 * ^experimental = false
 
 * insert SNOMEDCopyrightForVS
-* insert SetFmmandStatusRule ( 1, draft )
+* insert SetFmmAndStatusRule ( 1, draft )
 
 * ^url = "http://terminology.ehdsi.eu/ValueSet/eHDSIConditionPOA"
 

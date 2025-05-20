@@ -1,10 +1,10 @@
 Profile: EncounterEuHdrObligation
 Parent: EncounterEuHdr
 Id: encounter-obl-eu-hdr
-Title:    "Encounter: Obligations"
+Title:    "Encounter: obligations"
 Description: "This profile defines obligations for Inpatient Encounter in HL7 FHIR for the scope of this guide."
 
-* insert SetFmmandStatusRule ( 0, informative)
+* insert SetFmmAndStatusRule ( 0, informative)
 
 
 * identifier 

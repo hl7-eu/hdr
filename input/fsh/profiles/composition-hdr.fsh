@@ -14,7 +14,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * extension[presentedForm].valueAttachment
   * contentType
     * ^example[0].label = "pdf"
-    * ^example[0].valueCodeableConcept  = $mime#application/pdf
+    * ^example[0].valueCode  = $mime#application/pdf
   * data ^short = "B64 in-line data"
   * url ^short = "URL of the document"
 
@@ -207,11 +207,11 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * entry 0..
   * entry only Reference(Observation or DiagnosticReport or DocumentReference)
 
-  * entry insert OpenReferenceSlicePerTypeRules (significant results, significant results)
+  * entry insert OpenReferenceSlicePerProfileRules (significant results, significant results)
   * insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result ,
     Laboratory Result  , $Observation-resultslab-eu-lab)
   * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result ,
-    Radiology Result  ,$Observation-results-radiology-uv-ips)
+    Radiology Result, ObservationImgFindingEuHdr)
     
     
   // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)
@@ -344,9 +344,9 @@ $loinc#87232-5 ) // 	Medication administration.brief
 * section contains sectionPatientHx ..1
 * section[sectionPatientHx]
   * insert SectionComRules (
-    Problem list Section,
+    Patient history Section,
     This Section describes all aspects of the medical history of the patient even if not pertinent to the current procedure\, and may include chief complaint\, past medical history\, social history\, family history\, surgical or procedure history\, medication history\, and other history information. The history may be limited to information pertinent to the current procedure or may be more comprehensive. The history may be reported as a collection of random clinical statements or it may be reported categorically. Categorical report formats may be divided into multiple subsections including Past Medical History\, Social History.,
-    $loinc#11450-4 ) // Problem list - Reported
+    $loinc#35090-0 ) // Patient history
 
 
 
@@ -360,7 +360,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules (
     Problem List Section,
     The IPS derived problem section lists and describes clinical problems or conditions currently being monitored for the patient.,
-    $loinc#11348-0 ) // History of Past illness Narrative
+    $loinc#11450-4 ) // 11450-4 Problem list - Reported
   * entry 0..
   * entry only Reference(ConditionEuHdr)  // do we need another profile ?
     * ^short = "Conditions the patient suffered in the past."
@@ -377,7 +377,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules (
     History of Past Illness Section,
     The History of Past Illness section contains a narrative description and coded entries of the conditions the patient suffered in the past,
-    $loinc#11348-0 ) // History of Past illness Narrative
+    $loinc#11348-0 ) // 11348-0 History of Past illness Narrative
   * entry 0..
   * entry only Reference(ConditionEuHdr)  // do we need another profile ?
     * ^short = "Conditions the patient suffered in the past."
@@ -596,7 +596,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     Advance Directives Section,
     The advance directives section contains a narrative description of patient's advance directive.,
     $loinc#42348-3 )  // 	Advance directives
-  * entry only Reference(Consent or DocumentReference) // ==> Add Profile
+  * entry only Reference(ConsentHdrEu or DocumentReference) 
 
 
 // -------------------------------------

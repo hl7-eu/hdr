@@ -8,9 +8,10 @@ This Values Set is a composition of the eHDSI Value Set:
 - eHDSIActiveIngredient
 - eHDSISubstance"""
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 * ^experimental = false
+
 * codes from valueset $eHDSIAllergenNoDrug
-* codes from valueset $eHDSIActiveIngredient
 * codes from valueset $eHDSISubstance
+* codes from valueset $eHDSIActiveIngredient
 

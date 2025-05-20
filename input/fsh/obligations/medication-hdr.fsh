@@ -1,12 +1,12 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  MedicationEuHdrObligation
 Parent:   MedicationEuHdr
-Id:       Medication-obl-eu-hdr
+Id:       medication-obl-eu-hdr
 Title:    "Medication: obligations"
 Description: "This profile defines obligations for the Medication resource for the purpose of this guide, adapted from the MPD work."
 //-------------------------------------------------------------------------------------------
 
-* insert SetFmmandStatusRule ( 0, informative)
+* insert SetFmmAndStatusRule ( 0, informative)
 
 * ingredient   
   * item[x]	insert ObligationSet1

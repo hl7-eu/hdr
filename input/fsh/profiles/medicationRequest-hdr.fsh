@@ -6,10 +6,14 @@ Title:    "MedicationRequest (HDR)"
 Description: "This profile constrains the MedicationRequest resource for the purpose of this guide, adapted from the MPD work."
 //-------------------------------------------------------------------------------------------
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 
 // MedicationRequest R4
-* medicationReference only Reference(MedicationEuHdr)
+
+* medication[x] only CodeableConcept or Reference(MedicationEuHdr)
+
+// * medicationReference only Reference(MedicationEuHdr)
+
 * reasonCode ^short = "Reason or indication for this prescription"
 * reasonReference ^short = "Condition or observation that supports this prescription"
 

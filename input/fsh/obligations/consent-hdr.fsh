@@ -4,7 +4,7 @@ Id: consent-obl-eu-hdr
 Title:    "Consent: obligations"
 Description: """This profile defines obligations for the Consent resource for the purpose representing Advance Directives for the scope of this guide."""
 
-* insert SetFmmandStatusRule ( 0, informative)
+* insert SetFmmAndStatusRule ( 0, informative)
 
 
 * extension[note] 

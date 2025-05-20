@@ -6,9 +6,11 @@ Title:    "MedicationDispense (HDR)"
 Description: "This profile constrains the MedicationDispense resource for the purpose of this guide, adapted from the MPD work."
 //-------------------------------------------------------------------------------------------
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 
-* medicationReference only Reference(MedicationEuHdr)
+* medication[x] only CodeableConcept or Reference(MedicationEuHdr)
+
+// * medicationReference only Reference(MedicationEuHdr)
 
 
 * identifier 

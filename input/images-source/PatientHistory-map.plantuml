@@ -12,43 +12,44 @@ legend right
 | <#APPLICATION>  Logical Model |
 | <#TECHNOLOGY>  Profile |
 endlegend
-class "PatientHistoryEhn" <<LogicalModel>> [[StructureDefinition-PatientHistoryEhn.html]]
+class "PatientHistory" <<LogicalModel>> [[StructureDefinition-PatientHistory.html]]
 note top #PaleTurquoise [[ConceptMap-patientHistory2FHIR-eu-hdr.html]]
 Concept Map
 endnote
 class "ImmunizationRecommendation-eu-hdr" <<Profile>> [[StructureDefinition-ImmunizationRecommendation-eu-hdr.html]]
-"PatientHistoryEhn" <|. "ImmunizationRecommendation-eu-hdr"
+"PatientHistory" <|. "ImmunizationRecommendation-eu-hdr"
 class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
-"PatientHistoryEhn" <|. "composition-eu-hdr"
+"PatientHistory" <|. "composition-eu-hdr"
 "ImmunizationRecommendation-eu-hdr" -d[hidden]-> "composition-eu-hdr"
 class "condition-eu-hdr" <<Profile>> [[StructureDefinition-condition-eu-hdr.html]]
-"PatientHistoryEhn" <|. "condition-eu-hdr"
+"PatientHistory" <|. "condition-eu-hdr"
 "composition-eu-hdr" -d[hidden]-> "condition-eu-hdr"
 class "device-eu-hdr" <<Profile>> [[StructureDefinition-device-eu-hdr.html]]
-"PatientHistoryEhn" <|. "device-eu-hdr"
+"PatientHistory" <|. "device-eu-hdr"
 "condition-eu-hdr" -d[hidden]-> "device-eu-hdr"
 class "deviceUseStatement-eu-hdr" <<Profile>> [[StructureDefinition-deviceUseStatement-eu-hdr.html]]
-"PatientHistoryEhn" <|. "deviceUseStatement-eu-hdr"
+"PatientHistory" <|. "deviceUseStatement-eu-hdr"
 "device-eu-hdr" -d[hidden]-> "deviceUseStatement-eu-hdr"
+class "familyMemberHistory-eu-hdr" <<Profile>> [[StructureDefinition-familyMemberHistory-eu-hdr.html]]
+"PatientHistory" <|. "familyMemberHistory-eu-hdr"
+"deviceUseStatement-eu-hdr" -d[hidden]-> "familyMemberHistory-eu-hdr"
 class "immunization-eu-hdr" <<Profile>> [[StructureDefinition-immunization-eu-hdr.html]]
-"PatientHistoryEhn" <|. "immunization-eu-hdr"
-"deviceUseStatement-eu-hdr" -d[hidden]-> "immunization-eu-hdr"
+"PatientHistory" <|. "immunization-eu-hdr"
+"familyMemberHistory-eu-hdr" -d[hidden]-> "immunization-eu-hdr"
 class "observation-infectious-contact-eu-hdr" <<Profile>> [[StructureDefinition-observation-infectious-contact-eu-hdr.html]]
-"PatientHistoryEhn" <|. "observation-infectious-contact-eu-hdr"
+"PatientHistory" <|. "observation-infectious-contact-eu-hdr"
 "immunization-eu-hdr" -d[hidden]-> "observation-infectious-contact-eu-hdr"
 class "observation-sdoh-eu-hdr" <<Profile>> [[StructureDefinition-observation-sdoh-eu-hdr.html]]
-"PatientHistoryEhn" <|. "observation-sdoh-eu-hdr"
+"PatientHistory" <|. "observation-sdoh-eu-hdr"
 "observation-infectious-contact-eu-hdr" -d[hidden]-> "observation-sdoh-eu-hdr"
 class "observation-travel-eu-hdr" <<Profile>> [[StructureDefinition-observation-travel-eu-hdr.html]]
-"PatientHistoryEhn" <|. "observation-travel-eu-hdr"
+"PatientHistory" <|. "observation-travel-eu-hdr"
 "observation-sdoh-eu-hdr" -d[hidden]-> "observation-travel-eu-hdr"
 class "procedure-eu-hdr" <<Profile>> [[StructureDefinition-procedure-eu-hdr.html]]
-"PatientHistoryEhn" <|. "procedure-eu-hdr"
+"PatientHistory" <|. "procedure-eu-hdr"
 "observation-travel-eu-hdr" -d[hidden]-> "procedure-eu-hdr"
 class "Observation" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Observation]]
-"PatientHistoryEhn" <|. "Observation"
+"PatientHistory" <|. "Observation"
 "procedure-eu-hdr" -d[hidden]-> "Observation"
-class "familyMemberHistory-eu-hdr" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/familyMemberHistory-eu-hdr]]
-"PatientHistoryEhn" <|. "familyMemberHistory-eu-hdr"
-"Observation" -d[hidden]-> "familyMemberHistory-eu-hdr"
 @enduml
+

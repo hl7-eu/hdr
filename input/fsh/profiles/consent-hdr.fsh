@@ -4,7 +4,7 @@ Id: consent-eu-hdr
 Title:    "Consent (Advance Directives HDR)"
 Description: """This profile constrains the Consent resource for the purpose representing Advance Directives for the scope of this guide."""
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 
 * extension contains $note named note 0..*
 * extension[note] ^short = "Comment"

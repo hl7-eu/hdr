@@ -24,13 +24,13 @@ copyright: >-
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.fhir.uv.ips: current
-  # hl7.fhir.uv.ips: 1.1.0
+  # hl7.fhir.uv.ips: current
+  hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.extensions.r5: 4.0.1
   hl7.fhir.eu.extensions.r4: 0.1.1-ballot
   hl7.fhir.eu.laboratory: 0.1.1
-  hl7.fhir.eu.base: current # 0.1.0-ballot
-  ihe.pharm.mpd: current # local cache
+  hl7.fhir.eu.base: 0.1.0-ballot # current 
+  ihe.pharm.mpd.r4: current # local cache
 #   hl7.fhir.us.mcode:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
@@ -100,8 +100,8 @@ pages:
     title: FunctionalStatus Relationships
   HospitalStay-map.html:
     title: HospitalStay Relationships
-  PatientHistoryEhn-map.html:
-    title: PatientHistoryEhn Relationships
+  PatientHistory-map.html:
+    title: PatientHistory Relationships
   Alerts-map.html:
     title: Alerts Relationships
   AdvanceDirectives-map.html:
@@ -303,6 +303,16 @@ menu:
 # URL when generating the IG JSON.
 #
 groups:
+
+
+    eHNHospitalDishargeReport:
+      name:  Hospital Discharge Report
+      description: Hospital Discharge Report entry profiles.
+      resources:
+        - StructureDefinition/bundle-eu-hdr
+        - StructureDefinition/composition-eu-hdr
+
+
     eHNGuidelines:
       name:  eHN Hospital Discharge Report Guidelines (Informative)
       description: Logical models representing the eHN Hospital Discharge Report Guidelines. This is informative material.
@@ -347,9 +357,29 @@ groups:
         - ActorDefinition/actor-repos-eu-hdr
         - StructureDefinition/allergyIntolerance-obl-eu-hdr
         - StructureDefinition/bundle-obl-eu-hdr
-        - StructureDefinition/Patient-obl-eu-hdr
-        - StructureDefinition/Specimen-obl-eu-hdr
-
+        - StructureDefinition/patient-obl-eu-hdr
+        - StructureDefinition/specimen-obl-eu-hdr
+        - StructureDefinition/carePlan-obl-eu-hdr
+        - StructureDefinition/composition-obl-eu-hdr
+        - StructureDefinition/condition-obl-eu-hdr
+        - StructureDefinition/consent-obl-eu-hdr
+        - StructureDefinition/device-obl-eu-hdr
+        - StructureDefinition/deviceUseStatement-obl-eu-hdr
+        - StructureDefinition/encounter-obl-eu-hdr
+        - StructureDefinition/familyMemberHistory-obl-eu-hdr
+        - StructureDefinition/flag-obl-eu-hdr
+        - StructureDefinition/immunization-obl-eu-hdr
+        - StructureDefinition/immunizationRecommendation-obl-eu-hdr
+        - StructureDefinition/medication-obl-eu-hdr
+        - StructureDefinition/medicationAdministration-obl-eu-hdr
+        - StructureDefinition/medicationDispense-obl-eu-hdr
+        - StructureDefinition/medicationRequest-obl-eu-hdr
+        - StructureDefinition/medicationStatement-obl-eu-hdr
+        - StructureDefinition/observation-infectious-contact-obl-eu-hdr
+        - StructureDefinition/observation-sdoh-obl-eu-hdr
+        - StructureDefinition/observation-travel-obl-eu-hdr
+        - StructureDefinition/procedure-obl-eu-hdr
+        - StructureDefinition/humanName-obl-eu-hdr
 
 
 #

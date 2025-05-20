@@ -18,7 +18,8 @@ Concept Map
 endnote
 class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
 "AdvanceDirectives" <|. "composition-eu-hdr"
-class "consent-eu-hdr" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/consent-eu-hdr]]
+class "consent-eu-hdr" <<Profile>> [[StructureDefinition-consent-eu-hdr.html]]
 "AdvanceDirectives" <|. "consent-eu-hdr"
 "composition-eu-hdr" -d[hidden]-> "consent-eu-hdr"
 @enduml
+

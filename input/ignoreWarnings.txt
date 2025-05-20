@@ -15,4 +15,24 @@ The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-Con
 
 # Warnings referred to an Obligation profile
 The extension http://hl7.org/fhir/tools/StructureDefinition/obligation|0.1.0 is deprecated
-The Implementation Guide contains no examples for this profile
+
+
+# Reference to deprecated ValueSet
+Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
+
+# warning due to the reference to a sub-package 
+The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
+
+# Missing description in resources
+%Unable to find ImplementationGuide.definition.resource.description for the resource%
+
+# duplicated anchor ids
+The html source has duplicate anchor Ids: 1
+
+# usage of SNOMED CT
+The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters
+
+# Missing OID foor actors
+The resource ActorDefinition/actor-consumer-eu-hdr could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+
+The resource ActorDefinition/actor-creator-eu-hdr could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
