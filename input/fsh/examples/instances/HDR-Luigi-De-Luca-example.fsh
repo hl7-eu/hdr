@@ -7,10 +7,10 @@ Usage: #example
 * type = #document
 
 * identifier[+].type = $v2-0203#PRN
-* identifier[=].system = "http://example.org/eu/identifier"
-* identifier[=].value = "f3022407-11df-4964-9458-221b2f5c6954"
+* identifier[=].system = "https://hl7europe.org/example-identifier"
+* identifier[=].value = "b6b4291d-4f78-4c5e-a8e6-c4355c1cc4f5" // Persistent identifier for the bundle
+* timestamp = "2025-04-29T14:00:00Z"
 
-* timestamp = "2025-04-11T14:00:00Z"
 
 * entry[composition].fullUrl = "urn:uuid:b9dc409d-ec81-4556-9fac-4dc3f731c199"
 * entry[composition].resource = composition-hdr-luca-example
@@ -77,11 +77,13 @@ Instance: patient-luca-example
 InstanceOf: Patient
 Usage: #inline
 * id = "b01a2623-e219-41d2-8e78-1fa1439751d0"
-* identifier[+].type = $v2-0203#JHN
-* identifier[=].system = "http://example.org/eu/identifier/eci"
+
+* identifier[+].type = $v2-0203#NI
+* identifier[=].system = "https://hl7europe.org/example-identifier"
 * identifier[=].value = "3332-386800-1"
 * identifier[+].type = $v2-0203#MR
-* identifier[=].system = "http://example.org/eu/identifier"
+* identifier[=].system = "https://hl7europe.org/example-identifier"
+
 * identifier[=].value = "8121c77e7bf9"
 * name[+].family = "De Luca"
 * name[=].given[+] = "Luigi"
