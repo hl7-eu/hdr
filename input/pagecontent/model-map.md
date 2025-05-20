@@ -10,7 +10,7 @@ This page lists the pages documenting with a graphical representation the maps b
 | AdmissionEvaluation    | [AdmissionEvaluation-map.html](AdmissionEvaluation-map.html) |
 | ObjectiveFindings      | [ObjectiveFindings-map.html](ObjectiveFindings-map.html) |
 | FunctionalStatus       | [FunctionalStatus-map.html](FunctionalStatus-map.html) |
-| PatientHistoryEhn      | [PatientHistoryEhn-map.html](PatientHistoryEhn-map.html) |
+| PatientHistory         | [PatientHistory-map.html](PatientHistory-map.html) |
 | HospitalStay           | [HospitalStay-map.html](HospitalStay-map.html) |
 | Alerts                 | [Alerts-map.html](Alerts-map.html)        |
 | AdvanceDirectives      | [AdvanceDirectives-map.html](AdvanceDirectives-map.html) |

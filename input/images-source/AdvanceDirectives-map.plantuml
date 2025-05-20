@@ -22,3 +22,4 @@ class "consent-eu-hdr" <<Profile>> [[StructureDefinition-consent-eu-hdr.html]]
 "AdvanceDirectives" <|. "consent-eu-hdr"
 "composition-eu-hdr" -d[hidden]-> "consent-eu-hdr"
 @enduml
+
