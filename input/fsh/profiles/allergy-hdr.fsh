@@ -23,8 +23,10 @@ Description: """This profile constrains the AllergyIntolerance resource for the 
 * code from $allergy-intolerance-uv-ips (preferred)
 /* * code from EHDSIAllergyCode (preferred) */
 
-* code ^binding.extension[+].extension[0].url = "purpose"
+* code ^binding.extension[+].extension[+].url = "purpose"
 * code ^binding.extension[=].extension[=].valueCode = #candidate
+// * code ^binding.extension[+].extension[+].url = "key"
+// * code ^binding.extension[=].extension[=].valueId = "96948958-8a49-472e-91ee-967b8545d27c"
 * code ^binding.extension[=].extension[+].url = "valueSet"
 * code ^binding.extension[=].extension[=].valueCanonical = Canonical(AllergensHdrVS)
 * code ^binding.extension[=].extension[+].url = "documentation"
@@ -33,8 +35,10 @@ Description: """This profile constrains the AllergyIntolerance resource for the 
 * code ^binding.description = "Type of the substance/product expected to be used in MyHealth@EU"
 
 
-* code ^binding.extension[+].extension[0].url = "purpose"
+* code ^binding.extension[+].extension[+].url = "purpose"
 * code ^binding.extension[=].extension[=].valueCode = #candidate
+// * code ^binding.extension[+].extension[+].url = "key"
+// * code ^binding.extension[=].extension[=].valueId = "7dea14b1-5620-41b8-bb24-536541cdee0b"
 * code ^binding.extension[=].extension[+].url = "valueSet"
 * code ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips"
 * code ^binding.extension[=].extension[+].url = "documentation"
@@ -55,8 +59,10 @@ Description: """This profile constrains the AllergyIntolerance resource for the 
 
 * reaction.manifestation from $allergy-reaction-uv-ips (preferred)
 
-* reaction.manifestation ^binding.extension[+].extension[0].url = "purpose"
+* reaction.manifestation ^binding.extension[+].extension[+].url = "purpose"
 * reaction.manifestation ^binding.extension[=].extension[=].valueCode = #candidate
+// * reaction.manifestation ^binding.extension[+].extension[+].url = "key"
+// * reaction.manifestation ^binding.extension[=].extension[=].valueId = "b32b88b4-89d9-4744-b356-dff033c16f82"
 * reaction.manifestation ^binding.extension[=].extension[+].url = "valueSet"
 * reaction.manifestation ^binding.extension[=].extension[=].valueCanonical = $eHDSIReactionAllergy
 * reaction.manifestation ^binding.extension[=].extension[+].url = "documentation"

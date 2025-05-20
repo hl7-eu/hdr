@@ -1,9 +1,3 @@
-RuleSet: BasedOnImOrderReference( slicename )
-* basedOn[{slicename}] // only Reference( ImOrder )
-  * identifier 0..1
-  * identifier only ImAccessionNumberIdentifierEuHdr
-
-
 Profile: ObservationImgFindingEuHdr
 Parent: Observation
 Id: observation-imgFinding-eu-hdr
@@ -16,7 +10,12 @@ Description: "Finding during imaging procedure."
 * basedOn
   * insert SliceElement( #type, $this )
 * basedOn contains imorderaccession 0..1
-* insert BasedOnImOrderReference( imorderaccession )
+* basedOn[imorderaccession] // only Reference( ImOrder )
+  * identifier 0..1  
+    * system 1..1
+    * value 1..1
+    * type 1..1
+    * type = $v2-0203#ACSN
   
 * partOf
   * insert SliceElement( #type, $this )
@@ -50,16 +49,4 @@ Description: "Finding during imaging procedure."
   * ^short = "Series or image that produced this observation" */
 
 * valueString ^short = "Finding description"
-
-
-Profile: ImAccessionNumberIdentifierEuHdr
-Parent: Identifier
-Id: identifier-accession-number-myhealtheu
-Title: "Imaging Accession Number Identifier"
-Description: "This profile on Identifier represents the Accession Number for the Imaging Order."
-* insert SetFmmAndStatusRule( 1, draft )
-* system 1..1
-* value 1..1
-* type 1..1
-* type = $v2-0203#ACSN
 

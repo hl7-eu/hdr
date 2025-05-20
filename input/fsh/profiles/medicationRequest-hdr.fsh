@@ -9,6 +9,10 @@ Description: "This profile constrains the MedicationRequest resource for the pur
 * insert SetFmmAndStatusRule (1, draft)
 
 // MedicationRequest R4
+* extension contains $medicationRequest-effectiveDosePeriod-r5 named effectiveDosePeriod 0..1
+* extension[effectiveDosePeriod] ^short = "Period over which the medication should be taken."
+* extension[effectiveDosePeriod] ^definition = "Period over which the medication should be taken. Where there are multiple dosageInstruction lines (for example, tapering doses), this is the earliest date and the latest end date of the dosageInstructions."
+
 
 * medication[x] only CodeableConcept or Reference(MedicationEuHdr)
 
@@ -27,8 +31,9 @@ Description: "This profile constrains the MedicationRequest resource for the pur
 * authoredOn 1..
 * requester 1..
 * groupIdentifier // should we ask to valorize in all the cases ?
-  * ^short = "Prescription this is part of"
-  * ^comment = "Not needed if a presciption includes only one prescribed item"
+
+* groupIdentifier 
+  * ^short = "Prescription this is part of. Not needed if a presciption includes only one prescribed item."
 * dosageInstruction ^short = "How the medication should be taken."
   * timing ^short = "Administration schedule"
     * repeat
@@ -40,6 +45,14 @@ Description: "This profile constrains the MedicationRequest resource for the pur
   * route ^short = "Route of administration"
   * text ^short = "Free text dosage instructions"
   * doseAndRate.doseQuantity ^short = "Amount of medication per dose"
-* dispenseRequest 1..
-  * quantity 1..
-* substitution.allowedCodeableConcept 1..
+* dispenseRequest
+  * extension contains $ihe-ext-medicationrequest-prescribedquantity named prescribedQuantity 0..1
+  * extension[prescribedQuantity] ^short = "Overall amount of product prescribed, independent from the number of repeats."
+  * extension[prescribedQuantity] ^definition = "When Medication resource implies a pack size, prescribedQuantity should convey number of packages. When the Medication does not imply an amount, overall amount could be in tablets or millilitres."
+
+
+
+
+
+
+
