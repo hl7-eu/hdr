@@ -4,6 +4,8 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="Medication/01A-Cefuroxime1500GenericExplicit" key="Medication-01A-Cefuroxime1500GenericExplicit" name="01A-Cefuroxime1500GenericExplicit"/>
+<artifact id="MedicationRequest/400C-prescription-cefuroxime-singleline" key="MedicationRequest-400C-prescription-cefuroxime-singleline" name="400C-prescription-cefuroxime-singleline"/>
 <artifact id="StructureDefinition/HospitalDischargeReport" key="StructureDefinition-HospitalDischargeReport" name="A - Hospital Discharge Report (eHN)"/>
 <artifact id="StructureDefinition/Header" key="StructureDefinition-Header" name="A.1 - Hospital Discharge Report header data element"/>
 <artifact id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"/>
@@ -19,6 +21,7 @@
 <artifact id="StructureDefinition/PlanOfCare" key="StructureDefinition-PlanOfCare" name="A.2.8.1 - Care plan"/>
 <artifact id="StructureDefinition/MedicationSummary" key="StructureDefinition-MedicationSummary" name="A.2.8.2 - Medication summary"/>
 <artifact id="Observation/lab-swart-3" key="Observation-lab-swart-3" name="ABO group"/>
+<artifact id="Immunization/example-covid19-vax-admin" key="Immunization-example-covid19-vax-admin" name="Administered COVID-19 Immunization"/>
 <artifact id="ValueSet/admission-urgency-eu-hdr" key="ValueSet-admission-urgency-eu-hdr" name="Admission Urgency Value Set"/>
 <artifact id="Observation/alcohol-swart" key="Observation-alcohol-swart" name="Alcohol consumption"/>
 <artifact id="ValueSet/allergens-eu-hdr" key="ValueSet-allergens-eu-hdr" name="Allergens Value Set"/>
@@ -26,13 +29,16 @@
 <artifact id="StructureDefinition/allergyIntolerance-eu-hdr" key="StructureDefinition-allergyIntolerance-eu-hdr" name="Allergy Intolerance (HDR)"/>
 <artifact id="ValueSet/allergy-intolerance-eu-hdr" key="ValueSet-allergy-intolerance-eu-hdr" name="Allergy Intolerance (with exceptions)"/>
 <artifact id="StructureDefinition/allergyIntolerance-obl-eu-hdr" key="StructureDefinition-allergyIntolerance-obl-eu-hdr" name="Allergy Intolerance: obligations"/>
+<artifact id="AllergyIntolerance/penicillin-allergy" key="AllergyIntolerance-penicillin-allergy" name="Allergy to Penicillin"/>
 <artifact id="Observation/bloeddruk-swart" key="Observation-bloeddruk-swart" name="Blood pressure"/>
 <artifact id="Observation/gewicht-swart" key="Observation-gewicht-swart" name="Body weight"/>
 <artifact id="StructureDefinition/bundle-eu-hdr" key="StructureDefinition-bundle-eu-hdr" name="Bundle (HDR)"/>
 <artifact id="Bundle/bundle-swart" key="Bundle-bundle-swart" name="Bundle for Fiona Swart HDR"/>
 <artifact id="StructureDefinition/bundle-obl-eu-hdr" key="StructureDefinition-bundle-obl-eu-hdr" name="Bundle: obligations"/>
+<artifact id="ImmunizationRecommendation/example-covid19-vax-recommendation" key="ImmunizationRecommendation-example-covid19-vax-recommendation" name="COVID-19 Immunization Recommendation"/>
 <artifact id="StructureDefinition/carePlan-eu-hdr" key="StructureDefinition-carePlan-eu-hdr" name="Care Plan (HDR)"/>
 <artifact id="StructureDefinition/carePlan-obl-eu-hdr" key="StructureDefinition-carePlan-obl-eu-hdr" name="Care Plan: obligations"/>
+<artifact id="Flag/example-flag-no-left-arm" key="Flag-example-flag-no-left-arm" name="Clinical Alert: Do Not Use Left Arm"/>
 <artifact id="Bundle/HDR-Luigi-De-Luca-Example" key="Bundle-HDR-Luigi-De-Luca-Example" name="Complete HL7 Europe Hospital Discharge Report Bundle"/>
 <artifact id="Bundle/HDR-Paolo-Marcheschi-Example" key="Bundle-HDR-Paolo-Marcheschi-Example" name="Complete HL7 Europe Hospital Discharge Report Bundle"/>
 <artifact id="Bundle/HDR-Reijer-Wolff-Example" key="Bundle-HDR-Reijer-Wolff-Example" name="Complete HL7 Europe Hospital Discharge Report Bundle"/>
@@ -43,6 +49,7 @@
 <artifact id="StructureDefinition/condition-obl-eu-hdr" key="StructureDefinition-condition-obl-eu-hdr" name="Condition: obligations"/>
 <artifact id="StructureDefinition/consent-eu-hdr" key="StructureDefinition-consent-eu-hdr" name="Consent (Advance Directives HDR)"/>
 <artifact id="StructureDefinition/consent-obl-eu-hdr" key="StructureDefinition-consent-obl-eu-hdr" name="Consent: obligations"/>
+<artifact id="Flag/example-flag-allergy" key="Flag-example-flag-allergy" name="Critical Allergy Alert for Penicillin"/>
 <artifact id="StructureDefinition/device-eu-hdr" key="StructureDefinition-device-eu-hdr" name="Device (HDR)"/>
 <artifact id="StructureDefinition/device-obl-eu-hdr" key="StructureDefinition-device-obl-eu-hdr" name="Device: obligations"/>
 <artifact id="StructureDefinition/deviceUseStatement-eu-hdr" key="StructureDefinition-deviceUseStatement-eu-hdr" name="DeviceUseStatement (HDR)"/>
@@ -53,6 +60,10 @@
 <artifact id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
 <artifact id="StructureDefinition/encounter-obl-eu-hdr" key="StructureDefinition-encounter-obl-eu-hdr" name="Encounter: obligations"/>
 <artifact id="Organization/organization-sophia" key="Organization-organization-sophia" name="Erasmus MC, Sophia kinderziekenhuis"/>
+<artifact id="Device/pacemaker-001" key="Device-pacemaker-001" name="Example Device - Implantable Pacemaker"/>
+<artifact id="DeviceUseStatement/example-deviceusestatement-euhdr" key="DeviceUseStatement-example-deviceusestatement-euhdr" name="Example DeviceUseStatement for Implanted Pacemaker"/>
+<artifact id="MedicationStatement/example-medicationstatement-euhdr" key="MedicationStatement-example-medicationstatement-euhdr" name="Example MedicationStatement for Enalapril"/>
+<artifact id="Observation/example-infectious-contact" key="Observation-example-infectious-contact" name="Example Observation - Infectious Contact: COVID-19 Exposure"/>
 <artifact id="ValueSet/exposureAgent-eu-hdr" key="ValueSet-exposureAgent-eu-hdr" name="Exposure of transmissible agents"/>
 <artifact id="FamilyMemberHistory/635c22e7-d7f1-45ad-9b4d-d4fe35239085" key="FamilyMemberHistory-635c22e7-d7f1-45ad-9b4d-d4fe35239085" name="Family History of Type 2 Diabetes Mellitus - Mother"/>
 <artifact id="StructureDefinition/familyMemberHistory-eu-hdr" key="StructureDefinition-familyMemberHistory-eu-hdr" name="FamilyMemberHistory (HDR)"/>
@@ -66,7 +77,6 @@
 <artifact id="ActorDefinition/actor-repos-eu-hdr" key="ActorDefinition-actor-repos-eu-hdr" name="HDR Repository"/>
 <artifact id="Composition/composition-swart" key="Composition-composition-swart" name="Hospital Discharge summary"/>
 <artifact id="StructureDefinition/humanName-obl-eu-hdr" key="StructureDefinition-humanName-obl-eu-hdr" name="Human Name: obligations"/>
-<artifact id="StructureDefinition/identifier-accession-number-myhealtheu" key="StructureDefinition-identifier-accession-number-myhealtheu" name="Imaging Accession Number Identifier"/>
 <artifact id="StructureDefinition/immunization-eu-hdr" key="StructureDefinition-immunization-eu-hdr" name="Immunization (HDR)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
 <artifact id="StructureDefinition/immunization-obl-eu-hdr" key="StructureDefinition-immunization-obl-eu-hdr" name="Immunization: obligations"/>

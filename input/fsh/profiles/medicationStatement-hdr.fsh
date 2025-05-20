@@ -16,5 +16,5 @@ Description: "This profile constrains the MedicationStatement resource for the p
 
 * medication[x] only CodeableConcept or Reference(MedicationEuHdr)
 
-// * medicationReference only Reference(MedicationEuHdr)
+
 

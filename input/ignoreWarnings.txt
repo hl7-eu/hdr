@@ -36,3 +36,19 @@ The IG is not for the international realm, and it uses SNOMED CT, so it should f
 The resource ActorDefinition/actor-consumer-eu-hdr could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 
 The resource ActorDefinition/actor-creator-eu-hdr could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+
+
+# Examples are no needed for obligation profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/medicationDispense-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/patient-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/medicationStatement-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/medicationAdministration-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/device-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/observation-infectious-contact-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/flag-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/humanName-obl-eu-hdr'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/carePlan-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/procedure-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/consent-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http:​/​/hl7​.eu​/fhir​/hdr​/StructureDefinition​/bundle-obl-eu-hdr'): The Implementation Guide contains no examples for this profile

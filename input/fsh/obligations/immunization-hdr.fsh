@@ -22,10 +22,9 @@ Description: """This profile defines obligations for the Immunization resource f
 * manufacturer 
 * lotNumber 
 
-  
-* performer[administeringCentre] insert ObligationSet2
 
-* performer[administeringHp] insert ObligationSet2
+* performer[administeringCentreOrHp] insert ObligationSet2
+
 
 * protocolApplied.targetDisease insert ObligationSet3
 * protocolApplied.doseNumberPositiveInt 
