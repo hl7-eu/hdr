@@ -34,8 +34,9 @@ Instance: patient-ftgm
 InstanceOf: Patient
 Usage: #inline
 * id = "445a0ff8-556d-4be2-bdde-6de668edf019"
-* identifier[+].type = $v2-0203#JHN
-* identifier[=].system = "http://example.org/eu/identifier/eci"
+* identifier[+].type = $v2-0203#NI
+* identifier[=].system = "https://hl7europe.org/example-identifier"
+
 * identifier[=].value = "9977-888840-8"
 * name[+].family = "Marcheschi"
 * name[=].given[+] = "Paolo"
