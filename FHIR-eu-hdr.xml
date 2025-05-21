@@ -80,6 +80,7 @@
 <artifact id="ActorDefinition/actor-repos-eu-hdr" key="ActorDefinition-actor-repos-eu-hdr" name="HDR Repository"/>
 <artifact id="Composition/composition-swart" key="Composition-composition-swart" name="Hospital Discharge summary"/>
 <artifact id="StructureDefinition/humanName-obl-eu-hdr" key="StructureDefinition-humanName-obl-eu-hdr" name="Human Name: obligations"/>
+<artifact id="Observation/example-img-finding-lung-nodule" key="Observation-example-img-finding-lung-nodule" name="Imaging Finding: Lung Nodule"/>
 <artifact id="StructureDefinition/immunization-eu-hdr" key="StructureDefinition-immunization-eu-hdr" name="Immunization (HDR)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
 <artifact id="StructureDefinition/immunization-obl-eu-hdr" key="StructureDefinition-immunization-obl-eu-hdr" name="Immunization: obligations"/>
@@ -119,6 +120,7 @@
 <artifact id="StructureDefinition/specimen-obl-eu-hdr" key="StructureDefinition-specimen-obl-eu-hdr" name="Specimen: obligations"/>
 <artifact id="CodeSystem/temporarySystem-hdr-eu" key="CodeSystem-temporarySystem-hdr-eu" name="Temporary HDR Code System"/>
 <artifact id="Observation/tobacco-swart" key="Observation-tobacco-swart" name="Tobacco smoking"/>
+<artifact id="Observation/example-travel-history" key="Observation-example-travel-history" name="Travel History: Visit to Italy"/>
 <artifact id="Condition/condition-meerling" key="Condition-condition-meerling" name="Twin pregnancy"/>
 <artifact id="Condition/a5bf69e4-24db-48a8-9eda-71516dcaf1d9" key="Condition-a5bf69e4-24db-48a8-9eda-71516dcaf1d9" name="diabetis-condition-luca"/>
 <artifact id="ValueSet/eHDSIConditionPOA" key="ValueSet-eHDSIConditionPOA" name="eHDSI Condition Present On Admission"/>

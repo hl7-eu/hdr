@@ -157,7 +157,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:sectionPayers.entry	
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Composition.section:sectionPayers.entry.ofType(Coverage)	"
+* group[=].element[=].target.comment = "Composition.section:sectionPayers.entry.ofType(Coverage)"
 * group[=].element[+].code = #Header.informationRecipient
 * group[=].element[=].display = "A.1.4 - Information recipient - (intended recipient or recipients of the report), if applicable"
 * group[=].element[=].target.code = #Composition.extension:information-recipient					

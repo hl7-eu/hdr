@@ -50,3 +50,59 @@ Description: "An observation documenting the patient's lack of reliable transpor
 
 * note[0].text = "Patient mentioned that public transport is unreliable and they often miss appointments."
 
+
+Instance: example-travel-history
+InstanceOf: ObservationTravelEuHdr
+Title: "Travel History: Visit to Italy"
+Description: "An observation recording that Fiona Swart visited Italy in November 2023."
+
+* status = #final
+
+* code = $loinc#94651-7 "Country of travel [Location]"
+
+* subject = Reference(patient-swart)
+* subject.display = "Fiona XXX_Swart"
+
+* effectivePeriod.start = "2023-11-10"
+* effectivePeriod.end = "2023-11-18"
+
+* valueCodeableConcept.coding[0].system = "urn:iso:std:iso:3166"
+* valueCodeableConcept.coding[0].code = #IT
+* valueCodeableConcept.coding[0].display = "Italy"
+* valueCodeableConcept.text = "Italy"
+
+
+Instance: example-img-finding-lung-nodule
+InstanceOf: ObservationImgFindingEuHdr
+Title: "Imaging Finding: Lung Nodule"
+Description: "An imaging finding from a CT scan of the chest identifying a solitary pulmonary nodule."
+
+
+* status = #final
+
+* category[imaging] = $observation-category#imaging
+
+* code = $sct#427359005 "Solitary pulmonary nodule"
+* code.text = "Pulmonary nodule identified on chest CT"
+
+* subject = Reference(patient-swart)
+* subject.display = "Fiona XXX_Swart"
+
+* effectiveDateTime = "2024-10-15"
+
+* performer.display = "Dr. Alessia Bianchi (Radiologist)"
+
+* valueString = "Solitary 1.5 cm pulmonary nodule detected in the right upper lobe."
+
+* basedOn[imorderaccession].identifier.system = "http://hospital.example.org/accession"
+* basedOn[imorderaccession].identifier.value = "ACSN-2024-00123"
+* basedOn[imorderaccession].identifier.type = $v2-0203#ACSN
+
+/* // * partOf[imagingstudy] = Reference(ImagingStudy/ct-chest-2024)
+* partOf[imagingstudy].display = "CT Chest without contrast ImagingStudy"
+
+// * partOf[procedure] = Reference(Procedure/proc-ct-chest)
+* partOf[procedure].display = "CT Chest Procedure"
+
+// * derivedFrom[imagingstudy] = Reference(ImagingStudy/ct-chest-2024)
+* derivedFrom[imagingstudy].display = "CT Chest without contrast ImagingStudy" */
