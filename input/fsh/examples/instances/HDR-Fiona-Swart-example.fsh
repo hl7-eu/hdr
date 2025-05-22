@@ -198,6 +198,7 @@ Instance: lab-swart-4
 InstanceOf: ObservationResultsLaboratoryEu
 Title: "Rh D factor"
 Usage: #inline
+* id = "a7c687cd-27dd-4b42-88c2-5e32418847ae"
 * status = #final
 * code = $loinc#1305-2 "D Ag [Presence] in Blood"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
@@ -210,6 +211,7 @@ Instance: lab-swart-5
 InstanceOf: ObservationResultsLaboratoryEu
 Title: "Hemoglobine"
 Usage: #inline
+* id = "5863804b-b0aa-4292-8bc2-13a769ad50d7"
 * status = #final
 * code = $loinc#93846-4 "Hemoglobin [Moles/volume] in Venous blood"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
@@ -222,6 +224,7 @@ Instance: lab-swart-6
 InstanceOf: ObservationResultsLaboratoryEu
 Title: "HIV 1 As [aanwezigheid] in serum of plasma d.m.v. immunoassay"
 Usage: #inline
+* id = "2640f290-85c4-426f-b912-4b5051f4f35a"
 * status = #final
 * code = $loinc#29893-5 "HIV 1 Ab [Presence] in Serum or Plasma by Immunoassay"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
@@ -377,9 +380,9 @@ Usage: #example
 // * section[=].entry[0] = Reference(lab-swart-1)  "HBsAg"
 // * section[=].entry[+] = Reference(lab-swart-2)  "Toxoplasma IgG"
 * section[sectionSignificantResults].entry[labResult][0] = Reference(lab-swart-3)  "ABO group"
-* section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-4)  "Rh D factor"
-* section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-5)  "hemoglobin"
-* section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-6)  "HIV 1 As"
+* section[sectionSignificantResults].entry[labResult][+] = Reference(urn:uuid:a7c687cd-27dd-4b42-88c2-5e32418847ae)  "Rh D factor"
+* section[sectionSignificantResults].entry[labResult][+] = Reference(urn:uuid:5863804b-b0aa-4292-8bc2-13a769ad50d7)  "hemoglobin"
+* section[sectionSignificantResults].entry[labResult][+] = Reference(urn:uuid:2640f290-85c4-426f-b912-4b5051f4f35a)  "HIV 1 As"
 
 
 * section[sectionDischargeDetails].title = "Discharge details"
@@ -415,11 +418,11 @@ Usage: #example
 // * entry[=].resource = lab-swart-2
 * entry[+].fullUrl = "http://example.org/Observation/lab-swart-3"
 * entry[=].resource = lab-swart-3
-* entry[+].fullUrl = "http://example.org/Observation/lab-swart-4"
+* entry[+].fullUrl = "urn:uuid:a7c687cd-27dd-4b42-88c2-5e32418847ae"
 * entry[=].resource = lab-swart-4
-* entry[+].fullUrl = "http://example.org/Observation/lab-swart-5"
+* entry[+].fullUrl = "urn:uuid:5863804b-b0aa-4292-8bc2-13a769ad50d7"
 * entry[=].resource = lab-swart-5
-* entry[+].fullUrl = "http://example.org/Observation/lab-swart-6"
+* entry[+].fullUrl = "urn:uuid:2640f290-85c4-426f-b912-4b5051f4f35a"
 * entry[=].resource = lab-swart-6
 * entry[+].fullUrl = "http://example.org/Observation/levenvoelen-swart"
 * entry[=].resource = levenvoelen-swart
