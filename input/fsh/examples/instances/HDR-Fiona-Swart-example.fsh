@@ -241,6 +241,7 @@ Usage: #example
 * author = Reference(organization-sophia)
 * title = "Hospital Discharge summary"
 * confidentiality = #N
+// section 0
 * section[sectionAdmissionEvaluation].title = "Admission evaluation"
 * section[sectionAdmissionEvaluation].code = $loinc#67851-6 "Admission evaluation note"
 * section[sectionAdmissionEvaluation].text.status = #generated
@@ -277,7 +278,7 @@ Usage: #example
 * section[sectionAdmissionEvaluation].section[=].entry[+] = Reference(bloeddruk-swart) "70/120 mmHg"
 * section[sectionAdmissionEvaluation].section[=].entry[+] = Reference(levenvoelen-swart) "foetale bewegingen aanwezig"
 
-
+// section 1
 * section[sectionPatientHx].title = "35090-0"
 * section[sectionPatientHx].code = $loinc#35090-0 "Patient History"
 * section[sectionPatientHx].section[+].title = "Social history"
@@ -319,6 +320,8 @@ Usage: #example
    </table>
    </div>"
 * section[sectionPatientHx].section[=].entry[0] = Reference(sectio-swart) "planned primary sectio caesarea"
+
+// section 2
 * section[sectionProblemList].title = "Problem List"
 * section[sectionProblemList].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblemList].text.status = #generated
@@ -337,7 +340,7 @@ Usage: #example
 * section[sectionProblemList].entry[0] = Reference(condition-meerling)
 * section[sectionProblemList].entry[+] = Reference(http://example.org/Condition/condition-growth)
 
-
+// section 3
 * section[sectionHospitalCourse].title = "Hospital Course"
 * section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital Course"
 * section[sectionHospitalCourse].text.status = #generated
@@ -347,7 +350,7 @@ Usage: #example
 </div>
 """
 
-
+// section 4
 * section[sectionSignificantResults].title = "Results"
 * section[sectionSignificantResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
 * section[sectionSignificantResults].text.status = #generated

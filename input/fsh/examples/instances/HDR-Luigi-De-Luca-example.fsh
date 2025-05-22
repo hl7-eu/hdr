@@ -33,14 +33,14 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:a5bf69e4-24db-48a8-9eda-71516dcaf1d9"
 * entry[=].resource = diabetis-condition-luca
 
-* entry[+].fullUrl = "urn:uuid:b84038f8-9541-4c5b-93b0-a7f1b8e55bd3"
-* entry[=].resource = careplan-luca
+* entry[careplan].fullUrl = "urn:uuid:b84038f8-9541-4c5b-93b0-a7f1b8e55bd3"
+* entry[careplan].resource = careplan-luca
 
-* entry[+].fullUrl = "urn:uuid:92ffc1fd-71ff-4d54-bc06-25d9e1e1fea0"
-* entry[=].resource = lifestyle-consultation-luca
+* entry[procedure][+].fullUrl = "urn:uuid:92ffc1fd-71ff-4d54-bc06-25d9e1e1fea0"
+* entry[procedure][=].resource = lifestyle-consultation-luca
 
-* entry[+].fullUrl = "urn:uuid:a74a3dca-92fa-4b71-8e70-89a07ac74bc3"
-* entry[=].resource = diabetes-education-luca
+* entry[procedure][+].fullUrl = "urn:uuid:a74a3dca-92fa-4b71-8e70-89a07ac74bc3"
+* entry[procedure][=].resource = diabetes-education-luca
 
 * entry[+].fullUrl = "urn:uuid:53a8c3c3-5d1b-4950-87bc-fddae2ebc079"
 * entry[=].resource = metformin-therapy-luca
@@ -156,7 +156,7 @@ Usage: #example
 //
 * section[sectionAdmissionEvaluation].title = "Admission evaluation"
 * section[=].code = $loinc#67852-4 "Hospital Admission evaluation note"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   Mr. Luigi De Luca, a 57-year-old male, was admitted on 1st April 
@@ -175,7 +175,7 @@ Usage: #example
 //
 * section[sectionFamilyHistory].title = "Family History"
 * section[=].code = $loinc#10157-6 "History of family member diseases Narrative"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   Mr. Luigi has a family history of diabetes (type 2, mother and maternal grandmother).
@@ -188,7 +188,7 @@ Usage: #example
 //
 * section[sectionVitalSigns].title = "Vital signs"
 * section[=].code = $loinc#8716-3 "Vital signs"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   <table class="hl7__hdr">
@@ -223,7 +223,7 @@ Usage: #example
 //
 * section[sectionTobaccoUse].title = "Tobacco use"
 * section[=].code = $loinc#11367-0 "History of Tobacco use"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   The patient smokes "a few" cigarettes per day.
@@ -235,7 +235,7 @@ Usage: #example
 //
 * section[sectionHospitalCourse].title = "Hospital Course"
 * section[=].code = $loinc#8648-8 "Hospital Course"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   During the hospital stay from 1 to 10 April, Mr. De Luca underwent a
@@ -251,7 +251,7 @@ Usage: #example
 //
 * section[sectionSignificantResults].title = "Significant Observation Results"
 * section[=].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   Blood Glucose Monitoring Regular monitoring of fasting blood glucose levels
@@ -311,7 +311,7 @@ Usage: #example
 //
 * section[sectionSignificantProcedures].title = "Significant procedures"
 * section[=].code = $loinc#10185-7 "Hospital discharge procedures Narrative"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   Lifestyle Consultation: Mr. De Luca met with a dietitian to discuss necessary changes in his diet, focusing on a low glycemic index diet and the need to monitor carbohydrate intake. He was also advised to engage in regular physical activity.
@@ -329,7 +329,7 @@ Usage: #example
 //
 * section[sectionPharmacotherapy].title = "Medications"
 * section[=].code = $loinc#87232-5 "Medication administration.brief"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   Metformin 500 mg twice daily was started as the first-line treatment to help control blood glucose levels.
@@ -356,7 +356,7 @@ Usage: #example
 //
 * section[sectionPlanOfCare].title = "Follow-up"
 * section[=].code = $loinc#18776-5 "Plan of care note"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   <table class="hl7__hdr">
@@ -387,7 +387,7 @@ Usage: #example
 //
 * section[sectionDiagnosticSummary].title = "Diagnosis at Discharge"
 * section[=].code = $loinc#11535-2 "Hospital discharge Dx Narrative"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   <table class="hl7__hdr">
@@ -412,7 +412,7 @@ Usage: #example
 //
 * section[sectionDischargeInstructions].title = "Hospital Discharge Instructions"
 * section[=].code = $loinc#8653-8 "Hospital Discharge Instructions"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   Instructions at Discharge to Mr. De Luca
