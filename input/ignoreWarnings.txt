@@ -182,3 +182,12 @@ Found multiple matching profiles for urn:uuid:fd7f7580-5788-45dd-88ec-dca615d69c
 
 # This guide uses hl7.fhir.eu.extensions.r4#0.1.1-ballot
 This IG is for FHIR version 4.0.1, while the package 'hl7.fhir.eu.extensions#0.1.1-ballot' is for FHIR version 5.0.0
+
+# Non mathcing slices
+INFORMATION: Bundle/HDR-Paolo-Marcheschi-Example: Bundle.entry[0].resource.section[1]: This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr|0.0.1-ci (this may not be a problem, but you should check that it's not intended to match a slice)
+
+INFORMATION: Medication/01A-Cefuroxime1500GenericExplicit: Medication.ingredient[0].item.ofType(CodeableConcept): This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medication-eu-hdr|0.0.1-ci (this may not be a problem, but you should check that it's not intended to match a slice)
+
+INFORMATION: Medication/01C-Cefuroxime1500Branded: Medication.ingredient[0].item.ofType(CodeableConcept): This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medication-eu-hdr|0.0.1-ci (this may not be a problem, but you should check that it's not intended to match a slice)
+
+INFORMATION: MedicationRequest/400C-prescription-cefuroxime-singleline: MedicationRequest.dosageInstruction[1].doseAndRate[0].dose.ofType(Range): This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-eu-hdr|0.0.1-ci (this may not be a problem, but you should check that it's not intended to match a slice)

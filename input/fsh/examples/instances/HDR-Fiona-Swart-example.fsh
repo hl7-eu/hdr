@@ -335,7 +335,7 @@ Usage: #example
    </table>
 </div>"
 * section[sectionProblemList].entry[0] = Reference(condition-meerling)
-* section[sectionProblemList].entry[+] = Reference(condition-growth)
+* section[sectionProblemList].entry[+] = Reference(http://example.org/Condition/condition-growth)
 
 
 * section[sectionHospitalCourse].title = "Hospital Course"
@@ -373,10 +373,10 @@ Usage: #example
 </div>"
 // * section[=].entry[0] = Reference(lab-swart-1)  "HBsAg"
 // * section[=].entry[+] = Reference(lab-swart-2)  "Toxoplasma IgG"
-* section[sectionSignificantResults].entry[labResult][+] = Reference(lab-swart-3)  "ABO group"
-* section[sectionSignificantResults].entry[labResult][+] = Reference(lab-swart-4)  "Rh D factor"
-* section[sectionSignificantResults].entry[labResult][+] = Reference(lab-swart-5)  "hemoglobin"
-* section[sectionSignificantResults].entry[labResult][+] = Reference(lab-swart-6)  "HIV 1 As"
+* section[sectionSignificantResults].entry[labResult][0] = Reference(lab-swart-3)  "ABO group"
+* section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-4)  "Rh D factor"
+* section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-5)  "hemoglobin"
+* section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-6)  "HIV 1 As"
 
 
 * section[sectionDischargeDetails].title = "Discharge details"
