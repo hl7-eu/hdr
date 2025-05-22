@@ -5,7 +5,9 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="Medication/01A-Cefuroxime1500GenericExplicit" key="Medication-01A-Cefuroxime1500GenericExplicit" name="01A-Cefuroxime1500GenericExplicit"/>
+<artifact id="Medication/01C-Cefuroxime1500Branded" key="Medication-01C-Cefuroxime1500Branded" name="01C-Cefuroxime1500Branded"/>
 <artifact id="MedicationRequest/400C-prescription-cefuroxime-singleline" key="MedicationRequest-400C-prescription-cefuroxime-singleline" name="400C-prescription-cefuroxime-singleline"/>
+<artifact id="MedicationDispense/400D-dispense-1" key="MedicationDispense-400D-dispense-1" name="400D-dispense-1"/>
 <artifact id="StructureDefinition/HospitalDischargeReport" key="StructureDefinition-HospitalDischargeReport" name="A - Hospital Discharge Report (eHN)"/>
 <artifact id="StructureDefinition/Header" key="StructureDefinition-Header" name="A.1 - Hospital Discharge Report header data element"/>
 <artifact id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"/>
@@ -23,6 +25,7 @@
 <artifact id="Observation/lab-swart-3" key="Observation-lab-swart-3" name="ABO group"/>
 <artifact id="Immunization/example-covid19-vax-admin" key="Immunization-example-covid19-vax-admin" name="Administered COVID-19 Immunization"/>
 <artifact id="ValueSet/admission-urgency-eu-hdr" key="ValueSet-admission-urgency-eu-hdr" name="Admission Urgency Value Set"/>
+<artifact id="Consent/example-consent-dnr" key="Consent-example-consent-dnr" name="Advance Directive: DNR"/>
 <artifact id="Observation/alcohol-swart" key="Observation-alcohol-swart" name="Alcohol consumption"/>
 <artifact id="ValueSet/allergens-eu-hdr" key="ValueSet-allergens-eu-hdr" name="Allergens Value Set"/>
 <artifact id="ValueSet/allergy-intolerance-substances-eu-hdr" key="ValueSet-allergy-intolerance-substances-eu-hdr" name="Allergy Intolerance"/>
@@ -77,6 +80,7 @@
 <artifact id="ActorDefinition/actor-repos-eu-hdr" key="ActorDefinition-actor-repos-eu-hdr" name="HDR Repository"/>
 <artifact id="Composition/composition-swart" key="Composition-composition-swart" name="Hospital Discharge summary"/>
 <artifact id="StructureDefinition/humanName-obl-eu-hdr" key="StructureDefinition-humanName-obl-eu-hdr" name="Human Name: obligations"/>
+<artifact id="Observation/example-img-finding-lung-nodule" key="Observation-example-img-finding-lung-nodule" name="Imaging Finding: Lung Nodule"/>
 <artifact id="StructureDefinition/immunization-eu-hdr" key="StructureDefinition-immunization-eu-hdr" name="Immunization (HDR)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
 <artifact id="StructureDefinition/immunization-obl-eu-hdr" key="StructureDefinition-immunization-obl-eu-hdr" name="Immunization: obligations"/>
@@ -111,10 +115,12 @@
 <artifact id="StructureDefinition/procedure-obl-eu-hdr" key="StructureDefinition-procedure-obl-eu-hdr" name="Procedure: obligations"/>
 <artifact id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
+<artifact id="Observation/example-sdoh-transportation" key="Observation-example-sdoh-transportation" name="SDOH Observation: Transportation Insecurity"/>
 <artifact id="Procedure/sectio-swart" key="Procedure-sectio-swart" name="Sectio caesarea"/>
 <artifact id="StructureDefinition/specimen-obl-eu-hdr" key="StructureDefinition-specimen-obl-eu-hdr" name="Specimen: obligations"/>
 <artifact id="CodeSystem/temporarySystem-hdr-eu" key="CodeSystem-temporarySystem-hdr-eu" name="Temporary HDR Code System"/>
 <artifact id="Observation/tobacco-swart" key="Observation-tobacco-swart" name="Tobacco smoking"/>
+<artifact id="Observation/example-travel-history" key="Observation-example-travel-history" name="Travel History: Visit to Italy"/>
 <artifact id="Condition/condition-meerling" key="Condition-condition-meerling" name="Twin pregnancy"/>
 <artifact id="Condition/a5bf69e4-24db-48a8-9eda-71516dcaf1d9" key="Condition-a5bf69e4-24db-48a8-9eda-71516dcaf1d9" name="diabetis-condition-luca"/>
 <artifact id="ValueSet/eHDSIConditionPOA" key="ValueSet-eHDSIConditionPOA" name="eHDSI Condition Present On Admission"/>

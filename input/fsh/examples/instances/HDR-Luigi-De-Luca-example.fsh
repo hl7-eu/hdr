@@ -438,7 +438,7 @@ Usage: #example
 * onsetDateTime = "2025-04-04"
 
 Instance: careplan-luca
-InstanceOf: CarePlan
+InstanceOf: CarePlanEuHdr
 Title: "Diabetes Management Care Plan"
 Description: "Care plan for diabetes including referrals and HbA1c measurement."
 Usage: #example

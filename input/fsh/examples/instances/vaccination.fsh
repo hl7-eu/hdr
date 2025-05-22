@@ -3,7 +3,6 @@ InstanceOf: ImmunizationRecommendationEuHdr
 Title: "COVID-19 Immunization Recommendation"
 Description: "A recommendation for COVID-19 vaccination."
 
-* meta.profile[0] = "http://hl7.eu/fhir/StructureDefinition/immunizationRecommendation-eu-hdr"
 * date = "2024-10-15"
 * patient = Reference(patient-swart)
 * patient.display = "Fiona XXX_Swart"
@@ -12,11 +11,10 @@ Description: "A recommendation for COVID-19 vaccination."
 
 * recommendation[0].targetDisease = $sct#840539006 "COVID-19"
 
-* recommendation[0].forecastStatus.coding[0].system = "http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"
-* recommendation[0].forecastStatus.coding[0].code = #due
-* recommendation[0].forecastStatus.coding[0].display = "Due"
+* recommendation[0].forecastStatus = http://terminology.hl7.org/CodeSystem/immunization-recommendation-status#due "Due"
 
-* recommendation[0].dateCriterion[nextDose].code = $loinc#30980-7
+* recommendation[0].dateCriterion[nextDose].code = $loinc#30980-7 "Date vaccine due"
+* recommendation[0].dateCriterion[nextDose].code.text = "Next dose due date"
 * recommendation[0].dateCriterion[nextDose].value = "2024-11-15"
 
 * recommendation[0].doseNumberPositiveInt = 4

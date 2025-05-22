@@ -91,3 +91,40 @@ Description: "A sample MedicationStatement for a patient taking Enalapril, used 
   <p><strong>Date Asserted:</strong> 2024-12-01</p>
 </div>
 """
+
+
+Instance: 400D-dispense-1
+InstanceOf: MedicationDispenseEuHdr
+Usage: #example
+Description: "400D-1. Medication dispense fulfilling the first part of the order: 1 package containing 10 vials"
+
+* status = #completed
+* medicationReference = Reference(01C-Cefuroxime1500Branded)
+* medicationReference.display = "Cefuroxime MIP 1500 mg, powder for solution for injection/infusion. N10."
+* subject = Reference(patient-swart)
+* subject.display = "Fiona XXX_Swart"
+* performer[0].actor.display = "The best pharmacist"
+* authorizingPrescription[0] = Reference(400C-prescription-cefuroxime-singleline)
+* quantity = 1 $ucum#1 // 1 pack containing 10 vials
+* daysSupply = 3 $ucum#d "day(s)"
+* whenHandedOver = "2024-12-06T19:54:00Z"
+
+
+Instance: 01C-Cefuroxime1500Branded
+InstanceOf: MedicationEuHdr
+Usage: #example
+Description: "1C. Cefuroxime 1500mg (1.5g) powder for solution in a vial (10 vials per package). Branded packaged product, defined by attributes."
+
+* identifier.value = "1529962"
+* identifier.system = "http://example.org/NationalMedicationRegister" 
+* form = $edqm#50053000 "Powder for solution for injection or infusion"
+* extension[classification].valueCodeableConcept = $atc#J01DC02 "cefuroxime"
+* extension[productName].valueString = "Cefuroxime MIP 1500 mg, süste-/infusioonilahuse pulber"
+* extension[unitOfPresentation].valueCodeableConcept = $edqm#15060000 "Vial"
+* amount.numerator = 10 $edqm#15060000 "Vial"
+* amount.denominator.value = 1
+* ingredient.itemCodeableConcept = $sct#48753004 "Cefuroxime sodium"
+* ingredient.isActive = true
+* ingredient.strength.numerator = 1500 $ucum#mg "milligram"
+* ingredient.strength.denominator = 1 $edqm#15060000 "Vial"
+* manufacturer.display = "MIP Pharma GmbH"

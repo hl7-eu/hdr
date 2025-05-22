@@ -63,7 +63,7 @@ Usage: #example
 * status = #final
 * category = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#29463-7 "Body weight"
-* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * valueQuantity = 63 'kg' "kg"
 
@@ -76,7 +76,7 @@ Usage: #example
 * code.coding[0] = $loinc#85354-9 "Blood pressure panel with all children optional"
 * code.coding[+] = $loinc#55284-4 "Blood pressure systolic and diastolic"
 * code.coding[+] = $sct#46973005 "Blood pressure taking"
-* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * component[0].code = $loinc#8480-6 "Systolic blood pressure"
 * component[=].valueQuantity = 120 $ucum#mm[Hg] "mmHg"
@@ -91,7 +91,7 @@ Usage: #example
 * identifier.value = "38e436bf-6b35-11ec-2213-020000000000"
 * status = #final
 * code = $sct#364618000 "Pattern of fetal movement"
-* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * valueCodeableConcept = $sct#289431008 "Fetal movements present"
 
@@ -101,7 +101,7 @@ Title: "Twin pregnancy"
 Usage: #example
 * clinicalStatus = $condition-clinical#resolved
 * code = $sct#459168005 "Monochorionic diamniotic twin pregnancy"
-* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * onsetDateTime = 2025-02-08
 
 Instance: condition-growth
@@ -110,7 +110,7 @@ Title: "Twin pregnancy"
 Usage: #inline
 * clinicalStatus = $condition-clinical#resolved
 * code = $sct#22033007 "Fetal growth restriction"
-* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * onsetDateTime = 2025-02-08
 
 Instance: ziekenhuisopname-swart
@@ -118,13 +118,13 @@ InstanceOf: EncounterEuHdr
 Title: "Planned hospital admission for twin delivery"
 Usage: #example
 * status = $encounter-status#finished
-* class = #IMP 
-* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+* class = $v3-ActCode#IMP 
+* subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * period.start = "2025-02-08T10:00:00+00:00"
 * period.end = "2025-02-12T12:00:00+00:00"
 * reasonCode = $sct#65147003 "Twin pregnancy"
-* reasonReference = Reference(http://example.org/Condition/condition-meerling) "Twin pregnancy"
-* diagnosis[0].condition = Reference(http://example.org/Condition/condition-meerling) "monochoriale diamniotische tweelingzwangerschap"
+* reasonReference = Reference(condition-meerling) "Twin pregnancy"
+* diagnosis[0].condition = Reference(condition-meerling) "monochoriale diamniotische tweelingzwangerschap"
 
 Instance: alcohol-swart
 InstanceOf: Observation
@@ -132,7 +132,7 @@ Title: "Alcohol consumption"
 Usage: #example
 * status = #final
 * code = $sct#228273003 "Alcohol drinking behaviour" 
-* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * valueCodeableConcept = $sct#105542008 "Current non-drinker of alcohol"
 
@@ -142,7 +142,7 @@ Title: "Tobacco smoking"
 Usage: #example
 * status = #final
 * code = $sct#365980008 "Finding of tobacco use and exposure (finding)"
-* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * valueCodeableConcept = $sct#230059006 "Occasional cigarette smoker"
 * component[0].code = $sct#53661000146106 "Type of tobacco used (observable entity)"
@@ -151,14 +151,14 @@ Usage: #example
 * component[=].valueQuantity = 6 '{keer per dag inhaleren}' "keer per dag inhaleren"
 
 Instance: sectio-swart
-InstanceOf: Procedure
+InstanceOf: ProcedureEuHdr
 Title: "Sectio caesarea"
 Usage: #example
 * status = #completed
 * category = $sct#386637004 "Obstetric procedure"
 // * code = $sct#80771000146107 "Planned cesarean section"
 * code = $sct#11466000 "Cesarean section"
-* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * performedPeriod.start = "2025-02-10T10:03:00+02:00"
 * performedPeriod.end = "2025-02-10T11:48:00+02:00"
 
@@ -170,7 +170,7 @@ Usage: #example
 // Usage: #example
 // * status = #final
 // * code = $loinc#58452-4 "Hepatitis B virus surface Ag [Units/volume] in Serum"
-// * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+// * subject = Reference(patient-swart) "Fiona F XXX_Swart"
 // * valueQuantity = 0 $ucum#k[arb'U]/L "k[arb'U]/L"
 
 // Instance: lab-swart-2
@@ -179,7 +179,7 @@ Usage: #example
 // Usage: #example
 // * status = #final
 // * code = $loinc#8039-0 "Toxoplasma gondii IgG Ab [Units/volume] in Serum"
-// * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+// * subject = Reference(patient-swart) "Fiona F XXX_Swart"
 // * valueQuantity = 9 $ucum#k[arb'U]/L "k[arb'U]/L"
 
 Instance: lab-swart-3
@@ -189,9 +189,9 @@ Usage: #example
 * status = #final
 * code = $loinc#883-9 "ABO group [Type] in Blood"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
-* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
-* performer = Reference(http://example.org/Organization/organization-sophia)
+* performer = Reference(organization-sophia)
 * valueCodeableConcept = $sct#58460004 "Blood group O"
 
 Instance: lab-swart-4
@@ -201,9 +201,9 @@ Usage: #inline
 * status = #final
 * code = $loinc#1305-2 "D Ag [Presence] in Blood"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
-* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
-* performer = Reference(http://example.org/Organization/organization-sophia)
+* performer = Reference(organization-sophia)
 * valueCodeableConcept = $sct#165747007 "RhD positive"
 
 Instance: lab-swart-5
@@ -213,9 +213,9 @@ Usage: #inline
 * status = #final
 * code = $loinc#93846-4 "Hemoglobin [Moles/volume] in Venous blood"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
-* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
-* performer = Reference(http://example.org/Organization/organization-sophia)
+* performer = Reference(organization-sophia)
 * valueQuantity = 7.3 $ucum#mmol/L "mmol/L"
 
 Instance: lab-swart-6
@@ -225,9 +225,9 @@ Usage: #inline
 * status = #final
 * code = $loinc#29893-5 "HIV 1 Ab [Presence] in Serum or Plasma by Immunoassay"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
-* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
-* performer = Reference(http://example.org/Organization/organization-sophia)
+* performer = Reference(organization-sophia)
 * valueCodeableConcept = $sct#165815009 "HIV not detected"
 
 Instance: composition-swart
@@ -235,10 +235,10 @@ InstanceOf: CompositionEuHdr
 Usage: #example
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
-* subject = Reference(http://example.org/Patient/patient-swart)
-* encounter = Reference(http://example.org/Encounter/ziekenhuisopname-swart)
+* subject = Reference(patient-swart)
+* encounter = Reference(ziekenhuisopname-swart)
 * date = "2025-02-08T10:18:13.947+00:00"
-* author = Reference(http://example.org/Organization/organization-sophia)
+* author = Reference(organization-sophia)
 * title = "Hospital Discharge summary"
 * confidentiality = #N
 * section[sectionAdmissionEvaluation].title = "Admission evaluation"
@@ -273,9 +273,9 @@ Usage: #example
    </table>
 </div>"
 
-* section[sectionAdmissionEvaluation].section[=].entry[0] = Reference(http://example.org/Observation/gewicht-swart) "63 kg"
-* section[sectionAdmissionEvaluation].section[=].entry[+] = Reference(http://example.org/Observation/bloeddruk-swart) "70/120 mmHg"
-* section[sectionAdmissionEvaluation].section[=].entry[+] = Reference(http://example.org/Observation/levenvoelen-swart) "foetale bewegingen aanwezig"
+* section[sectionAdmissionEvaluation].section[=].entry[0] = Reference(gewicht-swart) "63 kg"
+* section[sectionAdmissionEvaluation].section[=].entry[+] = Reference(bloeddruk-swart) "70/120 mmHg"
+* section[sectionAdmissionEvaluation].section[=].entry[+] = Reference(levenvoelen-swart) "foetale bewegingen aanwezig"
 
 
 * section[sectionPatientHx].title = "35090-0"
@@ -303,8 +303,8 @@ Usage: #example
       </tr>
    </table>
 </div>"
-* section[sectionPatientHx].section[=].entry[0] = Reference(http://example.org/Observation/alcohol-swart) "does not drink alcohol"
-* section[sectionPatientHx].section[=].entry[+] = Reference(http://example.org/Observation/tobacco-swart) "smokes occasionally cigarettes"
+* section[sectionPatientHx].section[=].entry[0] = Reference(alcohol-swart) "does not drink alcohol"
+* section[sectionPatientHx].section[=].entry[+] = Reference(tobacco-swart) "smokes occasionally cigarettes"
 
 
 * section[sectionPatientHx].section[+].title = "Significant procedures"
@@ -318,7 +318,7 @@ Usage: #example
       </tr>
    </table>
    </div>"
-* section[sectionPatientHx].section[=].entry[0] = Reference(http://example.org/Procedure/sectio-swart) "planned primary sectio caesarea"
+* section[sectionPatientHx].section[=].entry[0] = Reference(sectio-swart) "planned primary sectio caesarea"
 * section[sectionProblemList].title = "Problem List"
 * section[sectionProblemList].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblemList].text.status = #generated
@@ -334,7 +334,7 @@ Usage: #example
       </tr>
    </table>
 </div>"
-* section[sectionProblemList].entry[0] = Reference(http://example.org/Condition/condition-meerling)
+* section[sectionProblemList].entry[0] = Reference(condition-meerling)
 * section[sectionProblemList].entry[+] = Reference(http://example.org/Condition/condition-growth)
 
 
@@ -371,9 +371,9 @@ Usage: #example
       </tr>
    </table>
 </div>"
-// * section[=].entry[0] = Reference(http://example.org/Observation/lab-swart-1)  "HBsAg"
-// * section[=].entry[+] = Reference(http://example.org/Observation/lab-swart-2)  "Toxoplasma IgG"
-* section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-3)  "ABO group"
+// * section[=].entry[0] = Reference(lab-swart-1)  "HBsAg"
+// * section[=].entry[+] = Reference(lab-swart-2)  "Toxoplasma IgG"
+* section[sectionSignificantResults].entry[labResult][0] = Reference(lab-swart-3)  "ABO group"
 * section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-4)  "Rh D factor"
 * section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-5)  "hemoglobin"
 * section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-6)  "HIV 1 As"
