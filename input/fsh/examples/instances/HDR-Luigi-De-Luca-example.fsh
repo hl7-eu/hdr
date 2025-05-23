@@ -1,7 +1,7 @@
 Instance: HDR-Luigi-De-Luca-Example
 InstanceOf: BundleEuHdr
-Title: "Complete HL7 Europe Hospital Discharge Report Bundle"
-Description: "FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca"
+Title: "Bundle: complete HL7 Europe Hospital Discharge Report (1)"
+Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca"
 Usage: #example
 
 * type = #document
@@ -140,7 +140,8 @@ Usage: #inline
 
 Instance: composition-hdr-luca-example
 InstanceOf: CompositionEuHdr
-Title: "HDR Composition"
+Title: "Composition: HDR (1)"
+Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca"
 Usage: #example
 * id = "b9dc409d-ec81-4556-9fac-4dc3f731c199"
 * status = #final
@@ -429,6 +430,8 @@ Usage: #example
 
 Instance: diabetis-condition-luca
 InstanceOf: ConditionEuHdr
+Title: "Condition: Type 2 Diabetes Mellitus"
+Description: "Condition for Type 2 Diabetes Mellitus, double coding with ICD-10 and SNOMED CT."
 Usage: #example
 * id = "a5bf69e4-24db-48a8-9eda-71516dcaf1d9"
 * clinicalStatus = $condition-clinical#active
@@ -439,7 +442,7 @@ Usage: #example
 
 Instance: careplan-luca
 InstanceOf: CarePlanEuHdr
-Title: "Diabetes Management Care Plan"
+Title: "CarePlan: Diabetes Management Care Plan"
 Description: "Care plan for diabetes including referrals and HbA1c measurement."
 Usage: #example
 * id = "b84038f8-9541-4c5b-93b0-a7f1b8e55bd3"
@@ -485,7 +488,7 @@ Usage: #inline
 
 Instance: familyhistory-mother-luca-example
 InstanceOf: FamilyMemberHistoryEuHdr
-Title: "Family History of Type 2 Diabetes Mellitus - Mother"
+Title: "FamilyMemberHistory: Family History of Type 2 Diabetes Mellitus - Mother"
 Description: "Mother has a history of type 2 diabetes mellitus."
 Usage: #example
 * id = "635c22e7-d7f1-45ad-9b4d-d4fe35239085"

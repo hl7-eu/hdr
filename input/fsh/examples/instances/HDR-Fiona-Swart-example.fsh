@@ -1,6 +1,7 @@
 Instance: patient-swart
 InstanceOf: Patient
-Title: "Patient Fiona F XXX_Swart"
+Title: "Patient: Dutch Patient"
+Description: "Patine reosurce representing Fiona Swart, a Dutch patient."
 Usage: #example
 * identifier.system = "http://fhir.nl/fhir/NamingSystem/bsn"
 * identifier.value = "999901448"
@@ -35,7 +36,8 @@ Usage: #example
 
 Instance: organization-sophia
 InstanceOf: Organization
-Title: "Erasmus MC, Sophia kinderziekenhuis"
+Title: "Organization: Erasmus MC"
+Description: "Organization representing the Erasmus MC, Sophia kinderziekenhuis."
 Usage: #example
 * identifier.system = "http://fhir.nl/fhir/NamingSystem/agb-z"
 * identifier.value = "06020806"
@@ -57,22 +59,23 @@ Usage: #example
 * address.country = "NL"
 
 Instance: gewicht-swart
-InstanceOf: Observation
-Title: "Body weight"
+InstanceOf: $vitalsigns
+Title: "Observation: Body weight"
+Description: "Vital Signs observation representng the Body weight of the patient."
 Usage: #example
 * status = #final
-* category = $observation-category#vital-signs "Vital Signs"
+* category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#29463-7 "Body weight"
 * subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * valueQuantity = 63 'kg' "kg"
 
 Instance: bloeddruk-swart
-InstanceOf: Observation
+InstanceOf: $vitalsigns
 Title: "Blood pressure"
-Usage: #example
+Usage: #inline
 * status = #final
-* category = $observation-category#vital-signs "Vital Signs"
+* category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code.coding[0] = $loinc#85354-9 "Blood pressure panel with all children optional"
 * code.coding[+] = $loinc#55284-4 "Blood pressure systolic and diastolic"
 * code.coding[+] = $sct#46973005 "Blood pressure taking"
@@ -85,8 +88,8 @@ Usage: #example
 
 Instance: levenvoelen-swart
 InstanceOf: Observation
-Title: "Fetal movement"
-Usage: #example
+Title: "Observation: Fetal movement"
+Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"
 * identifier.value = "38e436bf-6b35-11ec-2213-020000000000"
 * status = #final
@@ -97,8 +100,8 @@ Usage: #example
 
 Instance: condition-meerling
 InstanceOf: ConditionEuHdr
-Title: "Twin pregnancy"
-Usage: #example
+Title: "Observation: Twin pregnancy"
+Usage: #inline
 * clinicalStatus = $condition-clinical#resolved
 * code = $sct#459168005 "Monochorionic diamniotic twin pregnancy"
 * subject = Reference(patient-swart) "Fiona F XXX_Swart"
@@ -106,7 +109,7 @@ Usage: #example
 
 Instance: condition-growth
 InstanceOf: Condition
-Title: "Twin pregnancy"
+Title: "Condition: Fetal growth restriction"
 Usage: #inline
 * clinicalStatus = $condition-clinical#resolved
 * code = $sct#22033007 "Fetal growth restriction"
@@ -115,8 +118,9 @@ Usage: #inline
 
 Instance: ziekenhuisopname-swart
 InstanceOf: EncounterEuHdr
-Title: "Planned hospital admission for twin delivery"
-Usage: #example
+Title: "Encounter: Planned hospital admission for twin delivery"
+Description: "A planned hospital admission for the delivery of twins."
+Usage: #inline
 * status = $encounter-status#finished
 * class = $v3-ActCode#IMP 
 * subject = Reference(patient-swart) "Fiona F XXX_Swart"
@@ -129,7 +133,7 @@ Usage: #example
 Instance: alcohol-swart
 InstanceOf: Observation
 Title: "Alcohol consumption"
-Usage: #example
+Usage: #inline
 * status = #final
 * code = $sct#228273003 "Alcohol drinking behaviour" 
 * subject = Reference(patient-swart) "Fiona F XXX_Swart"
@@ -139,7 +143,7 @@ Usage: #example
 Instance: tobacco-swart
 InstanceOf: Observation
 Title: "Tobacco smoking"
-Usage: #example
+Usage: #inline
 * status = #final
 * code = $sct#365980008 "Finding of tobacco use and exposure (finding)"
 * subject = Reference(patient-swart) "Fiona F XXX_Swart"
@@ -152,7 +156,8 @@ Usage: #example
 
 Instance: sectio-swart
 InstanceOf: ProcedureEuHdr
-Title: "Sectio caesarea"
+Title: "Procedure: Sectio caesarea"
+Description: "A planned cesarean section procedure."
 Usage: #example
 * status = #completed
 * category = $sct#386637004 "Obstetric procedure"
@@ -184,7 +189,8 @@ Usage: #example
 
 Instance: lab-swart-3
 InstanceOf: ObservationResultsLaboratoryEu
-Title: "ABO group"
+Title: "Observation: ABO group"
+Description: "ABO blood group type in blood."
 Usage: #example
 * status = #final
 * code = $loinc#883-9 "ABO group [Type] in Blood"
@@ -235,10 +241,10 @@ Usage: #inline
 
 Instance: composition-swart
 InstanceOf: CompositionEuHdr
-Usage: #example
+Usage: #inline
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
-* subject = Reference(patient-swart)
+* subject = Reference(http://example.org/Patient/patient-swart)
 * encounter = Reference(ziekenhuisopname-swart)
 * date = "2025-02-08T10:18:13.947+00:00"
 * author = Reference(http://example.org/Organization/organization-sophia)
@@ -391,50 +397,51 @@ Usage: #example
 * section[sectionDischargeDetails].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Fiona Swart was discharged after cesarean section with healthy twin.</div>"
 
 Instance: bundle-swart
-InstanceOf: Bundle
-Title: "Bundle for Fiona Swart HDR"
+InstanceOf: BundleEuHdr
+Title: "Bundle: complete HL7 Europe Hospital Discharge Report (4)"
+Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Fiona Swart"
 Usage: #example
 * identifier.system = "urn:ietf:rfc:4122"
 * identifier.value = "3e594fe5-3ed5-4305-a214-99c87e1f3bfa"
 * type = #document
 * timestamp = "2025-05-11T10:18:14.632+00:00"
-* entry[0].fullUrl = "http://example.org/Composition/composition-swart"
-* entry[=].resource = composition-swart
+* entry[composition][0].fullUrl = "http://example.org/Composition/composition-swart"
+* entry[composition][=].resource = composition-swart
 //1
-* entry[+].fullUrl = "http://example.org/Condition/condition-growth"
-* entry[=].resource = condition-growth
-* entry[+].fullUrl = "http://example.org/Condition/condition-meerling"
-* entry[=].resource = condition-meerling
+* entry[condition][+].fullUrl = "http://example.org/Condition/condition-growth"
+* entry[condition][=].resource = condition-growth
+* entry[condition][+].fullUrl = "http://example.org/Condition/condition-meerling"
+* entry[condition][=].resource = condition-meerling
 //3
-* entry[+].fullUrl = "http://example.org/Encounter/ziekenhuisopname-swart"
-* entry[=].resource = ziekenhuisopname-swart
-* entry[+].fullUrl = "http://example.org/Observation/alcohol-swart"
-* entry[=].resource = alcohol-swart
-* entry[+].fullUrl = "http://example.org/Observation/bloeddruk-swart"
+* entry[encounter][+].fullUrl = "http://example.org/Encounter/ziekenhuisopname-swart"
+* entry[encounter][=].resource = ziekenhuisopname-swart
+* entry[observation][+].fullUrl = "http://example.org/Observation/alcohol-swart"
+* entry[observation][=].resource = alcohol-swart
+* entry[observation][+].fullUrl = "http://example.org/Observation/bloeddruk-swart"
 //6
-* entry[=].resource = bloeddruk-swart
-* entry[+].fullUrl = "http://example.org/Observation/gewicht-swart"
-* entry[=].resource = gewicht-swart
+* entry[observation][=].resource = bloeddruk-swart
+* entry[observation][+].fullUrl = "http://example.org/Observation/gewicht-swart"
+* entry[observation][=].resource = gewicht-swart
 // * entry[+].fullUrl = "http://example.org/Observation/lab-swart-1"
 // * entry[=].resource = lab-swart-1
 // * entry[+].fullUrl = "http://example.org/Observation/lab-swart-2"
 // * entry[=].resource = lab-swart-2
-* entry[+].fullUrl = "http://example.org/Observation/lab-swart-3"
-* entry[=].resource = lab-swart-3
+* entry[observation][+].fullUrl = "http://example.org/Observation/lab-swart-3"
+* entry[observation][=].resource = lab-swart-3
 //8
-* entry[+].fullUrl = "urn:uuid:a7c687cd-27dd-4b42-88c2-5e32418847ae"
-* entry[=].resource = lab-swart-4
-* entry[+].fullUrl = "urn:uuid:5863804b-b0aa-4292-8bc2-13a769ad50d7"
-* entry[=].resource = lab-swart-5
-* entry[+].fullUrl = "urn:uuid:2640f290-85c4-426f-b912-4b5051f4f35a"
-* entry[=].resource = lab-swart-6
-* entry[+].fullUrl = "http://example.org/Observation/levenvoelen-swart"
-* entry[=].resource = levenvoelen-swart
-* entry[+].fullUrl = "http://example.org/Observation/tobacco-swart"
-* entry[=].resource = tobacco-swart
-* entry[+].fullUrl = "http://example.org/Organization/organization-sophia"
-* entry[=].resource = organization-sophia
-* entry[+].fullUrl = "http://example.org/Patient/patient-swart"
-* entry[=].resource = patient-swart
-* entry[+].fullUrl = "http://example.org/Procedure/sectio-swart"
-* entry[=].resource = sectio-swart
+* entry[observation][+].fullUrl = "urn:uuid:a7c687cd-27dd-4b42-88c2-5e32418847ae"
+* entry[observation][=].resource = lab-swart-4
+* entry[observation][+].fullUrl = "urn:uuid:5863804b-b0aa-4292-8bc2-13a769ad50d7"
+* entry[observation][=].resource = lab-swart-5
+* entry[observation][+].fullUrl = "urn:uuid:2640f290-85c4-426f-b912-4b5051f4f35a"
+* entry[observation][=].resource = lab-swart-6
+* entry[observation][+].fullUrl = "http://example.org/Observation/levenvoelen-swart"
+* entry[observation][=].resource = levenvoelen-swart
+* entry[observation][+].fullUrl = "http://example.org/Observation/tobacco-swart"
+* entry[observation][=].resource = tobacco-swart
+* entry[organization][+].fullUrl = "http://example.org/Organization/organization-sophia"
+* entry[organization][=].resource = organization-sophia
+* entry[patient][+].fullUrl = "http://example.org/Patient/patient-swart"
+* entry[patient][=].resource = patient-swart
+* entry[procedure][+].fullUrl = "http://example.org/Procedure/sectio-swart"
+* entry[procedure][=].resource = sectio-swart

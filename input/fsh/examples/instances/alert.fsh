@@ -1,6 +1,6 @@
 Instance: example-flag-no-left-arm
 InstanceOf: FlagEuHdr
-Title: "Clinical Alert: Do Not Use Left Arm"
+Title: "Flag: Do Not Use Left Arm"
 Description: "A clinical flag advising care teams to avoid using the patient's left arm for procedures."
 
 
@@ -20,7 +20,7 @@ Description: "A clinical flag advising care teams to avoid using the patient's l
 
 Instance: example-flag-allergy
 InstanceOf: FlagEuHdr
-Title: "Critical Allergy Alert for Penicillin"
+Title: "Flag: Critical Allergy to Penicillin"
 Description: "A high-priority allergy alert referencing the specific AllergyIntolerance resource."
 
 * status = #active
@@ -44,8 +44,8 @@ Description: "A high-priority allergy alert referencing the specific AllergyInto
 
 Instance: penicillin-allergy
 InstanceOf: AllergyIntoleranceEuHdr
-Title: "Allergy to Penicillin"
-Description: "Represents a documented allergy to penicillin."
+Title: "AllergyIntolerance: Critical Allergy to Penicillin"
+Description: "A high-priority allergy to Penicillin, with a specific reaction and severity."
 
 * clinicalStatus = $allergyintolerance-clinical#active
 * verificationStatus = $allergyintolerance-verification#confirmed

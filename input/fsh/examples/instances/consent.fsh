@@ -1,6 +1,6 @@
 Instance: example-consent-dnr
 InstanceOf: ConsentHdrEu
-Title: "Advance Directive: DNR"
+Title: "Consent: Advance Directive DNR"
 Description: "A Consent resource representing a Living Will with Do Not Resuscitate directive."
 
 
