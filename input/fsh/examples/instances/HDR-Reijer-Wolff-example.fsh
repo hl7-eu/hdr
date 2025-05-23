@@ -1,7 +1,7 @@
 Instance: HDR-Reijer-Wolff-Example
 InstanceOf: BundleEuHdr
-Title: "Complete HL7 Europe Hospital Discharge Report Bundle"
-Description: "FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff"
+Title: "Bundle: complete HL7 Europe Hospital Discharge Report (2)"
+Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff"
 Usage: #example
 
 * type = #document
@@ -205,6 +205,8 @@ Usage: #inline
 
 Instance: encounter-wolff-example
 InstanceOf: EncounterEuHdr
+Title: "Encounter: Hospital Admission and Discharge"
+Description: "A sample Encounter resource for a hospital admission and discharge."
 Usage: #example
 * id = "12fef60c-1fe7-4988-8286-af691889a3f3"
 * status = #finished
@@ -237,6 +239,8 @@ Usage: #inline
 
 Instance: paracetamol
 InstanceOf: MedicationAdministrationEuHdr
+Title: "Medication Administration: Paracetamol"
+Description: "A sample MedicationAdministration resource for Paracetamol."
 Usage: #example
 * id = "1bcfb26f-6958-4604-a40b-712170c1e536"
 * status = #completed

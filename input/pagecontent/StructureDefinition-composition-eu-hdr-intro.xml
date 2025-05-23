@@ -1,57 +1,68 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-	<h3>Entry  optionality</h3>
+    <div xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <blockquote class="stu-note">
+            <b>Medication Lists</b>
+            <p>The usage of several resources for expressing medication is related to the different purposes and meaning of each resource. While more clear boundaries and relationships between resources may be useful, the editors have decided to maintain a comprehensive set of options open. Reviewers are invited to provide ther feedback about the usage of the Medicaition related resources (e.g. MedicationStatement,  MedicationRequest,...) in the medication lists used by the HDR</p>
+        </blockquote>
 
-	<a> </a>
+    </div>
 
-	<p>In order to support the different maturity levels foreseen for the <b>European EHR eXchange format</b> (structured, text-only, unstructured), this version of the guide does not impose the mandatory presence of entries in the HDR sections.</p>
-	<p>HHowever, the presence of entries in the HDR sections is generally recommended to ensure a more structured and interoperable document.</p>
-	<p>This recommendation is expressed in this guide through <b>specific obligations</b> which guide implementers toward achieving a higher level of data quality and interoperability.</p>
+    <h3>Entry  optionality</h3>
+
+    <a></a>
+
+    <p>In order to support the different maturity levels foreseen for the <b>European EHR eXchange format</b> (structured, text-only, unstructured), this version of the guide does not impose the mandatory presence of entries in the HDR sections.</p>
+    <p>HHowever, the presence of entries in the HDR sections is generally recommended to ensure a more structured and interoperable document.</p>
+    <p>This recommendation is expressed in this guide through <b>specific obligations</b> which guide implementers toward achieving a higher level of data quality and interoperability.</p>
 
 
     <h3>Hospital Discharge Report Structure Challenge</h3>
 
-    <a> </a>
+    <a></a>
 
     <p>
-        To address the <a href="challenges.html"><strong>Hospital Discharge Report Structure Challenge</strong></a>, 
+        To address the <a href="challenges.html">
+        <strong>Hospital Discharge Report Structure Challenge</strong>
+    </a>, 
         we have opted for a <strong>flexible approach</strong> rather than imposing a rigid format.
-    </p>
-    <p>
+</p>
+<p>
         The <strong>"flat structure"</strong> documented in the guide should be understood as a sort of 
-        <strong>"section library"</strong> that can be reused in both <strong>flat and nested structures</strong>. 
+    <strong>"section library"</strong> that can be reused in both <strong>flat and nested structures</strong>. 
         This approach allows implementers to organize the report according to local or institutional needs 
         while maintaining a standardized content model.
-    </p>
-    <p>In practice:</p>
-    <ol>
-        <li>A few sections are required.</li>
-        <li>
-            <strong>Section slices are open</strong>, meaning that implementers have the freedom to include 
+</p>
+<p>In practice:</p>
+<ol>
+    <li>A few sections are required.</li>
+    <li>
+        <strong>Section slices are open</strong>, meaning that implementers have the freedom to include 
             additional <strong>"first-level" sections</strong>.
-        </li>
-        <li>
+    </li>
+    <li>
             With the exception of a few specific cases, <strong>sub-sections are allowed</strong>, giving healthcare 
             providers the ability to create a structure that best fits their clinical context.
-        </li>
-    </ol>
-    <p>
+    </li>
+</ol>
+<p>
         By offering this level of flexibility, the implementation guide supports diverse healthcare environments 
         while promoting consistency in content and interoperability.
-    </p>
+</p>
 
-	<p></p>
-	
-	<blockquote class="stu-note">
-		<p>
-			<b>Section Codes</b>
-		</p>
-		<p>Not all the LOINC codes used in this version align with the purpose of the sections, and in some cases, temporary 'local' codes have been assigned.</p>
-		<p>A collaboration with LOINC has been established to identify the most appropriate codes for the HDR sections.</p>
-		<p>
-			<b>Adopters should be aware that codes may be subject to change.</b>
-		</p>
-	</blockquote>
+<p></p>
+
+<blockquote class="stu-note">
+    <p>
+        <b>Section Codes</b>
+    </p>
+    <p>Not all the LOINC codes used in this version align with the purpose of the sections, and in some cases, temporary 'local' codes have been assigned.</p>
+    <p>A collaboration with LOINC has been established to identify the most appropriate codes for the HDR sections.</p>
+    <p>
+        <b>Adopters should be aware that codes may be subject to change.</b>
+    </p>
+</blockquote>
 
 </div>

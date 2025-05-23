@@ -2,7 +2,7 @@ Profile: ObservationInfectiousContactEuHdr
 Parent: Observation
 Id: observation-infectious-contact-eu-hdr 
 Title: "Observation: Infectious Contact (HDR)"
-Description: "Infectious Contact profile represents potential patient exposure to an agent (exposure source)."
+Description: "This profile constrains the Observation resource to represent an infectious contact as potential patient exposure to an agent (exposure source)."
 * ^experimental = false
 //* ^copyright = "Used by permission of HL7 International, all rights reserved Creative Commons License"
 * . ^short = "Infectious Contact Profile"

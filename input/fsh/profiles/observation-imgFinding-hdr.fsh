@@ -2,7 +2,7 @@ Profile: ObservationImgFindingEuHdr
 Parent: Observation
 Id: observation-imgFinding-eu-hdr
 Title: "Observation: Imaging Finding (HDR)"
-Description: "Finding during imaging procedure."
+Description: "This profile constrains the Observation resource to represent a finding during imaging procedure for the purpose of this guide, adapted from the Imaging Study Report work. "
 
 
 * insert SetFmmAndStatusRule (1, draft)

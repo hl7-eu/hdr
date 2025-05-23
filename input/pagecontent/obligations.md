@@ -30,12 +30,11 @@ The last actor is the system using the report received or retrieved.
 
 ### Obligations List
 
-<div>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 <table class="grid">
       <col style="width:30%"/>
-      <tbody>
- <tbody>
+     <tbody>
       <tr><td><a href="StructureDefinition-bundle-obl-eu-hdr.html">Bundle: obligations</a></td><td>This profile defines obligations for the Hospital Discharge Report for the scope of this guide.</td></tr>
       <tr><td><a href="StructureDefinition-carePlan-obl-eu-hdr.html">Care Plan: obligations</a></td><td>This profile defines obligations for the CarePlan resource for the purpose of this guide.</td></tr>
       <tr><td><a href="StructureDefinition-composition-obl-eu-hdr.html">Composition: obligations</a></td><td>This profile defines obligations for a Hospital Discharge Report (HDR) for the scope of this guide.</td></tr>
@@ -61,6 +60,6 @@ The last actor is the system using the report received or retrieved.
       <tr><td><a href="StructureDefinition-specimen-obl-eu-hdr.html">Specimen: Obligations</a></td><td>This profile defines obligations for the Specimen resource.</td></tr>
       <tr><td><a href="StructureDefinition-allergyIntolerance-obl-eu-hdr.html">Allergy Intolerance: Obligations</a></td><td>This profile defines obligations for the AllergyIntolerance resource.</td></tr>
       <tr><td><a href="StructureDefinition-humanName-obl-eu-hdr.html">Human Name: Obligations</a></td><td>This profile defines obligations for the HumanName data type.</td></tr>
-    </tbody>   </table>
-
+    </tbody>
+   </table>
 </div>

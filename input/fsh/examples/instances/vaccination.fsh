@@ -1,6 +1,6 @@
 Instance: example-covid19-vax-recommendation
 InstanceOf: ImmunizationRecommendationEuHdr
-Title: "COVID-19 Immunization Recommendation"
+Title: "ImmunizationRecommendation: COVID-19"
 Description: "A recommendation for COVID-19 vaccination."
 
 * date = "2024-10-15"
@@ -23,7 +23,7 @@ Description: "A recommendation for COVID-19 vaccination."
 
 Instance: example-covid19-vax-admin
 InstanceOf: ImmunizationEuHdr
-Title: "Administered COVID-19 Immunization"
+Title: "Immunization: COVID-19"
 Description: "An example record of an administered COVID-19 vaccine dose."
 
 * status = #completed

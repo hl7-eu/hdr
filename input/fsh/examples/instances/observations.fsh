@@ -1,6 +1,6 @@
 Instance: example-infectious-contact
 InstanceOf: ObservationInfectiousContactEuHdr
-Title: "Example Observation - Infectious Contact: COVID-19 Exposure"
+Title: "Observation: Infectious Contact: COVID-19 Exposure"
 Description: "Example of an infectious contact observation representing a patient's known exposure to a COVID-19 case."
 
 
@@ -27,7 +27,7 @@ Description: "Example of an infectious contact observation representing a patien
 
 Instance: example-sdoh-transportation
 InstanceOf: ObservationSdohEuHdr
-Title: "SDOH Observation: Transportation Insecurity"
+Title: "Observation: SDOH Transportation Insecurity"
 Description: "An observation documenting the patient's lack of reliable transportation to attend medical appointments."
 
 
@@ -53,7 +53,7 @@ Description: "An observation documenting the patient's lack of reliable transpor
 
 Instance: example-travel-history
 InstanceOf: ObservationTravelEuHdr
-Title: "Travel History: Visit to Italy"
+Title: "Observation: Travel History"
 Description: "An observation recording that Fiona Swart visited Italy in November 2023."
 
 * status = #final
@@ -74,7 +74,7 @@ Description: "An observation recording that Fiona Swart visited Italy in Novembe
 
 Instance: example-img-finding-lung-nodule
 InstanceOf: ObservationImgFindingEuHdr
-Title: "Imaging Finding: Lung Nodule"
+Title: "Observation: Imaging Finding"
 Description: "An imaging finding from a CT scan of the chest identifying a solitary pulmonary nodule."
 
 
