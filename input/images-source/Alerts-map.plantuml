@@ -25,4 +25,3 @@ class "flag-eu-hdr" <<Profile>> [[StructureDefinition-flag-eu-hdr.html]]
 "Alerts" <|. "flag-eu-hdr"
 "composition-eu-hdr" -d[hidden]-> "flag-eu-hdr"
 @enduml
-

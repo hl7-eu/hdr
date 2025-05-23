@@ -18,10 +18,10 @@ Concept Map
 endnote
 class "organization-eu" <<Profile>> [[https://hl7.eu/fhir/base/StructureDefinition-organization-eu.html]]
 "Header" <|. "organization-eu"
-class "patient-eu-core" <<Profile>> [[https://hl7.eu/fhir/base/https://hl7.eu/fhir/base/StructureDefinition-patient-eu-core.html]]
+class "patient-eu-core" <<Profile>> [[https://hl7.eu/fhir/base/StructureDefinition-patient-eu-core.html]]
 "Header" <|. "patient-eu-core"
 "organization-eu" -d[hidden]-> "patient-eu-core"
-class "practitionerRole-eu-core" <<Profile>> [[https://hl7.eu/fhir/base/https://hl7.eu/fhir/base/StructureDefinition-practitionerRole-eu-core.html]]
+class "practitionerRole-eu-core" <<Profile>> [[https://hl7.eu/fhir/base/StructureDefinition-practitionerRole-eu-core.html]]
 "Header" <|. "practitionerRole-eu-core"
 "patient-eu-core" -d[hidden]-> "practitionerRole-eu-core"
 class "bundle-eu-hdr" <<Profile>> [[StructureDefinition-bundle-eu-hdr.html]]
@@ -37,4 +37,3 @@ class "ServiceRequest" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Ser
 "Header" <|. "ServiceRequest"
 "Coverage" -d[hidden]-> "ServiceRequest"
 @enduml
-

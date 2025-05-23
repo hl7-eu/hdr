@@ -16,11 +16,8 @@ class "PatientHistory" <<LogicalModel>> [[StructureDefinition-PatientHistory.htm
 note top #PaleTurquoise [[ConceptMap-patientHistory2FHIR-eu-hdr.html]]
 Concept Map
 endnote
-class "ImmunizationRecommendation-eu-hdr" <<Profile>> [[StructureDefinition-ImmunizationRecommendation-eu-hdr.html]]
-"PatientHistory" <|. "ImmunizationRecommendation-eu-hdr"
 class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
 "PatientHistory" <|. "composition-eu-hdr"
-"ImmunizationRecommendation-eu-hdr" -d[hidden]-> "composition-eu-hdr"
 class "condition-eu-hdr" <<Profile>> [[StructureDefinition-condition-eu-hdr.html]]
 "PatientHistory" <|. "condition-eu-hdr"
 "composition-eu-hdr" -d[hidden]-> "condition-eu-hdr"
@@ -36,9 +33,12 @@ class "familyMemberHistory-eu-hdr" <<Profile>> [[StructureDefinition-familyMembe
 class "immunization-eu-hdr" <<Profile>> [[StructureDefinition-immunization-eu-hdr.html]]
 "PatientHistory" <|. "immunization-eu-hdr"
 "familyMemberHistory-eu-hdr" -d[hidden]-> "immunization-eu-hdr"
+class "immunizationRecommendation-eu-hdr" <<Profile>> [[StructureDefinition-immunizationRecommendation-eu-hdr.html]]
+"PatientHistory" <|. "immunizationRecommendation-eu-hdr"
+"immunization-eu-hdr" -d[hidden]-> "immunizationRecommendation-eu-hdr"
 class "observation-infectious-contact-eu-hdr" <<Profile>> [[StructureDefinition-observation-infectious-contact-eu-hdr.html]]
 "PatientHistory" <|. "observation-infectious-contact-eu-hdr"
-"immunization-eu-hdr" -d[hidden]-> "observation-infectious-contact-eu-hdr"
+"immunizationRecommendation-eu-hdr" -d[hidden]-> "observation-infectious-contact-eu-hdr"
 class "observation-sdoh-eu-hdr" <<Profile>> [[StructureDefinition-observation-sdoh-eu-hdr.html]]
 "PatientHistory" <|. "observation-sdoh-eu-hdr"
 "observation-infectious-contact-eu-hdr" -d[hidden]-> "observation-sdoh-eu-hdr"
@@ -52,4 +52,3 @@ class "Observation" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Observ
 "PatientHistory" <|. "Observation"
 "procedure-eu-hdr" -d[hidden]-> "Observation"
 @enduml
-

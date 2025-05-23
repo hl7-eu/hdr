@@ -28,4 +28,3 @@ class "Dosage" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Dosage]]
 "MedicationSummary" <|. "Dosage"
 "medicationRequest-eu-hdr" -d[hidden]-> "Dosage"
 @enduml
-

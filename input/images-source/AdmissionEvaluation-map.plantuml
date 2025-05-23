@@ -19,4 +19,3 @@ endnote
 class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.html]]
 "AdmissionEvaluation" <|. "composition-eu-hdr"
 @enduml
-

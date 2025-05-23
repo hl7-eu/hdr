@@ -189,45 +189,48 @@ Usage: #example
 * status = #final
 * code = $loinc#883-9 "ABO group [Type] in Blood"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
-* subject = Reference(patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
-* performer = Reference(organization-sophia)
+* performer = Reference(http://example.org/Organization/organization-sophia)
 * valueCodeableConcept = $sct#58460004 "Blood group O"
 
 Instance: lab-swart-4
 InstanceOf: ObservationResultsLaboratoryEu
 Title: "Rh D factor"
 Usage: #inline
+* id = "a7c687cd-27dd-4b42-88c2-5e32418847ae"
 * status = #final
 * code = $loinc#1305-2 "D Ag [Presence] in Blood"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
-* subject = Reference(patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
-* performer = Reference(organization-sophia)
+* performer = Reference(http://example.org/Organization/organization-sophia)
 * valueCodeableConcept = $sct#165747007 "RhD positive"
 
 Instance: lab-swart-5
 InstanceOf: ObservationResultsLaboratoryEu
 Title: "Hemoglobine"
 Usage: #inline
+* id = "5863804b-b0aa-4292-8bc2-13a769ad50d7"
 * status = #final
 * code = $loinc#93846-4 "Hemoglobin [Moles/volume] in Venous blood"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
-* subject = Reference(patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
-* performer = Reference(organization-sophia)
+* performer = Reference(http://example.org/Organization/organization-sophia)
 * valueQuantity = 7.3 $ucum#mmol/L "mmol/L"
 
 Instance: lab-swart-6
 InstanceOf: ObservationResultsLaboratoryEu
 Title: "HIV 1 As [aanwezigheid] in serum of plasma d.m.v. immunoassay"
 Usage: #inline
+* id = "2640f290-85c4-426f-b912-4b5051f4f35a"
 * status = #final
 * code = $loinc#29893-5 "HIV 1 Ab [Presence] in Serum or Plasma by Immunoassay"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
-* subject = Reference(patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
-* performer = Reference(organization-sophia)
+* performer = Reference(http://example.org/Organization/organization-sophia)
 * valueCodeableConcept = $sct#165815009 "HIV not detected"
 
 Instance: composition-swart
@@ -238,9 +241,10 @@ Usage: #example
 * subject = Reference(patient-swart)
 * encounter = Reference(ziekenhuisopname-swart)
 * date = "2025-02-08T10:18:13.947+00:00"
-* author = Reference(organization-sophia)
+* author = Reference(http://example.org/Organization/organization-sophia)
 * title = "Hospital Discharge summary"
 * confidentiality = #N
+// section 0
 * section[sectionAdmissionEvaluation].title = "Admission evaluation"
 * section[sectionAdmissionEvaluation].code = $loinc#67851-6 "Admission evaluation note"
 * section[sectionAdmissionEvaluation].text.status = #generated
@@ -277,7 +281,7 @@ Usage: #example
 * section[sectionAdmissionEvaluation].section[=].entry[+] = Reference(bloeddruk-swart) "70/120 mmHg"
 * section[sectionAdmissionEvaluation].section[=].entry[+] = Reference(levenvoelen-swart) "foetale bewegingen aanwezig"
 
-
+// section 1
 * section[sectionPatientHx].title = "35090-0"
 * section[sectionPatientHx].code = $loinc#35090-0 "Patient History"
 * section[sectionPatientHx].section[+].title = "Social history"
@@ -319,6 +323,8 @@ Usage: #example
    </table>
    </div>"
 * section[sectionPatientHx].section[=].entry[0] = Reference(sectio-swart) "planned primary sectio caesarea"
+
+// section 2
 * section[sectionProblemList].title = "Problem List"
 * section[sectionProblemList].code = $loinc#11450-4 "Problem list - Reported"
 * section[sectionProblemList].text.status = #generated
@@ -337,7 +343,7 @@ Usage: #example
 * section[sectionProblemList].entry[0] = Reference(condition-meerling)
 * section[sectionProblemList].entry[+] = Reference(http://example.org/Condition/condition-growth)
 
-
+// section 3
 * section[sectionHospitalCourse].title = "Hospital Course"
 * section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital Course"
 * section[sectionHospitalCourse].text.status = #generated
@@ -347,7 +353,7 @@ Usage: #example
 </div>
 """
 
-
+// section 4
 * section[sectionSignificantResults].title = "Results"
 * section[sectionSignificantResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
 * section[sectionSignificantResults].text.status = #generated
@@ -374,9 +380,9 @@ Usage: #example
 // * section[=].entry[0] = Reference(lab-swart-1)  "HBsAg"
 // * section[=].entry[+] = Reference(lab-swart-2)  "Toxoplasma IgG"
 * section[sectionSignificantResults].entry[labResult][0] = Reference(lab-swart-3)  "ABO group"
-* section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-4)  "Rh D factor"
-* section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-5)  "hemoglobin"
-* section[sectionSignificantResults].entry[labResult][+] = Reference(http://example.org/Observation/lab-swart-6)  "HIV 1 As"
+* section[sectionSignificantResults].entry[labResult][+] = Reference(urn:uuid:a7c687cd-27dd-4b42-88c2-5e32418847ae)  "Rh D factor"
+* section[sectionSignificantResults].entry[labResult][+] = Reference(urn:uuid:5863804b-b0aa-4292-8bc2-13a769ad50d7)  "hemoglobin"
+* section[sectionSignificantResults].entry[labResult][+] = Reference(urn:uuid:2640f290-85c4-426f-b912-4b5051f4f35a)  "HIV 1 As"
 
 
 * section[sectionDischargeDetails].title = "Discharge details"
@@ -394,15 +400,18 @@ Usage: #example
 * timestamp = "2025-05-11T10:18:14.632+00:00"
 * entry[0].fullUrl = "http://example.org/Composition/composition-swart"
 * entry[=].resource = composition-swart
+//1
 * entry[+].fullUrl = "http://example.org/Condition/condition-growth"
 * entry[=].resource = condition-growth
 * entry[+].fullUrl = "http://example.org/Condition/condition-meerling"
 * entry[=].resource = condition-meerling
+//3
 * entry[+].fullUrl = "http://example.org/Encounter/ziekenhuisopname-swart"
 * entry[=].resource = ziekenhuisopname-swart
 * entry[+].fullUrl = "http://example.org/Observation/alcohol-swart"
 * entry[=].resource = alcohol-swart
 * entry[+].fullUrl = "http://example.org/Observation/bloeddruk-swart"
+//6
 * entry[=].resource = bloeddruk-swart
 * entry[+].fullUrl = "http://example.org/Observation/gewicht-swart"
 * entry[=].resource = gewicht-swart
@@ -412,11 +421,12 @@ Usage: #example
 // * entry[=].resource = lab-swart-2
 * entry[+].fullUrl = "http://example.org/Observation/lab-swart-3"
 * entry[=].resource = lab-swart-3
-* entry[+].fullUrl = "http://example.org/Observation/lab-swart-4"
+//8
+* entry[+].fullUrl = "urn:uuid:a7c687cd-27dd-4b42-88c2-5e32418847ae"
 * entry[=].resource = lab-swart-4
-* entry[+].fullUrl = "http://example.org/Observation/lab-swart-5"
+* entry[+].fullUrl = "urn:uuid:5863804b-b0aa-4292-8bc2-13a769ad50d7"
 * entry[=].resource = lab-swart-5
-* entry[+].fullUrl = "http://example.org/Observation/lab-swart-6"
+* entry[+].fullUrl = "urn:uuid:2640f290-85c4-426f-b912-4b5051f4f35a"
 * entry[=].resource = lab-swart-6
 * entry[+].fullUrl = "http://example.org/Observation/levenvoelen-swart"
 * entry[=].resource = levenvoelen-swart

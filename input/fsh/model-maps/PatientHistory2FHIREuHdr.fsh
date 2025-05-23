@@ -8,13 +8,6 @@ Usage: #definition
 * experimental = true
 * description = """eHN HDR Hospital Stay  Model to this guide Map"""
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistory"
-* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/ImmunizationRecommendation-eu-hdr"
-* group[=].element[+].code = #PatientHistory.medicalHistory.vaccination.nextVaccinationDate
-* group[=].element[=].display = "A.2.6.1.4.8 - Next vaccination date"
-* group[=].element[=].target.code = #ImmunizationRecommendation.recommendation.dateCriterion[nextDose].value
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistory"
 * group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr"
 * group[=].element[+].code = #PatientHistory.medicalHistory
 * group[=].element[=].display = "A.2.6.1 - Medical history"
@@ -232,6 +225,13 @@ Usage: #definition
 * group[=].element[+].code = #PatientHistory.medicalHistory.vaccination.vaccinationDate
 * group[=].element[=].display = "A.2.6.1.4.7 - Date of vaccination"
 * group[=].element[=].target.code = #Immunization.occurenceDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistory"
+* group[=].target = "http://hl7.eu/fhir/hdr/StructureDefinition/immunizationRecommendation-eu-hdr"
+* group[=].element[+].code = #PatientHistory.medicalHistory.vaccination.nextVaccinationDate
+* group[=].element[=].display = "A.2.6.1.4.8 - Next vaccination date"
+* group[=].element[=].target.code = #ImmunizationRecommendation.recommendation.dateCriterion[nextDose].value
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "http://hl7.eu/fhir/hdr/StructureDefinition/PatientHistory"

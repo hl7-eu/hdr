@@ -25,4 +25,3 @@ class "vitalsigns" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/vitalsi
 "ObjectiveFindings" <|. "vitalsigns"
 "Observation" -d[hidden]-> "vitalsigns"
 @enduml
-
