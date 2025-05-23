@@ -22,4 +22,3 @@ class "composition-eu-hdr" <<Profile>> [[StructureDefinition-composition-eu-hdr.
 "HospitalDischargeReport" <|. "composition-eu-hdr"
 "bundle-eu-hdr" -d[hidden]-> "composition-eu-hdr"
 @enduml
-

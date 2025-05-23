@@ -189,9 +189,9 @@ Usage: #example
 * status = #final
 * code = $loinc#883-9 "ABO group [Type] in Blood"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
-* subject = Reference(patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
-* performer = Reference(organization-sophia)
+* performer = Reference(http://example.org/Organization/organization-sophia)
 * valueCodeableConcept = $sct#58460004 "Blood group O"
 
 Instance: lab-swart-4
@@ -202,9 +202,9 @@ Usage: #inline
 * status = #final
 * code = $loinc#1305-2 "D Ag [Presence] in Blood"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
-* subject = Reference(patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
-* performer = Reference(organization-sophia)
+* performer = Reference(http://example.org/Organization/organization-sophia)
 * valueCodeableConcept = $sct#165747007 "RhD positive"
 
 Instance: lab-swart-5
@@ -215,9 +215,9 @@ Usage: #inline
 * status = #final
 * code = $loinc#93846-4 "Hemoglobin [Moles/volume] in Venous blood"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
-* subject = Reference(patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
-* performer = Reference(organization-sophia)
+* performer = Reference(http://example.org/Organization/organization-sophia)
 * valueQuantity = 7.3 $ucum#mmol/L "mmol/L"
 
 Instance: lab-swart-6
@@ -228,9 +228,9 @@ Usage: #inline
 * status = #final
 * code = $loinc#29893-5 "HIV 1 Ab [Presence] in Serum or Plasma by Immunoassay"
 * category[laboratory] = $observation-category#laboratory "Laboratory"
-* subject = Reference(patient-swart) "Fiona F XXX_Swart"
+* subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
-* performer = Reference(organization-sophia)
+* performer = Reference(http://example.org/Organization/organization-sophia)
 * valueCodeableConcept = $sct#165815009 "HIV not detected"
 
 Instance: composition-swart
@@ -241,7 +241,7 @@ Usage: #example
 * subject = Reference(patient-swart)
 * encounter = Reference(ziekenhuisopname-swart)
 * date = "2025-02-08T10:18:13.947+00:00"
-* author = Reference(organization-sophia)
+* author = Reference(http://example.org/Organization/organization-sophia)
 * title = "Hospital Discharge summary"
 * confidentiality = #N
 // section 0
@@ -400,15 +400,18 @@ Usage: #example
 * timestamp = "2025-05-11T10:18:14.632+00:00"
 * entry[0].fullUrl = "http://example.org/Composition/composition-swart"
 * entry[=].resource = composition-swart
+//1
 * entry[+].fullUrl = "http://example.org/Condition/condition-growth"
 * entry[=].resource = condition-growth
 * entry[+].fullUrl = "http://example.org/Condition/condition-meerling"
 * entry[=].resource = condition-meerling
+//3
 * entry[+].fullUrl = "http://example.org/Encounter/ziekenhuisopname-swart"
 * entry[=].resource = ziekenhuisopname-swart
 * entry[+].fullUrl = "http://example.org/Observation/alcohol-swart"
 * entry[=].resource = alcohol-swart
 * entry[+].fullUrl = "http://example.org/Observation/bloeddruk-swart"
+//6
 * entry[=].resource = bloeddruk-swart
 * entry[+].fullUrl = "http://example.org/Observation/gewicht-swart"
 * entry[=].resource = gewicht-swart
@@ -418,6 +421,7 @@ Usage: #example
 // * entry[=].resource = lab-swart-2
 * entry[+].fullUrl = "http://example.org/Observation/lab-swart-3"
 * entry[=].resource = lab-swart-3
+//8
 * entry[+].fullUrl = "urn:uuid:a7c687cd-27dd-4b42-88c2-5e32418847ae"
 * entry[=].resource = lab-swart-4
 * entry[+].fullUrl = "urn:uuid:5863804b-b0aa-4292-8bc2-13a769ad50d7"

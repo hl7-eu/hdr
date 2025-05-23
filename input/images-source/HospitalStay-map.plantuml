@@ -39,7 +39,7 @@ class "medicationRequest-eu-hdr" <<Profile>> [[StructureDefinition-medicationReq
 class "procedure-eu-hdr" <<Profile>> [[StructureDefinition-procedure-eu-hdr.html]]
 "HospitalStay" <|. "procedure-eu-hdr"
 "medicationRequest-eu-hdr" -d[hidden]-> "procedure-eu-hdr"
-class "Observation-resultslab-eu-lab" <<Profile>> [[https://hl7.eu/fhir/laboratory/https://hl7.eu/fhir/laboratory/StructureDefinition-Observation-resultslab-eu-lab.html]]
+class "Observation-resultslab-eu-lab" <<Profile>> [[https://hl7.eu/fhir/laboratory/StructureDefinition-Observation-resultslab-eu-lab.html]]
 "HospitalStay" <|. "Observation-resultslab-eu-lab"
 "procedure-eu-hdr" -d[hidden]-> "Observation-resultslab-eu-lab"
 class "Dosage" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Dosage]]
@@ -52,4 +52,3 @@ class "MedicationStatement" <<Profile>> [[http://hl7.org/fhir/StructureDefinitio
 "HospitalStay" <|. "MedicationStatement"
 "MedicationAdministration" -d[hidden]-> "MedicationStatement"
 @enduml
-

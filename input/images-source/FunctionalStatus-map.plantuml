@@ -25,4 +25,3 @@ class "Condition" <<Profile>> [[http://hl7.org/fhir/StructureDefinition/Conditio
 "FunctionalStatus" <|. "Condition"
 "ClinicalImpression" -d[hidden]-> "Condition"
 @enduml
-
