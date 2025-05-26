@@ -239,7 +239,7 @@ Usage: #inline
 
 Instance: paracetamol
 InstanceOf: MedicationAdministrationEuHdr
-Title: "Medication Administration: Paracetamol"
+Title: "MedicationAdministration: Paracetamol"
 Description: "A sample MedicationAdministration resource for Paracetamol."
 Usage: #example
 * id = "1bcfb26f-6958-4604-a40b-712170c1e536"
