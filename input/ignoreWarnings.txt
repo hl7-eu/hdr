@@ -65,6 +65,10 @@ WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefini
 # Warnings related to the obligation extension
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
+# known non-matching slices
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-eu-hdr|0.1.0-ballot%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr|0.1.0-ballot%
+
 
 # See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Issue.20using.20version-specific.20packages
 The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
@@ -170,3 +174,6 @@ This element does not match any known slice defined in the profile http://hl7.eu
 
 # Not expanded value set
 Unable to expand included value set 'http://terminology.ehdsi.eu/ValueSet/eHDSISubstance': Unable to expand imported value set: Error from https://tx.fhir.org/r4: Unable to provide support for code system https://spor.ema.europa.eu/v2/SubstanceDefinition (and Error from https://tx.fhir.org/r4: Unable to provide support for code system https://spor.ema.europa.eu/v2/SubstanceDefinition)
+
+# experimental CodeSystem temporarly used, waiting for LOINC codes assignement
+Reference to experimental CodeSystem http://hl7.eu/fhir/hdr/CodeSystem/temporarySystem-hdr-eu|0.1.0-ballot
