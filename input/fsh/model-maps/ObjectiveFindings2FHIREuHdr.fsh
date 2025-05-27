@@ -14,7 +14,6 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Check if this is part of the Vital Signs or not"
 * group[=].element[+].code = #ObjectiveFindings.vitalSigns
 * group[=].element[=].display = "A.2.8.1.4 - Vital signs"
 * group[=].element[=].target.code = #Composition.section:sectionVitalSigns
@@ -44,34 +43,28 @@ Usage: #definition
 * group[=].element[=].target.code = #Observation.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[=].target.comment = "check if a more specialized profile is needed"
 * group[=].element[+].code = #ObjectiveFindings.anthropometricObservations.details
 * group[=].element[=].display = "A.2.8.1.3.2 - Observation details"
 * group[=].element[=].target.code = #Observation
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "check if a more specialized profile is needed"
 * group[=].element[+].code = #ObjectiveFindings.anthropometricObservations.result
 * group[=].element[=].display = "A.2.8.1.3.3 - Observation result"
 * group[=].element[=].target.code = #Observation.value[x]
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "check if a more specialized profile is needed"
 * group[=].element[+].code = #ObjectiveFindings.vitalSigns.description
 * group[=].element[=].display = "A.2.8.1.4.1 - Result description"
 * group[=].element[=].target.code = #Observation.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "check if a more specialized profile is needed"
 * group[=].element[+].code = #ObjectiveFindings.vitalSigns.details
 * group[=].element[=].display = "A.2.8.1.4.2 - Observation details"
 * group[=].element[=].target.code = #Observation
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "check if a more specialized profile is needed"
 * group[=].element[+].code = #ObjectiveFindings.vitalSigns.result
 * group[=].element[=].display = "A.2.8.1.4.3 - Observation result"
 * group[=].element[=].target.code = #Observation.value[x]
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "check if a more specialized profile is needed"
