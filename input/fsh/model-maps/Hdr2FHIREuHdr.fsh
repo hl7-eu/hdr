@@ -74,31 +74,29 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:sectionDischargeDetails
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "If not structured in sections (TBC)"
+* group[=].element[=].target.comment = "If not structured in sections"
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.objectiveFindings
 * group[=].element[=].display = "A.2.7.1 - Objective findings"
 * group[=].element[=].target.code = #Composition.section:sectionDischargeFindings
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "TBC"
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.functionalStatus
 * group[=].element[=].display = "A.2.7.2 - Functional status"
 * group[=].element[=].target.code = #Composition.section:sectionDischargeDetails
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "If not structured in sections (TBC)"
+* group[=].element[=].target.comment = "If not structured in sections"
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.functionalStatus
 * group[=].element[=].display = "A.2.7.2 - Functional status"
 * group[=].element[=].target.code = #Composition.section:sectionFunctionalStatus
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Is the same section of the Admission Evaluation ? TBC"
 * group[=].element[+].code = #HospitalDischargeReport.body.dischargeDetails.dischargeNote
 * group[=].element[=].display = "A.2.7.3 - Discharge note"
 * group[=].element[=].target.code = #Composition.section:sectionDischargeDetails.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "TBC"
+* group[=].element[=].target.comment = "If not structured in sections"
 * group[=].element[+].code = #HospitalDischargeReport.body.recommendations
 * group[=].element[=].display = "A.2.8 - Care plan and other recommendations after discharge."
 * group[=].element[=].target.code = #Composition.section
