@@ -159,13 +159,11 @@ Found multiple matching profiles for urn:uuid:fd7f7580-5788-45dd-88ec-dca615d69c
 
 
 # Non mathcing slices
-INFORMATION: Bundle/HDR-Paolo-Marcheschi-Example: Bundle.entry[0].resource.section[1]: This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr|0.0.1-ci (this may not be a problem, but you should check that it's not intended to match a slice)
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr%
 
-INFORMATION: Medication/01A-Cefuroxime1500GenericExplicit: Medication.ingredient[0].item.ofType(CodeableConcept): This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medication-eu-hdr|0.0.1-ci (this may not be a problem, but you should check that it's not intended to match a slice)
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medication-eu-hdr%
 
-INFORMATION: Medication/01C-Cefuroxime1500Branded: Medication.ingredient[0].item.ofType(CodeableConcept): This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medication-eu-hdr|0.0.1-ci (this may not be a problem, but you should check that it's not intended to match a slice)
-
-INFORMATION: MedicationRequest/400C-prescription-cefuroxime-singleline: MedicationRequest.dosageInstruction[1].doseAndRate[0].dose.ofType(Range): This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-eu-hdr|0.0.1-ci (this may not be a problem, but you should check that it's not intended to match a slice)
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-eu-hdr%
 
 # used local extensions not speciifed in the profile
 This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/HumanName-eu|0.1.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -176,3 +174,20 @@ Unable to expand included value set 'http://terminology.ehdsi.eu/ValueSet/eHDSIS
 
 # experimental CodeSystem temporarly used, waiting for LOINC codes assignement
 Reference to experimental CodeSystem http://hl7.eu/fhir/hdr/CodeSystem/temporarySystem-hdr-eu|0.1.0-ballot
+
+# known non-matching slices
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medication-eu-hdr%
+
+# not known systems
+Unable to check whether the code is in the value set 'http://fhir.ehdsi.eu/hdr/ValueSet/eHDSISubstanceWithExceptions|0.1.0-preview' because the code system https://spor.ema.europa.eu/v2/SubstanceDefinition| was not found
+
+# not known identification systems
+No definition could be found for URL value 'https://hl7europe.org/example-identifier'
+
+No definition could be found for URL value 'urn:ietf:rfc:4122'
+No definition could be found for URL value 'urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6'
+No definition could be found for URL value 'http://fhir.nl/fhir/NamingSystem/agb-z'
+No definition could be found for URL value 'http://fhir.nl/fhir/NamingSystem/bsn'
+No definition could be found for URL value 'urn:oid:2.16.840.1.113883.2.4.6.7'
+No definition could be found for URL value 'http://hl7europe.org/policy-rules'
+No definition could be found for URL value 'http://hl7europe.org/examples/pms'
