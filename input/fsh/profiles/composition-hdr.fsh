@@ -584,11 +584,6 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // --- Functional status assessment see above
 
 
-
-
-
-
-
 // -------------------------------------
 * section contains sectionAdvanceDirectives ..1
 * section[sectionAdvanceDirectives]
