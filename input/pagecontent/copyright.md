@@ -1,4 +1,4 @@
 
 ### IP statements
 
-{% include ip-statements.xhtml %}
+{% lang-fragment  ip-statements.xhtml %}
