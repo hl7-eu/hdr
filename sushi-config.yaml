@@ -5,10 +5,10 @@ name:  Hl7EuHospitalDischargeReportIg
 title: HL7 Europe Hospital Discharge Report
 description: This implementation guide specifies the Hospital Discharge Report in the European context, as defined in eHN Hospital Discharge Report guidelines.
 status: draft # draft | active | retired | unknown
-version: 0.1.0-ballot #
+version: 0.1.0-ci-build #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
-releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
@@ -25,11 +25,12 @@ copyright: >-
 #
 dependencies:
   # hl7.fhir.uv.ips: current
-  hl7.fhir.uv.ips: 1.1.0
-  hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.eu.extensions.r4: 0.1.1-ballot
+  hl7.fhir.uv.ips: 2.0.0
+  hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2
+  hl7.fhir.eu.extensions.r4: 1.2.0
+   # hl7.fhir.eu.laboratory to be removed
   hl7.fhir.eu.laboratory: 0.1.1
-  hl7.fhir.eu.base: 0.1.0-ballot
+  hl7.fhir.eu.base: current
   ihe.pharm.mpd.r4: 1.0.0-comment-2
 #   hl7.fhir.us.mcode:
 #     id: mcode
