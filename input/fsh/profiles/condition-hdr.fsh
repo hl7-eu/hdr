@@ -8,7 +8,7 @@ Description: """This profile represents the constraint applied to the Condition 
 
 // follow the same apporach of lab for collection or add laterality to the bodySite ?
 * extension contains $bodySite-reference named bodySite 0..1
-* extension[bodySite].valueReference only Reference(BodyStructureEu)
+* extension[bodySite].valueReference only Reference(BodyStructureEuCore)
 
 * category only CodeableConceptIPS
 * category

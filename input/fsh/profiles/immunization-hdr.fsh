@@ -56,7 +56,7 @@ Description: """This profile constrains the Immunization resource for the purpos
 
 * patient only Reference(PatientEuCore)
 * occurrence[x] only dateTime
-* location only Reference(LocationEu)
+* location only Reference(LocationEuCore)
 * manufacturer ^short = "Vaccine manufacturer/MAH"
 * lotNumber ^short = "Batch/lot number"
 

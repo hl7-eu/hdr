@@ -74,11 +74,11 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 * hospitalization
   * admitSource ^short = "From where patient was admitted (physician referral, transfer)."
   * dischargeDisposition ^short = "Category or kind of location after discharge"
-  * destination only Reference (OrganizationEuCore or LocationEu)
+  * destination only Reference (OrganizationEuCore or LocationEuCore)
   // add voc binding
 
 * location ^short = "Locations where the patient stayed"
-  * location only Reference ( LocationEu )
+  * location only Reference ( LocationEuCore )
   * period ^short = "Location period"
 
 * serviceProvider only Reference ( OrganizationEuCore )

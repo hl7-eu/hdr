@@ -9,14 +9,14 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * extension contains $event-basedOn named basedOn 0..*
 * extension[basedOn].valueReference only Reference ( Resource or ServiceRequest ) /// add profile
 
-* extension contains DocumentPresentedForm named presentedForm 0..*
+/* * extension contains DocumentPresentedForm named presentedForm 0..*
 * extension[presentedForm] ^short = "Presented form"
 * extension[presentedForm].valueAttachment
   * contentType
     * ^example[0].label = "pdf"
     * ^example[0].valueCode  = $mime#application/pdf
   * data ^short = "B64 in-line data"
-  * url ^short = "URL of the document"
+  * url ^short = "URL of the document" */
 
 * extension contains $composition.version-r5 named compositionVersionR5 0..
 * extension[compositionVersionR5].valueString ^short = "Business version"
