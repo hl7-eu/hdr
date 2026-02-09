@@ -43,7 +43,7 @@ Description: "A high-priority allergy alert referencing the specific AllergyInto
 
 
 Instance: penicillin-allergy
-InstanceOf: AllergyIntoleranceEuHdr
+InstanceOf: AllergyIntoleranceEuCore
 Title: "AllergyIntolerance: Critical Allergy to Penicillin"
 Description: "A high-priority allergy to Penicillin, with a specific reaction and severity."
 

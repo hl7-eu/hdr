@@ -1,6 +1,6 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  ImmunizationEuHdrObligation
-Parent:   ImmunizationEuHdr
+Parent:   ImmunizationEuCore
 Id:       immunization-obl-eu-hdr
 Title:    "Immunization: obligations"
 Description: """This profile defines obligations for the Immunization resource for the purpose of this guide."""
@@ -30,9 +30,9 @@ Description: """This profile defines obligations for the Immunization resource f
 * protocolApplied.doseNumberPositiveInt 
 * protocolApplied.seriesDosesPositiveInt 
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/* //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  ImmunizationRecommendationEuHdrObligation
-Parent:   ImmunizationRecommendationEuHdr
+Parent:   ImmunizationRecommendation
 Id:       immunizationRecommendation-obl-eu-hdr
 Title:    "ImmunizationRecommendation: obligations"
 Description: """This profile defines how to represent Immunization Recommandations for the purpose of this guide."""
@@ -48,4 +48,4 @@ Description: """This profile defines how to represent Immunization Recommandatio
 * recommendation.doseNumberPositiveInt insert ObligationSet3
 * recommendation.seriesDosesPositiveInt insert ObligationSet3
 
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

@@ -101,7 +101,7 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 
 * section[sectionPatientHx] insert ObligationSet2
 
-* section[sectionProblemList] insert ObligationSet3
+* section[sectionProblems] insert ObligationSet3
   * entry 0..
 
 

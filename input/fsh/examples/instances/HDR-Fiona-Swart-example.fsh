@@ -288,8 +288,8 @@ Usage: #inline
 * section[sectionAdmissionEvaluation].section[=].entry[+] = Reference(levenvoelen-swart) "foetale bewegingen aanwezig"
 
 // section 1
-* section[sectionPatientHx].title = "35090-0"
-* section[sectionPatientHx].code = $loinc#35090-0 "Patient History"
+* section[sectionPatientHx].title = "Patient History"
+* section[sectionPatientHx].code = $loinc#11329-0 "Patient History"
 * section[sectionPatientHx].section[+].title = "Social history"
 * section[sectionPatientHx].section[=].code = $loinc#29762-2 "Social history Narrative"
 * section[sectionPatientHx].section[=].text.status = #generated
@@ -331,10 +331,10 @@ Usage: #inline
 * section[sectionPatientHx].section[=].entry[0] = Reference(sectio-swart) "planned primary sectio caesarea"
 
 // section 2
-* section[sectionProblemList].title = "Problem List"
-* section[sectionProblemList].code = $loinc#11450-4 "Problem list - Reported"
-* section[sectionProblemList].text.status = #generated
-* section[sectionProblemList].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+* section[sectionProblems].title = "Problem List"
+* section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
+* section[sectionProblems].text.status = #generated
+* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
    <table>
       <tr>
          <td>Monochorionic diamniotic twin pregnancy</td>
@@ -346,8 +346,8 @@ Usage: #inline
       </tr>
    </table>
 </div>"
-* section[sectionProblemList].entry[0] = Reference(condition-meerling)
-* section[sectionProblemList].entry[+] = Reference(http://example.org/Condition/condition-growth)
+* section[sectionProblems].entry[0] = Reference(condition-meerling)
+* section[sectionProblems].entry[+] = Reference(http://example.org/Condition/condition-growth)
 
 // section 3
 * section[sectionHospitalCourse].title = "Hospital Course"

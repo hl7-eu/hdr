@@ -375,8 +375,8 @@ groups:
         - StructureDefinition/encounter-obl-eu-hdr
   #      - StructureDefinition/familyMemberHistory-obl-eu-hdr
         - StructureDefinition/flag-obl-eu-hdr
-        - StructureDefinition/immunization-obl-eu-hdr
-        - StructureDefinition/immunizationRecommendation-obl-eu-hdr
+  #      - StructureDefinition/immunization-obl-eu-hdr
+  #      - StructureDefinition/immunizationRecommendation-obl-eu-hdr
         - StructureDefinition/medication-obl-eu-hdr
         - StructureDefinition/medicationAdministration-obl-eu-hdr
         - StructureDefinition/medicationDispense-obl-eu-hdr

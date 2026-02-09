@@ -60,7 +60,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
         The root of the sections that make up the Hospital Discharge Report composition.)
 
 // -------------------------------------
-// Admission Evaluation Section 0 â€¦ 1 R
+// Admission Evaluation Section 0 .. 1 R
 // -------------------------------------
 
 * section contains sectionAdmissionEvaluation ..1
@@ -100,7 +100,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 
 // -------------------------------------
-// Physical findings  Section 0 â€¦ 1
+// Physical findings  Section 0 .. 1
 // -------------------------------------
 
 * section contains sectionPhysicalFindings ..1
@@ -111,7 +111,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
       $loinc#29545-1)   // "Physical findings Narrative"
 
 // -------------------------------------
-// Functional status assessment  Section 0 â€¦ 1
+// Functional status assessment  Section 0 .. 1
 // -------------------------------------
 
 * section contains sectionFunctionalStatus 0..1
@@ -165,7 +165,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 
 // -------------------------------------
-// Medical Devices Section 0 â€¦ 1
+// Medical Devices Section 0 .. 1
 // -------------------------------------
 // LOINC CODE TO BE CHANGED !
 
@@ -178,11 +178,13 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     // $loinc#46264-8) // History of medical device use
     // $sct#1184586001) //"Medical device document section (record artifact\)
   * entry 0..
-  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore ) // DeviceUseStatementEuHdr also ?
+  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore ) // DeviceUseStatementEuHdr ro be revised
   * section ..0
 
 
 // -------------------------------------
+// TO BE REVISED
+// ---------------------
 * section contains sectionPharmacotherapy 0..1
 * section[sectionPharmacotherapy]
   * insert SectionComRules (
@@ -226,7 +228,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
  
 
 // -------------------------------------
-// === SHould we add a plan of care container section ?
+// === revview the CarePlan profile
 // -------------------------------------
 
 
@@ -239,11 +241,11 @@ $loinc#87232-5 ) // 	Medication administration.brief
     Plan of Care Section,
     The plan of care section contains a narrative description of the expectations for care including proposals\, goals\, and order requests for monitoring\, tracking\, or improving the condition of the patient.,
     $loinc#18776-5 )   // Plan of care note
-  * entry only Reference( CarePlanEuHdr or DocumentReference) // Check profiles
+  * entry only Reference( CarePlanEuHdr or DocumentReference) // Check if CarePlanEuHdr is needed or if we should align with EPS
 
 
   // -------------------------------------
-// Discharge instructions Section 0 â€¦ 1
+// Discharge instructions Section 0 .. 1
 // -------------------------------------
 
 * section contains sectionDischargeInstructions ..1
@@ -255,7 +257,8 @@ $loinc#87232-5 ) // 	Medication administration.brief
     $loinc#8653-8 )   //  Hospital Discharge instructions
 
 // -------------------------------------
-// Discharge Medications Section 0 â€¦ 1
+// Discharge Medications Section 0 .. 1
+// mapped from medicationSummary ?
 // -------------------------------------
 * section contains sectionDischargeMedications ..1
 
@@ -272,24 +275,23 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
 // -------------------------------------
-// Allergies and Intolerances Section 0 â€¦ 1
+// Allergies and Intolerances Section 0 .. 1
 // -------------------------------------
 
 * section contains sectionAllergies ..1
-
 * section[sectionAllergies]
-  * insert SectionComRules (
-      Allergies and Intolerances Section,
-      This section documents the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\nIf no information about allergies is available\, or if no allergies are known this should be clearly documented in the section.,
-      $loinc#48765-2 )   // Allergies and adverse reactions Document
-  * entry 0..
-  * entry only Reference(AllergyIntoleranceEuHdr or DocumentReference )
-  * insert SectionEntrySliceComRules(Relevant allergies or intolerances (conditions\) for that patient.,
-    It lists the relevant allergies or intolerances (conditions\) for that patient\, describing the kind of reaction (e.g. rash\, anaphylaxis\,..\); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.\r\nAt a minimum\, it should list currently active and any relevant historical allergies and adverse reactions.\r\n This entry shall be used to document that no information about allergies is available\, or that no allergies are known .)
-  // entry slices
-  * insert SectionEntrySliceDefRules (allergyIntolerance, 0.. , Allergy entry,
-    Allergy entry, AllergyIntoleranceEuHdr)
+  * insert SectionComRules ( 
+     	Allergies and Intolerances Section, 
+      This section documents the relevant allergies or intolerances for that patient\, describing the kind of reaction - e.g. rash\, anaphylaxis\,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum\, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available\, or if no allergies are known this should be clearly documented in the section., 
+      http://loinc.org#48765-2)
 
+  * entry only Reference(AllergyIntolerance or DocumentReference)  
+  * insert SectionEntrySliceComRules(allergyOrIntolerance, allergyOrIntolerance)
+  // entry slices
+  * insert SectionEntrySliceDefRules (allergyOrIntolerance, 0.. , 
+  Relevant allergies or intolerances for that patient.,
+  It lists the relevant allergies or intolerances for that patient\, describing the kind of reaction - e.g. rash\, anaphylaxis\,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum\, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available\, or if no allergies are known this should be clearly documented in the section., 
+  AllergyIntoleranceEuCore)
 
 
 // -------------------------------------
@@ -300,138 +302,79 @@ $loinc#87232-5 ) // 	Medication administration.brief
 * section[sectionAlert]
   * insert SectionComRules (
     Alert Section, // SHORT
-    A warning\, other than included in allergies.
-    The warning can be entered in code there are codes for frequently used alerts but seeing the dynamic nature of the warnings\, these alerts will often be entered as free text.
-    Any clinical information that is imperative to know so that the life or health of the patient does not come under threat. 
-    Example 1: the patient has a rare disease that requires special treatment 
-    Example 2: Airway Alert / Difficult Intubation
-    Example 3: Diagnoses such as malignant hyperthermia\, porphyria\, and bleeding disorders; special treatments like anticoagulants or immunosuppressants; implanted devices. 
-    Example 4: transplanted organs illustrate other information that has to be taken into account in a healthcare contact. 
-    Example 5: participation in a clinical trial that has to be taken into account in a healthcare contact. , // DESC
+    Information about substantial alerts or warnings (including allergies\) that health professionals should be aware of., 
       http://loinc.org#104605-1 )   // CODE
-  * entry 0..
-  * insert SectionEntrySliceComRules(Alerts, Alerts)
+
+  * entry only Reference(Flag or DocumentReference)
+  * insert SectionEntrySliceComRules(EPS Alerts entry, EPS Alerts entry slice)
   // entry slices
-  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , Flag)
-/*   * insert SectionEntrySliceDefRules (detectedIssue, 0.. ,  Detected Issue,
-    Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction\, Ineffective treatment frequency\, Procedure-condition conflict\, etc. ,
-    DetectedIssue)
-  * insert SectionEntrySliceDefRules (riskAssessment, 0.. , Risk Assessment,
-    An assessment of the likely outcomes for a patient or other subject as well as the likelihood of each outcome. ,
-    RiskAssessment) */
+  * insert SectionEntrySliceDefRules (flag, 0.. , 
+  Alert information , 
+  Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
+  FlagPatientEuCore)
 
-
-
-// -------------------------------------
-// Health Insurance (Coverage) and payment section
-// Payers for alignment with C-CDA
-// -------------------------------------
 
 // -------------------------------------
 
 // -------------------------------------
-// Patient History Section 0 â€¦ 1 R
-// ToDo: Review
+// Patient History Section 0 .. 1 R
 // -------------------------------------
 
+// This is a purely narrative section
 * section contains sectionPatientHx ..1
 * section[sectionPatientHx]
-  * insert SectionComRules (
-    Patient history Section,
-    This Section describes all aspects of the medical history of the patient even if not pertinent to the current procedure\, and may include chief complaint\, past medical history\, social history\, family history\, surgical or procedure history\, medication history\, and other history information. The history may be limited to information pertinent to the current procedure or may be more comprehensive. The history may be reported as a collection of random clinical statements or it may be reported categorically. Categorical report formats may be divided into multiple subsections including Past Medical History\, Social History.,
-    $loinc#35090-0 ) // Patient history
+  * insert SectionComRules ( 
+    Patient History Section,
+    This section may provide both synthetic anamnesis \,e.g. description of phases of the pathology as a chronological summary of clustered clinical information\, and anecdotal evidence that clinicians can collect from the patient\, and can read in a narrative form.,
+    http://loinc.org#11329-0 )
 
 
 
 // -------------------------------------
-// Problem List Section 0 â€¦ 1
+// Problem List Section 0 .. 1
 // covers the active part of the History of Past Illness heading
 // -------------------------------------
 
-
-* section contains sectionProblemList ..1
-* section[sectionProblemList]
-  * insert SectionComRules (
-    Problem List Section,
-    The IPS derived problem section lists and describes clinical problems or conditions currently being monitored for the patient.,
-    $loinc#11450-4 ) // 11450-4 Problem list - Reported
-  * entry 0..
-  * entry only Reference(ConditionEuCore)  // do we need another profile ?
-    * ^short = "Conditions the patient suffered in the past."
-    * ^definition = "It contains a description of the conditions the patient suffered in the past."
-
-
-// -------------------------------------
-// History of Past Illness Section 0 â€¦ 1
-// -------------------------------------
-
+* section contains sectionProblems ..1
+* section[sectionProblems]
+  * insert SectionComRules ( 
+      Problem List Section, 
+      The Problem List Section lists and describes clinical problems or conditions currently being monitored for the patient., 
+      http://loinc.org#11450-4)
+  
+  * entry only Reference(Condition or DocumentReference)
+  * insert SectionEntrySliceComRules(Clinical problems or conditions currently being monitored for the patient., It lists and describes clinical problems or conditions currently being monitored for the patient. This entry shall be used to document that no information about problems is available\, or that no relevant problems are known.)
+  // entry slices
+  * insert SectionEntrySliceDefRules (problem, 0.. ,
+      Clinical problems or conditions currently being monitored for the patient. ,
+      It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available\, or that no relevant problems are known. ,
+      ConditionEuCore)
 
 // -------------------------------------
-// * section contains sectionMedicalDevices 0..1 
+// Immunizations Section 0 .. 1
 // -------------------------------------
-
-
-// -------------------------------------
-
-// -------------------------------------
-// History of Procedures Section 0 â€¦ 1
-// -------------------------------------
-
-// -------------------------------------
-// Immunizations Section 0 â€¦ 1
-// -------------------------------------
-
 
 * section contains sectionImmunizations ..1
-
 * section[sectionImmunizations]
+
   * insert SectionComRules (
-    Immunizations Section,
-      The Immunizations Section defines a patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nThe section includes current immunization status\, and may contain the entire immunization history that is relevant to the period of time being summarized.
-      , $loinc#11369-6 ) // "History of Immunization Narrative"
-  * entry 0..
-  * entry only Reference(ImmunizationEuHdr  or ImmunizationRecommendationEuHdr
-                          or DocumentReference  )
+    Immunizations Section, 
+  The Immunizations Section defines a patient's current immunization status and pertinent immunization history. The primary use case for the Immunization Section is to enable communication of a patient's immunization status. The section includes the current immunization status\, and may contain the entire immunization history that is relevant to the period of time being summarized.,
+  http://loinc.org#11369-6)
+
+  * entry only Reference(Immunization or DocumentReference)
+ 
+  * insert SectionEntrySliceComRules(Patient's immunization status and pertinent history., It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known.)
+
+  * insert SectionEntrySliceDefRules (immunization,  0.. , 
+    Patient's immunization status and pertinent history.,
+    It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. , 
+    ImmunizationEuCore) 
   
-  /*
-  * insert SectionEntrySliceComRules ( Patient's immunization status and pertinent history.
-    , It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\n It may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. )
- // entry slices
-  * insert SectionEntrySliceDefRules (immunization, 0.. , Immunization entry ,
-    Immunization entry  , ImmunizationEuHdr) */
-
-// -------------------------------------
-// Epidemiological history realized with these two sections
-// should we merge them in a singol one ?
-// -------------------------------------
 
 
 // -------------------------------------
-// Family History Section 0 â€¦ 1
-// -------------------------------------
-
-// -------------------------------------
-// Social History Section
-// -------------------------------------
-
-// -------------------------------------
-// Use of substances Section
-// -------------------------------------
-
-// -------------------------------------
-// Alcohol use Section
-// -------------------------------------
-
-// -------------------------------------
-// Tobacco use Section
-// -------------------------------------
-
-// -------------------------------------
-// Drug use Section
-// -------------------------------------
-
-// -------------------------------------
-// Discharge Details Section 1 â€¦ 1 R
+// Discharge Details Section 1 .. 1 R
 // -------------------------------------
 * section contains sectionDischargeDetails 0..1
 * section[sectionDischargeDetails]
@@ -446,7 +389,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
 // -------------------------------------
-// Hospital discharge physical findings Section 0 â€¦ 1
+// Hospital discharge physical findings Section 0 .. 1
 // -------------------------------------
 /* 
 * section contains sectionDischargeFindings 0..1
@@ -464,7 +407,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // -------------------------------------
 
 // -------------------------------------
-// Care Team 0 â€¦ 1
+// Care Team 0 .. 1
 // -------------------------------------
 
 // -------------------------------------------------------------
@@ -498,7 +441,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 /*
 // -------------------------------------
-// Admission Medications Section 0 â€¦ 1 R
+// Admission Medications Section 0 .. 1 R
 // -------------------------------------
 * section contains sectionAdmissionMedications ..1
 
@@ -539,7 +482,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 /* Admission reason is part of the encounter
 // -------------------------------------
-// Chief Complaint and Reason for Visit Section 0 â€¦ 1
+// Chief Complaint and Reason for Visit Section 0 .. 1
 // -------------------------------------
 * section contains CCandReasonforVisitSection ..1
 * section[CCandReasonforVisitSection]
