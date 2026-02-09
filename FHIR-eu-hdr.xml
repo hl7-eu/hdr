@@ -42,9 +42,9 @@
 <artifact id="ValueSet/condition-eu-hdr" key="ValueSet-condition-eu-hdr" name="Condition Value Set"/>
 <artifact id="Condition/a5bf69e4-24db-48a8-9eda-71516dcaf1d9" key="Condition-a5bf69e4-24db-48a8-9eda-71516dcaf1d9" name="Condition: Type 2 Diabetes Mellitus"/>
 <artifact id="StructureDefinition/condition-obl-eu-hdr" key="StructureDefinition-condition-obl-eu-hdr" name="Condition: obligations"/>
-<artifact id="StructureDefinition/consent-eu-hdr" key="StructureDefinition-consent-eu-hdr" name="Consent (Advance Directives HDR)"/>
-<artifact id="Consent/example-consent-dnr" key="Consent-example-consent-dnr" name="Consent: Advance Directive DNR"/>
-<artifact id="StructureDefinition/consent-obl-eu-hdr" key="StructureDefinition-consent-obl-eu-hdr" name="Consent: obligations"/>
+<artifact deprecated="true" id="StructureDefinition/consent-eu-hdr" key="StructureDefinition-consent-eu-hdr" name="Consent (Advance Directives HDR)"/>
+<artifact deprecated="true" id="Consent/example-consent-dnr" key="Consent-example-consent-dnr" name="Consent: Advance Directive DNR"/>
+<artifact deprecated="true" id="StructureDefinition/consent-obl-eu-hdr" key="StructureDefinition-consent-obl-eu-hdr" name="Consent: obligations"/>
 <artifact id="StructureDefinition/device-eu-hdr" key="StructureDefinition-device-eu-hdr" name="Device (HDR)"/>
 <artifact id="Device/pacemaker-001" key="Device-pacemaker-001" name="Device: Implantable Pacemaker"/>
 <artifact id="StructureDefinition/device-obl-eu-hdr" key="StructureDefinition-device-obl-eu-hdr" name="Device: obligations"/>
@@ -60,7 +60,7 @@
 <artifact deprecated="true" id="StructureDefinition/familyMemberHistory-eu-hdr" key="StructureDefinition-familyMemberHistory-eu-hdr" name="FamilyMemberHistory (HDR)"/>
 <artifact id="FamilyMemberHistory/635c22e7-d7f1-45ad-9b4d-d4fe35239085" key="FamilyMemberHistory-635c22e7-d7f1-45ad-9b4d-d4fe35239085" name="FamilyMemberHistory: Family History of Type 2 Diabetes Mellitus - Mother"/>
 <artifact deprecated="true" id="StructureDefinition/familyMemberHistory-obl-eu-hdr" key="StructureDefinition-familyMemberHistory-obl-eu-hdr" name="FamilyMemberHistory: obligations"/>
-<artifact id="StructureDefinition/flag-eu-hdr" key="StructureDefinition-flag-eu-hdr" name="Flag (HDR)"/>
+<artifact deprecated="true" id="StructureDefinition/flag-eu-hdr" key="StructureDefinition-flag-eu-hdr" name="Flag (HDR)"/>
 <artifact id="Flag/example-flag-allergy" key="Flag-example-flag-allergy" name="Flag: Critical Allergy to Penicillin"/>
 <artifact id="Flag/example-flag-no-left-arm" key="Flag-example-flag-no-left-arm" name="Flag: Do Not Use Left Arm"/>
 <artifact id="StructureDefinition/flag-obl-eu-hdr" key="StructureDefinition-flag-obl-eu-hdr" name="Flag: obligations"/>
@@ -92,13 +92,13 @@
 <artifact id="StructureDefinition/medicationRequest-eu-hdr" key="StructureDefinition-medicationRequest-eu-hdr" name="MedicationRequest (HDR)"/>
 <artifact id="MedicationRequest/400C-prescription-cefuroxime-singleline" key="MedicationRequest-400C-prescription-cefuroxime-singleline" name="MedicationRequest: 400C-prescription-cefuroxime-singleline"/>
 <artifact id="StructureDefinition/medicationRequest-obl-eu-hdr" key="StructureDefinition-medicationRequest-obl-eu-hdr" name="MedicationRequest: obligations"/>
-<artifact id="StructureDefinition/medicationStatement-eu-hdr" key="StructureDefinition-medicationStatement-eu-hdr" name="MedicationStatement (HDR)"/>
+<artifact deprecated="true" id="StructureDefinition/medicationStatement-eu-hdr" key="StructureDefinition-medicationStatement-eu-hdr" name="MedicationStatement (HDR)"/>
 <artifact id="MedicationStatement/example-medicationstatement-euhdr" key="MedicationStatement-example-medicationstatement-euhdr" name="MedicationStatement: Enalapril"/>
 <artifact id="StructureDefinition/medicationStatement-obl-eu-hdr" key="StructureDefinition-medicationStatement-obl-eu-hdr" name="MedicationStatement: obligations"/>
 <artifact id="Observation/lab-swart-3" key="Observation-lab-swart-3" name="Observation: ABO group"/>
 <artifact id="Observation/gewicht-swart" key="Observation-gewicht-swart" name="Observation: Body weight"/>
-<artifact id="Observation/example-img-finding-lung-nodule" key="Observation-example-img-finding-lung-nodule" name="Observation: Imaging Finding"/>
-<artifact id="StructureDefinition/observation-imgFinding-eu-hdr" key="StructureDefinition-observation-imgFinding-eu-hdr" name="Observation: Imaging Finding (HDR)"/>
+<artifact deprecated="true" id="Observation/example-img-finding-lung-nodule" key="Observation-example-img-finding-lung-nodule" name="Observation: Imaging Finding"/>
+<artifact deprecated="true" id="StructureDefinition/observation-imgFinding-eu-hdr" key="StructureDefinition-observation-imgFinding-eu-hdr" name="Observation: Imaging Finding (HDR)"/>
 <artifact deprecated="true" id="StructureDefinition/observation-infectious-contact-eu-hdr" key="StructureDefinition-observation-infectious-contact-eu-hdr" name="Observation: Infectious Contact (HDR)"/>
 <artifact deprecated="true" id="Observation/example-infectious-contact" key="Observation-example-infectious-contact" name="Observation: Infectious Contact: COVID-19 Exposure"/>
 <artifact deprecated="true" id="StructureDefinition/observation-infectious-contact-obl-eu-hdr" key="StructureDefinition-observation-infectious-contact-obl-eu-hdr" name="Observation: Infectious Contact: obligations"/>

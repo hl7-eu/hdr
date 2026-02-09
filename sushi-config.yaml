@@ -89,32 +89,32 @@ pages:
     
 
   # === MAP ====
-  HospitalDischargeReport-map.html:
-    title: HospitalDischargeReport Relationships
-  Header-map.html:
-    title: Header Relationships
-  Subject-map.html:
-    title: Subject Relationships
-  InPatientEncounter-map.html:
-    title: InPatientEncounter Relationships  
-  AdmissionEvaluation-map.html:
-    title: AdmissionEvaluation Relationships
-  ObjectiveFindings-map.html:
-    title: ObjectiveFindings Relationships
-  FunctionalStatus-map.html:
-    title: FunctionalStatus Relationships
-  HospitalStay-map.html:
-    title: HospitalStay Relationships
-  PatientHistory-map.html:
-    title: PatientHistory Relationships
-  Alerts-map.html:
-    title: Alerts Relationships
-  AdvanceDirectives-map.html:
-    title: AdvanceDirectives Relationships
-  PlanOfCare-map.html:
-    title: PlanOfCare Relationships
-  MedicationSummary-map.html:
-    title: MedicationSummary Relationships
+  # HospitalDischargeReport-map.html:
+  #   title: HospitalDischargeReport Relationships
+  # Header-map.html:
+  #   title: Header Relationships
+  # Subject-map.html:
+  #   title: Subject Relationships
+  # InPatientEncounter-map.html:
+  #   title: InPatientEncounter Relationships  
+  # AdmissionEvaluation-map.html:
+  #   title: AdmissionEvaluation Relationships
+  # ObjectiveFindings-map.html:
+  #   title: ObjectiveFindings Relationships
+  # FunctionalStatus-map.html:
+  #   title: FunctionalStatus Relationships
+  # HospitalStay-map.html:
+  #   title: HospitalStay Relationships
+  # PatientHistory-map.html:
+  #   title: PatientHistory Relationships
+  # Alerts-map.html:
+  #   title: Alerts Relationships
+  # AdvanceDirectives-map.html:
+  #   title: AdvanceDirectives Relationships
+  # PlanOfCare-map.html:
+  #   title: PlanOfCare Relationships
+  # MedicationSummary-map.html:
+  #   title: MedicationSummary Relationships
     
 
 
@@ -205,8 +205,7 @@ menu:
     Logical Models: logicalModel.html
     Obligations: obligations.html
   Implementation:
-    Model Maps: model-map.html
-    Model Map Overview: modelmap.html
+    Model Maps: modelmap.html
     EHDSDischargeReport Mapping: map-ehdsdischargereport.html
   About:
     Authors and contributors: contributors.html
@@ -320,37 +319,37 @@ groups:
         - StructureDefinition/composition-eu-hdr
 
 
-    eHNGuidelines:
-      name:  eHN Hospital Discharge Report Guidelines (Informative)
-      description: Logical models representing the eHN Hospital Discharge Report Guidelines. This is informative material.
-      resources:
-        - StructureDefinition/HospitalDischargeReport
-        - StructureDefinition/Header
-        - StructureDefinition/Subject
-        - StructureDefinition/AdvanceDirectives
-        - StructureDefinition/Alerts
-        - StructureDefinition/InPatientEncounter
-        - StructureDefinition/AdmissionEvaluation
-        - StructureDefinition/PatientHistory
-        - StructureDefinition/HospitalStay
-        - StructureDefinition/DischargeDetails
-        - StructureDefinition/ObjectiveFindings
-        - StructureDefinition/FunctionalStatus
-        - StructureDefinition/PlanOfCare
-        - StructureDefinition/MedicationSummary
-#  
-    logicalModelsMaps:
-      name:  eHN Logical Model mappings (Informative)
-      description: Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide.
-      resources:
-        - ConceptMap/hdr2FHIR-eu-hdr
-        - ConceptMap/hdrHeader2FHIR-eu-hdr
-        - ConceptMap/subject2FHIR-eu-hdr
-        - ConceptMap/encounter2FHIR-eu-hdr
-        - ConceptMap/alerts2FHIR-eu-hdr
-        - ConceptMap/advanceDirectives2FHIR-eu-hdr
-        - ConceptMap/planOfCare2FHIR-eu-hdr
-        - ConceptMap/medicationSummary2FHIR-eu-hdr
+#    eHNGuidelines:
+#      name:  eHN Hospital Discharge Report Guidelines (Informative)
+#      description: Logical models representing the eHN Hospital Discharge Report Guidelines. This is informative material.
+#      resources:
+#        - StructureDefinition/HospitalDischargeReport
+#        - StructureDefinition/Header
+#        - StructureDefinition/Subject
+#        - StructureDefinition/AdvanceDirectives
+#        - StructureDefinition/Alerts
+#        - StructureDefinition/InPatientEncounter
+#        - StructureDefinition/AdmissionEvaluation
+#        - StructureDefinition/PatientHistory
+#        - StructureDefinition/HospitalStay
+#        - StructureDefinition/DischargeDetails
+#        - StructureDefinition/ObjectiveFindings
+#        - StructureDefinition/FunctionalStatus
+#        - StructureDefinition/PlanOfCare
+#        - StructureDefinition/MedicationSummary
+##  
+#    logicalModelsMaps:
+#      name:  eHN Logical Model mappings (Informative)
+#      description: Concept Maps describing how the data set specified by the eHN Laboratory Guidelines is supposed to be implemented by using this guide. Informative for this version of the guide.
+#      resources:
+#        - ConceptMap/hdr2FHIR-eu-hdr
+#        - ConceptMap/hdrHeader2FHIR-eu-hdr
+#        - ConceptMap/subject2FHIR-eu-hdr
+#        - ConceptMap/encounter2FHIR-eu-hdr
+#        - ConceptMap/alerts2FHIR-eu-hdr
+#        - ConceptMap/advanceDirectives2FHIR-eu-hdr
+#        - ConceptMap/planOfCare2FHIR-eu-hdr
+#        - ConceptMap/medicationSummary2FHIR-eu-hdr
 
 #  
 
@@ -368,14 +367,14 @@ groups:
         - StructureDefinition/specimen-obl-eu-hdr
         - StructureDefinition/carePlan-obl-eu-hdr
         - StructureDefinition/composition-obl-eu-hdr
-        - StructureDefinition/condition-obl-eu-hdr
+        - StructureDefinition/condition-obl-eu-hdr        
   #      - StructureDefinition/consent-obl-eu-hdr
         - StructureDefinition/device-obl-eu-hdr
         - StructureDefinition/deviceUseStatement-obl-eu-hdr
         - StructureDefinition/encounter-obl-eu-hdr
   #      - StructureDefinition/familyMemberHistory-obl-eu-hdr
         - StructureDefinition/flag-obl-eu-hdr
-  #      - StructureDefinition/immunization-obl-eu-hdr
+        - StructureDefinition/immunization-obl-eu-hdr
   #      - StructureDefinition/immunizationRecommendation-obl-eu-hdr
         - StructureDefinition/medication-obl-eu-hdr
         - StructureDefinition/medicationAdministration-obl-eu-hdr
