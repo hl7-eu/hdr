@@ -308,7 +308,7 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSMedicationUse.html" target="_blank">EHDSMedicationUse</a>
                     </td>
                     <td>
-                        <a href="StructureDefinition-medicationStatement-eu-hdr.html"><code>MedicationStatementEuHdr</code></a>,
+                        <a href="StructureDefinition-medicationStatement-eu-hdr.html"><code>MedicationStatementEuCore</code></a>,
                         <a href="StructureDefinition-medicationRequest-eu-hdr.html"><code>MedicationRequestEuHdr</code></a>,
                         <a href="StructureDefinition-medicationDispense-eu-hdr.html"><code>MedicationDispenseEuHdr</code></a>,
                         <a href="StructureDefinition-medicationAdministration-eu-hdr.html"><code>MedicationAdministrationEuHdr</code></a>

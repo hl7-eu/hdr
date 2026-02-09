@@ -1,5 +1,5 @@
 Instance: example-flag-no-left-arm
-InstanceOf: FlagEuHdr
+InstanceOf: FlagPatientEuCore
 Title: "Flag: Do Not Use Left Arm"
 Description: "A clinical flag advising care teams to avoid using the patient's left arm for procedures."
 
@@ -19,7 +19,7 @@ Description: "A clinical flag advising care teams to avoid using the patient's l
 
 
 Instance: example-flag-allergy
-InstanceOf: FlagEuHdr
+InstanceOf: FlagPatientEuCore
 Title: "Flag: Critical Allergy to Penicillin"
 Description: "A high-priority allergy alert referencing the specific AllergyIntolerance resource."
 

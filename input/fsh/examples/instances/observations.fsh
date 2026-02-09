@@ -73,7 +73,7 @@ Description: "An observation recording that Fiona Swart visited Italy in Novembe
 * valueCodeableConcept.text = "Italy" */
 
 
-Instance: example-img-finding-lung-nodule
+/* Instance: example-img-finding-lung-nodule
 InstanceOf: ObservationImgFindingEuHdr
 Title: "Observation: Imaging Finding"
 Description: "An imaging finding from a CT scan of the chest identifying a solitary pulmonary nodule."
@@ -97,7 +97,7 @@ Description: "An imaging finding from a CT scan of the chest identifying a solit
 
 * basedOn[imorderaccession].identifier.system = "http://hospital.example.org/accession"
 * basedOn[imorderaccession].identifier.value = "ACSN-2024-00123"
-* basedOn[imorderaccession].identifier.type = $v2-0203#ACSN
+* basedOn[imorderaccession].identifier.type = $v2-0203#ACSN */
 
 /* // * partOf[imagingstudy] = Reference(ImagingStudy/ct-chest-2024)
 * partOf[imagingstudy].display = "CT Chest without contrast ImagingStudy"

@@ -194,7 +194,7 @@ Medicinal products\, the administration of which was started during hospitalisat
 $loinc#87232-5 ) // 	Medication administration.brief
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
   * entry 0..
-  * entry only Reference(MedicationStatementEuHdr or MedicationRequestEuHdr or MedicationDispenseEuHdr or MedicationAdministrationEuHdr)
+  * entry only Reference(MedicationStatementEuCore or MedicationRequestEuHdr or MedicationDispenseEuHdr or MedicationAdministrationEuHdr)
 
 // -------------------------------------
 * section contains sectionSignificantResults 0..1
@@ -269,7 +269,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge, 
     $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital discharge medications Narrative" or 	Discharge medications Narrative
   * entry 0..
-  * entry only Reference(MedicationRequestEuHdr or MedicationDispenseEuHdr or MedicationStatementEuHdr)
+  * entry only Reference(MedicationRequestEuHdr or MedicationDispenseEuHdr or MedicationStatementEuCore)
 
  
 
@@ -383,33 +383,6 @@ $loinc#87232-5 ) // 	Medication administration.brief
       The hospital discharge status or disposition of the patient having a hospitalization.,
       $loinc#8650-4 ) //"Hospital discharge disposition Narrative"
  
-// --- Anthropometric Observations see above
-// --- Vital signs see above
-// --- Physical examination see above
-
-
-// -------------------------------------
-// Hospital discharge physical findings Section 0 .. 1
-// -------------------------------------
-/* 
-* section contains sectionDischargeFindings 0..1
-* section[sectionDischargeFindings]
-  * insert SectionComRules (
-      Hospital discharge physical findings,
-      Hospital discharge physical findings.,
-      $loinc#10184-0 ) //"Hospital discharge physical findings Narrative" 
-*/
-
-
-// --- Functional status assessment see above
-
-
-// -------------------------------------
-
-// -------------------------------------
-// Care Team 0 .. 1
-// -------------------------------------
-
 // -------------------------------------------------------------
 // Attachmnets section
 // Library of documents and attachments associated to this report

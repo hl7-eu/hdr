@@ -28,5 +28,12 @@ sectionAllergies
 sectionProblemList
 sectionImmunizations
 
+// TO DO
+
+1) compare and merge devicesUSeStatement profile with EPS
+2) CarePlanEuHdr should we aling with EPS ?
+3) sectionDischargeInstructions to be removed ?
+4) 
+
 
 

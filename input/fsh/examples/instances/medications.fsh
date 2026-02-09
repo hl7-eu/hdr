@@ -51,7 +51,7 @@ Description: "1A. Cefuroxime 1500mg (1.5g) powder for solution in a vial. Generi
 
 
 Instance: example-medicationstatement-euhdr
-InstanceOf: MedicationStatementEuHdr
+InstanceOf: MedicationStatementEuCore
 Title: "MedicationStatement: Enalapril"
 Description: "A sample MedicationStatement for a patient taking Enalapril, used in the context of the European Hospital Discharge Report."
 
