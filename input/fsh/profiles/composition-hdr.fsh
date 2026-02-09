@@ -1,4 +1,4 @@
-﻿Profile: CompositionEuHdr
+Profile: CompositionEuHdr
 Parent: Composition
 Id: composition-eu-hdr
 Title: "Composition (HDR)"
@@ -245,7 +245,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   // -------------------------------------
 // Discharge instructions Section 0 â€¦ 1
 // -------------------------------------
-// NOT IN modelmap.xml
+
 * section contains sectionDischargeInstructions ..1
 
 * section[sectionDischargeInstructions]
@@ -274,7 +274,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // -------------------------------------
 // Allergies and Intolerances Section 0 â€¦ 1
 // -------------------------------------
-// NOT IN modelmap.xml
+
 * section contains sectionAllergies ..1
 
 * section[sectionAllergies]
@@ -326,16 +326,6 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // Health Insurance (Coverage) and payment section
 // Payers for alignment with C-CDA
 // -------------------------------------
-// NOT IN modelmap.xml
-* section contains sectionPayers 0..1
-* section[sectionPayers]
-  * insert SectionComRules (
-      Health insurance and payment information section.,
-      Health insurance information is not always required\, however\, in some jurisdictions\, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care.,
-      $loinc#48768-6  ) // "Payment sources Document"
-  * ^short = "Health insurance and payment information."
-  * ^definition = "This section includes heath insurance and payment information."
-  * entry only Reference(Coverage) // ==> Add Profile
 
 // -------------------------------------
 
@@ -358,7 +348,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // covers the active part of the History of Past Illness heading
 // -------------------------------------
 
-// NOT IN modelmap.xml
+
 * section contains sectionProblemList ..1
 * section[sectionProblemList]
   * insert SectionComRules (
@@ -375,18 +365,6 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // History of Past Illness Section 0 â€¦ 1
 // -------------------------------------
 
-// NOT IN modelmap.xml
-* section contains sectionPastIllnessHx ..1
-
-* section[sectionPastIllnessHx]
-  * insert SectionComRules (
-    History of Past Illness Section,
-    The History of Past Illness section contains a narrative description and coded entries of the conditions the patient suffered in the past,
-    $loinc#11348-0 ) // 11348-0 History of Past illness Narrative
-  * entry 0..
-  * entry only Reference(ConditionEuHdr)  // do we need another profile ?
-    * ^short = "Conditions the patient suffered in the past."
-    * ^definition = "It contains a description of the conditions the patient suffered in the past."
 
 // -------------------------------------
 // * section contains sectionMedicalDevices 0..1 
@@ -394,42 +372,16 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
 // -------------------------------------
-// NOT IN modelmap.xml
-* section contains sectionHistoryMedicalDevices 0..1
-* section[sectionHistoryMedicalDevices]
-  * insert SectionComRules (
-    History of Medical devices and implants,
-    The medical devices section contains narrative text and coded entries describing the patient history of medical device use.,
-    $loinc#46264-8) // History of medical device use
-    // $sct#1184586001) //"Medical device document section (record artifact\)
-  * entry 0..
-  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuHdr ) // DeviceUseStatementEuHdr also ?
-  * section ..0
-
 
 // -------------------------------------
 // History of Procedures Section 0 â€¦ 1
 // -------------------------------------
-// NOT IN modelmap.xml
-* section contains sectionProceduresHx ..1
-* section[sectionProceduresHx]
-  * insert SectionComRules (
-    History of Procedures Section,
-      The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy
-      ,$loinc#47519-4 "History of Procedures Document")   // CODE
-  * entry 0..
-  * entry only Reference(ProcedureEuHdr  ) // check if we need to use a different profile
-
-  * insert SectionEntrySliceComRules(Patient past procedures pertinent to the scope of this document.,
-    It lists the patient past procedures that are pertinent to the scope of this document.\r\nProcedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy. This entry shall be used to document that no information about past procedures is available\, or that no relevant past procedures are known.)
-  
-
 
 // -------------------------------------
 // Immunizations Section 0 â€¦ 1
 // -------------------------------------
 
-// NOT IN modelmap.xml
+
 * section contains sectionImmunizations ..1
 
 * section[sectionImmunizations]
@@ -453,121 +405,30 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // should we merge them in a singol one ?
 // -------------------------------------
 
-// NOT IN modelmap.xml
-* section contains sectionInfectiousContacts ..1
-* section[sectionInfectiousContacts]
-  * insert SectionComRules (
-    Infectious contacts,
-    Infectious contacts of the patient,
-     TemporaryHDRSystem#infection-contact ) // $sct#444071008"Exposure to organism (event\)"
-  * entry 0..*
-  * entry only Reference(ObservationInfectiousContactEuHdr)
-    * ^short = "Exposure to an infectious agent."
-    * ^definition = "Information about a suspected infectious agent or agents the person was exposed to."
-  * section ..0
-
-
-// NOT IN modelmap.xml
-* section contains sectionTravelHx ..1
-* section[sectionTravelHx]
-  * insert SectionComRules ( 
-        Travel History Section, 
-        This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
-        $loinc#10182-4 ) // History of Travel Narrative
-  * entry 0..*
-  * entry only Reference(ObservationTravelEuHdr)
-  * section ..0
 
 // -------------------------------------
 // Family History Section 0 â€¦ 1
 // -------------------------------------
-// NOT IN modelmap.xml
-* section contains sectionFamilyHistory ..1
-* section[sectionFamilyHistory]
-  * insert SectionComRules (
-    Family History Section,
-      This section contains data defining the patientâ€™s genetic relatives in terms of possible or relevant health risk factors that have a potential impact on the patientâ€™s healthcare risk profile.
-      ,  http://loinc.org#10157-6  )   // History of family member diseases Narrative
-  * entry 0..
-  * entry only Reference(FamilyMemberHistoryEuHdr or DocumentReference  )
-  * entry ^short = "Family History"
-  * entry ^definition = "Family History"
-
 
 // -------------------------------------
 // Social History Section
 // -------------------------------------
-// NOT IN modelmap.xml
-* section contains sectionSocialHistory ..1
-* section[sectionSocialHistory]
-  * insert SectionComRules (
-    Social History Section,
-    The social history section contains a description of the person Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits., 
-    $loinc#29762-2  )   // Social history Narrative
-
-// \â€™s Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
-
-  * entry 0..
-  * entry only Reference(Observation or DocumentReference or QuestionnaireResponse) 
-
-  * insert SectionEntrySliceComRules ( Information about social determinants of health.
-    , Information about social determinants of health. )
- // entry slices
-  * insert SectionEntrySliceDefRules (sdoh, 0.. , SDOH entry ,
-    Social determinants of health entry , ObservationSdohEuHdr)
-
 
 // -------------------------------------
 // Use of substances Section
 // -------------------------------------
-// NOT IN modelmap.xml
-* section contains sectionSubstanceUse ..1
-* section[sectionSubstanceUse]
-  * insert SectionComRules (
-    Use of Substances Section,
-    The Use of Substances Section contains a description of the use abuse of substances E.g. tobacco; alcohol; drugs,  
-    TemporaryHDRSystem#substance-use  )   // CODE
-  * entry 0..
-  * entry only Reference(Observation) // or $Observation-alcoholuse-uv-ips or $Observation-tobaccouse-uv-ips
 
 // -------------------------------------
 // Alcohol use Section
 // -------------------------------------
-// NOT IN modelmap.xml
-* section contains sectionAlcoholUse ..1
-* section[sectionAlcoholUse]
-  * insert SectionComRules (
-    Alcohol use Section,
-    The Alcohol use Section contains a description of the use abuse of alcohol,  
-    $loinc#11331-6  )   // History of Alcohol use
-  * entry 0..
-  * entry only Reference(Observation) 
 
 // -------------------------------------
 // Tobacco use Section
 // -------------------------------------
-// NOT IN modelmap.xml
-* section contains sectionTobaccoUse ..1
-* section[sectionTobaccoUse]
-  * insert SectionComRules (
-    Tobacco use Section,
-    The Tobacco use Section contains a description of the use abuse of tobacco,  
-    $loinc#11367-0  )   // History of Tobacco use
-  * entry 0..
-  * entry only Reference(Observation) 
 
 // -------------------------------------
 // Drug use Section
 // -------------------------------------
-// NOT IN modelmap.xml
-* section contains sectionDrugUse ..1
-* section[sectionDrugUse]
-  * insert SectionComRules (
-    Drug use Section,
-    The Drug use Section contains a description of the use abuse of drugs,  
-    $loinc#11343-1  )   // History of Other nonmedical drug use
-  * entry 0..
-  * entry only Reference(Observation)
 
 // -------------------------------------
 // Discharge Details Section 1 â€¦ 1 R
@@ -601,25 +462,10 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
 // -------------------------------------
-// NOT IN modelmap.xml
-* section contains sectionAdvanceDirectives ..1
-* section[sectionAdvanceDirectives]
-  * insert SectionComRules (
-    Advance Directives Section,
-    The advance directives section contains a narrative description of patient's advance directive.,
-    $loinc#42348-3 )  // 	Advance directives
-  * entry only Reference(ConsentHdrEu or DocumentReference) 
-
 
 // -------------------------------------
 // Care Team 0 â€¦ 1
 // -------------------------------------
-// NOT IN modelmap.xml
-* insert sectionCareTeamRules
-
-
-
-
 
 // -------------------------------------------------------------
 // Attachmnets section
@@ -709,3 +555,4 @@ Invariant: text-or-section
 Description: "A Composition SHALL have either text, at least one section, or both."
 Expression: "text.exists() or section.exists()"
 Severity: #error
+

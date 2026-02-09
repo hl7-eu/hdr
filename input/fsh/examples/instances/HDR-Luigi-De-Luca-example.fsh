@@ -174,7 +174,8 @@ Usage: #example
 // 
 // section
 //
-* section[sectionFamilyHistory].title = "Family History"
+// * section[sectionFamilyHistory].title = "Family History"
+* section[+].title = "Family History"
 * section[=].code = $loinc#10157-6 "History of family member diseases Narrative"
 * section[=].text.status = #additional
 * section[=].text.div = """
@@ -222,7 +223,8 @@ Usage: #example
 // 
 // section
 //
-* section[sectionTobaccoUse].title = "Tobacco use"
+// * section[sectionTobaccoUse].title = "Tobacco use"
+* section[+].title = "Tobacco use"
 * section[=].code = $loinc#11367-0 "History of Tobacco use"
 * section[=].text.status = #additional
 * section[=].text.div = """

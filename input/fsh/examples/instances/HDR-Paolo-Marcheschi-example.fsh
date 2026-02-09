@@ -111,7 +111,8 @@ Usage: #inline
 // 
 // section
 //
-* section[sectionPastIllnessHx].title = "Storia di malattia passata"
+// * section[sectionPastIllnessHx].title = "Storia di malattia passata"
+* section[+].title = "Storia di malattia passata"
 * section[=].code = $loinc#11348-0 "History of Past illness Narrative"
 * section[=].text.status = #additional
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">In data 01.08 sottoposto a visita urologica per nicturia frequente, riscontro di segni di prostatite per cui ha effettuato terapia con cefixima 400 mg/die per 10 giorni con relativo miglioramento dei sintomi (eseguite urinocoltura, tampone uretrale e spermiogramma ad esito negativo). <p> </p>Dal 10.08 comparsa di odontalgia a livello dell'arcata superiore destra, con Rx ortopanoramica negativa, consigliata terapia con amoxicillina/clavulanato 875/125 mg bid per 6 giorni.<p> </p>Dal 13.08 riferita faringodinia e febbricola ad andamento intermittente con astenia ingravescente, scarsa tosse non produttiva e toracoalgie aspecifiche in sede parasternale bilateralmente a carattere trafittivo. Agli esami ematici del 20.08 VES 52 mm/ora, PCR 2.69 mg/dL, NT-ProBNP 915 pg/mL, emocromo con formula conservata, iposideremia. All'elettroforesi delle proteine plasmatiche incremento alfa-1 ed alfa-2 e presenza di sospetta componente monoclonale in zona gamma.<p> </p>In data 26.08.2024 eseguita Rx torace 2P con rilievo di sfumato addensamento parenchimale di aspetto flogistico in regione perilare destra e accentuazione dell'interstizio bilateralmente. Intrapresa terapia antibiotica empirica ad ampio spettro con ceftriaxone 2 gr da ieri.<p> </p>Si ricovera in data odierna per le cure e gli accertamenti del caso.</div>"
