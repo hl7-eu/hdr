@@ -1,4 +1,4 @@
-Profile: CompositionEuHdr
+﻿Profile: CompositionEuHdr
 Parent: Composition
 Id: composition-eu-hdr
 Title: "Composition (HDR)"
@@ -60,7 +60,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
         The root of the sections that make up the Hospital Discharge Report composition.)
 
 // -------------------------------------
-// Admission Evaluation Section 0 … 1 R
+// Admission Evaluation Section 0 â€¦ 1 R
 // -------------------------------------
 
 * section contains sectionAdmissionEvaluation ..1
@@ -100,7 +100,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 
 // -------------------------------------
-// Physical findings  Section 0 … 1
+// Physical findings  Section 0 â€¦ 1
 // -------------------------------------
 
 * section contains sectionPhysicalFindings ..1
@@ -111,7 +111,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
       $loinc#29545-1)   // "Physical findings Narrative"
 
 // -------------------------------------
-// Functional status assessment  Section 0 … 1
+// Functional status assessment  Section 0 â€¦ 1
 // -------------------------------------
 
 * section contains sectionFunctionalStatus 0..1
@@ -165,7 +165,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 
 // -------------------------------------
-// Medical Devices Section 0 … 1
+// Medical Devices Section 0 â€¦ 1
 // -------------------------------------
 // LOINC CODE TO BE CHANGED !
 
@@ -243,8 +243,9 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
   // -------------------------------------
-// Discharge instructions Section 0 … 1
+// Discharge instructions Section 0 â€¦ 1
 // -------------------------------------
+// NOT IN modelmap.xml
 * section contains sectionDischargeInstructions ..1
 
 * section[sectionDischargeInstructions]
@@ -254,7 +255,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     $loinc#8653-8 )   //  Hospital Discharge instructions
 
 // -------------------------------------
-// Discharge Medications Section 0 … 1
+// Discharge Medications Section 0 â€¦ 1
 // -------------------------------------
 * section contains sectionDischargeMedications ..1
 
@@ -271,8 +272,9 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
 // -------------------------------------
-// Allergies and Intolerances Section 0 … 1
+// Allergies and Intolerances Section 0 â€¦ 1
 // -------------------------------------
+// NOT IN modelmap.xml
 * section contains sectionAllergies ..1
 
 * section[sectionAllergies]
@@ -324,6 +326,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // Health Insurance (Coverage) and payment section
 // Payers for alignment with C-CDA
 // -------------------------------------
+// NOT IN modelmap.xml
 * section contains sectionPayers 0..1
 * section[sectionPayers]
   * insert SectionComRules (
@@ -337,7 +340,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // -------------------------------------
 
 // -------------------------------------
-// Patient History Section 0 … 1 R
+// Patient History Section 0 â€¦ 1 R
 // ToDo: Review
 // -------------------------------------
 
@@ -351,10 +354,11 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
 // -------------------------------------
-// Problem List Section 0 … 1
+// Problem List Section 0 â€¦ 1
 // covers the active part of the History of Past Illness heading
 // -------------------------------------
 
+// NOT IN modelmap.xml
 * section contains sectionProblemList ..1
 * section[sectionProblemList]
   * insert SectionComRules (
@@ -368,9 +372,10 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
 // -------------------------------------
-// History of Past Illness Section 0 … 1
+// History of Past Illness Section 0 â€¦ 1
 // -------------------------------------
 
+// NOT IN modelmap.xml
 * section contains sectionPastIllnessHx ..1
 
 * section[sectionPastIllnessHx]
@@ -389,6 +394,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
 // -------------------------------------
+// NOT IN modelmap.xml
 * section contains sectionHistoryMedicalDevices 0..1
 * section[sectionHistoryMedicalDevices]
   * insert SectionComRules (
@@ -402,8 +408,9 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
 // -------------------------------------
-// History of Procedures Section 0 … 1
+// History of Procedures Section 0 â€¦ 1
 // -------------------------------------
+// NOT IN modelmap.xml
 * section contains sectionProceduresHx ..1
 * section[sectionProceduresHx]
   * insert SectionComRules (
@@ -419,9 +426,10 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
 // -------------------------------------
-// Immunizations Section 0 … 1
+// Immunizations Section 0 â€¦ 1
 // -------------------------------------
 
+// NOT IN modelmap.xml
 * section contains sectionImmunizations ..1
 
 * section[sectionImmunizations]
@@ -445,6 +453,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // should we merge them in a singol one ?
 // -------------------------------------
 
+// NOT IN modelmap.xml
 * section contains sectionInfectiousContacts ..1
 * section[sectionInfectiousContacts]
   * insert SectionComRules (
@@ -458,6 +467,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * section ..0
 
 
+// NOT IN modelmap.xml
 * section contains sectionTravelHx ..1
 * section[sectionTravelHx]
   * insert SectionComRules ( 
@@ -469,13 +479,14 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * section ..0
 
 // -------------------------------------
-// Family History Section 0 … 1
+// Family History Section 0 â€¦ 1
 // -------------------------------------
+// NOT IN modelmap.xml
 * section contains sectionFamilyHistory ..1
 * section[sectionFamilyHistory]
   * insert SectionComRules (
     Family History Section,
-      This section contains data defining the patient’s genetic relatives in terms of possible or relevant health risk factors that have a potential impact on the patient’s healthcare risk profile.
+      This section contains data defining the patientâ€™s genetic relatives in terms of possible or relevant health risk factors that have a potential impact on the patientâ€™s healthcare risk profile.
       ,  http://loinc.org#10157-6  )   // History of family member diseases Narrative
   * entry 0..
   * entry only Reference(FamilyMemberHistoryEuHdr or DocumentReference  )
@@ -486,6 +497,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // -------------------------------------
 // Social History Section
 // -------------------------------------
+// NOT IN modelmap.xml
 * section contains sectionSocialHistory ..1
 * section[sectionSocialHistory]
   * insert SectionComRules (
@@ -493,7 +505,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     The social history section contains a description of the person Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits., 
     $loinc#29762-2  )   // Social history Narrative
 
-// \’s Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
+// \â€™s Health related lifestyle factors or lifestyle observations.   E.g. smoke habits; alcohol consumption; diets\, risky habits.,
 
   * entry 0..
   * entry only Reference(Observation or DocumentReference or QuestionnaireResponse) 
@@ -508,6 +520,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // -------------------------------------
 // Use of substances Section
 // -------------------------------------
+// NOT IN modelmap.xml
 * section contains sectionSubstanceUse ..1
 * section[sectionSubstanceUse]
   * insert SectionComRules (
@@ -520,6 +533,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // -------------------------------------
 // Alcohol use Section
 // -------------------------------------
+// NOT IN modelmap.xml
 * section contains sectionAlcoholUse ..1
 * section[sectionAlcoholUse]
   * insert SectionComRules (
@@ -532,6 +546,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // -------------------------------------
 // Tobacco use Section
 // -------------------------------------
+// NOT IN modelmap.xml
 * section contains sectionTobaccoUse ..1
 * section[sectionTobaccoUse]
   * insert SectionComRules (
@@ -544,6 +559,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // -------------------------------------
 // Drug use Section
 // -------------------------------------
+// NOT IN modelmap.xml
 * section contains sectionDrugUse ..1
 * section[sectionDrugUse]
   * insert SectionComRules (
@@ -554,7 +570,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * entry only Reference(Observation)
 
 // -------------------------------------
-// Discharge Details Section 1 … 1 R
+// Discharge Details Section 1 â€¦ 1 R
 // -------------------------------------
 * section contains sectionDischargeDetails 0..1
 * section[sectionDischargeDetails]
@@ -569,7 +585,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
 // -------------------------------------
-// Hospital discharge physical findings Section 0 … 1
+// Hospital discharge physical findings Section 0 â€¦ 1
 // -------------------------------------
 /* 
 * section contains sectionDischargeFindings 0..1
@@ -585,6 +601,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
 // -------------------------------------
+// NOT IN modelmap.xml
 * section contains sectionAdvanceDirectives ..1
 * section[sectionAdvanceDirectives]
   * insert SectionComRules (
@@ -595,9 +612,11 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 
 // -------------------------------------
-// Care Team 0 … 1
+// Care Team 0 â€¦ 1
 // -------------------------------------
+// NOT IN modelmap.xml
 * insert sectionCareTeamRules
+
 
 
 
@@ -625,7 +644,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 * section[sectionEncounters]
   * insert SectionComRules (
       Encounters sections,
-      This section lists and describes any healthcare encounters pertinent to the patient’s current health status or historical health history.  ,
+      This section lists and describes any healthcare encounters pertinent to the patientâ€™s current health status or historical health history.  ,
       $loinc#46240-8 )  
   * ^short = "Encounters sections"
   * ^definition = "This section lists documents and attachments associated to this report" */
@@ -633,7 +652,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 /*
 // -------------------------------------
-// Admission Medications Section 0 … 1 R
+// Admission Medications Section 0 â€¦ 1 R
 // -------------------------------------
 * section contains sectionAdmissionMedications ..1
 
@@ -674,12 +693,12 @@ $loinc#87232-5 ) // 	Medication administration.brief
 
 /* Admission reason is part of the encounter
 // -------------------------------------
-// Chief Complaint and Reason for Visit Section 0 … 1
+// Chief Complaint and Reason for Visit Section 0 â€¦ 1
 // -------------------------------------
 * section contains CCandReasonforVisitSection ..1
 * section[CCandReasonforVisitSection]
   * insert SectionComRules (Chief Complaint and Reason for Visit,
-                          This section records the patient's chief complaint (the patient’s own description\) and/or the reason for the patient's visit (the provider’s description of the reason for visit\). Local policy determines whether the information is divided into two sections or recorded in one section serving both purposes.,
+                          This section records the patient's chief complaint (the patientâ€™s own description\) and/or the reason for the patient's visit (the providerâ€™s description of the reason for visit\). Local policy determines whether the information is divided into two sections or recorded in one section serving both purposes.,
                              http://loinc.org#46239-0  )
 */
 

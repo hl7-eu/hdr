@@ -76,6 +76,10 @@ pages:
     title: References 
   model-map.md:
     title: Model Maps
+  modelmap.xml:
+    title: Model Map Overview
+  map-ehdsdischargereport.xml:
+    title: EHDSDischargeReport Mapping
   dependencies.md:
     title: Dependencies
   copyright.md:
@@ -202,6 +206,8 @@ menu:
     Obligations: obligations.html
   Implementation:
     Model Maps: model-map.html
+    Model Map Overview: modelmap.html
+    EHDSDischargeReport Mapping: map-ehdsdischargereport.html
   About:
     Authors and contributors: contributors.html
     Dependencies: dependencies.html
