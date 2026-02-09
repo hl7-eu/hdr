@@ -313,7 +313,7 @@
             <td>Composition</td>
             <td>section:sectionDiagnosticSummary</td>
             <td>Diagnostic summary section.</td>
-            <td>Reference to ConditionEuHdr.</td>
+            <td>Reference to ConditionEuCore.</td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.procedures</td>
@@ -322,7 +322,7 @@
             <td>Composition</td>
             <td>section:sectionSignificantProcedures</td>
             <td>Significant procedures section.</td>
-            <td>Reference to ProcedureEuHdr.</td>
+            <td>Reference to ProcedureEuCore.</td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.medicalDevicesAndImplants</td>

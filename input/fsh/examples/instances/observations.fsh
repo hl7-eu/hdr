@@ -1,3 +1,4 @@
+/* 
 Instance: example-infectious-contact
 InstanceOf: ObservationInfectiousContactEuHdr
 Title: "Observation: Infectious Contact: COVID-19 Exposure"
@@ -69,7 +70,7 @@ Description: "An observation recording that Fiona Swart visited Italy in Novembe
 * valueCodeableConcept.coding[0].system = "urn:iso:std:iso:3166"
 * valueCodeableConcept.coding[0].code = #IT
 * valueCodeableConcept.coding[0].display = "Italy"
-* valueCodeableConcept.text = "Italy"
+* valueCodeableConcept.text = "Italy" */
 
 
 Instance: example-img-finding-lung-nodule

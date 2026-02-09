@@ -212,7 +212,7 @@ Usage: #inline
 * subject = Reference(urn:uuid:445a0ff8-556d-4be2-bdde-6de668edf019)
 
 Instance: insufficienza-respiratoria-acuta
-InstanceOf: ConditionEuHdr
+InstanceOf: ConditionEuCore
 // add? 7678002 Cytomegaloviral pneumonia
 // add? 721804002 Infection of lung caused by Pneumocystis (disorder)
 Usage: #inline

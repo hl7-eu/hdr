@@ -373,7 +373,7 @@ groups:
         - StructureDefinition/device-obl-eu-hdr
         - StructureDefinition/deviceUseStatement-obl-eu-hdr
         - StructureDefinition/encounter-obl-eu-hdr
-        - StructureDefinition/familyMemberHistory-obl-eu-hdr
+  #      - StructureDefinition/familyMemberHistory-obl-eu-hdr
         - StructureDefinition/flag-obl-eu-hdr
         - StructureDefinition/immunization-obl-eu-hdr
         - StructureDefinition/immunizationRecommendation-obl-eu-hdr
@@ -382,9 +382,9 @@ groups:
         - StructureDefinition/medicationDispense-obl-eu-hdr
         - StructureDefinition/medicationRequest-obl-eu-hdr
         - StructureDefinition/medicationStatement-obl-eu-hdr
-        - StructureDefinition/observation-infectious-contact-obl-eu-hdr
-        - StructureDefinition/observation-sdoh-obl-eu-hdr
-        - StructureDefinition/observation-travel-obl-eu-hdr
+  #      - StructureDefinition/observation-infectious-contact-obl-eu-hdr
+  #      - StructureDefinition/observation-sdoh-obl-eu-hdr
+  #      - StructureDefinition/observation-travel-obl-eu-hdr
         - StructureDefinition/procedure-obl-eu-hdr
         - StructureDefinition/humanName-obl-eu-hdr
 

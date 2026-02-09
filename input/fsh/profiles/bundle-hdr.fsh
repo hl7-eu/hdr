@@ -62,7 +62,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[patient].resource only PatientEuCore
 * entry[encounter].resource only EncounterEuHdr
 * entry[allergyIntolerance].resource only AllergyIntoleranceEuHdr
-* entry[condition].resource only ConditionEuHdr
+* entry[condition].resource only ConditionEuCore
 * entry[device].resource only DeviceEuHdr
 * entry[deviceUseStatement].resource only DeviceUseStatementEuHdr
 * entry[diagnosticReport].resource only $DiagnosticReport-uv-ips
@@ -77,12 +77,12 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[medicationDispense].resource only MedicationDispenseEuHdr
 * entry[practitioner].resource only PractitionerEuCore
 * entry[practitionerRole].resource only PractitionerRoleEuCore
-* entry[procedure].resource only ProcedureEuHdr
+* entry[procedure].resource only ProcedureEuCore
 * entry[organization].resource only OrganizationEuCore
 * entry[observation].resource only Observation // $Observation-results-uv-ips
 * entry[specimen].resource only $Specimen-uv-ips
 * entry[flag].resource only FlagEuHdr
-* entry[familyMemberHistory].resource only FamilyMemberHistoryEuHdr
+// * entry[familyMemberHistory].resource only FamilyMemberHistoryEuHdr
 * entry[documentReference].resource only DocumentReference
 * entry[location].resource only LocationEuCore
 * entry[careplan].resource only CarePlan

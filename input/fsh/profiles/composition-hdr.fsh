@@ -149,7 +149,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     $loinc#11535-2) // Hospital discharge Dx Narrative
  
   * entry 0..*
-  * entry only Reference( ConditionEuHdr ) // check if this is too restrictive
+  * entry only Reference( ConditionEuCore ) // check if this is too restrictive
 
 // -------------------------------------
 * section contains sectionSignificantProcedures 0..1
@@ -160,7 +160,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     $loinc#10185-7) // Hospital discharge procedures
     // $sct#721981007)
   * entry 0..
-  * entry only Reference(ProcedureEuHdr)
+  * entry only Reference(ProcedureEuCore)
   * section ..0
 
 
@@ -178,7 +178,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     // $loinc#46264-8) // History of medical device use
     // $sct#1184586001) //"Medical device document section (record artifact\)
   * entry 0..
-  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuHdr ) // DeviceUseStatementEuHdr also ?
+  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore ) // DeviceUseStatementEuHdr also ?
   * section ..0
 
 
@@ -197,21 +197,21 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // -------------------------------------
 * section contains sectionSignificantResults 0..1
 * section[sectionSignificantResults]
-  * insert SectionComRules (
-    Significant Observation Results,
-    Results of significant functional\, diagnostic\, and imaging examinations to ensure continuity of care\, performed during hospitalisation. Results of examinations ordered but not yet delivered should be presented separately from results already delivered.,
-         $loinc#30954-2 ) // Relevant diagnostic tests/laboratory data Narrative or it is 11493-4 Hospital discharge studies summary Narrative or we need both ?
-    
-    // TemporaryHDRSystem#significant-results ) 
-    // $sct#423100009 ) // "Results section (record artifact\)"
-  * entry 0..
+  * insert SectionComRules ( 
+      Significant medical test results, 
+      Significant medical test results of functional\, diagnostic (including laboratory\)\, and imaging examinations performed during encounter. This may include orders for which the results have not yet arrived., 
+      http://loinc.org#30954-2)
   * entry only Reference(Observation or DiagnosticReport or DocumentReference)
-
-  * entry insert OpenReferenceSlicePerProfileRules (significant results, significant results)
-  * insert SectionEntrySliceDefRules (labResult, 0.. , Laboratory Result ,
-    Laboratory Result  , $Observation-resultslab-eu-lab)
-  * insert SectionEntrySliceDefRules (radResult, 0.. , Radiology Result ,
-    Radiology Result, ObservationImgFindingEuHdr)
+  * insert SectionEntrySliceComRules(Significant medical test results, Significant medical test results slice)
+  // Review the slice definiton
+  * insert SectionEntrySliceDefRules (results-medicalTestResult, 0.. , 
+      Medical test results, 
+       Results collected on the patient or produced on in-vitro biologic specimens., 
+       MedicalTestResultEuCore)
+  * insert SectionEntrySliceDefRules (results-diagnosticReport, 0.. , 
+      DiagnosticReport, 
+       DiagnosticReport resource to represent diagnostic test and procedure reports in a patient summary,
+       DiagnosticReportEuCore)
     
     
   // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)
@@ -356,7 +356,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     The IPS derived problem section lists and describes clinical problems or conditions currently being monitored for the patient.,
     $loinc#11450-4 ) // 11450-4 Problem list - Reported
   * entry 0..
-  * entry only Reference(ConditionEuHdr)  // do we need another profile ?
+  * entry only Reference(ConditionEuCore)  // do we need another profile ?
     * ^short = "Conditions the patient suffered in the past."
     * ^definition = "It contains a description of the conditions the patient suffered in the past."
 

@@ -24,7 +24,7 @@ Description: "This profile constrains the Observation resource to represent a fi
     procedure 0..* 
 * partOf[imagingstudy] only Reference( ImagingStudy )
   * ^short = "Imaging study that produced this observation"
-* partOf[procedure] only Reference( ProcedureEuHdr )
+* partOf[procedure] only Reference( ProcedureEuCore )
   * ^short = "Procedure that produced this observation"
   
 * category

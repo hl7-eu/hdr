@@ -99,7 +99,7 @@ Usage: #inline
 * valueCodeableConcept = $sct#289431008 "Fetal movements present"
 
 Instance: condition-meerling
-InstanceOf: ConditionEuHdr
+InstanceOf: ConditionEuCore
 Title: "Observation: Twin pregnancy"
 Usage: #inline
 * clinicalStatus = $condition-clinical#resolved
@@ -155,7 +155,7 @@ Usage: #inline
 * component[=].valueQuantity = 6 '{keer per dag inhaleren}' "keer per dag inhaleren"
 
 Instance: sectio-swart
-InstanceOf: ProcedureEuHdr
+InstanceOf: ProcedureEuCore
 Title: "Procedure: Sectio caesarea"
 Description: "A planned cesarean section procedure."
 Usage: #example
@@ -385,10 +385,10 @@ Usage: #inline
 </div>"
 // * section[=].entry[0] = Reference(lab-swart-1)  "HBsAg"
 // * section[=].entry[+] = Reference(lab-swart-2)  "Toxoplasma IgG"
-* section[sectionSignificantResults].entry[labResult][0] = Reference(lab-swart-3)  "ABO group"
-* section[sectionSignificantResults].entry[labResult][+] = Reference(urn:uuid:a7c687cd-27dd-4b42-88c2-5e32418847ae)  "Rh D factor"
-* section[sectionSignificantResults].entry[labResult][+] = Reference(urn:uuid:5863804b-b0aa-4292-8bc2-13a769ad50d7)  "hemoglobin"
-* section[sectionSignificantResults].entry[labResult][+] = Reference(urn:uuid:2640f290-85c4-426f-b912-4b5051f4f35a)  "HIV 1 As"
+* section[sectionSignificantResults].entry[results-medicalTestResult][0] = Reference(lab-swart-3)  "ABO group"
+* section[sectionSignificantResults].entry[results-medicalTestResult][+] = Reference(urn:uuid:a7c687cd-27dd-4b42-88c2-5e32418847ae)  "Rh D factor"
+* section[sectionSignificantResults].entry[results-medicalTestResult][+] = Reference(urn:uuid:5863804b-b0aa-4292-8bc2-13a769ad50d7)  "hemoglobin"
+* section[sectionSignificantResults].entry[results-medicalTestResult][+] = Reference(urn:uuid:2640f290-85c4-426f-b912-4b5051f4f35a)  "HIV 1 As"
 
 
 * section[sectionDischargeDetails].title = "Discharge details"

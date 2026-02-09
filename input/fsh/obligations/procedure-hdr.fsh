@@ -1,5 +1,5 @@
-Profile: ProcedureEuHdrObligation
-Parent: ProcedureEuHdr
+Profile: ProcedureEuCoreObligation
+Parent: ProcedureEuCore
 // Parent: ProcedureUvIps
 Id: procedure-obl-eu-hdr
 Title:    "Procedure: obligations"
@@ -15,7 +15,7 @@ Description: "This profile defines obligations for the Procedure resource by thi
 
 * subject insert ObligationSet1
 * performed[x] insert ObligationSet1
-* performed[x].extension[data-absent-reason] insert ObligationSet1
+// * performed[x].extension[data-absent-reason] insert ObligationSet1
 * performer.actor insert ObligationSet2
 * performer.onBehalfOf 
 * reasonCode insert ObligationSet3

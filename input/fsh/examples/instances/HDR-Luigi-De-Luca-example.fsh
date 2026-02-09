@@ -431,7 +431,7 @@ Usage: #example
 """
 
 Instance: diabetis-condition-luca
-InstanceOf: ConditionEuHdr
+InstanceOf: ConditionEuCore
 Title: "Condition: Type 2 Diabetes Mellitus"
 Description: "Condition for Type 2 Diabetes Mellitus, double coding with ICD-10 and SNOMED CT."
 Usage: #example
@@ -462,7 +462,7 @@ Usage: #example
 * activity[2].detail.status = #not-started
 
 Instance: lifestyle-consultation-luca
-InstanceOf: ProcedureEuHdr
+InstanceOf: ProcedureEuCore
 Usage: #inline
 * id = "92ffc1fd-71ff-4d54-bc06-25d9e1e1fea0"
 * status = #completed
@@ -471,7 +471,7 @@ Usage: #inline
 * performedDateTime = "2025-04-05"
 
 Instance: diabetes-education-luca
-InstanceOf: ProcedureEuHdr
+InstanceOf: ProcedureEuCore
 Usage: #inline
 * id = "a74a3dca-92fa-4b71-8e70-89a07ac74bc3"
 * status = #completed
@@ -480,7 +480,7 @@ Usage: #inline
 * performedDateTime = "2025-04-04"
 
 Instance: metformin-therapy-luca
-InstanceOf: ProcedureEuHdr
+InstanceOf: ProcedureEuCore
 Usage: #inline
 * id = "53a8c3c3-5d1b-4950-87bc-fddae2ebc079"
 * status = #in-progress
@@ -489,7 +489,7 @@ Usage: #inline
 * performedDateTime = "2025-04-04"
 
 Instance: familyhistory-mother-luca-example
-InstanceOf: FamilyMemberHistoryEuHdr
+InstanceOf: FamilyMemberHistory // EuHdr
 Title: "FamilyMemberHistory: Family History of Type 2 Diabetes Mellitus - Mother"
 Description: "Mother has a history of type 2 diabetes mellitus."
 Usage: #example
@@ -500,7 +500,7 @@ Usage: #example
 * condition[0].code = $sct#430679000 "Family history of diabetes mellitus type 2 (situation)"
 
 Instance: familyhistory-grandmother-luca-example
-InstanceOf: FamilyMemberHistoryEuHdr
+InstanceOf: FamilyMemberHistory // EuHdr
 Title: "Family History of Type 2 Diabetes Mellitus - Maternal Grandmother"
 Description: "Maternal grandmother has a history of type 2 diabetes mellitus."
 Usage: #inline

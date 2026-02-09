@@ -1,5 +1,5 @@
 Profile: FamilyMemberHistoryEuHdrObligation
-Parent: FamilyMemberHistoryEuHdr
+Parent: FamilyMemberHistory // EuHdr
 Id: familyMemberHistory-obl-eu-hdr
 Title: "FamilyMemberHistory: obligations"
 Description: "This profile represents the constraints applied to the FamilyMemberHistory resource by this guide."

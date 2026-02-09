@@ -218,7 +218,7 @@ Usage: #example
 * reasonReference = Reference(urn:uuid:38d0593b-7949-489e-9306-95df81a109df)
 
 Instance: fracture-left-leg
-InstanceOf: ConditionEuHdr
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "38d0593b-7949-489e-9306-95df81a109df"
 * clinicalStatus = $condition-clinical#active
@@ -228,7 +228,7 @@ Usage: #inline
 * onsetDateTime = "2025-04-20"
 
 Instance: external-fixator
-InstanceOf: ProcedureEuHdr
+InstanceOf: ProcedureEuCore
 Usage: #inline
 * id = "1493fed2-e9ed-4dc1-b107-f077cb1d0d40"
 * status = #completed

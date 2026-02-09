@@ -1,5 +1,5 @@
-Profile: ConditionEuHdrObligation
-Parent: ConditionEuHdr
+Profile: ConditionEuCoreObligation
+Parent: ConditionEuCore
 Id: condition-obl-eu-hdr
 Title: "Condition: obligations"
 Description: """This profile defines obligations for the Condition in the scope of this guide. It support the Diagnostic summary part of the eHN data model adding two additional categories: First category distingueshes conditions present at admission and acquired during hospital stay, while second category is used to indicate impact of the condition to the treatement during hospital stay (treated, untreated)."""
@@ -8,8 +8,8 @@ Description: """This profile defines obligations for the Condition in the scope 
 
 * extension[bodySite] 
 * category 
-* category[poa] insert ObligationSet1
-* category[treated] insert ObligationSet1
+// * category[poa] insert ObligationSet1
+// * category[treated] insert ObligationSet1
 * severity 
 
 
