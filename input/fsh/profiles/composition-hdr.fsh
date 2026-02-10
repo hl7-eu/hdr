@@ -18,8 +18,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * data ^short = "B64 in-line data"
   * url ^short = "URL of the document" */
 
-* extension contains $composition.version-r5 named compositionVersionR5 0..
-* extension[compositionVersionR5].valueString ^short = "Business version"
+* extension contains $composition.version-r5  named version 0..1
+* extension[version] ^short = "Business version"
 
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient]
@@ -90,7 +90,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRules (
     Vital signs,
     The Vital signs section includes blood pressure\, body temperature\, heart rate\, and respiratory rate. It may also include other clinical findings\, such as height\, weight\, body mass index\, head circumference\, and pulse oximetry. In particular\, notable vital signs or physical findings such as the most recent\, maximum and/or minimum\, baseline\, or relevant trends may be included,
-    $loinc#8716-3) //  "Vital signs"  
+    $loinc#8716-3) //  "Vital signs note"  
   * entry 0..
   * entry only Reference(Observation or DocumentReference or $vitalsigns)
 
@@ -108,7 +108,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRules (
     Physical findings,
       Physical findings,
-      $loinc#29545-1)   // "Physical findings Narrative"
+      $loinc#29545-1)   // "Physical findings note"
 
 // -------------------------------------
 // Functional status assessment  Section 0 .. 1
@@ -135,7 +135,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRules (
     Hospital course,
     Hospital course describes the sequence of events from admission to discharge in a hospital facility.,
-    $loinc#8648-8 )   // "Hospital course Narrative"
+    $loinc#8648-8 )   // "Hospital course note"
   * ^short = "Significant information about course of hospital stay"
   * ^definition = "This section includes basic information about hospital staty (encounter), diagnostic summary in narrative form, pharmacotherapy, major procedures, medical devices, significant findings during hospital stay and clinical synthesis."
   
@@ -216,7 +216,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
        DiagnosticReportEuCore)
     
     
-  // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or ObservationResultsLaboratoryEu)
+  // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or MedicalTestResultEuCore)
 
 // -------------------------------------
 * section contains sectionSynthesis 0..1
@@ -267,7 +267,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules (
     Hospital discharge medications,
     Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge, 
-    $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital discharge medications Narrative" or 	Discharge medications Narrative
+    $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital "Discharge medications note" or 	Discharge medications Narrative
   * entry 0..
   * entry only Reference(MedicationRequestEuHdr or MedicationDispenseEuHdr or MedicationStatementEuCore)
 
@@ -317,14 +317,14 @@ $loinc#87232-5 ) // 	Medication administration.brief
 // -------------------------------------
 
 // -------------------------------------
-// Patient History Section 0 .. 1 R
+// Hx general Reported Section 0 .. 1 R
 // -------------------------------------
 
 // This is a purely narrative section
 * section contains sectionPatientHx ..1
 * section[sectionPatientHx]
   * insert SectionComRules ( 
-    Patient History Section,
+    Hx general Reported Section,
     This section may provide both synthetic anamnesis \,e.g. description of phases of the pathology as a chronological summary of clustered clinical information\, and anecdotal evidence that clinicians can collect from the patient\, and can read in a narrative form.,
     http://loinc.org#11329-0 )
 
@@ -381,7 +381,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules (
       Discharge details,
       The hospital discharge status or disposition of the patient having a hospitalization.,
-      $loinc#8650-4 ) //"Hospital discharge disposition Narrative"
+      $loinc#8650-4 ) //"Hospital discharge disposition note"
  
 // -------------------------------------------------------------
 // Attachmnets section

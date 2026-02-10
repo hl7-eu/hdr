@@ -129,7 +129,7 @@ Instance: encounter-luca-example
 InstanceOf: EncounterEuHdr
 Usage: #inline
 * id = "7c9a2bf1-507f-4d43-b06e-d78e9670379d"
-* status = #finished
+* status = $encounter-status#finished
 * class = $v3-ActCode#IMP
 * period.start = "2025-04-01T08:45:00Z"
 * period.end = "2025-04-10T11:00:00Z"
@@ -176,7 +176,7 @@ Usage: #example
 //
 // * section[sectionFamilyHistory].title = "Family History"
 * section[+].title = "Family History"
-* section[=].code = $loinc#10157-6 "History of family member diseases Narrative"
+* section[=].code = $loinc#10157-6 "History of family member diseases note"
 * section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -188,8 +188,8 @@ Usage: #example
 // 
 // section
 //
-* section[sectionVitalSigns].title = "Vital signs"
-* section[=].code = $loinc#8716-3 "Vital signs"
+* section[sectionVitalSigns].title = "Vital signs note"
+* section[=].code = $loinc#8716-3 "Vital signs note"
 * section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -236,8 +236,8 @@ Usage: #example
 // 
 // section
 //
-* section[sectionHospitalCourse].title = "Hospital Course"
-* section[=].code = $loinc#8648-8 "Hospital Course"
+* section[sectionHospitalCourse].title = "Hospital course note"
+* section[=].code = $loinc#8648-8 "Hospital course note"
 * section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -253,7 +253,7 @@ Usage: #example
 // section
 //
 * section[sectionSignificantResults].title = "Significant Observation Results"
-* section[=].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
+* section[=].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
 * section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -313,7 +313,7 @@ Usage: #example
 // section
 //
 * section[sectionSignificantProcedures].title = "Significant procedures"
-* section[=].code = $loinc#10185-7 "Hospital discharge procedures Narrative"
+* section[=].code = $loinc#10185-7 "Hospital discharge procedure note"
 * section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -389,7 +389,7 @@ Usage: #example
 // section
 //
 * section[sectionDiagnosticSummary].title = "Diagnosis at Discharge"
-* section[=].code = $loinc#11535-2 "Hospital discharge Dx Narrative"
+* section[=].code = $loinc#11535-2 "Hospital discharge diagnosis note"
 * section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">

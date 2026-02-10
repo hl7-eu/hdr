@@ -258,14 +258,14 @@
             <td></td>
           </tr>
 
-          <!-- PATIENT HISTORY -->
+          <!-- Hx general Reported -->
           <tr>
             <td>body.patientHistory</td>
             <td>Section: Patient health history.</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionPatientHx</td>
-            <td>Patient history section.</td>
+            <td>Hx general Reported section.</td>
             <td></td>
           </tr>
           <tr>
@@ -274,7 +274,7 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionPatientHx.text</td>
-            <td>Patient history narrative.</td>
+            <td>Hx general Reported narrative.</td>
             <td></td>
           </tr>
           <tr>
@@ -283,7 +283,7 @@
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionPatientHx.extension:note</td>
-            <td>Patient history notes.</td>
+            <td>Hx general Reported notes.</td>
             <td></td>
           </tr>
 

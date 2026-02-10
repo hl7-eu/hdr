@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/hdr/0.1.0-ballot" ciUrl="https://build.fhir.org/ig/hl7-eu/hdr" defaultVersion="0.1.0-ballot" defaultWorkgroup="eu" gitUrl="https://github.com/HL7-eu/hdr" url="http://hl7.eu/fhir/hdr">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/hdr/0.1.0-ballot" ciUrl="https://build.fhir.org/ig/hl7-eu/hdr" defaultVersion="1.0.0-ci-build" defaultWorkgroup="eu" gitUrl="https://github.com/HL7-eu/hdr" url="http://hl7.eu/fhir/hdr">
 <version code="current" url="https://build.fhir.org/ig/hl7-eu/hdr"/>
+<version code="1.0.0-ci-build" url="http://hl7.eu/fhir/hdr/1.0.0"/>
 <version code="0.1.0-ballot" url="http://hl7.eu/fhir/hdr/0.1.0-ballot"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
@@ -12,7 +13,7 @@
 <artifact deprecated="true" id="StructureDefinition/Alerts" key="StructureDefinition-Alerts" name="A.2.2 - Alerts (eHN)"/>
 <artifact deprecated="true" id="StructureDefinition/InPatientEncounter" key="StructureDefinition-InPatientEncounter" name="A.2.3 - Encounter (eHN)"/>
 <artifact deprecated="true" id="StructureDefinition/AdmissionEvaluation" key="StructureDefinition-AdmissionEvaluation" name="A.2.4 - Admission evaluation (eHN)"/>
-<artifact deprecated="true" id="StructureDefinition/PatientHistory" key="StructureDefinition-PatientHistory" name="A.2.5 - Patient history (eHN)"/>
+<artifact deprecated="true" id="StructureDefinition/PatientHistory" key="StructureDefinition-PatientHistory" name="A.2.5 - Hx general Reported (eHN)"/>
 <artifact deprecated="true" id="StructureDefinition/HospitalStay" key="StructureDefinition-HospitalStay" name="A.2.6 - Hospital stay (eHN)"/>
 <artifact deprecated="true" id="StructureDefinition/DischargeDetails" key="StructureDefinition-DischargeDetails" name="A.2.7 - Discharge details (eHN)"/>
 <artifact deprecated="true" id="StructureDefinition/ObjectiveFindings" key="StructureDefinition-ObjectiveFindings" name="A.2.7.1 - Objective findings"/>
@@ -131,7 +132,7 @@
 <artifact deprecated="true" id="ConceptMap/hospitalStay2FHIR-eu-hdr" key="ConceptMap-hospitalStay2FHIR-eu-hdr" name="eHN Hospital Stay Model to this guide Map"/>
 <artifact deprecated="true" id="ConceptMap/medicationSummary2FHIR-eu-hdr" key="ConceptMap-medicationSummary2FHIR-eu-hdr" name="eHN Medication Summary Model to this guide Map"/>
 <artifact deprecated="true" id="ConceptMap/objectiveFindings2FHIR-eu-hdr" key="ConceptMap-objectiveFindings2FHIR-eu-hdr" name="eHN Objective Findings Model to this guide Map"/>
-<artifact deprecated="true" id="ConceptMap/patientHistory2FHIR-eu-hdr" key="ConceptMap-patientHistory2FHIR-eu-hdr" name="eHN Patient History Model to this guide Map"/>
+<artifact deprecated="true" id="ConceptMap/patientHistory2FHIR-eu-hdr" key="ConceptMap-patientHistory2FHIR-eu-hdr" name="eHN Hx general Reported Model to this guide Map"/>
 <artifact deprecated="true" id="ConceptMap/planOfCare2FHIR-eu-hdr" key="ConceptMap-planOfCare2FHIR-eu-hdr" name="eHN Plan of Care Model to this guide Map"/>
 <artifact deprecated="true" id="ConceptMap/subject2FHIR-eu-hdr" key="ConceptMap-subject2FHIR-eu-hdr" name="eHN Subject Model to this guide Map"/>
 <page key="NA" name="(NA)"/>
@@ -143,6 +144,7 @@
 <page key="contributors" name="Authors and contributors"/>
 <page key="background" name="Background"/>
 <page key="challenges" name="Challenges"/>
+<page key="change" name="Change Log"/>
 <page key="copyright" name="Copyright"/>
 <page key="x-version" name="Cross version analysis"/>
 <page key="dependencies" name="Dependencies"/>

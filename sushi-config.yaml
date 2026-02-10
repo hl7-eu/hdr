@@ -5,7 +5,7 @@ name:  Hl7EuHospitalDischargeReportIg
 title: HL7 Europe Hospital Discharge Report
 description: This implementation guide specifies the Hospital Discharge Report in the European context, as defined in eHN Hospital Discharge Report guidelines.
 status: draft # draft | active | retired | unknown
-version: 0.1.0-ci-build #
+version: 1.0.0-ci-build #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -29,7 +29,7 @@ dependencies:
   hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2
   hl7.fhir.eu.extensions.r4: 1.2.0
    # hl7.fhir.eu.laboratory to be removed
-  hl7.fhir.eu.laboratory: 0.1.1
+  # hl7.fhir.eu.laboratory: 0.1.1
   hl7.fhir.eu.base: current
   ihe.pharm.mpd.r4: 1.0.0-comment-2
 #   hl7.fhir.us.mcode:
@@ -80,6 +80,8 @@ pages:
     title: Model Map Overview
   dependencies.md:
     title: Dependencies
+  change.md:
+    title: Change Log
   copyright.md:
     title: Copyright
   x-version.md:
@@ -216,6 +218,7 @@ menu:
   About:
     Authors and contributors: contributors.html
     Dependencies: dependencies.html
+    Change Log: change.html
     Copyright: copyright.html
     Cross version:  x-version.html
     Downloads: downloads.html

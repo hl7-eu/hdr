@@ -6,8 +6,8 @@ Description:  """Hospital Discharge Report Encounter Type allows to classify enc
 
 * insert SetFmmAndStatusRule (1, draft)
 * ^experimental = false
-* $encounter-status#triaged	"Triaged"
-* $encounter-status#in-progress	"In Progress"
-* $encounter-status#onleave	"On Leave"
-* $encounter-status#finished	"Finished"	
-* $encounter-status#unknown	"Unknown"
+* $encounter-status-r4#triaged	"Triaged"
+* $encounter-status-r4#in-progress	"In Progress"
+* $encounter-status-r4#onleave	"On Leave"
+* $encounter-status-r4#finished	"Finished"	
+* $encounter-status-r4#unknown	"Unknown"

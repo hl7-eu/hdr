@@ -22,6 +22,7 @@ Alias: $dicomOntology = http://dicom.nema.org/resources/ontology/DCM
 Alias: $discharge-disposition = http://terminology.hl7.org/CodeSystem/discharge-disposition
 Alias: $edqm = http://standardterms.edqm.eu
 Alias: $encounter-status = http://hl7.org/fhir/encounter-status
+Alias: $encounter-status-r4 = http://hl7.org/fhir/encounter-status|4.0.1
 Alias: $event-timing = http://hl7.org/fhir/event-timing
 Alias: $flag-category = http://terminology.hl7.org/CodeSystem/flag-category
 Alias: $flag-priority-code = http://hl7.org/fhir/flag-priority-code

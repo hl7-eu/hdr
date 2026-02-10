@@ -3,7 +3,7 @@ InstanceOf: ConceptMap
 Usage: #definition
 * url = "http://hl7.eu/fhir/hdr/ConceptMap/patientHistory2FHIR-eu-hdr"
 * name = "PatientHistory2FHIREuHdr"
-* title = "eHN Patient History Model to this guide Map"
+* title = "eHN Hx general Reported Model to this guide Map"
 * status = #draft
 * experimental = true
 * description = """eHN HDR Hospital Stay  Model to this guide Map"""

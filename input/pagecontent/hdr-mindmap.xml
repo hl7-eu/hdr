@@ -73,7 +73,7 @@ The Hospital Discharge Report Body component includes:
             <li>
                 <strong>Admission evaluation:</strong> Key findings and diagnostic results from the admission process.</li>
             <li>
-                <strong>Patient history:</strong> A comprehensive record of the patient’s medical history prior to the hospital stay.</li>
+                <strong>Hx general Reported:</strong> A comprehensive record of the patient’s medical history prior to the hospital stay.</li>
             <li>
                 <strong>Course of hospitalisation:</strong> Progress of the patient during the hospital stay, including treatments and interventions.</li>
             <li>

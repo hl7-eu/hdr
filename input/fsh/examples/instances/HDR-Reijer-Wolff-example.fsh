@@ -80,7 +80,7 @@ Usage: #inline
 // section
 //
 * section[sectionSignificantProcedures].title = "Procedures"
-* section[=].code = $loinc#10185-7 "Hospital discharge procedures Narrative"
+* section[=].code = $loinc#10185-7 "Hospital discharge procedure note"
 // * section[1].code[+] = $loinc#29554-3 "Surgical operation note"
 * section[=].text.status = #generated
 * section[=].text.div = """
@@ -128,8 +128,8 @@ Usage: #inline
 // 
 // section
 //
-* section[sectionHospitalCourse].title = "Hospital Course"
-* section[=].code = $loinc#8648-8 "Hospital Course"
+* section[sectionHospitalCourse].title = "Hospital course note"
+* section[=].code = $loinc#8648-8 "Hospital course note"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -209,7 +209,7 @@ Title: "Encounter: Hospital Admission and Discharge"
 Description: "A sample Encounter resource for a hospital admission and discharge."
 Usage: #example
 * id = "12fef60c-1fe7-4988-8286-af691889a3f3"
-* status = #finished
+* status = $encounter-status#finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP
 * period.start = "2025-04-20T10:00:00+01:00"
 * period.end = "2025-04-29T11:00:00+01:00"

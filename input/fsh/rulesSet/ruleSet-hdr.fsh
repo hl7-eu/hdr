@@ -47,7 +47,7 @@ RuleSet: EvaluationSubSectionRules
     Vital signs,
     The Vital signs section includes blood pressure\, body temperature\, heart rate\, and respiratory rate. It may also include other clinical findings\, such as height\, weight\, body mass index\, head circumference\, and pulse oximetry. In particular\, notable vital signs or physical findings such as the most recent\, maximum and/or minimum\, baseline\, or relevant trends may be included,
     $loinc#8716-3) 
-/*   * title = "Vital signs"
+/*   * title = "Vital signs note"
   * code = $sct#1184593002 "Vital sign document section (record artifact)" */
   * entry 1..
   

@@ -62,6 +62,24 @@
         </thead>
         <tbody>
           <tr>
+            <td>header.subject</td>
+            <td>Patient/subject information.</td>
+            <td>equivalent</td>
+            <td>Encounter</td>
+            <td>subject</td>
+            <td>The patient or subject of care.</td>
+            <td>Reference to PatientEuCore.</td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>Business identifier for the object.</td>
+            <td>equivalent</td>
+            <td>Encounter</td>
+            <td>identifier</td>
+            <td>Identifier(s) for the encounter.</td>
+            <td></td>
+          </tr>
+          <tr>
             <td>header.author[x]</td>
             <td>Author responsible for the encounter.</td>
             <td>related-to</td>
@@ -71,6 +89,15 @@
             <td>Use participant.type to capture author role if needed.</td>
           </tr>
           <tr>
+            <td>header.date</td>
+            <td>Date/time of authoring/issuing.</td>
+            <td>related-to</td>
+            <td>Encounter</td>
+            <td>period.start</td>
+            <td>Start of the encounter period.</td>
+            <td>No dedicated authoring timestamp in Encounter; use an extension if needed.</td>
+          </tr>
+          <tr>
             <td>header.status</td>
             <td>Status of the encounter.</td>
             <td>equivalent</td>
@@ -78,6 +105,24 @@
             <td>status</td>
             <td>Current state of the encounter.</td>
             <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.source</td>
+            <td>Source of information.</td>
+            <td>no-map</td>
+            <td>Encounter</td>
+            <td></td>
+            <td></td>
+            <td>No native element; use an extension if needed.</td>
+          </tr>
+          <tr>
+            <td>header.language</td>
+            <td>Language in which the resource is written.</td>
+            <td>equivalent</td>
+            <td>Encounter</td>
+            <td>language</td>
+            <td>Language of the resource.</td>
+            <td>IETF language tag.</td>
           </tr>
           <tr>
             <td>priority</td>

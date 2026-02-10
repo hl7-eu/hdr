@@ -1,14 +1,10 @@
 {
   "package-id" : "hl7.fhir.eu.hdr",
-  "version" : "0.1.0-ballot",
-  "path" : "http://hl7.eu/fhir/hdr/0.1.0-ballot",
-  "ci-build": "https://build.fhir.org/ig/hl7-eu/hdr",
-  "first": true,
-  "desc" : "This is the first ballot of the Imaging Study report STU 1", 
-  "category" : "Discharge Report",
-  "introduction" : "This implementation guide specifies the Hospital Discharge Report in the European context, as defined in eHN Hospital Discharge Report guidelines.",
-  "title" : "HL7 Europe Hospital Discharge Report",
+  "version" : "1.0.0-ci-build",
+  "path" : "http://hl7.eu/fhir/hdr/1.0.0",
+  "desc" : "This is the Hospital Discharge Report STU 1", 
   "mode": "milestone",
-  "status" : "ballot",
-  "sequence" : "STU 1"
+  "status" : "trial-use",
+  "sequence" : "STU 1",  
+  "changes" : "changes.html"
 }

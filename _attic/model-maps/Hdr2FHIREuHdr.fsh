@@ -52,11 +52,11 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "Covered by more sections. See the Admission Evaluation model and map for details"
 * group[=].element[+].code = #HospitalDischargeReport.body.patientHistory
-* group[=].element[=].display = "A.2.5 - Patient history"
+* group[=].element[=].display = "A.2.5 - Hx general Reported"
 * group[=].element[=].target.code = #Composition.section
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
-* group[=].element[=].target.comment = "Covered by more sections. See the Patient History model and map for details"
+* group[=].element[=].target.comment = "Covered by more sections. See the Hx general Reported model and map for details"
 * group[=].element[+].code = #HospitalDischargeReport.body.hospitalStay
 * group[=].element[=].display = "A.2.6 - Course of hospitalisation (Hospital stay)"
 * group[=].element[=].target.code = #Composition.section
