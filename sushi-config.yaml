@@ -74,12 +74,10 @@ pages:
     title: Design Approach 
   references.md:
     title: References 
-  model-map.md:
-    title: Model Maps
+ # model-map.md:
+ #   title: Model Maps
   modelmap.xml:
     title: Model Map Overview
-  map-ehdsdischargereport.xml:
-    title: EHDSDischargeReport Mapping
   dependencies.md:
     title: Dependencies
   copyright.md:
@@ -87,8 +85,14 @@ pages:
   x-version.md:
     title: Cross version analysis
     
-
   # === MAP ====
+  map-ehdsdischargereport.xml:
+    title: EHDSDischargeReport Mapping
+  map-ehdsrelatedperson.xml:
+    title: EHDSRelatedPerson Mapping
+  map-ehdsencounter.xml:
+    title: EHDSEncounter Mapping
+
   # HospitalDischargeReport-map.html:
   #   title: HospitalDischargeReport Relationships
   # Header-map.html:
@@ -207,6 +211,8 @@ menu:
   Implementation:
     Model Maps: modelmap.html
     EHDSDischargeReport Mapping: map-ehdsdischargereport.html
+    EHDSRelatedPerson Mapping: map-ehdsrelatedperson.html
+    EHDSEncounter Mapping: map-ehdsencounter.html
   About:
     Authors and contributors: contributors.html
     Dependencies: dependencies.html

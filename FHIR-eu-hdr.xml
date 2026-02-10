@@ -149,6 +149,8 @@
 <page key="design" name="Design Approach"/>
 <page key="downloads" name="Downloads"/>
 <page key="map-ehdsdischargereport" name="EHDSDischargeReport Mapping"/>
+<page key="map-ehdsencounter" name="EHDSEncounter Mapping"/>
+<page key="map-ehdsrelatedperson" name="EHDSRelatedPerson Mapping"/>
 <page deprecated="true" key="FunctionalStatus-map" name="FunctionalStatus Relationships"/>
 <page deprecated="true" key="Header-map" name="Header Relationships"/>
 <page key="index" name="Home"/>
@@ -160,7 +162,7 @@
 <page key="logicalModel" name="Logical Models"/>
 <page deprecated="true" key="MedicationSummary-map" name="MedicationSummary Relationships"/>
 <page key="modelmap" name="Model Map Overview"/>
-<page key="model-map" name="Model Maps"/>
+<page deprecated="true" key="model-map" name="Model Maps"/>
 <page deprecated="true" key="ObjectiveFindings-map" name="ObjectiveFindings Relationships"/>
 <page key="obligations" name="Obligations"/>
 <page deprecated="true" key="PatientHistory-map" name="PatientHistory Relationships"/>
