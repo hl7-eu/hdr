@@ -37,8 +37,8 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 
 * section[sectionAdmissionEvaluation] insert ObligationSet2
 
-* section[sectionAnthropometry]
-  * entry 0..
+/* * section[sectionAnthropometry]
+  * entry 0.. */
 
 
 * section[sectionVitalSigns]

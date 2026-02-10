@@ -75,6 +75,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 // Anthropometric Observations is an indipendet section or is part of the Vital Signs ? 
 
 
+/* === Commented for the time being
 * section contains sectionAnthropometry 0..1
 * section[sectionAnthropometry]
   * insert SectionComRules (
@@ -83,6 +84,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     TemporaryHDRSystem#anthropometry) // to be updated
   * entry 0..
   * entry only Reference(Observation or DocumentReference or $vitalsigns)
+
+*/
 
 
 * section contains sectionVitalSigns 0..1
