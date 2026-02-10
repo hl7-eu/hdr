@@ -13,7 +13,7 @@
 <artifact deprecated="true" id="StructureDefinition/Alerts" key="StructureDefinition-Alerts" name="A.2.2 - Alerts (eHN)"/>
 <artifact deprecated="true" id="StructureDefinition/InPatientEncounter" key="StructureDefinition-InPatientEncounter" name="A.2.3 - Encounter (eHN)"/>
 <artifact deprecated="true" id="StructureDefinition/AdmissionEvaluation" key="StructureDefinition-AdmissionEvaluation" name="A.2.4 - Admission evaluation (eHN)"/>
-<artifact deprecated="true" id="StructureDefinition/PatientHistory" key="StructureDefinition-PatientHistory" name="A.2.5 - Hx general Reported (eHN)"/>
+<artifact deprecated="true" id="StructureDefinition/PatientHistory" key="StructureDefinition-PatientHistory" name="A.2.5 - Patient history (eHN)"/>
 <artifact deprecated="true" id="StructureDefinition/HospitalStay" key="StructureDefinition-HospitalStay" name="A.2.6 - Hospital stay (eHN)"/>
 <artifact deprecated="true" id="StructureDefinition/DischargeDetails" key="StructureDefinition-DischargeDetails" name="A.2.7 - Discharge details (eHN)"/>
 <artifact deprecated="true" id="StructureDefinition/ObjectiveFindings" key="StructureDefinition-ObjectiveFindings" name="A.2.7.1 - Objective findings"/>
@@ -132,7 +132,7 @@
 <artifact deprecated="true" id="ConceptMap/hospitalStay2FHIR-eu-hdr" key="ConceptMap-hospitalStay2FHIR-eu-hdr" name="eHN Hospital Stay Model to this guide Map"/>
 <artifact deprecated="true" id="ConceptMap/medicationSummary2FHIR-eu-hdr" key="ConceptMap-medicationSummary2FHIR-eu-hdr" name="eHN Medication Summary Model to this guide Map"/>
 <artifact deprecated="true" id="ConceptMap/objectiveFindings2FHIR-eu-hdr" key="ConceptMap-objectiveFindings2FHIR-eu-hdr" name="eHN Objective Findings Model to this guide Map"/>
-<artifact deprecated="true" id="ConceptMap/patientHistory2FHIR-eu-hdr" key="ConceptMap-patientHistory2FHIR-eu-hdr" name="eHN Hx general Reported Model to this guide Map"/>
+<artifact deprecated="true" id="ConceptMap/patientHistory2FHIR-eu-hdr" key="ConceptMap-patientHistory2FHIR-eu-hdr" name="eHN Patient History Model to this guide Map"/>
 <artifact deprecated="true" id="ConceptMap/planOfCare2FHIR-eu-hdr" key="ConceptMap-planOfCare2FHIR-eu-hdr" name="eHN Plan of Care Model to this guide Map"/>
 <artifact deprecated="true" id="ConceptMap/subject2FHIR-eu-hdr" key="ConceptMap-subject2FHIR-eu-hdr" name="eHN Subject Model to this guide Map"/>
 <page key="NA" name="(NA)"/>

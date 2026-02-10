@@ -33,7 +33,7 @@ sectionImmunizations
 1) compare and merge devicesUSeStatement profile with EPS
 2) CarePlanEuHdr should we aling with EPS ?
 3) sectionDischargeInstructions to be removed ?
-4) 
+4) remove temporary codes / revise used codes
 
 
 
