@@ -97,11 +97,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * entry 0..
   * entry only Reference(Observation or DocumentReference or $vitalsigns)
 
-// ===============================
-// CLarify which of the two maps Physical examination (or both)
-// ===============================
-
-
 // -------------------------------------
 // Physical findings  Section 0 .. 1
 // -------------------------------------

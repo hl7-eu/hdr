@@ -21,10 +21,10 @@
 <artifact deprecated="true" id="StructureDefinition/PlanOfCare" key="StructureDefinition-PlanOfCare" name="A.2.8.1 - Care plan"/>
 <artifact deprecated="true" id="StructureDefinition/MedicationSummary" key="StructureDefinition-MedicationSummary" name="A.2.8.2 - Medication summary"/>
 <artifact id="ValueSet/admission-urgency-eu-hdr" key="ValueSet-admission-urgency-eu-hdr" name="Admission Urgency Value Set"/>
-<artifact id="ValueSet/allergens-eu-hdr" key="ValueSet-allergens-eu-hdr" name="Allergens Value Set"/>
-<artifact id="ValueSet/allergy-intolerance-substances-eu-hdr" key="ValueSet-allergy-intolerance-substances-eu-hdr" name="Allergy Intolerance"/>
+<artifact deprecated="true" id="ValueSet/allergens-eu-hdr" key="ValueSet-allergens-eu-hdr" name="Allergens Value Set"/>
+<artifact deprecated="true" id="ValueSet/allergy-intolerance-substances-eu-hdr" key="ValueSet-allergy-intolerance-substances-eu-hdr" name="Allergy Intolerance"/>
 <artifact deprecated="true" id="StructureDefinition/allergyIntolerance-eu-hdr" key="StructureDefinition-allergyIntolerance-eu-hdr" name="Allergy Intolerance (HDR)"/>
-<artifact id="ValueSet/allergy-intolerance-eu-hdr" key="ValueSet-allergy-intolerance-eu-hdr" name="Allergy Intolerance (with exceptions)"/>
+<artifact deprecated="true" id="ValueSet/allergy-intolerance-eu-hdr" key="ValueSet-allergy-intolerance-eu-hdr" name="Allergy Intolerance (with exceptions)"/>
 <artifact id="StructureDefinition/allergyIntolerance-obl-eu-hdr" key="StructureDefinition-allergyIntolerance-obl-eu-hdr" name="Allergy Intolerance: obligations"/>
 <artifact id="AllergyIntolerance/penicillin-allergy" key="AllergyIntolerance-penicillin-allergy" name="AllergyIntolerance: Critical Allergy to Penicillin"/>
 <artifact id="StructureDefinition/bundle-eu-hdr" key="StructureDefinition-bundle-eu-hdr" name="Bundle (HDR)"/>
@@ -54,10 +54,10 @@
 <artifact id="StructureDefinition/deviceUseStatement-obl-eu-hdr" key="StructureDefinition-deviceUseStatement-obl-eu-hdr" name="DeviceUseStatement: obligations"/>
 <artifact id="StructureDefinition/encounter-eu-hdr" key="StructureDefinition-encounter-eu-hdr" name="Encounter (HDR)"/>
 <artifact id="ValueSet/hdr-encounterClass-eu-hdr" key="ValueSet-hdr-encounterClass-eu-hdr" name="Encounter Class Value Set"/>
-<artifact id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
+<artifact deprecated="true" id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
 <artifact id="Encounter/12fef60c-1fe7-4988-8286-af691889a3f3" key="Encounter-12fef60c-1fe7-4988-8286-af691889a3f3" name="Encounter: Hospital Admission and Discharge"/>
 <artifact id="StructureDefinition/encounter-obl-eu-hdr" key="StructureDefinition-encounter-obl-eu-hdr" name="Encounter: obligations"/>
-<artifact id="ValueSet/exposureAgent-eu-hdr" key="ValueSet-exposureAgent-eu-hdr" name="Exposure of transmissible agents"/>
+<artifact deprecated="true" id="ValueSet/exposureAgent-eu-hdr" key="ValueSet-exposureAgent-eu-hdr" name="Exposure of transmissible agents"/>
 <artifact deprecated="true" id="StructureDefinition/familyMemberHistory-eu-hdr" key="StructureDefinition-familyMemberHistory-eu-hdr" name="FamilyMemberHistory (HDR)"/>
 <artifact id="FamilyMemberHistory/635c22e7-d7f1-45ad-9b4d-d4fe35239085" key="FamilyMemberHistory-635c22e7-d7f1-45ad-9b4d-d4fe35239085" name="FamilyMemberHistory: Family History of Type 2 Diabetes Mellitus - Mother"/>
 <artifact deprecated="true" id="StructureDefinition/familyMemberHistory-obl-eu-hdr" key="StructureDefinition-familyMemberHistory-obl-eu-hdr" name="FamilyMemberHistory: obligations"/>
@@ -113,15 +113,15 @@
 <artifact id="Patient/patient-swart" key="Patient-patient-swart" name="Patient: Dutch Patient"/>
 <artifact id="StructureDefinition/patient-obl-eu-hdr" key="StructureDefinition-patient-obl-eu-hdr" name="Patient: obligations"/>
 <artifact deprecated="true" id="StructureDefinition/procedure-eu-hdr" key="StructureDefinition-procedure-eu-hdr" name="Procedure (HDR)"/>
-<artifact id="ValueSet/procedure-snomed-eu-hdr" key="ValueSet-procedure-snomed-eu-hdr" name="Procedure codes: Snomed CT"/>
+<artifact deprecated="true" id="ValueSet/procedure-snomed-eu-hdr" key="ValueSet-procedure-snomed-eu-hdr" name="Procedure codes: Snomed CT"/>
 <artifact id="Procedure/sectio-swart" key="Procedure-sectio-swart" name="Procedure: Sectio caesarea"/>
 <artifact id="StructureDefinition/procedure-obl-eu-hdr" key="StructureDefinition-procedure-obl-eu-hdr" name="Procedure: obligations"/>
-<artifact id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
-<artifact id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
+<artifact deprecated="true" id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
+<artifact deprecated="true" id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
 <artifact id="StructureDefinition/specimen-obl-eu-hdr" key="StructureDefinition-specimen-obl-eu-hdr" name="Specimen: obligations"/>
 <artifact id="CodeSystem/temporarySystem-hdr-eu" key="CodeSystem-temporarySystem-hdr-eu" name="Temporary HDR Code System"/>
-<artifact id="ValueSet/eHDSIConditionPOA" key="ValueSet-eHDSIConditionPOA" name="eHDSI Condition Present On Admission"/>
-<artifact id="ValueSet/eHDSITreatmentClass" key="ValueSet-eHDSITreatmentClass" name="eHDSI Treatment Class"/>
+<artifact deprecated="true" id="ValueSet/eHDSIConditionPOA" key="ValueSet-eHDSIConditionPOA" name="eHDSI Condition Present On Admission"/>
+<artifact deprecated="true" id="ValueSet/eHDSITreatmentClass" key="ValueSet-eHDSITreatmentClass" name="eHDSI Treatment Class"/>
 <artifact deprecated="true" id="ConceptMap/admissionEvaluation2FHIR-eu-hdr" key="ConceptMap-admissionEvaluation2FHIR-eu-hdr" name="eHN Admission Evaluation Model to this guide Map"/>
 <artifact deprecated="true" id="ConceptMap/advanceDirectives2FHIR-eu-hdr" key="ConceptMap-advanceDirectives2FHIR-eu-hdr" name="eHN Advance Directives Model to this guide Map"/>
 <artifact deprecated="true" id="ConceptMap/alerts2FHIR-eu-hdr" key="ConceptMap-alerts2FHIR-eu-hdr" name="eHN Alerts Model to this guide Map"/>
