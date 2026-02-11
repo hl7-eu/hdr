@@ -37,8 +37,8 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 
 * section[sectionAdmissionEvaluation] insert ObligationSet2
 
-* section[sectionAnthropometry]
-  * entry 0..
+/* * section[sectionAnthropometry]
+  * entry 0.. */
 
 
 * section[sectionVitalSigns]
@@ -98,67 +98,37 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
   * entry insert ObligationSet2
 
 
-* section[sectionPayers]
-  * entry 
 
 * section[sectionPatientHx] insert ObligationSet2
 
-* section[sectionProblemList] insert ObligationSet3
+* section[sectionProblems] insert ObligationSet3
   * entry 0..
 
 
-* section[sectionPastIllnessHx]
-  * entry 0..
 
-* section[sectionHistoryMedicalDevices] insert ObligationSet3
-  * entry 0..
-
-* section[sectionProceduresHx] insert ObligationSet3
-  * entry 0..
 
 
 * section[sectionImmunizations] insert ObligationSet3
   * entry 0..
 
-* section[sectionInfectiousContacts]
-  * entry 0..*
 
 
-* section[sectionTravelHx]
-  * entry 0..*
 
 
-* section[sectionFamilyHistory]
-  * entry 0..
 
-* section[sectionSocialHistory]
-  * entry 0..
 
-* section[sectionSubstanceUse]
-  * entry 0..
 
-* section[sectionAlcoholUse]
-  * entry 0..
-
-* section[sectionTobaccoUse]
-  * entry 0..
-
-* section[sectionDrugUse]
-  * entry 0..
 
 * section[sectionDischargeDetails] insert ObligationSet2
  
-* section[sectionAdvanceDirectives]
-  * entry 
-
 
 // -------------------------------------
-// Care Team 0 … 1
+// Care Team 0 â€¦ 1
 // -------------------------------------
-* section[sectionCareTeam] 
-
 
 * section[sectionAttachments]
   * entry insert ObligationSet1
+
+
 
 

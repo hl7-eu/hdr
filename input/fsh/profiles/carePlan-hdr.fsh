@@ -6,7 +6,7 @@ Description: """This profile constrains the CarePlan resource for the purpose of
 
 * title ^short = "Name for the care plan"
 * addresses ^short = "Health issues this plan addresses."
-* addresses only Reference (ConditionEuHdr)
+* addresses only Reference (ConditionEuCore)
 * description ^short = "Summary of nature of plan."
 * period ^short = "Period covered by the plan"
 

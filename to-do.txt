@@ -1,22 +1,39 @@
-fix IPS dependency to 1.1.0
-check dependencies version
+ Sections not referred by the xtehr model
 
-Jira specs
+sectionDischargeInstructions
+sectionAllergies
+sectionPayers
+sectionProblemList
+sectionPastIllnessHx
+sectionHistoryMedicalDevices
+sectionProceduresHx
+sectionImmunizations
+sectionInfectiousContacts
+sectionTravelHx
+sectionFamilyHistory
+sectionSocialHistory
+sectionSubstanceUse
+sectionAlcoholUse
+sectionTobaccoUse
+sectionDrugUse
+sectionAdvanceDirectives
+sectionCareTeamRules
+
+
+Kept for the time being 
+
+
+sectionDischargeInstructions
+sectionAllergies
+sectionProblemList
+sectionImmunizations
+
+// TO DO
+
+1) compare and merge devicesUSeStatement profile with EPS
+2) CarePlanEuHdr should we aling with EPS ?
+3) sectionDischargeInstructions to be removed ?
+4) remove temporary codes / revise used codes
 
 
 
-Missing examples
-
-
-
-
-(*) WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/consent-eu-hdr'): The Implementation Guide contains no examples for this profile
-(*) WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/observation-sdoh-eu-hdr'): The Implementation Guide contains no examples for this profile
-(*) WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/medicationDispense-eu-hdr'): The Implementation Guide contains no examples for this profile 
-
-
-
-Not explicit examples
-INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/observation-imgFinding-eu-hdr'): The Implementation Guide contains no explicitly linked examples for this profile
-(*) INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/procedure-eu-hdr'): The Implementation Guide contains no explicitly linked examples for this profile
-(*) INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/carePlan-eu-hdr'): The Implementation Guide contains no explicitly linked examples for this profile

@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>EHDSDischargeReport -> Composition (HDR)</title>
+  </head>
+  <body>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Ongoing alignment:</strong>
+              The Xt-EHR logical models are under active revision and continuous refinement.
+              Updates from Xt-EHR will be progressively incorporated into this Implementation
+              Guide to maintain alignment with the evolving EHDS specifications.
+        </div>
+      </div>
+    </div>
+    <h3>EHDSDischargeReport -> Composition (HDR)</h3>
+    <a> </a>
+    <p></p>
+    <p>
+      This page explains how conceptual elements from the EHDSDischargeReport logical model are expressed
+      in the corresponding FHIR CompositionEuHdr profile used by this Implementation Guide.
+    </p>
+    <p></p>
+    <div class="table-wrap">
+      <strong>Mapping Context</strong>
+      <ul>
+        <li>
+          <strong>Source logical model:</strong>
+          <a href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSDischargeReport.html" target="_blank">
+            EHDSDischargeReport
+          </a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-composition-eu-hdr.html">
+            CompositionEuHdr
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p></p>
+    <div class="table-wrap">
+      <table summary="EHDSDischargeReport -> Composition (HDR)">
+        <caption>EHDSDischargeReport -> Composition (HDR)</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">EHDSDischargeReport (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">Composition (HDR)</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Description</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- HEADER BLOCK -->
+          <tr>
+            <td>header</td>
+            <td>Document header elements.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>.</td>
+            <td>Composition-level metadata.</td>
+            <td>CompositionEuHdr constrains header elements for HDR.</td>
+          </tr>
+          <tr>
+            <td>header.author[x]</td>
+            <td>The author of the report.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>author</td>
+            <td>Who authored the HDR.</td>
+            <td>Reference to Practitioner/PractitionerRole/Organization/Device per profile.</td>
+          </tr>
+          <tr>
+            <td>header.status</td>
+            <td>Status of the document.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>status</td>
+            <td>Workflow/clinical status of the HDR.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.documentType</td>
+            <td>Type of document (e.g. LOINC 34105-7).</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>type</td>
+            <td>Document type code.</td>
+            <td>Fixed to LOINC 34105-7 in CompositionEuHdr.</td>
+          </tr>
+          <tr>
+            <td>header.documentTitle</td>
+            <td>Title of the document.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>title</td>
+            <td>Human-readable HDR title.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.period</td>
+            <td>Time of service being documented.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>event.period</td>
+            <td>Period covered by the composition.</td>
+            <td>Map to the primary Composition.event entry.</td>
+          </tr>
+          <tr>
+            <td>header.intendedRecipient[x]</td>
+            <td>Intended recipient(s) of the information.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>extension:information-recipient</td>
+            <td>Explicit communication intent.</td>
+            <td>Uses the information-recipient extension in CompositionEuHdr.</td>
+          </tr>
+
+          <!-- ENCOUNTER INFORMATION -->
+          <tr>
+            <td>body.encounterInformation</td>
+            <td>Section: Encounter information.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>encounter</td>
+            <td>Encounter referenced by the HDR.</td>
+            <td>Use EncounterEuHdr.</td>
+          </tr>
+          <tr>
+            <td>body.encounterInformation.generatedNarrative</td>
+            <td>Narrative of encounter information.</td>
+            <td>related-to</td>
+            <td>Encounter</td>
+            <td>text</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.encounterInformation.encounter</td>
+            <td>Encounter information.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>encounter</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.encounterInformation.note</td>
+            <td>Free text notes by the health professional.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>extension:note</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <!-- ALERTS -->
+          <tr>
+            <td>body.alerts</td>
+            <td>Section: Alerts.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAlert</td>
+            <td>Alerts section.</td>
+            <td>Use LOINC 104605-1.</td>
+          </tr>
+          <tr>
+            <td>body.alerts.generatedNarrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAlert.text</td>
+            <td>Alerts narrative.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.alerts.medicalAlert</td>
+            <td>Description of medical alerts.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAlert</td>
+            <td>Alert entries.</td>
+            <td>Reference to Flag (EHDSAlert).</td>
+          </tr>
+
+          <!-- ADMISSION EVALUATION -->
+          <tr>
+            <td>body.admissionEvaluation</td>
+            <td>Section: Admission evaluation.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAdmissionEvaluation</td>
+            <td>Admission evaluation section.</td>
+            <td>Reported only if relevant.</td>
+          </tr>
+          <tr>
+            <td>body.admissionEvaluation.generatedNarrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAdmissionEvaluation.text</td>
+            <td>Admission evaluation narrative.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>body.admissionEvaluation.objectiveFindings</td>
+            <td>Objective findings.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionVitalSigns</td>
+            <td>Vital signs section.</td>
+            <td>Use Observation where appropriate.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>body.admissionEvaluation.objectiveFindings</td>
+            <td>Objective findings.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionAnthropometry</td>
+            <td>Anthropometry section.</td>
+            <td>Use Observation where appropriate.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>body.admissionEvaluation.objectiveFindings</td>
+            <td>Objective findings.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionPhysicalFindings</td>
+            <td>Physical findings section.</td>
+            <td>Use Observation where appropriate.</td>
+          </tr>
+          <tr>
+            <td>body.admissionEvaluation.functionalStatus[x]</td>
+            <td>Functional status assessment.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionFunctionalStatus</td>
+            <td>Functional status entries.</td>
+            <td>Condition/Observation/ClinicalImpression as allowed.</td>
+          </tr>
+          <tr>
+            <td>body.admissionEvaluation.note</td>
+            <td>Free text notes by the evaluation performer.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionAdmissionEvaluation.text</td>
+            <td>Admission evaluation narrative.</td>
+            <td></td>
+          </tr>
+
+          <!-- Hx general Reported -->
+          <tr>
+            <td>body.patientHistory</td>
+            <td>Section: Patient health history.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionPatientHx</td>
+            <td>Hx general Reported section.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.patientHistory.generatedNarrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionPatientHx.text</td>
+            <td>Hx general Reported narrative.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.patientHistory.note</td>
+            <td>Free text notes by the health professional.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionPatientHx.extension:note</td>
+            <td>Hx general Reported notes.</td>
+            <td></td>
+          </tr>
+
+          <!-- COURSE OF ENCOUNTER -->
+          <tr>
+            <td>body.courseOfEncounter</td>
+            <td>Course of encounter.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionHospitalCourse</td>
+            <td>Hospital course section.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.generatedNarrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionHospitalCourse.text</td>
+            <td>Hospital course narrative.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.diagnosticSummary</td>
+            <td>Problems treated or affecting care.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionDiagnosticSummary</td>
+            <td>Diagnostic summary section.</td>
+            <td>Reference to ConditionEuCore.</td>
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.procedures</td>
+            <td>Procedures performed during encounter.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionSignificantProcedures</td>
+            <td>Significant procedures section.</td>
+            <td>Reference to ProcedureEuCore.</td>
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.medicalDevicesAndImplants</td>
+            <td>Medical devices and implants.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionMedicalDevices</td>
+            <td>Medical devices section.</td>
+            <td>Reference to DeviceUseStatementEuHdr.</td>
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.pharmacotherapy</td>
+            <td>Medication treatments during encounter.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionPharmacotherapy</td>
+            <td>Pharmacotherapy section.</td>
+            <td>MedicationStatement/Request/Dispense/Administration.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>body.courseOfEncounter.objectiveFindings</td>
+            <td>Objective findings during encounter.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionVitalSigns</td>
+            <td>Vital signs section.</td>
+            <td>Use Observation where appropriate.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>body.courseOfEncounter.objectiveFindings</td>
+            <td>Objective findings during encounter.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionAnthropometry</td>
+            <td>Anthropometry section.</td>
+            <td>Use Observation where appropriate.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>body.courseOfEncounter.objectiveFindings</td>
+            <td>Objective findings during encounter.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionPhysicalFindings</td>
+            <td>Physical findings section.</td>
+            <td>Use Observation where appropriate.</td>
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.testResults</td>
+            <td>Significant medical test results.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionSignificantResults</td>
+            <td>Significant results section.</td>
+            <td>Observation/DiagnosticReport/DocumentReference.</td>
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.note</td>
+            <td>Free text notes.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionHospitalCourse.text</td>
+            <td>Hospital course narrative.</td>
+            <td></td>
+          </tr>
+
+          <!-- DISCHARGE DETAILS -->
+          <tr>
+            <td>body.dischargeDetails</td>
+            <td>Discharge details.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeDetails</td>
+            <td>Discharge details section.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.dischargeDetails.generatedNarrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeDetails.text</td>
+            <td>Discharge details narrative.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>body.dischargeDetails.objectiveFindings</td>
+            <td>Objective findings at discharge.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionPhysicalFindings / section:sectionVitalSigns</td>
+            <td>Discharge findings.</td>
+            <td>Use Observation where appropriate.</td>
+          </tr>
+          <tr>
+            <td>body.dischargeDetails.functionalStatus[x]</td>
+            <td>Functional status at discharge.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionFunctionalStatus</td>
+            <td>Functional status entries.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.dischargeDetails.note</td>
+            <td>Free text notes.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeDetails.text</td>
+            <td>Discharge details narrative.</td>
+            <td></td>
+          </tr>
+
+          <!-- MEDICATION SUMMARY -->
+          <tr>
+            <td>body.medicationSummary</td>
+            <td>Medication summary after discharge.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeMedications</td>
+            <td>Discharge medications section.</td>
+            <td>Post-discharge medications summary.</td>
+          </tr>
+          <tr>
+            <td>body.medicationSummary.generatedNarrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeMedications.text</td>
+            <td>Discharge medications narrative.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.medicationSummary.medicationUse</td>
+            <td>Details about medication and dosage.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeMedications</td>
+            <td>Discharge medications section.</td>
+            <td>MedicationRequest/MedicationDispense/MedicationStatement.</td>
+          </tr>
+          <tr>
+            <td>body.medicationSummary.note</td>
+            <td>Free text notes.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeMedications.text</td>
+            <td>Discharge medications narrative.</td>
+            <td></td>
+          </tr>
+
+          <!-- CARE PLAN -->
+          <tr>
+            <td>body.carePlan</td>
+            <td>Care plan and recommendations after discharge.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionPlanOfCare</td>
+            <td>Plan of care section.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.carePlan.generatedNarrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionPlanOfCare.text</td>
+            <td>Plan of care narrative.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.carePlan.carePlan</td>
+            <td>Structured care plan after discharge.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionPlanOfCare</td>
+            <td>Plan of care section.</td>
+            <td>Reference to CarePlanEuHdr.</td>
+          </tr>
+          <tr>
+            <td>body.carePlan.otherRecommendations</td>
+            <td>Other recommendations after discharge.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionPlanOfCare.text</td>
+            <td>Plan of care narrative.</td>
+            <td>May also be represented in Discharge Instructions narrative.</td>
+          </tr>
+
+          <!-- SYNTHESIS -->
+          <tr>
+            <td>body.synthesis</td>
+            <td>Clinical synthesis.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionSynthesis.text</td>
+            <td>Synthesis narrative.</td>
+            <td></td>
+          </tr>
+
+          <!-- ATTACHMENTS -->
+          <tr>
+            <td>attachments</td>
+            <td>Report attachments.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAttachments</td>
+            <td>Attachments section.</td>
+            <td>DocumentReference/Binary in CompositionEuHdr.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:2rem;color:#555;">
+      Return to overview: <a href="modelmap.html">EHDS Logical Models -> FHIR Profiles</a>
+    </p>
+  </body>
+</div>

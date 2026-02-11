@@ -1,5 +1,5 @@
 Profile: SpecimenEuObligations
-Parent: SpecimenEu
+Parent: Specimen
 Id: specimen-obl-eu-hdr
 Title:    "Specimen: obligations"
 Description: "This profile defines obligations for Specimen in FHIR for the purpose of this guide."
@@ -14,7 +14,7 @@ Description: "This profile defines obligations for Specimen in FHIR for the purp
 * request insert ObligationSet2
 * collection insert ObligationSet1
   * bodySite insert ObligationSet1
-  * extension[bodySite] insert ObligationSet2
+//  * extension[bodySite] insert ObligationSet2
 * processing.additive insert ObligationSet2
 * container insert ObligationSet1
   * type insert ObligationSet1  

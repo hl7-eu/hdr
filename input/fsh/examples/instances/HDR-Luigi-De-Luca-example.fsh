@@ -129,7 +129,7 @@ Instance: encounter-luca-example
 InstanceOf: EncounterEuHdr
 Usage: #inline
 * id = "7c9a2bf1-507f-4d43-b06e-d78e9670379d"
-* status = #finished
+* status = $encounter-status#finished
 * class = $v3-ActCode#IMP
 * period.start = "2025-04-01T08:45:00Z"
 * period.end = "2025-04-10T11:00:00Z"
@@ -174,8 +174,9 @@ Usage: #example
 // 
 // section
 //
-* section[sectionFamilyHistory].title = "Family History"
-* section[=].code = $loinc#10157-6 "History of family member diseases Narrative"
+// * section[sectionFamilyHistory].title = "Family History"
+* section[+].title = "Family History"
+* section[=].code = $loinc#10157-6 "History of family member diseases note"
 * section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -187,8 +188,8 @@ Usage: #example
 // 
 // section
 //
-* section[sectionVitalSigns].title = "Vital signs"
-* section[=].code = $loinc#8716-3 "Vital signs"
+* section[sectionVitalSigns].title = "Vital signs note"
+* section[=].code = $loinc#8716-3 "Vital signs note"
 * section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -222,7 +223,8 @@ Usage: #example
 // 
 // section
 //
-* section[sectionTobaccoUse].title = "Tobacco use"
+// * section[sectionTobaccoUse].title = "Tobacco use"
+* section[+].title = "Tobacco use"
 * section[=].code = $loinc#11367-0 "History of Tobacco use"
 * section[=].text.status = #additional
 * section[=].text.div = """
@@ -234,8 +236,8 @@ Usage: #example
 // 
 // section
 //
-* section[sectionHospitalCourse].title = "Hospital Course"
-* section[=].code = $loinc#8648-8 "Hospital Course"
+* section[sectionHospitalCourse].title = "Hospital course note"
+* section[=].code = $loinc#8648-8 "Hospital course note"
 * section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -251,7 +253,7 @@ Usage: #example
 // section
 //
 * section[sectionSignificantResults].title = "Significant Observation Results"
-* section[=].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
+* section[=].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
 * section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -311,7 +313,7 @@ Usage: #example
 // section
 //
 * section[sectionSignificantProcedures].title = "Significant procedures"
-* section[=].code = $loinc#10185-7 "Hospital discharge procedures Narrative"
+* section[=].code = $loinc#10185-7 "Hospital discharge procedure note"
 * section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -387,7 +389,7 @@ Usage: #example
 // section
 //
 * section[sectionDiagnosticSummary].title = "Diagnosis at Discharge"
-* section[=].code = $loinc#11535-2 "Hospital discharge Dx Narrative"
+* section[=].code = $loinc#11535-2 "Hospital discharge diagnosis note"
 * section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -429,7 +431,7 @@ Usage: #example
 """
 
 Instance: diabetis-condition-luca
-InstanceOf: ConditionEuHdr
+InstanceOf: ConditionEuCore
 Title: "Condition: Type 2 Diabetes Mellitus"
 Description: "Condition for Type 2 Diabetes Mellitus, double coding with ICD-10 and SNOMED CT."
 Usage: #example
@@ -460,7 +462,7 @@ Usage: #example
 * activity[2].detail.status = #not-started
 
 Instance: lifestyle-consultation-luca
-InstanceOf: ProcedureEuHdr
+InstanceOf: ProcedureEuCore
 Usage: #inline
 * id = "92ffc1fd-71ff-4d54-bc06-25d9e1e1fea0"
 * status = #completed
@@ -469,7 +471,7 @@ Usage: #inline
 * performedDateTime = "2025-04-05"
 
 Instance: diabetes-education-luca
-InstanceOf: ProcedureEuHdr
+InstanceOf: ProcedureEuCore
 Usage: #inline
 * id = "a74a3dca-92fa-4b71-8e70-89a07ac74bc3"
 * status = #completed
@@ -478,7 +480,7 @@ Usage: #inline
 * performedDateTime = "2025-04-04"
 
 Instance: metformin-therapy-luca
-InstanceOf: ProcedureEuHdr
+InstanceOf: ProcedureEuCore
 Usage: #inline
 * id = "53a8c3c3-5d1b-4950-87bc-fddae2ebc079"
 * status = #in-progress
@@ -487,7 +489,7 @@ Usage: #inline
 * performedDateTime = "2025-04-04"
 
 Instance: familyhistory-mother-luca-example
-InstanceOf: FamilyMemberHistoryEuHdr
+InstanceOf: FamilyMemberHistory // EuHdr
 Title: "FamilyMemberHistory: Family History of Type 2 Diabetes Mellitus - Mother"
 Description: "Mother has a history of type 2 diabetes mellitus."
 Usage: #example
@@ -498,7 +500,7 @@ Usage: #example
 * condition[0].code = $sct#430679000 "Family history of diabetes mellitus type 2 (situation)"
 
 Instance: familyhistory-grandmother-luca-example
-InstanceOf: FamilyMemberHistoryEuHdr
+InstanceOf: FamilyMemberHistory // EuHdr
 Title: "Family History of Type 2 Diabetes Mellitus - Maternal Grandmother"
 Description: "Maternal grandmother has a history of type 2 diabetes mellitus."
 Usage: #inline

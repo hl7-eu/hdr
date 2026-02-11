@@ -1,4 +1,4 @@
-Instance: example-covid19-vax-recommendation
+/* Instance: example-covid19-vax-recommendation
 InstanceOf: ImmunizationRecommendationEuHdr
 Title: "ImmunizationRecommendation: COVID-19"
 Description: "A recommendation for COVID-19 vaccination."
@@ -18,11 +18,11 @@ Description: "A recommendation for COVID-19 vaccination."
 * recommendation[0].dateCriterion[nextDose].value = "2024-11-15"
 
 * recommendation[0].doseNumberPositiveInt = 4
-* recommendation[0].seriesDosesPositiveInt = 4
+* recommendation[0].seriesDosesPositiveInt = 4 */
 
 
 Instance: example-covid19-vax-admin
-InstanceOf: ImmunizationEuHdr
+InstanceOf: ImmunizationEuCore
 Title: "Immunization: COVID-19"
 Description: "An example record of an administered COVID-19 vaccine dose."
 

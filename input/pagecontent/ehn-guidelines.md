@@ -45,7 +45,7 @@ The Hospital Discharge Report Body component includes:
 - **Alerts:** Important medical alerts like allergies or other critical patient conditions.
 - **Encounter:** Details of the hospital encounter, including admission date, reason, and type (inpatient/outpatient).
 - **Admission evaluation:** Key findings and diagnostic results from the admission process.
-- **Patient history:** A comprehensive record of the patient’s medical history prior to the hospital stay.
+- **Hx general Reported:** A comprehensive record of the patient’s medical history prior to the hospital stay.
 - **Course of hospitalisation:** Progress of the patient during the hospital stay, including treatments and interventions.
 - **Discharge details:** Information about the discharge date, destination, and post-discharge care instructions.
 - **Care plan and other recommendations after discharge:** Detailed follow-up care plan, including medications and therapy recommendations.

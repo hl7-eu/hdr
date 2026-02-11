@@ -111,36 +111,37 @@ Usage: #inline
 // 
 // section
 //
-* section[sectionPastIllnessHx].title = "Storia di malattia passata"
-* section[=].code = $loinc#11348-0 "History of Past illness Narrative"
+// * section[sectionPastIllnessHx].title = "Storia di malattia passata"
+* section[+].title = "Storia di malattia passata"
+* section[=].code = $loinc#11348-0 "History of Past illness note"
 * section[=].text.status = #additional
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">In data 01.08 sottoposto a visita urologica per nicturia frequente, riscontro di segni di prostatite per cui ha effettuato terapia con cefixima 400 mg/die per 10 giorni con relativo miglioramento dei sintomi (eseguite urinocoltura, tampone uretrale e spermiogramma ad esito negativo). <p> </p>Dal 10.08 comparsa di odontalgia a livello dell'arcata superiore destra, con Rx ortopanoramica negativa, consigliata terapia con amoxicillina/clavulanato 875/125 mg bid per 6 giorni.<p> </p>Dal 13.08 riferita faringodinia e febbricola ad andamento intermittente con astenia ingravescente, scarsa tosse non produttiva e toracoalgie aspecifiche in sede parasternale bilateralmente a carattere trafittivo. Agli esami ematici del 20.08 VES 52 mm/ora, PCR 2.69 mg/dL, NT-ProBNP 915 pg/mL, emocromo con formula conservata, iposideremia. All'elettroforesi delle proteine plasmatiche incremento alfa-1 ed alfa-2 e presenza di sospetta componente monoclonale in zona gamma.<p> </p>In data 26.08.2024 eseguita Rx torace 2P con rilievo di sfumato addensamento parenchimale di aspetto flogistico in regione perilare destra e accentuazione dell'interstizio bilateralmente. Intrapresa terapia antibiotica empirica ad ampio spettro con ceftriaxone 2 gr da ieri.<p> </p>Si ricovera in data odierna per le cure e gli accertamenti del caso.</div>"
 // 
 // section
 //
 * section[sectionPatientHx].title = "Anamnesi"
-* section[=].code = $loinc#35090-0 "Patient history"
+* section[=].code = $loinc#11329-0 "Hx general Reported"
 * section[=].text.status = #additional
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Non fumatore. Nel 2003 riscontro di Extrasistolia Ventricolare asintomatica e disfunzione sistolica del ventricolo sinistro (FE 35%), con albero coronarico indenne. Nel 2006 impianto di ICD. Alla RM FE 51% con circoscritta fibrosi intra-miocardica. Successivi episodi di fibrillazione atriale parossistica. Nel 2013: FE 28%, EDD 68 mm, IM lieve-moderata. Ai controlli dell'ICD nel 2014 e 2015: TVNS asintomatiche. Nel gennaio 2015 riscontro di trombosi atriale destra adesa al catetere del defibrillatore, dimesso con TAO. Nel giugno 2015: non pià segni di trombosi atriale. Nell'aprile 2016 introdotta mexiletina 200 mg x 2, apixaban 5 mg x 2 e sacubitril/valsartan. Nel 2017 endoplastite, trattata con estrazione reimpianto di EC da defibrillazione e sostituzione di ICD bicamerale. Nel 2018 plurime scariche dell'ICD su TV rapida dopo sforzo fisico. All'ecocardiogramma FE 23-25%. Valutato presso il Centro Trapianti dell'Ospedale di Siena. Iniziato amiodarone. Nel 2020 cateterismo destro (pressioni polmonari nei limiti). In seguito, stabilità clinica: mexiletina 200 mg x 3/die e amiodarone a 1 cpr (lunedà-venerdà). Ad aprile 2021 tireotossicosi di tipo 2 da amiodarone. Nel 2022 test genetico positivo per mutazione probabilmente patogenetica del gene DES (c.833 G&gt;A). Ultimo controllo presso Centro Trapianti di Siena a ottobre 2023 (ndn). Dal 22/11/2023 comparsa di febbre associata a brivido e astenia con accesso al  PS a Grosseto in data 24/11, positivo per SARS-CoV-2, PCR 1,63, crea 1,27 mg/dl, RX torace negativo per lesioni a focolaio. Iniziato remdesevir.  In data 25/11 shock dell'ICD in zona TV. Dimesso il 26/11. In data 01/12 /23  per nuovo episodio di tachicardia ventricolare trattata con shock del defibrillatore ricovero presso la Cardiologia e Medicina Cardiovascolare di questo Istituto. All'ingresso in reparto paziente ancora positivo al COVID (negativizzato il 7/12/23). In data 2/12 altre due TV sostenute interrotte da ATP. Sospesa mexiletina ed introdotta lidocaina per via infusionale. Ecocardiogramma con disfunzione severa e reperti invariati rispetto al precedente di maggio 2023. Positività al tampone rettale per KPC. Sospesa infusione di lidocaina in data 7 dicembre reintroducendo mexiletina con altri due shock il 9/12. Reintrodotta lidocaina ev. Massimizzata terapia anti-infiammatoria, gastroprotettiva e ansiolitica. In data 11/12 positiva al tampone per KPC. Consulenza infettivologica che in previsione di eventuale trapianto cardiaco consigliava tampone nasale (negativo). Sospesa lidocaina ev il 13/12. La sera del 14/12 TV polimorfa con falliti tentativi di ATP e nuovo shock efficace. Reintrodotta lidocaina e midazolam ev. In previsione del trasferimento presso centro trapianti, due episodi di TVS con 2 shock dopo multipli ATP inefficaci. Sottoposto la sera del 15/12 a procedura di blocco percutaneo del ganglio stellato sotto guida ecografica. Non pià aritmie sostenute dalle 17 del 15 dicembre. Trasferito presso UO Cardiochirurgia AOU Siena, vigile ed orientato, asintomatico ed emodinamicamente stabile, dove in data 21.04.2024 veniva sottoposto a trapianto cardiaco ortotopico. Nel decorso post-operatorio segnalato delirium ipercinetico, tamponamento cardiaco post-HTx (drenato il 01.05), versamento pleurico bilaterale in terapia medica, trombosi giugulare parziale bilaterale, FA parossistica. Si segnalano elettrocateteri abbandonati. In terapia antirigetto con tacrolimus, everolimus e prednisone (micofenolato sospeso per rialzo copie CMV), ultima BEM il 20 agosto 2024: rigetto cellulare 0-1.</div>"
 // 
 // section
 //
 * section[sectionPhysicalFindings].title = "Esame Obiettivo"
-* section[=].code = $loinc#29545-1 "Physical findings Narrative"
+* section[=].code = $loinc#29545-1 "Physical findings note"
 * section[=].text.status = #additional
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Azione cardiaca ritmica. Toni di normale intensità. Pause libere. Cicatrice di sternotomia mediana. Polsi arteriosi presenti nelle normali sedi, normosfigmici e simmetrici. Non soffi vascolari. Non turgore giugulare. Rumore respiratorio presente su tutto l'ambito polmonare, crepitii inspiratori fini, non modificabili con la tosse, in regione basale destra. Addome trattabile alla palpazione superficiale e profonda, margine inferiore del fegato non debordante dall'arcata costale. Non edemi declivi. Sensorio integro.<p> </p>Altezza: 171 cm; Peso: 83 Kg; Frequenza cardiaca: 72 bpm; Frequenza respiratoria: 15 br/min; Saturazione ossigeno: 92 %; Temperatura: 36 àC; Sensorio: Lucido.</div>"
 // 
 // section
 //
 * section[sectionHospitalCourse].title = "Decorso ospedaliero"
-* section[=].code = $loinc#8648-8 "Hospital course Narrative"
+* section[=].code = $loinc#8648-8 "Hospital course note"
 * section[=].text.status = #additional
 * section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">All'ingresso in reparto il paziente era stabile da un punto di vista emodinamico, apiretico ma sintomatico per dispnea da sforzo e dolore toracico anteriore in particolare in relazione agli atti respiratori e alla tosse. Al controllo ecocardiografico riscontro di normale funzione sistolica biventricolare. Agli esami ematici incremento degli indici di flogosi. Eseguita TC Torace che ha evidenziato un quadro compatibile con patologia flogistica polmonare in atto di verosimile origine virale con possibile sovrainfezione batterica a livello del lobo medio e nelle regioni dorsali dei lobi inferiori. E' stata pertanto confermata la terapia domiciliare associando, come da valutazione infettivologica, terapia antibiotica empirica ad ampio spettro (linezolid, doxicilina e piperacillina/tazobactam), cortisone per via sistemica ed ossigenoterapia. Veniva inoltre programmata broncoscopia con BAL, eseguita il giorno 28.08, con riscontro di positività per  Citomegalovirus (CMV) DNA ad alto titolo, e PCR per Pneumocystis Jiroveci con esame diretto negativo. Veniva quindi introdotta terapia mirata con ganciclovir e trimetoprim/cotrimossazolo, monitorando la funzione epatorenale, gli  indici di flogosi e l'emocromo. Una valutazione oculista ha escluso segni di retinite. Nei giorni successivi il paziente ha continuato a presentare sporadici rialzi febbrili, pertanto, per escludere ulteriori sedi di infezione, à stata eseguita una PET/TC Total Body risultata positiva solo a carico dei noti addensamenti polmonari. Nel corso della degenza, su indicazione infettivologica, sulla base dell'andamento degli esami ematochimici, sono stati adeguati i dosaggi della terapia antivirale ed antibiotica e su indicazione della Trapiantologia di Siena adeguata la posologia della terapia immunosoppressiva sulla base dei livelli ematici di tacrolimus ed everolimus. Nel corso della degenza il paziente ha presentato un progressivo miglioramento delle condizioni cliniche, dei parametri laboratoristici e degli scambi gassosi che hanno consentito la sospensione dell'ossigenoterapia, da segnalare introduzione in terapia di insulina s.c. per scarso controllo dei valori glicemici. In data 11/09 à stato ripetuto controllo TC Torace con evidenza di parziale regressione delle note lesioni polmonari e comparsa di piccole aree consolidative di verosimile natura flogistica a carico del LISn e della lingula. Alla luce di tali reperti à stato ripetuta broncoscopia con  BAL con conferma della positività, seppure a titolo ridotto, del CMV DNA (sempre negativa la ricerca su siero). Per evidenza all'emocromo di progressiva pancitopenia con prevalente neutropenia à stata ridotta la posologia del Bactrim a dosaggio profilattico ed eseguito passaggio da ganciclovir per via orale a valganciclovir associando granulochine con buona risposta midollare. In considerazione della mancata negativizzazione del CMV DNA su BAL, della mielotossicità del ganciclovir (pur in associazione con tacrolimus , everolimus e Bactrim) e dopo discussione collegiale dei colleghi infettivologi e dei referenti trapiantologi di Siena, si à concordata prescrizione di maribavir in sostituzione del valganciclovir (nel sospetto di farmacoresistenza) da assumere a domicilio, appena in possesso del farmaco, fino a negativizzazione del CMV DNA su BAL. Sono stati, inoltre, presi contatti con la Virologia Ospedale San Raffaele di Milano per le modalità di invio del campione del BAL del 16 settembre u.s. per la ricerca della farmacoresistenze del CMV. Da decidere successivamente, anche in base al risultato delle farmacoresistenza, con quale farmaco proseguire la profilassi secondaria per la riattivazione di CMV. <p> </p>Si dimette con la raccomandazione di assumere a domicilio la terapia come pià avanti riportato e di effettuare controlli dell'emocromo e della creatinina ogni 48 ore secondo andamento. Se neutrofili &lt; 1000 cellule/mm3, contattare i medici trapiantologi per concordare terapia con Granulochine e per le eventuali variazioni della posologia del tacrolimus ed everolimus. <p> </p>Controllare l'andamento della glicemia per la eventuale sospensione delle terapia con insulina in caso di ulteriore riduzione del cortisonico.<p> </p>Appena in possesso del maribavir il paziente dovrà assumerlo con le modalità riportate nell'ultima consulenza infettivologica riportata in lettera (20/9/2024).</div>"
 // 
 // section
 //
 * section[sectionDiagnosticSummary].title = "Condizioni del paziente e diagnosi alla dimissione"
-* section[=].code = $loinc#11535-2 "Hospital discharge Dx Narrative"
+* section[=].code = $loinc#11535-2 "Hospital discharge diagnosis note"
 * section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -162,7 +163,7 @@ Usage: #inline
 // section
 //
 * section[sectionDischargeMedications].title = "Terapia farmacologica alla dimissione"
-* section[=].code = $loinc#75311-1 "Discharge medications Narrative"
+* section[=].code = $loinc#75311-1 "Discharge medications note"
 * section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -203,15 +204,15 @@ Instance: encounter-ftgm-example
 InstanceOf: EncounterEuHdr
 Usage: #inline
 * id = "e4d7ab9d-2b9c-42f8-95ef-08ff5e260a8e"
-* status = #finished
-* status = #finished
+* status = $encounter-status#finished
+* status = $encounter-status#finished
 * class = $v3-ActCode#IMP "inpatient encounter"
 * period.start = "2025-01-21T10:00:00Z"
 * period.end = "2025-02-02T09:00:00Z"
 * subject = Reference(urn:uuid:445a0ff8-556d-4be2-bdde-6de668edf019)
 
 Instance: insufficienza-respiratoria-acuta
-InstanceOf: ConditionEuHdr
+InstanceOf: ConditionEuCore
 // add? 7678002 Cytomegaloviral pneumonia
 // add? 721804002 Infection of lung caused by Pneumocystis (disorder)
 Usage: #inline
