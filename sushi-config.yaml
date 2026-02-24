@@ -5,10 +5,10 @@ name:  Hl7EuHospitalDischargeReportIg
 title: HL7 Europe Hospital Discharge Report
 description: This implementation guide specifies the Hospital Discharge Report in the European context, as defined in eHN Hospital Discharge Report guidelines.
 status: draft # draft | active | retired | unknown
-version: 1.0.0-ci-build #
+version: 1.0.0-alpha #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: qa-preview # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
@@ -30,7 +30,7 @@ dependencies:
   hl7.fhir.eu.extensions.r4: 1.2.0
    # hl7.fhir.eu.laboratory to be removed
   # hl7.fhir.eu.laboratory: 0.1.1
-  hl7.fhir.eu.base: current
+  hl7.fhir.eu.base: 2.0.0-gamma
   ihe.pharm.mpd.r4: 1.0.0-comment-2
 #   hl7.fhir.us.mcode:
 #     id: mcode
@@ -80,7 +80,7 @@ pages:
     title: Model Map Overview
   dependencies.md:
     title: Dependencies
-  change.md:
+  changes.md:
     title: Change Log
   copyright.md:
     title: Copyright
@@ -218,7 +218,7 @@ menu:
   About:
     Authors and contributors: contributors.html
     Dependencies: dependencies.html
-    Change Log: change.html
+    Change Log: changes.html
     Copyright: copyright.html
     Cross version:  x-version.html
     Downloads: downloads.html
