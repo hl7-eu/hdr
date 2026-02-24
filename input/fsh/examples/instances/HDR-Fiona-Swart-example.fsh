@@ -194,7 +194,7 @@ Description: "ABO blood group type in blood."
 Usage: #example
 * status = #final
 * code = $loinc#883-9 "ABO group [Type] in Blood"
-* category[laboratory] = $observation-category#laboratory "Laboratory"
+* category[+] = $observation-category#laboratory "Laboratory"
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * performer = Reference(http://example.org/Organization/organization-sophia)
@@ -207,7 +207,7 @@ Usage: #inline
 * id = "a7c687cd-27dd-4b42-88c2-5e32418847ae"
 * status = #final
 * code = $loinc#1305-2 "D Ag [Presence] in Blood"
-* category[laboratory] = $observation-category#laboratory "Laboratory"
+* category[+] = $observation-category#laboratory "Laboratory"
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * performer = Reference(http://example.org/Organization/organization-sophia)
@@ -220,7 +220,7 @@ Usage: #inline
 * id = "5863804b-b0aa-4292-8bc2-13a769ad50d7"
 * status = #final
 * code = $loinc#93846-4 "Hemoglobin [Moles/volume] in Venous blood"
-* category[laboratory] = $observation-category#laboratory "Laboratory"
+* category[+] = $observation-category#laboratory "Laboratory"
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * performer = Reference(http://example.org/Organization/organization-sophia)
@@ -233,7 +233,7 @@ Usage: #inline
 * id = "2640f290-85c4-426f-b912-4b5051f4f35a"
 * status = #final
 * code = $loinc#29893-5 "HIV 1 Ab [Presence] in Serum or Plasma by Immunoassay"
-* category[laboratory] = $observation-category#laboratory "Laboratory"
+* category[+] = $observation-category#laboratory "Laboratory"
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * performer = Reference(http://example.org/Organization/organization-sophia)

@@ -30,7 +30,7 @@ dependencies:
   hl7.fhir.eu.extensions.r4: 1.2.0
    # hl7.fhir.eu.laboratory to be removed
   # hl7.fhir.eu.laboratory: 0.1.1
-  hl7.fhir.eu.base: current
+  hl7.fhir.eu.base: 2.0.0-gamma
   ihe.pharm.mpd.r4: 1.0.0-comment-2
 #   hl7.fhir.us.mcode:
 #     id: mcode

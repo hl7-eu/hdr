@@ -55,9 +55,20 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 * section 1..
 * obeys text-or-section
+* section ^slicing.discriminator[0].type = #value
+* section ^slicing.discriminator[=].path = "code"
+* section ^slicing.ordered = false
+* section ^slicing.rules = #open
+* section ^short = "Sections composing the HDR"
+* section ^definition = "The root of the sections that make up the HDR composition."
+* section.extension contains $note named section-note 0..*
+* section.extension[section-note] ^short = "Additional notes that apply to the section (but not to specific resource)."
+* section.extension[section-note] ^definition = "Additional notes that apply to the section (but not to specific resource)."
+* section.title 1..1
+* section.code 1..1
+* section.code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+* section.text only Narrative
 
-* insert SectionSliceComRules (Sections composing the Hospital Discharge Report,
-        The root of the sections that make up the Hospital Discharge Report composition.)
 
 // -------------------------------------
 // Admission Evaluation Section 0 .. 1 R

@@ -3,7 +3,7 @@
   "version" : "1.0.0-alpha",
   "path" : "http://hl7.eu/fhir/hdr/xtehr",
   "desc" : "This publication is a qa preview version for the Xt-EHR projectathon.",
-  "descmd" : "This publication is qa preview version for the Xt-EHR projectathon",
+  "descmd" : "This publication is a quality assurance (QA) preview release provided in support of the Xt-EHR Projectathon.",
   "status" : "preview",
   "sequence" : "STU",
   "mode": "working",
