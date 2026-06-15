@@ -29,7 +29,7 @@ The six priority categories are summarized in the following picture, including t
 <p><strong>Fig. 2: EHDS priority categories</strong></p>
 </div>
 
-The EEHRxF will be defined by the European Commission through a set of Implementation Acts: a proposal for these Acts is being prepared by the [Joint Action 09 (Xt-EHR)](https://www.xt-ehr.eu/)
+The EEHRxF will be defined by the European Commission through a set of Implementation Acts: a proposal for these Acts has been prepared by the [Joint Action 09 (Xt-EHR)](https://www.xt-ehr.eu/)
 
 
 ### EEHRxF: not a one-fits-all solution
@@ -50,4 +50,4 @@ The follwooing figure summarized this layered approach
 
 This activity has been carried out in a neutral working space by engaging EEHRxF-related initiatives (Xt-EHR, MyHealth@EU Architecture WG, EU-funded projects), national and regional agencies, relevant stakeholders, and interested communities (e.g. EU HL7 Affiliates, IHE Europe).
 
-More that 150 individuals from 23 countries contributed to this result.
+More that 200 distinct participants from 29 countries contributed to this result.
