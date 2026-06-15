@@ -26,12 +26,16 @@ copyright: >-
 dependencies:
   # hl7.fhir.uv.ips: current
   hl7.fhir.uv.ips: 2.0.0
-  hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2
-  hl7.fhir.eu.extensions.r4: 1.2.0
-   # hl7.fhir.eu.laboratory to be removed
-  # hl7.fhir.eu.laboratory: 0.1.1
-  hl7.fhir.eu.base: 2.0.0-gamma
-  ihe.pharm.mpd.r4: 1.0.0-comment-2
+  hl7.fhir.eu.base: 2.0.0
+  hl7.fhir.uv.extensions.r4: 5.2.0
+  hl7.fhir.uv.xver-r5.r4: 0.1.0
+  hl7.fhir.eu.extensions.r4:
+    uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
+    version: 1.3.0
+  ihe.pharm.mpd.r4: 
+    uri: https://profiles.ihe.net/PHARM/MPD/ImplementationGuide/ihe.pharm.mpd
+    version: 1.0.0-comment-2
+
 #   hl7.fhir.us.mcode:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
@@ -54,10 +58,8 @@ pages:
     title: Home
   downloads.md:
     title: Downloads
-  logicalModel.md:
+  logicalmodels.md:
     title: Logical Models
-  ehn-guidelines.md:
-    title: eHN guideline data set
   contributors.md:
     title: Authors and contributors
   obligations.md:
@@ -84,12 +86,20 @@ pages:
     title: Change Log
   copyright.md:
     title: Copyright
-  x-version.md:
+  crossversionanalysis.md:
     title: Cross version analysis
     
   # === MAP ====
   map-ehdsdischargereport.xml:
     title: EHDSDischargeReport Mapping
+  map-ehdsattachment.xml:
+    title: EHDSAttachment Mapping
+  map-ehdscareplan.xml:
+    title: EHDSCarePlan Mapping
+  map-ehdsdeviceuse.xml:
+    title: EHDSDeviceUse Mapping
+  map-ehdslaboratoryobservation.xml:
+    title: EHDSLaboratoryObservation Mapping
   map-ehdsrelatedperson.xml:
     title: EHDSRelatedPerson Mapping
   map-ehdsencounter.xml:
@@ -207,20 +217,16 @@ menu:
     Design: design.html
     References: references.html
   Functional:
-    eHN Guideline: ehn-guidelines.html
-    Logical Models: logicalModel.html
+    Logical Models: logicalmodels.html
     Obligations: obligations.html
   Implementation:
     Model Maps: modelmap.html
-    EHDSDischargeReport Mapping: map-ehdsdischargereport.html
-    EHDSRelatedPerson Mapping: map-ehdsrelatedperson.html
-    EHDSEncounter Mapping: map-ehdsencounter.html
   About:
     Authors and contributors: contributors.html
     Dependencies: dependencies.html
     Change Log: changes.html
     Copyright: copyright.html
-    Cross version:  x-version.html
+    Cross version:  crossversionanalysis.html
     Downloads: downloads.html
     Known Issues: knownIssues.html
   Artifacts: artifacts.html
