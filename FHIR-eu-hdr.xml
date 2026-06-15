@@ -177,5 +177,5 @@
 <page key="scope" name="Scope and content"/>
 <page deprecated="true" key="Subject-map" name="Subject Relationships"/>
 <page key="toc" name="Table of Contents"/>
-<page key="ehn-guidelines" name="eHN guideline data set"/>
+<page deprecated="true" key="ehn-guidelines" name="eHN guideline data set"/>
 </specification>

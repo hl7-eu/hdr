@@ -60,8 +60,6 @@ pages:
     title: Downloads
   logicalmodels.md:
     title: Logical Models
-  ehn-guidelines.md:
-    title: eHN guideline data set
   contributors.md:
     title: Authors and contributors
   obligations.md:
