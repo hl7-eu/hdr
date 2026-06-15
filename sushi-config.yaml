@@ -88,12 +88,20 @@ pages:
     title: Change Log
   copyright.md:
     title: Copyright
-  x-version.md:
+  crossversionanalysis.md:
     title: Cross version analysis
     
   # === MAP ====
   map-ehdsdischargereport.xml:
     title: EHDSDischargeReport Mapping
+  map-ehdsattachment.xml:
+    title: EHDSAttachment Mapping
+  map-ehdscareplan.xml:
+    title: EHDSCarePlan Mapping
+  map-ehdsdeviceuse.xml:
+    title: EHDSDeviceUse Mapping
+  map-ehdslaboratoryobservation.xml:
+    title: EHDSLaboratoryObservation Mapping
   map-ehdsrelatedperson.xml:
     title: EHDSRelatedPerson Mapping
   map-ehdsencounter.xml:
@@ -216,15 +224,12 @@ menu:
     Obligations: obligations.html
   Implementation:
     Model Maps: modelmap.html
-    EHDSDischargeReport Mapping: map-ehdsdischargereport.html
-    EHDSRelatedPerson Mapping: map-ehdsrelatedperson.html
-    EHDSEncounter Mapping: map-ehdsencounter.html
   About:
     Authors and contributors: contributors.html
     Dependencies: dependencies.html
     Change Log: changes.html
     Copyright: copyright.html
-    Cross version:  x-version.html
+    Cross version:  crossversionanalysis.html
     Downloads: downloads.html
     Known Issues: knownIssues.html
   Artifacts: artifacts.html

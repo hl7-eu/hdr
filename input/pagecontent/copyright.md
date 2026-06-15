@@ -1,4 +1,3 @@
+### Intellectual property statements
 
-### IP statements
-
-{% lang-fragment  ip-statements.xhtml %}
+{% include ip-statements.xhtml %}

@@ -150,8 +150,12 @@
 <page key="dependencies" name="Dependencies"/>
 <page key="design" name="Design Approach"/>
 <page key="downloads" name="Downloads"/>
+<page key="map-ehdsattachment" name="EHDSAttachment Mapping"/>
+<page key="map-ehdscareplan" name="EHDSCarePlan Mapping"/>
+<page key="map-ehdsdeviceuse" name="EHDSDeviceUse Mapping"/>
 <page key="map-ehdsdischargereport" name="EHDSDischargeReport Mapping"/>
 <page key="map-ehdsencounter" name="EHDSEncounter Mapping"/>
+<page key="map-ehdslaboratoryobservation" name="EHDSLaboratoryObservation Mapping"/>
 <page key="map-ehdsrelatedperson" name="EHDSRelatedPerson Mapping"/>
 <page deprecated="true" key="FunctionalStatus-map" name="FunctionalStatus Relationships"/>
 <page deprecated="true" key="Header-map" name="Header Relationships"/>

@@ -1,2 +1,2 @@
 copy input\pagecontent\*.* temp\pages\_includes\ /Y
-_build.bat 5
+_build.bat jekyll
