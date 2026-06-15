@@ -82,7 +82,3 @@ This guide is part of the group of HL7 FHIR Implementation Guides published by H
 This activity has been carried out in a neutral working space by engaging EEHRxF-related initiatives (Xt-EHR, MyHealth@EU Architecture WG, EU-funded projects), national and regional agencies, relevant stakeholders, and interested communities (e.g. EU HL7 Affiliates, IHE Europe).
 
 More details about the project background can be found in the [background page](background.html).
-
-### Design approach
-
-The project design approach is described in the [Design approach page](design.html).
