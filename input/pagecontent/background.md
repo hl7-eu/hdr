@@ -50,4 +50,4 @@ The follwooing figure summarized this layered approach
 
 This activity has been carried out in a neutral working space by engaging EEHRxF-related initiatives (Xt-EHR, MyHealth@EU Architecture WG, EU-funded projects), national and regional agencies, relevant stakeholders, and interested communities (e.g. EU HL7 Affiliates, IHE Europe).
 
-More that 200 distinct participants from 29 countries contributed to this result.
+More than 200 distinct participants from 29 countries contributed to this result.
