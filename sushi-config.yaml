@@ -58,7 +58,7 @@ pages:
     title: Home
   downloads.md:
     title: Downloads
-  logicalModel.md:
+  logicalmodels.md:
     title: Logical Models
   ehn-guidelines.md:
     title: eHN guideline data set
@@ -219,8 +219,7 @@ menu:
     Design: design.html
     References: references.html
   Functional:
-    eHN Guideline: ehn-guidelines.html
-    Logical Models: logicalModel.html
+    Logical Models: logicalmodels.html
     Obligations: obligations.html
   Implementation:
     Model Maps: modelmap.html
