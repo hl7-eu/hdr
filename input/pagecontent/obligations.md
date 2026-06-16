@@ -12,25 +12,20 @@ Obligations are a mean offered by HL7 FHIR to specify functional capabilities th
 
 The current choice has been that of defining the obligation in StructureDefinitions distinct from those used for defining the structural constraints.
 
-This page describes also the actors that have been defined for specifying the obligations.
+This page describes also the actors that have been used for specifying the obligations.
 
 ### Actors
 
-Three actors have been specified:
+This version of this guide adopts the actors specified by the Xt-EHR joint action:
 
-* the [Creator](ActorDefinition-actor-creator-eu-hdr.html) ;
-* the [Repository](ActorDefinition-actor-repos-eu-hdr.html) ; and
-* the [Consumer](ActorDefinition-actor-consumer-eu-hdr.html)
+* the [Consumer](https://www.xt-ehr.eu/fhir/models/en/ActorDefinition-actor-consumer.html): a system that receives electronic health data originating from another system and processes or displays that data. In this role, the system is responsible for ingesting and validating the received data and for preserving the meaning, structure, and associated metadata of the information in accordance with the applicable Consumer obligations, ensuring correct interpretation and presentation to end users or other systems.
 
-The first is the actor creating the report. This report can be send to a consumer or to a repository for report storage and sharing.
-The second actor is the system maintaining a copy of the report received, to store and make it available for the consumers.
-The last actor is the system using the report received or retrieved.
-
-<p>{% include actors.svg %}</p>
+* the [Producer](https://www.xt-ehr.eu/fhir/models/en/ActorDefinition-actor-producer.html): a system that generates or makes available structured electronic health data for exchange. In this role, the system is responsible for being technically capable of populating the relevant data elements in accordance with the applicable “able-to-populate” obligations and for associating the required metadata, such as authorship, provenance, status, and temporal information, before the data are made available to downstream systems.
 
 ### Obligations List
 
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<p> </p>
 
 <table class="grid">
       <col style="width:30%"/>
