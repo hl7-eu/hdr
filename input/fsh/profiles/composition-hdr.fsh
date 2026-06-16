@@ -84,22 +84,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * ^comment = "Admission evaluation should be reported only exceptionally, if it is relevant to ensure continuity of care."
 
 
-// Anthropometric Observations is an indipendet section or is part of the Vital Signs ? 
-
-
-/* === Commented for the time being
-* section contains sectionAnthropometry 0..1
-* section[sectionAnthropometry]
-  * insert SectionComRules (
-    Anthropometric observations,
-    Anthropometric Observations sub-section,
-    TemporaryHDRSystem#anthropometry) // to be updated
-  * entry 0..
-  * entry only Reference(Observation or DocumentReference or $vitalsigns)
-
-*/
-
-
+// -------------------------------------
 * section contains sectionVitalSigns 0..1
 * section[sectionVitalSigns]
   * insert SectionComRules (
