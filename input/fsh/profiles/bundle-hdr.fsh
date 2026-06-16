@@ -30,7 +30,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry.resource 1..
 * entry contains
     composition 1..1 and
-    patient 1..1 and
+    patient 1..* and
     encounter 1..* and
     allergyIntolerance 0..* and
     condition 0..* and
