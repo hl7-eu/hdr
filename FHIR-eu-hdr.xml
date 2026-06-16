@@ -119,7 +119,7 @@
 <artifact deprecated="true" id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact deprecated="true" id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
 <artifact id="StructureDefinition/specimen-obl-eu-hdr" key="StructureDefinition-specimen-obl-eu-hdr" name="Specimen: obligations"/>
-<artifact id="CodeSystem/temporarySystem-hdr-eu" key="CodeSystem-temporarySystem-hdr-eu" name="Temporary HDR Code System"/>
+<artifact deprecated="true" id="CodeSystem/temporarySystem-hdr-eu" key="CodeSystem-temporarySystem-hdr-eu" name="Temporary HDR Code System"/>
 <artifact deprecated="true" id="ValueSet/eHDSIConditionPOA" key="ValueSet-eHDSIConditionPOA" name="eHDSI Condition Present On Admission"/>
 <artifact deprecated="true" id="ValueSet/eHDSITreatmentClass" key="ValueSet-eHDSITreatmentClass" name="eHDSI Treatment Class"/>
 <artifact deprecated="true" id="ConceptMap/admissionEvaluation2FHIR-eu-hdr" key="ConceptMap-admissionEvaluation2FHIR-eu-hdr" name="eHN Admission Evaluation Model to this guide Map"/>
