@@ -1,6 +1,6 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  MedicationEuHdrObligation
-Parent:   MedicationEuHdr
+Parent:   MedicationEuCore
 Id:       medication-obl-eu-hdr
 Title:    "Medication: obligations"
 Description: "This profile defines obligations for the Medication resource for the purpose of this guide, adapted from the MPD work."

@@ -12,7 +12,7 @@ Description: "This profile constrains the MedicationAdministration resource for 
   * ^short = "Medication Administration Identifier"
 // * status ^short = "Current state of the dispensation"
 * subject only Reference( PatientEuCore )
-* medication[x] only CodeableConcept or Reference(MedicationEuHdr)
+* medication[x] only CodeableConcept or Reference(MedicationEuCore)
 
-// * medicationReference only Reference(MedicationEuHdr)
+// * medicationReference only Reference(MedicationEuCore)
 

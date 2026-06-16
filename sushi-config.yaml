@@ -5,10 +5,10 @@ name:  Hl7EuHospitalDischargeReportIg
 title: HL7 Europe Hospital Discharge Report
 description: This implementation guide specifies the Hospital Discharge Report in the European context, as defined in eHN Hospital Discharge Report guidelines.
 status: draft # draft | active | retired | unknown
-version: 1.0.0-alpha #
+version: 1.0.0-ci #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
-releaseLabel: qa-preview # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
@@ -60,7 +60,7 @@ pages:
     title: Downloads
   logicalmodels.md:
     title: Logical Models
-  contributors.md:
+  authors.md:
     title: Authors and contributors
   obligations.md:
     title: Obligations
@@ -222,7 +222,7 @@ menu:
   Implementation:
     Model Maps: modelmap.html
   About:
-    Authors and contributors: contributors.html
+    Authors and contributors: authors.html
     Dependencies: dependencies.html
     Change Log: changes.html
     Copyright: copyright.html
@@ -373,9 +373,6 @@ groups:
       name:  Actors and Obligations (Informative)
       description: Actors and Obligations used to describe the Hospital Discharge Report functional requirements for the specified data elements. Informative for this version of the guide.
       resources:
-        - ActorDefinition/actor-consumer-eu-hdr
-        - ActorDefinition/actor-creator-eu-hdr
-        - ActorDefinition/actor-repos-eu-hdr
         - StructureDefinition/allergyIntolerance-obl-eu-hdr
         - StructureDefinition/bundle-obl-eu-hdr
         - StructureDefinition/patient-obl-eu-hdr
