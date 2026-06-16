@@ -65,9 +65,9 @@
 <artifact id="Flag/example-flag-allergy" key="Flag-example-flag-allergy" name="Flag: Critical Allergy to Penicillin"/>
 <artifact id="Flag/example-flag-no-left-arm" key="Flag-example-flag-no-left-arm" name="Flag: Do Not Use Left Arm"/>
 <artifact id="StructureDefinition/flag-obl-eu-hdr" key="StructureDefinition-flag-obl-eu-hdr" name="Flag: obligations"/>
-<artifact id="ActorDefinition/actor-consumer-eu-hdr" key="ActorDefinition-actor-consumer-eu-hdr" name="HDR Consumer"/>
-<artifact id="ActorDefinition/actor-creator-eu-hdr" key="ActorDefinition-actor-creator-eu-hdr" name="HDR Creator"/>
-<artifact id="ActorDefinition/actor-repos-eu-hdr" key="ActorDefinition-actor-repos-eu-hdr" name="HDR Repository"/>
+<artifact deprecated="true" id="ActorDefinition/actor-consumer-eu-hdr" key="ActorDefinition-actor-consumer-eu-hdr" name="HDR Consumer"/>
+<artifact deprecated="true" id="ActorDefinition/actor-creator-eu-hdr" key="ActorDefinition-actor-creator-eu-hdr" name="HDR Creator"/>
+<artifact deprecated="true" id="ActorDefinition/actor-repos-eu-hdr" key="ActorDefinition-actor-repos-eu-hdr" name="HDR Repository"/>
 <artifact id="StructureDefinition/humanName-obl-eu-hdr" key="StructureDefinition-humanName-obl-eu-hdr" name="Human Name: obligations"/>
 <artifact deprecated="true" id="StructureDefinition/immunization-eu-hdr" key="StructureDefinition-immunization-eu-hdr" name="Immunization (HDR)"/>
 <artifact deprecated="true" id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>

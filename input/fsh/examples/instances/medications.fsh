@@ -36,7 +36,7 @@ Description: "400C. A prescription/request with one medication and changing dosa
 
 
 Instance: 01A-Cefuroxime1500GenericExplicit
-InstanceOf: MedicationEuHdr
+InstanceOf: MedicationEuCore
 Usage: #example
 Title: "Medication: 01A-Cefuroxime1500GenericExplicit"
 Description: "1A. Cefuroxime 1500mg (1.5g) powder for solution in a vial. Generic product, defined by attributes."
@@ -114,7 +114,7 @@ Description: "400D-1. Medication dispense fulfilling the first part of the order
 
 
 Instance: 01C-Cefuroxime1500Branded
-InstanceOf: MedicationEuHdr
+InstanceOf: MedicationEuCore
 Usage: #example
 Title: "Medication: 01C-Cefuroxime1500Branded"
 Description: "1C. Cefuroxime 1500mg (1.5g) powder for solution in a vial (10 vials per package). Branded packaged product, defined by attributes."
