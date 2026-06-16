@@ -60,7 +60,7 @@ pages:
     title: Downloads
   logicalmodels.md:
     title: Logical Models
-  contributors.md:
+  authors.md:
     title: Authors and contributors
   obligations.md:
     title: Obligations
@@ -222,7 +222,7 @@ menu:
   Implementation:
     Model Maps: modelmap.html
   About:
-    Authors and contributors: contributors.html
+    Authors and contributors: authors.html
     Dependencies: dependencies.html
     Change Log: changes.html
     Copyright: copyright.html
