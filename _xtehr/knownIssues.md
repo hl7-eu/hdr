@@ -1,7 +1,4 @@
-# Known issues - EHDS Logical Information Models v0.3.0
-
-* [**Table of Contents**](toc.md)
-* **Known issues**
+# Known issues - EHDS Logical Information Models v1.0.0
 
 ## Known issues
 

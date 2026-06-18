@@ -156,10 +156,10 @@
             <td>body.encounterInformation.note</td>
             <td>Free text notes by the health professional.</td>
             <td>related-to</td>
-            <td>Composition</td>
-            <td>extension:note</td>
-            <td></td>
-            <td></td>
+            <td>Encounter</td>
+            <td>text</td>
+            <td>Encounter narrative.</td>
+            <td>No dedicated encounter-information section is active in CompositionEuHdr.</td>
           </tr>
 
           <!-- ALERTS -->
@@ -217,16 +217,7 @@
             <td>Composition</td>
             <td>section:sectionVitalSigns</td>
             <td>Vital signs section.</td>
-            <td>Use Observation where appropriate.</td>
-          </tr>
-          <tr class="highlight-yellow">
-            <td>body.admissionEvaluation.objectiveFindings</td>
-            <td>Objective findings.</td>
-            <td>related-to</td>
-            <td>Composition</td>
-            <td>section:sectionAnthropometry</td>
-            <td>Anthropometry section.</td>
-            <td>Use Observation where appropriate.</td>
+            <td>Use Observation where appropriate; anthropometric measurements may be represented here when treated as vital-sign observations.</td>
           </tr>
           <tr class="highlight-yellow">
             <td>body.admissionEvaluation.objectiveFindings</td>
@@ -244,7 +235,7 @@
             <td>Composition</td>
             <td>section:sectionFunctionalStatus</td>
             <td>Functional status entries.</td>
-            <td>Condition/Observation/ClinicalImpression as allowed.</td>
+            <td>Source allows EHDSCondition or EHDSObservation; the FHIR profile also permits ClinicalImpression, DocumentReference, and QuestionnaireResponse entries.</td>
           </tr>
           <tr>
             <td>body.admissionEvaluation.note</td>
@@ -276,12 +267,39 @@
             <td></td>
           </tr>
           <tr>
+            <td>body.patientHistory.pastProblems</td>
+            <td>Past or ongoing conditions relevant for continuity of care.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionPatientHx / section:sectionProblems</td>
+            <td>Patient history narrative or problem-list entries.</td>
+            <td>Use sectionPatientHx for anamnesis context; use sectionProblems when represented as problem entries.</td>
+          </tr>
+          <tr>
+            <td>body.patientHistory.devicesAndImplants</td>
+            <td>Devices and implants in patient anamnesis.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionPatientHx / section:sectionMedicalDevices</td>
+            <td>Patient history narrative or medical-device entries.</td>
+            <td>Use sectionMedicalDevices when represented with DeviceUseStatementEuHdr or ProcedureEuCore entries.</td>
+          </tr>
+          <tr>
+            <td>body.patientHistory.procedures</td>
+            <td>Historical procedures relevant for the current encounter.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionPatientHx / section:sectionSignificantProcedures</td>
+            <td>Patient history narrative or procedure entries.</td>
+            <td>Use sectionSignificantProcedures when represented with ProcedureEuCore entries.</td>
+          </tr>
+          <tr>
             <td>body.patientHistory.note</td>
             <td>Free text notes by the health professional.</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>section:sectionPatientHx.extension:note</td>
-            <td>Hx general Reported notes.</td>
+            <td>section:sectionPatientHx.extension:section-note</td>
+            <td>Additional section notes.</td>
             <td></td>
           </tr>
 
@@ -340,41 +358,14 @@
             <td>Pharmacotherapy section.</td>
             <td>MedicationStatement/Request/Dispense/Administration.</td>
           </tr>
-          <tr class="highlight-yellow">
-            <td>body.courseOfEncounter.objectiveFindings</td>
-            <td>Objective findings during encounter.</td>
-            <td>related-to</td>
-            <td>Composition</td>
-            <td>section:sectionVitalSigns</td>
-            <td>Vital signs section.</td>
-            <td>Use Observation where appropriate.</td>
-          </tr>
-          <tr class="highlight-yellow">
-            <td>body.courseOfEncounter.objectiveFindings</td>
-            <td>Objective findings during encounter.</td>
-            <td>related-to</td>
-            <td>Composition</td>
-            <td>section:sectionAnthropometry</td>
-            <td>Anthropometry section.</td>
-            <td>Use Observation where appropriate.</td>
-          </tr>
-          <tr class="highlight-yellow">
-            <td>body.courseOfEncounter.objectiveFindings</td>
-            <td>Objective findings during encounter.</td>
-            <td>related-to</td>
-            <td>Composition</td>
-            <td>section:sectionPhysicalFindings</td>
-            <td>Physical findings section.</td>
-            <td>Use Observation where appropriate.</td>
-          </tr>
           <tr>
-            <td>body.courseOfEncounter.testResults</td>
+            <td>body.courseOfEncounter.testResults[x]</td>
             <td>Significant medical test results.</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionSignificantResults</td>
             <td>Significant results section.</td>
-            <td>Observation/DiagnosticReport/DocumentReference.</td>
+            <td>EHDSObservation and EHDSLaboratoryObservation map to Observation-oriented entries; DiagnosticReport/DocumentReference are also allowed by CompositionEuHdr.</td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.note</td>
@@ -410,9 +401,9 @@
             <td>Objective findings at discharge.</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>section:sectionPhysicalFindings / section:sectionVitalSigns</td>
+            <td>section:sectionPhysicalFindings / section:sectionVitalSigns / section:sectionSignificantResults</td>
             <td>Discharge findings.</td>
-            <td>Use Observation where appropriate.</td>
+            <td>No discharge-specific objective-findings section is defined in CompositionEuHdr.</td>
           </tr>
           <tr>
             <td>body.dischargeDetails.functionalStatus[x]</td>
@@ -457,8 +448,8 @@
             <td>Details about medication and dosage.</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section:sectionDischargeMedications</td>
-            <td>Discharge medications section.</td>
+            <td>section:sectionDischargeMedications.entry</td>
+            <td>Discharge medication entries.</td>
             <td>MedicationRequest/MedicationDispense/MedicationStatement.</td>
           </tr>
           <tr>
@@ -495,8 +486,8 @@
             <td>Structured care plan after discharge.</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section:sectionPlanOfCare</td>
-            <td>Plan of care section.</td>
+            <td>section:sectionPlanOfCare.entry</td>
+            <td>Plan of care entries.</td>
             <td>Reference to CarePlanEuHdr.</td>
           </tr>
           <tr>
@@ -504,9 +495,9 @@
             <td>Other recommendations after discharge.</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>section:sectionPlanOfCare.text</td>
-            <td>Plan of care narrative.</td>
-            <td>May also be represented in Discharge Instructions narrative.</td>
+            <td>section:sectionPlanOfCare.text / section:sectionDischargeInstructions.text</td>
+            <td>Plan of care or discharge-instructions narrative.</td>
+            <td>Use the discharge-instructions section when the recommendation is an instruction to the patient or follow-up provider.</td>
           </tr>
 
           <!-- SYNTHESIS -->
@@ -526,8 +517,8 @@
             <td>Report attachments.</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section:sectionAttachments</td>
-            <td>Attachments section.</td>
+            <td>section:sectionAttachments.entry</td>
+            <td>Attachment entries.</td>
             <td>DocumentReference/Binary in CompositionEuHdr.</td>
           </tr>
         </tbody>
