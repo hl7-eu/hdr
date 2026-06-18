@@ -123,6 +123,44 @@
             <td>Explicit communication intent.</td>
             <td>Uses the information-recipient extension in CompositionEuHdr.</td>
           </tr>
+          <tr>
+            <td>body</td>
+            <td>Structured body of the discharge report document.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section</td>
+            <td>Sections composing the HDR.</td>
+            <td>CompositionEuHdr represents body content as sliced Composition sections plus the Composition.encounter reference.</td>
+          </tr>
+
+          <!-- ALERTS -->
+          <tr>
+            <td>body.alerts</td>
+            <td>Section: Alerts.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAlert</td>
+            <td>Alerts section.</td>
+            <td>Use LOINC 104605-1.</td>
+          </tr>
+          <tr>
+            <td>body.alerts.generatedNarrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAlert.text</td>
+            <td>Alerts narrative.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.alerts.medicalAlert</td>
+            <td>Description of medical alerts.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAlert</td>
+            <td>Alert entries.</td>
+            <td>Reference to Flag (EHDSAlert).</td>
+          </tr>
 
           <!-- ENCOUNTER INFORMATION -->
           <tr>
@@ -160,35 +198,6 @@
             <td>text</td>
             <td>Encounter narrative.</td>
             <td>No dedicated encounter-information section is active in CompositionEuHdr.</td>
-          </tr>
-
-          <!-- ALERTS -->
-          <tr>
-            <td>body.alerts</td>
-            <td>Section: Alerts.</td>
-            <td>equivalent</td>
-            <td>Composition</td>
-            <td>section:sectionAlert</td>
-            <td>Alerts section.</td>
-            <td>Use LOINC 104605-1.</td>
-          </tr>
-          <tr>
-            <td>body.alerts.generatedNarrative</td>
-            <td>Narrative content of the section.</td>
-            <td>equivalent</td>
-            <td>Composition</td>
-            <td>section:sectionAlert.text</td>
-            <td>Alerts narrative.</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>body.alerts.medicalAlert</td>
-            <td>Description of medical alerts.</td>
-            <td>equivalent</td>
-            <td>Composition</td>
-            <td>section:sectionAlert</td>
-            <td>Alert entries.</td>
-            <td>Reference to Flag (EHDSAlert).</td>
           </tr>
 
           <!-- ADMISSION EVALUATION -->
