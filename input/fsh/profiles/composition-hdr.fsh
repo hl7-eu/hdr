@@ -31,11 +31,13 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * type ^short = "Kind of composition (\"Hospital Discharge Report\")"
 * type ^definition = "Specifies that this composition refer to a Hospital Discharge Report"
-* type = $loinc#34105-7 "Hospital Discharge summary"
+* type = $loinc#34105-7 // "Hospital Discharge summary"
+* type.coding.display 1..
 * subject only Reference(PatientEuCore)
 * subject 1..1
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the hdr the subject is always the patient."
 
+// ==> add category
 
 * encounter 1..1 
 * encounter only Reference (EncounterEuHdr)
