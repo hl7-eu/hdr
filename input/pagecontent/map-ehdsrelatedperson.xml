@@ -44,73 +44,59 @@
         <caption>EHDSRelatedPerson -> RelatedPerson (HDR)</caption>
         <thead>
           <tr>
-            <th colspan="2" class="src-head">EHDSRelatedPerson (Logical Model)</th>
+            <th colspan="1" class="src-head">EHDSRelatedPerson (Logical Model)</th>
             <th class="relhead">Relationship</th>
-            <th colspan="4" class="tgt-head">RelatedPerson (HDR)</th>
+            <th colspan="3" class="tgt-head">RelatedPerson (HDR)</th>
           </tr>
           <tr>
             <th class="src-sub">Element</th>
-            <th class="src-sub">Description</th>
             <th class="relsub">Relation</th>
             <th class="tgt-sub">Resource</th>
             <th class="tgt-sub">Element</th>
-            <th class="tgt-sub">Description</th>
             <th class="tgt-sub">Notes</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>personalIdentifier</td>
-            <td>Identifier of the related person.</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>identifier</td>
-            <td>Identifiers for the related person.</td>
             <td></td>
           </tr>
           <tr>
             <td>name</td>
-            <td>Name associated with the person.</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>name</td>
-            <td>Names of the related person.</td>
             <td></td>
           </tr>
           <tr>
             <td>subject</td>
-            <td>The patient in relation to whom the related person is defined.</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>patient</td>
-            <td>The patient to which this related person is related.</td>
             <td>Reference to PatientEuCore.</td>
           </tr>
           <tr>
             <td>relationship</td>
-            <td>Relationship between patient and related person.</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>relationship</td>
-            <td>Relationship role.</td>
             <td>Preferred binding to HL7 RoleCode.</td>
           </tr>
           <tr>
             <td>address</td>
-            <td>Mailing and home or office address.</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>address</td>
-            <td>Addresses for the related person.</td>
             <td></td>
           </tr>
           <tr>
             <td>telecom</td>
-            <td>Telecommunication contact information.</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>telecom</td>
-            <td>Contact points for the related person.</td>
             <td></td>
           </tr>
         </tbody>
