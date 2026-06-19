@@ -1,14 +1,17 @@
-# xtehr.eu.ehds.models#0.3.0: EHDS Logical Information Models
+# xtehr.eu.ehds.models#1.0.0: EHDS Logical Information Models(en)
 
 ## Pages
 
 * [Home](index.md)
 * [Artifacts Summary](artifacts.md)
+* [Authoring rules](authoring-process.md)
+* [Background](background.md)
 * [Change Log](changes.md)
+* [Data types and references](datatypes.md)
 * [Download](downloads.md)
 * [How to read this guide](howto.md)
 * [Known issues](knownIssues.md)
-* [Obligations for Laboratory Report](obligationsLabReport.md)
+* [Obligations Framework](obligations.md)
 * [Discharge Report](overview-dischargereport.md)
 * [eDispensation](overview-dispensation.md)
 * [Medical Images](overview-medicalimages.md)
@@ -65,6 +68,54 @@
 * [Telecom model](StructureDefinition-EHDSTelecom.md)
 * [Travel history model](StructureDefinition-EHDSTravelHistory.md)
 
+### Logical Profiles
+
+* [Advance directive obligations](StructureDefinition-EHDSAdvanceDirectiveObligations.md)
+* [Alert obligations](StructureDefinition-EHDSAlertObligations.md)
+* [AllergyIntolerance obligations](StructureDefinition-EHDSAllergyIntoleranceObligations.md)
+* [Body structure laboratory specific obligations](StructureDefinition-EHDSBodyStructureLaboratoryObligations.md)
+* [Condition laboratory specific obligations](StructureDefinition-EHDSConditionLaboratoryObligations.md)
+* [Condition obligations](StructureDefinition-EHDSConditionObligations.md)
+* [Current pregnancy obligations](StructureDefinition-EHDSCurrentPregnancyObligations.md)
+* [Device laboratory specific obligations](StructureDefinition-EHDSDeviceLaboratoryObligations.md)
+* [Device obligations](StructureDefinition-EHDSDeviceObligations.md)
+* [Device use obligations](StructureDefinition-EHDSDeviceUseObligations.md)
+* [Discharge Report Obligations](StructureDefinition-EHDSDischargeReportObligations.md)
+* [Dosage obligations](StructureDefinition-EHDSDosageObligations.md)
+* [Health professional laboratory specific obligations](StructureDefinition-EHDSHealthProfessionalLaboratoryObligations.md)
+* [Health professional obligations](StructureDefinition-EHDSHealthProfessionalObligations.md)
+* [Imaging Report Obligations](StructureDefinition-EHDSImagingReportObligations.md)
+* [Imaging Study Obligations](StructureDefinition-EHDSImagingStudyObligations.md)
+* [Immunisation laboratory specific obligations](StructureDefinition-EHDSImmunisationLaboratoryObligations.md)
+* [Immunisation obligations](StructureDefinition-EHDSImmunisationObligations.md)
+* [Laboratory observation obligations](StructureDefinition-EHDSLaboratoryObservationObligations.md)
+* [Laboratory Report Obligations](StructureDefinition-EHDSLaboratoryReportObligations.md)
+* [Medication Administration laboratory specific obligations](StructureDefinition-EHDSMedicationAdministrationLaboratoryObligations.md)
+* [MedicationAdministration obligations](StructureDefinition-EHDSMedicationAdministrationObligations.md)
+* [Medication dispense model obligations](StructureDefinition-EHDSMedicationDispenseObligations.md)
+* [Medication laboratory specific obligations](StructureDefinition-EHDSMedicationLaboratoryObligations.md)
+* [Medication  model obligations](StructureDefinition-EHDSMedicationObligations.md)
+* [Medication prescription model obligations](StructureDefinition-EHDSMedicationPrescriptionObligations.md)
+* [Medication Use laboratory specific obligations](StructureDefinition-EHDSMedicationUseLaboratoryObligations.md)
+* [MedicationUse obligations](StructureDefinition-EHDSMedicationUseObligations.md)
+* [Observation Obligations](StructureDefinition-EHDSObservationObligations.md)
+* [Organisation laboratory specific obligations](StructureDefinition-EHDSOrganisationLaboratoryObligations.md)
+* [Organisation obligations](StructureDefinition-EHDSOrganisationObligations.md)
+* [Patient laboratory specific obligations](StructureDefinition-EHDSPatientLaboratoryObligations.md)
+* [Patient obligations](StructureDefinition-EHDSPatientObligations.md)
+* [Patient summary obligations](StructureDefinition-EHDSPatientSummaryObligations.md)
+* [Procedure laboratory specific obligations](StructureDefinition-EHDSProcedureLaboratoryObligations.md)
+* [Procedure obligations](StructureDefinition-EHDSProcedureObligations.md)
+* [Related person laboratory specific obligations](StructureDefinition-EHDSRelatedPersonLaboratoryObligations.md)
+* [Related person obligations](StructureDefinition-EHDSRelatedPersonObligations.md)
+* [Service request laboratory specific obligations](StructureDefinition-EHDSServiceRequestLaboratoryObligations.md)
+* [Specimen Obligations](StructureDefinition-EHDSSpecimenLaboratoryObligations.md)
+
 ### ImplementationGuides
 
-* [EHDS Logical Information Models](index.md)
+* [EHDS Logical Information Models](ImplementationGuide-xtehr.eu.ehds.models.md)
+
+### Examples
+
+* [Consumer (ActorDefinition)](ActorDefinition-actor-consumer.md)
+* [Producer (ActorDefinition)](ActorDefinition-actor-producer.md)

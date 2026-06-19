@@ -1,6 +1,6 @@
 // --------------------------------------------------
 ValueSet:     EncounterClassHdrVS
-Id:	          hdr-encounterClass-eu-hdr
+Id:	          encounter-class-eu-hdr
 Title:	      "Encounter Class Value Set"
 Description:  """Hospital Discharge Report Encounter Class specifies a general class of inpatient encounter as being accute, nonaccute, emergency, short stay ... """
 
@@ -16,7 +16,7 @@ Description:  """Hospital Discharge Report Encounter Class specifies a general c
 
 // --------------------------------------------------
 ValueSet:   EncounterTypeHdrVS
-Id:         hdr-encounter-type-eu-hdr
+Id:         encounter-type-eu-hdr
 Title:      "In-patient Encounter Type Value Set"
 Description:  """Hospital Discharge Report Encounter Type allows to classify encounter using general type of care provision regimen during the inpatient encounter. Value set includes concepts from the SNOMED CT descendants of 225351009 (Care provision regime) but needs to be further dicsussed"""
 

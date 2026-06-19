@@ -1,7 +1,4 @@
-# Medical Images - EHDS Logical Information Models v0.3.0
-
-* [**Table of Contents**](toc.md)
-* **Medical Images**
+# Medical Images - EHDS Logical Information Models v1.0.0
 
 ## Medical Images
 
@@ -22,11 +19,16 @@ Imaging result report could be divided into several parts: document header, body
 
 ### FHIR Implementation Guide
 
-HL7 Europe published FHIR IG: https://hl7.eu/fhir/imaging-r5/
+HL7 Europe and IHE-Europe has published the following FHIR IGs:
+
+* [Imaging report R4](https://hl7.eu/fhir/imaging)
+* [Imaging report R5](https://hl7.eu/fhir/imaging-r5/)
+* [Imaging manifest R5 - based on IHE MADO](https://hl7.eu/fhir/imaging-manifest-r5/)
 
 ### IHE Profile
 
-…
+* [IHE RAD](https://profiles.ihe.net/RAD/)
+* [IHE MADO](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_MADO.pdf)
 
 ### Supporting information
 
