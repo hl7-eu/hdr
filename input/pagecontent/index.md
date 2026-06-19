@@ -26,7 +26,7 @@
 </div>
 
 
-<div class="model-map-block">
+<!-- <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
           <strong>This is a QA preview version:</strong>
@@ -35,7 +35,7 @@
 The content is subject to change and is provided <b>as-is</b>, without warranty of any kind and <b>without liability for its use</b>.</p>
         </div>
       </div>
-    </div>
+    </div> -->
     
 
 <div xmlns="http://www.w3.org/1999/xhtml"
