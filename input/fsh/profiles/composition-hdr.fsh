@@ -151,10 +151,13 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * entry 0..*
   * entry only Reference( ConditionEuCore ) // check if this is too restrictive
 
+// ===================================
+// courseOfEncounter.procedures
+// ===================================
 // -------------------------------------
 * section contains sectionSignificantProcedures 0..1
 * section[sectionSignificantProcedures]
-  * insert SectionComRules (
+  * insert SectionComRules ( 
     Significant procedures,
     Significant surgical and non-surgical procedures performed during hospitalisation which are significant for continuity of care\, e.g. surgeries and other \"instrumental\"interventions (endoscopic\, intravascular\)\, chemotherapy\, radiotherapy\, purification methods (dialysis\, hemoperfusion\)\, circulation support methods (counterpulsation\, etc.\)\, administration of blood derivatives or others.\r\nThis section does not include purely diagnostic procedures (MRI\, CT\, etc.\). If no significant performance has been performed\, this fact must be explicitly stated using the IPS Absent and Unknown Data. ,
     $loinc#10185-7) // Hospital discharge procedures
@@ -166,20 +169,52 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 // -------------------------------------
 // Medical Devices Section 0 .. 1
+// patientHistory.devicesAndImplants
 // -------------------------------------
-// LOINC CODE TO BE CHANGED !
 
 * section contains sectionMedicalDevices 0..1
 * section[sectionMedicalDevices]
   * insert SectionComRules (
-    Medical devices and implants,
-    Implants and used medical devices that affected or may affect the provision of health services (diagnosis and treatment\). Also medical devices explanted\, or its use was stopped during hospitalisation. If the section is blank\, the reason must be explicitly stated using the IPS Absent and Unknown Data coding system. ,
-    $loinc#57080-4) // Implanted medical device (to be changed)
-    // $loinc#46264-8) // History of medical device use
-    // $sct#1184586001) //"Medical device document section (record artifact\)
+    Medical Devices Section, 
+    The medical devices section contains narrative text and coded entries describing the patient history of medical device use,
+    $loinc#46264-8) // History of medical device use
+
   * entry 0..
-  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore ) // DeviceUseStatementEuHdr ro be revised
+  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore or DocumentReference)) // DeviceUseStatementEuHdr ro be revised
+
+  * insert SectionEntrySliceComRules(Medical Device entry, EPS Medical Devices entry slice)
+
+  * insert SectionEntrySliceDefRules (deviceStatement, 0..*, 
+    Patient history of medical device use, 
+    It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available\, or that no relevant medical device use is known. , 
+    DeviceUseStatementEuHdr)
+
+
   * section ..0
+
+
+// === EPS History of Procedures Section ===
+
+* section[sectionProceduresHx]
+  * insert SectionComRules ( 
+      History of Procedures, 
+      The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document. Procedures may refer for example to:\r\n
+      1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n
+      2. Therapeutic procedure: e.g. dialysis;\r\n
+      3. Surgical procedure: e.g. appendectomy\r\n,
+      http://loinc.org#47519-4)
+  
+  * entry only Reference(Procedure or DocumentReference)
+
+  * insert SectionEntrySliceComRules(Slice on procedure, Slice on procedure)
+  // entry slices
+  * insert SectionEntrySliceDefRules (procedure, 0..*,
+     Patient past procedures pertinent to the scope of this document. ,  	
+     It lists the patient past procedures that are pertinent to the scope of this document. Procedures may refer for example to:\r\n
+      1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n
+      2. Therapeutic procedure: e.g. dialysis;\r\n
+      3. Surgical procedure: e.g. appendectomy\r\n,
+      ProcedureEuEps)
 
 
 // -------------------------------------
@@ -195,6 +230,25 @@ $loinc#87232-5 ) // 	Medication administration.brief
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
   * entry 0..
   * entry only Reference(MedicationStatementEuCore or MedicationRequestEuHdr or MedicationDispenseEuHdr or MedicationAdministrationEuHdr)
+
+
+
+// -------------------------------------
+// Medical Devices and Implants Section 0 .. 1
+// courseOfEncounter.medicalDevicesAndImplants
+// -------------------------------------
+
+* section contains sectionImplantedDevices 0..1
+* section[sectionImplantedDevices]
+  * insert SectionComRules (
+    Medical devices and implants,
+    Implants and used medical devices that affected or may affect the provision of health services (diagnosis and treatment\). Also medical devices explanted\, or its use was stopped during hospitalisation. If the section is blank\, the reason must be explicitly stated using the IPS Absent and Unknown Data coding system. ,
+    $loinc#57080-4) // Implanted medical device (to be changed)
+    
+    // $sct#1184586001) //"Medical device document section (record artifact\)
+  * entry 0..
+  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore)
+
 
 // -------------------------------------
 * section contains sectionSignificantResults 0..1
@@ -244,17 +298,20 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * entry only Reference( CarePlanEuHdr or DocumentReference) // Check if CarePlanEuHdr is needed or if we should align with EPS
 
 
-  // -------------------------------------
+// -------------------------------------
 // Discharge instructions Section 0 .. 1
 // -------------------------------------
 
+/* REMOVED FROM THE MODEL
 * section contains sectionDischargeInstructions ..1
 
 * section[sectionDischargeInstructions]
   * insert SectionComRules (
     Hospital Discharge Instructions,
     Hospital Discharge Instructions,
-    $loinc#8653-8 )   //  Hospital Discharge instructions
+    $loinc#8653-8 )   //  Hospital Discharge instructions 
+    
+  */
 
 // -------------------------------------
 // Discharge Medications Section 0 .. 1
