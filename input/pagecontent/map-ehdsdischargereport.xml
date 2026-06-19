@@ -8,16 +8,17 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Ongoing alignment:</strong>
-              The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
-        </div>
+          <strong>Ongoing alignment:</strong> The models are expected to continue evolving, with
+          updates incorporated into this Implementation Guide to maintain alignment with the EHDS
+          Implementing Acts. </div>
       </div>
     </div>
     <h3>EHDSDischargeReport -> Composition (HDR)</h3>
     <a> </a>
     <p></p>
     <p>
-      This page explains how conceptual elements from the EHDSDischargeReport logical model are expressed
+      This page explains how conceptual elements from the EHDSDischargeReport logical model are
+      expressed
       in the corresponding FHIR CompositionEuHdr profile used by this Implementation Guide.
     </p>
     <p></p>
@@ -26,7 +27,9 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDischargeReport.html" target="_blank">
+          <a
+            href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDischargeReport.html"
+            target="_blank">
             EHDSDischargeReport
           </a>
         </li>
@@ -70,7 +73,7 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>author</td>
-            <td>Reference to Practitioner/PractitionerRole/Organization/Device per profile.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.status</td>
@@ -95,24 +98,25 @@
           </tr>
           <tr>
             <td>header.period</td>
-            <td>related-to</td>
+            <td>equivalent</td>
             <td>Composition</td>
             <td>event.period</td>
-            <td>Map to the primary Composition.event entry.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.intendedRecipient[x]</td>
-            <td>related-to</td>
+            <td>equivalent</td>
             <td>Composition</td>
             <td>extension:information-recipient</td>
-            <td>Uses the information-recipient extension in CompositionEuHdr.</td>
+            <td></td>
           </tr>
           <tr>
             <td>body</td>
             <td>related-to</td>
             <td>Composition</td>
             <td>section</td>
-            <td>CompositionEuHdr represents body content as sliced Composition sections plus the Composition.encounter reference.</td>
+            <td>CompositionEuHdr represents body content as sliced Composition sections plus the
+              Composition.encounter reference.</td>
           </tr>
 
           <!-- ALERTS -->
@@ -121,7 +125,7 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionAlert</td>
-            <td>Use LOINC 104605-1.</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.alerts.generatedNarrative</td>
@@ -135,7 +139,7 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionAlert.entry</td>
-            <td>Reference to Flag (EHDSAlert).</td>
+            <td></td>
           </tr>
 
           <!-- ENCOUNTER INFORMATION -->
@@ -160,12 +164,12 @@
             <td>encounter</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="highlight-yellow">
             <td>body.encounterInformation.note</td>
             <td>related-to</td>
             <td>Encounter</td>
             <td>text</td>
-            <td>No dedicated encounter-information section is active in CompositionEuHdr.</td>
+            <td>MAPPING TO BE DEFINED</td>
           </tr>
 
           <!-- ADMISSION EVALUATION -->
@@ -174,7 +178,7 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionAdmissionEvaluation</td>
-            <td>Reported only if relevant.</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.admissionEvaluation.generatedNarrative</td>
@@ -183,32 +187,32 @@
             <td>section:sectionAdmissionEvaluation.text</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>body.admissionEvaluation.objectiveFindings</td>
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionVitalSigns</td>
-            <td>Use Observation where appropriate; anthropometric measurements may be represented here when treated as vital-sign observations.</td>
+            <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>body.admissionEvaluation.objectiveFindings</td>
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionPhysicalFindings</td>
-            <td>Use Observation where appropriate.</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.admissionEvaluation.functionalStatus[x]</td>
-            <td>related-to</td>
+            <td>equivalent</td>
             <td>Composition</td>
-            <td>section:sectionFunctionalStatus.entry</td>
-            <td>Source allows EHDSCondition or EHDSObservation; the FHIR profile also permits ClinicalImpression, DocumentReference, and QuestionnaireResponse entries.</td>
+            <td>section:sectionFunctionalStatus</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.admissionEvaluation.note</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>section:sectionAdmissionEvaluation.text</td>
+            <td>section:sectionAdmissionEvaluation.extension:section-note</td>
             <td></td>
           </tr>
 
@@ -231,22 +235,22 @@
             <td>body.patientHistory.pastProblems</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>section:sectionPatientHx.text / section:sectionProblems.entry</td>
-            <td>Use sectionPatientHx for anamnesis context; use sectionProblems when represented as problem entries.</td>
+            <td>section:sectionProblems</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.patientHistory.devicesAndImplants</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>section:sectionPatientHx.text / section:sectionMedicalDevices.entry</td>
-            <td>Use sectionMedicalDevices for patient history of medical device use.</td>
+            <td>section:sectionMedicalDevices</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.patientHistory.procedures</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>section:sectionPatientHx.text / section:sectionProceduresHx.entry</td>
-            <td>Use sectionProceduresHx for past procedures relevant to the document scope.</td>
+            <td>section:sectionProceduresHx</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.patientHistory.note</td>
@@ -275,36 +279,36 @@
             <td>body.courseOfEncounter.diagnosticSummary</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section:sectionDiagnosticSummary.entry</td>
-            <td>Reference to ConditionEuCore.</td>
+            <td>section:sectionDiagnosticSummary</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.procedures</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section:sectionSignificantProcedures.entry</td>
-            <td>Reference to ProcedureEuCore.</td>
+            <td>section:sectionSignificantProcedures</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.medicalDevicesAndImplants</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section:sectionImplantedDevices.entry</td>
-            <td>Reference to DeviceUseStatementEuHdr.</td>
+            <td>section:sectionImplantedDevices</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.pharmacotherapy</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section:sectionPharmacotherapy.entry</td>
-            <td>MedicationStatement/Request/Dispense/Administration.</td>
+            <td>section:sectionPharmacotherapy</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.testResults[x]</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section:sectionSignificantResults.entry</td>
-            <td>EHDSObservation and EHDSLaboratoryObservation map to Observation-oriented entries; DiagnosticReport/DocumentReference are also allowed by CompositionEuHdr.</td>
+            <td>section:sectionSignificantResults</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.note</td>
@@ -329,18 +333,25 @@
             <td>section:sectionDischargeDetails.text</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>body.dischargeDetails.objectiveFindings</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>section:sectionPhysicalFindings / section:sectionVitalSigns / section:sectionSignificantResults</td>
-            <td>No discharge-specific objective-findings section is defined in CompositionEuHdr.</td>
+            <td>section:sectionPhysicalFindings</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.dischargeDetails.objectiveFindings</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionVitalSigns</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.dischargeDetails.functionalStatus[x]</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>section:sectionFunctionalStatus.entry</td>
+            <td>section:sectionFunctionalStatus</td>
             <td></td>
           </tr>
           <tr>
@@ -357,7 +368,7 @@
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionDischargeMedications</td>
-            <td>Post-discharge medications summary.</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.medicationSummary.generatedNarrative</td>
@@ -371,7 +382,7 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionDischargeMedications.entry</td>
-            <td>MedicationRequest/MedicationDispense/MedicationStatement.</td>
+            <td></td>
           </tr>
           <tr>
             <td>body.medicationSummary.note</td>
@@ -400,15 +411,15 @@
             <td>body.carePlan.carePlan</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section:sectionPlanOfCare.entry</td>
-            <td>Reference to CarePlanEuHdr.</td>
+            <td>section:sectionPlanOfCare</td>
+            <td></td>
           </tr>
-          <tr>
+          <tr class="highlight-yellow">
             <td>body.carePlan.otherRecommendations</td>
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionPlanOfCare.text</td>
-            <td>sectionDischargeInstructions is no longer active in CompositionEuHdr.</td>
+            <td> TO BE DEFINED</td>
           </tr>
 
           <!-- SYNTHESIS -->
@@ -416,7 +427,7 @@
             <td>body.synthesis</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section:sectionSynthesis.text</td>
+            <td>section:sectionSynthesis</td>
             <td></td>
           </tr>
 
@@ -425,14 +436,14 @@
             <td>attachments</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section:sectionAttachments.entry</td>
-            <td>DocumentReference/Binary in CompositionEuHdr.</td>
+            <td>section:sectionAttachments</td>
+            <td></td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p style="margin-top:2rem;color:#555;">
-      Return to overview: <a href="modelmap.html">EHDS Logical Models -> FHIR Profiles</a>
+    <p style="margin-top:2rem;color:#555;"> Return to overview: <a href="modelmap.html">EHDS Logical
+      Models -> FHIR Profiles</a>
     </p>
   </body>
 </div>
