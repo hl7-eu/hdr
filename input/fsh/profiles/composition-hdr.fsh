@@ -182,6 +182,30 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * section ..0
 
 
+// === EPS History of Procedures Section ===
+
+* section[sectionProceduresHx]
+  * insert SectionComRules ( 
+      History of Procedures, 
+      The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document. Procedures may refer for example to:\r\n
+      1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n
+      2. Therapeutic procedure: e.g. dialysis;\r\n
+      3. Surgical procedure: e.g. appendectomy\r\n,
+      http://loinc.org#47519-4)
+  
+  * entry only Reference(Procedure or DocumentReference)
+
+  * insert SectionEntrySliceComRules(Slice on procedure, Slice on procedure)
+  // entry slices
+  * insert SectionEntrySliceDefRules (procedure, 0..*,
+     Patient past procedures pertinent to the scope of this document. ,  	
+     It lists the patient past procedures that are pertinent to the scope of this document. Procedures may refer for example to:\r\n
+      1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n
+      2. Therapeutic procedure: e.g. dialysis;\r\n
+      3. Surgical procedure: e.g. appendectomy\r\n,
+      ProcedureEuEps)
+
+
 // -------------------------------------
 // TO BE REVISED
 // ---------------------
@@ -244,17 +268,20 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * entry only Reference( CarePlanEuHdr or DocumentReference) // Check if CarePlanEuHdr is needed or if we should align with EPS
 
 
-  // -------------------------------------
+// -------------------------------------
 // Discharge instructions Section 0 .. 1
 // -------------------------------------
 
+/* REMOVED FROM THE MODEL
 * section contains sectionDischargeInstructions ..1
 
 * section[sectionDischargeInstructions]
   * insert SectionComRules (
     Hospital Discharge Instructions,
     Hospital Discharge Instructions,
-    $loinc#8653-8 )   //  Hospital Discharge instructions
+    $loinc#8653-8 )   //  Hospital Discharge instructions 
+    
+  */
 
 // -------------------------------------
 // Discharge Medications Section 0 .. 1
