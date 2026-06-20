@@ -79,6 +79,27 @@
             <td>CompositionEuHdr constrains header elements for HDR.</td>
           </tr>
           <tr>
+            <td>header.subject</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>subject</td>
+            <td>Reference to PatientEuCore.</td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>identifier</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>equivalent</td>
+            <td>Bundle</td>
+            <td>identifier</td>
+            <td>It identifies a specific instance (version) of the document.</td>
+          </tr>
+          <tr>
             <td>header.author[x]</td>
             <td>equivalent</td>
             <td>Composition</td>
@@ -86,10 +107,24 @@
             <td></td>
           </tr>
           <tr>
+            <td>header.date</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>date</td>
+            <td></td>
+          </tr>
+          <tr>
             <td>header.status</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>status</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.language</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>language</td>
             <td></td>
           </tr>
           <tr>
@@ -111,6 +146,76 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>event.period</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.version</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>extension:version</td>
+            <td>Business version represented with the R5 Composition version extension.</td>
+          </tr>
+          <tr>
+            <td>header.attestation</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>attester</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.attestation.attester[x]</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>attester.party</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.attestation.datetime</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>attester.time</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.legalAuthentication</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>attester</td>
+            <td>Use attester.mode to indicate legal authentication.</td>
+          </tr>
+          <tr>
+            <td>header.legalAuthentication.legalAuthenticator[x]</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>attester.party</td>
+            <td>Use attester.mode to indicate legal authentication.</td>
+          </tr>
+          <tr>
+            <td>header.legalAuthentication.datetime</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>attester.time</td>
+            <td>Use attester.mode to indicate legal authentication.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.eventType</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>category</td>
+            <td>If used for document categorisation/search metadata.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.serviceSpecialty</td>
+            <td>no-map</td>
+            <td>Composition</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.custodian</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>custodian</td>
             <td></td>
           </tr>
           <tr>
@@ -421,15 +526,15 @@
             <td>body.carePlan.carePlan</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section:sectionPlanOfCare</td>
-            <td></td>
+            <td>section:sectionPlanOfCare.entry</td>
+            <td><td>Refernce to <a href="StructureDefinition-carePlan-eu-hdr.html">CarePlanEuHdr</a>.</td></td>
           </tr>
           <tr>
             <td>body.carePlan.otherRecommendations</td>
             <td>related-to</td>
             <td>CarePlan</td>
             <td>note</td>
-            <td>Use <a href="StructureDefinition-carePlan-eu-hdr.html">CarePlanEuHdr</a>.</td>
+            <td>Referenced by section:sectionPlanOfCare.entry; it uses <a href="StructureDefinition-carePlan-eu-hdr.html">CarePlanEuHdr</a>.</td>
           </tr>
 
           <!-- SYNTHESIS -->
@@ -442,6 +547,13 @@
           </tr>
 
           <!-- ATTACHMENTS -->
+          <tr>
+            <td>presentedForm</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionAttachments</td>
+            <td>Use an attachment entry such as DocumentReference or Binary for a rendered form.</td>
+          </tr>
           <tr>
             <td>attachments</td>
             <td>equivalent</td>

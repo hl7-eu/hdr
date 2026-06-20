@@ -58,6 +58,13 @@
         </thead>
         <tbody>
           <tr>
+            <td>header</td>
+            <td>related-to</td>
+            <td>Encounter</td>
+            <td>.</td>
+            <td>Dataset-level; not carried as a single element in Encounter.</td>
+          </tr>
+          <tr>
             <td>header.subject</td>
             <td>equivalent</td>
             <td>Encounter</td>
