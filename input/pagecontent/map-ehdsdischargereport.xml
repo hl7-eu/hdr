@@ -39,6 +39,16 @@
             CompositionEuHdr
           </a>
         </li>
+        <li>
+          <strong>Referenced FHIR profiles:</strong>
+          <a href="StructureDefinition-encounter-eu-hdr.html">
+            EncounterEuHdr
+          </a>
+          ,
+          <a href="StructureDefinition-carePlan-eu-hdr.html">
+            CarePlanEuHdr
+          </a>
+        </li>
       </ul>
     </div>
     <p></p>
@@ -148,7 +158,7 @@
             <td>related-to</td>
             <td>Composition</td>
             <td>encounter</td>
-            <td>Use EncounterEuHdr.</td>
+            <td>Use <a href="StructureDefinition-encounter-eu-hdr.html">EncounterEuHdr</a>.</td>
           </tr>
           <tr>
             <td>body.encounterInformation.generatedNarrative</td>
@@ -164,12 +174,12 @@
             <td>encounter</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>body.encounterInformation.note</td>
             <td>related-to</td>
             <td>Encounter</td>
-            <td>text</td>
-            <td>MAPPING TO BE DEFINED</td>
+            <td>extension:note</td>
+            <td></td>
           </tr>
 
           <!-- ADMISSION EVALUATION -->
@@ -414,12 +424,12 @@
             <td>section:sectionPlanOfCare</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>body.carePlan.otherRecommendations</td>
             <td>related-to</td>
-            <td>Composition</td>
-            <td>section:sectionPlanOfCare.text</td>
-            <td> TO BE DEFINED</td>
+            <td>CarePlan</td>
+            <td>note</td>
+            <td>Use <a href="StructureDefinition-carePlan-eu-hdr.html">CarePlanEuHdr</a>.</td>
           </tr>
 
           <!-- SYNTHESIS -->

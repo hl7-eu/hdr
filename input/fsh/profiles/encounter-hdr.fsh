@@ -13,6 +13,7 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 * extension[legalStatus] ^short = "Legal status/situation at admission"
 
 
+* text ^requirements = "body.encounterInformation.generatedNarrative"
 * identifier ^short = "Identifier(s) by which this encounter is known."
 * status from EncounterStatusHdrVS
   * ^short = "Status of this Hospital stay"

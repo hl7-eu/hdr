@@ -42,6 +42,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * ^example[0].valueCoding.code = $loinc#LP72467-1
   * ^example[0].valueCoding.display = "Discharge summary note"
 
+* event.period ^requirements = "header.period"
+
 * encounter 1..1 
 * encounter only Reference (EncounterEuHdr)
 
@@ -87,6 +89,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
       Hospital Admission evaluation,
       $loinc#67851-6)   // "Admission evaluation note"
   * ^comment = "Admission evaluation should be reported only exceptionally, if it is relevant to ensure continuity of care."
+  * text ^requirements = "body.admissionEvaluation.generatedNarrative"
 
 
 // -------------------------------------
@@ -138,6 +141,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     $loinc#8648-8 )   // "Hospital course note"
   * ^short = "Significant information about course of hospital stay"
   * ^definition = "This section includes basic information about hospital staty (encounter), diagnostic summary in narrative form, pharmacotherapy, major procedures, medical devices, significant findings during hospital stay and clinical synthesis."
+  * text ^requirements = "body.courseOfEncounter.generatedNarrative; body.courseOfEncounter.note"
   
  
 // -------------------------------------
@@ -292,6 +296,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     Plan of Care Section,
     The plan of care section contains a narrative description of the expectations for care including proposals\, goals\, and order requests for monitoring\, tracking\, or improving the condition of the patient.,
     $loinc#18776-5 )   // Plan of care note
+  * text ^requirements = "body.carePlan.generatedNarrative"
   * entry only Reference( CarePlanEuHdr or DocumentReference) // Check if CarePlanEuHdr is needed or if we should align with EPS
 
 
@@ -322,6 +327,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     Hospital discharge medications,
     Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge, 
     $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital "Discharge medications note" or 	Discharge medications Narrative
+  * text ^requirements = "body.medicationSummary.generatedNarrative; body.medicationSummary.note"
   * entry 0..
   * entry only Reference(MedicationRequestEuHdr or MedicationDispenseEuHdr or MedicationStatementEuCore)
 
@@ -358,6 +364,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     Alert Section, // SHORT
     Information about substantial alerts or warnings (including allergies\) that health professionals should be aware of., 
       http://loinc.org#104605-1 )   // CODE
+  * text ^requirements = "body.alerts.generatedNarrative"
 
   * entry only Reference(Flag or DocumentReference)
   * insert SectionEntrySliceComRules(EPS Alerts entry, EPS Alerts entry slice)
@@ -381,6 +388,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     Hx general Reported Section,
     This section may provide both synthetic anamnesis \,e.g. description of phases of the pathology as a chronological summary of clustered clinical information\, and anecdotal evidence that clinicians can collect from the patient\, and can read in a narrative form.,
     http://loinc.org#11329-0 )
+  * text ^requirements = "body.patientHistory.generatedNarrative"
 
 
 
@@ -436,6 +444,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
       Discharge details,
       The hospital discharge status or disposition of the patient having a hospitalization.,
       $loinc#8650-4 ) //"Hospital discharge disposition note"
+  * text ^requirements = "body.dischargeDetails.generatedNarrative; body.dischargeDetails.note"
  
 // -------------------------------------------------------------
 // Attachmnets section

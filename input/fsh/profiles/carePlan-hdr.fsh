@@ -9,6 +9,7 @@ Description: """This profile constrains the CarePlan resource for the purpose of
 * addresses only Reference (ConditionEuCore)
 * description ^short = "Summary of nature of plan."
 * period ^short = "Period covered by the plan"
+* note ^requirements = "body.carePlan.otherRecommendations"
 
 * activity 
   * detail
