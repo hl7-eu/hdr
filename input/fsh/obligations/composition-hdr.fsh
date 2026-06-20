@@ -80,8 +80,10 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 * section[sectionPlanOfCare] insert ObligationSet2
 
 
+* section[sectionImplantedDevices] insert ObligationSet3
+* section[sectionProceduresHx] insert ObligationSet3
 
-* section[sectionDischargeInstructions] insert ObligationSet2
+// * section[sectionDischargeInstructions] insert ObligationSet2
 
 
 

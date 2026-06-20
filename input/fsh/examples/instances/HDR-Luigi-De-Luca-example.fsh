@@ -413,7 +413,7 @@ Usage: #example
 // 
 // section
 //
-* section[sectionDischargeInstructions].title = "Hospital Discharge Instructions"
+* section[+].title = "Hospital Discharge Instructions"
 * section[=].code = $loinc#8653-8 "Hospital Discharge Instructions"
 * section[=].text.status = #additional
 * section[=].text.div = """

@@ -180,7 +180,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     $loinc#46264-8) // History of medical device use
 
   * entry 0..
-  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore or DocumentReference)) // DeviceUseStatementEuHdr ro be revised
+  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore or DocumentReference) // DeviceUseStatementEuHdr ro be revised
 
   * insert SectionEntrySliceComRules(Medical Device entry, EPS Medical Devices entry slice)
 
@@ -195,26 +195,23 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 // === EPS History of Procedures Section ===
 
+* section contains sectionProceduresHx 0..1
 * section[sectionProceduresHx]
-  * insert SectionComRules ( 
-      History of Procedures, 
-      The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document. Procedures may refer for example to:\r\n
-      1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n
-      2. Therapeutic procedure: e.g. dialysis;\r\n
-      3. Surgical procedure: e.g. appendectomy\r\n,
-      http://loinc.org#47519-4)
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * ^short = "History of Procedures"
+  * ^definition = "The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document. Procedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy\r\n"
+  * code = $loinc#47519-4
   
   * entry only Reference(Procedure or DocumentReference)
 
   * insert SectionEntrySliceComRules(Slice on procedure, Slice on procedure)
   // entry slices
-  * insert SectionEntrySliceDefRules (procedure, 0..*,
-     Patient past procedures pertinent to the scope of this document. ,  	
-     It lists the patient past procedures that are pertinent to the scope of this document. Procedures may refer for example to:\r\n
-      1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n
-      2. Therapeutic procedure: e.g. dialysis;\r\n
-      3. Surgical procedure: e.g. appendectomy\r\n,
-      ProcedureEuEps)
+  * entry contains procedure 0..*
+  * entry[procedure] 0..*
+  * entry[procedure] ^short = "Patient past procedures pertinent to the scope of this document."
+  * entry[procedure] ^definition = "It lists the patient past procedures that are pertinent to the scope of this document. Procedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy\r\n"
+  * entry[procedure] only Reference(ProcedureEuCore)
 
 
 // -------------------------------------

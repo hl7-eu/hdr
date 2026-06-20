@@ -140,7 +140,7 @@ Usage: #inline
 // 
 // section
 //
-* section[sectionDischargeInstructions].title = "Discharge and Follow-up"
+* section[+].title = "Discharge and Follow-up"
 * section[=].code = $loinc#8653-8 "Hospital Discharge instructions"
 * section[=].text.status = #generated
 * section[=].text.div = """
