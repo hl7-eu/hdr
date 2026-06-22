@@ -78,14 +78,14 @@
             <td>equivalent</td>
             <td>DeviceUseStatement</td>
             <td>subject</td>
-            <td>Reference to Patient (or other subject).</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.identifier</td>
             <td>equivalent</td>
             <td>DeviceUseStatement</td>
             <td>identifier</td>
-            <td>Copy over all identifiers if multiple.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.author[x]</td>
@@ -106,7 +106,7 @@
             <td>equivalent</td>
             <td>DeviceUseStatement</td>
             <td>status</td>
-            <td>Preferred binding: HL7 Device Use Statement Status or HL7 Device Usage Status.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.source</td>
@@ -134,21 +134,21 @@
             <td>source-is-broader-than-target</td>
             <td>DeviceUseStatement</td>
             <td>device</td>
-            <td>FHIR uses Reference(Device); CodeableConcept may require a Device instance.</td>
+            <td>See <a href="map-ehdsdevice.html">EHDSDevice mapping</a> for details.</td>
           </tr>
           <tr>
             <td>bodySite</td>
             <td>related-to</td>
             <td>DeviceUseStatement</td>
             <td>bodySite</td>
-            <td>EHDSBodyStructure may need to be summarized as CodeableConcept.</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsbodystructure.html">EHDSBodyStructure mapping</a> for details.</td>
           </tr>
           <tr>
             <td>reason[x]</td>
             <td>source-is-broader-than-target</td>
             <td>DeviceUseStatement</td>
             <td>reasonCode / reasonReference</td>
-            <td>Use reasonCode for CodeableConcept reasons and reasonReference for Condition, Observation, or Procedure reasons.</td>
+            <td></td>
           </tr>
           <tr>
             <td>note</td>

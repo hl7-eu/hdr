@@ -98,6 +98,8 @@ pages:
     title: EHDSCarePlan Mapping
   map-ehdsdeviceuse.xml:
     title: EHDSDeviceUse Mapping
+  map-device.xml:
+    title: EHDSDevice Mapping
   map-ehdslaboratoryobservation.xml:
     title: EHDSLaboratoryObservation Mapping
   map-ehdsrelatedperson.xml:

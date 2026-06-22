@@ -132,14 +132,12 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     * ^definition = "It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide."
 
   
-  * insert SectionEntrySliceComRules(Condition entry, Condition entry slice)
+  * insert SectionEntrySliceComRules(Disabilities and Functional assessments, Disabilities and Functional assessments)
 
   * insert SectionEntrySliceDefRules (condition, 0..*, 
     Functional status condition entry, 
      Optional entry used to represent disabilities and other conditions that may influence the functional status of the patient. It describes capabilities of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties.,
     ConditionEuCore)
-
-  * insert SectionEntrySliceComRules(Observation entry, Observation entry slice)
 
   * insert SectionEntrySliceDefRules (observation, 0..*, 
     Functional status observation entry, 
@@ -250,7 +248,11 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * entry 0..
   * entry only Reference(MedicationStatementEuCore or MedicationRequestEuCore or MedicationDispenseEuHdr or MedicationAdministrationEuHdr)
 
-
+  * insert SectionEntrySliceComRules(Medication Use slice, Medication Use slice)
+  * insert SectionEntrySliceDefRules (medicationStatement, 0.. , 
+      Medication Use, 
+      Significant medication treatments during encounter., 
+      MedicationStatementEuCore)
 
 // -------------------------------------
 // Medical Devices and Implants Section 0 .. 1
