@@ -38,16 +38,6 @@
         </li>
         <li>
           <strong>Referenced FHIR profiles and types:</strong>
-          <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-patient-eu-core.html">PatientEuCore</a>,
-          <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-practitioner-eu-core.html">PractitionerEuCore</a>,
-          <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-practitionerRole-eu-core.html">PractitionerRoleEuCore</a>,
-          <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-organization-eu-core.html">OrganizationEuCore</a>,
-          <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-location-eu-core.html">LocationEuCore</a>,
-          <a href="StructureDefinition-carePlan-eu-hdr.html">CarePlanEuHdr</a>,
-          <a href="https://hl7.org/fhir/servicerequest.html">ServiceRequest</a>,
-          <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-condition-eu-core.html">ConditionEuCore</a>,
-          <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-procedure-eu-core.html">ProcedureEuCore</a>,
-          <a href="https://hl7.org/fhir/observation.html">Observation</a>
         </li>
       </ul>
     </div>

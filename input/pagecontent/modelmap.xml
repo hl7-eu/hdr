@@ -51,32 +51,8 @@
                             <code>BundleEuHdr</code>
                         </a>, <a href="StructureDefinition-composition-eu-hdr.html">
                             <code>CompositionEuHdr</code>
-                        </a>, <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-patient-eu-core.html"><code>PatientEuCore</code></a>,
+                        </a>, 
                         <a href="StructureDefinition-encounter-eu-hdr.html"><code>EncounterEuHdr</code></a>,
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-allergyIntolerance-eu-core.html"><code>AllergyIntoleranceEuCore</code></a>,
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-condition-eu-core.html"><code>ConditionEuCore</code></a>,
-                        <a href="StructureDefinition-device-eu-hdr.html"><code>DeviceEuHdr</code></a>,
-                        <a href="StructureDefinition-deviceUseStatement-eu-hdr.html"><code>DeviceUseStatementEuHdr</code></a>,
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-diagnosticReport-eu-core.html"><code>DiagnosticReportEuCore</code></a>,
-                        <a href="https://hl7.org/fhir/imagingstudy.html"><code>ImagingStudy</code></a>,
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-immunization-eu-core.html"><code>ImmunizationEuCore</code></a>,
-                        <a href="https://hl7.org/fhir/immunizationrecommendation.html"><code>ImmunizationRecommendation</code></a>,
-                        <a href="https://hl7.org/fhir/media.html"><code>Media</code></a>,
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-medication-eu-core.html"><code>MedicationEuCore</code></a>,
-                        <a href="StructureDefinition-medicationRequest-eu-hdr.html"><code>MedicationRequestEuHdr</code></a>,
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-medicationStatement-eu-core.html"><code>MedicationStatementEuCore</code></a>,
-                        <a href="StructureDefinition-medicationAdministration-eu-hdr.html"><code>MedicationAdministrationEuHdr</code></a>,
-                        <a href="StructureDefinition-medicationDispense-eu-hdr.html"><code>MedicationDispenseEuHdr</code></a>,
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-practitioner-eu-core.html"><code>PractitionerEuCore</code></a>,
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-practitionerRole-eu-core.html"><code>PractitionerRoleEuCore</code></a>,
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-procedure-eu-core.html"><code>ProcedureEuCore</code></a>,
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-organization-eu-core.html"><code>OrganizationEuCore</code></a>,
-                        <a href="https://hl7.org/fhir/observation.html"><code>Observation</code></a>,
-                        <a href="https://hl7.org/fhir/uv/ips/StructureDefinition-Specimen-uv-ips.html"><code>SpecimenUvIps</code></a>,
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-flag-eu-core.html"><code>FlagPatientEuCore</code></a>,
-                        <a href="https://hl7.org/fhir/familymemberhistory.html"><code>FamilyMemberHistory</code></a>,
-                        <a href="https://hl7.org/fhir/documentreference.html"><code>DocumentReference</code></a>,
-                        <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-location-eu-core.html"><code>LocationEuCore</code></a>,
                         <a href="StructureDefinition-carePlan-eu-hdr.html"><code>CarePlanEuHdr</code></a>
                     </td>
                     <td>
