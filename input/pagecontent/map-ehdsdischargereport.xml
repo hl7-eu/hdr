@@ -197,7 +197,7 @@
             <td>attester.time</td>
             <td>Use attester.mode to indicate legal authentication.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.eventType</td>
             <td>related-to</td>
             <td>Composition</td>
@@ -351,21 +351,21 @@
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionProblems</td>
-            <td></td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdscondition.html">EHDSCondition Mapping</a> for detailed mapping information.</td> 
           </tr>
           <tr>
             <td>body.patientHistory.devicesAndImplants</td>
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionMedicalDevices</td>
-            <td></td>
+            <td>See <a href="https://map-ehdsdeviceuse.html">EHDSDeviceUse Mapping</a> for detailed mapping information.</td>
           </tr>
           <tr>
             <td>body.patientHistory.procedures</td>
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionProceduresHx</td>
-            <td></td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsprocedure.html">EHDSProcedure Mapping</a> for detailed mapping information.</td> 
           </tr>
           <tr>
             <td>body.patientHistory.note</td>
@@ -423,7 +423,7 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionSignificantResults</td>
-            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsmedicaltestresult.html">EHDSMedicalTestResult Mapping</a> for detailed mapping information.</td> 
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsobservation.html">EHDSObservation Mapping</a> for detailed mapping information. Please note that the mapping EHDSObservation → MedicalTestResultEuCore does not apply to every kind of Observation. </td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.note</td>
@@ -547,7 +547,7 @@
           </tr>
 
           <!-- ATTACHMENTS -->
-          <tr>
+          <tr class="highlight-yellow">
             <td>presentedForm</td>
             <td>related-to</td>
             <td>Composition</td>
@@ -559,7 +559,7 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionAttachments</td>
-            <td></td>
+            <td>See <a href="map-ehdsattachment.html">EHDSAttachment Mapping</a> for detailed mapping information.</td>
           </tr>
         </tbody>
       </table>
