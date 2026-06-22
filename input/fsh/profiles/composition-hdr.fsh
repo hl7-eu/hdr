@@ -284,7 +284,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionEntrySliceDefRules (results-medicalTestResult, 0.. , 
       Medical test results, 
        Results collected on the patient or produced on in-vitro biologic specimens., 
-       MedicalTestResultEuCore)
+       MedicalTestResultEuCore)       
   * insert SectionEntrySliceDefRules (results-diagnosticReport, 0.. , 
       DiagnosticReport, 
        DiagnosticReport resource to represent diagnostic test and procedure reports in a patient summary,

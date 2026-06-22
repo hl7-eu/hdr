@@ -243,7 +243,7 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSCarePlan.html" target="_blank">EHDSCarePlan</a>
                     </td>
                     <td>
-                        <a href="https://hl7.org/fhir/careplan.html"><code>CarePlan</code></a>
+                        <a href="StructureDefinition-carePlan-eu-hdr.html"><code>CarePlanEuHdr</code></a>
                     </td>
                     <td>
                         <a class="pill" href="map-ehdscareplan.html">EHDSCarePlan Mapping</a>

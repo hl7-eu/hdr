@@ -395,35 +395,35 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionDiagnosticSummary</td>
-            <td></td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdscondition.html">EHDSCondition Mapping</a> for detailed mapping information.</td> 
           </tr>
           <tr>
             <td>body.courseOfEncounter.procedures</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionSignificantProcedures</td>
-            <td></td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsprocedure.html">EHDSProcedure Mapping</a> for detailed mapping information.</td> 
           </tr>
           <tr>
             <td>body.courseOfEncounter.medicalDevicesAndImplants</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionImplantedDevices</td>
-            <td></td>
+            <td>See <a href="https://map-ehdsdeviceuse.html">EHDSDeviceUse Mapping</a> for detailed mapping information.</td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.pharmacotherapy</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionPharmacotherapy</td>
-            <td></td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsmedicationuse.html">EHDSMedicationUse Mapping</a> for detailed mapping information.</td> 
           </tr>
           <tr>
             <td>body.courseOfEncounter.testResults[x]</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionSignificantResults</td>
-            <td></td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsmedicaltestresult.html">EHDSMedicalTestResult Mapping</a> for detailed mapping information.</td> 
           </tr>
           <tr>
             <td>body.courseOfEncounter.note</td>
@@ -497,7 +497,7 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionDischargeMedications.entry</td>
-            <td></td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsmedicationuse.html">EHDSMedicationUse Mapping</a> for detailed mapping information.</td>      
           </tr>
           <tr>
             <td>body.medicationSummary.note</td>

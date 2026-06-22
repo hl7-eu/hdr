@@ -62,14 +62,14 @@
             <td>equivalent</td>
             <td>Device</td>
             <td>identifier</td>
-            <td>Repeat for multiple instance identifiers.</td>
+            <td></td>
           </tr>
           <tr>
             <td>udi</td>
             <td>equivalent</td>
             <td>Device</td>
             <td>udiCarrier</td>
-            <td>Repeat for multiple UDI carrier identifiers when present.</td>
+            <td></td>
           </tr>
           <tr>
             <td>manufacturer</td>
@@ -139,7 +139,7 @@
             <td>related-to</td>
             <td>Device</td>
             <td>version.value</td>
-            <td>Repeat for multiple versions.</td>
+            <td></td>
           </tr>
           <tr>
             <td>type</td>

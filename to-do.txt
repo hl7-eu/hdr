@@ -30,11 +30,7 @@ sectionImmunizations
 
 // TO DO
 
-1) compare and merge devicesUSeStatement profile with EPS
 2) CarePlanEuHdr should we aling with EPS ?
-3) sectionDischargeInstructions to be removed ?
-4) remove temporary codes / revise used codes
-5) revise EncounterEuHdr 
 6) revise CarePlan set details 0..0 per coherence with R5
 
 

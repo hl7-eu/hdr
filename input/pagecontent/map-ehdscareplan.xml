@@ -2,7 +2,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>EHDSCarePlan -> CarePlan</title>
+    <title>EHDSCarePlan -> CarePlanEuHdr</title>
   </head>
   <body>
     <div class="model-map-block">
@@ -21,12 +21,12 @@
         </div>
       </div>
     </div>
-    <h3>EHDSCarePlan -> CarePlan</h3>
+    <h3>EHDSCarePlan -> CarePlanEuHdr</h3>
     <a> </a>
     <p></p>
     <p>
   This page explains how conceptual elements from the EHDS logical model are expressed
-  in the corresponding FHIR CarePlan profile or type used by this Implementation Guide.
+  in the corresponding FHIR CarePlanEuHdr profile or type used by this Implementation Guide.
     </p>
     <p></p>
     <div class="table-wrap">
@@ -34,27 +34,27 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSCarePlan.html" target="_blank">
+          <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSCarePlan.html" target="_blank">
         EHDSCarePlan
           </a>
         </li>
         <li>
           <strong>Target FHIR profile:</strong>
-          <a href="https://hl7.org/fhir/careplan.html">
-        CarePlan
+          <a href="StructureDefinition-carePlan-eu-hdr.html">
+        CarePlanEuHdr
           </a>
         </li>
       </ul>
     </div>
     <p></p>
     <div class="table-wrap">
-      <table summary="EHDSCarePlan -> CarePlan">
-        <caption>EHDSCarePlan -> CarePlan</caption>
+      <table summary="EHDSCarePlan -> CarePlanEuHdr">
+        <caption>EHDSCarePlan -> CarePlanEuHdr</caption>
         <thead>
           <tr>
             <th colspan="1" class="src-head">EHDSCarePlan (Logical Model)</th>
             <th class="relhead">Relationship</th>
-            <th colspan="3" class="tgt-head">CarePlan</th>
+            <th colspan="3" class="tgt-head">CarePlanEuHdr</th>
           </tr>
           <tr>
             <th class="src-sub">Element</th>
@@ -70,7 +70,7 @@
             <td>related-to</td>
             <td>CarePlan</td>
             <td>.</td>
-            <td>Dataset-level; not carried as a single element in CarePlan.</td>
+            <td>Dataset-level inherited header; not carried as a single element in CarePlan.</td>
           </tr>
           <tr>
             <td>header.subject</td>
@@ -94,32 +94,11 @@
             <td></td>
           </tr>
           <tr>
-            <td>header.date</td>
-            <td>equivalent</td>
-            <td>CarePlan</td>
-            <td>created</td>
-            <td></td>
-          </tr>
-          <tr>
             <td>header.status</td>
             <td>equivalent</td>
             <td>CarePlan</td>
             <td>status</td>
             <td>Preferred binding: HL7 Request status.</td>
-          </tr>
-          <tr class="highlight-yellow">
-            <td>header.source</td>
-            <td>no-map</td>
-            <td>CarePlan</td>
-            <td></td>
-            <td>No direct core element in CarePlan for information source provenance.</td>
-          </tr>
-          <tr>
-            <td>header.language</td>
-            <td>equivalent</td>
-            <td>CarePlan</td>
-            <td>language</td>
-            <td></td>
           </tr>
           <tr>
             <td>title</td>
@@ -147,21 +126,21 @@
             <td>source-is-broader-than-target</td>
             <td>CarePlan</td>
             <td>addresses</td>
-            <td class="highlight-yellow">CarePlan.addresses is Reference(Condition); CodeableConcept may need a referenced Condition.</td>
+            <td>CarePlanEuHdr constrains addresses to Reference(ConditionEuCore). A coded source concern should be represented as a Condition when structured exchange is required.</td>
           </tr>
           <tr>
             <td>activity[x]</td>
             <td>related-to</td>
             <td>CarePlan</td>
             <td>activity.reference</td>
-            <td class="highlight-yellow">When EHDS activity is a CodeableConcept the code is determined by the referred resource. activity.detail is no more present in FHIR R5</td>
+            <td>CarePlanEuHdr uses activity.reference for activities represented by a specific resource and removes activity.detail for R5/R6 alignment. A coded activity should be represented through a referenced resource when structured exchange is required.</td>
           </tr>
           <tr>
             <td>goal</td>
             <td>source-is-broader-than-target</td>
             <td>CarePlan</td>
             <td>goal</td>
-            <td>CarePlan.goal is Reference(Goal); CodeableConcept may need a Goal resource.</td>
+            <td>CarePlanEuHdr constrains goal to Reference(GoalEuHdr). A coded source goal should be represented as a GoalEuHdr resource when structured exchange is required.</td>
           </tr>
         </tbody>
       </table>
