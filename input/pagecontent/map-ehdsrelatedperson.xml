@@ -26,7 +26,7 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSRelatedPerson.html" target="_blank">
+          <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSRelatedPerson.html" target="_blank">
             EHDSRelatedPerson
           </a>
         </li>
@@ -69,35 +69,35 @@
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>name</td>
-            <td></td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdshumanname.html">EHDSHumanName Mapping</a> for detailed mapping information.</td>
           </tr>
           <tr>
             <td>subject</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>patient</td>
-            <td>Reference to PatientEuCore.</td>
+            <td>Reference to <a href="https://hl7.eu/fhir/base/2.0.0/StructureDefinition-PatientEuCore.html">PatientEuCore</a>.</td>
           </tr>
           <tr>
             <td>relationship</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>relationship</td>
-            <td>Preferred binding to HL7 RoleCode.</td>
+            <td></td>
           </tr>
           <tr>
             <td>address</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>address</td>
-            <td></td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsaddress.html">EHDSAddress Mapping</a> for detailed mapping information.</td>
           </tr>
           <tr>
             <td>telecom</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>telecom</td>
-            <td></td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdstelecom.html">EHDSTelecom Mapping</a> for detailed mapping information.</td>
           </tr>
         </tbody>
       </table>

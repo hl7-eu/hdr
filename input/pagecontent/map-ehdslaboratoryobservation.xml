@@ -26,7 +26,7 @@
     <p></p>
     <p>
       This page explains how conceptual elements from the EHDS logical model are expressed
-      in the corresponding FHIR Observation profile or type used by this Implementation Guide.
+      in the corresponding FHIR MedicalTestResultEuCore profile used by this Implementation Guide.
     </p>
     <p></p>
     <div class="table-wrap">
@@ -35,7 +35,7 @@
         <li>
           <strong>Source logical model:</strong>
           <a
-            href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSLaboratoryObservation.html"
+            href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSLaboratoryObservation.html"
             target="_blank">
             EHDSLaboratoryObservation
           </a>
@@ -43,7 +43,7 @@
         <li>
           <strong>Target FHIR profile:</strong>
           <a
-            href="https://hl7.eu/fhir/base/2.0.0-ballot/StructureDefinition-medicalTestResult-eu-core.html">
+            href="https://hl7.eu/fhir/base/2.0.0/StructureDefinition-medicalTestResult-eu-core.html">
             MedicalTestResultEuCore
           </a>
         </li>
@@ -71,57 +71,57 @@
           <tr>
             <td>header</td>
             <td>related-to</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>.</td>
-            <td>Dataset-level; not usually carried in Observation as-is.</td>
+            <td>Dataset-level inherited header; not carried as a single element in MedicalTestResultEuCore.</td>
           </tr>
           <tr>
             <td>header.subject</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>subject</td>
             <td>Reference to Patient (or other allowed subject types).</td>
           </tr>
           <tr>
             <td>header.identifier</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>identifier</td>
             <td>Copy over all identifiers if multiple.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.author[x]</td>
-            <td>no-map</td>
-            <td>Observation</td>
-            <td></td>
-            <td>Observation lacks a dedicated recorder.</td>
+            <td>related-to</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>performer</td>
+            <td>MedicalTestResultEuCore does not include a dedicated author participant. Usually the performer is also the author; when these participants must be distinguished, use the PerformerFunction extension.</td>
           </tr>
           <tr>
             <td>header.date</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>issued</td>
             <td></td>
           </tr>
           <tr>
             <td>header.status</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>status</td>
-            <td>EHDS uses CodeableConcept; Observation.status is a required code. Align to HL7
+            <td>EHDS uses CodeableConcept; MedicalTestResultEuCore.status uses the underlying Observation.status required code. Align to HL7
               ObservationStatus.</td>
           </tr>
           <tr class="highlight-yellow">
             <td>header.source</td>
             <td>no-map</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>-</td>
-            <td>No core element; use an extension if the source is required.</td>
+            <td>No direct native Observation element; consider an extension if the source is required.</td>
           </tr>
           <tr>
             <td>header.language</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>language</td>
             <td></td>
           </tr>
@@ -129,14 +129,14 @@
           <tr>
             <td>header.directSubject[x]</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>focus</td>
             <td></td>
           </tr>
           <tr>
             <td>observationDate[x]</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>effective[x]</td>
             <td>Map to <code>
                 effectiveDateTime</code> or <code>effectivePeriod</code>.</td>
@@ -144,80 +144,73 @@
           <tr>
             <td>type</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>code</td>
             <td></td>
           </tr>
           <tr>
             <td>originalName</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>code.text</td>
             <td></td>
           </tr>
           <tr>
             <td>method</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>method</td>
             <td></td>
           </tr>
           <tr>
             <td>specimen</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>specimen</td>
             <td></td>
           </tr>
           <tr>
             <td>order</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>basedOn</td>
             <td></td>
           </tr>
           <tr>
             <td>performer[x]</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>performer</td>
-            <td>Supports Practitioner, PractitionerRole, Patient, RelatedPerson.</td>
+            <td></td>
           </tr>
           <tr>
             <td>bodySite</td>
             <td>source-is-broader-than-target</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>bodySite</td>
             <td></td>
           </tr>
           <tr>
             <td>bodySite</td>
             <td>source-is-broader-than-target</td>
-            <td>Observation</td>
-            <td>extension[bodyStructure]<span style="color:#2e7d32;font-weight:600;">?R4?</span></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>bodySite</td>
-            <td>equivalent</td>
-            <td>Observation</td>
-            <td>bodyStructure<span style="color:#2e7d32;font-weight:600;">?R5?</span></td>
+            <td>MedicalTestResultEuCore</td>
+            <td>extension[bodyStructure]</td>
             <td></td>
           </tr>
           <!-- result -->
           <tr>
             <td>result</td>
             <td>related-to</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>.</td>
             <td></td>
           </tr>
           <tr>
             <td>result.value[x]</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>value[x]</td>
-            <td></td>
+            <td>When the result is a diagram or picture, for example in microbiology, use Attachment. In FHIR R4, R5 Observation.value[x] data types can be pre-adopted with the cross-version extension.</td>
           </tr>
           <tr>
             <td>result.uncertainty</td>
@@ -227,7 +220,7 @@
             <td>See included elements for mapping details</td>
           </tr>
           <tr>
-            <td>result.uncertaint.value</td>
+            <td>result.uncertainty.value</td>
             <td>equivalent</td>
             <td>Quantity</td>
             <td>extension:uncertainty</td>
@@ -237,7 +230,7 @@
           <tr>
             <td>result.uncertainty.type</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>extension:uncertaintyType	</td>
             <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType extension for the
               Quantity data type.</td>
@@ -245,65 +238,114 @@
           <tr>
             <td>result.dataAbsentReason</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>dataAbsentReason</td>
             <td></td>
           </tr>
           <tr>
             <td>referenceRange</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>referenceRange</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>referenceRange.low</td>
+            <td>equivalent</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>referenceRange.low</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>referenceRange.high</td>
+            <td>equivalent</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>referenceRange.high</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>referenceRange.normalValue</td>
+            <td>source-is-broader-than-target</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>referenceRange.text</td>
+            <td>FHIR R4 Observation.referenceRange does not include normalValue; represent the normal value textually or with an extension if structured exchange is required.</td>
+          </tr>
+          <tr>
+            <td>referenceRange.type</td>
+            <td>equivalent</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>referenceRange.type</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>referenceRange.appliesTo</td>
+            <td>equivalent</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>referenceRange.appliesTo</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>referenceRange.age</td>
+            <td>equivalent</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>referenceRange.age</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>referenceRange.text</td>
+            <td>equivalent</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>referenceRange.text</td>
             <td></td>
           </tr>
           <tr>
             <td>interpretation</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>interpretation</td>
             <td></td>
           </tr>
           <tr>
             <td>note</td>
             <td>source-is-broader-than-target</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>note</td>
             <td></td>
           </tr><!-- component -->
           <tr>
             <td>component</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>component</td>
             <td></td>
           </tr>
           <tr>
-            <td>component.code</td>
+            <td>component.type</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>component.code</td>
             <td></td>
           </tr>
           <tr>
             <td>component.originalName</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>component.code.text</td>
             <td></td>
           </tr>
           <tr>
             <td>component.result</td>
             <td>related-to</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>component</td>
             <td></td>
           </tr>
           <tr>
             <td>component.result.value[x]</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>component.value[x]</td>
-            <td></td>
+            <td>When the result is a diagram or picture, for example in microbiology, use Attachment. In FHIR R4, R5 Observation.value[x] data types can be pre-adopted with the cross-version extension.</td>
           </tr>
              <tr>
             <td>component.result.uncertainty</td>
@@ -313,7 +355,7 @@
             <td>See included elements for mapping details</td>
           </tr>
           <tr>
-            <td>component.result.uncertaint.value</td>
+            <td>component.result.uncertainty.value</td>
             <td>equivalent</td>
             <td>Quantity</td>
             <td>extension:uncertainty</td>
@@ -323,7 +365,7 @@
           <tr>
             <td>component.result.uncertainty.type</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>extension:uncertaintyType	</td>
             <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType extension for the
               Quantity data type.</td>
@@ -331,21 +373,70 @@
           <tr>
             <td>component.result.dataAbsentReason</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>component.dataAbsentReason</td>
             <td></td>
           </tr>
           <tr>
             <td>component.referenceRange</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>component.referenceRange</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.low</td>
+            <td>equivalent</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>component.referenceRange.low</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.high</td>
+            <td>equivalent</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>component.referenceRange.high</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.normalValue</td>
+            <td>source-is-broader-than-target</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>component.referenceRange.text</td>
+            <td>FHIR R4 Observation.component.referenceRange does not include normalValue; represent the normal value textually or with an extension if structured exchange is required.</td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.type</td>
+            <td>equivalent</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>component.referenceRange.type</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.appliesTo</td>
+            <td>equivalent</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>component.referenceRange.appliesTo</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.age</td>
+            <td>equivalent</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>component.referenceRange.age</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>component.referenceRange.text</td>
+            <td>equivalent</td>
+            <td>MedicalTestResultEuCore</td>
+            <td>component.referenceRange.text</td>
             <td></td>
           </tr>
           <tr>
             <td>component.interpretation</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>component.interpretation</td>
             <td></td>
           </tr>
@@ -353,7 +444,7 @@
           <tr>
             <td>derivedFrom[x]</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>derivedFrom</td>
             <td>Supports references to Observation, ImagingStudy, DiagnosticReport, etc.</td>
           </tr>
@@ -361,7 +452,7 @@
           <tr>
             <td>hasMember[x]</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>hasMember</td>
             <td></td>
           </tr>
@@ -369,28 +460,28 @@
           <tr>
             <td>triggeredBy[x]</td>
             <td>equivalent</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>extension:triggeredBy</td>
             <td></td>
           </tr>          
           <tr>
             <td>testKit</td>
             <td>related-to</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>extension:labTestKit</td>
             <td></td>
           </tr>
           <tr>
             <td>calibrator</td>
             <td>related-to</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>extension:certifiedRefMaterialCodeable</td>
             <td></td>
           </tr>
            <tr>
             <td>calibrator</td>
             <td>related-to</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>extension:certifiedRefMaterialIdentifier</td>
             <td></td>
           </tr>
@@ -399,19 +490,19 @@
             <td>related-to</td>
             <td>Organization</td>
             <td>extension:qualification</td>
-            <td>Observation.performer (of type Organization), or Observation.performer.organization if performer is of type PractitionerRole. Organization.qualification is preadopted from R5.</td>
+            <td>MedicalTestResultEuCore.performer may reference the laboratory Organization, or a PractitionerRole whose organization is the laboratory. Organization.qualification is preadopted from R5.</td>
           </tr>
           <tr class="highlight-yellow">
             <td>previousResults</td>
             <td>related-to</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>extension:supportingInfo</td>
             <td></td>
           </tr>
           <tr class="highlight-yellow">
             <td>pointOfCareTest</td>
             <td>related-to</td>
-            <td>Observation</td>
+            <td>MedicalTestResultEuCore</td>
             <td>category</td>
             <td></td>
           </tr>
