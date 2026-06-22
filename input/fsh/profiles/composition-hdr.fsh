@@ -28,7 +28,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
-* type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+// * type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * type ^short = "Kind of composition (\"Hospital Discharge Report\")"
 * type ^definition = "Specifies that this composition refer to a Hospital Discharge Report"
 * type = $loinc#34105-7 // "Hospital Discharge summary"
@@ -74,7 +74,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section.extension[section-note] ^definition = "Additional notes that apply to the section (but not to specific resource)."
 * section.title 1..1
 * section.code 1..1
-* section.code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+// * section.code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * section.text only Narrative
 
 

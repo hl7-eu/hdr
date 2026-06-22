@@ -15,7 +15,7 @@
     <a>  </a>
 
     <p>In order to support the different maturity levels foreseen for the <b>European EHR eXchange format</b> (structured, text-only, unstructured), this version of the guide does not impose the mandatory presence of entries in the HDR sections.</p>
-    <p>HHowever, the presence of entries in the HDR sections is generally recommended to ensure a more structured and interoperable document.</p>
+    <p>However, the presence of entries in the HDR sections is generally recommended to ensure a more structured and interoperable document.</p>
     <p>This recommendation is expressed in this guide through <b>specific obligations</b> which guide implementers toward achieving a higher level of data quality and interoperability.</p>
 
 
