@@ -1,6 +1,6 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  MedicationRequestEuHdrObligation
-Parent:   MedicationRequestEuHdr
+Profile:  MedicationRequestEuCoreObligation
+Parent:   MedicationRequestEuCore
 Id:       medicationRequest-obl-eu-hdr
 Title:    "MedicationRequest: obligations"
 Description: "This profile defines obligations for the MedicationRequest resource for the purpose of this guide, adapted from the MPD work."

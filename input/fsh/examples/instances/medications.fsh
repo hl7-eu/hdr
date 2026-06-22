@@ -1,6 +1,6 @@
 // SINGLE LINE PRESCRIPTIONS - only one medication per prescription.
 Instance: 400C-prescription-cefuroxime-singleline
-InstanceOf: MedicationRequestEuHdr
+InstanceOf: MedicationRequestEuCore
 Usage: #example
 Title: "MedicationRequest: 400C-prescription-cefuroxime-singleline"
 Description: "400C. A prescription/request with one medication and changing dosaging. Uses 'actionable' tag. Cefuroxime sodium."

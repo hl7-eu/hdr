@@ -248,7 +248,7 @@ Medicinal products\, the administration of which was started during hospitalisat
 $loinc#87232-5 ) // 	Medication administration.brief
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
   * entry 0..
-  * entry only Reference(MedicationStatementEuCore or MedicationRequestEuHdr or MedicationDispenseEuHdr or MedicationAdministrationEuHdr)
+  * entry only Reference(MedicationStatementEuCore or MedicationRequestEuCore or MedicationDispenseEuHdr or MedicationAdministrationEuHdr)
 
 
 
@@ -347,7 +347,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
     $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital "Discharge medications note" or 	Discharge medications Narrative
   * text ^requirements = "body.medicationSummary.generatedNarrative; body.medicationSummary.note"
   * entry 0..
-  * entry only Reference(MedicationRequestEuHdr or MedicationDispenseEuHdr or MedicationStatementEuCore)
+  * entry only Reference(MedicationRequestEuCore or MedicationDispenseEuHdr or MedicationStatementEuCore)
 
  
 

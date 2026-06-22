@@ -71,7 +71,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[immunizationRecommendation].resource only ImmunizationRecommendation // EuHdr
 * entry[media].resource only Media // $Media-observation-uv-ips
 * entry[medication].resource only MedicationEuCore
-* entry[medicationRequest].resource only MedicationRequestEuHdr
+* entry[medicationRequest].resource only MedicationRequestEuCore
 * entry[medicationStatement].resource only MedicationStatementEuCore
 * entry[medicationAdministration].resource only MedicationAdministrationEuHdr
 * entry[medicationDispense].resource only MedicationDispenseEuHdr
