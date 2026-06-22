@@ -113,6 +113,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
       Physical findings,
       $loinc#29545-1)   // "Physical findings note"
 
+* entry 0..
+* entry only Reference(Observation or DocumentReference)
+
 // -------------------------------------
 // Functional status assessment  Section 0 .. 1
 // -------------------------------------
@@ -124,9 +127,24 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     The functional status section shall contain a narrative description of capability of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide.,
     $loinc#47420-5) // Functional status assessment note
 
-  * entry only Reference(Condition or ClinicalImpression or Observation or DocumentReference or QuestionnaireResponse)
+  * entry only Reference(ConditionEuCore or ClinicalImpression or Observation or DocumentReference or QuestionnaireResponse)
     * ^short = "Optional entry used to represent disabilities and functional assessments"
     * ^definition = "It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide."
+
+  
+  * insert SectionEntrySliceComRules(Condition entry, Condition entry slice)
+
+  * insert SectionEntrySliceDefRules (condition, 0..*, 
+    Functional status condition entry, 
+     Optional entry used to represent disabilities and other conditions that may influence the functional status of the patient. It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties.,
+    ConditionEuCore)
+
+     * insert SectionEntrySliceComRules(Condition entry, Condition entry slice)
+
+  * insert SectionEntrySliceDefRules (observation, 0..*, 
+    Functional status observation entry, 
+     Optional entry used to represent functional assessment of the patient.,
+    Observation)
 
 
 
@@ -404,7 +422,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
       The Problem List Section lists and describes clinical problems or conditions currently being monitored for the patient., 
       http://loinc.org#11450-4)
   
-  * entry only Reference(Condition or DocumentReference)
+  * entry only Reference(ConditionEuCore or DocumentReference)
   * insert SectionEntrySliceComRules(Clinical problems or conditions currently being monitored for the patient., It lists and describes clinical problems or conditions currently being monitored for the patient. This entry shall be used to document that no information about problems is available\, or that no relevant problems are known.)
   // entry slices
   * insert SectionEntrySliceDefRules (problem, 0.. ,
