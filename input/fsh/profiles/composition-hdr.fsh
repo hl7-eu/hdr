@@ -113,8 +113,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
       Physical findings,
       $loinc#29545-1)   // "Physical findings note"
 
-* entry 0..
-* entry only Reference(Observation or DocumentReference)
+  * entry 0..
+  * entry only Reference(Observation or DocumentReference)
 
 // -------------------------------------
 // Functional status assessment  Section 0 .. 1
@@ -136,10 +136,10 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
   * insert SectionEntrySliceDefRules (condition, 0..*, 
     Functional status condition entry, 
-     Optional entry used to represent disabilities and other conditions that may influence the functional status of the patient. It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties.,
+     Optional entry used to represent disabilities and other conditions that may influence the functional status of the patient. It describes capabilities of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties.,
     ConditionEuCore)
 
-     * insert SectionEntrySliceComRules(Condition entry, Condition entry slice)
+  * insert SectionEntrySliceComRules(Observation entry, Observation entry slice)
 
   * insert SectionEntrySliceDefRules (observation, 0..*, 
     Functional status observation entry, 
