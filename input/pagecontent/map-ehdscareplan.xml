@@ -94,11 +94,32 @@
             <td></td>
           </tr>
           <tr>
+            <td>header.date</td>
+            <td>equivalent</td>
+            <td>CarePlan</td>
+            <td>created</td>
+            <td></td>
+          </tr>
+          <tr >
             <td>header.status</td>
             <td>equivalent</td>
             <td>CarePlan</td>
             <td>status</td>
-            <td>Preferred binding: HL7 Request status.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.source</td>
+            <td>no-map</td>
+            <td>CarePlan</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.language</td>
+            <td>equivalent</td>
+            <td>CarePlan</td>
+            <td>language</td>
+            <td>IETF language tag.</td>
           </tr>
           <tr>
             <td>title</td>
@@ -126,21 +147,21 @@
             <td>source-is-broader-than-target</td>
             <td>CarePlan</td>
             <td>addresses</td>
-            <td>CarePlanEuHdr constrains addresses to Reference(ConditionEuCore). A coded source concern should be represented as a Condition when structured exchange is required.</td>
+            <td>CarePlanEuHdr constrains addresses to Reference(ConditionEuCore). See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdscondition.html">EHDSCondition Mapping</a> for detailed mapping information.</td>
           </tr>
           <tr>
             <td>activity[x]</td>
             <td>related-to</td>
             <td>CarePlan</td>
             <td>activity.reference</td>
-            <td>CarePlanEuHdr uses activity.reference for activities represented by a specific resource and removes activity.detail for R5/R6 alignment. A coded activity should be represented through a referenced resource when structured exchange is required.</td>
+            <td>CarePlanEuHdr uses activity.reference for activities represented by a specific resource and deprecates activity.detail for R5/R6 alignment. A coded activity should be represented through a referenced resource when structured exchange is required.</td>
           </tr>
           <tr>
             <td>goal</td>
             <td>source-is-broader-than-target</td>
             <td>CarePlan</td>
             <td>goal</td>
-            <td>CarePlanEuHdr constrains goal to Reference(GoalEuHdr). A coded source goal should be represented as a GoalEuHdr resource when structured exchange is required.</td>
+            <td></td>
           </tr>
         </tbody>
       </table>

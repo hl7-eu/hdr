@@ -527,14 +527,14 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionPlanOfCare.entry</td>
-            <td><td>Refernce to <a href="StructureDefinition-carePlan-eu-hdr.html">CarePlanEuHdr</a>.</td></td>
+            <td>Reference to <a href="StructureDefinition-carePlan-eu-hdr.html">CarePlanEuHdr</a>. See <a href="map-ehdscareplan.html">EHDSCarePlan Mapping</a> for detailed mapping information.</td>
           </tr>
           <tr>
             <td>body.carePlan.otherRecommendations</td>
             <td>related-to</td>
             <td>CarePlan</td>
             <td>note</td>
-            <td>Referenced by section:sectionPlanOfCare.entry; it uses <a href="StructureDefinition-carePlan-eu-hdr.html">CarePlanEuHdr</a>.</td>
+            <td>Referenced by section:sectionPlanOfCare.entry</td>
           </tr>
 
           <!-- SYNTHESIS -->

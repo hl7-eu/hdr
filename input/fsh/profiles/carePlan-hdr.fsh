@@ -13,6 +13,8 @@ Description: """This profile constrains the CarePlan resource for the purpose of
 * category ^short = "Kind of plan"
 * period ^requirements = "EHDSCarePlan.period"
 * created ^short = "Date the plan was created"
+* created ^requirements = "EHDSCarePlan.header.date"
+* language ^requirements = "EHDSCarePlan.header.language"
 * author ^requirements = "EHDSCarePlan.header.author[x]"
 * careTeam ^short = "Participants in the care plan"
 * instantiatesCanonical ^short = "Instantiated Canonical"
@@ -55,5 +57,4 @@ Invariant: cpl-hdr-1
 Description: "CarePlan.activity.detail is deprecated and no more present in FHIR R5."
 Severity: #warning
 Expression: "detail.empty()"
-
 
