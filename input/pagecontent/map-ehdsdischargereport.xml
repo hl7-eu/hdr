@@ -204,12 +204,12 @@
             <td>category</td>
             <td>If used for document categorisation/search metadata.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.serviceSpecialty</td>
-            <td>no-map</td>
-            <td>Composition</td>
-            <td></td>
-            <td></td>
+            <td>related-to</td>
+            <td>Encounter</td>
+            <td>serviceType</td>
+            <td>The Encounter is referenced by the Composition.encounter element</td>
           </tr>
           <tr>
             <td>header.custodian</td>

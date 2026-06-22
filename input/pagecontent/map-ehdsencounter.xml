@@ -36,6 +36,19 @@
             EncounterEuHdr
           </a>
         </li>
+        <li>
+          <strong>Referenced FHIR profiles and types:</strong>
+          <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-patient-eu-core.html">PatientEuCore</a>,
+          <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-practitioner-eu-core.html">PractitionerEuCore</a>,
+          <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-practitionerRole-eu-core.html">PractitionerRoleEuCore</a>,
+          <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-organization-eu-core.html">OrganizationEuCore</a>,
+          <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-location-eu-core.html">LocationEuCore</a>,
+          <a href="StructureDefinition-carePlan-eu-hdr.html">CarePlanEuHdr</a>,
+          <a href="https://hl7.org/fhir/servicerequest.html">ServiceRequest</a>,
+          <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-condition-eu-core.html">ConditionEuCore</a>,
+          <a href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-procedure-eu-core.html">ProcedureEuCore</a>,
+          <a href="https://hl7.org/fhir/observation.html">Observation</a>
+        </li>
       </ul>
     </div>
     <p></p>
@@ -62,7 +75,7 @@
             <td>related-to</td>
             <td>Encounter</td>
             <td>.</td>
-            <td>Dataset-level; not carried as a single element in Encounter.</td>
+            <td>Dataset-level inherited header; not carried as a single element in Encounter.</td>
           </tr>
           <tr>
             <td>header.subject</td>
@@ -83,14 +96,14 @@
             <td>related-to</td>
             <td>Encounter</td>
             <td>participant.individual</td>
-            <td>Use participant.type to capture author role if needed.</td>
+            <td>Encounter does not include a dedicated author element. Authorship is typically inferred from the healthcare professional’s participation in the encounter, for example as admitter or discharger. If an explicit author is required, this could be represented using an appropriate participation (participant.type='AUT').</td>
           </tr>
           <tr>
             <td>header.date</td>
             <td>related-to</td>
             <td>Encounter</td>
-            <td>period.start</td>
-            <td>No dedicated authoring timestamp in Encounter; use an extension if needed.</td>
+            <td>participant.period</td>
+            <td>Encounter does not include a dedicated authorship date element. Authorship date may be inferred from the Encounter.period. If an explicit date is required, this could be represented using an appropriate participation (participant.type='AUT').</td>
           </tr>
           <tr>
             <td>header.status</td>
@@ -99,12 +112,12 @@
             <td>status</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.source</td>
             <td>no-map</td>
             <td>Encounter</td>
-            <td></td>
-            <td>No native element; use an extension if needed.</td>
+            <td>participant.individual</td>
+            <td>Encounter does not include a dedicated informant element. If informant details are required, this could be represented using an appropriate participation (participant.type='INF')</td>
           </tr>
           <tr>
             <td>header.language</td>
@@ -122,10 +135,17 @@
           </tr>
           <tr>
             <td>type</td>
-            <td>equivalent</td>
+            <td>related-to</td>
             <td>Encounter</td>
             <td>type</td>
-            <td></td>
+            <td>The model describes encounter kind, such as inpatient, ambulatory, or teleconsultation. Use Encounter.class for the broad class and Encounter.type for a more specific type.</td>
+          </tr>
+          <tr>
+            <td>type</td>
+            <td>related-to</td>
+            <td>Encounter</td>
+            <td>class</td>
+            <td>The model describes encounter kind, such as inpatient, ambulatory, or teleconsultation. Use Encounter.class for the broad class and Encounter.type for a more specific type.</td>
           </tr>
           <tr>
             <td>period</td>
@@ -145,7 +165,7 @@
             <td>referringProfessional</td>
             <td>related-to</td>
             <td>Encounter</td>
-            <td>participant.individual</td>
+            <td>participant:referrer.individual</td>
             <td>Use participant.type = REF.</td>
           </tr>
           <tr>
@@ -160,7 +180,7 @@
             <td>related-to</td>
             <td>Encounter</td>
             <td>reasonCode / reasonReference</td>
-            <td>Use reasonCode for coded reasons, reasonReference for conditions/procedures/observations.</td>
+            <td>Use reasonCode for CodeableConcept reasons and reasonReference for Condition, Procedure, or Observation reasons. String reasons require narrative text or an extension.</td>
           </tr>
           <tr>
             <td>admission</td>
@@ -171,9 +191,9 @@
           </tr>
           <tr>
             <td>admission.admitter</td>
-            <td>related-to</td>
+            <td>equivalent</td>
             <td>Encounter</td>
-            <td>participant.individual</td>
+            <td>participant:admitter.individual</td>
             <td>Use participant.type = ADM.</td>
           </tr>
           <tr>
@@ -188,7 +208,7 @@
             <td>related-to</td>
             <td>Encounter</td>
             <td>diagnosis.condition</td>
-            <td>Use diagnosis.use for role if needed.</td>
+            <td>Use diagnosis.condition for a Condition reference and diagnosis.use for role if needed. A coded diagnosis should be represented as a Condition resource when a structured diagnosis is required.</td>
           </tr>
           <tr>
             <td>dischargeDestination</td>
@@ -234,16 +254,16 @@
           </tr>
           <tr>
             <td>subEncounter</td>
-            <td>equivalent</td>
+            <td>related-to</td>
             <td>Encounter</td>
             <td>partOf</td>
-            <td></td>
+            <td>FHIR Encounter.partOf points from the sub-encounter to the parent encounter.</td>
           </tr>
           <tr>
             <td>note</td>
             <td>equivalent</td>
             <td>Encounter</td>
-            <td>note</td>
+            <td>extension:note</td>
             <td></td>
           </tr>
         </tbody>
