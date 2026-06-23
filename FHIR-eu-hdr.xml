@@ -80,6 +80,7 @@
 <artifact deprecated="true" id="StructureDefinition/immunizationRecommendation-obl-eu-hdr" key="StructureDefinition-immunizationRecommendation-obl-eu-hdr" name="ImmunizationRecommendation: obligations"/>
 <artifact id="ValueSet/encounter-status-eu-hdr" key="ValueSet-encounter-status-eu-hdr" name="In-patient Encounter Status Value Set"/>
 <artifact id="ValueSet/encounter-type-eu-hdr" key="ValueSet-hdr-encounter-type-eu-hdr" name="In-patient Encounter Type Value Set"/>
+<artifact id="StructureDefinition/laboratoryObservation-obl-eu-hdr" key="StructureDefinition-laboratoryObservation-obl-eu-hdr" name="Laboratory Observation: obligations"/>
 <artifact deprecated="true" id="ValueSet/medical-devices-eu-hdr" key="ValueSet-medical-devices-eu-hdr" name="Medical Devices (SNOMED CT)"/>
 <artifact deprecated="true" id="ValueSet/medical-devices-snomed-absent-unknown-eu-hdr" key="ValueSet-medical-devices-snomed-absent-unknown-eu-hdr" name="Medical Devices - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact deprecated="true" id="StructureDefinition/medication-eu-hdr" key="StructureDefinition-medication-eu-hdr" name="Medication (HDR)"/>
@@ -111,14 +112,19 @@
 <artifact deprecated="true" id="Observation/example-travel-history" key="Observation-example-travel-history" name="Observation: Travel History"/>
 <artifact deprecated="true" id="StructureDefinition/observation-travel-eu-hdr" key="StructureDefinition-observation-travel-eu-hdr" name="Observation: country visited (HDR)"/>
 <artifact deprecated="true" id="StructureDefinition/observation-travel-obl-eu-hdr" key="StructureDefinition-observation-travel-obl-eu-hdr" name="Observation: country visited: obligations"/>
+<artifact id="StructureDefinition/observation-obl-eu-hdr" key="StructureDefinition-observation-obl-eu-hdr" name="Observation: obligations"/>
 <artifact id="Organization/organization-sophia" key="Organization-organization-sophia" name="Organization: Erasmus MC"/>
+<artifact id="StructureDefinition/organization-obl-eu-hdr" key="StructureDefinition-organization-obl-eu-hdr" name="Organization: obligations"/>
 <artifact id="Patient/patient-swart" key="Patient-patient-swart" name="Patient: Dutch Patient"/>
 <artifact id="StructureDefinition/patient-obl-eu-hdr" key="StructureDefinition-patient-obl-eu-hdr" name="Patient: obligations"/>
+<artifact id="StructureDefinition/practitioner-obl-eu-hdr" key="StructureDefinition-practitioner-obl-eu-hdr" name="Practitioner: obligations"/>
+<artifact id="StructureDefinition/practitionerRole-obl-eu-hdr" key="StructureDefinition-practitionerRole-obl-eu-hdr" name="PractitionerRole: obligations"/>
 <artifact deprecated="true" id="StructureDefinition/procedure-eu-hdr" key="StructureDefinition-procedure-eu-hdr" name="Procedure (HDR)"/>
 <artifact deprecated="true" id="ValueSet/procedure-snomed-eu-hdr" key="ValueSet-procedure-snomed-eu-hdr" name="Procedure codes: Snomed CT"/>
 <artifact id="Procedure/sectio-swart" key="Procedure-sectio-swart" name="Procedure: Sectio caesarea"/>
 <artifact id="StructureDefinition/procedure-obl-eu-hdr" key="StructureDefinition-procedure-obl-eu-hdr" name="Procedure: obligations"/>
 <artifact deprecated="true" id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
+<artifact id="StructureDefinition/relatedPerson-obl-eu-hdr" key="StructureDefinition-relatedPerson-obl-eu-hdr" name="RelatedPerson: obligations"/>
 <artifact deprecated="true" id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
 <artifact id="StructureDefinition/specimen-obl-eu-hdr" key="StructureDefinition-specimen-obl-eu-hdr" name="Specimen: obligations"/>
 <artifact deprecated="true" id="CodeSystem/temporarySystem-hdr-eu" key="CodeSystem-temporarySystem-hdr-eu" name="Temporary HDR Code System"/>
