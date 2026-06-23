@@ -1,29 +1,25 @@
 Profile: ProcedureEuCoreObligation
 Parent: ProcedureEuCore
-// Parent: ProcedureUvIps
 Id: procedure-obl-eu-hdr
-Title:    "Procedure: obligations"
+Title: "Procedure: obligations"
 Description: "This profile defines obligations for the Procedure resource by this guide."
 
-* insert OblShouldPopulateShallProcess
+* subject insert OblShallPopulateOnly
+* identifier insert OblShouldPopulateOnly
+* status insert OblShallPopulateOnly
+* code insert OblShallPopulateOnly
+* performed[x] insert OblShallPopulateOnly
+* bodySite insert OblShouldPopulateOnly
+* note insert OblShouldPopulateOnly
 
 * extension[bodySite]
-
-* text insert OblShallPopulateShallDisplayProcess
- // textual representation of the procedure should be provided according to the EHN data set
-* status insert OblShallPopulateShallDisplayProcess
-* code insert OblShallPopulateShallProcess 
-
-* subject insert OblShallPopulateShallProcess
-* performed[x] insert OblShallPopulateShallProcess
-// * performed[x].extension[data-absent-reason] insert OblShallPopulateShallProcess
-* performer.actor insert OblShallPopulateShallDisplayProcess
-* performer.onBehalfOf 
-* reasonCode insert OblShallPopulateShouldDisplayShallProcess
-* reasonReference insert OblShallPopulateShouldDisplayShallProcess
-* outcome 
+* text
+* performer.actor
+* performer.onBehalfOf
+* reasonCode
+* reasonReference
+* outcome
 * complication
-* complicationDetail 
-* focalDevice 
+* complicationDetail
+* focalDevice
 * focalDevice.manipulated
-* bodySite insert OblShallPopulateShouldDisplayShallProcess

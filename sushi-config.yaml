@@ -396,6 +396,7 @@ groups:
         - StructureDefinition/medicationDispense-obl-eu-hdr
         - StructureDefinition/medicationRequest-obl-eu-hdr
         - StructureDefinition/medicationStatement-obl-eu-hdr
+        - StructureDefinition/observation-obl-eu-hdr
   #      - StructureDefinition/observation-infectious-contact-obl-eu-hdr
   #      - StructureDefinition/observation-sdoh-obl-eu-hdr
   #      - StructureDefinition/observation-travel-obl-eu-hdr

@@ -51,3 +51,15 @@ RuleSet: OblShouldPopulateOnly
 // Producer: SHOULD able-to-populate
 // Consumer: none
 * insert ObligationActorAndCode($creator, #SHOULD:able-to-populate)
+
+RuleSet: OblShouldPopulateShallDisplay
+// Producer: SHOULD able-to-populate
+// Consumer: SHALL display
+* insert ObligationActorAndCode($creator, #SHOULD:able-to-populate)
+* insert ObligationActorAndCode($consumer, #SHALL:display)
+
+RuleSet: OblShouldPopulateShouldDisplay
+// Producer: SHOULD able-to-populate
+// Consumer: SHOULD display
+* insert ObligationActorAndCode($creator, #SHOULD:able-to-populate)
+* insert ObligationActorAndCode($consumer, #SHOULD:display)

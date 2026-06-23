@@ -30,12 +30,20 @@ sectionImmunizations
 
 ##### Obligation done
 
-EHDSDischargeReport
+how to deal with backbone elements ?
+
+EHDSDischargeReport (to be cheked)
+- period
 EHDSAlert
 EHDSPatient
 
 EHDSOrganisation
 EHDSHealthProfessional
+
+EHDSCondition
+EHDSObservation
+EHDSProcedure
+EHDSMedicationUse
 
 
 

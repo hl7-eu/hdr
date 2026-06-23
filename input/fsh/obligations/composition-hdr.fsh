@@ -7,7 +7,7 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 * insert SetFmmAndStatusRule ( 0, informative)
 
 // Header
-* insert OblShallPopulateShallProcess
+// * insert OblShallPopulateShallProcess no obligation on the entre reource
 * identifier insert OblShallPopulateShouldDisplayShallProcess
 * status insert OblShallPopulateShallDisplay
 * type insert OblShallPopulateOnly
