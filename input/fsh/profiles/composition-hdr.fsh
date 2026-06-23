@@ -84,7 +84,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section contains sectionAlert ..1
 * section[sectionAlert]
   * insert SectionComRules (
-    Alert Section, // SHORT
+    Alert Section, 
     Information about substantial alerts or warnings (including allergies\) that health professionals should be aware of., 
       http://loinc.org#104605-1 )   // CODE
   * text ^requirements = "body.alerts.generatedNarrative"
@@ -97,7 +97,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
   FlagPatientEuCore)
 
-  
+
 // -------------------------------------
 // Admission Evaluation Section 0 .. 1 R
 // -------------------------------------

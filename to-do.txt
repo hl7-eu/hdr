@@ -32,10 +32,11 @@ sectionImmunizations
 
 how to deal with obligation on backbone elements ?
 
-EHDSDischargeReport (to be cheked)
+EHDSDischargeReport 
+(to be checked)
 - serviceSpecialty
 - presentedForm
-encounterInformation
+- encounterInformation
 EHDSAlert
 EHDSPatient
 
@@ -51,9 +52,9 @@ EHDSAttachment (no obligation)
 EHDSDeviceUse
 EHDSDevice
 
-EHDSCarePlan
+EHDSCarePlan (no obligations)
 EHDSRelatedPerson
-EHDSEncounter
+EHDSEncounter (no obligations)
 
 
 

@@ -379,6 +379,7 @@ groups:
         - StructureDefinition/organization-obl-eu-hdr
         - StructureDefinition/practitioner-obl-eu-hdr
         - StructureDefinition/practitionerRole-obl-eu-hdr
+        - StructureDefinition/relatedPerson-obl-eu-hdr
         - StructureDefinition/specimen-obl-eu-hdr
         - StructureDefinition/carePlan-obl-eu-hdr
         # - StructureDefinition/composition-obl-eu-hdr
