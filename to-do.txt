@@ -34,5 +34,8 @@ EHDSDischargeReport
 EHDSAlert
 EHDSPatient
 
+EHDSOrganisation
+EHDSHealthProfessional
+
 
 
