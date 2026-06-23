@@ -30,10 +30,12 @@ sectionImmunizations
 
 ##### Obligation done
 
-how to deal with backbone elements ?
+how to deal with obligation on backbone elements ?
 
 EHDSDischargeReport (to be cheked)
-- period
+- serviceSpecialty
+- presentedForm
+encounterInformation
 EHDSAlert
 EHDSPatient
 
@@ -44,6 +46,14 @@ EHDSCondition
 EHDSObservation
 EHDSProcedure
 EHDSMedicationUse
+
+EHDSAttachment (no obligation)
+EHDSDeviceUse
+EHDSDevice
+
+EHDSCarePlan
+EHDSRelatedPerson
+EHDSEncounter
 
 
 

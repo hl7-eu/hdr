@@ -77,7 +77,27 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 // * section.code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * section.text only Narrative
 
+// -------------------------------------
+// Alert 0 .. 1
+// -------------------------------------
 
+* section contains sectionAlert ..1
+* section[sectionAlert]
+  * insert SectionComRules (
+    Alert Section, // SHORT
+    Information about substantial alerts or warnings (including allergies\) that health professionals should be aware of., 
+      http://loinc.org#104605-1 )   // CODE
+  * text ^requirements = "body.alerts.generatedNarrative"
+
+  * entry only Reference(Flag or DocumentReference)
+  * insert SectionEntrySliceComRules(EPS Alerts entry, EPS Alerts entry slice)
+  // entry slices
+  * insert SectionEntrySliceDefRules (flag, 0.. , 
+  Alert information , 
+  Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
+  FlagPatientEuCore)
+
+  
 // -------------------------------------
 // Admission Evaluation Section 0 .. 1 R
 // -------------------------------------
@@ -373,26 +393,6 @@ $loinc#87232-5 ) // 	Medication administration.brief
   It lists the relevant allergies or intolerances for that patient\, describing the kind of reaction - e.g. rash\, anaphylaxis\,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum\, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available\, or if no allergies are known this should be clearly documented in the section., 
   AllergyIntoleranceEuCore)
 
-
-// -------------------------------------
-// Alert 0 .. 1
-// -------------------------------------
-
-* section contains sectionAlert ..1
-* section[sectionAlert]
-  * insert SectionComRules (
-    Alert Section, // SHORT
-    Information about substantial alerts or warnings (including allergies\) that health professionals should be aware of., 
-      http://loinc.org#104605-1 )   // CODE
-  * text ^requirements = "body.alerts.generatedNarrative"
-
-  * entry only Reference(Flag or DocumentReference)
-  * insert SectionEntrySliceComRules(EPS Alerts entry, EPS Alerts entry slice)
-  // entry slices
-  * insert SectionEntrySliceDefRules (flag, 0.. , 
-  Alert information , 
-  Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
-  FlagPatientEuCore)
 
 
 // -------------------------------------
