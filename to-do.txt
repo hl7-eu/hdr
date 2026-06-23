@@ -28,10 +28,7 @@ sectionAllergies
 sectionProblemList
 sectionImmunizations
 
-// TO DO
 
-2) CarePlanEuHdr should we aling with EPS ?
-6) revise CarePlan set details 0..0 per coherence with R5
 
 
 

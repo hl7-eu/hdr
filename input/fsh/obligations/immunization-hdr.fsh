@@ -12,21 +12,21 @@ Description: """This profile defines obligations for the Immunization resource f
 * extension[basedOn]
 
 
-* extension[administeredProduct] insert ObligationSet3
+* extension[administeredProduct] insert OblShallPopulateShouldDisplayShallProcess
 
-* vaccineCode insert ObligationSet2
+* vaccineCode insert OblShallPopulateShallDisplayProcess
 
-* patient insert ObligationSet1
-* occurrence[x] insert ObligationSet2
+* patient insert OblShallPopulateShallProcess
+* occurrence[x] insert OblShallPopulateShallDisplayProcess
 * location 
 * manufacturer 
 * lotNumber 
 
 
-* performer[administeringCentreOrHp] insert ObligationSet2
+* performer[administeringCentreOrHp] insert OblShallPopulateShallDisplayProcess
 
 
-* protocolApplied.targetDisease insert ObligationSet3
+* protocolApplied.targetDisease insert OblShallPopulateShouldDisplayShallProcess
 * protocolApplied.doseNumberPositiveInt 
 * protocolApplied.seriesDosesPositiveInt 
 
@@ -38,14 +38,14 @@ Title:    "ImmunizationRecommendation: obligations"
 Description: """This profile defines how to represent Immunization Recommandations for the purpose of this guide."""
 //-------------------------------------------------------------------------------------------
 
-* date insert ObligationSet3
-* patient insert ObligationSet1
+* date insert OblShallPopulateShouldDisplayShallProcess
+* patient insert OblShallPopulateShallProcess
 * recommendation
-  * vaccineCode insert ObligationSet2  
-* recommendation.targetDisease insert ObligationSet2  
+  * vaccineCode insert OblShallPopulateShallDisplayProcess  
+* recommendation.targetDisease insert OblShallPopulateShallDisplayProcess  
 * recommendation.forecastStatus 
-* recommendation.dateCriterion[nextDose] insert ObligationSet2
-* recommendation.doseNumberPositiveInt insert ObligationSet3
-* recommendation.seriesDosesPositiveInt insert ObligationSet3
+* recommendation.dateCriterion[nextDose] insert OblShallPopulateShallDisplayProcess
+* recommendation.doseNumberPositiveInt insert OblShallPopulateShouldDisplayShallProcess
+* recommendation.seriesDosesPositiveInt insert OblShallPopulateShouldDisplayShallProcess
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

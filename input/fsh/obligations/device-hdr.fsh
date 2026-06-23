@@ -8,7 +8,7 @@ Description: "This profile represents the constraints applied to the Device reso
 
 * insert SetFmmAndStatusRule ( 0, informative)
 
-* identifier insert ObligationSet2
+* identifier insert OblShallPopulateShallDisplayProcess
 * udiCarrier 
-* type insert ObligationSet1
-* patient insert ObligationSet1
+* type insert OblShallPopulateShallProcess
+* patient insert OblShallPopulateShallProcess

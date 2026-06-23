@@ -9,13 +9,13 @@ Description: "This profile defines obligations for Specimen in FHIR for the purp
 
 // TEST OBLIGATIONS  ====>
 
-* subject insert ObligationSet1
-* type insert ObligationSet1
-* request insert ObligationSet2
-* collection insert ObligationSet1
-  * bodySite insert ObligationSet1
-//  * extension[bodySite] insert ObligationSet2
-* processing.additive insert ObligationSet2
-* container insert ObligationSet1
-  * type insert ObligationSet1  
+* subject insert OblShallPopulateShallProcess
+* type insert OblShallPopulateShallProcess
+* request insert OblShallPopulateShallDisplayProcess
+* collection insert OblShallPopulateShallProcess
+  * bodySite insert OblShallPopulateShallProcess
+//  * extension[bodySite] insert OblShallPopulateShallDisplayProcess
+* processing.additive insert OblShallPopulateShallDisplayProcess
+* container insert OblShallPopulateShallProcess
+  * type insert OblShallPopulateShallProcess  
 

@@ -9,7 +9,7 @@ Description: "This profile defines obligations for the MedicationStatement resou
 * insert SetFmmAndStatusRule ( 0, informative)
 
 
-* subject insert ObligationSet1
-* medication[x] insert ObligationSet2
+* subject insert OblShallPopulateShallProcess
+* medication[x] insert OblShallPopulateShallDisplayProcess
 * identifier 
 

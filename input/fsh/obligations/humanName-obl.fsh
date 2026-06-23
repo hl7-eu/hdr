@@ -7,5 +7,5 @@ Description: "This profile defines obligations for an human Patient name in FHIR
 // * ^copyright = "HL7 Europe"
 * insert SetFmmAndStatusRule ( 0, informative)
 
-* family insert ObligationSet1
-* given insert ObligationSet1
+* family insert OblShallPopulateShallProcess
+* given insert OblShallPopulateShallProcess

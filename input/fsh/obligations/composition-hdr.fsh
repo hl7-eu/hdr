@@ -8,7 +8,7 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 
 * extension[basedOn]
 
-// * extension[presentedForm] insert ObligationSet3 
+// * extension[presentedForm] insert OblShallPopulateShouldDisplayShallProcess 
 
 
 * extension[compositionVersionR5]
@@ -16,26 +16,26 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 * extension[information-recipient]
 
 
-* identifier insert ObligationSet2
-* status insert ObligationSet1
-* type insert ObligationSet1
-* subject insert ObligationSet1
-* encounter insert ObligationSet1
+* identifier insert OblShallPopulateShallDisplayProcess
+* status insert OblShallPopulateShallProcess
+* type insert OblShallPopulateShallProcess
+* subject insert OblShallPopulateShallProcess
+* encounter insert OblShallPopulateShallProcess
 
-* date insert ObligationSet1
-* author insert ObligationSet1
+* date insert OblShallPopulateShallProcess
+* author insert OblShallPopulateShallProcess
 
-* title insert ObligationSet1
-* attester insert ObligationSet2
-* attester.mode insert ObligationSet1
-* attester.time insert ObligationSet1
-* attester.party insert ObligationSet1
+* title insert OblShallPopulateShallProcess
+* attester insert OblShallPopulateShallDisplayProcess
+* attester.mode insert OblShallPopulateShallProcess
+* attester.time insert OblShallPopulateShallProcess
+* attester.party insert OblShallPopulateShallProcess
 
 
-* section insert ObligationSet1
-* section.text insert ObligationSet1
+* section insert OblShallPopulateShallProcess
+* section.text insert OblShallPopulateShallProcess
 
-* section[sectionAdmissionEvaluation] insert ObligationSet2
+* section[sectionAdmissionEvaluation] insert OblShallPopulateShallDisplayProcess
 
 
 * section[sectionVitalSigns]
@@ -47,67 +47,67 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
   * entry 
 
 
-* section[sectionHospitalCourse] insert ObligationSet1 
+* section[sectionHospitalCourse] insert OblShallPopulateShallProcess 
 
 
-* section[sectionDiagnosticSummary] insert ObligationSet2
-  * entry insert ObligationSet2
-
-
-// -------------------------------------
-
-* section[sectionSignificantProcedures] insert ObligationSet2
-  * entry insert ObligationSet2
-
-* section[sectionMedicalDevices] insert ObligationSet2
-  * entry insert ObligationSet2
+* section[sectionDiagnosticSummary] insert OblShallPopulateShallDisplayProcess
+  * entry insert OblShallPopulateShallDisplayProcess
 
 
 // -------------------------------------
 
-* section[sectionPharmacotherapy] insert ObligationSet2
-  * entry insert ObligationSet2
+* section[sectionSignificantProcedures] insert OblShallPopulateShallDisplayProcess
+  * entry insert OblShallPopulateShallDisplayProcess
+
+* section[sectionMedicalDevices] insert OblShallPopulateShallDisplayProcess
+  * entry insert OblShallPopulateShallDisplayProcess
+
 
 // -------------------------------------
-* section[sectionSignificantResults] insert ObligationSet2
-  * entry insert ObligationSet2
+
+* section[sectionPharmacotherapy] insert OblShallPopulateShallDisplayProcess
+  * entry insert OblShallPopulateShallDisplayProcess
+
+// -------------------------------------
+* section[sectionSignificantResults] insert OblShallPopulateShallDisplayProcess
+  * entry insert OblShallPopulateShallDisplayProcess
  
  
 // -------------------------------------
 * section[sectionSynthesis]
 
 
-* section[sectionPlanOfCare] insert ObligationSet2
+* section[sectionPlanOfCare] insert OblShallPopulateShallDisplayProcess
 
 
-* section[sectionImplantedDevices] insert ObligationSet3
-* section[sectionProceduresHx] insert ObligationSet3
+* section[sectionImplantedDevices] insert OblShallPopulateShouldDisplayShallProcess
+* section[sectionProceduresHx] insert OblShallPopulateShouldDisplayShallProcess
 
-// * section[sectionDischargeInstructions] insert ObligationSet2
+// * section[sectionDischargeInstructions] insert OblShallPopulateShallDisplayProcess
 
 
 
-* section[sectionDischargeMedications] insert ObligationSet2
-  * entry insert ObligationSet2
+* section[sectionDischargeMedications] insert OblShallPopulateShallDisplayProcess
+  * entry insert OblShallPopulateShallDisplayProcess
    
-* section[sectionAllergies] insert ObligationSet2
-  * entry insert ObligationSet2
+* section[sectionAllergies] insert OblShallPopulateShallDisplayProcess
+  * entry insert OblShallPopulateShallDisplayProcess
 
-* section[sectionAlert] insert ObligationSet2
-  * entry insert ObligationSet2
+* section[sectionAlert] insert OblShallPopulateShallDisplayProcess
+  * entry insert OblShallPopulateShallDisplayProcess
 
 
 
-* section[sectionPatientHx] insert ObligationSet2
+* section[sectionPatientHx] insert OblShallPopulateShallDisplayProcess
 
-* section[sectionProblems] insert ObligationSet3
+* section[sectionProblems] insert OblShallPopulateShouldDisplayShallProcess
   * entry 0..
 
 
 
 
 
-* section[sectionImmunizations] insert ObligationSet3
+* section[sectionImmunizations] insert OblShallPopulateShouldDisplayShallProcess
   * entry 0..
 
 
@@ -118,7 +118,7 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 
 
 
-* section[sectionDischargeDetails] insert ObligationSet2
+* section[sectionDischargeDetails] insert OblShallPopulateShallDisplayProcess
  
 
 // -------------------------------------
@@ -126,7 +126,7 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 // -------------------------------------
 
 * section[sectionAttachments]
-  * entry insert ObligationSet1
+  * entry insert OblShallPopulateShallProcess
 
 
 

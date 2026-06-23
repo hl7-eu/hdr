@@ -8,21 +8,21 @@ Description: "This profile defines obligations for the Procedure resource by thi
 
 * extension[bodySite]
 
-* text insert ObligationSet2
+* text insert OblShallPopulateShallDisplayProcess
  // textual representation of the procedure should be provided according to the EHN data set
-* status insert ObligationSet2
-* code insert ObligationSet1 
+* status insert OblShallPopulateShallDisplayProcess
+* code insert OblShallPopulateShallProcess 
 
-* subject insert ObligationSet1
-* performed[x] insert ObligationSet1
-// * performed[x].extension[data-absent-reason] insert ObligationSet1
-* performer.actor insert ObligationSet2
+* subject insert OblShallPopulateShallProcess
+* performed[x] insert OblShallPopulateShallProcess
+// * performed[x].extension[data-absent-reason] insert OblShallPopulateShallProcess
+* performer.actor insert OblShallPopulateShallDisplayProcess
 * performer.onBehalfOf 
-* reasonCode insert ObligationSet3
-* reasonReference insert ObligationSet3
+* reasonCode insert OblShallPopulateShouldDisplayShallProcess
+* reasonReference insert OblShallPopulateShouldDisplayShallProcess
 * outcome 
 * complication
 * complicationDetail 
 * focalDevice 
 * focalDevice.manipulated
-* bodySite insert ObligationSet3
+* bodySite insert OblShallPopulateShouldDisplayShallProcess

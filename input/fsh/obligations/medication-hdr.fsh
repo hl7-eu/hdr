@@ -9,16 +9,16 @@ Description: "This profile defines obligations for the Medication resource for t
 * insert SetFmmAndStatusRule ( 0, informative)
 
 * ingredient   
-  * item[x]	insert ObligationSet1
-  * strength  insert ObligationSet2
+  * item[x]	insert OblShallPopulateShallProcess
+  * strength  insert OblShallPopulateShallDisplayProcess
     * extension[strengthSubstance] 
-  * isActive insert ObligationSet1
+  * isActive insert OblShallPopulateShallProcess
 
-* extension[productName] insert ObligationSet2
-* extension[classification] insert ObligationSet3
+* extension[productName] insert OblShallPopulateShallDisplayProcess
+* extension[classification] insert OblShallPopulateShouldDisplayShallProcess
 
 
-* identifier insert ObligationSet2
-* code insert ObligationSet2
+* identifier insert OblShallPopulateShallDisplayProcess
+* code insert OblShallPopulateShallDisplayProcess
 
 * form 

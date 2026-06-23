@@ -11,12 +11,12 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 
 // Obligations at the element level 
 // Server obligations
-* identifier insert ObligationSet1   
-* name.given insert ObligationSet1  
-* name.family insert ObligationSet1
-* name.text insert ObligationSet2 //can-send
-* telecom insert ObligationSet2 //can-send
-* gender insert ObligationSet1
-* birthDate insert ObligationSet1
-* generalPractitioner insert ObligationSet2 //can-send
-* address insert ObligationSet1
+* identifier insert OblShallPopulateShallProcess   
+* name.given insert OblShallPopulateShallProcess  
+* name.family insert OblShallPopulateShallProcess
+* name.text insert OblShallPopulateShallDisplayProcess //can-send
+* telecom insert OblShallPopulateShallDisplayProcess //can-send
+* gender insert OblShallPopulateShallProcess
+* birthDate insert OblShallPopulateShallProcess
+* generalPractitioner insert OblShallPopulateShallDisplayProcess //can-send
+* address insert OblShallPopulateShallProcess

@@ -8,27 +8,27 @@ Description: """This profile defines obligations for the Condition in the scope 
 
 * extension[bodySite] 
 * category 
-// * category[poa] insert ObligationSet1
-// * category[treated] insert ObligationSet1
+// * category[poa] insert OblShallPopulateShallProcess
+// * category[treated] insert OblShallPopulateShallProcess
 * severity 
 
 
-* code insert ObligationSet1 
+* code insert OblShallPopulateShallProcess 
 
-* bodySite insert ObligationSet3
+* bodySite insert OblShallPopulateShouldDisplayShallProcess
 
-* identifier insert ObligationSet2
-* text insert ObligationSet1 
+* identifier insert OblShallPopulateShallDisplayProcess
+* text insert OblShallPopulateShallProcess 
 
 
-* clinicalStatus insert ObligationSet3
-* verificationStatus insert ObligationSet3
+* clinicalStatus insert OblShallPopulateShouldDisplayShallProcess
+* verificationStatus insert OblShallPopulateShouldDisplayShallProcess
 
-* subject insert ObligationSet1
+* subject insert OblShallPopulateShallProcess
 
-* onsetDateTime insert ObligationSet2
+* onsetDateTime insert OblShallPopulateShallDisplayProcess
 
-* abatementDateTime insert ObligationSet2
+* abatementDateTime insert OblShallPopulateShallDisplayProcess
 
 * stage 
 * stage.summary  
