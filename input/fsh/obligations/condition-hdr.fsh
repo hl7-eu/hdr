@@ -6,6 +6,8 @@ Description: """This profile defines obligations for the Condition in the scope 
 
 * insert SetFmmAndStatusRule ( 0, informative)
 
+* insert OblShouldPopulateShallProcess
+
 * extension[bodySite] 
 * category 
 // * category[poa] insert OblShallPopulateShallProcess

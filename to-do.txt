@@ -28,7 +28,11 @@ sectionAllergies
 sectionProblemList
 sectionImmunizations
 
+##### Obligation done
 
+EHDSDischargeReport
+EHDSAlert
+EHDSPatient
 
 
 

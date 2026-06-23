@@ -8,6 +8,8 @@ Description: "This profile defines obligations for the MedicationAdministration 
 
 * insert SetFmmAndStatusRule ( 0, informative)
 
+* insert OblShouldPopulateShallProcess
+
 * identifier 
 * subject insert OblShallPopulateShallProcess
 * medication[x] insert OblShallPopulateShallDisplayProcess

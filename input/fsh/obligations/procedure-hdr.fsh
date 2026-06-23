@@ -5,6 +5,7 @@ Id: procedure-obl-eu-hdr
 Title:    "Procedure: obligations"
 Description: "This profile defines obligations for the Procedure resource by this guide."
 
+* insert OblShouldPopulateShallProcess
 
 * extension[bodySite]
 

@@ -6,6 +6,7 @@ Description: "This profile defines obligations for Inpatient Encounter in HL7 FH
 
 * insert SetFmmAndStatusRule ( 0, informative)
 
+* insert OblShallPopulateShallProcess
 
 * identifier 
 * status

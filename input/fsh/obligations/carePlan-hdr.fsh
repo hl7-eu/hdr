@@ -5,6 +5,9 @@ Title:    "Care Plan: obligations"
 Description: """This profile defines obligations for the CarePlan resource for the purpose of this guide."""
 
 * insert SetFmmAndStatusRule ( 0, informative)
+
+* insert OblShouldPopulateShallProcess
+
 * text insert OblShallPopulateShallProcess
 * title insert OblShallPopulateShallDisplayProcess
 * addresses 
