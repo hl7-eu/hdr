@@ -8,6 +8,10 @@ Description: """This profile defines obligations for the CarePlan resource for t
 
 * insert OblShouldPopulateShallProcess
 
+* subject only Reference(PatientEuObligations)
+* addresses only Reference(ConditionEuCoreObligation)
+* goal only Reference(GoalEuHdr)
+
 * text insert OblShallPopulateShallProcess
 * title insert OblShallPopulateShallDisplayProcess
 * addresses 

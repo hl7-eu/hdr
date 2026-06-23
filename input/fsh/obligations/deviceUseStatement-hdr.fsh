@@ -6,6 +6,10 @@ Description: "This profile represents the constraints applied to the DeviceUseSt
 
 * insert SetFmmAndStatusRule ( 0, informative)
 
+* source only Reference(PatientEuObligations or PractitionerEuObligations or PractitionerRoleEuObligations or RelatedPersonEuObligations)
+* subject only Reference(PatientEuObligations)
+* device only Reference(DeviceEuHdrObligation)
+
 * subject insert OblShallPopulateOnly
 * status insert OblShallPopulateOnly
 * timing[x] insert OblShouldPopulateOnly

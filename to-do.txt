@@ -32,11 +32,17 @@ sectionImmunizations
 
 how to deal with obligation on backbone elements ?
 
+first revision
 EHDSDischargeReport 
 (to be checked)
 - serviceSpecialty
 - presentedForm
 - encounterInformation
+
+
+to be revised
+
+
 EHDSAlert
 EHDSPatient
 
@@ -57,6 +63,8 @@ EHDSRelatedPerson
 EHDSEncounter (no obligations)
 
 EHDSLaboratoryObservation
+
+## to do add refernces
 
 
 

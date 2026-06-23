@@ -8,6 +8,14 @@ Description: "This profile defines obligations for Inpatient Encounter in HL7 FH
 
 * insert OblShallPopulateShallProcess
 
+* subject only Reference(PatientEuObligations)
+* reasonReference only Reference(ObservationEuHdrObligation or ConditionEuCoreObligation or ProcedureEuCoreObligation)
+* participant.individual only Reference(PractitionerEuObligations or PractitionerRoleEuObligations or RelatedPersonEuObligations)
+* diagnosis.condition only Reference(ConditionEuCoreObligation)
+* hospitalization.destination only Reference(OrganizationEuObligations or LocationEuCore)
+* location.location only Reference(LocationEuCore)
+* serviceProvider only Reference(OrganizationEuObligations)
+
 * identifier 
 * status
 * class insert OblShallPopulateShallProcess

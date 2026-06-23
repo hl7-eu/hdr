@@ -10,7 +10,9 @@ Description: "This profile defines obligations for the MedicationAdministration 
 
 * insert OblShouldPopulateShallProcess
 
+* subject only Reference(PatientEuObligations)
+* medication[x] only CodeableConcept or Reference(MedicationEuHdrObligation)
+
 * identifier 
 * subject insert OblShallPopulateShallProcess
 * medication[x] insert OblShallPopulateShallDisplayProcess
-
