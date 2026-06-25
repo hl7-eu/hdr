@@ -9,3 +9,5 @@ input-cache/
 
 fsh-generated/
 /.vscode
+commit-report.txt
+git-commit-report.ps1

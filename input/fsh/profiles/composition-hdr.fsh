@@ -86,7 +86,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRules (
     Alert Section, 
     Information about substantial alerts or warnings (including allergies\) that health professionals should be aware of., 
-      http://loinc.org#104605-1 )   // CODE
+      $loinc#104605-1 )   // CODE
   * text ^requirements = "body.alerts.generatedNarrative"
 
   * entry only Reference(Flag or DocumentReference)
@@ -297,7 +297,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules ( 
       Significant medical test results, 
       Significant medical test results of functional\, diagnostic (including laboratory\)\, and imaging examinations performed during encounter. This may include orders for which the results have not yet arrived., 
-      http://loinc.org#30954-2)
+      $loinc#30954-2)
   * entry only Reference(Observation or DiagnosticReport or DocumentReference)
   * insert SectionEntrySliceComRules(Significant medical test results, Significant medical test results slice)
   // Review the slice definiton
@@ -383,7 +383,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules ( 
      	Allergies and Intolerances Section, 
       This section documents the relevant allergies or intolerances for that patient\, describing the kind of reaction - e.g. rash\, anaphylaxis\,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum\, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available\, or if no allergies are known this should be clearly documented in the section., 
-      http://loinc.org#48765-2)
+      $loinc#48765-2)
 
   * entry only Reference(AllergyIntolerance or DocumentReference)  
   * insert SectionEntrySliceComRules(allergyOrIntolerance, allergyOrIntolerance)
@@ -407,7 +407,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules ( 
     Hx general Reported Section,
     This section may provide both synthetic anamnesis \,e.g. description of phases of the pathology as a chronological summary of clustered clinical information\, and anecdotal evidence that clinicians can collect from the patient\, and can read in a narrative form.,
-    http://loinc.org#11329-0 )
+    $loinc#11329-0 )
   * text ^requirements = "body.patientHistory.generatedNarrative"
 
 
@@ -422,7 +422,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules ( 
       Problem List Section, 
       The Problem List Section lists and describes clinical problems or conditions currently being monitored for the patient., 
-      http://loinc.org#11450-4)
+      $loinc#11450-4)
   
   * entry only Reference(ConditionEuCore or DocumentReference)
   * insert SectionEntrySliceComRules(Clinical problems or conditions currently being monitored for the patient., It lists and describes clinical problems or conditions currently being monitored for the patient. This entry shall be used to document that no information about problems is available\, or that no relevant problems are known.)
@@ -442,7 +442,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules (
     Immunizations Section, 
   The Immunizations Section defines a patient's current immunization status and pertinent immunization history. The primary use case for the Immunization Section is to enable communication of a patient's immunization status. The section includes the current immunization status\, and may contain the entire immunization history that is relevant to the period of time being summarized.,
-  http://loinc.org#11369-6)
+  $loinc#11369-6)
 
   * entry only Reference(Immunization or DocumentReference)
  
@@ -505,7 +505,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules (
     Admission Medications,
       Admission Medications,
-      http://loinc.org#42346-7  )   // CODE
+      $loinc#42346-7  )   // CODE
   * entry 0..
   * entry only Reference(MedicationStatement
                           or MedicationRequest
@@ -527,7 +527,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 * section[sectionAdmissionMedications].title 1..
 * section[sectionAdmissionMedications].code 1..
 * section[sectionAdmissionMedications].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[sectionAdmissionMedications].code = http://loinc.org#42346-7 (exactly)
+* section[sectionAdmissionMedications].code = $loinc#42346-7 (exactly)
 * section[sectionAdmissionMedications].text 1..
 * section[sectionAdmissionMedications].entry
 * section[sectionAdmissionMedications].entry only Reference($MedicationStatement-uv-ips or $MedicationRequest-uv-ips or MedicationAdministration or MedicationDispense)
@@ -544,7 +544,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 * section[CCandReasonforVisitSection]
   * insert SectionComRules (Chief Complaint and Reason for Visit,
                           This section records the patient's chief complaint (the patientâ€™s own description\) and/or the reason for the patient's visit (the providerâ€™s description of the reason for visit\). Local policy determines whether the information is divided into two sections or recorded in one section serving both purposes.,
-                             http://loinc.org#46239-0  )
+                             $loinc#46239-0  )
 */
 
 
