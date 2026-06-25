@@ -25,6 +25,7 @@ copyright: >-
 #
 dependencies:
   # hl7.fhir.uv.ips: current
+  xtehr.eu.ehds.models: 1.0.0
   hl7.fhir.uv.ips: 2.0.1
   hl7.fhir.eu.base: 2.0.0
   hl7.fhir.uv.extensions.r4: 5.3.0

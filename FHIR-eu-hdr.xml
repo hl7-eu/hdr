@@ -46,6 +46,7 @@
 <artifact deprecated="true" id="StructureDefinition/consent-eu-hdr" key="StructureDefinition-consent-eu-hdr" name="Consent (Advance Directives HDR)"/>
 <artifact deprecated="true" id="Consent/example-consent-dnr" key="Consent-example-consent-dnr" name="Consent: Advance Directive DNR"/>
 <artifact deprecated="true" id="StructureDefinition/consent-obl-eu-hdr" key="StructureDefinition-consent-obl-eu-hdr" name="Consent: obligations"/>
+<artifact id="ActorDefinition/actor-consumer" key="ActorDefinition-actor-consumer" name="Consumer"/>
 <artifact id="StructureDefinition/device-eu-hdr" key="StructureDefinition-device-eu-hdr" name="Device (HDR)"/>
 <artifact id="Device/pacemaker-001" key="Device-pacemaker-001" name="Device: Implantable Pacemaker"/>
 <artifact id="StructureDefinition/device-obl-eu-hdr" key="StructureDefinition-device-obl-eu-hdr" name="Device: obligations"/>
@@ -124,6 +125,7 @@
 <artifact id="Procedure/sectio-swart" key="Procedure-sectio-swart" name="Procedure: Sectio caesarea"/>
 <artifact id="StructureDefinition/procedure-obl-eu-hdr" key="StructureDefinition-procedure-obl-eu-hdr" name="Procedure: obligations"/>
 <artifact deprecated="true" id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
+<artifact id="ActorDefinition/actor-producer" key="ActorDefinition-actor-producer" name="Producer"/>
 <artifact id="StructureDefinition/relatedPerson-obl-eu-hdr" key="StructureDefinition-relatedPerson-obl-eu-hdr" name="RelatedPerson: obligations"/>
 <artifact deprecated="true" id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
 <artifact id="StructureDefinition/specimen-obl-eu-hdr" key="StructureDefinition-specimen-obl-eu-hdr" name="Specimen: obligations"/>
