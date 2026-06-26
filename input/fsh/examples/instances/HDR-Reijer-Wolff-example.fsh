@@ -1,7 +1,7 @@
 Instance: HDR-Reijer-Wolff-Example
 InstanceOf: BundleEuHdr
-Title: "Bundle: complete HL7 Europe Hospital Discharge Report (2)"
-Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff"
+Title: "Bundle: HL7 Europe Hospital Discharge Report (2)"
+Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff."
 Usage: #example
 
 * type = #document
@@ -44,7 +44,8 @@ Usage: #example
 
 Instance: composition-hdr-wolff-example
 InstanceOf: CompositionEuHdr
-Title: "HDR Composition"
+Title: "Composition: HDR Reijer Wolff"
+Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff."
 Usage: #inline
 * id = "bd69ab8e-3835-4fb6-be83-1852a2893a65"
 * status = #final
@@ -219,6 +220,8 @@ Usage: #example
 
 Instance: fracture-left-leg
 InstanceOf: ConditionEuCore
+Title: "Condition: Left Lower Leg Fracture"
+Description: "Condition representing a fracture of the tibia and fibula of the left leg."
 Usage: #inline
 * id = "38d0593b-7949-489e-9306-95df81a109df"
 * clinicalStatus = $condition-clinical#active
@@ -229,6 +232,8 @@ Usage: #inline
 
 Instance: external-fixator
 InstanceOf: ProcedureEuCore
+Title: "Procedure: External Fixator Application"
+Description: "Procedure representing the application of an external fixator to the left lower limb."
 Usage: #inline
 * id = "1493fed2-e9ed-4dc1-b107-f077cb1d0d40"
 * status = #completed
@@ -250,6 +255,8 @@ Usage: #example
 
 Instance: cefazolin
 InstanceOf: MedicationAdministrationEuHdr
+Title: "MedicationAdministration: Cefazolin"
+Description: "A sample MedicationAdministration resource for Cefazolin."
 Usage: #inline
 * id = "4578e7cd-0d00-4221-9a7f-3e3d6e14a21b"
 * status = #completed

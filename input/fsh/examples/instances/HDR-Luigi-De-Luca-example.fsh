@@ -1,7 +1,7 @@
 Instance: HDR-Luigi-De-Luca-Example
 InstanceOf: BundleEuHdr
-Title: "Bundle: complete HL7 Europe Hospital Discharge Report (1)"
-Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca"
+Title: "Bundle: HL7 Europe Hospital Discharge Report (1)"
+Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca."
 Usage: #example
 
 * type = #document
@@ -433,7 +433,7 @@ Usage: #example
 Instance: diabetis-condition-luca
 InstanceOf: ConditionEuCore
 Title: "Condition: Type 2 Diabetes Mellitus"
-Description: "Condition for Type 2 Diabetes Mellitus, double coding with ICD-10 and SNOMED CT."
+Description: "Condition representing type 2 diabetes mellitus, coded with ICD-10 and SNOMED CT."
 Usage: #example
 * id = "a5bf69e4-24db-48a8-9eda-71516dcaf1d9"
 * clinicalStatus = $condition-clinical#active
@@ -444,8 +444,8 @@ Usage: #example
 
 Instance: careplan-luca
 InstanceOf: CarePlanEuHdr
-Title: "CarePlan: Diabetes Management Care Plan"
-Description: "Care plan for diabetes including referrals and HbA1c measurement."
+Title: "CarePlan: Diabetes Management Plan"
+Description: "Care plan for diabetes management, including referrals and HbA1c measurement."
 Usage: #example
 * id = "b84038f8-9541-4c5b-93b0-a7f1b8e55bd3"
 * status = #active
@@ -490,7 +490,7 @@ Usage: #inline
 
 Instance: familyhistory-mother-luca-example
 InstanceOf: FamilyMemberHistory // EuHdr
-Title: "FamilyMemberHistory: Family History of Type 2 Diabetes Mellitus - Mother"
+Title: "FamilyMemberHistory: Type 2 Diabetes Mellitus - Mother"
 Description: "Mother has a history of type 2 diabetes mellitus."
 Usage: #example
 * id = "635c22e7-d7f1-45ad-9b4d-d4fe35239085"
@@ -501,7 +501,7 @@ Usage: #example
 
 Instance: familyhistory-grandmother-luca-example
 InstanceOf: FamilyMemberHistory // EuHdr
-Title: "Family History of Type 2 Diabetes Mellitus - Maternal Grandmother"
+Title: "FamilyMemberHistory: Type 2 Diabetes Mellitus - Maternal Grandmother"
 Description: "Maternal grandmother has a history of type 2 diabetes mellitus."
 Usage: #inline
 * id = "3fbdfbe1-9d70-47ec-ac05-3e30b063365a"
@@ -512,8 +512,8 @@ Usage: #inline
 
 Instance: bodyweight-luca-1-example
 InstanceOf: Observation
-Title: "Body Weight Observation - 109 kg"
-Description: "Vital sign observation for body weight of 109 kg measured on April 1st."
+Title: "Observation: Body Weight - 109 kg"
+Description: "Vital sign observation for body weight of 109 kg measured on April 1, 2025."
 Usage: #inline
 * id = "f0113857-b9b7-429b-8893-b645a38ae20a"
 * status = #final
@@ -528,15 +528,15 @@ Usage: #inline
 
 Instance: bodyweight-luca-2-example
 InstanceOf: Observation
-Title: "Body Weight Observation - 108 kg"
-Description: "Vital sign observation for body weight of 108 kg measured on April 10th."
+Title: "Observation: Body Weight - 108 kg"
+Description: "Vital sign observation for body weight of 108 kg measured on April 10, 2025."
 Usage: #inline
 * id = "065c918f-730a-47f8-938a-7ad54618037b"
 * status = #final
 * category[0] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#29463-7 "Body weight"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
-* effectiveDateTime = "2025-04-19"
+* effectiveDateTime = "2025-04-10"
 * valueQuantity.value = 108
 * valueQuantity.unit = "kg"
 * valueQuantity.system = $ucum
@@ -544,8 +544,8 @@ Usage: #inline
 
 Instance: bodyheight-luca-1-example
 InstanceOf: Observation
-Title: "Body Height Observation - 177 cm"
-Description: "Vital sign observation for body height of 177 cm measured on April 1st."
+Title: "Observation: Body Height - 177 cm"
+Description: "Vital sign observation for body height of 177 cm measured on April 1, 2025."
 Usage: #inline
 * id = "81783ae4-c36d-424f-8cea-fe7d3407a36b"
 * status = #final
@@ -560,8 +560,8 @@ Usage: #inline
 
 Instance: bloodpressure-luca-1-example
 InstanceOf: Observation
-Title: "Blood Pressure Observation - 155/95 mmHg"
-Description: "Vital sign observation for blood pressure (155/95 mmHg) measured on April 1st."
+Title: "Observation: Blood Pressure - 155/95 mmHg"
+Description: "Vital sign observation for blood pressure of 155/95 mmHg measured on April 1, 2025."
 Usage: #inline
 * id = "a19e48e1-2271-4cdb-9c76-b0626c7a5363"
 * status = #final
@@ -584,8 +584,8 @@ Usage: #inline
 
 Instance: bloodpressure-luca-2-example
 InstanceOf: Observation
-Title: "Blood Pressure Observation - 150/90 mmHg"
-Description: "Vital sign observation for blood pressure (155/95 mmHg) measured on April 1st."
+Title: "Observation: Blood Pressure - 150/90 mmHg"
+Description: "Vital sign observation for blood pressure of 150/90 mmHg measured on April 10, 2025."
 Usage: #inline
 * id = "fd7f7580-5788-45dd-88ec-dca615d69c7d"
 * status = #final
@@ -608,7 +608,7 @@ Usage: #inline
 
 Instance: tobaccouse-luca-example
 InstanceOf: Observation
-Title: "Tobacco Use - A Few Cigarettes a Day"
+Title: "Observation: Tobacco Use - A Few Cigarettes a Day"
 Description: "Observation recording tobacco use: a few cigarettes a day."
 Usage: #inline
 * id = "67152b1b-0ffa-4b8f-8b6a-a3d71d4d58b6"

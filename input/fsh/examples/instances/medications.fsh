@@ -3,7 +3,7 @@ Instance: 400C-prescription-cefuroxime-singleline
 InstanceOf: MedicationRequestEuCore
 Usage: #example
 Title: "MedicationRequest: 400C-prescription-cefuroxime-singleline"
-Description: "400C. A prescription/request with one medication and changing dosaging. Uses 'actionable' tag. Cefuroxime sodium."
+Description: "400C. A prescription/request with one medication and changing dosage. Uses the 'actionable' tag. Cefuroxime sodium."
 
 * meta.tag = $common-tags#actionable
 * identifier.value = "10-123EP"  // prescription line identifier if exists
@@ -99,7 +99,7 @@ Instance: 400D-dispense-1
 InstanceOf: MedicationDispenseEuHdr
 Usage: #example
 Title: "MedicationDispense: 400D-dispense-1"
-Description: "400D-1. Medication dispense fulfilling the first part of the order: 1 package containing 10 vials"
+Description: "400D-1. Medication dispense fulfilling the first part of the order: 1 package containing 10 vials."
 
 * status = #completed
 * medicationReference = Reference(01C-Cefuroxime1500Branded)
