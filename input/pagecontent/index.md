@@ -10,7 +10,7 @@
   background-color: #f9f9ff;
   box-sizing: border-box;
 
-  /* optional: pull the banner up a bit to align with the ToC’s top */
+  /* optional: pull the banner up a bit to align with the ToC's top */
   /* margin-top: -0.75rem;  uncomment/tweak if you want tighter vertical alignment */
 ">
   <div style="margin-bottom: 1em;">
@@ -42,8 +42,8 @@ The content is subject to change and is provided <b>as-is</b>, without warranty 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">
 	<p><b>Obligations</b></p>
-		<p>Obligations have been added to this version of the guide only as <b>Informative</b> material to collect feedback about their usage.</p>		
-		<p>For more details about obligations please refer to the <a href="obligations.html">Obligations page</a></p>
+		<p>Obligations have been added to this version of the guide only as <b>informative</b> material to collect feedback about their use.</p>		
+		<p>For more details about obligations, please refer to the <a href="obligations.html">Obligations page</a>.</p>
 	</blockquote>
 </div>
 
@@ -60,20 +60,20 @@ The content is subject to change and is provided <b>as-is</b>, without warranty 
 
 ### Scope
 
-Specify a set of rules to be applied to HL7 FHIR to define how to represent a **Hospital Discharge Report** in the **European** Context, coherently with the European eHN Guidelines (see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) ).
+This Implementation Guide specifies a set of rules to be applied to HL7 FHIR to define how to represent a **Hospital Discharge Report** in the **European** context, consistent with the European eHN Guidelines (see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en)).
 
-Its main goal is to define the content components and a preferable structure to be used for composing an Hospital Discharge Report. 
+Its main goal is to define the content components and preferred structure for composing a Hospital Discharge Report. 
 
-This includes both jurisdictional and cross border scenarios. 
+This includes both jurisdictional and cross-border scenarios. 
 
 This guide doesn't describe how this report is exchanged.
 
 ### Purpose
-The goal of this Implementation Guide is to define an European standard for the Hospital Discharge Report to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (E-EHRxF).
+The goal of this Implementation Guide is to define a European standard for the Hospital Discharge Report, facilitating harmonization across national initiatives and laying the groundwork for the European EHR eXchange Format (E-EHRxF), by specifying how to exchange personal electronic health data in the priority category of 'discharge reports' listed in Article 14 of the EHDS Regulation.
 
-This project is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and projects.
+This project is promoted by HL7 Europe and developed in collaboration with several other European and national organizations and projects.
 
-The aspiration of this guide is that of being used as basis for European National Guides, the European EHRxF and - consequently - by MyHealth@EU for the EU cross-border services.
+The aspiration is for this guide to be used as a basis for European national guides, the European EHRxF and, consequently, by MyHealth@EU for EU cross-border services.
 
 ### Background
 
