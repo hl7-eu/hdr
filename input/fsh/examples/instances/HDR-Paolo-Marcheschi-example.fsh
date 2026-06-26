@@ -1,7 +1,7 @@
 Instance: HDR-Paolo-Marcheschi-Example
 InstanceOf: BundleEuHdr
-Title: "Bundle: complete HL7 Europe Hospital Discharge Report (3)"
-Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Paolo Marcheschi"
+Title: "Bundle: HL7 Europe Hospital Discharge Report (3)"
+Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Paolo Marcheschi."
 Usage: #example
 
 * type = #document
@@ -77,6 +77,8 @@ Usage: #inline
 
 Instance: composition-ftgm-discharge-letter
 InstanceOf: CompositionEuHdr
+Title: "Composition: HDR Paolo Marcheschi"
+Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Paolo Marcheschi."
 Usage: #inline
 * id = "130ed4e9-30f3-4a09-b9b1-ad8fd12237cb"
 * status = #final
@@ -202,9 +204,10 @@ Usage: #inline
 
 Instance: encounter-ftgm-example
 InstanceOf: EncounterEuHdr
+Title: "Encounter: Hospital Admission and Discharge"
+Description: "A sample Encounter resource for a hospital admission and discharge."
 Usage: #inline
 * id = "e4d7ab9d-2b9c-42f8-95ef-08ff5e260a8e"
-* status = $encounter-status#finished
 * status = $encounter-status#finished
 * class = $v3-ActCode#IMP "inpatient encounter"
 * period.start = "2025-01-21T10:00:00Z"
@@ -213,6 +216,8 @@ Usage: #inline
 
 Instance: insufficienza-respiratoria-acuta
 InstanceOf: ConditionEuCore
+Title: "Condition: Acute Respiratory Failure"
+Description: "Condition representing acute respiratory failure."
 // add? 7678002 Cytomegaloviral pneumonia
 // add? 721804002 Infection of lung caused by Pneumocystis (disorder)
 Usage: #inline

@@ -9,9 +9,7 @@
       <div class="callout-wrapper">
         <div class="callout-box">
           <strong>Ongoing alignment:</strong>
-              The Xt-EHR logical models are under active revision and continuous refinement.
-              Updates from Xt-EHR will be progressively incorporated into this Implementation
-              Guide to maintain alignment with the evolving EHDS specifications.
+              The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
         </div>
       </div>
     </div>
@@ -46,253 +44,213 @@
         <caption>EHDSEncounter -> Encounter (HDR)</caption>
         <thead>
           <tr>
-            <th colspan="2" class="src-head">EHDSEncounter (Logical Model)</th>
+            <th colspan="1" class="src-head">EHDSEncounter (Logical Model)</th>
             <th class="relhead">Relationship</th>
-            <th colspan="4" class="tgt-head">Encounter (HDR)</th>
+            <th colspan="3" class="tgt-head">Encounter (HDR)</th>
           </tr>
           <tr>
             <th class="src-sub">Element</th>
-            <th class="src-sub">Description</th>
             <th class="relsub">Relation</th>
             <th class="tgt-sub">Resource</th>
             <th class="tgt-sub">Element</th>
-            <th class="tgt-sub">Description</th>
             <th class="tgt-sub">Notes</th>
           </tr>
         </thead>
         <tbody>
           <tr>
+            <td>header</td>
+            <td>related-to</td>
+            <td>Encounter</td>
+            <td>.</td>
+            <td>Dataset-level inherited header; not carried as a single element in Encounter.</td>
+          </tr>
+          <tr>
             <td>header.subject</td>
-            <td>Patient/subject information.</td>
             <td>equivalent</td>
             <td>Encounter</td>
             <td>subject</td>
-            <td>The patient or subject of care.</td>
             <td>Reference to PatientEuCore.</td>
           </tr>
           <tr>
             <td>header.identifier</td>
-            <td>Business identifier for the object.</td>
             <td>equivalent</td>
             <td>Encounter</td>
             <td>identifier</td>
-            <td>Identifier(s) for the encounter.</td>
             <td></td>
           </tr>
           <tr>
             <td>header.author[x]</td>
-            <td>Author responsible for the encounter.</td>
             <td>related-to</td>
             <td>Encounter</td>
             <td>participant.individual</td>
-            <td>Participant responsible for the encounter.</td>
-            <td>Use participant.type to capture author role if needed.</td>
+            <td>Encounter does not include a dedicated author element. Authorship is typically inferred from the healthcare professional’s participation in the encounter, for example as admitter or discharger. If an explicit author is required, this could be represented using an appropriate participation (participant.type='AUT').</td>
           </tr>
           <tr>
             <td>header.date</td>
-            <td>Date/time of authoring/issuing.</td>
             <td>related-to</td>
             <td>Encounter</td>
-            <td>period.start</td>
-            <td>Start of the encounter period.</td>
-            <td>No dedicated authoring timestamp in Encounter; use an extension if needed.</td>
+            <td>participant.period</td>
+            <td>Encounter does not include a dedicated authorship date element. Authorship date may be inferred from the Encounter.period. If an explicit date is required, this could be represented using an appropriate participation (participant.type='AUT').</td>
           </tr>
           <tr>
             <td>header.status</td>
-            <td>Status of the encounter.</td>
             <td>equivalent</td>
             <td>Encounter</td>
             <td>status</td>
-            <td>Current state of the encounter.</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.source</td>
-            <td>Source of information.</td>
             <td>no-map</td>
             <td>Encounter</td>
-            <td></td>
-            <td></td>
-            <td>No native element; use an extension if needed.</td>
+            <td>participant.individual</td>
+            <td>Encounter does not include a dedicated informant element. If informant details are required, this could be represented using an appropriate participation (participant.type='INF')</td>
           </tr>
           <tr>
             <td>header.language</td>
-            <td>Language in which the resource is written.</td>
             <td>equivalent</td>
             <td>Encounter</td>
             <td>language</td>
-            <td>Language of the resource.</td>
             <td>IETF language tag.</td>
           </tr>
           <tr>
             <td>priority</td>
-            <td>Urgency of the encounter.</td>
             <td>equivalent</td>
             <td>Encounter</td>
             <td>priority</td>
-            <td>Urgency of the encounter.</td>
             <td></td>
           </tr>
           <tr>
             <td>type</td>
-            <td>Type of the encounter.</td>
-            <td>equivalent</td>
+            <td>related-to</td>
             <td>Encounter</td>
             <td>type</td>
-            <td>Specific type of encounter.</td>
-            <td></td>
+            <td>The model describes encounter kind, such as inpatient, ambulatory, or teleconsultation. Use Encounter.class for the broad class and Encounter.type for a more specific type.</td>
+          </tr>
+          <tr>
+            <td>type</td>
+            <td>related-to</td>
+            <td>Encounter</td>
+            <td>class</td>
+            <td>The model describes encounter kind, such as inpatient, ambulatory, or teleconsultation. Use Encounter.class for the broad class and Encounter.type for a more specific type.</td>
           </tr>
           <tr>
             <td>period</td>
-            <td>Start and end time of encounter.</td>
             <td>equivalent</td>
             <td>Encounter</td>
             <td>period</td>
-            <td>Time period of the encounter.</td>
             <td></td>
           </tr>
           <tr>
             <td>serviceProvider</td>
-            <td>Organisation responsible for encounter.</td>
             <td>equivalent</td>
             <td>Encounter</td>
             <td>serviceProvider</td>
-            <td>Organization responsible for the encounter.</td>
             <td></td>
           </tr>
           <tr>
             <td>referringProfessional</td>
-            <td>Referring healthcare professional.</td>
             <td>related-to</td>
             <td>Encounter</td>
-            <td>participant.individual</td>
-            <td>Referring participant.</td>
+            <td>participant:referrer.individual</td>
             <td>Use participant.type = REF.</td>
           </tr>
           <tr>
             <td>basedOn[x]</td>
-            <td>Request that initiated this encounter.</td>
             <td>equivalent</td>
             <td>Encounter</td>
             <td>basedOn</td>
-            <td>Request referenced by encounter.</td>
             <td></td>
           </tr>
           <tr>
             <td>reason[x]</td>
-            <td>Reason(s) for admission.</td>
             <td>related-to</td>
             <td>Encounter</td>
             <td>reasonCode / reasonReference</td>
-            <td>Reasons for the encounter.</td>
-            <td>Use reasonCode for coded reasons, reasonReference for conditions/procedures/observations.</td>
+            <td>Use reasonCode for CodeableConcept reasons and reasonReference for Condition, Procedure, or Observation reasons. String reasons require narrative text or an extension.</td>
           </tr>
           <tr>
             <td>admission</td>
-            <td>Admission details.</td>
             <td>related-to</td>
             <td>Encounter</td>
             <td>hospitalization</td>
-            <td>Hospitalization details.</td>
             <td></td>
           </tr>
           <tr>
             <td>admission.admitter</td>
-            <td>Admitting healthcare professional.</td>
-            <td>related-to</td>
+            <td>equivalent</td>
             <td>Encounter</td>
-            <td>participant.individual</td>
-            <td>Admitting participant.</td>
+            <td>participant:admitter.individual</td>
             <td>Use participant.type = ADM.</td>
           </tr>
           <tr>
             <td>admission.admitSource</td>
-            <td>From where the patient was admitted.</td>
             <td>equivalent</td>
             <td>Encounter</td>
             <td>hospitalization.admitSource</td>
-            <td>Admit source.</td>
             <td></td>
           </tr>
           <tr>
             <td>dischargeDiagnosis[x]</td>
-            <td>Diagnoses at discharge.</td>
             <td>related-to</td>
             <td>Encounter</td>
             <td>diagnosis.condition</td>
-            <td>Encounter diagnoses.</td>
-            <td>Use diagnosis.use for role if needed.</td>
+            <td>Use diagnosis.condition for a Condition reference and diagnosis.use for role if needed. A coded diagnosis should be represented as a Condition resource when a structured diagnosis is required.</td>
           </tr>
           <tr>
             <td>dischargeDestination</td>
-            <td>Destination after discharge.</td>
             <td>related-to</td>
             <td>Encounter</td>
             <td>hospitalization</td>
-            <td>Discharge details.</td>
             <td>See dischargeDestination.type and .location mappings.</td>
           </tr>
           <tr>
             <td>dischargeDestination.type</td>
-            <td>Type of destination.</td>
             <td>related-to</td>
             <td>Encounter</td>
             <td>hospitalization.dischargeDisposition</td>
-            <td>Disposition at discharge.</td>
             <td></td>
           </tr>
           <tr>
             <td>dischargeDestination.location[x]</td>
-            <td>Location or organisation after discharge.</td>
             <td>related-to</td>
             <td>Encounter</td>
             <td>hospitalization.destination</td>
-            <td>Destination location/organization.</td>
             <td></td>
           </tr>
           <tr>
             <td>serviceLocation</td>
-            <td>Locations where the patient was present.</td>
             <td>related-to</td>
             <td>Encounter</td>
             <td>location</td>
-            <td>Encounter locations.</td>
             <td></td>
           </tr>
           <tr>
             <td>serviceLocation.period</td>
-            <td>Time period at the location.</td>
             <td>equivalent</td>
             <td>Encounter</td>
             <td>location.period</td>
-            <td>Location period.</td>
             <td></td>
           </tr>
           <tr>
             <td>serviceLocation.organisationPart[x]</td>
-            <td>Organisation or part of an organisation.</td>
             <td>related-to</td>
             <td>Encounter</td>
             <td>location.location</td>
-            <td>Location reference.</td>
             <td></td>
           </tr>
           <tr>
             <td>subEncounter</td>
-            <td>Sub-encounters.</td>
-            <td>equivalent</td>
+            <td>related-to</td>
             <td>Encounter</td>
             <td>partOf</td>
-            <td>Parent encounter reference.</td>
-            <td></td>
+            <td>FHIR Encounter.partOf points from the sub-encounter to the parent encounter.</td>
           </tr>
           <tr>
             <td>note</td>
-            <td>Free text notes.</td>
             <td>equivalent</td>
             <td>Encounter</td>
-            <td>note</td>
-            <td>Encounter notes.</td>
+            <td>extension:note</td>
             <td></td>
           </tr>
         </tbody>

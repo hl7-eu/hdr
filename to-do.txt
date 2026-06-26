@@ -28,12 +28,43 @@ sectionAllergies
 sectionProblemList
 sectionImmunizations
 
-// TO DO
+##### Obligation done
 
-1) compare and merge devicesUSeStatement profile with EPS
-2) CarePlanEuHdr should we aling with EPS ?
-3) sectionDischargeInstructions to be removed ?
-4) remove temporary codes / revise used codes
+how to deal with obligation on backbone elements ?
+
+first revision
+EHDSDischargeReport 
+(to be checked)
+- serviceSpecialty
+- presentedForm
+- encounterInformation
+
+
+to be revised
+
+
+EHDSAlert
+EHDSPatient
+
+EHDSOrganisation
+EHDSHealthProfessional
+
+EHDSCondition
+EHDSObservation
+EHDSProcedure
+EHDSMedicationUse
+
+EHDSAttachment (no obligation)
+EHDSDeviceUse
+EHDSDevice
+
+EHDSCarePlan (no obligations)
+EHDSRelatedPerson
+EHDSEncounter (no obligations)
+
+EHDSLaboratoryObservation
+
+## to do add refernces
 
 
 

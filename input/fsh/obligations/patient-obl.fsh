@@ -1,22 +1,16 @@
 Profile: PatientEuObligations
 Parent: PatientEuCore
 Id: patient-obl-eu-hdr
-Title:    "Patient: obligations"
-Description: "This profile defines obligations for an human Patient in FHIR for the purpose of this guide."
-// * ^publisher = "HL7 Europe"
-// * ^copyright = "HL7 Europe"
+Title: "Patient: obligations"
+Description: "This profile defines obligations for a human Patient in FHIR for the purpose of this guide."
+
 * insert SetFmmAndStatusRule ( 0, informative)
 
-// TEST OBLIGATIONS  ====>
-
-// Obligations at the element level 
-// Server obligations
-* identifier insert ObligationSet1   
-* name.given insert ObligationSet1  
-* name.family insert ObligationSet1
-* name.text insert ObligationSet2 //can-send
-* telecom insert ObligationSet2 //can-send
-* gender insert ObligationSet1
-* birthDate insert ObligationSet1
-* generalPractitioner insert ObligationSet2 //can-send
-* address insert ObligationSet1
+* identifier insert OblShallPopulateOnly
+* name insert OblShallPopulateOnly
+* name.use insert OblShouldPopulateOnly
+* name.text insert OblShouldPopulateOnly
+* name.family insert OblShallPopulateOnly
+* name.given insert OblShallPopulateOnly
+* birthDate insert OblShouldPopulateOnly
+* gender insert OblShouldPopulateOnly

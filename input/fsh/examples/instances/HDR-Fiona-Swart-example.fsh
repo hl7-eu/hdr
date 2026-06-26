@@ -1,7 +1,7 @@
 Instance: patient-swart
 InstanceOf: Patient
 Title: "Patient: Dutch Patient"
-Description: "Patine reosurce representing Fiona Swart, a Dutch patient."
+Description: "Patient resource representing Fiona Swart, a Dutch patient."
 Usage: #example
 * identifier.system = "http://fhir.nl/fhir/NamingSystem/bsn"
 * identifier.value = "999901448"
@@ -61,7 +61,7 @@ Usage: #example
 Instance: gewicht-swart
 InstanceOf: $vitalsigns
 Title: "Observation: Body weight"
-Description: "Vital Signs observation representng the Body weight of the patient."
+Description: "Vital signs observation representing the body weight of the patient."
 Usage: #example
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
@@ -72,7 +72,8 @@ Usage: #example
 
 Instance: bloeddruk-swart
 InstanceOf: $vitalsigns
-Title: "Blood pressure"
+Title: "Observation: Blood Pressure"
+Description: "Vital signs observation representing the patient's blood pressure."
 Usage: #inline
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
@@ -88,7 +89,8 @@ Usage: #inline
 
 Instance: levenvoelen-swart
 InstanceOf: Observation
-Title: "Observation: Fetal movement"
+Title: "Observation: Fetal Movement"
+Description: "Observation representing the presence of fetal movements."
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"
 * identifier.value = "38e436bf-6b35-11ec-2213-020000000000"
@@ -100,7 +102,8 @@ Usage: #inline
 
 Instance: condition-meerling
 InstanceOf: ConditionEuCore
-Title: "Observation: Twin pregnancy"
+Title: "Condition: Twin Pregnancy"
+Description: "Condition representing a monochorionic diamniotic twin pregnancy."
 Usage: #inline
 * clinicalStatus = $condition-clinical#resolved
 * code = $sct#459168005 "Monochorionic diamniotic twin pregnancy"
@@ -109,7 +112,8 @@ Usage: #inline
 
 Instance: condition-growth
 InstanceOf: Condition
-Title: "Condition: Fetal growth restriction"
+Title: "Condition: Fetal Growth Restriction"
+Description: "Condition representing fetal growth restriction."
 Usage: #inline
 * clinicalStatus = $condition-clinical#resolved
 * code = $sct#22033007 "Fetal growth restriction"
@@ -132,7 +136,8 @@ Usage: #inline
 
 Instance: alcohol-swart
 InstanceOf: Observation
-Title: "Alcohol consumption"
+Title: "Observation: Alcohol Consumption"
+Description: "Observation representing the patient's alcohol consumption status."
 Usage: #inline
 * status = #final
 * code = $sct#228273003 "Alcohol drinking behaviour" 
@@ -142,7 +147,8 @@ Usage: #inline
 
 Instance: tobacco-swart
 InstanceOf: Observation
-Title: "Tobacco smoking"
+Title: "Observation: Tobacco Smoking"
+Description: "Observation representing the patient's tobacco smoking status."
 Usage: #inline
 * status = #final
 * code = $sct#365980008 "Finding of tobacco use and exposure (finding)"
@@ -156,7 +162,7 @@ Usage: #inline
 
 Instance: sectio-swart
 InstanceOf: ProcedureEuCore
-Title: "Procedure: Sectio caesarea"
+Title: "Procedure: Cesarean Section"
 Description: "A planned cesarean section procedure."
 Usage: #example
 * status = #completed
@@ -202,7 +208,8 @@ Usage: #example
 
 Instance: lab-swart-4
 InstanceOf: MedicalTestResultEuCore
-Title: "Rh D factor"
+Title: "Observation: Rh D Factor"
+Description: "Laboratory observation representing Rh D factor in blood."
 Usage: #inline
 * id = "a7c687cd-27dd-4b42-88c2-5e32418847ae"
 * status = #final
@@ -215,7 +222,8 @@ Usage: #inline
 
 Instance: lab-swart-5
 InstanceOf: MedicalTestResultEuCore
-Title: "Hemoglobine"
+Title: "Observation: Hemoglobin"
+Description: "Laboratory observation representing hemoglobin in venous blood."
 Usage: #inline
 * id = "5863804b-b0aa-4292-8bc2-13a769ad50d7"
 * status = #final
@@ -228,7 +236,8 @@ Usage: #inline
 
 Instance: lab-swart-6
 InstanceOf: MedicalTestResultEuCore
-Title: "HIV 1 As [aanwezigheid] in serum of plasma d.m.v. immunoassay"
+Title: "Observation: HIV 1 Antibody"
+Description: "Laboratory observation representing HIV 1 antibody presence in serum or plasma by immunoassay."
 Usage: #inline
 * id = "2640f290-85c4-426f-b912-4b5051f4f35a"
 * status = #final
@@ -241,6 +250,8 @@ Usage: #inline
 
 Instance: composition-swart
 InstanceOf: CompositionEuHdr
+Title: "Composition: HDR Fiona Swart"
+Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Fiona Swart."
 Usage: #inline
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
@@ -398,8 +409,8 @@ Usage: #inline
 
 Instance: bundle-swart
 InstanceOf: BundleEuHdr
-Title: "Bundle: complete HL7 Europe Hospital Discharge Report (4)"
-Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Fiona Swart"
+Title: "Bundle: HL7 Europe Hospital Discharge Report (4)"
+Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Fiona Swart."
 Usage: #example
 * identifier.system = "urn:ietf:rfc:4122"
 * identifier.value = "3e594fe5-3ed5-4305-a214-99c87e1f3bfa"

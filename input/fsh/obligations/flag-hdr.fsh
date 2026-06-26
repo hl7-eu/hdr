@@ -8,8 +8,9 @@ Description: "This profile defines obligations for the Flag resource to represen
 
 * insert SetFmmAndStatusRule ( 0, informative)
 
-* extension[flagDetailExt] insert ObligationSet3
-* extension[flagPriorityExt] insert ObligationSet3
-* status insert ObligationSet2
-* code insert ObligationSet1
-* subject insert ObligationSet1
+* extension[flagDetailExt] insert OblShallPopulateOnly
+* extension[flagPriorityExt] insert OblShouldPopulateOnly
+* status insert OblShallPopulateOnly
+* code insert OblShallPopulateOnly
+* subject insert OblShallPopulateOnly
+* period insert OblShallPopulateOnly

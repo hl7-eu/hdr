@@ -4,5 +4,5 @@ This Implementation Guide aims to enable the consistent and interoperable exchan
 
 The scope of this guide includes:
 - Defining FHIR profiles and extensions necessary for representing hospital discharge reports as structured and narrative documents.
-- Providing alignment with existing eHN guidelines, the EHDS logical models currently developped by the Xt-EHR joint action and international standards (like **HL7 IPS**).
+- Providing alignment with existing eHN guidelines, the EHDS logical models currently developed by the Xt-EHR joint action and international standards (like **HL7 IPS**).
 - Supporting the use of internationally recognized coding systems (e.g., **SNOMED CT**, **ICD-10**, **LOINC**) to ensure semantic interoperability.

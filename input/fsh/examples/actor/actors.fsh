@@ -1,39 +1,27 @@
-Instance: actor-creator-eu-hdr
+Instance: Producer
 InstanceOf: ActorDefinition
-Title: "HDR Creator"
-Description: """Hospital Discharge Report Creator: a system generating and sending/providing a Hospital Discharge Report to a Consumer or to a Repository for report storage and sharing."""
+Title: "Producer"
+Description: """A system that generates or makes available structured electronic health data for exchange. In this role, the system is responsible for being technically capable of populating the relevant data elements in accordance with the applicable “able-to-populate” obligations and for associating the required metadata, such as authorship, provenance, status, and temporal information, before the data are made available to downstream systems."""
 Usage: #example
 
-* url = "http://hl7.eu/fhir/laboratory/actor-creator-eu-hdr"
-* name = "HDRCreator"
+* id = "actor-producer"
+// * url = "http://hl7.eu/fhir/laboratory/actor-producer"
+* name = "Producer"
 * status = #active
 * type = #system
 // * type = #entity
-* documentation = """This actor represents the Hospital Discharge Report creators. That is the actor creating the report that can be sent to a consumer or to a repository for report storage and sharing."""
+* documentation = """A system that receives electronic health data originating from another system and processes or displays that data. In this role, the system is responsible for ingesting and validating the received data and for preserving the meaning, structure, and associated metadata of the information in accordance with the applicable Consumer obligations, ensuring correct interpretation and presentation to end users or other systems."""
 
-Instance: actor-consumer-eu-hdr
+Instance: Consumer
 InstanceOf: ActorDefinition
-Title: "HDR Consumer"
-Description: """Hospital Discharge Report Report Consumer: a system receiving/querying and using a Hospital Discharge Report."""
+Title: "Consumer"
+Description: """A system that receives electronic health data originating from another system and processes or displays that data. In this role, the system is responsible for ingesting and validating the received data and for preserving the meaning, structure, and associated metadata of the information in accordance with the applicable Consumer obligations, ensuring correct interpretation and presentation to end users or other systems."""
 Usage: #example
 
-* url = "http://hl7.eu/fhir/laboratory/actor-consumer-eu-hdr"
-* name = "HDRConsumer"
+* id = "actor-consumer"
+// * url = "http://hl7.eu/fhir/laboratory/actor-consumer-eu-hdr"
+* name = "Consumer"
 * status = #active
 * type = #system
 // * type = #entity
-* documentation = """This actor represents the Hospital Discharge Report consumers. That is the system using the report received or retrieved.
-Using includes, but is not limited to, the report display, storage or processing."""
-
-Instance: actor-repos-eu-hdr
-InstanceOf: ActorDefinition
-Title: "HDR Repository"
-Description: """Hospital Discharge Report Report Repository: a system maintaining a copy of the received Hospital Discharge Report, to store and make it available for the consumers."""
-Usage: #example
-
-* url = "http://hl7.eu/fhir/laboratory/actor-repos-eu-hdr"
-* name = "HDRRepos"
-* status = #active
-* type = #system
-// * type = #entity
-* documentation = """This actor represents the Hospital Discharge Report Repositories. That is any system maintaining a copy of the report received, to store and make it available for the consumers."""
+* documentation = """A system that receives electronic health data originating from another system and processes or displays that data. In this role, the system is responsible for ingesting and validating the received data and for preserving the meaning, structure, and associated metadata of the information in accordance with the applicable Consumer obligations, ensuring correct interpretation and presentation to end users or other systems."""

@@ -8,7 +8,11 @@ Description: "This profile defines obligations for the MedicationAdministration 
 
 * insert SetFmmAndStatusRule ( 0, informative)
 
-* identifier 
-* subject insert ObligationSet1
-* medication[x] insert ObligationSet2
+* insert OblShouldPopulateShallProcess
 
+* subject only Reference(PatientEuObligations)
+* medication[x] only CodeableConcept or Reference(MedicationEuHdrObligation)
+
+* identifier 
+* subject insert OblShallPopulateShallProcess
+* medication[x] insert OblShallPopulateShallDisplayProcess

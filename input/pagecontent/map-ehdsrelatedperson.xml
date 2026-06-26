@@ -9,9 +9,7 @@
       <div class="callout-wrapper">
         <div class="callout-box">
           <strong>Ongoing alignment:</strong>
-              The Xt-EHR logical models are under active revision and continuous refinement.
-              Updates from Xt-EHR will be progressively incorporated into this Implementation
-              Guide to maintain alignment with the evolving EHDS specifications.
+              The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
         </div>
       </div>
     </div>
@@ -28,7 +26,7 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSRelatedPerson.html" target="_blank">
+          <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSRelatedPerson.html" target="_blank">
             EHDSRelatedPerson
           </a>
         </li>
@@ -46,74 +44,60 @@
         <caption>EHDSRelatedPerson -> RelatedPerson (HDR)</caption>
         <thead>
           <tr>
-            <th colspan="2" class="src-head">EHDSRelatedPerson (Logical Model)</th>
+            <th colspan="1" class="src-head">EHDSRelatedPerson (Logical Model)</th>
             <th class="relhead">Relationship</th>
-            <th colspan="4" class="tgt-head">RelatedPerson (HDR)</th>
+            <th colspan="3" class="tgt-head">RelatedPerson (HDR)</th>
           </tr>
           <tr>
             <th class="src-sub">Element</th>
-            <th class="src-sub">Description</th>
             <th class="relsub">Relation</th>
             <th class="tgt-sub">Resource</th>
             <th class="tgt-sub">Element</th>
-            <th class="tgt-sub">Description</th>
             <th class="tgt-sub">Notes</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>personalIdentifier</td>
-            <td>Identifier of the related person.</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>identifier</td>
-            <td>Identifiers for the related person.</td>
             <td></td>
           </tr>
           <tr>
             <td>name</td>
-            <td>Name associated with the person.</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>name</td>
-            <td>Names of the related person.</td>
-            <td></td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdshumanname.html">EHDSHumanName Mapping</a> for detailed mapping information.</td>
           </tr>
           <tr>
             <td>subject</td>
-            <td>The patient in relation to whom the related person is defined.</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>patient</td>
-            <td>The patient to which this related person is related.</td>
-            <td>Reference to PatientEuCore.</td>
+            <td>Reference to <a href="https://hl7.eu/fhir/base/2.0.0/StructureDefinition-PatientEuCore.html">PatientEuCore</a>.</td>
           </tr>
           <tr>
             <td>relationship</td>
-            <td>Relationship between patient and related person.</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>relationship</td>
-            <td>Relationship role.</td>
-            <td>Preferred binding to HL7 RoleCode.</td>
-          </tr>
-          <tr>
-            <td>address</td>
-            <td>Mailing and home or office address.</td>
-            <td>equivalent</td>
-            <td>RelatedPerson</td>
-            <td>address</td>
-            <td>Addresses for the related person.</td>
             <td></td>
           </tr>
           <tr>
+            <td>address</td>
+            <td>equivalent</td>
+            <td>RelatedPerson</td>
+            <td>address</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsaddress.html">EHDSAddress Mapping</a> for detailed mapping information.</td>
+          </tr>
+          <tr>
             <td>telecom</td>
-            <td>Telecommunication contact information.</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>telecom</td>
-            <td>Contact points for the related person.</td>
-            <td></td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdstelecom.html">EHDSTelecom Mapping</a> for detailed mapping information.</td>
           </tr>
         </tbody>
       </table>

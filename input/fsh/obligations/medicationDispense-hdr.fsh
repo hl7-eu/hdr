@@ -8,18 +8,24 @@ Description: "This profile defines obligations for the MedicationDispense resour
 
 * insert SetFmmAndStatusRule ( 0, informative)
 
-* subject insert ObligationSet1
-* medication[x] insert ObligationSet2
+* insert OblShallPopulateShallProcess
+
+* subject only Reference(PatientEuObligations)
+* medication[x] only CodeableConcept or Reference(MedicationEuHdrObligation)
+* authorizingPrescription only Reference(MedicationRequestEuCoreObligation)
+
+* subject insert OblShallPopulateShallProcess
+* medication[x] insert OblShallPopulateShallDisplayProcess
 
 * identifier 
-* status insert ObligationSet2
+* status insert OblShallPopulateShallDisplayProcess
 
 
 * receiver 
-* performer.actor insert ObligationSet1
+* performer.actor insert OblShallPopulateShallProcess
 
-* authorizingPrescription insert ObligationSet2
-* quantity insert ObligationSet1
-* whenHandedOver insert ObligationSet2
+* authorizingPrescription insert OblShallPopulateShallDisplayProcess
+* quantity insert OblShallPopulateShallProcess
+* whenHandedOver insert OblShallPopulateShallDisplayProcess
 
 

@@ -7,18 +7,18 @@ Description: """This profile defines obligations for the AllergyIntolerance reso
 
 * insert SetFmmAndStatusRule ( 0, informative)
 
-* text insert ObligationSet1
+* text insert OblShallPopulateShallProcess
 /*
-* clinicalStatus insert ObligationSet2
-* verificationStatus insert ObligationSet2
+* clinicalStatus insert OblShallPopulateShallDisplayProcess
+* verificationStatus insert OblShallPopulateShallDisplayProcess
 */
-* type insert ObligationSet1
-* code insert ObligationSet1
+* type insert OblShallPopulateShallProcess
+* code insert OblShallPopulateShallProcess
 /*
 * criticality ^short = "Criticality"
 */
-* patient insert ObligationSet1
-* onsetDateTime insert ObligationSet2
+* patient insert OblShallPopulateShallProcess
+* onsetDateTime insert OblShallPopulateShallDisplayProcess
 /*
 * reaction
 * reaction.substance 

@@ -1,8 +1,8 @@
+### Dependencies
 
-{% lang-fragment  dependency-table.xhtml %}
+{% include dependency-table.xhtml %}
 
 
-#### Global Profiles
+### Global Profiles
 
-{% lang-fragment  globals-table.xhtml %}
-
+{% include globals-table.xhtml %}

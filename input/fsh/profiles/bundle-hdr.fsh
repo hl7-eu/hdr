@@ -37,7 +37,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
   * ^definition = "The base language of the individual resource. This element MAY be populated. If populated, it should match the main language of the Bundle declared in Bundle.language. For this comparison only the primary language subtag is considered, so regional variants of the same language (for example fr-BE and fr-FR) are considered matching, and the comparison is case-insensitive."
 * entry contains
     composition 1..1 and
-    patient 1..1 and
+    patient 1..* and
     encounter 1..* and
     allergyIntolerance 0..* and
     condition 0..* and
@@ -77,8 +77,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[immunization].resource only ImmunizationEuCore
 * entry[immunizationRecommendation].resource only ImmunizationRecommendation // EuHdr
 * entry[media].resource only Media // $Media-observation-uv-ips
-* entry[medication].resource only MedicationEuHdr
-* entry[medicationRequest].resource only MedicationRequestEuHdr
+* entry[medication].resource only MedicationEuCore
+* entry[medicationRequest].resource only MedicationRequestEuCore
 * entry[medicationStatement].resource only MedicationStatementEuCore
 * entry[medicationAdministration].resource only MedicationAdministrationEuHdr
 * entry[medicationDispense].resource only MedicationDispenseEuHdr

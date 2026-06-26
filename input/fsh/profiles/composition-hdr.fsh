@@ -28,15 +28,23 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
-* type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+// * type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * type ^short = "Kind of composition (\"Hospital Discharge Report\")"
 * type ^definition = "Specifies that this composition refer to a Hospital Discharge Report"
-* type = $loinc#34105-7 "Hospital Discharge summary"
+* type = $loinc#34105-7 // "Hospital Discharge summary"
+* type.coding.display 1..
 * subject only Reference(PatientEuCore)
 * subject 1..1
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the hdr the subject is always the patient."
 
+* category from DocCategoryHdrVS (extensible)
+  * ^example[0].label = "Document category"
+  * ^example[0].valueCoding.code = $loinc#LP72467-1
+  * ^example[0].valueCoding.display = "Discharge summary note"
 
+* event.period ^requirements = "header.period"
+
+* encounter 1..1 
 * encounter only Reference (EncounterEuHdr)
 
 * date ^short = "HDR date"
@@ -66,8 +74,28 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section.extension[section-note] ^definition = "Additional notes that apply to the section (but not to specific resource)."
 * section.title 1..1
 * section.code 1..1
-* section.code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+// * section.code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * section.text only Narrative
+
+// -------------------------------------
+// Alert 0 .. 1
+// -------------------------------------
+
+* section contains sectionAlert ..1
+* section[sectionAlert]
+  * insert SectionComRules (
+    Alert Section, 
+    Information about substantial alerts or warnings (including allergies\) that health professionals should be aware of., 
+      $loinc#104605-1 )   // CODE
+  * text ^requirements = "body.alerts.generatedNarrative"
+
+  * entry only Reference(Flag or DocumentReference)
+  * insert SectionEntrySliceComRules(EPS Alerts entry, EPS Alerts entry slice)
+  // entry slices
+  * insert SectionEntrySliceDefRules (flag, 0.. , 
+  Alert information , 
+  Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
+  FlagPatientEuCore)
 
 
 // -------------------------------------
@@ -81,24 +109,10 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
       Hospital Admission evaluation,
       $loinc#67851-6)   // "Admission evaluation note"
   * ^comment = "Admission evaluation should be reported only exceptionally, if it is relevant to ensure continuity of care."
+  * text ^requirements = "body.admissionEvaluation.generatedNarrative"
 
 
-// Anthropometric Observations is an indipendet section or is part of the Vital Signs ? 
-
-
-/* === Commented for the time being
-* section contains sectionAnthropometry 0..1
-* section[sectionAnthropometry]
-  * insert SectionComRules (
-    Anthropometric observations,
-    Anthropometric Observations sub-section,
-    TemporaryHDRSystem#anthropometry) // to be updated
-  * entry 0..
-  * entry only Reference(Observation or DocumentReference or $vitalsigns)
-
-*/
-
-
+// -------------------------------------
 * section contains sectionVitalSigns 0..1
 * section[sectionVitalSigns]
   * insert SectionComRules (
@@ -119,6 +133,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
       Physical findings,
       $loinc#29545-1)   // "Physical findings note"
 
+  * entry 0..
+  * entry only Reference(Observation or DocumentReference)
+
 // -------------------------------------
 // Functional status assessment  Section 0 .. 1
 // -------------------------------------
@@ -130,9 +147,22 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     The functional status section shall contain a narrative description of capability of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide.,
     $loinc#47420-5) // Functional status assessment note
 
-  * entry only Reference(Condition or ClinicalImpression or Observation or DocumentReference or QuestionnaireResponse)
+  * entry only Reference(ConditionEuCore or ClinicalImpression or Observation or DocumentReference or QuestionnaireResponse)
     * ^short = "Optional entry used to represent disabilities and functional assessments"
     * ^definition = "It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.\r\nProfiles to express disabilities and functional assessments will be specified by future versions of this guide."
+
+  
+  * insert SectionEntrySliceComRules(Disabilities and Functional assessments, Disabilities and Functional assessments)
+
+  * insert SectionEntrySliceDefRules (condition, 0..*, 
+    Functional status condition entry, 
+     Optional entry used to represent disabilities and other conditions that may influence the functional status of the patient. It describes capabilities of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties.,
+    ConditionEuCore)
+
+  * insert SectionEntrySliceDefRules (observation, 0..*, 
+    Functional status observation entry, 
+     Optional entry used to represent functional assessment of the patient.,
+    Observation)
 
 
 
@@ -147,6 +177,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     $loinc#8648-8 )   // "Hospital course note"
   * ^short = "Significant information about course of hospital stay"
   * ^definition = "This section includes basic information about hospital staty (encounter), diagnostic summary in narrative form, pharmacotherapy, major procedures, medical devices, significant findings during hospital stay and clinical synthesis."
+  * text ^requirements = "body.courseOfEncounter.generatedNarrative; body.courseOfEncounter.note"
   
  
 // -------------------------------------
@@ -160,10 +191,13 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * entry 0..*
   * entry only Reference( ConditionEuCore ) // check if this is too restrictive
 
+// ===================================
+// courseOfEncounter.procedures
+// ===================================
 // -------------------------------------
 * section contains sectionSignificantProcedures 0..1
 * section[sectionSignificantProcedures]
-  * insert SectionComRules (
+  * insert SectionComRules ( 
     Significant procedures,
     Significant surgical and non-surgical procedures performed during hospitalisation which are significant for continuity of care\, e.g. surgeries and other \"instrumental\"interventions (endoscopic\, intravascular\)\, chemotherapy\, radiotherapy\, purification methods (dialysis\, hemoperfusion\)\, circulation support methods (counterpulsation\, etc.\)\, administration of blood derivatives or others.\r\nThis section does not include purely diagnostic procedures (MRI\, CT\, etc.\). If no significant performance has been performed\, this fact must be explicitly stated using the IPS Absent and Unknown Data. ,
     $loinc#10185-7) // Hospital discharge procedures
@@ -175,20 +209,49 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 // -------------------------------------
 // Medical Devices Section 0 .. 1
+// patientHistory.devicesAndImplants
 // -------------------------------------
-// LOINC CODE TO BE CHANGED !
 
 * section contains sectionMedicalDevices 0..1
 * section[sectionMedicalDevices]
   * insert SectionComRules (
-    Medical devices and implants,
-    Implants and used medical devices that affected or may affect the provision of health services (diagnosis and treatment\). Also medical devices explanted\, or its use was stopped during hospitalisation. If the section is blank\, the reason must be explicitly stated using the IPS Absent and Unknown Data coding system. ,
-    $loinc#57080-4) // Implanted medical device (to be changed)
-    // $loinc#46264-8) // History of medical device use
-    // $sct#1184586001) //"Medical device document section (record artifact\)
+    Medical Devices Section, 
+    The medical devices section contains narrative text and coded entries describing the patient history of medical device use,
+    $loinc#46264-8) // History of medical device use
+
   * entry 0..
-  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore ) // DeviceUseStatementEuHdr ro be revised
+  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore or DocumentReference) // DeviceUseStatementEuHdr ro be revised
+
+  * insert SectionEntrySliceComRules(Medical Device entry, EPS Medical Devices entry slice)
+
+  * insert SectionEntrySliceDefRules (deviceStatement, 0..*, 
+    Patient history of medical device use, 
+    It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available\, or that no relevant medical device use is known. , 
+    DeviceUseStatementEuHdr)
+
+
   * section ..0
+
+
+// === EPS History of Procedures Section ===
+
+* section contains sectionProceduresHx 0..1
+* section[sectionProceduresHx]
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * ^short = "History of Procedures"
+  * ^definition = "The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document. Procedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy\r\n"
+  * code = $loinc#47519-4
+  
+  * entry only Reference(Procedure or DocumentReference)
+
+  * insert SectionEntrySliceComRules(Slice on procedure, Slice on procedure)
+  // entry slices
+  * entry contains procedure 0..*
+  * entry[procedure] 0..*
+  * entry[procedure] ^short = "Patient past procedures pertinent to the scope of this document."
+  * entry[procedure] ^definition = "It lists the patient past procedures that are pertinent to the scope of this document. Procedures may refer for example to:\r\n1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section)\r\n2. Therapeutic procedure: e.g. dialysis;\r\n3. Surgical procedure: e.g. appendectomy\r\n"
+  * entry[procedure] only Reference(ProcedureEuCore)
 
 
 // -------------------------------------
@@ -203,7 +266,30 @@ Medicinal products\, the administration of which was started during hospitalisat
 $loinc#87232-5 ) // 	Medication administration.brief
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
   * entry 0..
-  * entry only Reference(MedicationStatementEuCore or MedicationRequestEuHdr or MedicationDispenseEuHdr or MedicationAdministrationEuHdr)
+  * entry only Reference(MedicationStatementEuCore or MedicationRequestEuCore or MedicationDispenseEuHdr or MedicationAdministrationEuHdr)
+
+  * insert SectionEntrySliceComRules(Medication Use slice, Medication Use slice)
+  * insert SectionEntrySliceDefRules (medicationStatement, 0.. , 
+      Medication Use, 
+      Significant medication treatments during encounter., 
+      MedicationStatementEuCore)
+
+// -------------------------------------
+// Medical Devices and Implants Section 0 .. 1
+// courseOfEncounter.medicalDevicesAndImplants
+// -------------------------------------
+
+* section contains sectionImplantedDevices 0..1
+* section[sectionImplantedDevices]
+  * insert SectionComRules (
+    Medical devices and implants,
+    Implants and used medical devices that affected or may affect the provision of health services (diagnosis and treatment\). Also medical devices explanted\, or its use was stopped during hospitalisation. If the section is blank\, the reason must be explicitly stated using the IPS Absent and Unknown Data coding system. ,
+    $loinc#57080-4) // Implanted medical device (to be changed)
+    
+    // $sct#1184586001) //"Medical device document section (record artifact\)
+  * entry 0..
+  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore)
+
 
 // -------------------------------------
 * section contains sectionSignificantResults 0..1
@@ -211,14 +297,14 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules ( 
       Significant medical test results, 
       Significant medical test results of functional\, diagnostic (including laboratory\)\, and imaging examinations performed during encounter. This may include orders for which the results have not yet arrived., 
-      http://loinc.org#30954-2)
+      $loinc#30954-2)
   * entry only Reference(Observation or DiagnosticReport or DocumentReference)
   * insert SectionEntrySliceComRules(Significant medical test results, Significant medical test results slice)
   // Review the slice definiton
   * insert SectionEntrySliceDefRules (results-medicalTestResult, 0.. , 
       Medical test results, 
        Results collected on the patient or produced on in-vitro biologic specimens., 
-       MedicalTestResultEuCore)
+       MedicalTestResultEuCore)       
   * insert SectionEntrySliceDefRules (results-diagnosticReport, 0.. , 
       DiagnosticReport, 
        DiagnosticReport resource to represent diagnostic test and procedure reports in a patient summary,
@@ -250,20 +336,24 @@ $loinc#87232-5 ) // 	Medication administration.brief
     Plan of Care Section,
     The plan of care section contains a narrative description of the expectations for care including proposals\, goals\, and order requests for monitoring\, tracking\, or improving the condition of the patient.,
     $loinc#18776-5 )   // Plan of care note
+  * text ^requirements = "body.carePlan.generatedNarrative"
   * entry only Reference( CarePlanEuHdr or DocumentReference) // Check if CarePlanEuHdr is needed or if we should align with EPS
 
 
-  // -------------------------------------
+// -------------------------------------
 // Discharge instructions Section 0 .. 1
 // -------------------------------------
 
+/* REMOVED FROM THE MODEL
 * section contains sectionDischargeInstructions ..1
 
 * section[sectionDischargeInstructions]
   * insert SectionComRules (
     Hospital Discharge Instructions,
     Hospital Discharge Instructions,
-    $loinc#8653-8 )   //  Hospital Discharge instructions
+    $loinc#8653-8 )   //  Hospital Discharge instructions 
+    
+  */
 
 // -------------------------------------
 // Discharge Medications Section 0 .. 1
@@ -277,8 +367,9 @@ $loinc#87232-5 ) // 	Medication administration.brief
     Hospital discharge medications,
     Hospital discharge medications defines the medications that the patient is intended to take\, or stop\, after discharge, 
     $loinc#75311-1 )   //  Discharge medications Narrative OR 10183-2 "Hospital "Discharge medications note" or 	Discharge medications Narrative
+  * text ^requirements = "body.medicationSummary.generatedNarrative; body.medicationSummary.note"
   * entry 0..
-  * entry only Reference(MedicationRequestEuHdr or MedicationDispenseEuHdr or MedicationStatementEuCore)
+  * entry only Reference(MedicationRequestEuCore or MedicationDispenseEuHdr or MedicationStatementEuCore)
 
  
 
@@ -292,7 +383,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules ( 
      	Allergies and Intolerances Section, 
       This section documents the relevant allergies or intolerances for that patient\, describing the kind of reaction - e.g. rash\, anaphylaxis\,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum\, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available\, or if no allergies are known this should be clearly documented in the section., 
-      http://loinc.org#48765-2)
+      $loinc#48765-2)
 
   * entry only Reference(AllergyIntolerance or DocumentReference)  
   * insert SectionEntrySliceComRules(allergyOrIntolerance, allergyOrIntolerance)
@@ -302,25 +393,6 @@ $loinc#87232-5 ) // 	Medication administration.brief
   It lists the relevant allergies or intolerances for that patient\, describing the kind of reaction - e.g. rash\, anaphylaxis\,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum\, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available\, or if no allergies are known this should be clearly documented in the section., 
   AllergyIntoleranceEuCore)
 
-
-// -------------------------------------
-// Alert 0 .. 1
-// -------------------------------------
-
-* section contains sectionAlert ..1
-* section[sectionAlert]
-  * insert SectionComRules (
-    Alert Section, // SHORT
-    Information about substantial alerts or warnings (including allergies\) that health professionals should be aware of., 
-      http://loinc.org#104605-1 )   // CODE
-
-  * entry only Reference(Flag or DocumentReference)
-  * insert SectionEntrySliceComRules(EPS Alerts entry, EPS Alerts entry slice)
-  // entry slices
-  * insert SectionEntrySliceDefRules (flag, 0.. , 
-  Alert information , 
-  Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
-  FlagPatientEuCore)
 
 
 // -------------------------------------
@@ -335,7 +407,8 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules ( 
     Hx general Reported Section,
     This section may provide both synthetic anamnesis \,e.g. description of phases of the pathology as a chronological summary of clustered clinical information\, and anecdotal evidence that clinicians can collect from the patient\, and can read in a narrative form.,
-    http://loinc.org#11329-0 )
+    $loinc#11329-0 )
+  * text ^requirements = "body.patientHistory.generatedNarrative"
 
 
 
@@ -349,9 +422,9 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules ( 
       Problem List Section, 
       The Problem List Section lists and describes clinical problems or conditions currently being monitored for the patient., 
-      http://loinc.org#11450-4)
+      $loinc#11450-4)
   
-  * entry only Reference(Condition or DocumentReference)
+  * entry only Reference(ConditionEuCore or DocumentReference)
   * insert SectionEntrySliceComRules(Clinical problems or conditions currently being monitored for the patient., It lists and describes clinical problems or conditions currently being monitored for the patient. This entry shall be used to document that no information about problems is available\, or that no relevant problems are known.)
   // entry slices
   * insert SectionEntrySliceDefRules (problem, 0.. ,
@@ -369,7 +442,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules (
     Immunizations Section, 
   The Immunizations Section defines a patient's current immunization status and pertinent immunization history. The primary use case for the Immunization Section is to enable communication of a patient's immunization status. The section includes the current immunization status\, and may contain the entire immunization history that is relevant to the period of time being summarized.,
-  http://loinc.org#11369-6)
+  $loinc#11369-6)
 
   * entry only Reference(Immunization or DocumentReference)
  
@@ -391,6 +464,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
       Discharge details,
       The hospital discharge status or disposition of the patient having a hospitalization.,
       $loinc#8650-4 ) //"Hospital discharge disposition note"
+  * text ^requirements = "body.dischargeDetails.generatedNarrative; body.dischargeDetails.note"
  
 // -------------------------------------------------------------
 // Attachmnets section
@@ -431,7 +505,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
   * insert SectionComRules (
     Admission Medications,
       Admission Medications,
-      http://loinc.org#42346-7  )   // CODE
+      $loinc#42346-7  )   // CODE
   * entry 0..
   * entry only Reference(MedicationStatement
                           or MedicationRequest
@@ -453,7 +527,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 * section[sectionAdmissionMedications].title 1..
 * section[sectionAdmissionMedications].code 1..
 * section[sectionAdmissionMedications].code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-* section[sectionAdmissionMedications].code = http://loinc.org#42346-7 (exactly)
+* section[sectionAdmissionMedications].code = $loinc#42346-7 (exactly)
 * section[sectionAdmissionMedications].text 1..
 * section[sectionAdmissionMedications].entry
 * section[sectionAdmissionMedications].entry only Reference($MedicationStatement-uv-ips or $MedicationRequest-uv-ips or MedicationAdministration or MedicationDispense)
@@ -470,7 +544,7 @@ $loinc#87232-5 ) // 	Medication administration.brief
 * section[CCandReasonforVisitSection]
   * insert SectionComRules (Chief Complaint and Reason for Visit,
                           This section records the patient's chief complaint (the patientâ€™s own description\) and/or the reason for the patient's visit (the providerâ€™s description of the reason for visit\). Local policy determines whether the information is divided into two sections or recorded in one section serving both purposes.,
-                             http://loinc.org#46239-0  )
+                             $loinc#46239-0  )
 */
 
 
