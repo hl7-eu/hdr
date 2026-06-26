@@ -2,7 +2,7 @@
 ValueSet:     EncounterClassHdrVS
 Id:	          encounter-class-eu-hdr
 Title:	      "Encounter Class Value Set"
-Description:  """Hospital Discharge Report Encounter Class specifies a general class of inpatient encounter as being accute, nonaccute, emergency, short stay ... """
+Description:  """Hospital Discharge Report Encounter Class value set includes codes from the HL7 v3-ActCode code system that are used to classify the general type of inpatient encounter."""
 
 * insert SetFmmAndStatusRule (1, draft)
 * ^experimental = false
@@ -17,8 +17,8 @@ Description:  """Hospital Discharge Report Encounter Class specifies a general c
 // --------------------------------------------------
 ValueSet:   EncounterTypeHdrVS
 Id:         encounter-type-eu-hdr
-Title:      "In-patient Encounter Type Value Set"
-Description:  """Hospital Discharge Report Encounter Type allows to classify encounter using general type of care provision regimen during the inpatient encounter. Value set includes concepts from the SNOMED CT descendants of 225351009 (Care provision regime) but needs to be further dicsussed"""
+Title:      "Encounter Type Value Set"
+Description:  """Hospital Discharge Report Encounter Type value set includes concepts from SNOMED CT descendants of 225351009 (Care provision regime) that are used to classify the care provision regimen during the inpatient encounter."""
 
 * insert SetFmmAndStatusRule (1, draft)
 * ^experimental = false
@@ -28,8 +28,8 @@ Description:  """Hospital Discharge Report Encounter Type allows to classify enc
 // --------------------------------------------------
 ValueSet:     EncounterStatusHdrVS
 Id:	     encounter-status-eu-hdr
-Title:      "In-patient Encounter Status Value Set"
-Description:  """Hospital Discharge Report Encounter Type allows to classify encounter using general type of care provision regimen during the inpatient encounter. Value set includes concepts from the SNOMED CT descendants of 225351009 (Care provision regime) but needs to be further dicsussed"""
+Title:      "Encounter Status Value Set"
+Description:  """Hospital Discharge Report Encounter Status value set includes codes from the FHIR R4 EncounterStatus code system that are used to represent the state of the inpatient encounter."""
 
 * insert SetFmmAndStatusRule (1, draft)
 * ^experimental = false
