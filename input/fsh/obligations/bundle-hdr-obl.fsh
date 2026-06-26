@@ -8,8 +8,10 @@ Description: """This profile defines obligations for the Hospital Discharge Repo
 
 * identifier insert ObligationSet1
 * type insert ObligationSet1
+* language insert ObligationSet1
 * timestamp insert ObligationSet1
 * entry insert ObligationSet1
 * entry.fullUrl insert ObligationSet1
 * entry.resource insert ObligationSet1
+* entry.resource.language insert ObligationSet3
 
