@@ -24,3 +24,14 @@ However, the presence of entries in the HDR sections is generally recommended to
 This recommendation is expressed in this guide through **specific obligations**, which guide implementers toward achieving a higher level of data quality and interoperability.
 
 
+### Bundle and resource language
+
+`Bundle.language` **SHALL** be populated and represents the **main language** of the Bundle.
+
+Individual resources contained in `Bundle.entry.resource` **MAY** populate their own `language` element. If populated, the individual resource language **SHOULD** be consistent with the main language declared in `Bundle.language`.
+
+For this comparison, only the **primary language subtag** is considered. Regional variants of the same language are therefore considered matching. For example, `fr-BE`, `fr-FR`, and `fr-CA` are considered matching because they share the same primary language subtag, `fr`. The comparison is case-insensitive (for example, `en-US` and `EN-gb` are considered matching).
+
+This expectation is conveyed by the warning-severity invariant `bdl-language-main-match` on the [Bundle (HDR)](StructureDefinition-bundle-eu-hdr.html) profile.
+
+
