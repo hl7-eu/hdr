@@ -183,3 +183,15 @@ No definition could be found for URL value 'http://fhir.nl/fhir/NamingSystem/bsn
 No definition could be found for URL value 'urn:oid:2.16.840.1.113883.2.4.6.7'
 No definition could be found for URL value 'http://hl7europe.org/policy-rules'
 No definition could be found for URL value 'http://hl7europe.org/examples/pms'
+
+# multiple different potential versions matches
+TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS
+
+# CodeSystem version not pinned
+PIN_VERSION
+
+# Deprecated extensions not specified by this guide
+MSG_DEPENDS_ON_DEPRECATED_NOTE
+
+# Code not defined in the addional binding
+Terminology_TX_NoValid_3_CC
