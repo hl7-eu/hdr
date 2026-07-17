@@ -78,7 +78,6 @@ Usage: #inline
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code.coding[0] = $loinc#85354-9 "Blood pressure panel with all children optional"
-* code.coding[+] = $loinc#55284-4 "Blood pressure systolic and diastolic"
 * code.coding[+] = $sct#46973005 "Blood pressure taking"
 * subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08

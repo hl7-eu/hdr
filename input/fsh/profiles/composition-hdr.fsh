@@ -39,8 +39,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 * category from DocCategoryHdrVS (extensible)
   * ^example[0].label = "Document category"
-  * ^example[0].valueCoding.code = $loinc#LP72467-1
-  * ^example[0].valueCoding.display = "Discharge summary note"
+  * ^example[0].valueCoding = $loinc#LP72467-1 "Discharge summary note"
 
 * event.period ^requirements = "header.period"
 
