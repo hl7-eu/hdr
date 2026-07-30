@@ -427,8 +427,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section contains sectionAttachments 0..1
 * section[sectionAttachments]
   * insert SectionComRulesWithTitle (
-    Library of attachments,
     Attachments,
+    Library of attachments,
     Documents and attachments associated with this report\, listed as a library of source material referenced from the report\, for example scanned source documents\, images\, or reports in PDF form.,
     $loinc#77599-9 )
   * entry only Reference(DocumentReference or Binary) // Add Bundle ?
