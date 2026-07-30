@@ -1,24 +1,24 @@
-Profile: AllergyIntoleranceEuHdrObligation
-Parent: AllergyIntoleranceEuHdr
+Profile: AllergyIntoleranceEuCoreObligation
+Parent: AllergyIntoleranceEuCore
 Id: allergyIntolerance-obl-eu-hdr
-Title:    "Allergy Intolerance: Obligations"
+Title:    "Allergy Intolerance: obligations"
 Description: """This profile defines obligations for the AllergyIntolerance resource for the purpose of this project."""
 * ^purpose = "This profile constrains the AllergyIntolerance resource for the purpose of project."
 
-* insert SetFmmandStatusRule ( 0, informative)
+* insert SetFmmAndStatusRule ( 0, informative)
 
-* text insert ObligationSet1
+* text insert OblShallPopulateShallProcess
 /*
-* clinicalStatus insert ObligationSet2
-* verificationStatus insert ObligationSet2
+* clinicalStatus insert OblShallPopulateShallDisplayProcess
+* verificationStatus insert OblShallPopulateShallDisplayProcess
 */
-* type insert ObligationSet1
-* code insert ObligationSet1
+* type insert OblShallPopulateShallProcess
+* code insert OblShallPopulateShallProcess
 /*
 * criticality ^short = "Criticality"
 */
-* patient insert ObligationSet1
-* onsetDateTime insert ObligationSet2
+* patient insert OblShallPopulateShallProcess
+* onsetDateTime insert OblShallPopulateShallDisplayProcess
 /*
 * reaction
 * reaction.substance 

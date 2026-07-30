@@ -29,7 +29,11 @@ Usage: #example
 * address.line.extension[=].valueString = "Knolweg"
 * address.line.extension[+].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
 * address.line.extension[=].valueString = "1000"
+<<<<<<< HEAD
 * address.city = "Stitswerd"
+=======
+* address.city = "STITSWERD"
+>>>>>>> origin/master
 * address.postalCode = "9999XA"
 * address.country = "NL"
 * multipleBirthBoolean = false
@@ -54,14 +58,22 @@ Usage: #example
 * address.line.extension[=].valueString = "Dr. Molewaterplein"
 * address.line.extension[+].url = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber"
 * address.line.extension[=].valueString = "60"
+<<<<<<< HEAD
 * address.city = "Rotterdam"
+=======
+* address.city = "ROTTERDAM"
+>>>>>>> origin/master
 * address.postalCode = "3015GJ"
 * address.country = "NL"
 
 Instance: gewicht-swart
 InstanceOf: $vitalsigns
 Title: "Observation: Body weight"
+<<<<<<< HEAD
 Description: "Vital Signs observation representng the Body weight of the patient."
+=======
+Description: "Vital signs observation representing the body weight of the patient."
+>>>>>>> origin/master
 Usage: #example
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
@@ -72,12 +84,20 @@ Usage: #example
 
 Instance: bloeddruk-swart
 InstanceOf: $vitalsigns
+<<<<<<< HEAD
 Title: "Blood pressure"
+=======
+Title: "Observation: Blood Pressure"
+Description: "Vital signs observation representing the patient's blood pressure."
+>>>>>>> origin/master
 Usage: #inline
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code.coding[0] = $loinc#85354-9 "Blood pressure panel with all children optional"
+<<<<<<< HEAD
 * code.coding[+] = $loinc#55284-4 "Blood pressure systolic and diastolic"
+=======
+>>>>>>> origin/master
 * code.coding[+] = $sct#46973005 "Blood pressure taking"
 * subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
@@ -88,7 +108,12 @@ Usage: #inline
 
 Instance: levenvoelen-swart
 InstanceOf: Observation
+<<<<<<< HEAD
 Title: "Observation: Fetal movement"
+=======
+Title: "Observation: Fetal Movement"
+Description: "Observation representing the presence of fetal movements."
+>>>>>>> origin/master
 Usage: #inline
 * identifier.system = "urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6"
 * identifier.value = "38e436bf-6b35-11ec-2213-020000000000"
@@ -99,8 +124,14 @@ Usage: #inline
 * valueCodeableConcept = $sct#289431008 "Fetal movements present"
 
 Instance: condition-meerling
+<<<<<<< HEAD
 InstanceOf: ConditionEuHdr
 Title: "Observation: Twin pregnancy"
+=======
+InstanceOf: ConditionEuCore
+Title: "Condition: Twin Pregnancy"
+Description: "Condition representing a monochorionic diamniotic twin pregnancy."
+>>>>>>> origin/master
 Usage: #inline
 * clinicalStatus = $condition-clinical#resolved
 * code = $sct#459168005 "Monochorionic diamniotic twin pregnancy"
@@ -109,7 +140,12 @@ Usage: #inline
 
 Instance: condition-growth
 InstanceOf: Condition
+<<<<<<< HEAD
 Title: "Condition: Fetal growth restriction"
+=======
+Title: "Condition: Fetal Growth Restriction"
+Description: "Condition representing fetal growth restriction."
+>>>>>>> origin/master
 Usage: #inline
 * clinicalStatus = $condition-clinical#resolved
 * code = $sct#22033007 "Fetal growth restriction"
@@ -132,7 +168,12 @@ Usage: #inline
 
 Instance: alcohol-swart
 InstanceOf: Observation
+<<<<<<< HEAD
 Title: "Alcohol consumption"
+=======
+Title: "Observation: Alcohol Consumption"
+Description: "Observation representing the patient's alcohol consumption status."
+>>>>>>> origin/master
 Usage: #inline
 * status = #final
 * code = $sct#228273003 "Alcohol drinking behaviour" 
@@ -142,7 +183,12 @@ Usage: #inline
 
 Instance: tobacco-swart
 InstanceOf: Observation
+<<<<<<< HEAD
 Title: "Tobacco smoking"
+=======
+Title: "Observation: Tobacco Smoking"
+Description: "Observation representing the patient's tobacco smoking status."
+>>>>>>> origin/master
 Usage: #inline
 * status = #final
 * code = $sct#365980008 "Finding of tobacco use and exposure (finding)"
@@ -155,8 +201,13 @@ Usage: #inline
 * component[=].valueQuantity = 6 '{keer per dag inhaleren}' "keer per dag inhaleren"
 
 Instance: sectio-swart
+<<<<<<< HEAD
 InstanceOf: ProcedureEuHdr
 Title: "Procedure: Sectio caesarea"
+=======
+InstanceOf: ProcedureEuCore
+Title: "Procedure: Cesarean Section"
+>>>>>>> origin/master
 Description: "A planned cesarean section procedure."
 Usage: #example
 * status = #completed
@@ -188,52 +239,90 @@ Usage: #example
 // * valueQuantity = 9 $ucum#k[arb'U]/L "k[arb'U]/L"
 
 Instance: lab-swart-3
+<<<<<<< HEAD
 InstanceOf: ObservationResultsLaboratoryEu
+=======
+InstanceOf: MedicalTestResultEuCore
+>>>>>>> origin/master
 Title: "Observation: ABO group"
 Description: "ABO blood group type in blood."
 Usage: #example
 * status = #final
 * code = $loinc#883-9 "ABO group [Type] in Blood"
+<<<<<<< HEAD
 * category[laboratory] = $observation-category#laboratory "Laboratory"
+=======
+* category[+] = $observation-category#laboratory "Laboratory"
+>>>>>>> origin/master
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * performer = Reference(http://example.org/Organization/organization-sophia)
 * valueCodeableConcept = $sct#58460004 "Blood group O"
 
 Instance: lab-swart-4
+<<<<<<< HEAD
 InstanceOf: ObservationResultsLaboratoryEu
 Title: "Rh D factor"
+=======
+InstanceOf: MedicalTestResultEuCore
+Title: "Observation: Rh D Factor"
+Description: "Laboratory observation representing Rh D factor in blood."
+>>>>>>> origin/master
 Usage: #inline
 * id = "a7c687cd-27dd-4b42-88c2-5e32418847ae"
 * status = #final
 * code = $loinc#1305-2 "D Ag [Presence] in Blood"
+<<<<<<< HEAD
 * category[laboratory] = $observation-category#laboratory "Laboratory"
+=======
+* category[+] = $observation-category#laboratory "Laboratory"
+>>>>>>> origin/master
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * performer = Reference(http://example.org/Organization/organization-sophia)
 * valueCodeableConcept = $sct#165747007 "RhD positive"
 
 Instance: lab-swart-5
+<<<<<<< HEAD
 InstanceOf: ObservationResultsLaboratoryEu
 Title: "Hemoglobine"
+=======
+InstanceOf: MedicalTestResultEuCore
+Title: "Observation: Hemoglobin"
+Description: "Laboratory observation representing hemoglobin in venous blood."
+>>>>>>> origin/master
 Usage: #inline
 * id = "5863804b-b0aa-4292-8bc2-13a769ad50d7"
 * status = #final
 * code = $loinc#93846-4 "Hemoglobin [Moles/volume] in Venous blood"
+<<<<<<< HEAD
 * category[laboratory] = $observation-category#laboratory "Laboratory"
+=======
+* category[+] = $observation-category#laboratory "Laboratory"
+>>>>>>> origin/master
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * performer = Reference(http://example.org/Organization/organization-sophia)
 * valueQuantity = 7.3 $ucum#mmol/L "mmol/L"
 
 Instance: lab-swart-6
+<<<<<<< HEAD
 InstanceOf: ObservationResultsLaboratoryEu
 Title: "HIV 1 As [aanwezigheid] in serum of plasma d.m.v. immunoassay"
+=======
+InstanceOf: MedicalTestResultEuCore
+Title: "Observation: HIV 1 Antibody"
+Description: "Laboratory observation representing HIV 1 antibody presence in serum or plasma by immunoassay."
+>>>>>>> origin/master
 Usage: #inline
 * id = "2640f290-85c4-426f-b912-4b5051f4f35a"
 * status = #final
 * code = $loinc#29893-5 "HIV 1 Ab [Presence] in Serum or Plasma by Immunoassay"
+<<<<<<< HEAD
 * category[laboratory] = $observation-category#laboratory "Laboratory"
+=======
+* category[+] = $observation-category#laboratory "Laboratory"
+>>>>>>> origin/master
 * subject = Reference(http://example.org/Patient/patient-swart) "Fiona F XXX_Swart"
 * effectiveDateTime = 2025-02-08
 * performer = Reference(http://example.org/Organization/organization-sophia)
@@ -241,6 +330,11 @@ Usage: #inline
 
 Instance: composition-swart
 InstanceOf: CompositionEuHdr
+<<<<<<< HEAD
+=======
+Title: "Composition: HDR Fiona Swart"
+Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Fiona Swart."
+>>>>>>> origin/master
 Usage: #inline
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
@@ -254,6 +348,7 @@ Usage: #inline
 * section[sectionAdmissionEvaluation].title = "Admission evaluation"
 * section[sectionAdmissionEvaluation].code = $loinc#67851-6 "Admission evaluation note"
 * section[sectionAdmissionEvaluation].text.status = #generated
+<<<<<<< HEAD
 * section[sectionAdmissionEvaluation].text.div = """
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
    Patient Fiona Swart was admitted to the hospital for a planned cesarean section.
@@ -264,6 +359,13 @@ Usage: #inline
 * section[sectionAdmissionEvaluation].section[=].text.status = #generated
 * section[sectionAdmissionEvaluation].section[=].text.div = """
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
+=======
+* section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Fiona Swart was admitted to the hospital for a planned cesarean section.</div>"
+* section[sectionAdmissionEvaluation].section[0].title = "Vital signs note"
+* section[sectionAdmissionEvaluation].section[=].code = $loinc#8716-3 "Vital signs note"
+* section[sectionAdmissionEvaluation].section[=].text.status = #generated
+* section[sectionAdmissionEvaluation].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+>>>>>>> origin/master
    <table>
       <tr>
          <td>Body weight</td>
@@ -286,14 +388,19 @@ Usage: #inline
          <td>Fetal movements present</td>
       </tr>
    </table>
+<<<<<<< HEAD
 </div>
 """
+=======
+</div>"
+>>>>>>> origin/master
 
 * section[sectionAdmissionEvaluation].section[=].entry[0] = Reference(gewicht-swart) "63 kg"
 * section[sectionAdmissionEvaluation].section[=].entry[+] = Reference(bloeddruk-swart) "70/120 mmHg"
 * section[sectionAdmissionEvaluation].section[=].entry[+] = Reference(levenvoelen-swart) "foetale bewegingen aanwezig"
 
 // section 1
+<<<<<<< HEAD
 * section[sectionPatientHx].title = "35090-0"
 * section[sectionPatientHx].code = $loinc#35090-0 "Patient History"
 * section[sectionPatientHx].section[+].title = "Social history"
@@ -301,6 +408,14 @@ Usage: #inline
 * section[sectionPatientHx].section[=].text.status = #generated
 * section[sectionPatientHx].section[=].text.div = """
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
+=======
+* section[sectionPatientHx].title = "Hx general Reported"
+* section[sectionPatientHx].code = $loinc#11329-0 "Hx general Reported"
+* section[sectionPatientHx].section[+].title = "Social history"
+* section[sectionPatientHx].section[=].code = $loinc#29762-2 "Social history note"
+* section[sectionPatientHx].section[=].text.status = #generated
+* section[sectionPatientHx].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+>>>>>>> origin/master
    <table>
       <tr>
          <td>Alcohol drinking behaviour</td>
@@ -319,23 +434,34 @@ Usage: #inline
          <td>6 keer per dag inhaleren</td>
       </tr>
    </table>
+<<<<<<< HEAD
 </div>
 """
+=======
+</div>"
+>>>>>>> origin/master
 * section[sectionPatientHx].section[=].entry[0] = Reference(alcohol-swart) "does not drink alcohol"
 * section[sectionPatientHx].section[=].entry[+] = Reference(tobacco-swart) "smokes occasionally cigarettes"
 
 
 * section[sectionPatientHx].section[+].title = "Significant procedures"
+<<<<<<< HEAD
 * section[sectionPatientHx].section[=].code = $loinc#10185-7 "Hospital discharge procedures Narrative"
 * section[sectionPatientHx].section[=].text.status = #generated
 * section[sectionPatientHx].section[=].text.div = """
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
+=======
+* section[sectionPatientHx].section[=].code = $loinc#10185-7 "Hospital discharge procedure note"
+* section[sectionPatientHx].section[=].text.status = #generated
+* section[sectionPatientHx].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+>>>>>>> origin/master
    <table>
       <tr>
          <td>Obstetric procedure</td>
          <td>Cesarean section</td>
       </tr>
    </table>
+<<<<<<< HEAD
 </div>
 """
 * section[sectionPatientHx].section[=].entry[0] = Reference(sectio-swart) "planned primary sectio caesarea"
@@ -346,6 +472,16 @@ Usage: #inline
 * section[sectionProblemList].text.status = #generated
 * section[sectionProblemList].text.div = """
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
+=======
+   </div>"
+* section[sectionPatientHx].section[=].entry[0] = Reference(sectio-swart) "planned primary sectio caesarea"
+
+// section 2
+* section[sectionProblems].title = "Problem List"
+* section[sectionProblems].code = $loinc#11450-4 "Problem list - Reported"
+* section[sectionProblems].text.status = #generated
+* section[sectionProblems].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+>>>>>>> origin/master
    <table>
       <tr>
          <td>Monochorionic diamniotic twin pregnancy</td>
@@ -356,6 +492,7 @@ Usage: #inline
          <td>resolved</td>
       </tr>
    </table>
+<<<<<<< HEAD
 </div>
 """
 * section[sectionProblemList].entry[0] = Reference(condition-meerling)
@@ -372,15 +509,34 @@ Usage: #inline
   with standard analgesia. Vital signs remained stable throughout the stay, and there were no
   signs of infection or other complications. The patient was mobilized on postoperative day
   one and tolerated oral intake well. Mother and newborn received routine postnatal care.
+=======
+</div>"
+* section[sectionProblems].entry[0] = Reference(condition-meerling)
+* section[sectionProblems].entry[+] = Reference(http://example.org/Condition/condition-growth)
+
+// section 3
+* section[sectionHospitalCourse].title = "Hospital course note"
+* section[sectionHospitalCourse].code = $loinc#8648-8 "Hospital course note"
+* section[sectionHospitalCourse].text.status = #generated
+* section[sectionHospitalCourse].text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml">
+  The scheduled cesarean section procedure was performed on the day of admission without complications. Intraoperative and postoperative courses were uneventful. Postoperative pain was managed effectively with standard analgesia. Vital signs remained stable throughout the stay, and there were no signs of infection or other complications. The patient was mobilized on postoperative day one and tolerated oral intake well. Mother and newborn received routine postnatal care.
+>>>>>>> origin/master
 </div>
 """
 
 // section 4
 * section[sectionSignificantResults].title = "Results"
+<<<<<<< HEAD
 * section[sectionSignificantResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
 * section[sectionSignificantResults].text.status = #generated
 * section[sectionSignificantResults].text.div = """
 <div xmlns=\"http://www.w3.org/1999/xhtml\">
+=======
+* section[sectionSignificantResults].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
+* section[sectionSignificantResults].text.status = #generated
+* section[sectionSignificantResults].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
+>>>>>>> origin/master
    <table>
       <tr>
          <td>ABO group [Type] in Blood</td>
@@ -399,6 +555,7 @@ Usage: #inline
          <td>HIV not detected</td>
       </tr>
    </table>
+<<<<<<< HEAD
 </div>
 """
 // * section[=].entry[0] = Reference(lab-swart-1)  "HBsAg"
@@ -422,6 +579,26 @@ Instance: bundle-swart
 InstanceOf: BundleEuHdr
 Title: "Bundle: complete HL7 Europe Hospital Discharge Report (4)"
 Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Fiona Swart"
+=======
+</div>"
+// * section[=].entry[0] = Reference(lab-swart-1)  "HBsAg"
+// * section[=].entry[+] = Reference(lab-swart-2)  "Toxoplasma IgG"
+* section[sectionSignificantResults].entry[results-medicalTestResult][0] = Reference(lab-swart-3)  "ABO group"
+* section[sectionSignificantResults].entry[results-medicalTestResult][+] = Reference(urn:uuid:a7c687cd-27dd-4b42-88c2-5e32418847ae)  "Rh D factor"
+* section[sectionSignificantResults].entry[results-medicalTestResult][+] = Reference(urn:uuid:5863804b-b0aa-4292-8bc2-13a769ad50d7)  "hemoglobin"
+* section[sectionSignificantResults].entry[results-medicalTestResult][+] = Reference(urn:uuid:2640f290-85c4-426f-b912-4b5051f4f35a)  "HIV 1 As"
+
+
+* section[sectionDischargeDetails].title = "Discharge details"
+* section[sectionDischargeDetails].code = $loinc#8650-4 "Hospital discharge disposition note"
+* section[sectionDischargeDetails].text.status = #generated
+* section[sectionDischargeDetails].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Fiona Swart was discharged after cesarean section with healthy twin.</div>"
+
+Instance: bundle-swart
+InstanceOf: BundleEuHdr
+Title: "Bundle: HL7 Europe Hospital Discharge Report (4)"
+Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Fiona Swart."
+>>>>>>> origin/master
 Usage: #example
 * identifier.system = "urn:ietf:rfc:4122"
 * identifier.value = "3e594fe5-3ed5-4305-a214-99c87e1f3bfa"
@@ -466,4 +643,8 @@ Usage: #example
 * entry[patient][+].fullUrl = "http://example.org/Patient/patient-swart"
 * entry[patient][=].resource = patient-swart
 * entry[procedure][+].fullUrl = "http://example.org/Procedure/sectio-swart"
+<<<<<<< HEAD
 * entry[procedure][=].resource = sectio-swart
+=======
+* entry[procedure][=].resource = sectio-swart
+>>>>>>> origin/master

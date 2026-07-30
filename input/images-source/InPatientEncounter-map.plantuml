@@ -16,8 +16,11 @@ class "InPatientEncounter" <<LogicalModel>> [[StructureDefinition-InPatientEncou
 note top #PaleTurquoise [[ConceptMap-encounter2FHIR-eu-hdr.html]]
 Concept Map
 endnote
+class "location-eu" <<Profile>> [[StructureDefinition-location-eu.html]]
+"InPatientEncounter" <|. "location-eu"
 class "organization-eu" <<Profile>> [[StructureDefinition-organization-eu.html]]
 "InPatientEncounter" <|. "organization-eu"
+"location-eu" -d[hidden]-> "organization-eu"
 class "practitioner-eu-core" <<Profile>> [[StructureDefinition-practitioner-eu-core.html]]
 "InPatientEncounter" <|. "practitioner-eu-core"
 "organization-eu" -d[hidden]-> "practitioner-eu-core"
@@ -27,7 +30,4 @@ class "practitionerRole-eu-core" <<Profile>> [[StructureDefinition-practitionerR
 class "encounter-eu-hdr" <<Profile>> [[StructureDefinition-encounter-eu-hdr.html]]
 "InPatientEncounter" <|. "encounter-eu-hdr"
 "practitionerRole-eu-core" -d[hidden]-> "encounter-eu-hdr"
-class "location-eu-hdr" <<Profile>> [[StructureDefinition-location-eu-hdr.html]]
-"InPatientEncounter" <|. "location-eu-hdr"
-"encounter-eu-hdr" -d[hidden]-> "location-eu-hdr"
 @enduml

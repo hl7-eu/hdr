@@ -6,9 +6,11 @@ Title:    "MedicationDispense (HDR)"
 Description: "This profile constrains the MedicationDispense resource for the purpose of this guide, adapted from the MPD work."
 //-------------------------------------------------------------------------------------------
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 
-* medicationReference only Reference(MedicationEuHdr)
+* medication[x] only CodeableConcept or Reference(MedicationEuCore)
+
+// * medicationReference only Reference(MedicationEuCore)
 
 
 * identifier 
@@ -20,7 +22,7 @@ Description: "This profile constrains the MedicationDispense resource for the pu
 * receiver // MS // receiver
 * performer.actor 1..1
 
-* authorizingPrescription only Reference(MedicationRequestEuHdr)
+* authorizingPrescription only Reference(MedicationRequestEuCore)
 * quantity 1..1 // MS // dispensedQuantity 1
 * whenHandedOver 1..1 // MS // timeOfDispensation 1
 

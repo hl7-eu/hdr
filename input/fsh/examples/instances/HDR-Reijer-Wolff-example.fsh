@@ -1,13 +1,13 @@
 Instance: HDR-Reijer-Wolff-Example
 InstanceOf: BundleEuHdr
-Title: "Complete HL7 Europe Hospital Discharge Report Bundle"
-Description: "FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff"
+Title: "Bundle: HL7 Europe Hospital Discharge Report (2)"
+Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff."
 Usage: #example
 
 * type = #document
 
 * identifier[+].type = $v2-0203#PRN
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "http://example.org/eu/identifier"
 * identifier[=].value = "8fd082b6-5d99-42de-988f-955a8ebac0cb"
 
 * timestamp = "2025-04-29T14:00:00+01:00"
@@ -44,7 +44,8 @@ Usage: #example
 
 Instance: composition-hdr-wolff-example
 InstanceOf: CompositionEuHdr
-Title: "HDR Composition"
+Title: "Composition: HDR Reijer Wolff"
+Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff."
 Usage: #inline
 * id = "bd69ab8e-3835-4fb6-be83-1852a2893a65"
 * status = #final
@@ -80,7 +81,7 @@ Usage: #inline
 // section
 //
 * section[sectionSignificantProcedures].title = "Procedures"
-* section[=].code = $loinc#10185-7 "Hospital discharge procedures Narrative"
+* section[=].code = $loinc#10185-7 "Hospital discharge procedure note"
 // * section[1].code[+] = $loinc#29554-3 "Surgical operation note"
 * section[=].text.status = #generated
 * section[=].text.div = """
@@ -128,8 +129,8 @@ Usage: #inline
 // 
 // section
 //
-* section[sectionHospitalCourse].title = "Hospital Course"
-* section[=].code = $loinc#8648-8 "Hospital Course"
+* section[sectionHospitalCourse].title = "Hospital course note"
+* section[=].code = $loinc#8648-8 "Hospital course note"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -140,7 +141,7 @@ Usage: #inline
 // 
 // section
 //
-* section[sectionDischargeInstructions].title = "Discharge and Follow-up"
+* section[+].title = "Discharge and Follow-up"
 * section[=].code = $loinc#8653-8 "Hospital Discharge instructions"
 * section[=].text.status = #generated
 * section[=].text.div = """
@@ -151,14 +152,16 @@ Usage: #inline
 """
 
 Instance: patient-wolff-example
-InstanceOf: Patient
+InstanceOf: PatientEuCore
 Usage: #inline
 * id = "a1438872-05b1-4868-857d-521c9d586a7e"
-* identifier[+].type = $v2-0203#JHN
-* identifier[=].system = "http://ec.europa.eu/identifier/eci"
+
+* identifier[+].type = $v2-0203#NI
+* identifier[=].system = "https://hl7europe.org/example-identifier"
 * identifier[=].value = "6077-888840-8"
 * identifier[+].type = $v2-0203#MR
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "https://hl7europe.org/example-identifier"
+
 * identifier[=].value = "395922e4-846a-4c18-81e8-9121c77e7bf9"
 * name[+].family = "Wolff"
 * name[=].given[+] = "Reijer"
@@ -176,7 +179,7 @@ Usage: #inline
 
 
 Instance: practitionerrole-wolff-author
-InstanceOf: PractitionerRole
+InstanceOf: PractitionerRoleEuCore
 Usage: #inline
 * id = "cc0ae2a0-980d-4a2b-a4fb-9c71ecc70a15"
 * practitioner = Reference(urn:uuid:b60f89db-36c7-4a23-ab59-ace7089d2387)
@@ -203,9 +206,11 @@ Usage: #inline
 
 Instance: encounter-wolff-example
 InstanceOf: EncounterEuHdr
-Usage: #inline
+Title: "Encounter: Hospital Admission and Discharge"
+Description: "A sample Encounter resource for a hospital admission and discharge."
+Usage: #example
 * id = "12fef60c-1fe7-4988-8286-af691889a3f3"
-* status = #finished
+* status = $encounter-status#finished
 * class = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP
 * period.start = "2025-04-20T10:00:00+01:00"
 * period.end = "2025-04-29T11:00:00+01:00"
@@ -214,7 +219,9 @@ Usage: #inline
 * reasonReference = Reference(urn:uuid:38d0593b-7949-489e-9306-95df81a109df)
 
 Instance: fracture-left-leg
-InstanceOf: ConditionEuHdr
+InstanceOf: ConditionEuCore
+Title: "Condition: Left Lower Leg Fracture"
+Description: "Condition representing a fracture of the tibia and fibula of the left leg."
 Usage: #inline
 * id = "38d0593b-7949-489e-9306-95df81a109df"
 * clinicalStatus = $condition-clinical#active
@@ -224,7 +231,9 @@ Usage: #inline
 * onsetDateTime = "2025-04-20"
 
 Instance: external-fixator
-InstanceOf: ProcedureEuHdr
+InstanceOf: ProcedureEuCore
+Title: "Procedure: External Fixator Application"
+Description: "Procedure representing the application of an external fixator to the left lower limb."
 Usage: #inline
 * id = "1493fed2-e9ed-4dc1-b107-f077cb1d0d40"
 * status = #completed
@@ -235,7 +244,9 @@ Usage: #inline
 
 Instance: paracetamol
 InstanceOf: MedicationAdministrationEuHdr
-Usage: #inline
+Title: "MedicationAdministration: Paracetamol"
+Description: "A sample MedicationAdministration resource for Paracetamol."
+Usage: #example
 * id = "1bcfb26f-6958-4604-a40b-712170c1e536"
 * status = #completed
 * medicationCodeableConcept = $sct#387517004 "Paracetamol (substance)"
@@ -244,6 +255,8 @@ Usage: #inline
 
 Instance: cefazolin
 InstanceOf: MedicationAdministrationEuHdr
+Title: "MedicationAdministration: Cefazolin"
+Description: "A sample MedicationAdministration resource for Cefazolin."
 Usage: #inline
 * id = "4578e7cd-0d00-4221-9a7f-3e3d6e14a21b"
 * status = #completed

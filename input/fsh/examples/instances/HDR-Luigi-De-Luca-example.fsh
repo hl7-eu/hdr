@@ -1,16 +1,16 @@
 Instance: HDR-Luigi-De-Luca-Example
 InstanceOf: BundleEuHdr
-Title: "Complete HL7 Europe Hospital Discharge Report Bundle"
-Description: "FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca"
+Title: "Bundle: HL7 Europe Hospital Discharge Report (1)"
+Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca."
 Usage: #example
 
 * type = #document
 
 * identifier[+].type = $v2-0203#PRN
-* identifier[=].system = "http://local.setting.eu/identifier"
-* identifier[=].value = "f3022407-11df-4964-9458-221b2f5c6954"
+* identifier[=].system = "https://hl7europe.org/example-identifier"
+* identifier[=].value = "b6b4291d-4f78-4c5e-a8e6-c4355c1cc4f5" // Persistent identifier for the bundle
+* timestamp = "2025-04-29T14:00:00Z"
 
-* timestamp = "2025-04-11T14:00:00Z"
 
 * entry[composition].fullUrl = "urn:uuid:b9dc409d-ec81-4556-9fac-4dc3f731c199"
 * entry[composition].resource = composition-hdr-luca-example
@@ -33,14 +33,14 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:a5bf69e4-24db-48a8-9eda-71516dcaf1d9"
 * entry[=].resource = diabetis-condition-luca
 
-* entry[+].fullUrl = "urn:uuid:b84038f8-9541-4c5b-93b0-a7f1b8e55bd3"
-* entry[=].resource = careplan-luca
+* entry[careplan].fullUrl = "urn:uuid:b84038f8-9541-4c5b-93b0-a7f1b8e55bd3"
+* entry[careplan].resource = careplan-luca
 
-* entry[+].fullUrl = "urn:uuid:92ffc1fd-71ff-4d54-bc06-25d9e1e1fea0"
-* entry[=].resource = lifestyle-consultation-luca
+* entry[procedure][+].fullUrl = "urn:uuid:92ffc1fd-71ff-4d54-bc06-25d9e1e1fea0"
+* entry[procedure][=].resource = lifestyle-consultation-luca
 
-* entry[+].fullUrl = "urn:uuid:a74a3dca-92fa-4b71-8e70-89a07ac74bc3"
-* entry[=].resource = diabetes-education-luca
+* entry[procedure][+].fullUrl = "urn:uuid:a74a3dca-92fa-4b71-8e70-89a07ac74bc3"
+* entry[procedure][=].resource = diabetes-education-luca
 
 * entry[+].fullUrl = "urn:uuid:53a8c3c3-5d1b-4950-87bc-fddae2ebc079"
 * entry[=].resource = metformin-therapy-luca
@@ -77,11 +77,13 @@ Instance: patient-luca-example
 InstanceOf: Patient
 Usage: #inline
 * id = "b01a2623-e219-41d2-8e78-1fa1439751d0"
-* identifier[+].type = $v2-0203#JHN
-* identifier[=].system = "http://ec.europa.eu/identifier/eci"
+
+* identifier[+].type = $v2-0203#NI
+* identifier[=].system = "https://hl7europe.org/example-identifier"
 * identifier[=].value = "3332-386800-1"
 * identifier[+].type = $v2-0203#MR
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "https://hl7europe.org/example-identifier"
+
 * identifier[=].value = "8121c77e7bf9"
 * name[+].family = "De Luca"
 * name[=].given[+] = "Luigi"
@@ -127,7 +129,7 @@ Instance: encounter-luca-example
 InstanceOf: EncounterEuHdr
 Usage: #inline
 * id = "7c9a2bf1-507f-4d43-b06e-d78e9670379d"
-* status = #finished
+* status = $encounter-status#finished
 * class = $v3-ActCode#IMP
 * period.start = "2025-04-01T08:45:00Z"
 * period.end = "2025-04-10T11:00:00Z"
@@ -138,8 +140,9 @@ Usage: #inline
 
 Instance: composition-hdr-luca-example
 InstanceOf: CompositionEuHdr
-Title: "HDR Composition"
-Usage: #inline
+Title: "Composition: HDR (1)"
+Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca"
+Usage: #example
 * id = "b9dc409d-ec81-4556-9fac-4dc3f731c199"
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
@@ -154,7 +157,7 @@ Usage: #inline
 //
 * section[sectionAdmissionEvaluation].title = "Admission evaluation"
 * section[=].code = $loinc#67852-4 "Hospital Admission evaluation note"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   Mr. Luigi De Luca, a 57-year-old male, was admitted on 1st April 
@@ -171,9 +174,10 @@ Usage: #inline
 // 
 // section
 //
-* section[sectionFamilyHistory].title = "Family History"
-* section[=].code = $loinc#10157-6 "History of family member diseases Narrative"
-* section[=].text.status = #generated
+// * section[sectionFamilyHistory].title = "Family History"
+* section[+].title = "Family History"
+* section[=].code = $loinc#10157-6 "History of family member diseases note"
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   Mr. Luigi has a family history of diabetes (type 2, mother and maternal grandmother).
@@ -184,9 +188,9 @@ Usage: #inline
 // 
 // section
 //
-* section[sectionVitalSigns].title = "Vital signs"
-* section[=].code = $loinc#8716-3 "Vital signs"
-* section[=].text.status = #generated
+* section[sectionVitalSigns].title = "Vital signs note"
+* section[=].code = $loinc#8716-3 "Vital signs note"
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   <table class="hl7__hdr">
@@ -219,9 +223,10 @@ Usage: #inline
 // 
 // section
 //
-* section[sectionTobaccoUse].title = "Tobacco use"
+// * section[sectionTobaccoUse].title = "Tobacco use"
+* section[+].title = "Tobacco use"
 * section[=].code = $loinc#11367-0 "History of Tobacco use"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   The patient smokes "a few" cigarettes per day.
@@ -231,9 +236,9 @@ Usage: #inline
 // 
 // section
 //
-* section[sectionHospitalCourse].title = "Hospital Course"
-* section[=].code = $loinc#8648-8 "Hospital Course"
-* section[=].text.status = #generated
+* section[sectionHospitalCourse].title = "Hospital course note"
+* section[=].code = $loinc#8648-8 "Hospital course note"
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   During the hospital stay from 1 to 10 April, Mr. De Luca underwent a
@@ -248,8 +253,8 @@ Usage: #inline
 // section
 //
 * section[sectionSignificantResults].title = "Significant Observation Results"
-* section[=].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data Narrative"
-* section[=].text.status = #generated
+* section[=].code = $loinc#30954-2 "Relevant diagnostic tests/laboratory data note"
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   Blood Glucose Monitoring Regular monitoring of fasting blood glucose levels
@@ -308,8 +313,8 @@ Usage: #inline
 // section
 //
 * section[sectionSignificantProcedures].title = "Significant procedures"
-* section[=].code = $loinc#10185-7 "Hospital discharge procedures Narrative"
-* section[=].text.status = #generated
+* section[=].code = $loinc#10185-7 "Hospital discharge procedure note"
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   Lifestyle Consultation: Mr. De Luca met with a dietitian to discuss necessary changes in his diet, focusing on a low glycemic index diet and the need to monitor carbohydrate intake. He was also advised to engage in regular physical activity.
@@ -327,7 +332,7 @@ Usage: #inline
 //
 * section[sectionPharmacotherapy].title = "Medications"
 * section[=].code = $loinc#87232-5 "Medication administration.brief"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   Metformin 500 mg twice daily was started as the first-line treatment to help control blood glucose levels.
@@ -354,7 +359,7 @@ Usage: #inline
 //
 * section[sectionPlanOfCare].title = "Follow-up"
 * section[=].code = $loinc#18776-5 "Plan of care note"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   <table class="hl7__hdr">
@@ -384,8 +389,8 @@ Usage: #inline
 // section
 //
 * section[sectionDiagnosticSummary].title = "Diagnosis at Discharge"
-* section[=].code = $loinc#11535-2 "Hospital discharge Dx Narrative"
-* section[=].text.status = #generated
+* section[=].code = $loinc#11535-2 "Hospital discharge diagnosis note"
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   <table class="hl7__hdr">
@@ -408,9 +413,9 @@ Usage: #inline
 // 
 // section
 //
-* section[sectionDischargeInstructions].title = "Hospital Discharge Instructions"
+* section[+].title = "Hospital Discharge Instructions"
 * section[=].code = $loinc#8653-8 "Hospital Discharge Instructions"
-* section[=].text.status = #generated
+* section[=].text.status = #additional
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
   Instructions at Discharge to Mr. De Luca
@@ -426,8 +431,10 @@ Usage: #inline
 """
 
 Instance: diabetis-condition-luca
-InstanceOf: ConditionEuHdr
-Usage: #inline
+InstanceOf: ConditionEuCore
+Title: "Condition: Type 2 Diabetes Mellitus"
+Description: "Condition representing type 2 diabetes mellitus, coded with ICD-10 and SNOMED CT."
+Usage: #example
 * id = "a5bf69e4-24db-48a8-9eda-71516dcaf1d9"
 * clinicalStatus = $condition-clinical#active
 * code[0].coding[+] = $icd10#E11 "Type 2 diabetes mellitus"
@@ -436,10 +443,10 @@ Usage: #inline
 * onsetDateTime = "2025-04-04"
 
 Instance: careplan-luca
-InstanceOf: CarePlan
-Title: "Diabetes Management Care Plan"
-Description: "Care plan for diabetes including referrals and HbA1c measurement."
-Usage: #inline
+InstanceOf: CarePlanEuHdr
+Title: "CarePlan: Diabetes Management Plan"
+Description: "Care plan for diabetes management, including referrals and HbA1c measurement."
+Usage: #example
 * id = "b84038f8-9541-4c5b-93b0-a7f1b8e55bd3"
 * status = #active
 * intent = #plan
@@ -455,7 +462,7 @@ Usage: #inline
 * activity[2].detail.status = #not-started
 
 Instance: lifestyle-consultation-luca
-InstanceOf: ProcedureEuHdr
+InstanceOf: ProcedureEuCore
 Usage: #inline
 * id = "92ffc1fd-71ff-4d54-bc06-25d9e1e1fea0"
 * status = #completed
@@ -464,7 +471,7 @@ Usage: #inline
 * performedDateTime = "2025-04-05"
 
 Instance: diabetes-education-luca
-InstanceOf: ProcedureEuHdr
+InstanceOf: ProcedureEuCore
 Usage: #inline
 * id = "a74a3dca-92fa-4b71-8e70-89a07ac74bc3"
 * status = #completed
@@ -473,7 +480,7 @@ Usage: #inline
 * performedDateTime = "2025-04-04"
 
 Instance: metformin-therapy-luca
-InstanceOf: ProcedureEuHdr
+InstanceOf: ProcedureEuCore
 Usage: #inline
 * id = "53a8c3c3-5d1b-4950-87bc-fddae2ebc079"
 * status = #in-progress
@@ -482,10 +489,10 @@ Usage: #inline
 * performedDateTime = "2025-04-04"
 
 Instance: familyhistory-mother-luca-example
-InstanceOf: FamilyMemberHistoryEuHdr
-Title: "Family History of Type 2 Diabetes Mellitus - Mother"
+InstanceOf: FamilyMemberHistory // EuHdr
+Title: "FamilyMemberHistory: Type 2 Diabetes Mellitus - Mother"
 Description: "Mother has a history of type 2 diabetes mellitus."
-Usage: #inline
+Usage: #example
 * id = "635c22e7-d7f1-45ad-9b4d-d4fe35239085"
 * status = #completed
 * patient = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
@@ -493,8 +500,8 @@ Usage: #inline
 * condition[0].code = $sct#430679000 "Family history of diabetes mellitus type 2 (situation)"
 
 Instance: familyhistory-grandmother-luca-example
-InstanceOf: FamilyMemberHistoryEuHdr
-Title: "Family History of Type 2 Diabetes Mellitus - Maternal Grandmother"
+InstanceOf: FamilyMemberHistory // EuHdr
+Title: "FamilyMemberHistory: Type 2 Diabetes Mellitus - Maternal Grandmother"
 Description: "Maternal grandmother has a history of type 2 diabetes mellitus."
 Usage: #inline
 * id = "3fbdfbe1-9d70-47ec-ac05-3e30b063365a"
@@ -505,8 +512,8 @@ Usage: #inline
 
 Instance: bodyweight-luca-1-example
 InstanceOf: Observation
-Title: "Body Weight Observation - 109 kg"
-Description: "Vital sign observation for body weight of 109 kg measured on April 1st."
+Title: "Observation: Body Weight - 109 kg"
+Description: "Vital sign observation for body weight of 109 kg measured on April 1, 2025."
 Usage: #inline
 * id = "f0113857-b9b7-429b-8893-b645a38ae20a"
 * status = #final
@@ -521,15 +528,15 @@ Usage: #inline
 
 Instance: bodyweight-luca-2-example
 InstanceOf: Observation
-Title: "Body Weight Observation - 108 kg"
-Description: "Vital sign observation for body weight of 108 kg measured on April 10th."
+Title: "Observation: Body Weight - 108 kg"
+Description: "Vital sign observation for body weight of 108 kg measured on April 10, 2025."
 Usage: #inline
 * id = "065c918f-730a-47f8-938a-7ad54618037b"
 * status = #final
 * category[0] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#29463-7 "Body weight"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
-* effectiveDateTime = "2025-04-19"
+* effectiveDateTime = "2025-04-10"
 * valueQuantity.value = 108
 * valueQuantity.unit = "kg"
 * valueQuantity.system = $ucum
@@ -537,8 +544,8 @@ Usage: #inline
 
 Instance: bodyheight-luca-1-example
 InstanceOf: Observation
-Title: "Body Height Observation - 177 cm"
-Description: "Vital sign observation for body height of 177 cm measured on April 1st."
+Title: "Observation: Body Height - 177 cm"
+Description: "Vital sign observation for body height of 177 cm measured on April 1, 2025."
 Usage: #inline
 * id = "81783ae4-c36d-424f-8cea-fe7d3407a36b"
 * status = #final
@@ -553,8 +560,8 @@ Usage: #inline
 
 Instance: bloodpressure-luca-1-example
 InstanceOf: Observation
-Title: "Blood Pressure Observation - 155/95 mmHg"
-Description: "Vital sign observation for blood pressure (155/95 mmHg) measured on April 1st."
+Title: "Observation: Blood Pressure - 155/95 mmHg"
+Description: "Vital sign observation for blood pressure of 155/95 mmHg measured on April 1, 2025."
 Usage: #inline
 * id = "a19e48e1-2271-4cdb-9c76-b0626c7a5363"
 * status = #final
@@ -577,8 +584,8 @@ Usage: #inline
 
 Instance: bloodpressure-luca-2-example
 InstanceOf: Observation
-Title: "Blood Pressure Observation - 150/90 mmHg"
-Description: "Vital sign observation for blood pressure (155/95 mmHg) measured on April 1st."
+Title: "Observation: Blood Pressure - 150/90 mmHg"
+Description: "Vital sign observation for blood pressure of 150/90 mmHg measured on April 10, 2025."
 Usage: #inline
 * id = "fd7f7580-5788-45dd-88ec-dca615d69c7d"
 * status = #final
@@ -601,7 +608,7 @@ Usage: #inline
 
 Instance: tobaccouse-luca-example
 InstanceOf: Observation
-Title: "Tobacco Use - A Few Cigarettes a Day"
+Title: "Observation: Tobacco Use - A Few Cigarettes a Day"
 Description: "Observation recording tobacco use: a few cigarettes a day."
 Usage: #inline
 * id = "67152b1b-0ffa-4b8f-8b6a-a3d71d4d58b6"

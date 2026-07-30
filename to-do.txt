@@ -1,0 +1,70 @@
+ Sections not referred by the xtehr model
+
+sectionDischargeInstructions
+sectionAllergies
+sectionPayers
+sectionProblemList
+sectionPastIllnessHx
+sectionHistoryMedicalDevices
+sectionProceduresHx
+sectionImmunizations
+sectionInfectiousContacts
+sectionTravelHx
+sectionFamilyHistory
+sectionSocialHistory
+sectionSubstanceUse
+sectionAlcoholUse
+sectionTobaccoUse
+sectionDrugUse
+sectionAdvanceDirectives
+sectionCareTeamRules
+
+
+Kept for the time being 
+
+
+sectionDischargeInstructions
+sectionAllergies
+sectionProblemList
+sectionImmunizations
+
+##### Obligation done
+
+how to deal with obligation on backbone elements ?
+
+first revision
+EHDSDischargeReport 
+(to be checked)
+- serviceSpecialty
+- presentedForm
+- encounterInformation
+
+
+to be revised
+
+
+EHDSAlert
+EHDSPatient
+
+EHDSOrganisation
+EHDSHealthProfessional
+
+EHDSCondition
+EHDSObservation
+EHDSProcedure
+EHDSMedicationUse
+
+EHDSAttachment (no obligation)
+EHDSDeviceUse
+EHDSDevice
+
+EHDSCarePlan (no obligations)
+EHDSRelatedPerson
+EHDSEncounter (no obligations)
+
+EHDSLaboratoryObservation
+
+## to do add refernces
+
+
+

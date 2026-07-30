@@ -30,7 +30,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry.resource 1..
 * entry contains
     composition 1..1 and
-    patient 1..1 and
+    patient 1..* and
     encounter 1..* and
     allergyIntolerance 0..* and
     condition 0..* and
@@ -55,35 +55,37 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     familyMemberHistory 0..* and
     documentReference 0..* and
     flag 0..* and
-    location 0..*
+    location 0..* and 
+    careplan 0..* 
 
 * entry[composition].resource only CompositionEuHdr
 * entry[patient].resource only PatientEuCore
 * entry[encounter].resource only EncounterEuHdr
-* entry[allergyIntolerance].resource only AllergyIntoleranceEuHdr
-* entry[condition].resource only ConditionEuHdr
+* entry[allergyIntolerance].resource only AllergyIntoleranceEuCore
+* entry[condition].resource only ConditionEuCore
 * entry[device].resource only DeviceEuHdr
 * entry[deviceUseStatement].resource only DeviceUseStatementEuHdr
-* entry[diagnosticReport].resource only $DiagnosticReport-uv-ips
-* entry[imagingStudy].resource only $ImagingStudy-uv-ips
-* entry[immunization].resource only ImmunizationEuHdr
-* entry[immunizationRecommendation].resource only ImmunizationRecommendationEuHdr
+* entry[diagnosticReport].resource only DiagnosticReportEuCore
+* entry[imagingStudy].resource only ImagingStudy
+* entry[immunization].resource only ImmunizationEuCore
+* entry[immunizationRecommendation].resource only ImmunizationRecommendation // EuHdr
 * entry[media].resource only Media // $Media-observation-uv-ips
-* entry[medication].resource only MedicationEuHdr
-* entry[medicationRequest].resource only MedicationRequestEuHdr
-* entry[medicationStatement].resource only MedicationStatementEuHdr
+* entry[medication].resource only MedicationEuCore
+* entry[medicationRequest].resource only MedicationRequestEuCore
+* entry[medicationStatement].resource only MedicationStatementEuCore
 * entry[medicationAdministration].resource only MedicationAdministrationEuHdr
 * entry[medicationDispense].resource only MedicationDispenseEuHdr
 * entry[practitioner].resource only PractitionerEuCore
 * entry[practitionerRole].resource only PractitionerRoleEuCore
-* entry[procedure].resource only ProcedureEuHdr
+* entry[procedure].resource only ProcedureEuCore
 * entry[organization].resource only OrganizationEuCore
 * entry[observation].resource only Observation // $Observation-results-uv-ips
 * entry[specimen].resource only $Specimen-uv-ips
-* entry[flag].resource only FlagEuHdr
-* entry[familyMemberHistory].resource only FamilyMemberHistoryEuHdr
+* entry[flag].resource only FlagPatientEuCore
+* entry[familyMemberHistory].resource only FamilyMemberHistory
 * entry[documentReference].resource only DocumentReference
-* entry[location].resource only LocationEu
+* entry[location].resource only LocationEuCore
+* entry[careplan].resource only CarePlan
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"

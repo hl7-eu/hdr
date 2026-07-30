@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>EHDSDischargeReport -> Composition (HDR)</title>
+  </head>
+  <body>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Ongoing alignment:</strong> The models are expected to continue evolving, with
+          updates incorporated into this Implementation Guide to maintain alignment with the EHDS
+          Implementing Acts. </div>
+      </div>
+    </div>
+    <h3>EHDSDischargeReport -> Composition (HDR)</h3>
+    <a> </a>
+    <p></p>
+    <p>
+      This page explains how conceptual elements from the EHDSDischargeReport logical model are
+      expressed
+      in the corresponding FHIR CompositionEuHdr profile used by this Implementation Guide.
+    </p>
+    <p></p>
+    <div class="table-wrap">
+      <strong>Mapping Context</strong>
+      <ul>
+        <li>
+          <strong>Source logical model:</strong>
+          <a
+            href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDischargeReport.html"
+            target="_blank">
+            EHDSDischargeReport
+          </a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-composition-eu-hdr.html">
+            CompositionEuHdr
+          </a>
+        </li>
+        <li>
+          <strong>Referenced FHIR profiles:</strong>
+          <a href="StructureDefinition-encounter-eu-hdr.html">
+            EncounterEuHdr
+          </a>
+          ,
+          <a href="StructureDefinition-carePlan-eu-hdr.html">
+            CarePlanEuHdr
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p></p>
+    <div class="table-wrap">
+      <table summary="EHDSDischargeReport -> Composition (HDR)">
+        <caption>EHDSDischargeReport -> Composition (HDR)</caption>
+        <thead>
+          <tr>
+            <th colspan="1" class="src-head">EHDSDischargeReport (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="3" class="tgt-head">Composition (HDR)</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- HEADER BLOCK -->
+          <tr>
+            <td>header</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>.</td>
+            <td>CompositionEuHdr constrains header elements for HDR.</td>
+          </tr>
+          <tr>
+            <td>header.subject</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>subject</td>
+            <td>Reference to PatientEuCore.</td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>identifier</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>equivalent</td>
+            <td>Bundle</td>
+            <td>identifier</td>
+            <td>It identifies a specific instance (version) of the document.</td>
+          </tr>
+          <tr>
+            <td>header.author[x]</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>author</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.date</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>date</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.status</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>status</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.language</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>language</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.documentType</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>type</td>
+            <td>Fixed to LOINC 34105-7 in CompositionEuHdr.</td>
+          </tr>
+          <tr>
+            <td>header.documentTitle</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>title</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.period</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>event.period</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.version</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>extension:version</td>
+            <td>Business version represented with the R5 Composition version extension.</td>
+          </tr>
+          <tr>
+            <td>header.attestation</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>attester</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.attestation.attester[x]</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>attester.party</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.attestation.datetime</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>attester.time</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.legalAuthentication</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>attester</td>
+            <td>Use attester.mode to indicate legal authentication.</td>
+          </tr>
+          <tr>
+            <td>header.legalAuthentication.legalAuthenticator[x]</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>attester.party</td>
+            <td>Use attester.mode to indicate legal authentication.</td>
+          </tr>
+          <tr>
+            <td>header.legalAuthentication.datetime</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>attester.time</td>
+            <td>Use attester.mode to indicate legal authentication.</td>
+          </tr>
+          <tr>
+            <td>header.eventType</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>category</td>
+            <td>If used for document categorisation/search metadata.</td>
+          </tr>
+          <tr>
+            <td>header.serviceSpecialty</td>
+            <td>related-to</td>
+            <td>Encounter</td>
+            <td>serviceType</td>
+            <td>The Encounter is referenced by the Composition.encounter element</td>
+          </tr>
+          <tr>
+            <td>header.custodian</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>custodian</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.intendedRecipient[x]</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>extension:information-recipient</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section</td>
+            <td>CompositionEuHdr represents body content as sliced Composition sections plus the
+              Composition.encounter reference.</td>
+          </tr>
+
+          <!-- ALERTS -->
+          <tr>
+            <td>body.alerts</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAlert</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.alerts.generatedNarrative</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAlert.text</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.alerts.medicalAlert</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAlert.entry</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsalert.html">EHDSAlert Mapping</a> for detailed mapping information.</td>
+          </tr>
+
+          <!-- ENCOUNTER INFORMATION -->
+          <tr>
+            <td>body.encounterInformation</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>encounter</td>
+            <td>Use <a href="StructureDefinition-encounter-eu-hdr.html">EncounterEuHdr</a>.</td>
+          </tr>
+          <tr>
+            <td>body.encounterInformation.generatedNarrative</td>
+            <td>related-to</td>
+            <td>Encounter</td>
+            <td>text</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.encounterInformation.encounter</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>encounter</td>
+            <td>See <a href="map-ehdsencounter.html">EHDSEncounter Mapping</a> for detailed mapping information.</td>
+          </tr>
+          <tr>
+            <td>body.encounterInformation.note</td>
+            <td>related-to</td>
+            <td>Encounter</td>
+            <td>extension:note</td>
+            <td></td>
+          </tr>
+
+          <!-- ADMISSION EVALUATION -->
+          <tr>
+            <td>body.admissionEvaluation</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAdmissionEvaluation</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.admissionEvaluation.generatedNarrative</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAdmissionEvaluation.text</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.admissionEvaluation.objectiveFindings</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionVitalSigns</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.admissionEvaluation.objectiveFindings</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionPhysicalFindings</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.admissionEvaluation.functionalStatus[x]</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionFunctionalStatus</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.admissionEvaluation.note</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionAdmissionEvaluation.extension:section-note</td>
+            <td></td>
+          </tr>
+
+          <!-- Hx general Reported -->
+          <tr>
+            <td>body.patientHistory</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionPatientHx</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.patientHistory.generatedNarrative</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionPatientHx.text</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.patientHistory.pastProblems</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionProblems</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdscondition.html">EHDSCondition Mapping</a> for detailed mapping information.</td> 
+          </tr>
+          <tr>
+            <td>body.patientHistory.devicesAndImplants</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionMedicalDevices</td>
+            <td>See <a href="https://map-ehdsdeviceuse.html">EHDSDeviceUse Mapping</a> for detailed mapping information.</td>
+          </tr>
+          <tr>
+            <td>body.patientHistory.procedures</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionProceduresHx</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsprocedure.html">EHDSProcedure Mapping</a> for detailed mapping information.</td> 
+          </tr>
+          <tr>
+            <td>body.patientHistory.note</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionPatientHx.extension:section-note</td>
+            <td></td>
+          </tr>
+
+          <!-- COURSE OF ENCOUNTER -->
+          <tr>
+            <td>body.courseOfEncounter</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionHospitalCourse</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.generatedNarrative</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionHospitalCourse.text</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.diagnosticSummary</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionDiagnosticSummary</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdscondition.html">EHDSCondition Mapping</a> for detailed mapping information.</td> 
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.procedures</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionSignificantProcedures</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsprocedure.html">EHDSProcedure Mapping</a> for detailed mapping information.</td> 
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.medicalDevicesAndImplants</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionImplantedDevices</td>
+            <td>See <a href="https://map-ehdsdeviceuse.html">EHDSDeviceUse Mapping</a> for detailed mapping information.</td>
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.pharmacotherapy</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionPharmacotherapy</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsmedicationuse.html">EHDSMedicationUse Mapping</a> for detailed mapping information.</td> 
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.testResults[x]</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionSignificantResults</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsobservation.html">EHDSObservation Mapping</a> for detailed mapping information. Please note that the mapping EHDSObservation → MedicalTestResultEuCore does not apply to every kind of Observation. </td>
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.note</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionHospitalCourse.text</td>
+            <td></td>
+          </tr>
+
+          <!-- DISCHARGE DETAILS -->
+          <tr>
+            <td>body.dischargeDetails</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeDetails</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.dischargeDetails.generatedNarrative</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeDetails.text</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.dischargeDetails.objectiveFindings</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionPhysicalFindings</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.dischargeDetails.objectiveFindings</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionVitalSigns</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.dischargeDetails.functionalStatus[x]</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionFunctionalStatus</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.dischargeDetails.note</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeDetails.text</td>
+            <td></td>
+          </tr>
+
+          <!-- MEDICATION SUMMARY -->
+          <tr>
+            <td>body.medicationSummary</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeMedications</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.medicationSummary.generatedNarrative</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeMedications.text</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.medicationSummary.medicationUse</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeMedications.entry</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsmedicationuse.html">EHDSMedicationUse Mapping</a> for detailed mapping information.</td>      
+          </tr>
+          <tr>
+            <td>body.medicationSummary.note</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeMedications.text</td>
+            <td></td>
+          </tr>
+
+          <!-- CARE PLAN -->
+          <tr>
+            <td>body.carePlan</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionPlanOfCare</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.carePlan.generatedNarrative</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionPlanOfCare.text</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>body.carePlan.carePlan</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionPlanOfCare.entry</td>
+            <td>Reference to <a href="StructureDefinition-carePlan-eu-hdr.html">CarePlanEuHdr</a>. See <a href="map-ehdscareplan.html">EHDSCarePlan Mapping</a> for detailed mapping information.</td>
+          </tr>
+          <tr>
+            <td>body.carePlan.otherRecommendations</td>
+            <td>related-to</td>
+            <td>CarePlan</td>
+            <td>note</td>
+            <td>Referenced by section:sectionPlanOfCare.entry</td>
+          </tr>
+
+          <!-- SYNTHESIS -->
+          <tr>
+            <td>body.synthesis</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionSynthesis</td>
+            <td></td>
+          </tr>
+
+          <!-- ATTACHMENTS -->
+          <tr class="highlight-yellow">
+            <td>presentedForm</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionAttachments</td>
+            <td>Use an attachment entry such as DocumentReference or Binary for a rendered form.</td>
+          </tr>
+          <tr>
+            <td>attachments</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionAttachments</td>
+            <td>See <a href="map-ehdsattachment.html">EHDSAttachment Mapping</a> for detailed mapping information.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:2rem;color:#555;"> Return to overview: <a href="modelmap.html">EHDS Logical
+      Models -> FHIR Profiles</a>
+    </p>
+  </body>
+</div>

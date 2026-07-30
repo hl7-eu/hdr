@@ -9,10 +9,189 @@ Unknown code 'system' in the CodeSystem 'http://hl7.org/fhir/examplescenario-act
 # == Won't fixed see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/QA.20error.20with.20ActorDefinition.20in.20R4.20IG
 The value provided ('system') was not found in the value set 'Example Scenario Actor Type' (http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0), and a code is required from this value set (error message = The provided code 'http://hl7.org/fhir/examplescenario-actor-type#system' was not found in the value set 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0'; Unknown code 'system' in the CodeSystem 'http://hl7.org/fhir/examplescenario-actor-type' version '4.0.1')
 
-# New warning introduced by the publisher see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/Regression.20in.20ConceptMap
 
-The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-ConceptMap.element.target.equivalence from FHIR version {3} is not allowed to be used at this point (allowed = e:ConceptMap.element.target; this element is [[BackboneElement, ConceptMap.group.element.target]; this is a warning since contexts may be renamed between FHIR versions)
+# Warnings referred to an Obligation extension
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation%
 
-# Warnings referred to an Obligation profile
-The extension http://hl7.org/fhir/tools/StructureDefinition/obligation|0.1.0 is deprecated
-The Implementation Guide contains no examples for this profile
+
+# Reference to deprecated ValueSet
+Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
+
+# warning due to the reference to a sub-package 
+The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
+
+# duplicated anchor ids
+The html source has duplicate anchor Ids: 1
+
+# usage of SNOMED CT
+The IG is not for the international realm, and it uses SNOMED CT, so it should fix the SCT edition in the expansion parameters
+
+# Examples are no needed for obligation profiles
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/medicationDispense-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/patient-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/medicationStatement-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/medicationAdministration-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/device-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/observation-infectious-contact-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/flag-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/humanName-obl-eu-hdr'): The Implementation Guide contains no examples for this data type profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/carePlan-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/procedure-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/consent-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http:​/​/hl7​.eu​/fhir​/hdr​/StructureDefinition​/bundle-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/condition-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/medication-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/observation-infectious-contact-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/encounter-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/familyMemberHistory-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/allergyIntolerance-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/bundle-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/composition-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/deviceUseStatement-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/immunization-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/immunizationRecommendation-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/observation-sdoh-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/observation-travel-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefinition/specimen-obl-eu-hdr'): The Implementation Guide contains no examples for this profile
+
+
+
+# known non-matching slices
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-eu-hdr|0.1.0-ballot%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr|0.1.0-ballot%
+
+
+# See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Issue.20using.20version-specific.20packages
+The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
+The canonical URL http://hl7.eu/fhir/extensions doesn't point to an actual ImplementationGuide resource
+The canonical URL https://profiles.ihe.net/PHARM/MPD doesn't point to an actual ImplementationGuide resource
+
+
+# example url that doesn't resolve
+URL value 'https://hl7europe.org/example-identifier' does not resolve
+A definition for CodeSystem 'http://hl7europe.org/policy-rules' could not be found, so the code cannot be validated
+URL value 'http://hl7europe.org/policy-rules' does not resolve
+%A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' version '2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated.%
+A definition for CodeSystem 'http://hl7europe.org/examples/pms' could not be found, so the code cannot be validated
+URL value 'http://hl7europe.org/examples/pms' does not resolve
+
+# not resolved url
+URL value 'urn:ietf:rfc:4122' does not resolve
+URL value 'urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6' does not resolve
+URL value 'http://fhir.nl/fhir/NamingSystem/agb-z' does not resolve
+URL value 'urn:oid:2.16.840.1.113883.2.4.6.7' does not resolve
+URL value 'http://fhir.nl/fhir/NamingSystem/bsn' does not resolve
+URL value 'https://www.orpha.net' does not resolve
+Error from https://tx.fhir.org/r4: Unable to provide support for code system https://www.orpha.net
+
+# no performers in the examples
+Best Practice Recommendation: In general, all observations should have a performer
+
+# Concept Maps Groups Source and Target  are not Code Systems
+%not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed%
+%not fully defined and populated, and no targetScope is specified, so the target code checking will not be performed%
+
+
+# UCOM annotation in examples
+UCUM Codes that contain human readable annotations like {keer per dag inhaleren} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
+
+# Missing key for addiitonal binding
+Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained.'
+
+# not fixed version used
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/event-basedOn'.%
+%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActCode'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/bodySite'.%
+%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse'.%
+%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-FamilyMember'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/flag-detail'.%
+%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType'.%
+%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode'.%
+%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason'.%
+%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActClassExposure'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/data-absent-reason'.%
+%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActEncounterCode'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/flag-priority'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-citizenship'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-nationality'.%
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure'.%
+%There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/v3-ActCode'.%
+
+%There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/v3-ActPriority'.%
+
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/humanname-fathers-family'.%
+
+%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/humanname-mothers-family'.%
+
+# The repeating element with a pattern
+The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+
+# Temporary code system
+Reference to experimental CodeSystem http://hl7.eu/fhir/hdr/CodeSystem/temporarySystem-hdr-eu|0.0.1-ci
+
+# deprecated extension
+The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+
+
+# > and < chars interpreted as html tags
+The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+
+
+# The Vital signs section allows for both Observation and Vital Signs entries
+Found multiple matching profiles for urn:uuid:f0113857-b9b7-429b-8893-b645a38ae20a among choices: http://hl7.org/fhir/StructureDefinition/Observation|4.0.1, http://hl7.org/fhir/StructureDefinition/vitalsigns|4.0.1
+Found multiple matching profiles for urn:uuid:065c918f-730a-47f8-938a-7ad54618037b among choices: http://hl7.org/fhir/StructureDefinition/Observation|4.0.1, http://hl7.org/fhir/StructureDefinition/vitalsigns|4.0.1
+Found multiple matching profiles for urn:uuid:81783ae4-c36d-424f-8cea-fe7d3407a36b among choices: http://hl7.org/fhir/StructureDefinition/Observation|4.0.1, http://hl7.org/fhir/StructureDefinition/vitalsigns|4.0.1
+Found multiple matching profiles for urn:uuid:a19e48e1-2271-4cdb-9c76-b0626c7a5363 among choices: http://hl7.org/fhir/StructureDefinition/Observation|4.0.1, http://hl7.org/fhir/StructureDefinition/vitalsigns|4.0.1
+Found multiple matching profiles for urn:uuid:fd7f7580-5788-45dd-88ec-dca615d69c7d among choices: http://hl7.org/fhir/StructureDefinition/Observation|4.0.1, http://hl7.org/fhir/StructureDefinition/vitalsigns|4.0.1
+
+
+# Non mathcing slices
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr%
+
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medication-eu-hdr%
+
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-eu-hdr%
+
+# used local extensions not speciifed in the profile
+This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/HumanName-eu|0.1.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core|0.1.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# Not expanded value set
+Unable to expand included value set 'http://terminology.ehdsi.eu/ValueSet/eHDSISubstance': Unable to expand imported value set: Error from https://tx.fhir.org/r4: Unable to provide support for code system https://spor.ema.europa.eu/v2/SubstanceDefinition (and Error from https://tx.fhir.org/r4: Unable to provide support for code system https://spor.ema.europa.eu/v2/SubstanceDefinition)
+
+# experimental CodeSystem temporarly used, waiting for LOINC codes assignement
+Reference to experimental CodeSystem http://hl7.eu/fhir/hdr/CodeSystem/temporarySystem-hdr-eu|0.1.0-ballot
+
+# known non-matching slices
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medication-eu-hdr%
+
+# not known systems
+Unable to check whether the code is in the value set 'http://fhir.ehdsi.eu/hdr/ValueSet/eHDSISubstanceWithExceptions|0.1.0-preview' because the code system https://spor.ema.europa.eu/v2/SubstanceDefinition| was not found
+
+# not known identification systems
+No definition could be found for URL value 'https://hl7europe.org/example-identifier'
+
+No definition could be found for URL value 'urn:ietf:rfc:4122'
+No definition could be found for URL value 'urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6'
+No definition could be found for URL value 'http://fhir.nl/fhir/NamingSystem/agb-z'
+No definition could be found for URL value 'http://fhir.nl/fhir/NamingSystem/bsn'
+No definition could be found for URL value 'urn:oid:2.16.840.1.113883.2.4.6.7'
+No definition could be found for URL value 'http://hl7europe.org/policy-rules'
+No definition could be found for URL value 'http://hl7europe.org/examples/pms'
+
+# multiple different potential versions matches
+TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS
+
+# CodeSystem version not pinned
+PIN_VERSION
+
+# Deprecated extensions not specified by this guide
+MSG_DEPENDS_ON_DEPRECATED_NOTE
+
+# Code not defined in the addional binding
+Terminology_TX_NoValid_3_CC

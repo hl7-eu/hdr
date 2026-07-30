@@ -4,17 +4,24 @@ Id: carePlan-obl-eu-hdr
 Title:    "Care Plan: obligations"
 Description: """This profile defines obligations for the CarePlan resource for the purpose of this guide."""
 
-* insert SetFmmandStatusRule ( 0, informative)
-* text insert ObligationSet1
-* title insert ObligationSet2
-* addresses 
-* description insert ObligationSet2
-* period insert ObligationSet1
+* insert SetFmmAndStatusRule ( 0, informative)
 
-* activity insert ObligationSet1
-  * detail insert ObligationSet1
-    * kind insert ObligationSet2
-    * description insert ObligationSet1
-  * reference insert ObligationSet2
+* insert OblShouldPopulateShallProcess
+
+* subject only Reference(PatientEuObligations)
+* addresses only Reference(ConditionEuCoreObligation)
+* goal only Reference(GoalEuHdr)
+
+* text insert OblShallPopulateShallProcess
+* title insert OblShallPopulateShallDisplayProcess
+* addresses 
+* description insert OblShallPopulateShallDisplayProcess
+* period insert OblShallPopulateShallProcess
+
+* activity insert OblShallPopulateShallProcess
+  * detail insert OblShallPopulateShallProcess
+    * kind insert OblShallPopulateShallDisplayProcess
+    * description insert OblShallPopulateShallProcess
+  * reference insert OblShallPopulateShallDisplayProcess
 
 
