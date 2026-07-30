@@ -19,7 +19,7 @@ RuleSet: SetFmmAndStatusRuleInstance ( fmm, status )
 * extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #{status}
 
 RuleSet: SectionComRules (short, def, code)
-
+// outdated rule set, please use SectionComRulesWithTitle below
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * ^extension[0].valueString = "Section"
 * ^short = "{short}"
@@ -33,6 +33,35 @@ RuleSet: SectionComRules (short, def, code)
 // * obeys ips-comp-1
 // * emptyReason ..0
 // * emptyReason ^mustSupport = false
+
+// ---------------------------------------------------------------------------
+// The existing SectionComRules(short, def, code) has no slot for a section
+// title, and its first argument populates ^short, not a title. The variant
+// below adds the title as a fourth item of content and keeps the original
+// ruleset untouched, so profiles outside the HDR that already call
+// SectionComRules are unaffected.
+//
+// On the title argument:
+//   Composition.section.title is the label for the particular section, part of
+//   the rendered content and typically used to build a table of contents. Its
+//   base definition is generic and is deliberately NOT overridden here — only
+//   ^short on title is adapted, to carry the proposed label as an example.
+//   The value is not fixed, because section titles are translated per language;
+//   constraining it would impose one language on every implementer.
+//
+// Verified with SUSHI 3.20.0: the two ^short rules below target two distinct
+// element definitions, Composition.section:<slice> and
+// Composition.section:<slice>.title.
+// Additionally, title.definition stays untouched.
+// ---------------------------------------------------------------------------
+RuleSet: SectionComRulesWithTitle (title, short, def, code)
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+* ^extension[0].valueString = "Section"
+* ^short = "{short}"
+* ^definition = "{def}"
+* code = {code}
+* title ^short = "Label of section, e.g. \"{title}\" for ToC"
+
 
 RuleSet: SectionEntrySliceComRules (short, def)
 * entry ^slicing.discriminator[0].type = #type
