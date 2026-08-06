@@ -203,7 +203,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     // $sct#721981007)
   * entry 0..
   * entry only Reference(ProcedureEuCore)
-  * section ..0
+//   * section ..0
 
 
 // -------------------------------------
@@ -229,7 +229,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     DeviceUseStatementEuHdr)
 
 
-  * section ..0
+//   * section ..0
 
 
 // === EPS History of Procedures Section ===
