@@ -93,7 +93,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   // entry slices
   * insert SectionEntrySliceDefRules (flag, 0.. , 
   Alert information , 
-  Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
+  Contains alert information to be communicated. May optionally reference other resources in IPS,
   FlagPatientEuCore)
 
 

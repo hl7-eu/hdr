@@ -68,7 +68,7 @@ Description: "A sample MedicationStatement for a patient taking Enalapril, used 
 * dateAsserted = "2024-12-01"
 
 * informationSource = Reference(patient-swart)
-* informationSource.display = "Luigi De Luca"
+* informationSource.display = "Fiona XXX_Swart"
 
 * dosage[0].text = "Take one tablet daily in the morning"
 * dosage[0].timing.repeat.frequency = 1
@@ -89,7 +89,7 @@ Description: "A sample MedicationStatement for a patient taking Enalapril, used 
   <p><strong>Patient:</strong> Fiona XXX_Swart</p>
   <p><strong>Status:</strong> Active</p>
   <p><strong>Dosage:</strong> Take one tablet daily in the morning (oral route)</p>
-  <p><strong>Informant:</strong> Dr. Lukas Müller</p>
+  <p><strong>Informant:</strong> Fiona XXX_Swart</p>
   <p><strong>Date Asserted:</strong> 2024-12-01</p>
 </div>
 """
