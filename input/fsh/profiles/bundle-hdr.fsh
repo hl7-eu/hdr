@@ -32,9 +32,11 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry.response ..0
 
 * entry.resource 1..
-* entry.resource.language
-  * ^short = "Language of the individual resource"
-  * ^definition = "The base language of the individual resource. This element MAY be populated. If populated, it should match the main language of the Bundle declared in Bundle.language. For this comparison only the primary language subtag is considered, so regional variants of the same language (for example fr-BE and fr-FR) are considered matching, and the comparison is case-insensitive."
+// NOTE: Bundle.entry.resource is of type Resource (abstract), so its children cannot be
+// profiled - a rule on entry.resource.language is dropped during snapshot generation.
+// The expectation on individual resource languages is therefore expressed by the
+// bdl-language-main-match invariant below and in the "Bundle and resource language"
+// section of the Design page.
 * entry contains
     composition 1..1 and
     patient 1..* and
