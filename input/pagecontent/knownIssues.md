@@ -11,4 +11,4 @@ This version uses temporary local codes where concepts were missing, and the clo
 
 ### Obligations
 
-Obligations are only informative for this version of the guide. Further analysis are needed for consolidating them.
+Obligations are only informative for this version of the guide. Further analysis is needed for consolidating them.

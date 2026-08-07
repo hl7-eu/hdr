@@ -4,6 +4,7 @@ Title: "Bundle: HL7 Europe Hospital Discharge Report (3)"
 Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Paolo Marcheschi."
 Usage: #example
 
+* language = #it
 * type = #document
 
 * identifier[+].type = $v2-0203#PRN
@@ -81,6 +82,8 @@ Title: "Composition: HDR Paolo Marcheschi"
 Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Paolo Marcheschi."
 Usage: #inline
 * id = "130ed4e9-30f3-4a09-b9b1-ad8fd12237cb"
+// Individual resource language matching the main language of the Bundle (bdl-language-main-match)
+* language = #it
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
 * date = "2025-02-02T13:30:00Z"
@@ -222,6 +225,8 @@ Description: "Condition representing acute respiratory failure."
 // add? 721804002 Infection of lung caused by Pneumocystis (disorder)
 Usage: #inline
 * id = "abddc069-eda4-44c0-bd68-37e65a7bcb74"
+// Regional variant of the Bundle main language: it-IT matches it (bdl-language-main-match)
+* language = #it-IT
 * clinicalStatus = $condition-clinical#active
 * code[0].coding[+] = $icd10#J96.0 "Acute respiratory failure"
 * code[=].coding[+] = $sct#65710008 "Acute respiratory failure"

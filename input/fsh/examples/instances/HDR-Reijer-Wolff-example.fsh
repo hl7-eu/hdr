@@ -4,6 +4,7 @@ Title: "Bundle: HL7 Europe Hospital Discharge Report (2)"
 Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff."
 Usage: #example
 
+* language = #en
 * type = #document
 
 * identifier[+].type = $v2-0203#PRN
@@ -146,7 +147,7 @@ Usage: #inline
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
-  Mr. Doe was discharged in stable condition with instructions to avoid weight-bearing
+  Mr. Wolff was discharged in stable condition with instructions to avoid weight-bearing
   on the left leg and to follow up in the orthopedic clinic.
 </div>
 """

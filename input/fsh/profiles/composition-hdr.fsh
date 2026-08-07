@@ -79,9 +79,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * entry only Reference(Flag or DocumentReference)
   * insert SectionEntrySliceComRules(EPS Alerts entry, EPS Alerts entry slice)
   // entry slices
-  * insert SectionEntrySliceDefRules (flag, 0.. ,
-  Alert information ,
-  Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
+  * insert SectionEntrySliceDefRules (flag, 0.. , 
+  Alert information , 
+  Contains alert information to be communicated. May optionally reference other resources in IPS,
   FlagPatientEuCore)
 
 // -------------------------------------
@@ -184,7 +184,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   // $sct#721981007)
   * entry 0..
   * entry only Reference(ProcedureEuCore)
-  * section ..0
+//   * section ..0
 
 // -------------------------------------
 // Medical Devices Section 0 .. 1
@@ -204,7 +204,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Patient history of medical device use,
     It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available\, or that no relevant medical device use is known. ,
     DeviceUseStatementEuHdr)
-  * section ..0
+
+
+//   * section ..0
 
 // === EPS History of Procedures Section ===
 // Now uses the common macro like every other section.

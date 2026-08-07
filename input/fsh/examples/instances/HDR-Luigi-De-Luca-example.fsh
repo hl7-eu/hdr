@@ -4,6 +4,7 @@ Title: "Bundle: HL7 Europe Hospital Discharge Report (1)"
 Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca."
 Usage: #example
 
+* language = #en
 * type = #document
 
 * identifier[+].type = $v2-0203#PRN
@@ -166,7 +167,7 @@ Usage: #example
   fasting blood glucose and HbA1c levels that required further investigation.
   <p/>
   When Mr De Luca arrived in the morning we recorded a fasting blood glucose 
-  level at 180 mg/dL. His HbA1c level was 7.8%. He seemed to be dehydrated,
+  level at 180 mg/dL. His HbA1c level was 7.2%. He seemed to be dehydrated,
   so that he immediately was sent to the ward for a full breakfast and fluid
   substitution.
 </div>
