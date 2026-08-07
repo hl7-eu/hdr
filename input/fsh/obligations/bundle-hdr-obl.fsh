@@ -8,10 +8,12 @@ Description: """This profile defines obligations for the Hospital Discharge Repo
 
 * identifier insert OblShallPopulateShallProcess
 * type insert OblShallPopulateShallProcess
+* language insert OblShallPopulateShallProcess
 * timestamp insert OblShallPopulateShallProcess
 * entry insert OblShallPopulateShallProcess
 * entry.fullUrl insert OblShallPopulateShallProcess
 * entry.resource insert OblShallPopulateShallProcess
+* entry.resource.language insert OblMayPopulateShallProcess
 
 * entry[composition].resource only CompositionEuHdrObligation
 * entry[patient].resource only PatientEuObligations
