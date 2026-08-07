@@ -73,7 +73,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRulesWithTitle (
     Alerts,
     Substantial alerts and warnings,
-    Information about substantial alerts or warnings that health professionals should be aware of\, other than allergies and intolerances\, which are documented in the Allergies and intolerances section. Alerts cover any clinical information that is imperative to know so that the life or health of the patient does not come under threat\, for example a rare disease requiring special treatment\, a difficult airway or intubation\, malignant hyperthermia\, porphyria\, bleeding disorders\, treatment with anticoagulants or immunosuppressants\, transplanted organs\, or participation in a clinical trial. Alerts may be coded where a suitable code exists\, but given their dynamic nature they are frequently recorded as free text.,
+    Information about substantial alerts or warnings that health professionals should be aware of. It may also contain allergies and intolerances\, which are also documented in the Allergies and intolerances section but flagged here in addtion. Alerts cover any clinical information that is imperative to know so that the life or health of the patient does not come under threat\, for example a rare disease requiring special treatment\, a difficult airway or intubation\, malignant hyperthermia\, porphyria\, bleeding disorders\, treatment with anticoagulants or immunosuppressants\, transplanted organs\, or participation in a clinical trial. Alerts may be coded where a suitable code exists\, but given their dynamic nature they are frequently recorded as free text.,
     $loinc#104605-1 )
   * text ^requirements = "body.alerts.generatedNarrative"
   * entry only Reference(Flag or DocumentReference)
@@ -166,7 +166,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRulesWithTitle (
     Diagnostic summary,
     Problems and diagnoses of the hospital stay,
-    All problems and diagnoses that affect care during the inpatient case or are important to be recorded to ensure continuity of care. The diagnostic summary contains a concise\, well specified and codeable summary of problems as they were recognised at the end of hospitalisation\, after all examinations\, ordered by importance with the main problems first. In accordance with international recommendations it differentiates between problems treated during the hospital stay\, meaning problems that were the subject of diagnostics\, therapy\, nursing or continuous monitoring\, and other untreated problems\, which are recorded only where they matter for continuity of care. Each problem is further classified as present on admission\, acquired during the hospital stay\, or not classifiable as either. Additional detail on a problem may be provided in the patient history section or in the synthesis section.,
+    All problems and diagnoses that affect care during the inpatient case or are important to be recorded to ensure continuity of care. The diagnostic summary contains a concise\, well specified and codeable summary of problems as they were recognised at the end of hospitalisation\, after all examinations\, ordered by importance with the main problems first. Additional detail on a problem may be provided in the patient history section or in the synthesis section.,
     $loinc#11535-2 )
   * entry 0..*
   * entry only Reference( ConditionEuCore ) // check if this is too restrictive
@@ -179,7 +179,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRulesWithTitle (
     Significant procedures,
     Significant procedures performed during the stay,
-    Significant surgical and non-surgical procedures performed during hospitalisation which are significant for continuity of care\, for example surgery and other instrumental interventions such as endoscopic or intravascular procedures\, chemotherapy\, radiotherapy\, purification methods such as dialysis or hemoperfusion\, circulation support methods such as counterpulsation\, and the administration of blood derivatives. Purely diagnostic procedures such as MRI or CT are not reported here. If no significant procedure was performed\, this must be stated explicitly using the IPS Absent and Unknown Data code system.,
+    Significant surgical and non-surgical procedures performed during hospitalisation which are significant for continuity of care\, for example surgery and other instrumental interventions such as endoscopic or intravascular procedures\, chemotherapy\, radiotherapy\, purification methods such as dialysis or hemoperfusion\, circulation support methods such as counterpulsation\, and the administration of blood derivatives. Purely diagnostic procedures such as MRI or CT are not reported here.,
     $loinc#10185-7 )
   // $sct#721981007)
   * entry 0..
@@ -195,7 +195,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRulesWithTitle (
     History of medical device use,
     Devices used or implanted before this encounter,
-    The patient history of medical device use\, describing implanted and external medical devices and equipment on which the health status of the patient depends and of which health professionals need to be aware\, for example cardiac pacemakers\, implantable defibrillators\, prostheses and ferromagnetic bone implants. Devices implanted\, explanted or discontinued during the current hospital stay are reported in the Medical devices and implants section. If no information about medical device use is available\, or no relevant device use is known\, this must be stated explicitly using the IPS Absent and Unknown Data code system.,
+    The patient history of medical device use\, describing implanted and external medical devices and equipment on which the health status of the patient depends and of which health professionals need to be aware\, for example cardiac pacemakers\, implantable defibrillators\, prostheses and ferromagnetic bone implants. Devices implanted\, explanted or discontinued during the current hospital stay are reported in the Medical devices and implants section.,
     $loinc#46264-8 )
   * entry 0..
   * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore or DocumentReference) // DeviceUseStatementEuHdr ro be revised
@@ -253,7 +253,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRulesWithTitle (
     Medical devices and implants,
     Devices and implants during the hospital stay,
-    Implants and medical devices used during the hospital stay that affected or may affect the provision of health services\, meaning diagnosis and treatment\, including devices that were explanted or whose use was stopped during hospitalisation. The patient history of earlier medical device use is reported in the History of medical device use section. If no relevant device is reported\, the reason must be stated explicitly using the IPS Absent and Unknown Data code system.,
+    Implants and medical devices used during the hospital stay that affected or may affect the provision of health services\, meaning diagnosis and treatment\, including devices that were explanted or whose use was stopped during hospitalisation. The patient history of earlier medical device use is reported in the History of medical device use section.,
     $loinc#57080-4 )
     // $sct#1184586001) //"Medical device document section (record artifact\)
   * entry 0..
@@ -346,7 +346,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRulesWithTitle (
     Allergies and intolerances,
     Relevant allergies and intolerances,
-    Relevant allergies and intolerances of the patient\, primarily those newly identified during the hospital stay\, describing the kind of reaction\, for example rash or anaphylaxis\, preferably the agent or allergen causing it\, and optionally the criticality and the certainty of the allergy. Any historical allergy or adverse reaction that is still active or relevant for continuity of care is also listed. If no information about allergies is available\, or no allergy is known\, this must be stated clearly in the section.,
+    Relevant allergies and intolerances of the patient\, primarily those newly identified during the hospital stay\, describing the kind of reaction\, for example rash or anaphylaxis\, preferably the agent or allergen causing it\, and optionally the criticality and the certainty of the allergy. Any historical allergy or adverse reaction that is still active or relevant for continuity of care is also listed.,
     $loinc#48765-2 )
   * entry only Reference(AllergyIntolerance or DocumentReference)
   * insert SectionEntrySliceComRules(allergyOrIntolerance, allergyOrIntolerance)
@@ -378,7 +378,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRulesWithTitle (
     Problem list,
     Problems currently being monitored,
-    Clinical problems and conditions of the patient that are currently being monitored and remain relevant after discharge\, including conditions the patient suffered in the past and still suffers from. Unlike the diagnostic summary\, this section may carry a broader description of a condition and its progress\, including treatment and the response of the patient to treatment. Only conditions important for continuity of care are listed. If no information about problems is available\, or no relevant problem is known\, this must be stated explicitly using the IPS Absent and Unknown Data code system.,
+    Clinical problems and conditions of the patient that are currently being monitored and remain relevant after discharge\, including conditions the patient suffered in the past and still suffers from. Unlike the diagnostic summary\, this section may carry a broader description of a condition and its progress\, including treatment and the response of the patient to treatment. Only conditions important for continuity of care are listed.,
     $loinc#11450-4 )
   * entry only Reference(ConditionEuCore or DocumentReference)
   * insert SectionEntrySliceComRules(Clinical problems or conditions currently being monitored for the patient., It lists and describes clinical problems or conditions currently being monitored for the patient. This entry shall be used to document that no information about problems is available\, or that no relevant problems are known.)
@@ -396,7 +396,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRulesWithTitle (
     Immunizations,
     Immunization status and vaccination history,
-    The immunization status and the vaccination history of the patient. The primary purpose of this section is to communicate the current immunization status\, and it may contain the entire vaccination history relevant to the period being summarised\, including the disease or agent targeted\, the vaccine or its components\, the dose within a series\, the date of administration and any planned next dose. If no information about immunizations is available\, or no immunization is known\, this must be stated explicitly using the IPS Absent and Unknown Data code system.,
+    The immunization status and the vaccination history of the patient. The primary purpose of this section is to communicate the current immunization status\, and it may contain the entire vaccination history relevant to the period being summarised\, including the disease or agent targeted\, the vaccine or its components\, the dose within a series\, the date of administration and any planned next dose.,
     $loinc#11369-6 )
   * entry only Reference(Immunization or DocumentReference)
   * insert SectionEntrySliceComRules(Patient's immunization status and pertinent history., It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known.)
@@ -429,7 +429,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRulesWithTitle (
     Attachments,
     Library of attachments,
-    Documents and attachments associated with this report\, listed as a library of source material referenced from the report\, for example scanned source documents\, images\, or reports in PDF form.,
+    Documents and attachments associated with this report\, listed as a library of source material referenced from the report\, for example scanned source documents\, images\, or reports in PDF form. Implementations may define what kind of attachments are allowed and may ignore unexpected attachments for security reasons.,
     $loinc#77599-9 )
   * entry only Reference(DocumentReference or Binary) // Add Bundle ?
 
