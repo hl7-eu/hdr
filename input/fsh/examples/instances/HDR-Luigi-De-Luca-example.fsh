@@ -4,6 +4,7 @@ Title: "Bundle: HL7 Europe Hospital Discharge Report (1)"
 Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca."
 Usage: #example
 
+* language = #en
 * type = #document
 
 * identifier[+].type = $v2-0203#PRN

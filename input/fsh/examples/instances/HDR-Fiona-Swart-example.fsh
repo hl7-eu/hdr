@@ -413,6 +413,7 @@ Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (
 Usage: #example
 * identifier.system = "urn:ietf:rfc:4122"
 * identifier.value = "3e594fe5-3ed5-4305-a214-99c87e1f3bfa"
+* language = #en
 * type = #document
 * timestamp = "2025-05-11T10:18:14.632+00:00"
 * entry[composition][0].fullUrl = "http://example.org/Composition/composition-swart"

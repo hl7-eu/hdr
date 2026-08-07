@@ -8,10 +8,13 @@ Description: """This profile defines obligations for the Hospital Discharge Repo
 
 * identifier insert OblShallPopulateShallProcess
 * type insert OblShallPopulateShallProcess
+* language insert OblShallPopulateShallProcess
 * timestamp insert OblShallPopulateShallProcess
 * entry insert OblShallPopulateShallProcess
 * entry.fullUrl insert OblShallPopulateShallProcess
 * entry.resource insert OblShallPopulateShallProcess
+// No obligation on entry.resource.language: Bundle.entry.resource is of type Resource
+// (abstract), so its children cannot be profiled - see BundleEuHdr.
 
 * entry[composition].resource only CompositionEuHdrObligation
 * entry[patient].resource only PatientEuObligations

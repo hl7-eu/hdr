@@ -6,9 +6,13 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * . ^short = "Hospital Discharge Report bundle"
 * . ^definition = "Hospital Discharge Report bundle."
 * obeys bdl-hdr-1
+* obeys bdl-language-main-match
 
-* identifier 1.. 
+* identifier 1..
   * ^short = "Instance identifier"
+* language 1..1
+  * ^short = "Main language of the Bundle"
+  * ^definition = "The main language of the Hospital Discharge Report Bundle. This element SHALL be populated and represents the main language in which the document content is expressed. Individual resources contained in the Bundle MAY declare their own language; if populated, those resource languages should match the main language of the Bundle (regional variants of the same primary language subtag, such as fr-BE and fr-FR, are considered matching)."
 * type = #document (exactly)
 * timestamp 1.. 
   * ^short = "Instance identifier"
@@ -28,6 +32,11 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry.response ..0
 
 * entry.resource 1..
+// NOTE: Bundle.entry.resource is of type Resource (abstract), so its children cannot be
+// profiled - a rule on entry.resource.language is dropped during snapshot generation.
+// The expectation on individual resource languages is therefore expressed by the
+// bdl-language-main-match invariant below and in the "Bundle and resource language"
+// section of the Design page.
 * entry contains
     composition 1..1 and
     patient 1..* and
@@ -99,3 +108,8 @@ Invariant: bdl-hdr-1
 Description: "An IPS document must have no additional Composition (including Composition subclass) resources besides the first."
 Severity: #error
 Expression: "entry.tail().where(resource is Composition).empty()"
+
+Invariant: bdl-language-main-match
+Description: "If individual resource language values are populated, their primary language subtag SHOULD match the Bundle.language primary language subtag. Regional variants such as fr-BE and fr-FR are considered matching, and the comparison is case-insensitive."
+Severity: #warning
+Expression: "entry.resource.language.all($this.split('-').first().lower() = %resource.language.split('-').first().lower())"
