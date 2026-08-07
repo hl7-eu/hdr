@@ -110,4 +110,4 @@ Expression: "entry.tail().where(resource is Composition).empty()"
 Invariant: bdl-language-main-match
 Description: "If individual resource language values are populated, their primary language subtag SHOULD match the Bundle.language primary language subtag. Regional variants such as fr-BE and fr-FR are considered matching, and the comparison is case-insensitive."
 Severity: #warning
-Expression: "entry.resource.language.all($this.substring(0, iif($this.indexOf('-') = -1, $this.length(), $this.indexOf('-'))).lower() = %resource.language.substring(0, iif(%resource.language.indexOf('-') = -1, %resource.language.length(), %resource.language.indexOf('-'))).lower())"
+Expression: "entry.resource.language.all($this.split('-').first().lower() = %resource.language.split('-').first().lower())"
