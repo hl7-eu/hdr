@@ -166,7 +166,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRulesWithTitle (
     Diagnostic summary,
     Problems and diagnoses of the hospital stay,
-    All problems and diagnoses that affect care during the inpatient case or are important to be recorded to ensure continuity of care. The diagnostic summary contains a concise\, well specified and codeable summary of problems as they were recognised at the end of hospitalisation\, after all examinations\, ordered by importance with the main problems first. Additional detail on a problem may be provided in the patient history section or in the synthesis section.,
+    All problems and diagnoses that affect care during the inpatient case or are important to be recorded to ensure continuity of care. The diagnostic summary contains a concise\, well specified and codeable summary of problems as they were recognised at the end of hospitalisation\, after all examinations. Additional detail on a problem may be provided in the patient history section or in the synthesis section.,
     $loinc#11535-2 )
   * entry 0..*
   * entry only Reference( ConditionEuCore ) // check if this is too restrictive
@@ -404,7 +404,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionEntrySliceComRules(Patient's immunization status and pertinent history., It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known.)
   * insert SectionEntrySliceDefRules (immunization,  0.. ,
     Patient's immunization status and pertinent history.,
-    It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. ,
+    It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized.,
     ImmunizationEuCore)
 
 // -------------------------------------
