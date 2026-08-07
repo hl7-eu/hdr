@@ -21,7 +21,6 @@ This page summarizes the main changes applied to this version of the guide.
   * Past Illness History, Medical Devices, Procedures History
 * Removed obsolete profiles and rulesets
 * Cleaned up unused include statements and obsolete dependency references.
-Remvoed 
 * Refactored terminologies by removing unused value sets, including:
   * Encounter status, admission status, allergens, allergy substances
   * EHDSI condition POA and treatment class

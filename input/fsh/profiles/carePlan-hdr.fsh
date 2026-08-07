@@ -42,7 +42,9 @@ Description: """This profile constrains the CarePlan resource for the purpose of
 // ---------- Activities ----------
 * activity 0..*
 * activity ^requirements = "EHDSCarePlan.activity[x]"
-* activity obeys cpl-hdr-1
+
+// Removed based on 2026-07-17 call decision
+// * activity obeys cpl-hdr-1
 
 * activity.reference ^requirements = "EHDSCarePlan.activity[x]"
 * activity.progress ^short = "Notes about the progress of the activity"
@@ -50,11 +52,13 @@ Description: """This profile constrains the CarePlan resource for the purpose of
 * activity.outcomeCodeableConcept ^short = "Codeable Outcome summary"
 * activity.outcomeReference ^short = "Outcome evidence"
 
-* activity.detail ^short = "Deprecated in R5/R6"
+* activity.detail 
+  * ^short = "Deprecated in R5/R6"
+  * ^comment  = "The details about the planned activities should be provided by using the resources referred by the activity.reference element"
 
-
+/* Removed based on 2026-07-17 call decision
 Invariant: cpl-hdr-1
 Description: "CarePlan.activity.detail is deprecated and no more present in FHIR R5."
 Severity: #warning
-Expression: "detail.empty()"
+Expression: "detail.empty()" */
 

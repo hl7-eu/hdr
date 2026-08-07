@@ -37,10 +37,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * subject 1..1
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the hdr the subject is always the patient."
 
-* category from DocCategoryHdrVS (extensible)
+* category // from DocCategoryHdrVS (extensible) Commented waiting a decision on document categorization
   * ^example[0].label = "Document category"
-  * ^example[0].valueCoding.code = $loinc#LP72467-1
-  * ^example[0].valueCoding.display = "Discharge summary note"
+  * ^example[0].valueCoding = $loinc#LP72467-1 "Discharge summary note"
 
 * event.period ^requirements = "header.period"
 
@@ -94,7 +93,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   // entry slices
   * insert SectionEntrySliceDefRules (flag, 0.. , 
   Alert information , 
-  Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
+  Contains alert information to be communicated. May optionally reference other resources in IPS,
   FlagPatientEuCore)
 
 
@@ -204,7 +203,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     // $sct#721981007)
   * entry 0..
   * entry only Reference(ProcedureEuCore)
-  * section ..0
+//   * section ..0
 
 
 // -------------------------------------
@@ -230,7 +229,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     DeviceUseStatementEuHdr)
 
 
-  * section ..0
+//   * section ..0
 
 
 // === EPS History of Procedures Section ===
