@@ -63,4 +63,19 @@
 
 <p></p>
 
+<h3>Determining the timing of observations relative to the admission</h3>
+
+    <a>  </a>
+
+    <p>
+    Similarly, the relevant elements of an observation can be used to determine whether it
+    occurred before, during, or after the admission, and to establish the chronological
+    order of observations within the encounter. This may be determined from
+    <code>Observation.effective[x]</code>,compared with the period of the encounter referenced by
+    <code>Composition.encounter</code> and/or from the encounter referenced by the
+    observation.
+  </p>
+
+<p></p>
+
 </div>
