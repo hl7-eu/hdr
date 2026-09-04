@@ -17,7 +17,7 @@ By offering this level of flexibility, the implementation guide supports diverse
 
 ### Section entry optionality
 
-In order to support the different maturity levels foreseen for the **European EHR eXchange format** (structured, text-only, unstructured), this version of the guide does not impose the mandatory presence of entries in the HDR sections.  
+In order to support the different maturity levels foreseen for the **European EHR eXchange Format** (structured, text-only, unstructured), this version of the guide does not require entries to be present in the HDR sections.  
 
 However, the presence of entries in the HDR sections is generally recommended to ensure a more structured and interoperable document.  
 

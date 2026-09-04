@@ -10,9 +10,9 @@
 
 Obligations are a means offered by HL7 FHIR to specify functional capabilities that defined actors MAY, SHOULD or SHALL apply to the data elements specified by the profiles.
 
-The current choice has been that of defining the obligation in StructureDefinitions distinct from those used for defining the structural constraints.
+The current choice has been to define obligations in StructureDefinitions distinct from those used to define the structural constraints.
 
-This page describes also the actors that have been used for specifying the obligations.
+This page also describes the actors used for specifying the obligations.
 
 ### Actors
 
@@ -45,10 +45,10 @@ This version of this guide adopts the actors specified by the Xt-EHR joint actio
       <tr><td><a href="StructureDefinition-medicationRequest-obl-eu-hdr.html">MedicationRequest: obligations</a></td><td>This profile defines obligations for the MedicationRequest resource.</td></tr>
       <tr><td><a href="StructureDefinition-medicationStatement-obl-eu-hdr.html">MedicationStatement: obligations</a></td><td>This profile defines obligations for the MedicationStatement resource.</td></tr>
       <tr><td><a href="StructureDefinition-procedure-obl-eu-hdr.html">Procedure: obligations</a></td><td>This profile defines obligations for the Procedure resource.</td></tr>
-      <tr><td><a href="StructureDefinition-patient-obl-eu-hdr.html">Patient: Obligations</a></td><td>This profile defines obligations for the Patient resource.</td></tr>
-      <tr><td><a href="StructureDefinition-specimen-obl-eu-hdr.html">Specimen: Obligations</a></td><td>This profile defines obligations for the Specimen resource.</td></tr>
-      <tr><td><a href="StructureDefinition-allergyIntolerance-obl-eu-hdr.html">Allergy Intolerance: Obligations</a></td><td>This profile defines obligations for the AllergyIntolerance resource.</td></tr>
-      <tr><td><a href="StructureDefinition-humanName-obl-eu-hdr.html">Human Name: Obligations</a></td><td>This profile defines obligations for the HumanName data type.</td></tr>
+      <tr><td><a href="StructureDefinition-patient-obl-eu-hdr.html">Patient: obligations</a></td><td>This profile defines obligations for the Patient resource.</td></tr>
+      <tr><td><a href="StructureDefinition-specimen-obl-eu-hdr.html">Specimen: obligations</a></td><td>This profile defines obligations for the Specimen resource.</td></tr>
+      <tr><td><a href="StructureDefinition-allergyIntolerance-obl-eu-hdr.html">Allergy Intolerance: obligations</a></td><td>This profile defines obligations for the AllergyIntolerance resource.</td></tr>
+      <tr><td><a href="StructureDefinition-humanName-obl-eu-hdr.html">Human Name: obligations</a></td><td>This profile defines obligations for the HumanName data type.</td></tr>
     </tbody>
    </table>
 </div>

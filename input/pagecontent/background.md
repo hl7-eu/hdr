@@ -18,8 +18,7 @@ The EHDS regulation defines a framework to:
 
 #### The European EHR eXchange Format (EEHRxF)
 
-A key role in the regulation is played by the **European EHR eXchange Format** (EEHRxF) defined as a *"commonly used, machine-readable, and allowing transmission of personal electronic health data between different software applications, devices and healthcare providers.*
-*The format should support transmission of structured and unstructured health data."*
+A key role in the regulation is played by the **European EHR eXchange Format** (EEHRxF), defined as a format that is *"commonly used, machine-readable, and allowing transmission of personal electronic health data between different software applications, devices and healthcare providers. The format should support transmission of structured and unstructured health data."*
 
 When the regulation enters into application, EHR-systems will be required to support the EEHRxF for providing and receiving personal electronic health data under a **priority category for primary use** established under the EHDS Regulation. 
 The six priority categories are summarized in the following picture, including the **Hospital Discharge Report** subject of this guide.
@@ -34,11 +33,11 @@ The EEHRxF will be defined by the European Commission through a set of Implement
 
 ### EEHRxF: not a one-size-fits-all solution
 
-The EEHRxF intended use is not limited to the cross-border exchange, but it includes all the possible contexts and purposes of the primary use of health data.
+The intended use of the EEHRxF is not limited to cross-border exchange, but includes all the possible contexts and purposes of the primary use of health data.
 
-Considering this, there is not a one-size-fits-all solution covering all these scopes, but this expectation can be fulfilled only by a coherent ecosystem of specifications - hopefully based on standards - covering European common rules, cross-border and National specifications.
+Considering this, there is no one-size-fits-all solution covering all these scopes, but this expectation can be fulfilled only by a coherent ecosystem of specifications - hopefully based on standards - covering European common rules, cross-border and national specifications.
 
-The following figure summarizes this layered approach
+The following figure summarizes this layered approach.
 
 <div>
 
