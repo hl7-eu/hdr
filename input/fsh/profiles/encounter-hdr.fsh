@@ -92,6 +92,20 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
 * diagnosis.condition only Reference(Condition)
 * diagnosis.condition ^requirements = "EHDSEncounter.dischargeDiagnosis[x]"
 
+* diagnosis ^slicing.discriminator[0].type = #value
+* diagnosis ^slicing.discriminator[0].path = "use"
+* diagnosis ^slicing.ordered = false
+* diagnosis ^slicing.rules = #open
+
+* diagnosis contains admission 0..* and discharge 0..*
+* diagnosis[admission]
+  * ^short = "Admission diagnosis"
+  * use = $diagnosis-role#AD
+
+* diagnosis[discharge]
+  * ^short = "Discharge diagnosis"
+  * use = $diagnosis-role#DD
+
 
 * hospitalization
   * ^requirements = "EHDSEncounter.admission, EHDSEncounter.dischargeDestination"
