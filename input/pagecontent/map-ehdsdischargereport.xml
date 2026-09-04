@@ -381,7 +381,7 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionHospitalCourse</td>
-            <td></td>
+            <td>When the Course of Encounter is not available as a distict structured section; related information can be recorded in the Discharge Summary section.</td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.generatedNarrative</td>
@@ -389,6 +389,13 @@
             <td>Composition</td>
             <td>section:sectionHospitalCourse.text</td>
             <td></td>
+          </tr>
+          <tr>
+            <td>body.courseOfEncounter.generatedNarrative</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>section:sectionDischargeSummary.text</td>
+            <td>When the Course of Encounter narrative is not available as a distict structured section</td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.diagnosticSummary</td>
