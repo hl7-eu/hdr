@@ -159,7 +159,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRulesWithTitle (
     Discharge summary,
     Complete narrative discharge summary,
-    A section carrying textual content of the Hospital Discharge Report as one narrative\, used as an alternative to reporting the content of the report when structured sections are not, or only partially available. Either this section or the Hospital course section\, or both\, shall be present.,
+    A section carrying textual content of the Hospital Discharge Report as one narrative\, used as an alternative to reporting the content of the report when structured sections are not\, or only partially available. Either this section or the Hospital course section\, or both\, shall be present.,
     $loinc#18842-5 )
   * text ^requirements = "body.dischargeSummary.generatedNarrative"
 
