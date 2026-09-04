@@ -51,6 +51,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * attester.party only Reference( PractitionerEuCore or PractitionerRoleEuCore or OrganizationEuCore)
 * section 1..
 * obeys text-or-section
+* obeys discharge-summary-or-hospital-course
 * section ^slicing.discriminator[0].type = #value
 * section ^slicing.discriminator[=].path = "code"
 * section ^slicing.ordered = false
@@ -147,9 +148,25 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Observation)
 
 // -------------------------------------
-// Hospital Course Section 1..1
+// Discharge Summary Section 0 .. 1
+// A section carrying textual content of the Hospital Discharge Report as
+// one narrative, used as an alternative to reporting the content of the
+// report when structured sections are not, or only partially available.
+// See obeys discharge-summary-or-hospital-course below.
 // -------------------------------------
-* section contains sectionHospitalCourse 1..1
+* section contains sectionDischargeSummary 0..1
+* section[sectionDischargeSummary]
+  * insert SectionComRulesWithTitle (
+    Discharge summary,
+    Complete narrative discharge summary,
+    A section carrying textual content of the Hospital Discharge Report as one narrative\, used as an alternative to reporting the content of the report when structured sections are not, or only partially available. Either this section or the Hospital course section\, or both\, shall be present.,
+    $loinc#18842-5 )
+  * text ^requirements = "body.dischargeSummary.generatedNarrative"
+
+// -------------------------------------
+// Hospital Course Section 0..1- Changed based on FHIR-52414 disposition
+// -------------------------------------
+* section contains sectionHospitalCourse 0..1
 * section[sectionHospitalCourse]
   * insert SectionComRulesWithTitle (
     Hospital course,
@@ -435,6 +452,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     $loinc#77599-9 )
   * entry only Reference(DocumentReference or Binary) // Add Bundle ?
 
+
+
+
 // -------------------------------------
 /*
 * section contains sectionEncounters 0..1
@@ -445,45 +465,14 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
       This section lists and describes any healthcare encounters pertinent to the patient's current health status or historical health history.,
       $loinc#46240-8 ) */
 
-/*
-// -------------------------------------
-// Admission Medications Section 0 .. 1 R
-// -------------------------------------
-* section contains sectionAdmissionMedications 0..1
-* section[sectionAdmissionMedications]
-  * insert SectionComRulesWithTitle (
-    Admission Medications,
-    Medication at hospital admission,
-    Admission Medications,
-    $loinc#42346-7  )
-  * entry 0..
-  * entry only Reference(MedicationStatement
-                          or MedicationRequest
-                          or MedicationAdministration
-                          or MedicationDispense
-                          or DocumentReference  )
-  * insert SectionEntrySliceComRules(Admission Medication, Admission Medication)
-  // entry slices
-  * insert SectionEntrySliceDefRules (medicationStatement, 0.. , Admission Medication Statement ,
-    Admission Medication Statement  , $MedicationStatement-uv-ips)
-  * insert SectionEntrySliceDefRules (medicationRequest, 0.. , Admission Medication Request ,
-    Admission Medication Request  , $MedicationRequest-uv-ips)
-*/
-
-/* Admission reason is part of the encounter
-// -------------------------------------
-// Chief Complaint and Reason for Visit Section 0 .. 1
-// -------------------------------------
-* section contains CCandReasonforVisitSection 0..1
-* section[CCandReasonforVisitSection]
-  * insert SectionComRulesWithTitle (Chief Complaint and Reason for Visit,
-                          Chief complaint and reason for visit,
-                          This section records the patient's chief complaint (the patient's own description\) and/or the reason for the patient's visit (the provider's description of the reason for visit\). Local policy determines whether the information is divided into two sections or recorded in one section serving both purposes.,
-                             $loinc#46239-0  )
-*/
 
 /// ========= INVARIANTS =========
 Invariant: text-or-section
 Description: "A Composition SHALL have either text, at least one section, or both."
 Expression: "text.exists() or section.exists()"
+Severity: #error
+
+Invariant: discharge-summary-or-hospital-course
+Description: "At least one of the Discharge summary (LOINC 18842-5) or Hospital course (LOINC 8648-8) sections SHALL be present. Both may be present."
+Expression: "section.where(code.coding.where(system = 'http://loinc.org' and code = '18842-5').exists()).exists() or section.where(code.coding.where(system = 'http://loinc.org' and code = '8648-8').exists()).exists()"
 Severity: #error
