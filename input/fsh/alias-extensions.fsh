@@ -10,6 +10,7 @@ Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/ext
 Alias: $condition-participant-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Condition.participant
 Alias: $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
 Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+Alias: $deviceUsage-bodySite-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceUsage.bodySite
 Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
 Alias: $event-performerFunction = http://hl7.org/fhir/StructureDefinition/event-performerFunction
 Alias: $event-statusReason = http://hl7.org/fhir/StructureDefinition/event-statusReason
