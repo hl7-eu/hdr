@@ -31,6 +31,9 @@ Usage: #example
 * entry[+].fullUrl = "urn:uuid:12fef60c-1fe7-4988-8286-af691889a3f3"
 * entry[=].resource = encounter-wolff-example
 
+* entry[bodyStructure].fullUrl = "urn:uuid:40ae07c9-5f6f-483f-85c9-3b3e9ab8cd7b"
+* entry[=].resource = bodystructure-left-lower-limb
+
 * entry[+].fullUrl = "urn:uuid:38d0593b-7949-489e-9306-95df81a109df"
 * entry[=].resource = fracture-left-leg
 
@@ -219,6 +222,16 @@ Usage: #example
 * serviceProvider = Reference(urn:uuid:3f30e341-19c6-484f-827a-0c58545fb2bc)
 * reasonReference = Reference(urn:uuid:38d0593b-7949-489e-9306-95df81a109df)
 
+Instance: bodystructure-left-lower-limb
+InstanceOf: BodyStructureEuCore
+Title: "BodyStructure: Left Lower Limb"
+Description: "The affected body site of the fracture and of the external fixator, expressed post-coordinated: a laterality-free structure code plus a separate laterality. Referenced from Condition.bodySite and Procedure.bodySite through the bodySite extension, so that consumers do not have to derive the side from a pre-coordinated code."
+Usage: #inline
+* id = "40ae07c9-5f6f-483f-85c9-3b3e9ab8cd7b"
+* patient = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
+* extension[includedStructure].extension[structure].valueCodeableConcept = $sct#61685007 "Lower limb structure (body structure)"
+* extension[includedStructure].extension[laterality].valueCodeableConcept = $sct#7771000 "Left (qualifier value)"
+
 Instance: fracture-left-leg
 InstanceOf: ConditionEuCore
 Title: "Condition: Left Lower Leg Fracture"
@@ -228,6 +241,7 @@ Usage: #inline
 * clinicalStatus = $condition-clinical#active
 * code = $sct#414292006 "Fracture of lower leg (disorder)"
 * bodySite = $sct#362785004 "Entire left lower limb (body structure)"
+* bodySite.extension[bodySite].valueReference = Reference(urn:uuid:40ae07c9-5f6f-483f-85c9-3b3e9ab8cd7b)
 * subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
 * onsetDateTime = "2025-04-20"
 
@@ -240,6 +254,7 @@ Usage: #inline
 * status = #completed
 * code = $sct#302617002 "Application of external fixator system (procedure)"
 * bodySite = $sct#362785004 "Entire left lower limb (body structure)"
+* bodySite.extension[bodySite].valueReference = Reference(urn:uuid:40ae07c9-5f6f-483f-85c9-3b3e9ab8cd7b)
 * subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)
 * performedDateTime = "2025-04-23"
 
