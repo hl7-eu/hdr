@@ -14,6 +14,7 @@ This page summarizes the main changes applied to this version of the guide.
   * `DeviceUseStatementEuHdr.bodySite` now carries the R5 backport extension for `DeviceUsage.bodySite`, constrained to `Reference(BodyStructureEuCore)`. The generic `bodySite` extension is not used, as its context of use does not cover `DeviceUseStatement.bodySite`.
   * `BundleEuHdr` gained a `bodyStructure` entry slice, so the referenced `BodyStructure` resources travel inside the document.
   * `ConditionEuCore` and `ProcedureEuCore` already provide the `bodySite` extension, so they needed no change.
+* Added invariant `dus-hdr-1` on `DeviceUseStatementEuHdr.bodySite` (FHIR-58916), mirroring `eu-bodysite-1` from the EU core profiles: either a body site code or a reference to a `BodyStructure`, but not both.
 
 #### 🧹 Scope Reduction and Cleanup
 
