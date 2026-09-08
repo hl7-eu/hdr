@@ -10,6 +10,10 @@ This page summarizes the main changes applied to this version of the guide.
 * Refactored immunization and allergy profiles, including updated parent references.
 * Updated `modelmap.xml` to reflect revised Flag references.
 * Removed the eHN model and associated ConceptMaps.
+* Enabled body site **laterality without pre-coordination** (FHIR-53428):
+  * `DeviceUseStatementEuHdr.bodySite` now carries the R5 backport extension for `DeviceUsage.bodySite`, constrained to `Reference(BodyStructureEuCore)`. The generic `bodySite` extension is not used, as its context of use does not cover `DeviceUseStatement.bodySite`.
+  * `BundleEuHdr` gained a `bodyStructure` entry slice, so the referenced `BodyStructure` resources travel inside the document.
+  * `ConditionEuCore` and `ProcedureEuCore` already provide the `bodySite` extension, so they needed no change.
 
 #### 🧹 Scope Reduction and Cleanup
 
@@ -31,3 +35,4 @@ This page summarizes the main changes applied to this version of the guide.
 
 * Updated section titles and descriptions in HDR example FSH files for clarity.
 * Improved example references and corrected documentation issues.
+* Added examples for post-coordinated body site laterality (FHIR-53428): a `BodyStructure` carrying a laterality-free structure code plus a separate laterality, referenced from a Condition, a Procedure and a DeviceUseStatement.

@@ -15,6 +15,7 @@ Description: "This profile represents the constraints applied to the DeviceUseSt
 * timing[x] insert OblShouldPopulateOnly
 * device insert OblShallPopulateOnly
 * bodySite insert OblShouldPopulateOnly
+* bodySite.extension[bodySite] insert OblShouldPopulateOnly
 * note insert OblShouldPopulateOnly
 
 * text

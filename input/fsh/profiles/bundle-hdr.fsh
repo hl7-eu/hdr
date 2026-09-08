@@ -42,6 +42,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     patient 1..* and
     encounter 1..* and
     allergyIntolerance 0..* and
+    bodyStructure 0..* and
     condition 0..* and
     device 0..* and
     deviceUseStatement 0..* and
@@ -71,6 +72,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[patient].resource only PatientEuCore
 * entry[encounter].resource only EncounterEuHdr
 * entry[allergyIntolerance].resource only AllergyIntoleranceEuCore
+* entry[bodyStructure].resource only BodyStructureEuCore
 * entry[condition].resource only ConditionEuCore
 * entry[device].resource only DeviceEuHdr
 * entry[deviceUseStatement].resource only DeviceUseStatementEuHdr

@@ -12,7 +12,7 @@ Description: "This profile defines obligations for the Procedure resource by thi
 * bodySite insert OblShouldPopulateOnly
 * note insert OblShouldPopulateOnly
 
-* extension[bodySite]
+* bodySite.extension[bodySite]
 * text
 * performer.actor
 * performer.onBehalfOf

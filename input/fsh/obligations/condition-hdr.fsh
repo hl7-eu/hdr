@@ -14,7 +14,7 @@ Description: """This profile defines obligations for the Condition in the scope 
 * abatementDateTime insert OblShallPopulateOnly
 * bodySite insert OblShouldPopulateOnly
 
-* extension[bodySite]
+* bodySite.extension[bodySite]
 * category
 * severity
 * text

@@ -19,5 +19,12 @@ Description: "This profile represents the constraints applied to the DeviceUseSt
 * device only Reference(DeviceEuHdr)
 * bodySite from SNOMEDCTBodyStructures (preferred)
 * bodySite ^requirements = "EHDSDeviceUse.bodySite"
+// The R5 backport is used instead of http://hl7.org/fhir/StructureDefinition/bodySite, whose
+// context of use does not cover DeviceUseStatement.bodySite. In R5 the same content is the
+// native DeviceUsage.bodySite CodeableReference(BodyStructure), so nothing has to migrate.
+* bodySite.extension contains $deviceUsage-bodySite-r5 named bodySite 0..1
+* bodySite.extension[bodySite] ^short = "Body site, when laterality or qualifiers cannot be pre-coordinated in bodySite"
+* bodySite.extension[bodySite] ^requirements = "EHDSDeviceUse.bodySite"
+* bodySite.extension[bodySite].valueReference only Reference(BodyStructureEuCore)
 * status ^requirements = "EHDSDeviceUse.header.status"
 * note ^requirements = "EHDSDeviceUse.note"
