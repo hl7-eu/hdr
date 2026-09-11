@@ -17,6 +17,7 @@ Description: "This profile represents the constraints applied to the DeviceUseSt
 * reasonCode ^requirements = "EHDSDeviceUse.reason[x]"
 * reasonReference ^requirements = "EHDSDeviceUse.reason[x]"
 * device only Reference(DeviceEuHdr)
+* bodySite obeys dus-hdr-1
 * bodySite from SNOMEDCTBodyStructures (preferred)
 * bodySite ^requirements = "EHDSDeviceUse.bodySite"
 // The R5 backport is used instead of http://hl7.org/fhir/StructureDefinition/bodySite, whose
@@ -28,3 +29,11 @@ Description: "This profile represents the constraints applied to the DeviceUseSt
 * bodySite.extension[bodySite].valueReference only Reference(BodyStructureEuCore)
 * status ^requirements = "EHDSDeviceUse.header.status"
 * note ^requirements = "EHDSDeviceUse.note"
+
+
+// Mirrors eu-bodysite-1 in condition-eu-core and procedure-eu-core, with the extension URL
+// adjusted to the R5 backport used above, so that the three profiles state the same rule.
+Invariant: dus-hdr-1
+Description: "Either a body site code or a reference to a BodyStructure resource SHALL be used, but not both."
+Severity: #error
+Expression: "(coding.empty() and text.empty()) or extension('http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceUsage.bodySite').empty()"
