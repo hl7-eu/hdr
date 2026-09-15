@@ -175,6 +175,12 @@ Unable to check whether the code is in the value set 'http://fhir.ehdsi.eu/hdr/V
 
 # not known identification systems
 No definition could be found for URL value 'https://hl7europe.org/example-identifier'
+No definition could be found for URL value 'https://example.hospital.org/sid/compositions'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rcis'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rid'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/krzp'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/krpzs'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/icp'
 
 No definition could be found for URL value 'urn:ietf:rfc:4122'
 No definition could be found for URL value 'urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6'
