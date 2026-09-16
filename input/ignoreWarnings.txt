@@ -3,6 +3,9 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
+# False positive: the reference FHIRPath engine incorrectly infers split() as a singleton instead of an ordered collection.
+bdl-language-main-match: Found a use of a collection operator on something that is not a collection at 'split('-').first().lower()' - check that there's no mistakes in the expression syntax
+
 # == Won't fixed see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/QA.20error.20with.20ActorDefinition.20in.20R4.20IG
 Unknown code 'system' in the CodeSystem 'http://hl7.org/fhir/examplescenario-actor-type' version '4.0.1'
 
@@ -219,5 +222,3 @@ The ImplementationGuide is based on FHIR version 4.0.1 but package xtehr.eu.ehds
 
 # No keys defined for Additional Binding
 Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())'
-
-
