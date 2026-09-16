@@ -57,8 +57,9 @@ Usage: #example
 * entry[observation][=].resource = ExampleChestCircumference
 * entry[observation][+].fullUrl = "urn:uuid:5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d"
 * entry[observation][=].resource = ExampleHeadCircumference
-* entry[observation][+].fullUrl = "urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a"
-* entry[observation][=].resource = ExampleAbdominalCircumference
+// Not referred anywhere
+// * entry[observation][+].fullUrl = "urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a"
+// * entry[observation][=].resource = ExampleAbdominalCircumference
 * entry[observation][+].fullUrl = "urn:uuid:6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b"
 * entry[observation][=].resource = ExampleHeight
 * entry[observation][+].fullUrl = "urn:uuid:5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c"

@@ -57,11 +57,6 @@ WARNING: StructureDefinition.where(url = 'http://hl7.eu/fhir/hdr/StructureDefini
 
 
 
-# known non-matching slices
-%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-eu-hdr|0.1.0-ballot%
-%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr|0.1.0-ballot%
-
-
 # See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Issue.20using.20version-specific.20packages
 The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
 The canonical URL http://hl7.eu/fhir/extensions doesn't point to an actual ImplementationGuide resource
@@ -150,16 +145,22 @@ Found multiple matching profiles for urn:uuid:a19e48e1-2271-4cdb-9c76-b0626c7a53
 Found multiple matching profiles for urn:uuid:fd7f7580-5788-45dd-88ec-dca615d69c7d among choices: http://hl7.org/fhir/StructureDefinition/Observation|4.0.1, http://hl7.org/fhir/StructureDefinition/vitalsigns|4.0.1
 
 
-# Non mathcing slices
+# known non-matching slices
 %This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr%
-
 %This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medication-eu-hdr%
-
 %This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-eu-hdr%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/deviceUseStatement-eu-hdr%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/medicationRequest-eu-core%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/medicationStatement-eu-core%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/encounter-eu-hdr%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/medicalTestResult-eu-core%
 
 # used local extensions not speciifed in the profile
-This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/HumanName-eu|0.1.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
-This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core|0.1.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/HumanName-eu%
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core%
+
+
+
 
 # Not expanded value set
 Unable to expand included value set 'http://terminology.ehdsi.eu/ValueSet/eHDSISubstance': Unable to expand imported value set: Error from https://tx.fhir.org/r4: Unable to provide support for code system https://spor.ema.europa.eu/v2/SubstanceDefinition (and Error from https://tx.fhir.org/r4: Unable to provide support for code system https://spor.ema.europa.eu/v2/SubstanceDefinition)
@@ -167,8 +168,6 @@ Unable to expand included value set 'http://terminology.ehdsi.eu/ValueSet/eHDSIS
 # experimental CodeSystem temporarly used, waiting for LOINC codes assignement
 Reference to experimental CodeSystem http://hl7.eu/fhir/hdr/CodeSystem/temporarySystem-hdr-eu|0.1.0-ballot
 
-# known non-matching slices
-%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medication-eu-hdr%
 
 # not known systems
 Unable to check whether the code is in the value set 'http://fhir.ehdsi.eu/hdr/ValueSet/eHDSISubstanceWithExceptions|0.1.0-preview' because the code system https://spor.ema.europa.eu/v2/SubstanceDefinition| was not found
@@ -189,6 +188,7 @@ No definition could be found for URL value 'http://fhir.nl/fhir/NamingSystem/bsn
 No definition could be found for URL value 'urn:oid:2.16.840.1.113883.2.4.6.7'
 No definition could be found for URL value 'http://hl7europe.org/policy-rules'
 No definition could be found for URL value 'http://hl7europe.org/examples/pms'
+No definition could be found for URL value 'https://sukl.cz/terminology/CodeSystem/dlp-lecivepripravky'
 
 # multiple different potential versions matches
 TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS
@@ -201,3 +201,23 @@ MSG_DEPENDS_ON_DEPRECATED_NOTE
 
 # Code not defined in the addional binding
 Terminology_TX_NoValid_3_CC
+
+# No valid display name for cs language
+NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK
+There are no valid display names found for the code http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP for language(s) 'cs'. The display is 'Inpatient encounter' which is a valid display for the default language
+
+# Draft code system used
+MSG_DRAFT
+
+# OID not assigned
+The resource ImplementationGuide/hl7.fhir.eu.hdr could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+%could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)%
+
+# XtEHR Logical model is specified using HL7 FHIR R5 (no issues)
+This IG is version 4.0.1, while the IG 'xtehr.eu.ehds.models' is from version 5.0.0
+The ImplementationGuide is based on FHIR version 4.0.1 but package xtehr.eu.ehds.models#1.0.0 is based on FHIR version 5.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
+
+# No keys defined for Additional Binding
+Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())'
+
+

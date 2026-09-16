@@ -193,7 +193,7 @@ Usage: #example
 // * valueQuantity = 9 $ucum#k[arb'U]/L "k[arb'U]/L"
 
 Instance: lab-swart-3
-InstanceOf: MedicalTestResultEuCore
+InstanceOf: LaboratoryObservationEuHdrObligation
 Title: "Observation: ABO group"
 Description: "ABO blood group type in blood."
 Usage: #example
@@ -206,7 +206,7 @@ Usage: #example
 * valueCodeableConcept = $sct#58460004 "Blood group O"
 
 Instance: lab-swart-4
-InstanceOf: MedicalTestResultEuCore
+InstanceOf: LaboratoryObservationEuHdrObligation
 Title: "Observation: Rh D Factor"
 Description: "Laboratory observation representing Rh D factor in blood."
 Usage: #inline
