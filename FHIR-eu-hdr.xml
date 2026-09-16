@@ -26,40 +26,71 @@
 <artifact deprecated="true" id="StructureDefinition/allergyIntolerance-eu-hdr" key="StructureDefinition-allergyIntolerance-eu-hdr" name="Allergy Intolerance (HDR)"/>
 <artifact deprecated="true" id="ValueSet/allergy-intolerance-eu-hdr" key="ValueSet-allergy-intolerance-eu-hdr" name="Allergy Intolerance (with exceptions)"/>
 <artifact id="StructureDefinition/allergyIntolerance-obl-eu-hdr" key="StructureDefinition-allergyIntolerance-obl-eu-hdr" name="Allergy Intolerance: obligations"/>
+<artifact id="AllergyIntolerance/6cf80cb1-9766-470f-ac36-b1d3d8950f1b" key="AllergyIntolerance-6cf80cb1-9766-470f-ac36-b1d3d8950f1b" name="AllergyIntolerance - Strawberry for patient Novak"/>
 <artifact id="AllergyIntolerance/penicillin-allergy" key="AllergyIntolerance-penicillin-allergy" name="AllergyIntolerance: Critical Allergy to Penicillin"/>
+<artifact id="Organization/3f85726c-ad2f-441b-89ce-100000000033" key="Organization-3f85726c-ad2f-441b-89ce-100000000033" name="Ambulance interního lékařství, MUDr. Jiří Zdvořilý"/>
+<artifact id="BodyStructure/bodystructure-left-hip" key="BodyStructure-bodystructure-left-hip" name="BodyStructure: Left Hip Joint"/>
 <artifact id="StructureDefinition/bundle-eu-hdr" key="StructureDefinition-bundle-eu-hdr" name="Bundle (HDR)"/>
 <artifact id="Bundle/HDR-Luigi-De-Luca-Example" key="Bundle-HDR-Luigi-De-Luca-Example" name="Bundle: HL7 Europe Hospital Discharge Report (1)"/>
 <artifact id="Bundle/HDR-Reijer-Wolff-Example" key="Bundle-HDR-Reijer-Wolff-Example" name="Bundle: HL7 Europe Hospital Discharge Report (2)"/>
 <artifact id="Bundle/HDR-Paolo-Marcheschi-Example" key="Bundle-HDR-Paolo-Marcheschi-Example" name="Bundle: HL7 Europe Hospital Discharge Report (3)"/>
+<artifact id="Bundle/DischargeBundle-Novak-Petr-Subsections" key="Bundle-DischargeBundle-Novak-Petr-Subsections" name="Bundle: HL7 Europe Hospital Discharge Report (4)"/>
 <artifact id="Bundle/bundle-swart" key="Bundle-bundle-swart" name="Bundle: HL7 Europe Hospital Discharge Report (4)"/>
 <artifact id="StructureDefinition/bundle-obl-eu-hdr" key="StructureDefinition-bundle-obl-eu-hdr" name="Bundle: obligations"/>
+<artifact id="Observation/10f5c49e-086d-4016-8dd1-10000000001b" key="Observation-10f5c49e-086d-4016-8dd1-10000000001b" name="CRP - Novák Petr"/>
+<artifact id="Condition/3f85726c-ad2f-441b-89ce-100000000031" key="Condition-3f85726c-ad2f-441b-89ce-100000000031" name="CZ-Condition-HDR Example"/>
+<artifact id="Procedure/3f85726c-ad2f-441b-89ce-100000000020" key="Procedure-3f85726c-ad2f-441b-89ce-100000000020" name="CZ-Procedure-HDR Example - Pacemaker 2"/>
 <artifact id="StructureDefinition/carePlan-eu-hdr" key="StructureDefinition-carePlan-eu-hdr" name="Care Plan (HDR)"/>
 <artifact id="StructureDefinition/carePlan-obl-eu-hdr" key="StructureDefinition-carePlan-obl-eu-hdr" name="Care Plan: obligations"/>
+<artifact id="CarePlan/9c913d06-84fe-4d35-b35b-8b0c7965f535" key="CarePlan-9c913d06-84fe-4d35-b35b-8b0c7965f535" name="CarePlan-Novak-Petr"/>
 <artifact id="CarePlan/b84038f8-9541-4c5b-93b0-a7f1b8e55bd3" key="CarePlan-b84038f8-9541-4c5b-93b0-a7f1b8e55bd3" name="CarePlan: Diabetes Management Plan"/>
 <artifact id="StructureDefinition/composition-eu-hdr" key="StructureDefinition-composition-eu-hdr" name="Composition (HDR)"/>
 <artifact id="Composition/b9dc409d-ec81-4556-9fac-4dc3f731c199" key="Composition-b9dc409d-ec81-4556-9fac-4dc3f731c199" name="Composition: HDR (1)"/>
+<artifact id="Composition/701f51d5-78bf-428e-a6b5-349c2614ce07" key="Composition-701f51d5-78bf-428e-a6b5-349c2614ce07" name="Composition: HDR (Petr Novák)"/>
 <artifact id="StructureDefinition/composition-obl-eu-hdr" key="StructureDefinition-composition-obl-eu-hdr" name="Composition: obligations"/>
 <artifact deprecated="true" id="StructureDefinition/condition-eu-hdr" key="StructureDefinition-condition-eu-hdr" name="Condition (HDR)"/>
 <artifact id="ValueSet/condition-eu-hdr" key="ValueSet-condition-eu-hdr" name="Condition Value Set"/>
+<artifact id="Condition/fdf9e92d-ac48-4706-b15b-d2eaca85f45f" key="Condition-fdf9e92d-ac48-4706-b15b-d2eaca85f45f" name="Condition-HDR Example E8.90 for patient Novak"/>
+<artifact id="Condition/35717696-8a99-4f99-a938-ec0ec88a65a2" key="Condition-35717696-8a99-4f99-a938-ec0ec88a65a2" name="Condition-HDR Example K40.9"/>
+<artifact id="Condition/3f85726c-ad2f-441b-89ce-10000000002f" key="Condition-3f85726c-ad2f-441b-89ce-10000000002f" name="Condition-HDR Iron Deficiency Anemia"/>
+<artifact id="Condition/condition-left-hip-osteoarthritis" key="Condition-condition-left-hip-osteoarthritis" name="Condition: Osteoarthritis of the Left Hip"/>
 <artifact id="Condition/a5bf69e4-24db-48a8-9eda-71516dcaf1d9" key="Condition-a5bf69e4-24db-48a8-9eda-71516dcaf1d9" name="Condition: Type 2 Diabetes Mellitus"/>
 <artifact id="StructureDefinition/condition-obl-eu-hdr" key="StructureDefinition-condition-obl-eu-hdr" name="Condition: obligations"/>
 <artifact deprecated="true" id="StructureDefinition/consent-eu-hdr" key="StructureDefinition-consent-eu-hdr" name="Consent (Advance Directives HDR)"/>
 <artifact deprecated="true" id="Consent/example-consent-dnr" key="Consent-example-consent-dnr" name="Consent: Advance Directive DNR"/>
 <artifact deprecated="true" id="StructureDefinition/consent-obl-eu-hdr" key="StructureDefinition-consent-obl-eu-hdr" name="Consent: obligations"/>
 <artifact id="StructureDefinition/device-eu-hdr" key="StructureDefinition-device-eu-hdr" name="Device (HDR)"/>
+<artifact id="Device/3f85726c-ad2f-441b-89ce-100000000030" key="Device-3f85726c-ad2f-441b-89ce-100000000030" name="Device-Pacemaker"/>
 <artifact id="Device/pacemaker-001" key="Device-pacemaker-001" name="Device: Implantable Pacemaker"/>
+<artifact id="Device/hip-prosthesis-001" key="Device-hip-prosthesis-001" name="Device: Total Hip Replacement Prosthesis"/>
 <artifact id="StructureDefinition/device-obl-eu-hdr" key="StructureDefinition-device-obl-eu-hdr" name="Device: obligations"/>
 <artifact id="StructureDefinition/deviceUseStatement-eu-hdr" key="StructureDefinition-deviceUseStatement-eu-hdr" name="DeviceUseStatement (HDR)"/>
 <artifact id="DeviceUseStatement/example-deviceusestatement-euhdr" key="DeviceUseStatement-example-deviceusestatement-euhdr" name="DeviceUseStatement: Implanted Pacemaker"/>
+<artifact id="DeviceUseStatement/example-deviceusestatement-hip-euhdr" key="DeviceUseStatement-example-deviceusestatement-hip-euhdr" name="DeviceUseStatement: Total Hip Replacement Prosthesis"/>
 <artifact id="StructureDefinition/deviceUseStatement-obl-eu-hdr" key="StructureDefinition-deviceUseStatement-obl-eu-hdr" name="DeviceUseStatement: obligations"/>
+<artifact id="Medication/3f85726c-ad2f-441b-89ce-10000000002c" key="Medication-3f85726c-ad2f-441b-89ce-10000000002c" name="Dispense – Euthyrox"/>
+<artifact id="MedicationDispense/133cea11-09c6-4147-80af-6c8f0b2d4e3a" key="MedicationDispense-133cea11-09c6-4147-80af-6c8f0b2d4e3a" name="Dispense – Euthyrox for patient Novak"/>
+<artifact id="MedicationDispense/b0001bf8-976a-4d7d-b192-8c8f0b2d4e3a" key="MedicationDispense-b0001bf8-976a-4d7d-b192-8c8f0b2d4e3a" name="Dispense – Ibalgin 400"/>
+<artifact id="MedicationDispense/65c49e6d-0951-4e83-8e2c-7c8f0b2d4e3a" key="MedicationDispense-65c49e6d-0951-4e83-8e2c-7c8f0b2d4e3a" name="Dispense – Paracetamol"/>
 <artifact id="ValueSet/doc-category-eu-hdr" key="ValueSet-doc-category-eu-hdr" name="Document Category Value Set"/>
+<artifact id="Observation/3f85726c-ad2f-441b-89ce-100000000026" key="Observation-3f85726c-ad2f-441b-89ce-100000000026" name="Dosažený stupeň vzdělání"/>
 <artifact id="StructureDefinition/encounter-eu-hdr" key="StructureDefinition-encounter-eu-hdr" name="Encounter (HDR)"/>
 <artifact id="ValueSet/encounter-class-eu-hdr" key="ValueSet-hdr-encounterClass-eu-hdr" name="Encounter Class Value Set"/>
 <artifact id="ValueSet/encounter-status-eu-hdr" key="ValueSet-encounter-status-eu-hdr" name="Encounter Status Value Set"/>
 <artifact id="ValueSet/encounter-type-eu-hdr" key="ValueSet-encounter-type-eu-hdr" name="Encounter Type Value Set"/>
 <artifact deprecated="true" id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
+<artifact id="Encounter/10f5c49e-086d-4016-8dd1-b555306bf620" key="Encounter-10f5c49e-086d-4016-8dd1-b555306bf620" name="Encounter-HDR Example of encounter with emergency priority"/>
 <artifact id="Encounter/12fef60c-1fe7-4988-8286-af691889a3f3" key="Encounter-12fef60c-1fe7-4988-8286-af691889a3f3" name="Encounter: Hospital Admission and Discharge"/>
 <artifact id="StructureDefinition/encounter-obl-eu-hdr" key="StructureDefinition-encounter-obl-eu-hdr" name="Encounter: obligations"/>
+<artifact id="Observation/6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a" key="Observation-6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a" name="ExampleAbdominalCircumference"/>
+<artifact id="Observation/7cf304de-5ae3-4621-8531-9c8f0b2d4e3a" key="Observation-7cf304de-5ae3-4621-8531-9c8f0b2d4e3a" name="ExampleBMI"/>
+<artifact id="Observation/8d2aea77-f576-4d0f-9508-537359aa44d6" key="Observation-8d2aea77-f576-4d0f-9508-537359aa44d6" name="ExampleBloodPressure"/>
+<artifact id="Observation/4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a" key="Observation-4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a" name="ExampleChestCircumference"/>
+<artifact id="Observation/5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d" key="Observation-5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d" name="ExampleHeadCircumference"/>
+<artifact id="Observation/6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b" key="Observation-6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b" name="ExampleHeight"/>
+<artifact id="Observation/3f85726c-ad2f-441b-89ce-10000000001d" key="Observation-3f85726c-ad2f-441b-89ce-10000000001d" name="ExampleSdohAlcohol"/>
+<artifact id="Observation/3f85726c-ad2f-441b-89ce-10000000001c" key="Observation-3f85726c-ad2f-441b-89ce-10000000001c" name="ExampleSdohSmoking"/>
+<artifact id="Observation/5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c" key="Observation-5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c" name="ExampleWeight"/>
 <artifact deprecated="true" id="ValueSet/exposureAgent-eu-hdr" key="ValueSet-exposureAgent-eu-hdr" name="Exposure of transmissible agents"/>
 <artifact deprecated="true" id="StructureDefinition/familyMemberHistory-eu-hdr" key="StructureDefinition-familyMemberHistory-eu-hdr" name="FamilyMemberHistory (HDR)"/>
 <artifact id="FamilyMemberHistory/635c22e7-d7f1-45ad-9b4d-d4fe35239085" key="FamilyMemberHistory-635c22e7-d7f1-45ad-9b4d-d4fe35239085" name="FamilyMemberHistory: Type 2 Diabetes Mellitus - Mother"/>
@@ -75,6 +106,7 @@
 <artifact id="StructureDefinition/humanName-obl-eu-hdr" key="StructureDefinition-humanName-obl-eu-hdr" name="Human Name: obligations"/>
 <artifact deprecated="true" id="StructureDefinition/immunization-eu-hdr" key="StructureDefinition-immunization-eu-hdr" name="Immunization (HDR)"/>
 <artifact deprecated="true" id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
+<artifact id="Immunization/3f85726c-ad2f-441b-89ce-10000000001e" key="Immunization-3f85726c-ad2f-441b-89ce-10000000001e" name="Immunization example of Covid"/>
 <artifact id="Immunization/example-covid19-vax-admin" key="Immunization-example-covid19-vax-admin" name="Immunization: COVID-19"/>
 <artifact id="StructureDefinition/immunization-obl-eu-hdr" key="StructureDefinition-immunization-obl-eu-hdr" name="Immunization: obligations"/>
 <artifact deprecated="true" id="StructureDefinition/immunizationRecommendation-eu-hdr" key="StructureDefinition-immunizationRecommendation-eu-hdr" name="ImmunizationRecommendation (HDR)"/>
@@ -85,6 +117,8 @@
 <artifact deprecated="true" id="ValueSet/medical-devices-eu-hdr" key="ValueSet-medical-devices-eu-hdr" name="Medical Devices (SNOMED CT)"/>
 <artifact deprecated="true" id="ValueSet/medical-devices-snomed-absent-unknown-eu-hdr" key="ValueSet-medical-devices-snomed-absent-unknown-eu-hdr" name="Medical Devices - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact deprecated="true" id="StructureDefinition/medication-eu-hdr" key="StructureDefinition-medication-eu-hdr" name="Medication (HDR)"/>
+<artifact id="Medication/3f85726c-ad2f-441b-89ce-10000000002e" key="Medication-3f85726c-ad2f-441b-89ce-10000000002e" name="Medication – Ibalgin 400"/>
+<artifact id="Medication/3f85726c-ad2f-441b-89ce-10000000002d" key="Medication-3f85726c-ad2f-441b-89ce-10000000002d" name="Medication – Paracetamol"/>
 <artifact id="Medication/01A-Cefuroxime1500GenericExplicit" key="Medication-01A-Cefuroxime1500GenericExplicit" name="Medication: 01A-Cefuroxime1500GenericExplicit"/>
 <artifact id="Medication/01C-Cefuroxime1500Branded" key="Medication-01C-Cefuroxime1500Branded" name="Medication: 01C-Cefuroxime1500Branded"/>
 <artifact id="StructureDefinition/medication-obl-eu-hdr" key="StructureDefinition-medication-obl-eu-hdr" name="Medication: obligations"/>
@@ -98,8 +132,12 @@
 <artifact id="MedicationRequest/400C-prescription-cefuroxime-singleline" key="MedicationRequest-400C-prescription-cefuroxime-singleline" name="MedicationRequest: 400C-prescription-cefuroxime-singleline"/>
 <artifact id="StructureDefinition/medicationRequest-obl-eu-hdr" key="StructureDefinition-medicationRequest-obl-eu-hdr" name="MedicationRequest: obligations"/>
 <artifact deprecated="true" id="StructureDefinition/medicationStatement-eu-hdr" key="StructureDefinition-medicationStatement-eu-hdr" name="MedicationStatement (HDR)"/>
+<artifact id="MedicationStatement/47472c99-09bf-4007-bfaa-16c9665ae090" key="MedicationStatement-47472c99-09bf-4007-bfaa-16c9665ae090" name="MedicationStatement-HDR Example: Euthyrox"/>
+<artifact id="MedicationStatement/bf08b62b-0abd-4e88-9092-ce0228382e51" key="MedicationStatement-bf08b62b-0abd-4e88-9092-ce0228382e51" name="MedicationStatement-HDR Example: Ibalgin"/>
+<artifact id="MedicationStatement/f34114fc-138f-4bd8-8e1a-804d14ec9986" key="MedicationStatement-f34114fc-138f-4bd8-8e1a-804d14ec9986" name="MedicationStatement-HDR Example: Paracetamol"/>
 <artifact id="MedicationStatement/example-medicationstatement-euhdr" key="MedicationStatement-example-medicationstatement-euhdr" name="MedicationStatement: Enalapril"/>
 <artifact id="StructureDefinition/medicationStatement-obl-eu-hdr" key="StructureDefinition-medicationStatement-obl-eu-hdr" name="MedicationStatement: obligations"/>
+<artifact id="Observation/f95f843e-701f-434a-94c9-3c8f0b2d4e3a" key="Observation-f95f843e-701f-434a-94c9-3c8f0b2d4e3a" name="Observation - Travel History"/>
 <artifact id="Observation/lab-swart-3" key="Observation-lab-swart-3" name="Observation: ABO group"/>
 <artifact id="Observation/gewicht-swart" key="Observation-gewicht-swart" name="Observation: Body weight"/>
 <artifact deprecated="true" id="Observation/example-img-finding-lung-nodule" key="Observation-example-img-finding-lung-nodule" name="Observation: Imaging Finding"/>
@@ -114,21 +152,42 @@
 <artifact deprecated="true" id="StructureDefinition/observation-travel-eu-hdr" key="StructureDefinition-observation-travel-eu-hdr" name="Observation: country visited (HDR)"/>
 <artifact deprecated="true" id="StructureDefinition/observation-travel-obl-eu-hdr" key="StructureDefinition-observation-travel-obl-eu-hdr" name="Observation: country visited: obligations"/>
 <artifact id="StructureDefinition/observation-obl-eu-hdr" key="StructureDefinition-observation-obl-eu-hdr" name="Observation: obligations"/>
+<artifact id="Organization/ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169" key="Organization-ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169" name="Organization-1"/>
+<artifact id="Organization/9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1" key="Organization-9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1" name="Organization-L1"/>
+<artifact id="Organization/a4641bd0-34af-4038-a7db-872d08a54df9" key="Organization-a4641bd0-34af-4038-a7db-872d08a54df9" name="Organization-L1-HOSP"/>
+<artifact id="Organization/af2b3114-e872-43b9-9875-cceb39122f7f" key="Organization-af2b3114-e872-43b9-9875-cceb39122f7f" name="Organization-L1-Odd"/>
 <artifact id="Organization/organization-sophia" key="Organization-organization-sophia" name="Organization: Erasmus MC"/>
 <artifact id="StructureDefinition/organization-obl-eu-hdr" key="StructureDefinition-organization-obl-eu-hdr" name="Organization: obligations"/>
+<artifact id="Patient/3f85726c-ad2f-441b-89ce-100000000000" key="Patient-3f85726c-ad2f-441b-89ce-100000000000" name="Patient-Novak-Petr"/>
 <artifact id="Patient/patient-swart" key="Patient-patient-swart" name="Patient: Dutch Patient"/>
 <artifact id="StructureDefinition/patient-obl-eu-hdr" key="StructureDefinition-patient-obl-eu-hdr" name="Patient: obligations"/>
+<artifact id="DeviceUseStatement/3f85726c-ad2f-441b-89ce-10000000001f" key="DeviceUseStatement-3f85726c-ad2f-441b-89ce-10000000001f" name="Použití kardiostimulátoru"/>
+<artifact id="Practitioner/5c33bffd-d3b6-401f-85dc-db99d48b8a3b" key="Practitioner-5c33bffd-d3b6-401f-85dc-db99d48b8a3b" name="Practitioner-2"/>
+<artifact id="Practitioner/Practitioner-Admitter" key="Practitioner-Practitioner-Admitter" name="Practitioner-Admitter"/>
+<artifact id="Practitioner/a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a" key="Practitioner-a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a" name="Practitioner-Author"/>
+<artifact id="PractitionerRole/2b7e9637-5018-4542-9faf-d5abdee7b849" key="PractitionerRole-2b7e9637-5018-4542-9faf-d5abdee7b849" name="Practitioner-Author-detail"/>
+<artifact id="Practitioner/Practitioner-Referrer" key="Practitioner-Practitioner-Referrer" name="Practitioner-Referrer"/>
+<artifact id="PractitionerRole/3f85726c-ad2f-441b-89ce-100000000029" key="PractitionerRole-3f85726c-ad2f-441b-89ce-100000000029" name="Practitioner-Referrer-detail"/>
+<artifact id="Practitioner/860c684f-aba1-40d9-94cf-721d70237b52" key="Practitioner-860c684f-aba1-40d9-94cf-721d70237b52" name="Practitioner-UZV"/>
 <artifact id="StructureDefinition/practitioner-obl-eu-hdr" key="StructureDefinition-practitioner-obl-eu-hdr" name="Practitioner: obligations"/>
 <artifact id="StructureDefinition/practitionerRole-obl-eu-hdr" key="StructureDefinition-practitionerRole-obl-eu-hdr" name="PractitionerRole: obligations"/>
 <artifact deprecated="true" id="StructureDefinition/procedure-eu-hdr" key="StructureDefinition-procedure-eu-hdr" name="Procedure (HDR)"/>
 <artifact deprecated="true" id="ValueSet/procedure-snomed-eu-hdr" key="ValueSet-procedure-snomed-eu-hdr" name="Procedure codes: Snomed CT"/>
+<artifact id="Procedure/ffb1a62f-9050-4e33-af4b-4cdb8203c9e5" key="Procedure-ffb1a62f-9050-4e33-af4b-4cdb8203c9e5" name="Procedure-HDR Example - Inguinal hernia"/>
 <artifact id="Procedure/sectio-swart" key="Procedure-sectio-swart" name="Procedure: Cesarean Section"/>
+<artifact id="Procedure/procedure-left-hip-replacement" key="Procedure-procedure-left-hip-replacement" name="Procedure: Total Replacement of the Left Hip"/>
 <artifact id="StructureDefinition/procedure-obl-eu-hdr" key="StructureDefinition-procedure-obl-eu-hdr" name="Procedure: obligations"/>
 <artifact deprecated="true" id="ValueSet/procedures-snomed-absent-unknown-eu-hdr" key="ValueSet-procedures-snomed-absent-unknown-eu-hdr" name="Procedures - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="StructureDefinition/relatedPerson-obl-eu-hdr" key="StructureDefinition-relatedPerson-obl-eu-hdr" name="RelatedPerson: obligations"/>
 <artifact deprecated="true" id="ValueSet/sdoh-obs-snomed-loinc-eu-hdr" key="ValueSet-sdoh-obs-snomed-loinc-eu-hdr" name="SDOH Observation codes"/>
+<artifact id="Location/3f85726c-ad2f-441b-89ce-10000000002a" key="Location-3f85726c-ad2f-441b-89ce-10000000002a" name="Sample Czech Location Chrudim Chir1"/>
+<artifact id="Location/3f85726c-ad2f-441b-89ce-10000000002b" key="Location-3f85726c-ad2f-441b-89ce-10000000002b" name="Sample Czech Location Chrudim JIP"/>
+<artifact id="Observation/3f85726c-ad2f-441b-89ce-100000000025" key="Observation-3f85726c-ad2f-441b-89ce-100000000025" name="Sociální síť"/>
 <artifact id="StructureDefinition/specimen-obl-eu-hdr" key="StructureDefinition-specimen-obl-eu-hdr" name="Specimen: obligations"/>
+<artifact id="Observation/3f85726c-ad2f-441b-89ce-100000000022" key="Observation-3f85726c-ad2f-441b-89ce-100000000022" name="Společenské uplatnění"/>
+<artifact id="Flag/5a17a710-193e-4490-a627-7202925aa56e" key="Flag-5a17a710-193e-4490-a627-7202925aa56e" name="Střední podvýživa"/>
 <artifact deprecated="true" id="CodeSystem/temporarySystem-hdr-eu" key="CodeSystem-temporarySystem-hdr-eu" name="Temporary HDR Code System"/>
+<artifact id="Observation/3f85726c-ad2f-441b-89ce-100000000027" key="Observation-3f85726c-ad2f-441b-89ce-100000000027" name="Vzdělání"/>
 <artifact deprecated="true" id="ValueSet/eHDSIConditionPOA" key="ValueSet-eHDSIConditionPOA" name="eHDSI Condition Present On Admission"/>
 <artifact deprecated="true" id="ValueSet/eHDSITreatmentClass" key="ValueSet-eHDSITreatmentClass" name="eHDSI Treatment Class"/>
 <artifact deprecated="true" id="ConceptMap/admissionEvaluation2FHIR-eu-hdr" key="ConceptMap-admissionEvaluation2FHIR-eu-hdr" name="eHN Admission Evaluation Model to this guide Map"/>

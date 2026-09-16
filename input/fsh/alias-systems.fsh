@@ -43,6 +43,8 @@ Alias: $procedure-outcome = http://terminology.hl7.org/CodeSystem/procedure-outc
 
 Alias: $referencerange-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $sct = http://snomed.info/sct
+Alias: $sctCZ = http://snomed.info/sct|http://snomed.info/sct/11000279109
+Alias: $sctCZversion = http://snomed.info/sct/11000279109
 Alias: $sex-parameter-for-clinical-use = http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use
 Alias: $sms-substance = https://spor.ema.europa.eu/v2/SubstanceDefinition
 Alias: $ucum =  http://unitsofmeasure.org

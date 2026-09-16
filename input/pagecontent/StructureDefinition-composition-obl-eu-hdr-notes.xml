@@ -17,29 +17,29 @@
     <p>
         To address the <a href="challenges.html">
         <strong>Hospital Discharge Report Structure Challenge</strong>
-    </a>, 
+    </a>,
         we have opted for a <strong>flexible approach</strong> rather than imposing a rigid format.
 </p>
 <p>
-        The <strong>"flat structure"</strong> documented in the guide should be understood as a sort of 
-    <strong>"section library"</strong> that can be reused in both <strong>flat and nested structures</strong>. 
-        This approach allows implementers to organize the report according to local or institutional needs 
+        The <strong>"flat structure"</strong> documented in the guide should be understood as a sort of
+    <strong>"section library"</strong> that can be reused in both <strong>flat and nested structures</strong>.
+        This approach allows implementers to organize the report according to local or institutional needs
         while maintaining a standardized content model.
 </p>
 <p>In practice:</p>
 <ol>
     <li>A few sections are required.</li>
     <li>
-        <strong>Section slices are open</strong>, meaning that implementers have the freedom to include 
+        <strong>Section slices are open</strong>, meaning that implementers have the freedom to include
             additional <strong>"first-level" sections</strong>.
     </li>
     <li>
-            With the exception of a few specific cases, <strong>sub-sections are allowed</strong>, giving healthcare 
+            With the exception of a few specific cases, <strong>sub-sections are allowed</strong>, giving healthcare
             providers the ability to create a structure that best fits their clinical context.
     </li>
 </ol>
 <p>
-        By offering this level of flexibility, the implementation guide supports diverse healthcare environments 
+        By offering this level of flexibility, the implementation guide supports diverse healthcare environments
         while promoting consistency in content and interoperability.
 </p>
 
@@ -47,8 +47,8 @@
 
 
 <h3>Determining whether a condition was present on admission</h3>
-  
-    
+
+
     <a>  </a>
 
     <p>
@@ -73,7 +73,10 @@
     order of observations within the encounter. This may be determined from
     <code>Observation.effective[x]</code>,compared with the period of the encounter referenced by
     <code>Composition.encounter</code> and/or from the encounter referenced by the
-    observation.
+    observation. An explicit information can be also recorded in the observation.category. For this
+    purpose a value set containing relative timing SNOMED CT qualifiers can be used, e.g.:
+    - 278307001 | On admission (qualifier value) |
+    - 2311000175105 | At discharge (qualifier value) |
   </p>
 
 <p></p>
