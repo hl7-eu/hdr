@@ -4,11 +4,11 @@ canonical: http://hl7.eu/fhir/hdr
 name:  Hl7EuHospitalDischargeReportIg
 title: HL7 Europe Hospital Discharge Report
 description: This implementation guide specifies the Hospital Discharge Report in the European context, as defined in eHN Hospital Discharge Report guidelines.
-status: draft # draft | active | retired | unknown
-version: 1.0.0-ci #
+status: active # draft | active | retired | unknown
+version: 1.0.0 #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
-releaseLabel: draft # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
@@ -27,7 +27,6 @@ dependencies:
   # hl7.fhir.uv.ips: current
   xtehr.eu.ehds.models: 1.0.0
   hl7.fhir.uv.ips: 2.0.1
-  # move to 2.0.1 when published
   hl7.fhir.eu.base: 2.0.1
   hl7.fhir.uv.extensions.r4: 5.3.0
   hl7.fhir.uv.xver-r5.r4: 0.1.0
