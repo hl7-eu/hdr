@@ -1,6 +1,6 @@
 Instance: HDR-Reijer-Wolff-Example
 InstanceOf: BundleEuHdr
-Title: "Bundle: HL7 Europe Hospital Discharge Report (2)"
+Title: "Bundle: HDR Lower Leg Fracture"
 Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff."
 Usage: #example
 
@@ -45,7 +45,7 @@ Usage: #example
 
 Instance: composition-hdr-wolff-example
 InstanceOf: CompositionEuHdr
-Title: "Composition: HDR Reijer Wolff"
+Title: "Composition: HDR Lower Leg Fracture"
 Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff."
 Usage: #inline
 * id = "bd69ab8e-3835-4fb6-be83-1852a2893a65"

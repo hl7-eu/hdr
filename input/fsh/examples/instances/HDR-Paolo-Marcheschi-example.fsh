@@ -1,6 +1,6 @@
 Instance: HDR-Paolo-Marcheschi-Example
 InstanceOf: BundleEuHdr
-Title: "Bundle: HL7 Europe Hospital Discharge Report (3)"
+Title: "Bundle: HDR Acute Respiratory Failure (Italian)"
 Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Paolo Marcheschi."
 Usage: #example
 
@@ -78,7 +78,7 @@ Usage: #inline
 
 Instance: composition-ftgm-discharge-letter
 InstanceOf: CompositionEuHdr
-Title: "Composition: HDR Paolo Marcheschi"
+Title: "Composition: HDR Acute Respiratory Failure (Italian)"
 Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Paolo Marcheschi."
 Usage: #inline
 * id = "130ed4e9-30f3-4a09-b9b1-ad8fd12237cb"

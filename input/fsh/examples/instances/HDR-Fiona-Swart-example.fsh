@@ -60,7 +60,7 @@ Usage: #example
 
 Instance: gewicht-swart
 InstanceOf: $vitalsigns
-Title: "Observation: Body weight"
+Title: "Observation: Body Weight"
 Description: "Vital signs observation representing the body weight of the patient."
 Usage: #example
 * status = #final
@@ -208,7 +208,7 @@ Usage: #example
 
 Instance: lab-swart-3
 InstanceOf: LaboratoryObservationEuHdrObligation
-Title: "Observation: ABO group"
+Title: "Observation: ABO Group"
 Description: "ABO blood group type in blood."
 Usage: #example
 * status = #final
@@ -263,7 +263,7 @@ Usage: #inline
 
 Instance: composition-swart
 InstanceOf: CompositionEuHdr
-Title: "Composition: HDR Fiona Swart"
+Title: "Composition: HDR Twin Delivery by Cesarean Section"
 Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Fiona Swart."
 Usage: #inline
 * status = #final
@@ -422,7 +422,7 @@ Usage: #inline
 
 Instance: bundle-swart
 InstanceOf: BundleEuHdr
-Title: "Bundle: HL7 Europe Hospital Discharge Report (4)"
+Title: "Bundle: HDR Twin Delivery by Cesarean Section"
 Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Fiona Swart."
 Usage: #example
 * identifier.system = "urn:ietf:rfc:4122"

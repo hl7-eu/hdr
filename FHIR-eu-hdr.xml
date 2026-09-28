@@ -29,17 +29,17 @@
 <artifact id="AllergyIntolerance/penicillin-allergy" key="AllergyIntolerance-penicillin-allergy" name="AllergyIntolerance: Critical Allergy to Penicillin"/>
 <artifact id="BodyStructure/bodystructure-left-hip" key="BodyStructure-bodystructure-left-hip" name="BodyStructure: Left Hip Joint"/>
 <artifact id="StructureDefinition/bundle-eu-hdr" key="StructureDefinition-bundle-eu-hdr" name="Bundle (HDR)"/>
-<artifact id="Bundle/HDR-Luigi-De-Luca-Example" key="Bundle-HDR-Luigi-De-Luca-Example" name="Bundle: HL7 Europe Hospital Discharge Report (1)"/>
-<artifact id="Bundle/HDR-Reijer-Wolff-Example" key="Bundle-HDR-Reijer-Wolff-Example" name="Bundle: HL7 Europe Hospital Discharge Report (2)"/>
-<artifact id="Bundle/HDR-Paolo-Marcheschi-Example" key="Bundle-HDR-Paolo-Marcheschi-Example" name="Bundle: HL7 Europe Hospital Discharge Report (3)"/>
-<artifact id="Bundle/DischargeBundle-Novak-Petr-Subsections" key="Bundle-DischargeBundle-Novak-Petr-Subsections" name="Bundle: HL7 Europe Hospital Discharge Report (4)"/>
-<artifact id="Bundle/bundle-swart" key="Bundle-bundle-swart" name="Bundle: HL7 Europe Hospital Discharge Report (4)"/>
+<artifact id="Bundle/HDR-Paolo-Marcheschi-Example" key="Bundle-HDR-Paolo-Marcheschi-Example" name="Bundle: HDR Acute Respiratory Failure (Italian)"/>
+<artifact id="Bundle/DischargeBundle-Novak-Petr-Subsections" key="Bundle-DischargeBundle-Novak-Petr-Subsections" name="Bundle: HDR Inguinal Hernia with Sub-sections (Czech)"/>
+<artifact id="Bundle/HDR-Reijer-Wolff-Example" key="Bundle-HDR-Reijer-Wolff-Example" name="Bundle: HDR Lower Leg Fracture"/>
+<artifact id="Bundle/bundle-swart" key="Bundle-bundle-swart" name="Bundle: HDR Twin Delivery by Cesarean Section"/>
+<artifact id="Bundle/HDR-Luigi-De-Luca-Example" key="Bundle-HDR-Luigi-De-Luca-Example" name="Bundle: HDR Type 2 Diabetes Mellitus"/>
 <artifact id="StructureDefinition/bundle-obl-eu-hdr" key="StructureDefinition-bundle-obl-eu-hdr" name="Bundle: obligations"/>
 <artifact id="StructureDefinition/carePlan-eu-hdr" key="StructureDefinition-carePlan-eu-hdr" name="Care Plan (HDR)"/>
 <artifact id="StructureDefinition/carePlan-obl-eu-hdr" key="StructureDefinition-carePlan-obl-eu-hdr" name="Care Plan: obligations"/>
 <artifact id="CarePlan/b84038f8-9541-4c5b-93b0-a7f1b8e55bd3" key="CarePlan-b84038f8-9541-4c5b-93b0-a7f1b8e55bd3" name="CarePlan: Diabetes Management Plan"/>
 <artifact id="StructureDefinition/composition-eu-hdr" key="StructureDefinition-composition-eu-hdr" name="Composition (HDR)"/>
-<artifact id="Composition/b9dc409d-ec81-4556-9fac-4dc3f731c199" key="Composition-b9dc409d-ec81-4556-9fac-4dc3f731c199" name="Composition: HDR (1)"/>
+<artifact id="Composition/b9dc409d-ec81-4556-9fac-4dc3f731c199" key="Composition-b9dc409d-ec81-4556-9fac-4dc3f731c199" name="Composition: HDR Type 2 Diabetes Mellitus"/>
 <artifact id="StructureDefinition/composition-obl-eu-hdr" key="StructureDefinition-composition-obl-eu-hdr" name="Composition: obligations"/>
 <artifact deprecated="true" id="StructureDefinition/condition-eu-hdr" key="StructureDefinition-condition-eu-hdr" name="Condition (HDR)"/>
 <artifact id="ValueSet/condition-eu-hdr" key="ValueSet-condition-eu-hdr" name="Condition Value Set"/>
@@ -65,15 +65,6 @@
 <artifact deprecated="true" id="ValueSet/admission-voluntary-status-vs" key="ValueSet-admission-voluntary-status-vs" name="Encounter Voluntary Status Value Set"/>
 <artifact id="Encounter/12fef60c-1fe7-4988-8286-af691889a3f3" key="Encounter-12fef60c-1fe7-4988-8286-af691889a3f3" name="Encounter: Hospital Admission and Discharge"/>
 <artifact id="StructureDefinition/encounter-obl-eu-hdr" key="StructureDefinition-encounter-obl-eu-hdr" name="Encounter: obligations"/>
-<artifact id="Observation/6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a" key="Observation-6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a" name="ExampleAbdominalCircumference"/>
-<artifact id="Observation/7cf304de-5ae3-4621-8531-9c8f0b2d4e3a" key="Observation-7cf304de-5ae3-4621-8531-9c8f0b2d4e3a" name="ExampleBMI"/>
-<artifact id="Observation/8d2aea77-f576-4d0f-9508-537359aa44d6" key="Observation-8d2aea77-f576-4d0f-9508-537359aa44d6" name="ExampleBloodPressure"/>
-<artifact id="Observation/4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a" key="Observation-4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a" name="ExampleChestCircumference"/>
-<artifact id="Observation/5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d" key="Observation-5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d" name="ExampleHeadCircumference"/>
-<artifact id="Observation/6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b" key="Observation-6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b" name="ExampleHeight"/>
-<artifact id="Observation/3f85726c-ad2f-441b-89ce-10000000001d" key="Observation-3f85726c-ad2f-441b-89ce-10000000001d" name="ExampleSdohAlcohol"/>
-<artifact id="Observation/3f85726c-ad2f-441b-89ce-10000000001c" key="Observation-3f85726c-ad2f-441b-89ce-10000000001c" name="ExampleSdohSmoking"/>
-<artifact id="Observation/5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c" key="Observation-5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c" name="ExampleWeight"/>
 <artifact deprecated="true" id="ValueSet/exposureAgent-eu-hdr" key="ValueSet-exposureAgent-eu-hdr" name="Exposure of transmissible agents"/>
 <artifact deprecated="true" id="StructureDefinition/familyMemberHistory-eu-hdr" key="StructureDefinition-familyMemberHistory-eu-hdr" name="FamilyMemberHistory (HDR)"/>
 <artifact id="FamilyMemberHistory/635c22e7-d7f1-45ad-9b4d-d4fe35239085" key="FamilyMemberHistory-635c22e7-d7f1-45ad-9b4d-d4fe35239085" name="FamilyMemberHistory: Type 2 Diabetes Mellitus - Mother"/>
@@ -100,23 +91,31 @@
 <artifact deprecated="true" id="ValueSet/medical-devices-eu-hdr" key="ValueSet-medical-devices-eu-hdr" name="Medical Devices (SNOMED CT)"/>
 <artifact deprecated="true" id="ValueSet/medical-devices-snomed-absent-unknown-eu-hdr" key="ValueSet-medical-devices-snomed-absent-unknown-eu-hdr" name="Medical Devices - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact deprecated="true" id="StructureDefinition/medication-eu-hdr" key="StructureDefinition-medication-eu-hdr" name="Medication (HDR)"/>
-<artifact id="Medication/01A-Cefuroxime1500GenericExplicit" key="Medication-01A-Cefuroxime1500GenericExplicit" name="Medication: 01A-Cefuroxime1500GenericExplicit"/>
-<artifact id="Medication/01C-Cefuroxime1500Branded" key="Medication-01C-Cefuroxime1500Branded" name="Medication: 01C-Cefuroxime1500Branded"/>
+<artifact id="Medication/01C-Cefuroxime1500Branded" key="Medication-01C-Cefuroxime1500Branded" name="Medication: Cefuroxime 1500 mg (Branded)"/>
+<artifact id="Medication/01A-Cefuroxime1500GenericExplicit" key="Medication-01A-Cefuroxime1500GenericExplicit" name="Medication: Cefuroxime 1500 mg (Generic)"/>
 <artifact id="StructureDefinition/medication-obl-eu-hdr" key="StructureDefinition-medication-obl-eu-hdr" name="Medication: obligations"/>
 <artifact id="StructureDefinition/medicationAdministration-eu-hdr" key="StructureDefinition-medicationAdministration-eu-hdr" name="MedicationAdministration (HDR)"/>
 <artifact id="MedicationAdministration/1bcfb26f-6958-4604-a40b-712170c1e536" key="MedicationAdministration-1bcfb26f-6958-4604-a40b-712170c1e536" name="MedicationAdministration: Paracetamol"/>
 <artifact id="StructureDefinition/medicationAdministration-obl-eu-hdr" key="StructureDefinition-medicationAdministration-obl-eu-hdr" name="MedicationAdministration: obligations"/>
 <artifact id="StructureDefinition/medicationDispense-eu-hdr" key="StructureDefinition-medicationDispense-eu-hdr" name="MedicationDispense (HDR)"/>
-<artifact id="MedicationDispense/400D-dispense-1" key="MedicationDispense-400D-dispense-1" name="MedicationDispense: 400D-dispense-1"/>
+<artifact id="MedicationDispense/400D-dispense-1" key="MedicationDispense-400D-dispense-1" name="MedicationDispense: Cefuroxime 1500 mg, First Dispense"/>
 <artifact id="StructureDefinition/medicationDispense-obl-eu-hdr" key="StructureDefinition-medicationDispense-obl-eu-hdr" name="MedicationDispense: obligations"/>
 <artifact deprecated="true" id="StructureDefinition/medicationRequest-eu-hdr" key="StructureDefinition-medicationRequest-eu-hdr" name="MedicationRequest (HDR)"/>
-<artifact id="MedicationRequest/400C-prescription-cefuroxime-singleline" key="MedicationRequest-400C-prescription-cefuroxime-singleline" name="MedicationRequest: 400C-prescription-cefuroxime-singleline"/>
+<artifact id="MedicationRequest/400C-prescription-cefuroxime-singleline" key="MedicationRequest-400C-prescription-cefuroxime-singleline" name="MedicationRequest: Cefuroxime 1500 mg, Single Line"/>
 <artifact id="StructureDefinition/medicationRequest-obl-eu-hdr" key="StructureDefinition-medicationRequest-obl-eu-hdr" name="MedicationRequest: obligations"/>
 <artifact deprecated="true" id="StructureDefinition/medicationStatement-eu-hdr" key="StructureDefinition-medicationStatement-eu-hdr" name="MedicationStatement (HDR)"/>
 <artifact id="MedicationStatement/example-medicationstatement-euhdr" key="MedicationStatement-example-medicationstatement-euhdr" name="MedicationStatement: Enalapril"/>
 <artifact id="StructureDefinition/medicationStatement-obl-eu-hdr" key="StructureDefinition-medicationStatement-obl-eu-hdr" name="MedicationStatement: obligations"/>
-<artifact id="Observation/lab-swart-3" key="Observation-lab-swart-3" name="Observation: ABO group"/>
-<artifact id="Observation/gewicht-swart" key="Observation-gewicht-swart" name="Observation: Body weight"/>
+<artifact id="Observation/lab-swart-3" key="Observation-lab-swart-3" name="Observation: ABO Group"/>
+<artifact id="Observation/6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a" key="Observation-6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a" name="Observation: Abdominal Circumference"/>
+<artifact id="Observation/3f85726c-ad2f-441b-89ce-10000000001d" key="Observation-3f85726c-ad2f-441b-89ce-10000000001d" name="Observation: Alcohol Use"/>
+<artifact id="Observation/8d2aea77-f576-4d0f-9508-537359aa44d6" key="Observation-8d2aea77-f576-4d0f-9508-537359aa44d6" name="Observation: Blood Pressure"/>
+<artifact id="Observation/6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b" key="Observation-6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b" name="Observation: Body Height"/>
+<artifact id="Observation/7cf304de-5ae3-4621-8531-9c8f0b2d4e3a" key="Observation-7cf304de-5ae3-4621-8531-9c8f0b2d4e3a" name="Observation: Body Mass Index"/>
+<artifact id="Observation/5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c" key="Observation-5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c" name="Observation: Body Weight"/>
+<artifact id="Observation/gewicht-swart" key="Observation-gewicht-swart" name="Observation: Body Weight"/>
+<artifact id="Observation/4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a" key="Observation-4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a" name="Observation: Chest Circumference"/>
+<artifact id="Observation/5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d" key="Observation-5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d" name="Observation: Head Circumference"/>
 <artifact deprecated="true" id="Observation/example-img-finding-lung-nodule" key="Observation-example-img-finding-lung-nodule" name="Observation: Imaging Finding"/>
 <artifact deprecated="true" id="StructureDefinition/observation-imgFinding-eu-hdr" key="StructureDefinition-observation-imgFinding-eu-hdr" name="Observation: Imaging Finding (HDR)"/>
 <artifact deprecated="true" id="StructureDefinition/observation-infectious-contact-eu-hdr" key="StructureDefinition-observation-infectious-contact-eu-hdr" name="Observation: Infectious Contact (HDR)"/>
@@ -125,6 +124,7 @@
 <artifact deprecated="true" id="StructureDefinition/observation-sdoh-eu-hdr" key="StructureDefinition-observation-sdoh-eu-hdr" name="Observation: SDOH (HDR)"/>
 <artifact deprecated="true" id="Observation/example-sdoh-transportation" key="Observation-example-sdoh-transportation" name="Observation: SDOH Transportation Insecurity"/>
 <artifact deprecated="true" id="StructureDefinition/observation-sdoh-obl-eu-hdr" key="StructureDefinition-observation-sdoh-obl-eu-hdr" name="Observation: SDOH: obligations"/>
+<artifact id="Observation/3f85726c-ad2f-441b-89ce-10000000001c" key="Observation-3f85726c-ad2f-441b-89ce-10000000001c" name="Observation: Smoking Status"/>
 <artifact deprecated="true" id="Observation/example-travel-history" key="Observation-example-travel-history" name="Observation: Travel History"/>
 <artifact deprecated="true" id="StructureDefinition/observation-travel-eu-hdr" key="StructureDefinition-observation-travel-eu-hdr" name="Observation: country visited (HDR)"/>
 <artifact deprecated="true" id="StructureDefinition/observation-travel-obl-eu-hdr" key="StructureDefinition-observation-travel-obl-eu-hdr" name="Observation: country visited: obligations"/>

@@ -1,6 +1,6 @@
 Instance: DischargeBundle-Novak-Petr-Subsections
 InstanceOf: BundleEuHdr
-Title: "Bundle: HL7 Europe Hospital Discharge Report (4)"
+Title: "Bundle: HDR Inguinal Hernia with Sub-sections (Czech)"
 Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) with structured composition for Czech patient Petr Novák."
 Usage: #example
 
@@ -141,7 +141,7 @@ Usage: #example
 
 Instance: DischargeComposition-Novak-Petr-Subsections
 InstanceOf: CompositionEuHdr
-Title: "Composition: HDR (Petr Novák)"
+Title: "Composition: HDR Inguinal Hernia with Sub-sections (Czech)"
 Description: "HL7 EU HDR Composition with sub-sections for patient Novák Petr"
 Usage: #inline
 * language = #cs
@@ -1096,6 +1096,7 @@ Description: "Euthyrox v tabletách"
 
 Instance: ExampleBMI
 InstanceOf: Observation
+Title: "Observation: Body Mass Index"
 Description: "Example instance for BMI observation using the CZ_ObservationBMIHdr profile."
 * language = #cs
 * id = "7cf304de-5ae3-4621-8531-9c8f0b2d4e3a"
@@ -1113,6 +1114,7 @@ Description: "Example instance for BMI observation using the CZ_ObservationBMIHd
 
 Instance: ExampleBloodPressure
 InstanceOf: Observation
+Title: "Observation: Blood Pressure"
 Description: "Example instance for blood pressure observation (systolic and diastolic)."
 * language = #cs
 * id = "8d2aea77-f576-4d0f-9508-537359aa44d6"
@@ -1138,6 +1140,7 @@ Description: "Example instance for blood pressure observation (systolic and dias
 
 Instance: ExampleChestCircumference
 InstanceOf: Observation
+Title: "Observation: Chest Circumference"
 Description: "Example instance for chest circumference observation using the CZ_ObservationChestCircumferenceHdr profile."
 * language = #cs
 * id = "4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a"
@@ -1155,6 +1158,7 @@ Description: "Example instance for chest circumference observation using the CZ_
 
 Instance: ExampleHeadCircumference
 InstanceOf: Observation
+Title: "Observation: Head Circumference"
 Description: "Example instance for head circumference observation using the CZ_ObservationHeadCircumferenceHdr profile."
 * language = #cs
 * id = "5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d"
@@ -1172,6 +1176,7 @@ Description: "Example instance for head circumference observation using the CZ_O
 
 Instance: ExampleAbdominalCircumference
 InstanceOf: Observation
+Title: "Observation: Abdominal Circumference"
 Description: "Example instance for abdominal circumference observation using the CZ_ObservationAbdominalCircumferenceHdr profile."
 * language = #cs
 * id = "6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a"
@@ -1189,6 +1194,7 @@ Description: "Example instance for abdominal circumference observation using the
 
 Instance: ExampleHeight
 InstanceOf: Observation
+Title: "Observation: Body Height"
 Description: "Example instance for height observation using the CZ_ObservationHeightHdr profile."
 * language = #cs
 * id = "6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b"
@@ -1206,6 +1212,7 @@ Description: "Example instance for height observation using the CZ_ObservationHe
 
 Instance: ExampleWeight
 InstanceOf: Observation
+Title: "Observation: Body Weight"
 Description: "Example instance for weight observation using the CZ_ObservationWeightHdr profile."
 
 * language = #cs
@@ -1634,6 +1641,7 @@ Description: "HDR - example of CRP observation for Novák Petr"
 
 Instance: ExampleSdohSmoking
 InstanceOf: Observation
+Title: "Observation: Smoking Status"
 Description: "Example of Social History Observation - Smoking"
 * id = "3f85726c-ad2f-441b-89ce-10000000001c"
 * language = #cs
@@ -1649,6 +1657,7 @@ Description: "Example of Social History Observation - Smoking"
 
 Instance: ExampleSdohAlcohol
 InstanceOf: Observation
+Title: "Observation: Alcohol Use"
 Description: "Example of Social History Observation - Alcohol Use"
 * id = "3f85726c-ad2f-441b-89ce-10000000001d"
 * language = #cs

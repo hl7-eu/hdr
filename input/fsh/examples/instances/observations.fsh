@@ -1,7 +1,7 @@
 /* 
 Instance: example-infectious-contact
 InstanceOf: ObservationInfectiousContactEuHdr
-Title: "Observation: Infectious Contact: COVID-19 Exposure"
+Title: "Observation: COVID-19 Infectious Contact"
 Description: "Example of an infectious contact observation representing a patient's known exposure to a COVID-19 case."
 
 

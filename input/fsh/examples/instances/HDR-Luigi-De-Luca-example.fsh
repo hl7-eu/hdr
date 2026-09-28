@@ -1,6 +1,6 @@
 Instance: HDR-Luigi-De-Luca-Example
 InstanceOf: BundleEuHdr
-Title: "Bundle: HL7 Europe Hospital Discharge Report (1)"
+Title: "Bundle: HDR Type 2 Diabetes Mellitus"
 Description: "HL7 FHIR Bundle example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca."
 Usage: #example
 
@@ -141,7 +141,7 @@ Usage: #inline
 
 Instance: composition-hdr-luca-example
 InstanceOf: CompositionEuHdr
-Title: "Composition: HDR (1)"
+Title: "Composition: HDR Type 2 Diabetes Mellitus"
 Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca"
 Usage: #example
 * id = "b9dc409d-ec81-4556-9fac-4dc3f731c199"

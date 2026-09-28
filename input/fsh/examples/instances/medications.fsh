@@ -2,7 +2,7 @@
 Instance: 400C-prescription-cefuroxime-singleline
 InstanceOf: MedicationRequestEuCore
 Usage: #example
-Title: "MedicationRequest: 400C-prescription-cefuroxime-singleline"
+Title: "MedicationRequest: Cefuroxime 1500 mg, Single Line"
 Description: "400C. A prescription/request with one medication and changing dosage. Uses the 'actionable' tag. Cefuroxime sodium."
 
 * meta.tag = $common-tags#actionable
@@ -38,7 +38,7 @@ Description: "400C. A prescription/request with one medication and changing dosa
 Instance: 01A-Cefuroxime1500GenericExplicit
 InstanceOf: MedicationEuCore
 Usage: #example
-Title: "Medication: 01A-Cefuroxime1500GenericExplicit"
+Title: "Medication: Cefuroxime 1500 mg (Generic)"
 Description: "1A. Cefuroxime 1500mg (1.5g) powder for solution in a vial. Generic product, defined by attributes."
 
 * form = $edqm#50053000 "Powder for solution for injection or infusion"
@@ -98,7 +98,7 @@ Description: "A sample MedicationStatement for a patient taking Enalapril, used 
 Instance: 400D-dispense-1
 InstanceOf: MedicationDispenseEuHdr
 Usage: #example
-Title: "MedicationDispense: 400D-dispense-1"
+Title: "MedicationDispense: Cefuroxime 1500 mg, First Dispense"
 Description: "400D-1. Medication dispense fulfilling the first part of the order: 1 package containing 10 vials."
 
 * status = #completed
@@ -116,7 +116,7 @@ Description: "400D-1. Medication dispense fulfilling the first part of the order
 Instance: 01C-Cefuroxime1500Branded
 InstanceOf: MedicationEuCore
 Usage: #example
-Title: "Medication: 01C-Cefuroxime1500Branded"
+Title: "Medication: Cefuroxime 1500 mg (Branded)"
 Description: "1C. Cefuroxime 1500mg (1.5g) powder for solution in a vial (10 vials per package). Branded packaged product, defined by attributes."
 
 * identifier.value = "1529962"
