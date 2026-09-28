@@ -15,7 +15,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
   * ^definition = "The main language of the Hospital Discharge Report Bundle. This element SHALL be populated and represents the main language in which the document content is expressed. Individual resources contained in the Bundle MAY declare their own language; if populated, those resource languages should match the main language of the Bundle (regional variants of the same primary language subtag, such as fr-BE and fr-FR, are considered matching)."
 * type = #document (exactly)
 * timestamp 1.. 
-  * ^short = "Instance identifier"
+  * ^short = "Document date and time"
 * link ..0
 * entry 1..
 * entry ^slicing.discriminator[0].type = #type
@@ -92,12 +92,12 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[procedure].resource only ProcedureEuCore
 * entry[organization].resource only OrganizationEuCore
 * entry[observation].resource only Observation // $Observation-results-uv-ips
-* entry[specimen].resource only $Specimen-uv-ips
+* entry[specimen].resource only Specimen // $Specimen-uv-ips
 * entry[flag].resource only FlagPatientEuCore
 * entry[familyMemberHistory].resource only FamilyMemberHistory
 * entry[documentReference].resource only DocumentReference
 * entry[location].resource only LocationEuCore
-* entry[careplan].resource only CarePlan
+* entry[careplan].resource only CarePlanEuHdr
 * entry[goal].resource only GoalEuHdr
 
 * signature ^short = "Report Digital Signature"
@@ -109,7 +109,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 
 
 Invariant: bdl-hdr-1
-Description: "An IPS document must have no additional Composition (including Composition subclass) resources besides the first."
+Description: "An HDR document must have no additional Composition (including Composition subclass) resources besides the first."
 Severity: #error
 Expression: "entry.tail().where(resource is Composition).empty()"
 

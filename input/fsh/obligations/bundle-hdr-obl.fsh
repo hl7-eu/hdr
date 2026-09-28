@@ -37,8 +37,8 @@ Description: """This profile defines obligations for the Hospital Discharge Repo
 * entry[practitionerRole].resource only PractitionerRoleEuObligations
 * entry[procedure].resource only ProcedureEuCoreObligation
 * entry[organization].resource only OrganizationEuObligations
-* entry[observation].resource only ObservationEuHdrObligation
-* entry[specimen].resource only $Specimen-uv-ips
+* entry[observation].resource only Observation
+* entry[specimen].resource only SpecimenEuObligations
 * entry[flag].resource only FlagEuHdrObligation
 * entry[familyMemberHistory].resource only FamilyMemberHistory
 * entry[documentReference].resource only DocumentReference
