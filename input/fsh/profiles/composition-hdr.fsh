@@ -23,7 +23,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * extension[version] ^short = "Business version"
 * extension contains $information-recipient named information-recipient 0..*
 * extension[information-recipient]
-* extension[information-recipient].valueReference only Reference( PractitionerRoleEuCore or PractitionerEuCore or Device or PatientEuCore or RelatedPerson or  OrganizationEuCore)
+* extension[information-recipient].valueReference only Reference( PractitionerRoleEuCore or PractitionerEuCore or DeviceEuHdr or PatientEuCore or RelatedPerson or  OrganizationEuCore)
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
 // * type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
@@ -43,7 +43,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * date ^short = "HDR date"
 * author ^short = "Who and/or what authored the Hospital Discharge Report"
 * author ^definition = "Identifies who is responsible for the information in the Hospital Discharge Report, not necessarily who typed it in."
-* author only Reference( PractitionerEuCore or PractitionerRoleEuCore or Device  or OrganizationEuCore) // or Patient or RelatedPerson
+* author only Reference( PractitionerEuCore or PractitionerRoleEuCore or DeviceEuHdr or OrganizationEuCore) // or Patient or RelatedPerson
 * title ^short = "Hospital Discharge Report"
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Hospital Discharge Report\" or any equivalent translation"
 * attester.mode ^short = "The type of attestation"

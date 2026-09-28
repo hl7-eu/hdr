@@ -50,7 +50,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     diagnosticReport 0..* and
     imagingStudy 0..* and
     immunization 0..* and
-    immunizationRecommendation 0..* and
     media 0..* and
     medication 0..* and
     medicationRequest 0..* and
@@ -63,12 +62,14 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     organization 0..* and
     observation 0..* and
     specimen 0..* and
-    familyMemberHistory 0..* and
     documentReference 0..* and
     flag 0..* and
     location 0..* and
     careplan 0..* and
-    goal 0..*
+    goal 0..* and
+    relatedPerson 0..* and
+    binary 0..* and
+    serviceRequest 0..*
 
 * entry[composition].resource only CompositionEuHdr
 * entry[patient].resource only PatientEuCore
@@ -81,7 +82,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[diagnosticReport].resource only DiagnosticReportEuCore
 * entry[imagingStudy].resource only ImagingStudy
 * entry[immunization].resource only ImmunizationEuCore
-* entry[immunizationRecommendation].resource only ImmunizationRecommendation // EuHdr
 * entry[media].resource only Media // $Media-observation-uv-ips
 * entry[medication].resource only MedicationEuCore
 * entry[medicationRequest].resource only MedicationRequestEuCore
@@ -95,11 +95,13 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[observation].resource only Observation // $Observation-results-uv-ips
 * entry[specimen].resource only Specimen // $Specimen-uv-ips
 * entry[flag].resource only FlagPatientEuCore
-* entry[familyMemberHistory].resource only FamilyMemberHistory
 * entry[documentReference].resource only DocumentReference
 * entry[location].resource only LocationEuCore
 * entry[careplan].resource only CarePlanEuHdr
 * entry[goal].resource only GoalEuHdr
+* entry[relatedPerson].resource only RelatedPerson
+* entry[binary].resource only Binary
+* entry[serviceRequest].resource only ServiceRequest
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"
