@@ -143,7 +143,7 @@ Instance: DischargeComposition-Novak-Petr-Subsections
 InstanceOf: CompositionEuHdr
 Title: "Composition: HDR (Petr Novák)"
 Description: "HL7 EU HDR Composition with sub-sections for patient Novák Petr"
-Usage: #example
+Usage: #inline
 * language = #cs
 * id = "701f51d5-78bf-428e-a6b5-349c2614ce07"
 * identifier.system = "https://example.hospital.org/sid/compositions"
@@ -589,7 +589,7 @@ Usage: #example
 
 Instance: Practitioner-Author
 InstanceOf: PractitionerEuCore
-Usage: #example
+Usage: #inline
 Description: "Participant HDR"
 * language = #cs
 * id = "a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a"
@@ -606,7 +606,7 @@ Description: "Participant HDR"
 
 Instance: Practitioner-Author-detail
 InstanceOf: PractitionerRoleEuCore
-Usage: #example
+Usage: #inline
 Description: "Practitioner role MUDr. Ivan Anděl"
 * language = #cs
 * id = "2b7e9637-5018-4542-9faf-d5abdee7b849"
@@ -619,7 +619,7 @@ Description: "Practitioner role MUDr. Ivan Anděl"
 
 Instance: Organization-1
 InstanceOf: OrganizationEuCore
-Usage: #example
+Usage: #inline
 Description: "An example of the organization of a provider"
 * language = #cs
 * id = "ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
@@ -644,7 +644,7 @@ Description: "An example of the organization of a provider"
 
 Instance: Practitioner-2
 InstanceOf: PractitionerEuCore
-Usage: #example
+Usage: #inline
 Description: "Practitioner id(KRZP)=987654321"
 * language = #cs
 * id = "5c33bffd-d3b6-401f-85dc-db99d48b8a3b"
@@ -664,7 +664,7 @@ Description: "Practitioner id(KRZP)=987654321"
 //-----------------------------------------------------
 Instance: Patient-Novak-Petr
 InstanceOf: PatientEuCore
-Usage: #example
+Usage: #inline
 Description: "Example of patient Petr Novak with identification by czech national identifiers (RID, RCIS) and contact information"
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-100000000000"
@@ -747,7 +747,7 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 
 Instance: HospitalEncounter-Novak-Petr
 InstanceOf: EncounterEuHdr
-Usage: #example
+Usage: #inline
 Title: "Encounter-HDR Example of encounter with emergency priority"
 Description: "Czech HDR - example of encounter with emergency priority"
 * language = #cs
@@ -792,7 +792,7 @@ Description: "Czech HDR - example of encounter with emergency priority"
 
 Instance: Practitioner-Admitter
 InstanceOf: PractitionerEuCore
-Usage: #example
+Usage: #inline
 Description: "Participant Admitter HDR"
 * language = #cs
 * id = "Practitioner-Admitter"
@@ -807,7 +807,7 @@ Description: "Participant Admitter HDR"
 //------------------------------------------------------
 Instance: Practitioner-Referrer
 InstanceOf: PractitionerEuCore
-Usage: #example
+Usage: #inline
 Description: "Participant Referrer HDR"
 * language = #cs
 * id = "Practitioner-Referrer"
@@ -822,7 +822,7 @@ Description: "Participant Referrer HDR"
 
 Instance: Condition-K409
 InstanceOf: ConditionEuCore
-Usage: #example
+Usage: #inline
 Title: "Condition-HDR Example K40.9"
 Description: "Example of a condition K40.9 with details on admission"
 * language = #cs
@@ -862,7 +862,7 @@ Description: "Example of a condition K40.9 with details on admission"
 //---------------------------------------------
 Instance: Condition-E890-Novak
 InstanceOf: ConditionEuCore
-Usage: #example
+Usage: #inline
 Title: "Condition-HDR Example E8.90 for patient Novak"
 Description: "HDR - example of a condition (Postoperative Hypothyroidism)"
 * language = #cs
@@ -880,7 +880,7 @@ Description: "HDR - example of a condition (Postoperative Hypothyroidism)"
 //-----------------------------------------------------
 Instance: Practitioner-Referrer-detail
 InstanceOf: PractitionerRoleEuCore
-Usage: #example
+Usage: #inline
 Description: "practitioner's detail"
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-100000000029"
@@ -896,7 +896,7 @@ Instance: Organization-Referrer
 InstanceOf: OrganizationEuCore
 Title: "Ambulance interního lékařství, MUDr. Jiří Zdvořilý"
 Description: "Example of ambulatory physician"
-Usage: #example
+Usage: #inline
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-100000000033"
 * name = "Ambulance interního lékařství, MUDr. Jiří Zdvořilý"
@@ -915,7 +915,7 @@ Instance: Location-Chrudim-Chir1
 InstanceOf: LocationEuCore
 Title: "Sample Czech Location Chrudim Chir1"
 Description: "Example instance of a location conforming to the CZ_LocationCore profile."
-Usage: #example
+Usage: #inline
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-10000000002a"
 * status = #active
@@ -935,7 +935,7 @@ Instance: Location-Chrudim-ChirJIP
 InstanceOf: LocationEuCore
 Title: "Sample Czech Location Chrudim JIP"
 Description: "Example instance of a location conforming to the CZ_LocationCore profile."
-Usage: #example
+Usage: #inline
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-10000000002b"
 * status = #active
@@ -953,7 +953,7 @@ Usage: #example
 //----------------------------------------
 Instance: CarePlan-Novak
 InstanceOf: CarePlan
-Usage: #example
+Usage: #inline
 Title: "CarePlan-Novak-Petr"
 Description: "Czech HDR - example of a care plan"
 * language = #cs
@@ -985,7 +985,7 @@ Description: "Czech HDR - example of a care plan"
 //-----------------------------
 Instance: Allergy-Strawberry-Novak
 InstanceOf: AllergyIntoleranceEuCore
-Usage: #example
+Usage: #inline
 Title: "AllergyIntolerance - Strawberry for patient Novak"
 Description: "Patient experiences itching and tongue swelling in response to strawberries."
 * language = #cs
@@ -1016,7 +1016,7 @@ Description: "Patient experiences itching and tongue swelling in response to str
 //---------------------------------------------------------------------
 Instance: MedicationStatement-Euthyrox-Novak
 InstanceOf: MedicationStatementEuCore
-Usage: #example
+Usage: #inline
 Title: "MedicationStatement-HDR Example: Euthyrox"
 Description: "HDR - example: Euthyrox"
 * language = #cs
@@ -1055,7 +1055,7 @@ Description: "HDR - example: Euthyrox"
 
 Instance: Medication-Euthyrox
 InstanceOf: MedicationEuCore
-Usage: #example
+Usage: #inline
 Title: "Dispense – Euthyrox"
 Description: "Euthyrox v tabletách"
 * id = "3f85726c-ad2f-441b-89ce-10000000002c"
@@ -1225,7 +1225,7 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 
 Instance: Observation-TravelHistory-Madagaskar
 InstanceOf: Observation
-Usage: #example
+Usage: #inline
 Title: "Observation - Travel History"
 Description: "Travel history observation"
 * id = "f95f843e-701f-434a-94c9-3c8f0b2d4e3a"
@@ -1244,7 +1244,7 @@ Description: "Travel history observation"
 
 /* Instance: Observation-InfectiousContact
 InstanceOf: Observation
-Usage: #example
+Usage: #inline
 Title: "Infectious contact"
 Description: "The patient was in contact with a person infected with COVID-19"
 * id = "af4dcfeb-2cb3-4fc8-98e2-5c8f0b2d4e3a"
@@ -1264,7 +1264,7 @@ Description: "The patient was in contact with a person infected with COVID-19"
 //---------------------------------------------------------------------
 Instance: MedicationStatement-Paracetamol-Novak
 InstanceOf: MedicationStatementEuCore
-Usage: #example
+Usage: #inline
 Title: "MedicationStatement-HDR Example: Paracetamol"
 Description: "Czech HDR - example: Paracetamol"
 * language = #cs
@@ -1307,7 +1307,7 @@ Description: "Czech HDR - example: Paracetamol"
 
 Instance: Medication-Paracetamol
 InstanceOf: MedicationEuCore
-Usage: #example
+Usage: #inline
 Title: "Medication – Paracetamol"
 Description: "Lek Paracetamol v tabletách"
 * language = #cs
@@ -1349,7 +1349,7 @@ Description: "Lek Paracetamol v tabletách"
 
 /* Instance: Goal-hernia-treatment
 InstanceOf: Goal
-Usage: #example
+Usage: #inline
 Title: "Goal for Hernia Treatment"
 Description: "HDR - example of a goal for hernia treatment"
 * id = "620b1120-cece-44b1-89f5-20413054eb1d"
@@ -1363,7 +1363,7 @@ Description: "HDR - example of a goal for hernia treatment"
 
 Instance: Medication-Ibalgin400
 InstanceOf: MedicationEuCore
-Usage: #example
+Usage: #inline
 Title: "Medication – Ibalgin 400"
 Description: "Lek Ibalgin 400 v tabletách"
 * language = #cs
@@ -1404,7 +1404,7 @@ Description: "Lek Ibalgin 400 v tabletách"
 
 Instance: MedicationDispense-Ibalgin400
 InstanceOf: MedicationDispenseEuHdr
-Usage: #example
+Usage: #inline
 Title: "Dispense – Ibalgin 400"
 Description: "Výdej léčivého přípravku Ibalgin 400 mg pacientovi Novákovi"
 * id = "b0001bf8-976a-4d7d-b192-8c8f0b2d4e3a"
@@ -1425,7 +1425,7 @@ Description: "Výdej léčivého přípravku Ibalgin 400 mg pacientovi Novákovi
 Instance: Procedure-inguinal-hernia
 InstanceOf: ProcedureEuCore
 Title: "Procedure-HDR Example - Inguinal hernia"
-Usage: #example
+Usage: #inline
 Description: "HDR - example of a Procedure - Repair of inguinal hernia"
 * language = #cs
 * id = "ffb1a62f-9050-4e33-af4b-4cdb8203c9e5"
@@ -1446,7 +1446,7 @@ Description: "HDR - example of a Procedure - Repair of inguinal hernia"
 // Condition: Iron deficiency anemia due to chronic blood loss
 Instance: IronDeficiencyAnemiaCondition
 InstanceOf: ConditionEuCore
-Usage: #example
+Usage: #inline
 Title: "Condition-HDR Iron Deficiency Anemia"
 Description: "Example of a condition Iron deficiency anaemia secondary to blood loss (chronic)"
 * id = "3f85726c-ad2f-441b-89ce-10000000002f"
@@ -1468,7 +1468,7 @@ Description: "Example of a condition Iron deficiency anaemia secondary to blood 
 
 /* Instance: CZ-AdvanceDirectives-HDR-DNR
 InstanceOf: Consent
-Usage: #example
+Usage: #inline
 Title: "AdvanceDirectives  DNR"
 Description: "Hdr - example od advance directive"
 
@@ -1494,7 +1494,7 @@ Description: "Hdr - example od advance directive"
 //---------------------------------------------------------------------
 Instance: MedicationStatement-Ibalgin400-Novak
 InstanceOf: MedicationStatementEuCore
-Usage: #example
+Usage: #inline
 Title: "MedicationStatement-HDR Example: Ibalgin"
 Description: "HDR - example of Ibalgin 400"
 * language = #cs
@@ -1533,7 +1533,7 @@ Description: "HDR - example of Ibalgin 400"
 
 Instance: MedicationDispense-Euthyrox
 InstanceOf: MedicationDispenseEuHdr
-Usage: #example
+Usage: #inline
 Title: "Dispense – Euthyrox for patient Novak"
 Description: "Výdej léčivého přípravku Euthyrox pacientovi Novákovi"
 * id = "133cea11-09c6-4147-80af-6c8f0b2d4e3a"
@@ -1551,7 +1551,7 @@ Description: "Výdej léčivého přípravku Euthyrox pacientovi Novákovi"
 
 Instance: MedicationDispense-Paracetamol
 InstanceOf: MedicationDispenseEuHdr
-Usage: #example
+Usage: #inline
 Title: "Dispense – Paracetamol"
 Description: "Výdej léčivého přípravku Paracetamol pacientovi Novákovi"
 * id = "65c49e6d-0951-4e83-8e2c-7c8f0b2d4e3a"
@@ -1568,7 +1568,7 @@ Description: "Výdej léčivého přípravku Paracetamol pacientovi Novákovi"
 
 Instance: Observation-Participation-in-society
 InstanceOf: Observation
-Usage: #example
+Usage: #inline
 Title: "Společenské uplatnění"
 Description: "Pacient je aktivní v komunitních aktivitách a dobrovolnictví."
 * language = #cs
@@ -1584,7 +1584,7 @@ Description: "Pacient je aktivní v komunitních aktivitách a dobrovolnictví."
 
 Instance: Observation-Social-network
 InstanceOf: Observation
-Usage: #example
+Usage: #inline
 Title: "Sociální síť"
 Description: "Pacient má aktivní sociální síť a pravidelně se setkává s přáteli."
 * language = #cs
@@ -1604,7 +1604,7 @@ Description: "Pacient má aktivní sociální síť a pravidelně se setkává s
 //-----------------------------------------
 Instance: Observation-CRP-Novak
 InstanceOf: MedicalTestResultEuCore
-Usage: #example
+Usage: #inline
 Title: "CRP - Novák Petr"
 Description: "HDR - example of CRP observation for Novák Petr"
 * language = #cs
@@ -1665,7 +1665,7 @@ Description: "Example of Social History Observation - Alcohol Use"
 
 Instance: DeviceUseStatement-Pacemaker
 InstanceOf: DeviceUseStatement
-Usage: #example
+Usage: #inline
 Title: "Použití kardiostimulátoru"
 Description: "Záznam o implantaci kardiostimulátoru z důvodu bradykardie"
 * id = "3f85726c-ad2f-441b-89ce-10000000001f"
@@ -1681,7 +1681,7 @@ Description: "Záznam o implantaci kardiostimulátoru z důvodu bradykardie"
 //----------------------------------------------------------------------------------------
 Instance: Device-Pacemaker
 InstanceOf: DeviceEuHdr
-Usage: #example
+Usage: #inline
 Description: "Heart pacemaker Medtronic W1DR01"
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-100000000030"
@@ -1693,7 +1693,7 @@ Description: "Heart pacemaker Medtronic W1DR01"
 Instance: Procedure-Insert-Pacemaker2
 InstanceOf: Procedure
 Title: "CZ-Procedure-HDR Example - Pacemaker 2"
-Usage: #example
+Usage: #inline
 Description: "Czech HDR - example of a Procedure - Pacemaker"
 * id = "3f85726c-ad2f-441b-89ce-100000000020"
 * language = #cs
@@ -1721,7 +1721,7 @@ Description: "Czech HDR - example of a Procedure - Pacemaker"
 
 Instance: Observation-Education
 InstanceOf: Observation
-Usage: #example
+Usage: #inline
 Title: "Vzdělání"
 Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
 * language = #cs
@@ -1736,7 +1736,7 @@ Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
 
 Instance: Observation-Education-level
 InstanceOf: Observation
-Usage: #example
+Usage: #inline
 Title: "Dosažený stupeň vzdělání"
 Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
 * language = #cs
@@ -1757,7 +1757,7 @@ Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
 
 Instance: Flag-malnutrition-Novak
 InstanceOf: FlagPatientEuCore
-Usage: #example
+Usage: #inline
 Title: "Střední podvýživa"
 Description: "Střední podvýživa – doporučení nutriční terapie u pacienta."
 * language = #cs
@@ -1776,7 +1776,7 @@ Description: "Střední podvýživa – doporučení nutriční terapie u pacien
 
 Instance: Immunization
 InstanceOf: ImmunizationEuCore
-Usage: #example
+Usage: #inline
 Title: "Immunization example of Covid"
 Description: "Immunization of Covid"
 * language = #cs
@@ -1789,7 +1789,7 @@ Description: "Immunization of Covid"
 
 Instance: CZ-Condition-HDR-Example
 InstanceOf: ConditionEuCore
-Usage: #example
+Usage: #inline
 Title: "CZ-Condition-HDR Example"
 Description: "Czech HDR - example of a condition (Heart Failure)"
 * id = "3f85726c-ad2f-441b-89ce-100000000031"
@@ -1808,7 +1808,7 @@ Description: "Czech HDR - example of a condition (Heart Failure)"
 
 Instance: Organization-L1-HOSP
 InstanceOf: OrganizationEuCore
-Usage: #example
+Usage: #inline
 Description: "A minimalist example of a subordinate department within a hospital hierarchy for the purposes of the HDR document. "
 * language = #cs
 * id = "a4641bd0-34af-4038-a7db-872d08a54df9"
@@ -1830,7 +1830,7 @@ Description: "A minimalist example of a subordinate department within a hospital
 //---------------------------------------------------------------------------------------------------------------
 Instance: Organization-L1-Odd
 InstanceOf: OrganizationEuCore
-Usage: #example
+Usage: #inline
 Description: "A minimalist example of a subordinate department within a hospital hierarchy for the purposes of the HDR document."
 * language = #cs
 * id = "af2b3114-e872-43b9-9875-cceb39122f7f"
@@ -1850,7 +1850,7 @@ Description: "A minimalist example of a subordinate department within a hospital
 
 Instance: Organization-L1
 InstanceOf: OrganizationEuCore
-Usage: #example
+Usage: #inline
 Description: "A minimalist example of the organization of a healthcare provider for the purposes of the HDR document. "
 * language = #cs
 * id = "9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1"
@@ -1870,7 +1870,7 @@ Description: "A minimalist example of the organization of a healthcare provider 
 //-----------------------------------------------------
 Instance: Practitioner-UZV
 InstanceOf: PractitionerEuCore
-Usage: #example
+Usage: #inline
 Description: "Participant UZV HDR"
 * language = #cs
 * id = "860c684f-aba1-40d9-94cf-721d70237b52"

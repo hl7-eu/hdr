@@ -1,0 +1,14 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <div xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <blockquote class="stu-note">
+            <b>Medication Lists</b>
+            <p>The usage of several resources for expressing medication is related to the different purposes and meaning of each resource. While more clear boundaries and relationships between resources may be useful, the editors have decided to maintain a comprehensive set of options open. Reviewers are invited to provide their feedback about the usage of the Medication related resources (e.g. MedicationStatement,  MedicationRequest,...) in the medication lists used by the HDR</p>
+        </blockquote>
+
+    </div>
+
+
+</div>

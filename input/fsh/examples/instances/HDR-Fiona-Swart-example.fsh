@@ -172,6 +172,20 @@ Usage: #example
 * performedPeriod.start = "2025-02-10T10:03:00+02:00"
 * performedPeriod.end = "2025-02-10T11:48:00+02:00"
 
+Instance: goal-mobilisatie-swart
+InstanceOf: GoalEuHdr
+Title: "Goal: Postoperative Mobilization"
+Description: "Goal profile example representing the goal of full postoperative mobilization after cesarean section."
+Usage: #example
+* lifecycleStatus = #active
+* description.text = "Achieve full, pain-free mobilization following cesarean section"
+* subject = Reference(patient-swart) "Fiona F XXX_Swart"
+* startDate = "2025-02-10"
+* category = http://terminology.hl7.org/CodeSystem/goal-category#physiotherapy "Physiotherapy"
+* target.measure.text = "Level of independent mobility"
+* target.detailString = "Patient walks independently without pain or support"
+* target.dueDate = "2025-02-12"
+
 // Validator complains about k[arb'U]/L , but it is valid
 
 // Instance: lab-swart-1
@@ -426,6 +440,8 @@ Usage: #example
 //3
 * entry[encounter][+].fullUrl = "http://example.org/Encounter/ziekenhuisopname-swart"
 * entry[encounter][=].resource = ziekenhuisopname-swart
+// * entry[goal][+].fullUrl = "http://example.org/Goal/goal-mobilisatie-swart"
+// * entry[goal][=].resource = goal-mobilisatie-swart
 * entry[observation][+].fullUrl = "http://example.org/Observation/alcohol-swart"
 * entry[observation][=].resource = alcohol-swart
 * entry[observation][+].fullUrl = "http://example.org/Observation/bloeddruk-swart"
