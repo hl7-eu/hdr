@@ -100,6 +100,7 @@
 <artifact id="Flag/example-flag-no-left-arm" key="Flag-example-flag-no-left-arm" name="Flag: Do Not Use Left Arm"/>
 <artifact id="StructureDefinition/flag-obl-eu-hdr" key="StructureDefinition-flag-obl-eu-hdr" name="Flag: obligations"/>
 <artifact id="StructureDefinition/goal-eu-hdr" key="StructureDefinition-goal-eu-hdr" name="Goal (HDR)"/>
+<artifact id="Goal/goal-mobilisatie-swart" key="Goal-goal-mobilisatie-swart" name="Goal: Postoperative Mobilization"/>
 <artifact deprecated="true" id="ActorDefinition/actor-consumer-eu-hdr" key="ActorDefinition-actor-consumer-eu-hdr" name="HDR Consumer"/>
 <artifact deprecated="true" id="ActorDefinition/actor-creator-eu-hdr" key="ActorDefinition-actor-creator-eu-hdr" name="HDR Creator"/>
 <artifact deprecated="true" id="ActorDefinition/actor-repos-eu-hdr" key="ActorDefinition-actor-repos-eu-hdr" name="HDR Repository"/>
