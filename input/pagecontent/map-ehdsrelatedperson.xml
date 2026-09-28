@@ -69,14 +69,14 @@
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>name</td>
-            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdshumanname.html">EHDSHumanName Mapping</a> for detailed mapping information.</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdshumanname.html">EHDSHumanName Mapping</a> for detailed mapping information.</td>
           </tr>
           <tr>
             <td>subject</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>patient</td>
-            <td>Reference to <a href="https://hl7.eu/fhir/base/2.0.0/StructureDefinition-PatientEuCore.html">PatientEuCore</a>.</td>
+            <td>Reference to <a href="https://hl7.eu/fhir/base/2.0.1/StructureDefinition-patient-eu-core.html">PatientEuCore</a>.</td>
           </tr>
           <tr>
             <td>relationship</td>
@@ -90,14 +90,14 @@
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>address</td>
-            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsaddress.html">EHDSAddress Mapping</a> for detailed mapping information.</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdsaddress.html">EHDSAddress Mapping</a> for detailed mapping information.</td>
           </tr>
           <tr>
             <td>telecom</td>
             <td>equivalent</td>
             <td>RelatedPerson</td>
             <td>telecom</td>
-            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdstelecom.html">EHDSTelecom Mapping</a> for detailed mapping information.</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdstelecom.html">EHDSTelecom Mapping</a> for detailed mapping information.</td>
           </tr>
         </tbody>
       </table>

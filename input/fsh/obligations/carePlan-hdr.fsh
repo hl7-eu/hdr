@@ -19,9 +19,7 @@ Description: """This profile defines obligations for the CarePlan resource for t
 * period insert OblShallPopulateShallProcess
 
 * activity insert OblShallPopulateShallProcess
-  * detail insert OblShallPopulateShallProcess
-    * kind insert OblShallPopulateShallDisplayProcess
-    * description insert OblShallPopulateShallProcess
+// No obligations on activity.detail: deprecated in R5/R6, activity.reference is used instead (see CarePlanEuHdr)
   * reference insert OblShallPopulateShallDisplayProcess
 
 

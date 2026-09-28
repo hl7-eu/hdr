@@ -6,7 +6,7 @@ Title:    "MedicationAdministration (HDR)"
 Description: "This profile constrains the MedicationAdministration resource for the purpose of this guide, adapted from the MPD work."
 //-------------------------------------------------------------------------------------------
 
-* insert SetFmmAndStatusRule (1, draft)
+* insert SetFmmAndStatusRule (2, trial-use)
 
 * identifier 
   * ^short = "Medication Administration Identifier"

@@ -3,6 +3,7 @@ Parent: DeviceUseStatement
 Id: deviceUseStatement-eu-hdr
 Title: "DeviceUseStatement (HDR)"
 Description: "This profile represents the constraints applied to the DeviceUseStatement resource for the purpose of this guide. A device used by or implanted on the patient is described in the hospital discharge report as an instance of a Device resource constrained by this profile."
+* insert SetFmmAndStatusRule (2, trial-use)
 
 
 * identifier ^requirements = "EHDSDeviceUse.header.identifier"

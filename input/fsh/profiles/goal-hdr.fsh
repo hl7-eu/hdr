@@ -3,6 +3,7 @@ Parent: Goal
 Id: goal-eu-hdr
 Title: "Goal (HDR)"
 Description: "Goal profile aligned with the Care Plan logical model."
+* insert SetFmmAndStatusRule (2, trial-use)
 
 
 // ---------- Goal details ----------

@@ -3,6 +3,7 @@ Parent: Bundle
 Id: bundle-eu-hdr
 Title: "Bundle (HDR)"
 Description: "Clinical document used to represent a Hospital Discharge Report for the scope of this guide."
+* insert SetFmmAndStatusRule (2, trial-use)
 * . ^short = "Hospital Discharge Report bundle"
 * . ^definition = "Hospital Discharge Report bundle."
 * obeys bdl-hdr-1

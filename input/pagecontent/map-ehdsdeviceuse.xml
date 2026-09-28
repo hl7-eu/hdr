@@ -133,7 +133,7 @@
             <td>related-to</td>
             <td>DeviceUseStatement</td>
             <td>bodySite</td>
-            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsbodystructure.html">EHDSBodyStructure mapping</a> for details.</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdsbodystructure.html">EHDSBodyStructure mapping</a> for details.</td>
           </tr>
           <tr>
             <td>reason[x]</td>

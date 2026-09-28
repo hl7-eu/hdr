@@ -3,7 +3,7 @@ id: hl7.fhir.eu.hdr
 canonical: http://hl7.eu/fhir/hdr
 name:  Hl7EuHospitalDischargeReportIg
 title: HL7 Europe Hospital Discharge Report
-description: This implementation guide specifies the Hospital Discharge Report in the European context, as defined in eHN Hospital Discharge Report guidelines.
+description: This implementation guide specifies the Hospital Discharge Report in the European context, as defined by the EHDS logical model.
 status: active # draft | active | retired | unknown
 version: 1.0.0 #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
@@ -160,10 +160,7 @@ pages:
 #
 parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #  produce-jekyll-data: true
-  special-url:
-    - http://terminology.ehdsi.eu/ValueSet/eHDSIConditionPOA
-    - http://terminology.ehdsi.eu/ValueSet/eHDSITreatmentClass
-#    - http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
+#  special-url:
 #    - http://example.org/lab-codes
 
 

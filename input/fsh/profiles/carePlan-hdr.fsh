@@ -3,6 +3,7 @@ Parent: CarePlan
 Id: carePlan-eu-hdr
 Title:    "Care Plan (HDR)"
 Description: """This profile constrains the CarePlan resource for the purpose of this guide."""
+* insert SetFmmAndStatusRule (2, trial-use)
 
 * . ^short = "Healthcare plan for patient"
 // ---------- Core metadata ----------
