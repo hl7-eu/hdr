@@ -1,7 +1,7 @@
 Profile: CarePlanEuHdrObligation
 Parent: CarePlanEuHdr
 Id: carePlan-obl-eu-hdr
-Title:    "Care Plan: obligations"
+Title:    "CarePlan: obligations"
 Description: """This profile defines obligations for the CarePlan resource for the purpose of this guide."""
 
 * insert SetFmmAndStatusRule ( 0, informative)

@@ -1,9 +1,8 @@
 Profile: AllergyIntoleranceEuCoreObligation
 Parent: AllergyIntoleranceEuCore
 Id: allergyIntolerance-obl-eu-hdr
-Title:    "Allergy Intolerance: obligations"
-Description: """This profile defines obligations for the AllergyIntolerance resource for the purpose of this project."""
-* ^purpose = "This profile constrains the AllergyIntolerance resource for the purpose of project."
+Title:    "AllergyIntolerance: obligations"
+Description: """This profile defines obligations for the AllergyIntolerance resource for the purpose of this guide."""
 
 * insert SetFmmAndStatusRule ( 0, informative)
 

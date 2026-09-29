@@ -15,7 +15,7 @@ Description: "This profile constrains the MedicationDispense resource for the pu
 
 * identifier 
   * ^short = "Dispensation/dispensed item ID"
-  * ^comment = "It is the dispensation ID if the presciption includes only one prescribed item"
+  * ^comment = "It is the dispensation ID if the prescription includes only one prescribed item"
 * status ^short = "Current state of the dispensation"
 * subject only Reference( PatientEuCore )
 

@@ -10,7 +10,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * obeys bdl-language-main-match
 
 * identifier 1..
-  * ^short = "Instance identifier"
+  * ^short = "Document identifier"
 * language 1..1
   * ^short = "Main language of the Bundle"
   * ^definition = "The main language of the Hospital Discharge Report Bundle. This element SHALL be populated and represents the main language in which the document content is expressed. Individual resources contained in the Bundle MAY declare their own language; if populated, those resource languages should match the main language of the Bundle (regional variants of the same primary language subtag, such as fr-BE and fr-FR, are considered matching)."
