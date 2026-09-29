@@ -156,6 +156,8 @@ Usage: #inline
 
 Instance: patient-wolff-example
 InstanceOf: PatientEuCore
+Title: "Patient: Reijer Wolff"
+Description: "Patient Reijer Wolff, subject of the HDR example."
 Usage: #inline
 * id = "a1438872-05b1-4868-857d-521c9d586a7e"
 
@@ -183,13 +185,17 @@ Usage: #inline
 
 Instance: practitionerrole-wolff-author
 InstanceOf: PractitionerRoleEuCore
+Title: "PractitionerRole: dr Anna Smit (author)"
+Description: "Role of the author of the HDR at Onze Lieve Lucas Gasthuis Hulst."
 Usage: #inline
 * id = "cc0ae2a0-980d-4a2b-a4fb-9c71ecc70a15"
 * practitioner = Reference(urn:uuid:b60f89db-36c7-4a23-ab59-ace7089d2387)
 * organization = Reference(urn:uuid:3f30e341-19c6-484f-827a-0c58545fb2bc)
 
 Instance: practitioner-wolff-author
-InstanceOf: Practitioner
+InstanceOf: PractitionerEuCore
+Title: "Practitioner: dr Anna Smit (author)"
+Description: "Author of the HDR example."
 Usage: #inline
 * id = "b60f89db-36c7-4a23-ab59-ace7089d2387"
 * name.prefix = "dr"
@@ -199,7 +205,9 @@ Usage: #inline
 * telecom.value = "anna.smit@olv-hulst.org"
 
 Instance: organization-wolff-hospital
-InstanceOf: Organization
+InstanceOf: OrganizationEuCore
+Title: "Organization: Onze Lieve Lucas Gasthuis Hulst"
+Description: "Hospital issuing the HDR example."
 Usage: #inline
 * id = "3f30e341-19c6-484f-827a-0c58545fb2bc"
 * name = "Onze Lieve Lucas Gasthuis Hulst"

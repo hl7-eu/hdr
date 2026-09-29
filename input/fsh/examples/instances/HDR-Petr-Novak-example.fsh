@@ -37,8 +37,6 @@ Usage: #example
 * entry[medicationStatement][=].resource = MedicationStatement-Euthyrox-Novak
 * entry[medicationStatement][+].fullUrl = "urn:uuid:f34114fc-138f-4bd8-8e1a-804d14ec9986"
 * entry[medicationStatement][=].resource = MedicationStatement-Paracetamol-Novak
-//* entry[goal][+].fullUrl = "urn:uuid:620b1120-cece-44b1-89f5-20413054eb1d"
-//* entry[goal][=].resource = Goal-hernia-treatment
 * entry[medicationStatement][+].fullUrl = "urn:uuid:bf08b62b-0abd-4e88-9092-ce0228382e51"
 * entry[medicationStatement][=].resource = MedicationStatement-Ibalgin400-Novak
 * entry[medication][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000002c"
@@ -49,8 +47,6 @@ Usage: #example
 * entry[medication][=].resource = Medication-Ibalgin400
 * entry[procedure][+].fullUrl = "urn:uuid:ffb1a62f-9050-4e33-af4b-4cdb8203c9e5"
 * entry[procedure][=].resource = Procedure-inguinal-hernia
-// * entry[consent][+].fullUrl = "urn:uuid:b3f0f517-9c64-4b8f-99d9-72183cfd9ef0"
-// * entry[consent][=].resource = CZ-AdvanceDirectives-HDR-DNR
 * entry[observation][+].fullUrl = "urn:uuid:7cf304de-5ae3-4621-8531-9c8f0b2d4e3a"
 * entry[observation][=].resource = ExampleBMI
 * entry[observation][+].fullUrl = "urn:uuid:4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a"
@@ -78,16 +74,12 @@ Usage: #example
 * entry[practitioner][=].resource = Practitioner-Referrer
 * entry[practitioner][+].fullUrl = "urn:uuid:5c33bffd-d3b6-401f-85dc-db99d48b8a3b"
 * entry[practitioner][=].resource = Practitioner-2
-// * entry[observation][+].fullUrl = "urn:uuid:af4dcfeb-2cb3-4fc8-98e2-5c8f0b2d4e3a"
-// * entry[observation][=].resource = Observation-InfectiousContact
 * entry[medicationDispense][+].fullUrl = "urn:uuid:133cea11-09c6-4147-80af-6c8f0b2d4e3a"
 * entry[medicationDispense][=].resource = MedicationDispense-Euthyrox
 * entry[medicationDispense][+].fullUrl = "urn:uuid:65c49e6d-0951-4e83-8e2c-7c8f0b2d4e3a"
 * entry[medicationDispense][=].resource = MedicationDispense-Paracetamol
 * entry[medicationDispense][+].fullUrl = "urn:uuid:b0001bf8-976a-4d7d-b192-8c8f0b2d4e3a"
 * entry[medicationDispense][=].resource = MedicationDispense-Ibalgin400
-//* entry[observation][+].fullUrl = "urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a"
-//* entry[observation][=].resource = Observation-UZV-Novak
 * entry[observation][+].fullUrl = "urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b"
 * entry[observation][=].resource = Observation-CRP-Novak
 * entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-10000000001c"
@@ -102,14 +94,8 @@ Usage: #example
 * entry[device][=].resource = Device-Pacemaker
 * entry[procedure][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000020"
 * entry[procedure][=].resource = Procedure-Insert-Pacemaker2
-//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000021"
-//* entry[observation][=].resource = Observation-DischargeCondition
 * entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000022"
 * entry[observation][=].resource = Observation-Participation-in-society
-//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000023"
-//* entry[observation][=].resource = Observation-Work-situation
-//* entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000024"
-//* entry[observation][=].resource = Observation-Hobby
 * entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000025"
 * entry[observation][=].resource = Observation-Social-network
 * entry[observation][+].fullUrl = "urn:uuid:3f85726c-ad2f-441b-89ce-100000000026"
@@ -132,10 +118,6 @@ Usage: #example
 * entry[location][=].resource = Location-Chrudim-ChirJIP
 // Prezentovatelná forma dokumentu je součástí kompozice, zde by byla vložena duplicitně
 // proto jsou tyto dva řádky zakomentovány
-//* entry[documentReference][+].fullUrl = "urn:uuid:66678621-df93-47ca-a36c-2a39a92472e7"
-//* entry[documentReference][=].resource = DischargeDocumenPDF
-//* entry[provenance][+].fullUrl = "urn:uuid:cdae7735-f7ee-4bc7-9cf3-3dc806a4eabb"
-//* entry[provenance][=].resource = signature-L3
 * entry[flag][+].fullUrl = "urn:uuid:5a17a710-193e-4490-a627-7202925aa56e"
 * entry[flag][=].resource = Flag-malnutrition-Novak
 
@@ -167,7 +149,6 @@ Usage: #inline
 //* extension[presentedForm].valueAttachment = cz-pdfhdr-example
 * confidentiality = #N
 
-//doplnit část pro custodian pod attester
 * custodian = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169) // Example Organization as custodian
 * attester[0].mode = #legal
 * attester[0].time = "2025-03-10T14:30:00+01:00"
@@ -183,7 +164,6 @@ Usage: #inline
 * section[sectionAllergies].entry[allergyOrIntolerance][0] = Reference(urn:uuid:6cf80cb1-9766-470f-ac36-b1d3d8950f1b)
 * section[sectionAllergies].text.status = #generated
 
-///TODO Doplnit Alerts
 // Sekce Varování
 * section[sectionAlert].title = "Varování"
 * section[sectionAlert].code.coding[0].system = $loinc
@@ -220,7 +200,6 @@ Usage: #inline
 * section[sectionSignificantProcedures].entry[0] = Reference(urn:uuid:ffb1a62f-9050-4e33-af4b-4cdb8203c9e5)
 
 //Léčba vybraná není v EU můžeme vypustit? 2.7.4
-// TODO doplnit terapeutickou intervenci
 
 
 //Výsledky vše na jednom místě, očekávané (nemají valsní sekci) a již připravené:
@@ -319,7 +298,6 @@ Usage: #inline
     <p>Celkově dobrý stav, bez komplikací po výkonu.</p>
   </div>"""
 * section[sectionDischargeDetails].section[=].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
-  //TODO přidat nějaká strukturovaná data z vyšetření
 
 * section[sectionDischargeDetails].section[+].title = "Antropometrická data"
 * section[sectionDischargeDetails].section[=].code = $sctCZ#248326004 "Body measurements"
@@ -327,7 +305,6 @@ Usage: #inline
 // * section[sectionDischargeDetails].section[=].code.coding[0].version = $sctCZversion
 // * section[sectionDischargeDetails].section[=].code.coding[0].code = #248326004
 // * section[sectionDischargeDetails].section[=].code.coding[0].display = "Body measurements"
-//todo přidat narativní část
 * section[sectionDischargeDetails].section[=].text.status = #additional
 * section[sectionDischargeDetails].section[=].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
@@ -461,14 +438,6 @@ Usage: #inline
 * section[sectionPatientHx].section[=].text.status = #generated
 * section[sectionPatientHx].section[=].entry[0] = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000001e)
 
-// Sekce Infekční kontakty
-/*
-* section[sectionPatientHx].section[+].title = "Infekční kontakty"
-* section[sectionPatientHx].section[=].code = TemporaryHDRSystem#infection-contact "Infectious contacts"
-* section[sectionPatientHx].section[=].text.status = #additional
-* section[sectionPatientHx].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\"><p>Pacient byl v kontaktu s osobou nakaženou COVID-19.</p></div>"
-* section[sectionPatientHx].section[=].entry[0] = Reference(urn:uuid:af4dcfeb-2cb3-4fc8-98e2-5c8f0b2d4e3a)
-*/
 
 // Sekce cestovatelská anamnéza
 * section[sectionPatientHx].section[+].title = "Cestovatelská anamnéza"
@@ -480,14 +449,6 @@ Usage: #inline
 
 
 //* section[sectionHospitalCourse].title = "Průběh hospitalizace - klinické shrnutí"
-//Sekce Předem vyslovená přání
-/*
-* section[sectionAdvanceDirectives].title = "Dříve vyjádřená přání"
-* section[sectionAdvanceDirectives].code.coding[0].display = "Advance healthcare directives"
-* section[sectionAdvanceDirectives].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\">Neresuscitovat</div>"
-* section[sectionAdvanceDirectives].text.status = #generated
-* section[sectionAdvanceDirectives].entry[0] = Reference(urn:uuid:b3f0f517-9c64-4b8f-99d9-72183cfd9ef0)
-*/
 
 //Stav při přijetí
 * section[sectionAdmissionEvaluation].title = "Stav při přijetí"
@@ -555,7 +516,6 @@ Usage: #inline
 // * section[sectionAdmissionEvaluation].section[=].code.coding[0].system = $sctCZ
 // * section[sectionAdmissionEvaluation].section[=].code.coding[0].code = #248326004
 // * section[sectionAdmissionEvaluation].section[=].code.coding[0].display = "Body measurements"
-//todo přidat narativní část
 * section[sectionAdmissionEvaluation].section[=].text.status = #additional
 * section[sectionAdmissionEvaluation].section[=].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
@@ -590,6 +550,7 @@ Usage: #inline
 Instance: Practitioner-Author
 InstanceOf: PractitionerEuCore
 Usage: #inline
+Title: "Practitioner: MUDr. Ivan Anděl (author)"
 Description: "Participant HDR"
 * language = #cs
 * id = "a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a"
@@ -607,6 +568,7 @@ Description: "Participant HDR"
 Instance: Practitioner-Author-detail
 InstanceOf: PractitionerRoleEuCore
 Usage: #inline
+Title: "PractitionerRole: MUDr. Ivan Anděl at Nemocnice Chrudim"
 Description: "Practitioner role MUDr. Ivan Anděl"
 * language = #cs
 * id = "2b7e9637-5018-4542-9faf-d5abdee7b849"
@@ -620,6 +582,7 @@ Description: "Practitioner role MUDr. Ivan Anděl"
 Instance: Organization-1
 InstanceOf: OrganizationEuCore
 Usage: #inline
+Title: "Organization: Nemocnice Chrudim"
 Description: "An example of the organization of a provider"
 * language = #cs
 * id = "ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169"
@@ -645,6 +608,7 @@ Description: "An example of the organization of a provider"
 Instance: Practitioner-2
 InstanceOf: PractitionerEuCore
 Usage: #inline
+Title: "Practitioner: MUDr. Šárka Kašková"
 Description: "Practitioner id(KRZP)=987654321"
 * language = #cs
 * id = "5c33bffd-d3b6-401f-85dc-db99d48b8a3b"
@@ -665,7 +629,8 @@ Description: "Practitioner id(KRZP)=987654321"
 Instance: Patient-Novak-Petr
 InstanceOf: PatientEuCore
 Usage: #inline
-Description: "Example of patient Petr Novak with identification by czech national identifiers (RID, RCIS) and contact information"
+Title: "Patient: Petr Novák"
+Description: "Example of patient Petr Novák, identified by Czech national identifiers (RID, RCIS), with contact information"
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-100000000000"
 * identifier[+]
@@ -748,8 +713,8 @@ Description: "Example of patient Petr Novak with identification by czech nationa
 Instance: HospitalEncounter-Novak-Petr
 InstanceOf: EncounterEuHdr
 Usage: #inline
-Title: "Encounter-HDR Example of encounter with emergency priority"
-Description: "Czech HDR - example of encounter with emergency priority"
+Title: "Encounter: Hospital stay with emergency priority"
+Description: "Czech HDR example of an inpatient encounter with emergency priority"
 * language = #cs
 * id = "10f5c49e-086d-4016-8dd1-b555306bf620"
 * status = $encounter-status#finished
@@ -793,9 +758,10 @@ Description: "Czech HDR - example of encounter with emergency priority"
 Instance: Practitioner-Admitter
 InstanceOf: PractitionerEuCore
 Usage: #inline
-Description: "Participant Admitter HDR"
+Title: "Practitioner: MUDr. Karel Volný (admitter)"
+Description: "Admitting practitioner of the hospital stay"
 * language = #cs
-* id = "Practitioner-Admitter"
+* id = "3f85726c-ad2f-441b-89ce-100000000028"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "987654321"
 * name.use = #usual
@@ -808,9 +774,10 @@ Description: "Participant Admitter HDR"
 Instance: Practitioner-Referrer
 InstanceOf: PractitionerEuCore
 Usage: #inline
-Description: "Participant Referrer HDR"
+Title: "Practitioner: MUDr. Jiří Zdvořilý (referrer)"
+Description: "Referring practitioner of the hospital stay"
 * language = #cs
-* id = "Practitioner-Referrer"
+* id = "3f85726c-ad2f-441b-89ce-100000000032"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "987654777"
 * name.use = #usual
@@ -823,8 +790,8 @@ Description: "Participant Referrer HDR"
 Instance: Condition-K409
 InstanceOf: ConditionEuCore
 Usage: #inline
-Title: "Condition-HDR Example K40.9"
-Description: "Example of a condition K40.9 with details on admission"
+Title: "Condition: Inguinal hernia (K40.9)"
+Description: "Example of a condition (inguinal hernia, ICD-10 K40.9) with details on admission"
 * language = #cs
 * id = "35717696-8a99-4f99-a938-ec0ec88a65a2"
 // Condition details
@@ -863,8 +830,8 @@ Description: "Example of a condition K40.9 with details on admission"
 Instance: Condition-E890-Novak
 InstanceOf: ConditionEuCore
 Usage: #inline
-Title: "Condition-HDR Example E8.90 for patient Novak"
-Description: "HDR - example of a condition (Postoperative Hypothyroidism)"
+Title: "Condition: Postprocedural hypothyroidism (E89.0)"
+Description: "HDR example of a condition (postprocedural hypothyroidism, ICD-10 E89.0)"
 * language = #cs
 * id = "fdf9e92d-ac48-4706-b15b-d2eaca85f45f"
 * clinicalStatus = $condition-clinical#active
@@ -881,7 +848,8 @@ Description: "HDR - example of a condition (Postoperative Hypothyroidism)"
 Instance: Practitioner-Referrer-detail
 InstanceOf: PractitionerRoleEuCore
 Usage: #inline
-Description: "practitioner's detail"
+Title: "PractitionerRole: MUDr. Jiří Zdvořilý (referrer)"
+Description: "Role of the referring practitioner at the internal medicine outpatient clinic"
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-100000000029"
 * practitioner = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000032) "MUDr. Jiří Zdvořilý"
@@ -894,8 +862,8 @@ Description: "practitioner's detail"
 //-----------------------------------------------------
 Instance: Organization-Referrer
 InstanceOf: OrganizationEuCore
-Title: "Ambulance interního lékařství, MUDr. Jiří Zdvořilý"
-Description: "Example of ambulatory physician"
+Title: "Organization: Internal medicine outpatient clinic (MUDr. Jiří Zdvořilý)"
+Description: "Example of an ambulatory internal medicine practice"
 Usage: #inline
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-100000000033"
@@ -913,8 +881,8 @@ Usage: #inline
 //--------------------------------------------
 Instance: Location-Chrudim-Chir1
 InstanceOf: LocationEuCore
-Title: "Sample Czech Location Chrudim Chir1"
-Description: "Example instance of a location conforming to the CZ_LocationCore profile."
+Title: "Location: Nemocnice Chrudim, surgical ward CHIR1"
+Description: "Example of a location: surgical ward CHIR1 of Nemocnice Chrudim"
 Usage: #inline
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-10000000002a"
@@ -933,8 +901,8 @@ Usage: #inline
 
 Instance: Location-Chrudim-ChirJIP
 InstanceOf: LocationEuCore
-Title: "Sample Czech Location Chrudim JIP"
-Description: "Example instance of a location conforming to the CZ_LocationCore profile."
+Title: "Location: Nemocnice Chrudim, surgical intensive care unit CHIR-JIP"
+Description: "Example of a location: surgical intensive care unit (JIP) of Nemocnice Chrudim"
 Usage: #inline
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-10000000002b"
@@ -952,10 +920,10 @@ Usage: #inline
 
 //----------------------------------------
 Instance: CarePlan-Novak
-InstanceOf: CarePlan
+InstanceOf: CarePlanEuHdr
 Usage: #inline
-Title: "CarePlan-Novak-Petr"
-Description: "Czech HDR - example of a care plan"
+Title: "CarePlan: Inguinal hernia care plan"
+Description: "Czech HDR example of a care plan after inguinal hernia repair"
 * language = #cs
 * id = "9c913d06-84fe-4d35-b35b-8b0c7965f535"
 // Care plan details
@@ -986,7 +954,7 @@ Description: "Czech HDR - example of a care plan"
 Instance: Allergy-Strawberry-Novak
 InstanceOf: AllergyIntoleranceEuCore
 Usage: #inline
-Title: "AllergyIntolerance - Strawberry for patient Novak"
+Title: "AllergyIntolerance: Strawberry"
 Description: "Patient experiences itching and tongue swelling in response to strawberries."
 * language = #cs
 * id = "6cf80cb1-9766-470f-ac36-b1d3d8950f1b"
@@ -1017,8 +985,8 @@ Description: "Patient experiences itching and tongue swelling in response to str
 Instance: MedicationStatement-Euthyrox-Novak
 InstanceOf: MedicationStatementEuCore
 Usage: #inline
-Title: "MedicationStatement-HDR Example: Euthyrox"
-Description: "HDR - example: Euthyrox"
+Title: "MedicationStatement: Euthyrox"
+Description: "HDR example of a medication statement: Euthyrox"
 * language = #cs
 * id = "47472c99-09bf-4007-bfaa-16c9665ae090"
 * status = #active
@@ -1056,8 +1024,8 @@ Description: "HDR - example: Euthyrox"
 Instance: Medication-Euthyrox
 InstanceOf: MedicationEuCore
 Usage: #inline
-Title: "Dispense – Euthyrox"
-Description: "Euthyrox v tabletách"
+Title: "Medication: Euthyrox"
+Description: "Euthyrox tablets"
 * id = "3f85726c-ad2f-441b-89ce-10000000002c"
 * language = #cs
 * status = #active
@@ -1095,15 +1063,15 @@ Description: "Euthyrox v tabletách"
 // * identifier[0].value = "0243131"
 
 Instance: ExampleBMI
-InstanceOf: Observation
-Title: "Observation: Body Mass Index"
-Description: "Example instance for BMI observation using the CZ_ObservationBMIHdr profile."
+InstanceOf: $vitalsigns
+Title: "Observation: Body mass index"
+Description: "Example of a body mass index (BMI) vital-sign observation"
 * language = #cs
 * id = "7cf304de-5ae3-4621-8531-9c8f0b2d4e3a"
 * status = #final
 * code = $loinc#39156-5 "body mass index" // "Body mass index (BMI) [Ratio]"
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
+* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[VSCat].coding.code = #vital-signs
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * performer = Reference(urn:uuid:5c33bffd-d3b6-401f-85dc-db99d48b8a3b)
@@ -1113,13 +1081,13 @@ Description: "Example instance for BMI observation using the CZ_ObservationBMIHd
 * valueQuantity.code = #kg/m2
 
 Instance: ExampleBloodPressure
-InstanceOf: Observation
-Title: "Observation: Blood Pressure"
-Description: "Example instance for blood pressure observation (systolic and diastolic)."
+InstanceOf: $vitalsigns
+Title: "Observation: Blood pressure"
+Description: "Example of a blood pressure vital-sign observation (systolic and diastolic)"
 * language = #cs
 * id = "8d2aea77-f576-4d0f-9508-537359aa44d6"
 * status = #final
-* category[0] = $observation-category#vital-signs "Vital Signs"
+* category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#85354-9 "panel krevního tlaku - všechny testy volitelné" //"Blood pressure panel with all children optional"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
@@ -1139,15 +1107,15 @@ Description: "Example instance for blood pressure observation (systolic and dias
 * component[1].valueQuantity.code = #mm[Hg]
 
 Instance: ExampleChestCircumference
-InstanceOf: Observation
-Title: "Observation: Chest Circumference"
-Description: "Example instance for chest circumference observation using the CZ_ObservationChestCircumferenceHdr profile."
+InstanceOf: $vitalsigns
+Title: "Observation: Chest circumference"
+Description: "Example of a chest circumference vital-sign observation"
 * language = #cs
 * id = "4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a"
 * status = #final
 * code = $loinc#8280-0 "Waist Circumference at umbilicus by Tape measure"
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
+* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[VSCat].coding.code = #vital-signs
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * performer = Reference(urn:uuid:5c33bffd-d3b6-401f-85dc-db99d48b8a3b)
@@ -1157,15 +1125,15 @@ Description: "Example instance for chest circumference observation using the CZ_
 * valueQuantity.code = #cm
 
 Instance: ExampleHeadCircumference
-InstanceOf: Observation
-Title: "Observation: Head Circumference"
-Description: "Example instance for head circumference observation using the CZ_ObservationHeadCircumferenceHdr profile."
+InstanceOf: $vitalsigns
+Title: "Observation: Head circumference"
+Description: "Example of a head circumference vital-sign observation"
 * language = #cs
 * id = "5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d"
 * status = #final
 * code = $loinc#9843-4 "obvod hlavy v okcipitální a frontální oblasti" //"Head Occipital-frontal circumference"
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
+* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[VSCat].coding.code = #vital-signs
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * performer = Reference(urn:uuid:5c33bffd-d3b6-401f-85dc-db99d48b8a3b)
@@ -1175,15 +1143,15 @@ Description: "Example instance for head circumference observation using the CZ_O
 * valueQuantity.code = #cm
 
 Instance: ExampleAbdominalCircumference
-InstanceOf: Observation
-Title: "Observation: Abdominal Circumference"
-Description: "Example instance for abdominal circumference observation using the CZ_ObservationAbdominalCircumferenceHdr profile."
+InstanceOf: $vitalsigns
+Title: "Observation: Abdominal circumference"
+Description: "Example of an abdominal circumference vital-sign observation"
 * language = #cs
 * id = "6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a"
 * status = #final
 * code = $loinc#56086-2 "Adult Waist Circumference Protocol"
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
+* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[VSCat].coding.code = #vital-signs
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * performer = Reference(urn:uuid:5c33bffd-d3b6-401f-85dc-db99d48b8a3b)
@@ -1193,15 +1161,15 @@ Description: "Example instance for abdominal circumference observation using the
 * valueQuantity.code = #cm
 
 Instance: ExampleHeight
-InstanceOf: Observation
-Title: "Observation: Body Height"
-Description: "Example instance for height observation using the CZ_ObservationHeightHdr profile."
+InstanceOf: $vitalsigns
+Title: "Observation: Body height"
+Description: "Example of a body height vital-sign observation"
 * language = #cs
 * id = "6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b"
 * status = #final
 * code = $loinc#8302-2 "tělesná výška"  //"Body height"
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
+* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[VSCat].coding.code = #vital-signs
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * performer = Reference(urn:uuid:5c33bffd-d3b6-401f-85dc-db99d48b8a3b)
@@ -1211,16 +1179,16 @@ Description: "Example instance for height observation using the CZ_ObservationHe
 * valueQuantity.code = #cm
 
 Instance: ExampleWeight
-InstanceOf: Observation
-Title: "Observation: Body Weight"
-Description: "Example instance for weight observation using the CZ_ObservationWeightHdr profile."
+InstanceOf: $vitalsigns
+Title: "Observation: Body weight"
+Description: "Example of a body weight vital-sign observation"
 
 * language = #cs
 * id = "5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c"
 * status = #final
 * code = $loinc#29463-7 "tělesná hmotnost" //"Body weight"
-* category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category.coding.code = #vital-signs
+* category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
+* category[VSCat].coding.code = #vital-signs
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * effectiveDateTime = "2024-03-28"
 * performer = Reference(urn:uuid:5c33bffd-d3b6-401f-85dc-db99d48b8a3b)
@@ -1233,8 +1201,8 @@ Description: "Example instance for weight observation using the CZ_ObservationWe
 Instance: Observation-TravelHistory-Madagaskar
 InstanceOf: Observation
 Usage: #inline
-Title: "Observation - Travel History"
-Description: "Travel history observation"
+Title: "Observation: Travel history"
+Description: "Travel history observation (recent travel to Madagascar)"
 * id = "f95f843e-701f-434a-94c9-3c8f0b2d4e3a"
 * language = #cs
 * status = #final
@@ -1249,31 +1217,12 @@ Description: "Travel history observation"
 * note[0].text = "Pacient navštívil Madagaskar během posledních 30 dnů."
 
 
-/* Instance: Observation-InfectiousContact
-InstanceOf: Observation
-Usage: #inline
-Title: "Infectious contact"
-Description: "The patient was in contact with a person infected with COVID-19"
-* id = "af4dcfeb-2cb3-4fc8-98e2-5c8f0b2d4e3a"
-* language = #cs
-* status = #final
-* category[+].coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-ActClass"
-* category[=].coding[0].code = #AEXPOS
-* category[=].coding[0].display = "acquisition exposure"
-* code = $loinc#88636-6 "Known exposure [Identifier]"
-* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
-* performer = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
-* effectiveDateTime = "2024-03-25"
-* valueCodeableConcept = $sctCZ#840546002 "Exposure to SARS-CoV-2"
-* valueCodeableConcept.text = "Exposure to COVID-19"
-* note[0].text = "The exposure occurred in a shared household five days before admission."
- */
 //---------------------------------------------------------------------
 Instance: MedicationStatement-Paracetamol-Novak
 InstanceOf: MedicationStatementEuCore
 Usage: #inline
-Title: "MedicationStatement-HDR Example: Paracetamol"
-Description: "Czech HDR - example: Paracetamol"
+Title: "MedicationStatement: Paracetamol"
+Description: "Czech HDR example of a medication statement: Paracetamol"
 * language = #cs
 * id = "f34114fc-138f-4bd8-8e1a-804d14ec9986"
 * status = #active
@@ -1315,8 +1264,8 @@ Description: "Czech HDR - example: Paracetamol"
 Instance: Medication-Paracetamol
 InstanceOf: MedicationEuCore
 Usage: #inline
-Title: "Medication – Paracetamol"
-Description: "Lek Paracetamol v tabletách"
+Title: "Medication: Paracetamol"
+Description: "Paracetamol tablets"
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-10000000002d"
 * status = #active
@@ -1354,25 +1303,12 @@ Description: "Lek Paracetamol v tabletách"
 // * identifier[0].value = "0243131"
 
 
-/* Instance: Goal-hernia-treatment
-InstanceOf: Goal
-Usage: #inline
-Title: "Goal for Hernia Treatment"
-Description: "HDR - example of a goal for hernia treatment"
-* id = "620b1120-cece-44b1-89f5-20413054eb1d"
-* lifecycleStatus = #active
-* description.text = "Chirurgické řešení tříselné kýly s úplným zhojením a bez komplikací."
-* subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
-* startDate = "2025-03-10"
-* target[0].detailString = "Zhojená rána bez komplikací, bez recidivy kýly."
-* target[0].measure = http://snomed.info/sct#298005009 "Finding of wound healing"
- */
 
 Instance: Medication-Ibalgin400
 InstanceOf: MedicationEuCore
 Usage: #inline
-Title: "Medication – Ibalgin 400"
-Description: "Lek Ibalgin 400 v tabletách"
+Title: "Medication: Ibalgin 400"
+Description: "Ibalgin 400 tablets"
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-10000000002e"
 * status = #active
@@ -1412,8 +1348,8 @@ Description: "Lek Ibalgin 400 v tabletách"
 Instance: MedicationDispense-Ibalgin400
 InstanceOf: MedicationDispenseEuHdr
 Usage: #inline
-Title: "Dispense – Ibalgin 400"
-Description: "Výdej léčivého přípravku Ibalgin 400 mg pacientovi Novákovi"
+Title: "MedicationDispense: Ibalgin 400"
+Description: "Dispense of the medicinal product Ibalgin 400 mg to patient Novák"
 * id = "b0001bf8-976a-4d7d-b192-8c8f0b2d4e3a"
 * language = #cs
 * status = #completed
@@ -1431,9 +1367,9 @@ Description: "Výdej léčivého přípravku Ibalgin 400 mg pacientovi Novákovi
 // Procedure: inguinal-hernia (CZ_ProcedureHdr)
 Instance: Procedure-inguinal-hernia
 InstanceOf: ProcedureEuCore
-Title: "Procedure-HDR Example - Inguinal hernia"
+Title: "Procedure: Inguinal hernia repair"
 Usage: #inline
-Description: "HDR - example of a Procedure - Repair of inguinal hernia"
+Description: "HDR example of a procedure: repair of inguinal hernia"
 * language = #cs
 * id = "ffb1a62f-9050-4e33-af4b-4cdb8203c9e5"
 * status = #completed
@@ -1454,7 +1390,7 @@ Description: "HDR - example of a Procedure - Repair of inguinal hernia"
 Instance: IronDeficiencyAnemiaCondition
 InstanceOf: ConditionEuCore
 Usage: #inline
-Title: "Condition-HDR Iron Deficiency Anemia"
+Title: "Condition: Iron deficiency anaemia"
 Description: "Example of a condition Iron deficiency anaemia secondary to blood loss (chronic)"
 * id = "3f85726c-ad2f-441b-89ce-10000000002f"
 * language = #cs
@@ -1473,37 +1409,13 @@ Description: "Example of a condition Iron deficiency anaemia secondary to blood 
 * category[2] = $sctCZ#25265005 "Did not receive therapy or drug for"
 
 
-/* Instance: CZ-AdvanceDirectives-HDR-DNR
-InstanceOf: Consent
-Usage: #inline
-Title: "AdvanceDirectives  DNR"
-Description: "Hdr - example od advance directive"
-
-* status = #active
-// this in eu hdr
-* policyRule = http://hl7europe.org/policy-rules#local "local policy rule"
-* policyRule.text = "Act No. 372/2011 Coll. in Section 36"
-
-* dateTime = "2025-01-01T08:00:00+01:00"
-
-* category.coding[0].system = "http://terminology.hl7.org/CodeSystem/consentcategorycodes"
-* category.coding[0].code = #dnr
-* category.coding[0].display = "Do Not Resuscitate"
-
-* scope.coding[0].system = $consentscope
-* scope.coding[0].code = #adr
-* scope.coding[0].display = "Advanced Care Directive"
-
-* text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\">Podepsané prohlášení Neresuscitovat Platné od 1.1.2025</div>"
- */
 
 //---------------------------------------------------------------------
 Instance: MedicationStatement-Ibalgin400-Novak
 InstanceOf: MedicationStatementEuCore
 Usage: #inline
-Title: "MedicationStatement-HDR Example: Ibalgin"
-Description: "HDR - example of Ibalgin 400"
+Title: "MedicationStatement: Ibalgin 400"
+Description: "HDR example of a medication statement: Ibalgin 400"
 * language = #cs
 * id = "bf08b62b-0abd-4e88-9092-ce0228382e51"
 * status = #active
@@ -1541,8 +1453,8 @@ Description: "HDR - example of Ibalgin 400"
 Instance: MedicationDispense-Euthyrox
 InstanceOf: MedicationDispenseEuHdr
 Usage: #inline
-Title: "Dispense – Euthyrox for patient Novak"
-Description: "Výdej léčivého přípravku Euthyrox pacientovi Novákovi"
+Title: "MedicationDispense: Euthyrox"
+Description: "Dispense of the medicinal product Euthyrox to patient Novák"
 * id = "133cea11-09c6-4147-80af-6c8f0b2d4e3a"
 * language = #cs
 * status = #completed
@@ -1559,8 +1471,8 @@ Description: "Výdej léčivého přípravku Euthyrox pacientovi Novákovi"
 Instance: MedicationDispense-Paracetamol
 InstanceOf: MedicationDispenseEuHdr
 Usage: #inline
-Title: "Dispense – Paracetamol"
-Description: "Výdej léčivého přípravku Paracetamol pacientovi Novákovi"
+Title: "MedicationDispense: Paracetamol"
+Description: "Dispense of the medicinal product Paracetamol to patient Novák"
 * id = "65c49e6d-0951-4e83-8e2c-7c8f0b2d4e3a"
 * language = #cs
 * status = #completed
@@ -1576,8 +1488,8 @@ Description: "Výdej léčivého přípravku Paracetamol pacientovi Novákovi"
 Instance: Observation-Participation-in-society
 InstanceOf: Observation
 Usage: #inline
-Title: "Společenské uplatnění"
-Description: "Pacient je aktivní v komunitních aktivitách a dobrovolnictví."
+Title: "Observation: Participation in society"
+Description: "The patient is active in community activities and volunteering."
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-100000000022"
 * status = #final
@@ -1592,8 +1504,8 @@ Description: "Pacient je aktivní v komunitních aktivitách a dobrovolnictví."
 Instance: Observation-Social-network
 InstanceOf: Observation
 Usage: #inline
-Title: "Sociální síť"
-Description: "Pacient má aktivní sociální síť a pravidelně se setkává s přáteli."
+Title: "Observation: Social network"
+Description: "The patient has an active social network and meets friends regularly."
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-100000000025"
 * status = #final
@@ -1612,8 +1524,8 @@ Description: "Pacient má aktivní sociální síť a pravidelně se setkává s
 Instance: Observation-CRP-Novak
 InstanceOf: MedicalTestResultEuCore
 Usage: #inline
-Title: "CRP - Novák Petr"
-Description: "HDR - example of CRP observation for Novák Petr"
+Title: "Observation: C-reactive protein (CRP)"
+Description: "HDR example of a C-reactive protein (CRP) test result for patient Novák Petr"
 * language = #cs
 * id = "10f5c49e-086d-4016-8dd1-10000000001b"
 * status = #final
@@ -1641,7 +1553,7 @@ Description: "HDR - example of CRP observation for Novák Petr"
 
 Instance: ExampleSdohSmoking
 InstanceOf: Observation
-Title: "Observation: Smoking Status"
+Title: "Observation: Smoking status"
 Description: "Example of Social History Observation - Smoking"
 * id = "3f85726c-ad2f-441b-89ce-10000000001c"
 * language = #cs
@@ -1657,7 +1569,7 @@ Description: "Example of Social History Observation - Smoking"
 
 Instance: ExampleSdohAlcohol
 InstanceOf: Observation
-Title: "Observation: Alcohol Use"
+Title: "Observation: Alcohol use"
 Description: "Example of Social History Observation - Alcohol Use"
 * id = "3f85726c-ad2f-441b-89ce-10000000001d"
 * language = #cs
@@ -1673,10 +1585,10 @@ Description: "Example of Social History Observation - Alcohol Use"
 
 
 Instance: DeviceUseStatement-Pacemaker
-InstanceOf: DeviceUseStatement
+InstanceOf: DeviceUseStatementEuHdr
 Usage: #inline
-Title: "Použití kardiostimulátoru"
-Description: "Záznam o implantaci kardiostimulátoru z důvodu bradykardie"
+Title: "DeviceUseStatement: Pacemaker"
+Description: "Record of a pacemaker implanted because of bradycardia"
 * id = "3f85726c-ad2f-441b-89ce-10000000001f"
 * language = #cs
 * status = #active
@@ -1691,6 +1603,7 @@ Description: "Záznam o implantaci kardiostimulátoru z důvodu bradykardie"
 Instance: Device-Pacemaker
 InstanceOf: DeviceEuHdr
 Usage: #inline
+Title: "Device: Pacemaker Medtronic W1DR01"
 Description: "Heart pacemaker Medtronic W1DR01"
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-100000000030"
@@ -1700,10 +1613,10 @@ Description: "Heart pacemaker Medtronic W1DR01"
 * patient = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000) "Petr Novák"
 
 Instance: Procedure-Insert-Pacemaker2
-InstanceOf: Procedure
-Title: "CZ-Procedure-HDR Example - Pacemaker 2"
+InstanceOf: ProcedureEuCore
+Title: "Procedure: Pacemaker implantation"
 Usage: #inline
-Description: "Czech HDR - example of a Procedure - Pacemaker"
+Description: "Czech HDR example of a procedure: insertion of a pacemaker pulse generator"
 * id = "3f85726c-ad2f-441b-89ce-100000000020"
 * language = #cs
 * status = #completed
@@ -1731,8 +1644,8 @@ Description: "Czech HDR - example of a Procedure - Pacemaker"
 Instance: Observation-Education
 InstanceOf: Observation
 Usage: #inline
-Title: "Vzdělání"
-Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
+Title: "Observation: Education"
+Description: "The patient has a university education in computer science."
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-100000000027"
 * status = #final
@@ -1746,8 +1659,8 @@ Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
 Instance: Observation-Education-level
 InstanceOf: Observation
 Usage: #inline
-Title: "Dosažený stupeň vzdělání"
-Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
+Title: "Observation: Highest level of education"
+Description: "The highest level of education of the patient: university degree in computer science."
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-100000000026"
 * status = #final
@@ -1767,8 +1680,8 @@ Description: "Pacient má vysokoškolské vzdělání v oboru informatiky."
 Instance: Flag-malnutrition-Novak
 InstanceOf: FlagPatientEuCore
 Usage: #inline
-Title: "Střední podvýživa"
-Description: "Střední podvýživa – doporučení nutriční terapie u pacienta."
+Title: "Flag: Moderate malnutrition"
+Description: "Moderate malnutrition; nutritional therapy is recommended for the patient."
 * language = #cs
 * id = "5a17a710-193e-4490-a627-7202925aa56e"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000) //Novak
@@ -1786,8 +1699,8 @@ Description: "Střední podvýživa – doporučení nutriční terapie u pacien
 Instance: Immunization
 InstanceOf: ImmunizationEuCore
 Usage: #inline
-Title: "Immunization example of Covid"
-Description: "Immunization of Covid"
+Title: "Immunization: COVID-19"
+Description: "Example of a COVID-19 immunization"
 * language = #cs
 * id = "3f85726c-ad2f-441b-89ce-10000000001e"
 * status = #completed
@@ -1799,8 +1712,8 @@ Description: "Immunization of Covid"
 Instance: CZ-Condition-HDR-Example
 InstanceOf: ConditionEuCore
 Usage: #inline
-Title: "CZ-Condition-HDR Example"
-Description: "Czech HDR - example of a condition (Heart Failure)"
+Title: "Condition: Heart failure"
+Description: "Czech HDR example of a condition (heart failure)"
 * id = "3f85726c-ad2f-441b-89ce-100000000031"
 * language = #cs
 * clinicalStatus = $condition-clinical#active
@@ -1818,6 +1731,7 @@ Description: "Czech HDR - example of a condition (Heart Failure)"
 Instance: Organization-L1-HOSP
 InstanceOf: OrganizationEuCore
 Usage: #inline
+Title: "Organization: CHIR-L2 inpatient ward 2"
 Description: "A minimalist example of a subordinate department within a hospital hierarchy for the purposes of the HDR document. "
 * language = #cs
 * id = "a4641bd0-34af-4038-a7db-872d08a54df9"
@@ -1840,6 +1754,7 @@ Description: "A minimalist example of a subordinate department within a hospital
 Instance: Organization-L1-Odd
 InstanceOf: OrganizationEuCore
 Usage: #inline
+Title: "Organization: CHIR surgery department"
 Description: "A minimalist example of a subordinate department within a hospital hierarchy for the purposes of the HDR document."
 * language = #cs
 * id = "af2b3114-e872-43b9-9875-cceb39122f7f"
@@ -1860,6 +1775,7 @@ Description: "A minimalist example of a subordinate department within a hospital
 Instance: Organization-L1
 InstanceOf: OrganizationEuCore
 Usage: #inline
+Title: "Organization: Nemocnice Pardubického kraje, Chrudimská nemocnice"
 Description: "A minimalist example of the organization of a healthcare provider for the purposes of the HDR document. "
 * language = #cs
 * id = "9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1"
@@ -1880,6 +1796,7 @@ Description: "A minimalist example of the organization of a healthcare provider 
 Instance: Practitioner-UZV
 InstanceOf: PractitionerEuCore
 Usage: #inline
+Title: "Practitioner: MUDr. Karel Janák"
 Description: "Participant UZV HDR"
 * language = #cs
 * id = "860c684f-aba1-40d9-94cf-721d70237b52"

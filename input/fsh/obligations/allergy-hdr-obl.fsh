@@ -1,4 +1,4 @@
-Profile: AllergyIntoleranceEuCoreObligation
+Profile: AllergyIntoleranceEuHdrObligation
 Parent: AllergyIntoleranceEuCore
 Id: allergyIntolerance-obl-eu-hdr
 Title:    "AllergyIntolerance: obligations"

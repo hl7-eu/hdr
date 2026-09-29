@@ -1,4 +1,4 @@
-Profile: PractitionerRoleEuObligations
+Profile: PractitionerRoleEuHdrObligation
 Parent: PractitionerRoleEuCore
 Id: practitionerRole-obl-eu-hdr
 Title: "PractitionerRole: obligations"

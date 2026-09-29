@@ -1,4 +1,4 @@
-Profile: RelatedPersonEuObligations
+Profile: RelatedPersonEuHdrObligation
 Parent: RelatedPerson
 Id: relatedPerson-obl-eu-hdr
 Title: "RelatedPerson: obligations"

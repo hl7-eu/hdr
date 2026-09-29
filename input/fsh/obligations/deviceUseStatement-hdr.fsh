@@ -6,8 +6,8 @@ Description: "This profile defines obligations for the DeviceUseStatement resour
 
 * insert SetFmmAndStatusRule ( 0, informative)
 
-* source only Reference(PatientEuObligations or PractitionerEuObligations or PractitionerRoleEuObligations or RelatedPersonEuObligations)
-* subject only Reference(PatientEuObligations)
+* source only Reference(PatientEuHdrObligation or PractitionerEuHdrObligation or PractitionerRoleEuHdrObligation or RelatedPersonEuHdrObligation)
+* subject only Reference(PatientEuHdrObligation)
 * device only Reference(DeviceEuHdrObligation)
 
 * subject insert OblShallPopulateOnly
@@ -18,6 +18,3 @@ Description: "This profile defines obligations for the DeviceUseStatement resour
 * bodySite.extension[bodySite] insert OblShouldPopulateOnly
 * note insert OblShouldPopulateOnly
 
-* text
-* reasonCode
-* reasonReference

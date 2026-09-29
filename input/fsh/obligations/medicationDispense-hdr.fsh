@@ -10,18 +10,16 @@ Description: "This profile defines obligations for the MedicationDispense resour
 
 * insert OblShallPopulateShallProcess
 
-* subject only Reference(PatientEuObligations)
+* subject only Reference(PatientEuHdrObligation)
 * medication[x] only CodeableConcept or Reference(MedicationEuHdrObligation)
-* authorizingPrescription only Reference(MedicationRequestEuCoreObligation)
+* authorizingPrescription only Reference(MedicationRequestEuHdrObligation)
 
 * subject insert OblShallPopulateShallProcess
 * medication[x] insert OblShallPopulateShallDisplayProcess
 
-* identifier 
 * status insert OblShallPopulateShallDisplayProcess
 
 
-* receiver 
 * performer.actor insert OblShallPopulateShallProcess
 
 * authorizingPrescription insert OblShallPopulateShallDisplayProcess

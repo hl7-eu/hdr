@@ -1,4 +1,4 @@
-Profile: ProcedureEuCoreObligation
+Profile: ProcedureEuHdrObligation
 Parent: ProcedureEuCore
 Id: procedure-obl-eu-hdr
 Title: "Procedure: obligations"
@@ -13,14 +13,3 @@ Description: "This profile defines obligations for the Procedure resource for th
 * bodySite insert OblShouldPopulateOnly
 * note insert OblShouldPopulateOnly
 
-* bodySite.extension[bodySite]
-* text
-* performer.actor
-* performer.onBehalfOf
-* reasonCode
-* reasonReference
-* outcome
-* complication
-* complicationDetail
-* focalDevice
-* focalDevice.manipulated

@@ -49,9 +49,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * attester.time ^short = "When the composition was attested."
 * attester.party ^short = "Who attested the composition."
 * attester.party only Reference( PractitionerEuCore or PractitionerRoleEuCore or OrganizationEuCore)
-* section 1..
-* obeys cmp-hdr-1 // or text or section
 * obeys cmp-hdr-2 // Discharge summary (LOINC 18842-5) or Hospital course
+* section 1..
+* section obeys cmp-hdr-1 // or text or section
 * section ^slicing.discriminator[0].type = #value
 * section ^slicing.discriminator[=].path = "code"
 * section ^slicing.ordered = false
@@ -466,7 +466,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 /// ========= INVARIANTS =========
 Invariant: cmp-hdr-1
-Description: "A Composition SHALL have either text, at least one section, or both."
+Description: "A section SHALL have text, sub-sections, or both."
 Expression: "text.exists() or section.exists()"
 Severity: #error
 

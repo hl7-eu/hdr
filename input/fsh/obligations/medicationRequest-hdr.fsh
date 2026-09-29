@@ -1,5 +1,5 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  MedicationRequestEuCoreObligation
+Profile:  MedicationRequestEuHdrObligation
 Parent:   MedicationRequestEuCore
 Id:       medicationRequest-obl-eu-hdr
 Title:    "MedicationRequest: obligations"
@@ -13,7 +13,6 @@ Description: "This profile defines obligations for the MedicationRequest resourc
 * subject insert OblShallPopulateShallProcess
 * medication[x] insert OblShallPopulateShallDisplayProcess
 
-* identifier 
 
 * reasonCode insert OblShallPopulateShouldDisplayShallProcess
 * reasonReference insert OblShallPopulateShouldDisplayShallProcess
@@ -24,13 +23,6 @@ Description: "This profile defines obligations for the MedicationRequest resourc
 * groupIdentifier insert OblShallPopulateShouldDisplayShallProcess
 * dosageInstruction insert OblShallPopulateShouldDisplayShallProcess
   * timing insert OblShallPopulateShallDisplayProcess
-    * repeat
-      * duration 
-      * frequency 
-      * period 
-      * periodUnit 
-    * code 
-  * route 
   * text insert OblShallPopulateShallDisplayProcess
   * doseAndRate.doseQuantity insert OblShallPopulateShallDisplayProcess
 * dispenseRequest insert OblShallPopulateShallProcess

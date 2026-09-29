@@ -75,7 +75,9 @@ Usage: #example
 
 
 Instance: patient-luca-example
-InstanceOf: Patient
+InstanceOf: PatientEuCore
+Title: "Patient: Luigi De Luca"
+Description: "Patient Luigi De Luca, subject of the HDR example."
 Usage: #inline
 * id = "b01a2623-e219-41d2-8e78-1fa1439751d0"
 
@@ -101,14 +103,18 @@ Usage: #inline
 * telecom[=].value = "+39 0334 8920354"
 
 Instance: practitionerrole-luca-author
-InstanceOf: PractitionerRole
+InstanceOf: PractitionerRoleEuCore
+Title: "PractitionerRole: dr Augusto Zucchero-Combattente (author)"
+Description: "Role of the author of the HDR at Casa di cura Villa S. Giuliana."
 Usage: #inline
 * id = "74403dd8-bb1b-45f9-bb69-e843dfaf45e9"
 * practitioner = Reference(urn:uuid:0710d9e7-3f1a-4e16-a9b3-5c991fe23c95)
 * organization = Reference(urn:uuid:a61a91f8-b8f2-4947-9a64-5165ea380a38)
 
 Instance: practitioner-luca-author
-InstanceOf: Practitioner
+InstanceOf: PractitionerEuCore
+Title: "Practitioner: dr Augusto Zucchero-Combattente (author)"
+Description: "Author of the HDR example."
 Usage: #inline
 * id = "0710d9e7-3f1a-4e16-a9b3-5c991fe23c95"
 * name.prefix = "dr"
@@ -118,7 +124,9 @@ Usage: #inline
 * telecom.value = "augusto@casasgiuliana.osp.venetia.it"
 
 Instance: organization-luca-hospital
-InstanceOf: Organization
+InstanceOf: OrganizationEuCore
+Title: "Organization: Casa di cura Villa S. Giuliana"
+Description: "Hospital where Luigi De Luca was admitted."
 Usage: #inline
 * id = "a61a91f8-b8f2-4947-9a64-5165ea380a38"
 * name = "Casa di cura Villa S. Giuliana"
@@ -128,6 +136,8 @@ Usage: #inline
 
 Instance: encounter-luca-example
 InstanceOf: EncounterEuHdr
+Title: "Encounter: Inpatient stay for prediabetes"
+Description: "Inpatient encounter from 2025-04-01 to 2025-04-10, with prediabetes as reason."
 Usage: #inline
 * id = "7c9a2bf1-507f-4d43-b06e-d78e9670379d"
 * status = $encounter-status#finished
@@ -466,6 +476,8 @@ Usage: #example
 
 Instance: lifestyle-consultation-luca
 InstanceOf: ProcedureEuCore
+Title: "Procedure: Lifestyle education"
+Description: "Lifestyle education given to the patient during the stay."
 Usage: #inline
 * id = "92ffc1fd-71ff-4d54-bc06-25d9e1e1fea0"
 * status = #completed
@@ -475,6 +487,8 @@ Usage: #inline
 
 Instance: diabetes-education-luca
 InstanceOf: ProcedureEuCore
+Title: "Procedure: Diabetic education"
+Description: "Diabetic education given to the patient during the stay."
 Usage: #inline
 * id = "a74a3dca-92fa-4b71-8e70-89a07ac74bc3"
 * status = #completed
@@ -484,6 +498,8 @@ Usage: #inline
 
 Instance: metformin-therapy-luca
 InstanceOf: ProcedureEuCore
+Title: "Procedure: Metformin therapy"
+Description: "Metformin therapy started during the stay."
 Usage: #inline
 * id = "53a8c3c3-5d1b-4950-87bc-fddae2ebc079"
 * status = #in-progress
@@ -492,7 +508,7 @@ Usage: #inline
 * performedDateTime = "2025-04-04"
 
 Instance: familyhistory-mother-luca-example
-InstanceOf: FamilyMemberHistory // EuHdr
+InstanceOf: FamilyMemberHistory
 Title: "FamilyMemberHistory: Type 2 Diabetes Mellitus - Mother"
 Description: "Mother has a history of type 2 diabetes mellitus."
 Usage: #example
@@ -503,7 +519,7 @@ Usage: #example
 * condition[0].code = $sct#430679000 "Family history of diabetes mellitus type 2 (situation)"
 
 Instance: familyhistory-grandmother-luca-example
-InstanceOf: FamilyMemberHistory // EuHdr
+InstanceOf: FamilyMemberHistory
 Title: "FamilyMemberHistory: Type 2 Diabetes Mellitus - Maternal Grandmother"
 Description: "Maternal grandmother has a history of type 2 diabetes mellitus."
 Usage: #inline
@@ -514,13 +530,13 @@ Usage: #inline
 * condition[0].code = $sct#430679000 "Family history of diabetes mellitus type 2 (situation)"
 
 Instance: bodyweight-luca-1-example
-InstanceOf: Observation
+InstanceOf: $vitalsigns
 Title: "Observation: Body Weight - 109 kg"
 Description: "Vital sign observation for body weight of 109 kg measured on April 1, 2025."
 Usage: #inline
 * id = "f0113857-b9b7-429b-8893-b645a38ae20a"
 * status = #final
-* category[0] = $observation-category#vital-signs "Vital Signs"
+* category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#29463-7 "Body weight"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-01"
@@ -530,13 +546,13 @@ Usage: #inline
 * valueQuantity.code = $ucum#kg
 
 Instance: bodyweight-luca-2-example
-InstanceOf: Observation
+InstanceOf: $vitalsigns
 Title: "Observation: Body Weight - 108 kg"
 Description: "Vital sign observation for body weight of 108 kg measured on April 10, 2025."
 Usage: #inline
 * id = "065c918f-730a-47f8-938a-7ad54618037b"
 * status = #final
-* category[0] = $observation-category#vital-signs "Vital Signs"
+* category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#29463-7 "Body weight"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-10"
@@ -546,13 +562,13 @@ Usage: #inline
 * valueQuantity.code = $ucum#kg
 
 Instance: bodyheight-luca-1-example
-InstanceOf: Observation
+InstanceOf: $vitalsigns
 Title: "Observation: Body Height - 177 cm"
 Description: "Vital sign observation for body height of 177 cm measured on April 1, 2025."
 Usage: #inline
 * id = "81783ae4-c36d-424f-8cea-fe7d3407a36b"
 * status = #final
-* category[0] = $observation-category#vital-signs "Vital Signs"
+* category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#8302-2 "Body height"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-01"
@@ -562,13 +578,13 @@ Usage: #inline
 * valueQuantity.code = $ucum#cm
 
 Instance: bloodpressure-luca-1-example
-InstanceOf: Observation
+InstanceOf: $vitalsigns
 Title: "Observation: Blood Pressure - 155/95 mmHg"
 Description: "Vital sign observation for blood pressure of 155/95 mmHg measured on April 1, 2025."
 Usage: #inline
 * id = "a19e48e1-2271-4cdb-9c76-b0626c7a5363"
 * status = #final
-* category[0] = $observation-category#vital-signs "Vital Signs"
+* category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-01"
@@ -586,13 +602,13 @@ Usage: #inline
 * component[=].valueQuantity.code = $ucum#mm[Hg]
 
 Instance: bloodpressure-luca-2-example
-InstanceOf: Observation
+InstanceOf: $vitalsigns
 Title: "Observation: Blood Pressure - 150/90 mmHg"
 Description: "Vital sign observation for blood pressure of 150/90 mmHg measured on April 10, 2025."
 Usage: #inline
 * id = "fd7f7580-5788-45dd-88ec-dca615d69c7d"
 * status = #final
-* category[0] = $observation-category#vital-signs "Vital Signs"
+* category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * code = $loinc#85354-9 "Blood pressure panel with all children optional"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)
 * effectiveDateTime = "2025-04-10"
@@ -626,6 +642,8 @@ Usage: #inline
 
 Instance: metformin-luca
 InstanceOf: MedicationAdministrationEuHdr
+Title: "MedicationAdministration: Metformin 500 mg"
+Description: "Administration of metformin hydrochloride 500 mg prolonged-release tablets, twice a day."
 Usage: #inline
 * id = "bda0b497-c9f2-47ca-8339-da1d379cb2f4"
 * status = #in-progress

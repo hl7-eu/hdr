@@ -12,12 +12,12 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 * status insert OblShallPopulateShallDisplay
 * type insert OblShallPopulateOnly
 * category insert OblShallPopulateOnly
-* subject only Reference(PatientEuObligations)
+* subject only Reference(PatientEuHdrObligation)
 * subject insert OblShallPopulateShallDisplayProcess
 * encounter only Reference(EncounterEuHdrObligation)
 * encounter insert OblShallPopulateShallProcess
 * date insert OblShallPopulateShallDisplay
-* author only Reference(PractitionerEuObligations or PractitionerRoleEuObligations or DeviceEuHdrObligation or OrganizationEuObligations)
+* author only Reference(PractitionerEuHdrObligation or PractitionerRoleEuHdrObligation or DeviceEuHdrObligation or OrganizationEuHdrObligation)
 * author insert OblShallPopulateShallDisplay
 * title insert OblShallPopulateOnly
 * language insert OblShallPopulateOnly
@@ -26,9 +26,9 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 * attester insert OblShallPopulateShallDisplay
 * attester.mode insert OblShallPopulateOnly
 * attester.time insert OblShallPopulateOnly
-* attester.party only Reference(PractitionerEuObligations or PractitionerRoleEuObligations or OrganizationEuObligations)
+* attester.party only Reference(PractitionerEuHdrObligation or PractitionerRoleEuHdrObligation or OrganizationEuHdrObligation)
 * attester.party insert OblShallPopulateShallDisplay
-* extension[informationRecipient].valueReference only Reference(PractitionerRoleEuObligations or PractitionerEuObligations or DeviceEuHdrObligation or PatientEuObligations or RelatedPersonEuObligations or OrganizationEuObligations)
+* extension[informationRecipient].valueReference only Reference(PractitionerRoleEuHdrObligation or PractitionerEuHdrObligation or DeviceEuHdrObligation or PatientEuHdrObligation or RelatedPersonEuHdrObligation or OrganizationEuHdrObligation)
 
 // Presented form is part of the EHDS logical model, but the corresponding
 // Composition extension is not currently enabled in CompositionEuHdr.
@@ -59,9 +59,9 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
   * entry insert OblShouldPopulateShallProcess
 
 * section[sectionFunctionalStatus] insert OblShouldPopulateShallProcess
-  * entry only Reference(ConditionEuCoreObligation or ClinicalImpression or ObservationEuHdrObligation or DocumentReference or QuestionnaireResponse)
+  * entry only Reference(ConditionEuHdrObligation or ClinicalImpression or ObservationEuHdrObligation or DocumentReference or QuestionnaireResponse)
   * entry insert OblShouldPopulateShallProcess
-  * entry[condition] only Reference(ConditionEuCoreObligation)
+  * entry[condition] only Reference(ConditionEuHdrObligation)
   * entry[condition] insert OblShouldPopulateShallProcess
   * entry[observation] only Reference(ObservationEuHdrObligation)
   * entry[observation] insert OblShouldPopulateShallProcess
@@ -72,21 +72,21 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
   * extension[section-note] insert OblShouldPopulateShallProcess
 
 * section[sectionProblems] insert OblShouldPopulateShallProcess
-  * entry only Reference(ConditionEuCoreObligation or DocumentReference)
+  * entry only Reference(ConditionEuHdrObligation or DocumentReference)
   * entry insert OblShouldPopulateShallProcess
-  * entry[problem] only Reference(ConditionEuCoreObligation)
+  * entry[problem] only Reference(ConditionEuHdrObligation)
   * entry[problem] insert OblShouldPopulateShallProcess
 
 * section[sectionMedicalDevices] insert OblShouldPopulateShallProcess
-  * entry only Reference(DeviceUseStatementEuHdrObligation or ProcedureEuCoreObligation or DocumentReference)
+  * entry only Reference(DeviceUseStatementEuHdrObligation or ProcedureEuHdrObligation or DocumentReference)
   * entry insert OblShouldPopulateShallProcess
   * entry[deviceStatement] only Reference(DeviceUseStatementEuHdrObligation)
   * entry[deviceStatement] insert OblShouldPopulateShallProcess
 
 * section[sectionProceduresHx] insert OblShouldPopulateShallProcess
-  * entry only Reference(ProcedureEuCoreObligation or DocumentReference)
+  * entry only Reference(ProcedureEuHdrObligation or DocumentReference)
   * entry insert OblShouldPopulateShallProcess
-  * entry[procedure] only Reference(ProcedureEuCoreObligation)
+  * entry[procedure] only Reference(ProcedureEuHdrObligation)
   * entry[procedure] insert OblShouldPopulateShallProcess
 
 // body.courseOfEncounter
@@ -95,21 +95,21 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
   * extension[section-note] insert OblShouldPopulateShallProcess
 
 * section[sectionDiagnosticSummary] insert OblShouldPopulateShallProcess
-  * entry only Reference(ConditionEuCoreObligation)
+  * entry only Reference(ConditionEuHdrObligation)
   * entry insert OblShouldPopulateShallProcess
 
 * section[sectionSignificantProcedures] insert OblShouldPopulateShallProcess
-  * entry only Reference(ProcedureEuCoreObligation)
+  * entry only Reference(ProcedureEuHdrObligation)
   * entry insert OblShouldPopulateShallProcess
 
 * section[sectionImplantedDevices] insert OblShouldPopulateShallProcess
-  * entry only Reference(DeviceUseStatementEuHdrObligation or ProcedureEuCoreObligation)
+  * entry only Reference(DeviceUseStatementEuHdrObligation or ProcedureEuHdrObligation)
   * entry insert OblShouldPopulateShallProcess
 
 * section[sectionPharmacotherapy] insert OblShouldPopulateShallProcess
-  * entry only Reference(MedicationStatementEuCoreObligation or MedicationRequestEuCoreObligation or MedicationDispenseEuHdrObligation or MedicationAdministrationEuHdrObligation)
+  * entry only Reference(MedicationStatementEuHdrObligation or MedicationRequestEuHdrObligation or MedicationDispenseEuHdrObligation or MedicationAdministrationEuHdrObligation)
   * entry insert OblShouldPopulateShallProcess
-  * entry[medicationStatement] only Reference(MedicationStatementEuCoreObligation)
+  * entry[medicationStatement] only Reference(MedicationStatementEuHdrObligation)
   * entry[medicationStatement] insert OblShouldPopulateShallProcess
 
 * section[sectionSignificantResults] insert OblShouldPopulateShallProcess
@@ -128,7 +128,7 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 // body.medicationSummary
 * section[sectionDischargeMedications] insert OblShallPopulateShallProcess
   * text insert OblShouldPopulateShallProcess
-  * entry only Reference(MedicationRequestEuCoreObligation or MedicationDispenseEuHdrObligation or MedicationStatementEuCoreObligation)
+  * entry only Reference(MedicationRequestEuHdrObligation or MedicationDispenseEuHdrObligation or MedicationStatementEuHdrObligation)
   * entry insert OblShallPopulateShallProcess
   * extension[section-note] insert OblShouldPopulateShallProcess
 
@@ -149,8 +149,8 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
   * entry only Reference(ObservationEuHdrObligation or DocumentReference or $vitalsigns)
 
 * section[sectionAllergies]
-  * entry only Reference(AllergyIntoleranceEuCoreObligation or DocumentReference)
-  * entry[allergyOrIntolerance] only Reference(AllergyIntoleranceEuCoreObligation)
+  * entry only Reference(AllergyIntoleranceEuHdrObligation or DocumentReference)
+  * entry[allergyOrIntolerance] only Reference(AllergyIntoleranceEuHdrObligation)
   * entry[allergyOrIntolerance] insert OblShouldPopulateShallProcess
 * section[sectionImmunizations]
   * entry only Reference(ImmunizationEuHdrObligation or DocumentReference)

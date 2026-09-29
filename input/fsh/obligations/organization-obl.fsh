@@ -1,4 +1,4 @@
-Profile: OrganizationEuObligations
+Profile: OrganizationEuHdrObligation
 Parent: OrganizationEuCore
 Id: organization-obl-eu-hdr
 Title: "Organization: obligations"
