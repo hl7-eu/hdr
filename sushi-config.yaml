@@ -1,4 +1,3 @@
-# id: hl7.fhir.eu.eu-laboratory
 id: hl7.fhir.eu.hdr
 canonical: http://hl7.eu/fhir/hdr
 name:  Hl7EuHospitalDischargeReportIg
@@ -9,7 +8,7 @@ version: 1.0.0 #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: 	http://unstats.un.org/unsd/methods/m49/m49.htm#150 "Europe" # urn:iso:std:iso:3166#EU
 publisher:
@@ -74,9 +73,9 @@ pages:
   challenges.md:
     title: Challenges
   design.md:
-    title: Design Approach 
+    title: Design Approach
   references.md:
-    title: References 
+    title: References
  # model-map.md:
  #   title: Model Maps
   modelmap.xml:
@@ -89,6 +88,8 @@ pages:
     title: Copyright
   crossversionanalysis.md:
     title: Cross version analysis
+  expansion-params.md:
+    title: Expansion Parameters
     
   # === MAP ====
   map-ehdsdischargereport.xml:
@@ -139,9 +140,6 @@ pages:
 
 # === MAP ====
 
-# === MINDMAP ====
-  hdr-mindmap.html:
-    title: Hospital Discharge Report
 
 
  # overview.md:
@@ -371,25 +369,20 @@ groups:
       name:  Obligations (Informative)
       description: Obligations used to describe the Hospital Discharge Report functional requirements for the specified data elements. Informative for this version of the guide.
       resources:
-        - StructureDefinition/allergyIntolerance-obl-eu-hdr
-        # - StructureDefinition/bundle-obl-eu-hdr
+        - StructureDefinition/allergyIntolerance-obl-eu-hdr        
         - StructureDefinition/patient-obl-eu-hdr
         - StructureDefinition/organization-obl-eu-hdr
         - StructureDefinition/practitioner-obl-eu-hdr
         - StructureDefinition/practitionerRole-obl-eu-hdr
         - StructureDefinition/relatedPerson-obl-eu-hdr
         - StructureDefinition/specimen-obl-eu-hdr
-        - StructureDefinition/carePlan-obl-eu-hdr
-        # - StructureDefinition/composition-obl-eu-hdr
-        - StructureDefinition/condition-obl-eu-hdr        
-  #      - StructureDefinition/consent-obl-eu-hdr
+        - StructureDefinition/carePlan-obl-eu-hdr        
+        - StructureDefinition/condition-obl-eu-hdr          
         - StructureDefinition/device-obl-eu-hdr
         - StructureDefinition/deviceUseStatement-obl-eu-hdr
         - StructureDefinition/encounter-obl-eu-hdr
-  #      - StructureDefinition/familyMemberHistory-obl-eu-hdr
         - StructureDefinition/flag-obl-eu-hdr
-        - StructureDefinition/immunization-obl-eu-hdr
-  #      - StructureDefinition/immunizationRecommendation-obl-eu-hdr
+        - StructureDefinition/immunization-obl-eu-hdr  
         - StructureDefinition/medication-obl-eu-hdr
         - StructureDefinition/medicationAdministration-obl-eu-hdr
         - StructureDefinition/medicationDispense-obl-eu-hdr
@@ -397,9 +390,6 @@ groups:
         - StructureDefinition/medicationStatement-obl-eu-hdr
         - StructureDefinition/laboratoryObservation-obl-eu-hdr
         - StructureDefinition/observation-obl-eu-hdr
-  #      - StructureDefinition/observation-infectious-contact-obl-eu-hdr
-  #      - StructureDefinition/observation-sdoh-obl-eu-hdr
-  #      - StructureDefinition/observation-travel-obl-eu-hdr
         - StructureDefinition/procedure-obl-eu-hdr
         - StructureDefinition/humanName-obl-eu-hdr
 

@@ -49,6 +49,8 @@ Title: "Composition: HDR Lower Leg Fracture"
 Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Reijer Wolff."
 Usage: #inline
 * id = "bd69ab8e-3835-4fb6-be83-1852a2893a65"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:098d400f-7375-4c05-85d3-52f89b3cfab0"
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
 * subject = Reference(urn:uuid:a1438872-05b1-4868-857d-521c9d586a7e)

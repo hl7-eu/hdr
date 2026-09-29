@@ -145,6 +145,8 @@ Title: "Composition: HDR Type 2 Diabetes Mellitus"
 Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Luigi De Luca"
 Usage: #example
 * id = "b9dc409d-ec81-4556-9fac-4dc3f731c199"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:3694ad44-910d-417a-837c-f48e78446f50"
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
 * subject = Reference(urn:uuid:b01a2623-e219-41d2-8e78-1fa1439751d0)

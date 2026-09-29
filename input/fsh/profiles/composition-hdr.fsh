@@ -2,7 +2,7 @@
 // CompositionEuHdr
 // ===========================================================================
 Profile: CompositionEuHdr
-Parent: Composition
+Parent: CompositionEuCore
 Id: composition-eu-hdr
 Title: "Composition (HDR)"
 Description: "Clinical document used to represent a Hospital Discharge Report (HDR) for the scope of this guide."
@@ -10,7 +10,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * . ^short = "Hospital Discharge Report composition"
 * . ^definition = "Hospital Discharge Report composition. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 * extension contains $event-basedOn named basedOn 0..*
-* extension[basedOn].valueReference only Reference ( Resource or ServiceRequest ) /// add profile
+* extension[basedOn].valueReference only Reference ( Resource or ServiceRequest )
 /* * extension contains DocumentPresentedForm named presentedForm 0..*
 * extension[presentedForm] ^short = "Presented form"
 * extension[presentedForm].valueAttachment
@@ -19,11 +19,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     * ^example[0].valueCode  = $mime#application/pdf
   * data ^short = "B64 in-line data"
   * url ^short = "URL of the document" */
-* extension contains $composition.version-r5  named version 0..1
+// version, informationRecipient and section-note slices are inherited from CompositionEuCore
 * extension[version] ^short = "Business version"
-* extension contains $information-recipient named information-recipient 0..*
-* extension[information-recipient]
-* extension[information-recipient].valueReference only Reference( PractitionerRoleEuCore or PractitionerEuCore or DeviceEuHdr or PatientEuCore or RelatedPerson or  OrganizationEuCore)
+* extension[informationRecipient].valueReference only Reference( PractitionerRoleEuCore or PractitionerEuCore or DeviceEuHdr or PatientEuCore or RelatedPerson or  OrganizationEuCore)
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
 // * type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
@@ -59,7 +57,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section ^slicing.rules = #open
 * section ^short = "Sections composing the HDR"
 * section ^definition = "The root of the sections that make up the HDR composition."
-* section.extension contains $note named section-note 0..*
 * section.extension[section-note] ^short = "Additional notes that apply to the section (but not to specific resource)."
 * section.extension[section-note] ^definition = "Additional notes that apply to the section (but not to specific resource)."
 * section.title 1..1
@@ -235,7 +232,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Past procedures relevant to this encounter,
     Historical procedures performed on or for the patient that are relevant to the current encounter\, for example invasive diagnostic procedures such as cardiac catheterisation\, therapeutic procedures such as dialysis\, surgical procedures such as appendectomy\, and further biopsies\, counselling\, physiotherapy or personal support services. Results of diagnostic procedures are documented in the Significant medical test results section. Procedures performed during the current hospital stay are reported in the Significant procedures section.,
     $loinc#47519-4 )
-  * entry only Reference(Procedure or DocumentReference)
+  * entry only Reference(ProcedureEuCore or DocumentReference)
   * insert SectionEntrySliceComRules(Slice on procedure, Slice on procedure)
   // entry slices
   * entry contains procedure 0..*
@@ -368,7 +365,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Relevant allergies and intolerances,
     Relevant allergies and intolerances of the patient\, primarily those newly identified during the hospital stay\, describing the kind of reaction\, for example rash or anaphylaxis\, preferably the agent or allergen causing it\, and optionally the criticality and the certainty of the allergy. Any historical allergy or adverse reaction that is still active or relevant for continuity of care is also listed.,
     $loinc#48765-2 )
-  * entry only Reference(AllergyIntolerance or DocumentReference)
+  * entry only Reference(AllergyIntoleranceEuCore or DocumentReference)
   * insert SectionEntrySliceComRules(allergyOrIntolerance, allergyOrIntolerance)
   // entry slices
   * insert SectionEntrySliceDefRules (allergyOrIntolerance, 0.. ,
@@ -418,7 +415,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Immunization status and vaccination history,
     The immunization status and the vaccination history of the patient. The primary purpose of this section is to communicate the current immunization status\, and it may contain the entire vaccination history relevant to the period being summarised\, including the disease or agent targeted\, the vaccine or its components\, the dose within a series\, the date of administration and any planned next dose.,
     $loinc#11369-6 )
-  * entry only Reference(Immunization or DocumentReference)
+  * entry only Reference(ImmunizationEuCore or DocumentReference)
   * insert SectionEntrySliceComRules(Patient's immunization status and pertinent history., It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known.)
   * insert SectionEntrySliceDefRules (immunization,  0.. ,
     Patient's immunization status and pertinent history.,

@@ -266,6 +266,8 @@ InstanceOf: CompositionEuHdr
 Title: "Composition: HDR Twin Delivery by Cesarean Section"
 Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Fiona Swart."
 Usage: #inline
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:46d2422c-a137-4306-92bc-8295c931abe0"
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
 * subject = Reference(http://example.org/Patient/patient-swart)
@@ -314,6 +316,8 @@ Usage: #inline
 // section 1
 * section[sectionPatientHx].title = "Hx general Reported"
 * section[sectionPatientHx].code = $loinc#11329-0 "Hx general Reported"
+* section[sectionPatientHx].text.status = #generated
+* section[sectionPatientHx].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient history: social history and past procedures (see sub-sections).</div>"
 * section[sectionPatientHx].section[+].title = "Social history"
 * section[sectionPatientHx].section[=].code = $loinc#29762-2 "Social history note"
 * section[sectionPatientHx].section[=].text.status = #generated

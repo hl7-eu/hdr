@@ -84,6 +84,8 @@ Usage: #inline
 * id = "130ed4e9-30f3-4a09-b9b1-ad8fd12237cb"
 // Individual resource language matching the main language of the Bundle (bdl-language-main-match)
 * language = #it
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:7cb81527-2474-4c4d-ba2e-85a1dc903b0d"
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
 * date = "2025-02-02T13:30:00Z"

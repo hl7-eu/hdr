@@ -222,7 +222,7 @@
             <td>header.intendedRecipient[x]</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>extension:information-recipient</td>
+            <td>extension:informationRecipient</td>
             <td></td>
           </tr>
           <tr>
