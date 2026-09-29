@@ -32,7 +32,9 @@ Usage: #example
 * entry[=].resource = insufficienza-respiratoria-acuta
 
 Instance: patient-ftgm
-InstanceOf: Patient
+InstanceOf: PatientEuCore
+Title: "Patient: Paolo Marcheschi"
+Description: "Patient Paolo Marcheschi, subject of the HDR example."
 Usage: #inline
 * id = "445a0ff8-556d-4be2-bdde-6de668edf019"
 * identifier[+].type = $v2-0203#NI
@@ -56,7 +58,9 @@ Usage: #inline
 * telecom[=].value = "+39 0503152822"
 
 Instance: practitioner-ftgm-author
-InstanceOf: Practitioner
+InstanceOf: PractitionerEuCore
+Title: "Practitioner: Ftgm Dottore (author)"
+Description: "Author of the HDR example."
 Usage: #inline
 * id = "b61b7a93-2965-427a-96b9-972ac7d89997"
 * identifier.id = "12345"
@@ -68,7 +72,9 @@ Usage: #inline
 * telecom[=].value = "dottore.ftgm@ftgm.it"
 
 Instance: organization-ftgm
-InstanceOf: Organization
+InstanceOf: OrganizationEuCore
+Title: "Organization: Fondazione Gabriele Monasterio"
+Description: "Hospital issuing the HDR example."
 Usage: #inline
 * id = "57b3eb50-9187-4b5d-acd1-9e793c734bc0"
 * name = "FONDAZIONE GABRIELE MONASTERIO"

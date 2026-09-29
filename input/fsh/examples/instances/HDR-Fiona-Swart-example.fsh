@@ -1,5 +1,5 @@
 Instance: patient-swart
-InstanceOf: Patient
+InstanceOf: PatientEuCore
 Title: "Patient: Dutch Patient"
 Description: "Patient resource representing Fiona Swart, a Dutch patient."
 Usage: #example
@@ -35,7 +35,7 @@ Usage: #example
 * multipleBirthBoolean = false
 
 Instance: organization-sophia
-InstanceOf: Organization
+InstanceOf: OrganizationEuCore
 Title: "Organization: Erasmus MC"
 Description: "Organization representing the Erasmus MC, Sophia kinderziekenhuis."
 Usage: #example
@@ -110,7 +110,7 @@ Usage: #inline
 * onsetDateTime = 2025-02-08
 
 Instance: condition-growth
-InstanceOf: Condition
+InstanceOf: ConditionEuCore
 Title: "Condition: Fetal Growth Restriction"
 Description: "Condition representing fetal growth restriction."
 Usage: #inline
@@ -207,7 +207,7 @@ Usage: #example
 // * valueQuantity = 9 $ucum#k[arb'U]/L "k[arb'U]/L"
 
 Instance: lab-swart-3
-InstanceOf: LaboratoryObservationEuHdrObligation
+InstanceOf: MedicalTestResultEuCore
 Title: "Observation: ABO Group"
 Description: "ABO blood group type in blood."
 Usage: #example
@@ -220,7 +220,7 @@ Usage: #example
 * valueCodeableConcept = $sct#58460004 "Blood group O"
 
 Instance: lab-swart-4
-InstanceOf: LaboratoryObservationEuHdrObligation
+InstanceOf: MedicalTestResultEuCore
 Title: "Observation: Rh D Factor"
 Description: "Laboratory observation representing Rh D factor in blood."
 Usage: #inline

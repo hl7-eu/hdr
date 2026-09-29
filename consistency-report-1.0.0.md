@@ -59,6 +59,16 @@
 - The leftover laboratory IG and template comments were removed from `ig.ini` (`e01e689`).
 - Bare obligation paths with no rule (61 lines in 13 files) removed; the generated resources are unchanged (working copy, not yet committed).
 - Obligation profile names harmonised to `<Resource>EuHdrObligation`: 11 profiles renamed (e.g. `PatientEuObligations` → `PatientEuHdrObligation`, `ConditionEuCoreObligation` → `ConditionEuHdrObligation`); ids and canonical URLs unchanged (working copy, not yet committed).
+- The obligation "does not match any known slice" suppression (`ignoreWarnings.txt`, 533 information messages) is explained and justified: the IG Publisher adds the tooling sub-extension `http://hl7.org/fhir/tools/StructureDefinition/snapshot-source` to every obligation extension copied into a snapshot, and that sub-extension is not a slice of the `obligation` extension. The HDR obligations themselves only use `code` and `actor` (working copy, not yet committed).
+- **Examples (working copy, not yet committed):**
+  - `lab-swart-3` and `lab-swart-4` declared as `MedicalTestResultEuCore` instead of the obligation profile.
+  - Novak `Practitioner-Admitter` and `Practitioner-Referrer` ids now match their fullUrls.
+  - Examples declared as plain base resources now declare the EU Core / HDR profiles (Swart, Luigi De Luca, Paolo Marcheschi, Reijer Wolff, Novak); the vital-sign Observations declare `$vitalsigns` and use the `VSCat` category slice.
+  - Novak: all titles harmonised to `Type: text` in English, Czech titles and descriptions translated, the descriptions citing `CZ_…` profiles reworded, and missing titles added.
+  - Missing titles and descriptions added to the Luigi De Luca, Paolo Marcheschi and Reijer Wolff inline resources.
+  - Novak: Czech TODO comments, the commented-out Infectious contact, Goal and Advance directives instances, the commented-out Advance directives section and the commented-out Bundle entries for non-existent resources removed. The commented-out Infectious contacts sub-section (with `TemporaryHDRSystem`) is gone as well.
+  - Luigi De Luca: leftover `// EuHdr` comments removed.
+  - `observations.fsh` (entirely commented out) moved to `_attic/examples`; `vaccination.fsh` keeps only the live Immunization example.
 - All the above is in PR #144 (`release-1.0.0` → `master`).
 - The stale `special-url` entries (`eHDSIConditionPOA`, `eHDSITreatmentClass`) were removed from `sushi-config.yaml`.
 - The *Section LOINC codes* known issue, which mentioned temporary local codes, was removed from `knownIssues.md`.
@@ -156,7 +166,6 @@ All invariant expressions were checked and look correct.
 | Low | `examples/instances/vaccination.fsh:1-21` | The commented-out `ImmunizationRecommendationEuHdr` example is still in the file, although the profile, its obligation profile and the Bundle slice are gone. | Remove it, or move it to `_attic`. |
 | Low | `encounter-hdr.fsh:9`, `carePlan-hdr.fsh:9`, `medicationAdministration-hdr.fsh:11`, `medicationDispense-hdr.fsh:11`, `medicationRequest-hdr.fsh:11` | Obligations on the resource root, while Composition explicitly avoids them. | Pick one convention. |
 | Low | Coverage | There are no obligation profiles for Goal, BodyStructure, DiagnosticReport and Location. `obligations.md` doesn't say so. | Document this. |
-| Info | `ignoreWarnings.txt:17` | A blanket suppression of *"obligation … does not match any known slice"* hides 544 messages. | Check the cause (the obligation extension vs `hl7.fhir.uv.extensions.r4#5.3.0`) and add a justification. |
 
 ---
 
@@ -164,33 +173,13 @@ All invariant expressions were checked and look correct.
 
 | Sev | Location | Finding | Fix |
 |---|---|---|---|
-| Medium | `HDR-Fiona-Swart-example.fsh:209,222` | `lab-swart-3` and `lab-swart-4` are `InstanceOf: LaboratoryObservationEuHdrObligation`, an informative obligation profile. | Use `MedicalTestResultEuCore`. |
-| Medium | `HDR-Petr-Novak-example.fsh:793,808` | Practitioner-Admitter and Practitioner-Referrer have no `* id`, so their resource ids don't match the fullUrls (`urn:uuid:…028` and `…032`). | Add the ids. |
-| Medium | See the list below this table | Examples declared as plain base resources where an HDR or EU Core profile exists. | Declare the profile. |
-| Medium | `HDR-Petr-Novak-example.fsh:917,937,1100,1144,1162,1180,1198,1216` | Descriptions cite Czech profiles (`CZ_LocationCore`, `CZ_Observation*Hdr`) that are not part of this IG. | Reword them. |
-| Medium | `HDR-Petr-Novak-example.fsh` | The titles don't follow the harmonised `Type: text` pattern: L748, L823, L954, L1233, L1612, L1702, L1786, L1799, L914/934. `Medication-Euthyrox` (L1056) is a Medication titled "Dispense – Euthyrox". The Czech-only titles and descriptions at L1576-1767 and L1056-1559 also need English. | Harmonise the titles and give them English titles and descriptions. |
-| Medium | `HDR-Petr-Novak-example.fsh:1233` | A Travel History observation, although the Travel History section was removed. | Remove it, or re-describe it. |
-| Low | Various | Missing Title/Description on inline resources (Luigi, Paolo, Wolff, Novak practitioners and organisations). | Add them. |
-| Low | `HDR-Petr-Novak-example.fsh:186,223,322,330,558`, L1252, L1357, L1476 | Czech TODOs ("Doplnit Alerts", "přidat narativní část") and commented-out instances. | Clean them up. |
-| Low | `HDR-Petr-Novak-example.fsh:467` | `TemporaryHDRSystem#infection-contact` is an undefined, non-URI system. | Remove it. |
+| Medium | `HDR-Petr-Novak-example.fsh:1201` | A Travel History observation, although the Travel History section was removed. It is still referenced by the "Cestovatelská anamnéza" sub-section of the Patient history section. | Keep it as sub-section content, or remove both. |
 | Low | Usage | `#example` and `#inline` are mixed without a clear rule. 9 Novak Observations have no `Usage`. `example-medicationstatement-euhdr` (`medications.fsh:53`) has no Usage. | Define a rule. |
 | Low | Bundle identifiers | Four different patterns. Swart uses `urn:ietf:rfc:4122` with a bare UUID. | Harmonise them. |
-| Low | `observations.fsh`, `vaccination.fsh:1-21` | Entirely commented out, and they reference non-existent profiles. | Move them to `_attic`. |
-| Medium | `HDR-Luigi-De-Luca-example.fsh:494,505` and `Bundle-HDR-Luigi-De-Luca-Example` entries 11 and 12 | **New:** the two `FamilyMemberHistory` resources no longer match any `BundleEuHdr` entry slice, since the `familyMemberHistory` slice was removed. The QA reports this as 2 information messages. No Composition section references them. The `// EuHdr` comments on their `InstanceOf` lines are leftovers. | Remove them from the Bundle, or reference them from a section. Remove the leftover comments. |
+| Low | `HDR-Petr-Novak-example.fsh` | The commented-out Vital signs sub-section of the Admission evaluation section (an older copy of the one defined later) and the commented-out `ExampleAbdominalCircumference` Bundle entry are still in the file. | Remove them if not needed. |
+| Info | `Bundle-HDR-Luigi-De-Luca-Example` entries 11 and 12 | The two `FamilyMemberHistory` resources do not match a `BundleEuHdr` entry slice (2 QA information messages). They are referenced by an additional top-level "Family History" section, which the open section slicing allows. | Kept as they are (decision). |
 
-Examples declared as plain base resources, with the profile to use instead:
-
-| File | Instances | Profile |
-|---|---|---|
-| `HDR-Fiona-Swart-example.fsh` | patient-swart (L1), organization-sophia (L37), condition-growth (L112) | PatientEuCore, OrganizationEuCore, ConditionEuCore |
-| `HDR-Luigi-De-Luca-example.fsh` | Patient (L77), PractitionerRole (L103), Practitioner (L110), Organization (L120) | The EU Core profiles |
-| `HDR-Luigi-De-Luca-example.fsh` | 5 vital-sign Observations (L516-588) | `$vitalsigns` (this also removes the 5 suppressions at `ignoreWarnings.txt:118-122`) |
-| `HDR-Paolo-Marcheschi-example.fsh` | Patient (L34), Practitioner (L58), Organization (L70) | The EU Core profiles |
-| `HDR-Reijer-Wolff-example.fsh` | Practitioner (L189), Organization (L199) | The EU Core profiles |
-| `HDR-Petr-Novak-example.fsh` | CarePlan-Novak (L954), DeviceUseStatement-Pacemaker (L1675), Procedure-Insert-Pacemaker2 (L1702) | CarePlanEuHdr, DeviceUseStatementEuHdr, ProcedureEuCore |
-| `HDR-Petr-Novak-example.fsh` | 7 vital-sign Observations (L1097-1213) | `$vitalsigns` |
-
-All resource types used in the five example Bundles have a matching `BundleEuHdr` entry slice. No duplicate instance ids were found.
+All resource types used in the five example Bundles, except the two FamilyMemberHistory entries above, have a matching `BundleEuHdr` entry slice. No duplicate instance ids were found.
 
 ---
 
@@ -294,7 +283,6 @@ This section is based on the IG Publisher 2.3.4 run of 2026-09-29 12:12, built a
 
 | Lines | Entry (uses) | Fix |
 |---|---|---|
-| 17 | Obligation "does not match any known slice" (544) | Investigate, and add a justification. |
 | 126, 130-133 | Non-matching slices on `composition-eu-hdr` (17) and others | Fix the example codes so they match the slices. |
 | 171, 75-100 | Canonical multiple possible versions (69) | Kept as suppressions (`pin-canonicals` not adopted). |
 | 187 | `MSG_DRAFT` "Draft code system used" (17) | Refers to draft code systems from dependencies, not to HDR artifacts (these are all trial-use now). Keep it, but add a comment explaining it. |
