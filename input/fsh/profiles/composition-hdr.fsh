@@ -2,7 +2,7 @@
 // CompositionEuHdr
 // ===========================================================================
 Profile: CompositionEuHdr
-Parent: CompositionEuCore
+Parent: Composition
 Id: composition-eu-hdr
 Title: "Composition (HDR)"
 Description: "Clinical document used to represent a Hospital Discharge Report (HDR) for the scope of this guide."
@@ -19,8 +19,9 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     * ^example[0].valueCode  = $mime#application/pdf
   * data ^short = "B64 in-line data"
   * url ^short = "URL of the document" */
-// version, informationRecipient and section-note slices are inherited from CompositionEuCore
+* extension contains $composition.version-r5  named version 0..1
 * extension[version] ^short = "Business version"
+* extension contains $information-recipient named informationRecipient 0..*
 * extension[informationRecipient].valueReference only Reference( PractitionerRoleEuCore or PractitionerEuCore or DeviceEuHdr or PatientEuCore or RelatedPerson or  OrganizationEuCore)
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
@@ -57,6 +58,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section ^slicing.rules = #open
 * section ^short = "Sections composing the HDR"
 * section ^definition = "The root of the sections that make up the HDR composition."
+* section.extension contains $note named section-note 0..*
 * section.extension[section-note] ^short = "Additional notes that apply to the section (but not to specific resource)."
 * section.extension[section-note] ^definition = "Additional notes that apply to the section (but not to specific resource)."
 * section.title 1..1
