@@ -1,14 +1,8 @@
-### Section LOINC codes
-
-Not all the coded concepts used for the Hospital Discharge Report (HDR) sections fully align with the purpose of the HDR model and its implementation.  
-
-A collaboration with **LOINC** has been established to identify the most appropriate codes for the HDR sections.  
-
-This version uses temporary local codes where concepts were missing, and the closest available concepts have been used where possible, even though some issues have been identified in certain cases.  
-
-**Adopters should be aware that codes may be subject to change.**
-
 
 ### Obligations
 
-Obligations are only informative for this version of the guide. Further analysis is needed for consolidating them.
+Obligations are only informative for this version of the guide. They will be consolidated in a future version based on implementer feedback.
+
+### Dependency on a pre-release IHE package
+
+This guide depends on the IHE Medication Prescription and Dispense (MPD) package `ihe.pharm.mpd.r4` version `1.0.0-comment-2`, a public-comment pre-release. The dependency is inherited from the HL7 Europe Base and Core FHIR IG (version 2.0.1), with which this guide is aligned. It will be updated when a final release of the IHE MPD profile is adopted by the HL7 Europe Base and Core FHIR IG.

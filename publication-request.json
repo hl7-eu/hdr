@@ -1,11 +1,11 @@
 {
   "package-id" : "hl7.fhir.eu.hdr",
-  "version" : "1.0.0-alpha",
-  "path" : "http://hl7.eu/fhir/hdr/xtehr",
-  "desc" : "This publication is a quality assurance (QA) preview release provided in support of the Xt-EHR Projectathon.",
-  "descmd" : "This publication is a quality assurance (QA) preview release provided in support of the Xt-EHR Projectathon.",
-  "status" : "preview",
-  "sequence" : "STU",
-  "mode": "working",
+  "version" : "1.0.0",
+  "path" : "http://hl7.eu/fhir/hdr/1.0.0",
+  "desc" : "This publication is the first Standard for Trial Use (STU 1) release of the HL7 Europe Hospital Discharge Report Implementation Guide (version 1.0.0).",
+  "descmd" : "This publication is the first Standard for Trial Use (STU 1) release of the HL7 Europe Hospital Discharge Report Implementation Guide (version 1.0.0).",
+  "status" : "trial-use",
+  "sequence" : "STU 1",
+  "mode" : "milestone",
   "changes" : "changes.html"
 }

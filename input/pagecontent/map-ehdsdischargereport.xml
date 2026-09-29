@@ -222,7 +222,7 @@
             <td>header.intendedRecipient[x]</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>extension:information-recipient</td>
+            <td>extension:informationRecipient</td>
             <td></td>
           </tr>
           <tr>
@@ -254,7 +254,7 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionAlert.entry</td>
-            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsalert.html">EHDSAlert Mapping</a> for detailed mapping information.</td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdsalert.html">EHDSAlert Mapping</a> for detailed mapping information.</td>
           </tr>
 
           <!-- ENCOUNTER INFORMATION -->
@@ -351,21 +351,21 @@
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionProblems</td>
-            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdscondition.html">EHDSCondition Mapping</a> for detailed mapping information.</td> 
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdscondition.html">EHDSCondition Mapping</a> for detailed mapping information.</td> 
           </tr>
           <tr>
             <td>body.patientHistory.devicesAndImplants</td>
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionMedicalDevices</td>
-            <td>See <a href="https://map-ehdsdeviceuse.html">EHDSDeviceUse Mapping</a> for detailed mapping information.</td>
+            <td>See <a href="map-ehdsdeviceuse.html">EHDSDeviceUse Mapping</a> for detailed mapping information.</td>
           </tr>
           <tr>
             <td>body.patientHistory.procedures</td>
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionProceduresHx</td>
-            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsprocedure.html">EHDSProcedure Mapping</a> for detailed mapping information.</td> 
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdsprocedure.html">EHDSProcedure Mapping</a> for detailed mapping information.</td> 
           </tr>
           <tr>
             <td>body.patientHistory.note</td>
@@ -381,7 +381,7 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionHospitalCourse</td>
-            <td>When the Course of Encounter is not available as a distict structured section; related information can be recorded in the Discharge Summary section.</td>
+            <td>When the Course of Encounter is not available as a distinct structured section; related information can be recorded in the Discharge Summary section.</td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.generatedNarrative</td>
@@ -395,42 +395,42 @@
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionDischargeSummary.text</td>
-            <td>When the Course of Encounter narrative is not available as a distict structured section</td>
+            <td>When the Course of Encounter narrative is not available as a distinct structured section</td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.diagnosticSummary</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionDiagnosticSummary</td>
-            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdscondition.html">EHDSCondition Mapping</a> for detailed mapping information.</td> 
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdscondition.html">EHDSCondition Mapping</a> for detailed mapping information.</td> 
           </tr>
           <tr>
             <td>body.courseOfEncounter.procedures</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionSignificantProcedures</td>
-            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsprocedure.html">EHDSProcedure Mapping</a> for detailed mapping information.</td> 
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdsprocedure.html">EHDSProcedure Mapping</a> for detailed mapping information.</td> 
           </tr>
           <tr>
             <td>body.courseOfEncounter.medicalDevicesAndImplants</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionImplantedDevices</td>
-            <td>See <a href="https://map-ehdsdeviceuse.html">EHDSDeviceUse Mapping</a> for detailed mapping information.</td>
+            <td>See <a href="map-ehdsdeviceuse.html">EHDSDeviceUse Mapping</a> for detailed mapping information.</td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.pharmacotherapy</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionPharmacotherapy</td>
-            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsmedicationuse.html">EHDSMedicationUse Mapping</a> for detailed mapping information.</td> 
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdsmedicationstatement.html">EHDSMedicationUse Mapping</a> for detailed mapping information.</td> 
           </tr>
           <tr>
             <td>body.courseOfEncounter.testResults[x]</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionSignificantResults</td>
-            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsobservation.html">EHDSObservation Mapping</a> for detailed mapping information. Please note that the mapping EHDSObservation → MedicalTestResultEuCore does not apply to every kind of Observation. </td>
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdsobservation.html">EHDSObservation Mapping</a> for detailed mapping information. Please note that the mapping EHDSObservation → MedicalTestResultEuCore does not apply to every kind of Observation. </td>
           </tr>
           <tr>
             <td>body.courseOfEncounter.note</td>
@@ -504,7 +504,7 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionDischargeMedications.entry</td>
-            <td>See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdsmedicationuse.html">EHDSMedicationUse Mapping</a> for detailed mapping information.</td>      
+            <td>See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdsmedicationstatement.html">EHDSMedicationUse Mapping</a> for detailed mapping information.</td>      
           </tr>
           <tr>
             <td>body.medicationSummary.note</td>

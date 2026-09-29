@@ -13,14 +13,6 @@
         </div>
       </div>
     </div>
-    <div class="model-map-block">
-      <div class="callout-wrapper">
-        <div class="callout-box">
-          <strong>Yellow row/cells:</strong>
-              In this ballot publication, some row/cells of the mapping table have been left in yellow to indicate areas requiring further review or refinement; including feedback from the Xt-EHR joint action (see note above). These highlights will be addressed in subsequent updates to ensure accuracy and completeness of the mappings.
-        </div>
-      </div>
-    </div>
     <h3>EHDSCarePlan -> CarePlanEuHdr</h3>
     <a> </a>
     <p></p>
@@ -147,7 +139,7 @@
             <td>source-is-broader-than-target</td>
             <td>CarePlan</td>
             <td>addresses</td>
-            <td>CarePlanEuHdr constrains addresses to Reference(ConditionEuCore). See <a href="https://hl7.eu/fhir/base/2.0.0/map-ehdscondition.html">EHDSCondition Mapping</a> for detailed mapping information.</td>
+            <td>CarePlanEuHdr constrains addresses to Reference(ConditionEuCore). See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdscondition.html">EHDSCondition Mapping</a> for detailed mapping information.</td>
           </tr>
           <tr>
             <td>activity[x]</td>

@@ -82,8 +82,10 @@ Title: "Composition: HDR Acute Respiratory Failure (Italian)"
 Description: "HL7 FHIR Composition example for HL7 Europe Hospital Discharge Report (HDR) Paolo Marcheschi."
 Usage: #inline
 * id = "130ed4e9-30f3-4a09-b9b1-ad8fd12237cb"
-// Individual resource language matching the main language of the Bundle (bdl-language-main-match)
+// Individual resource language matching the main language of the Bundle (bdl-hdr-2)
 * language = #it
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:7cb81527-2474-4c4d-ba2e-85a1dc903b0d"
 * status = #final
 * type = $loinc#34105-7 "Hospital Discharge summary"
 * date = "2025-02-02T13:30:00Z"
@@ -225,7 +227,7 @@ Description: "Condition representing acute respiratory failure."
 // add? 721804002 Infection of lung caused by Pneumocystis (disorder)
 Usage: #inline
 * id = "abddc069-eda4-44c0-bd68-37e65a7bcb74"
-// Regional variant of the Bundle main language: it-IT matches it (bdl-language-main-match)
+// Regional variant of the Bundle main language: it-IT matches it (bdl-hdr-2)
 * language = #it-IT
 * clinicalStatus = $condition-clinical#active
 * code[0].coding[+] = $icd10#J96.0 "Acute respiratory failure"

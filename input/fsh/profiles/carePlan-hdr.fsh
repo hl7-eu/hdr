@@ -1,8 +1,9 @@
 Profile: CarePlanEuHdr
 Parent: CarePlan
 Id: carePlan-eu-hdr
-Title:    "Care Plan (HDR)"
+Title:    "CarePlan (HDR)"
 Description: """This profile constrains the CarePlan resource for the purpose of this guide."""
+* insert SetFmmAndStatusRule (2, trial-use)
 
 * . ^short = "Healthcare plan for patient"
 // ---------- Core metadata ----------
@@ -43,9 +44,6 @@ Description: """This profile constrains the CarePlan resource for the purpose of
 * activity 0..*
 * activity ^requirements = "EHDSCarePlan.activity[x]"
 
-// Removed based on 2026-07-17 call decision
-// * activity obeys cpl-hdr-1
-
 * activity.reference ^requirements = "EHDSCarePlan.activity[x]"
 * activity.progress ^short = "Notes about the progress of the activity"
 
@@ -56,9 +54,5 @@ Description: """This profile constrains the CarePlan resource for the purpose of
   * ^short = "Deprecated in R5/R6"
   * ^comment  = "The details about the planned activities should be provided by using the resources referred by the activity.reference element"
 
-/* Removed based on 2026-07-17 call decision
-Invariant: cpl-hdr-1
-Description: "CarePlan.activity.detail is deprecated and no more present in FHIR R5."
-Severity: #warning
-Expression: "detail.empty()" */
+
 

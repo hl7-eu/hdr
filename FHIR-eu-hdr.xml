@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/hdr/0.1.0-ballot" ciUrl="https://build.fhir.org/ig/hl7-eu/hdr" defaultVersion="0.1.0-ballot" defaultWorkgroup="eu" gitUrl="https://github.com/HL7-eu/hdr" url="http://hl7.eu/fhir/hdr">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/hdr/0.1.0-ballot" ciUrl="https://build.fhir.org/ig/hl7-eu/hdr" defaultVersion="1.0.0" defaultWorkgroup="eu" gitUrl="https://github.com/HL7-eu/hdr" url="http://hl7.eu/fhir/hdr">
 <version code="current" url="https://build.fhir.org/ig/hl7-eu/hdr"/>
-<version code="1.0.0-alpha" url="http://hl7.eu/fhir/hdr/xtehr"/>
-<version code="0.1.0-ballot" deprecated="true" url="http://hl7.eu/fhir/hdr/0.1.0-ballot"/>
+<version code="1.0.0" url="http://hl7.eu/fhir/hdr/1.0.0"/>
+<version code="0.1.0-ballot" url="http://hl7.eu/fhir/hdr/0.1.0-ballot"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
@@ -25,8 +25,8 @@
 <artifact deprecated="true" id="ValueSet/allergy-intolerance-substances-eu-hdr" key="ValueSet-allergy-intolerance-substances-eu-hdr" name="Allergy Intolerance"/>
 <artifact deprecated="true" id="StructureDefinition/allergyIntolerance-eu-hdr" key="StructureDefinition-allergyIntolerance-eu-hdr" name="Allergy Intolerance (HDR)"/>
 <artifact deprecated="true" id="ValueSet/allergy-intolerance-eu-hdr" key="ValueSet-allergy-intolerance-eu-hdr" name="Allergy Intolerance (with exceptions)"/>
-<artifact id="StructureDefinition/allergyIntolerance-obl-eu-hdr" key="StructureDefinition-allergyIntolerance-obl-eu-hdr" name="Allergy Intolerance: obligations"/>
 <artifact id="AllergyIntolerance/penicillin-allergy" key="AllergyIntolerance-penicillin-allergy" name="AllergyIntolerance: Critical Allergy to Penicillin"/>
+<artifact id="StructureDefinition/allergyIntolerance-obl-eu-hdr" key="StructureDefinition-allergyIntolerance-obl-eu-hdr" name="AllergyIntolerance: obligations"/>
 <artifact id="BodyStructure/bodystructure-left-hip" key="BodyStructure-bodystructure-left-hip" name="BodyStructure: Left Hip Joint"/>
 <artifact id="StructureDefinition/bundle-eu-hdr" key="StructureDefinition-bundle-eu-hdr" name="Bundle (HDR)"/>
 <artifact id="Bundle/HDR-Paolo-Marcheschi-Example" key="Bundle-HDR-Paolo-Marcheschi-Example" name="Bundle: HDR Acute Respiratory Failure (Italian)"/>
@@ -35,9 +35,9 @@
 <artifact id="Bundle/bundle-swart" key="Bundle-bundle-swart" name="Bundle: HDR Twin Delivery by Cesarean Section"/>
 <artifact id="Bundle/HDR-Luigi-De-Luca-Example" key="Bundle-HDR-Luigi-De-Luca-Example" name="Bundle: HDR Type 2 Diabetes Mellitus"/>
 <artifact id="StructureDefinition/bundle-obl-eu-hdr" key="StructureDefinition-bundle-obl-eu-hdr" name="Bundle: obligations"/>
-<artifact id="StructureDefinition/carePlan-eu-hdr" key="StructureDefinition-carePlan-eu-hdr" name="Care Plan (HDR)"/>
-<artifact id="StructureDefinition/carePlan-obl-eu-hdr" key="StructureDefinition-carePlan-obl-eu-hdr" name="Care Plan: obligations"/>
+<artifact id="StructureDefinition/carePlan-eu-hdr" key="StructureDefinition-carePlan-eu-hdr" name="CarePlan (HDR)"/>
 <artifact id="CarePlan/b84038f8-9541-4c5b-93b0-a7f1b8e55bd3" key="CarePlan-b84038f8-9541-4c5b-93b0-a7f1b8e55bd3" name="CarePlan: Diabetes Management Plan"/>
+<artifact id="StructureDefinition/carePlan-obl-eu-hdr" key="StructureDefinition-carePlan-obl-eu-hdr" name="CarePlan: obligations"/>
 <artifact id="StructureDefinition/composition-eu-hdr" key="StructureDefinition-composition-eu-hdr" name="Composition (HDR)"/>
 <artifact id="Composition/b9dc409d-ec81-4556-9fac-4dc3f731c199" key="Composition-b9dc409d-ec81-4556-9fac-4dc3f731c199" name="Composition: HDR Type 2 Diabetes Mellitus"/>
 <artifact id="StructureDefinition/composition-obl-eu-hdr" key="StructureDefinition-composition-obl-eu-hdr" name="Composition: obligations"/>
@@ -78,7 +78,7 @@
 <artifact deprecated="true" id="ActorDefinition/actor-consumer-eu-hdr" key="ActorDefinition-actor-consumer-eu-hdr" name="HDR Consumer"/>
 <artifact deprecated="true" id="ActorDefinition/actor-creator-eu-hdr" key="ActorDefinition-actor-creator-eu-hdr" name="HDR Creator"/>
 <artifact deprecated="true" id="ActorDefinition/actor-repos-eu-hdr" key="ActorDefinition-actor-repos-eu-hdr" name="HDR Repository"/>
-<artifact id="StructureDefinition/humanName-obl-eu-hdr" key="StructureDefinition-humanName-obl-eu-hdr" name="Human Name: obligations"/>
+<artifact deprecated="true" id="StructureDefinition/humanName-obl-eu-hdr" key="StructureDefinition-humanName-obl-eu-hdr" name="HumanName: obligations"/>
 <artifact deprecated="true" id="StructureDefinition/immunization-eu-hdr" key="StructureDefinition-immunization-eu-hdr" name="Immunization (HDR)"/>
 <artifact deprecated="true" id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
 <artifact id="Immunization/example-covid19-vax-admin" key="Immunization-example-covid19-vax-admin" name="Immunization: COVID-19"/>
@@ -87,7 +87,6 @@
 <artifact deprecated="true" id="ImmunizationRecommendation/example-covid19-vax-recommendation" key="ImmunizationRecommendation-example-covid19-vax-recommendation" name="ImmunizationRecommendation: COVID-19"/>
 <artifact deprecated="true" id="StructureDefinition/immunizationRecommendation-obl-eu-hdr" key="StructureDefinition-immunizationRecommendation-obl-eu-hdr" name="ImmunizationRecommendation: obligations"/>
 <artifact deprecated="true" id="ValueSet/hdr-encounter-type-eu-hdr" key="ValueSet-hdr-encounter-type-eu-hdr" name="In-patient Encounter Type Value Set"/>
-<artifact id="StructureDefinition/laboratoryObservation-obl-eu-hdr" key="StructureDefinition-laboratoryObservation-obl-eu-hdr" name="Laboratory Observation: obligations"/>
 <artifact deprecated="true" id="ValueSet/medical-devices-eu-hdr" key="ValueSet-medical-devices-eu-hdr" name="Medical Devices (SNOMED CT)"/>
 <artifact deprecated="true" id="ValueSet/medical-devices-snomed-absent-unknown-eu-hdr" key="ValueSet-medical-devices-snomed-absent-unknown-eu-hdr" name="Medical Devices - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact deprecated="true" id="StructureDefinition/medication-eu-hdr" key="StructureDefinition-medication-eu-hdr" name="Medication (HDR)"/>
@@ -106,6 +105,7 @@
 <artifact deprecated="true" id="StructureDefinition/medicationStatement-eu-hdr" key="StructureDefinition-medicationStatement-eu-hdr" name="MedicationStatement (HDR)"/>
 <artifact id="MedicationStatement/example-medicationstatement-euhdr" key="MedicationStatement-example-medicationstatement-euhdr" name="MedicationStatement: Enalapril"/>
 <artifact id="StructureDefinition/medicationStatement-obl-eu-hdr" key="StructureDefinition-medicationStatement-obl-eu-hdr" name="MedicationStatement: obligations"/>
+<artifact id="StructureDefinition/laboratoryObservation-obl-eu-hdr" key="StructureDefinition-laboratoryObservation-obl-eu-hdr" name="Observation (laboratory): obligations"/>
 <artifact id="Observation/lab-swart-3" key="Observation-lab-swart-3" name="Observation: ABO Group"/>
 <artifact id="Observation/6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a" key="Observation-6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a" name="Observation: Abdominal Circumference"/>
 <artifact id="Observation/3f85726c-ad2f-441b-89ce-10000000001d" key="Observation-3f85726c-ad2f-441b-89ce-10000000001d" name="Observation: Alcohol Use"/>
@@ -183,10 +183,11 @@
 <page key="map-ehdsencounter" name="EHDSEncounter Mapping"/>
 <page key="map-ehdslaboratoryobservation" name="EHDSLaboratoryObservation Mapping"/>
 <page key="map-ehdsrelatedperson" name="EHDSRelatedPerson Mapping"/>
+<page key="expansion-params" name="Expansion Parameters"/>
 <page deprecated="true" key="FunctionalStatus-map" name="FunctionalStatus Relationships"/>
 <page deprecated="true" key="Header-map" name="Header Relationships"/>
 <page key="index" name="Home"/>
-<page key="hdr-mindmap" name="Hospital Discharge Report"/>
+<page deprecated="true" key="hdr-mindmap" name="Hospital Discharge Report"/>
 <page deprecated="true" key="HospitalDischargeReport-map" name="HospitalDischargeReport Relationships"/>
 <page deprecated="true" key="HospitalStay-map" name="HospitalStay Relationships"/>
 <page deprecated="true" key="InPatientEncounter-map" name="InPatientEncounter Relationships"/>

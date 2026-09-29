@@ -5,7 +5,7 @@ It reflects the substantial contribution of a broad and diverse community of **2
 
 **Major contributors and their roles:**
 
-- An outstanding **community of volunteers**, including EHR vendors, data exchange regulators, implementers, and other enthusiastic people from across Europe — and even beyond.
+- An outstanding **community of volunteers**, including EHR vendors, regulators, implementers, and other enthusiastic people from across Europe — and even beyond.
 - **HL7 Europe Affiliate members**, who contributed their local expertise and helped ensure alignment with national standards and priorities.
 - **National/Regional Health Authorities**, who provided guidance to ensure the specifications meet real-world public health needs and policy requirements.
 - **XpanDH and xShare projects**, which experimented with the future European data exchange format. This IG is a direct successor to the work initiated in XpanDH. Both XpanDH and xShare are EU-funded projects.

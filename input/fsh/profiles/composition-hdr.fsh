@@ -6,10 +6,11 @@ Parent: Composition
 Id: composition-eu-hdr
 Title: "Composition (HDR)"
 Description: "Clinical document used to represent a Hospital Discharge Report (HDR) for the scope of this guide."
+* insert SetFmmAndStatusRule (2, trial-use)
 * . ^short = "Hospital Discharge Report composition"
 * . ^definition = "Hospital Discharge Report composition. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 * extension contains $event-basedOn named basedOn 0..*
-* extension[basedOn].valueReference only Reference ( Resource or ServiceRequest ) /// add profile
+* extension[basedOn].valueReference only Reference ( Resource or ServiceRequest )
 /* * extension contains DocumentPresentedForm named presentedForm 0..*
 * extension[presentedForm] ^short = "Presented form"
 * extension[presentedForm].valueAttachment
@@ -20,9 +21,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * url ^short = "URL of the document" */
 * extension contains $composition.version-r5  named version 0..1
 * extension[version] ^short = "Business version"
-* extension contains $information-recipient named information-recipient 0..*
-* extension[information-recipient]
-* extension[information-recipient].valueReference only Reference( PractitionerRoleEuCore or PractitionerEuCore or Device or PatientEuCore or RelatedPerson or  OrganizationEuCore)
+* extension contains $information-recipient named informationRecipient 0..*
+* extension[informationRecipient].valueReference only Reference( PractitionerRoleEuCore or PractitionerEuCore or DeviceEuHdr or PatientEuCore or RelatedPerson or  OrganizationEuCore)
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
 // * type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
@@ -36,13 +36,13 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * category // from DocCategoryHdrVS (extensible) Commented waiting a decision on document categorization
   * ^example[0].label = "Document category"
   * ^example[0].valueCoding = $loinc#LP72467-1 "Discharge summary note"
-* event.period ^requirements = "header.period"
+* event.period ^requirements = "EHDSDischargeReport.header.period"
 * encounter 1..1
 * encounter only Reference (EncounterEuHdr)
 * date ^short = "HDR date"
 * author ^short = "Who and/or what authored the Hospital Discharge Report"
 * author ^definition = "Identifies who is responsible for the information in the Hospital Discharge Report, not necessarily who typed it in."
-* author only Reference( PractitionerEuCore or PractitionerRoleEuCore or Device  or OrganizationEuCore) // or Patient or RelatedPerson
+* author only Reference( PractitionerEuCore or PractitionerRoleEuCore or DeviceEuHdr or OrganizationEuCore) // or Patient or RelatedPerson
 * title ^short = "Hospital Discharge Report"
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Hospital Discharge Report\" or any equivalent translation"
 * attester.mode ^short = "The type of attestation"
@@ -50,8 +50,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * attester.party ^short = "Who attested the composition."
 * attester.party only Reference( PractitionerEuCore or PractitionerRoleEuCore or OrganizationEuCore)
 * section 1..
-* obeys text-or-section
-* obeys discharge-summary-or-hospital-course
+* obeys cmp-hdr-1 // or text or section
+* obeys cmp-hdr-2 // Discharge summary (LOINC 18842-5) or Hospital course
 * section ^slicing.discriminator[0].type = #value
 * section ^slicing.discriminator[=].path = "code"
 * section ^slicing.ordered = false
@@ -74,15 +74,15 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
   * insert SectionComRulesWithTitle (
     Alerts,
     Substantial alerts and warnings,
-    Information about substantial alerts or warnings that health professionals should be aware of. It may also contain allergies and intolerances\, which are also documented in the Allergies and intolerances section but flagged here in addtion. Alerts cover any clinical information that is imperative to know so that the life or health of the patient does not come under threat\, for example a rare disease requiring special treatment\, a difficult airway or intubation\, malignant hyperthermia\, porphyria\, bleeding disorders\, treatment with anticoagulants or immunosuppressants\, transplanted organs\, or participation in a clinical trial. Alerts may be coded where a suitable code exists\, but given their dynamic nature they are frequently recorded as free text.,
+    Information about substantial alerts or warnings that health professionals should be aware of. It may also contain allergies and intolerances\, which are also documented in the Allergies and intolerances section but flagged here in addition. Alerts cover any clinical information that is imperative to know so that the life or health of the patient does not come under threat\, for example a rare disease requiring special treatment\, a difficult airway or intubation\, malignant hyperthermia\, porphyria\, bleeding disorders\, treatment with anticoagulants or immunosuppressants\, transplanted organs\, or participation in a clinical trial. Alerts may be coded where a suitable code exists\, but given their dynamic nature they are frequently recorded as free text.,
     $loinc#104605-1 )
-  * text ^requirements = "body.alerts.generatedNarrative"
+  * text ^requirements = "EHDSDischargeReport.body.alerts.generatedNarrative"
   * entry only Reference(Flag or DocumentReference)
-  * insert SectionEntrySliceComRules(EPS Alerts entry, EPS Alerts entry slice)
+  * insert SectionEntrySliceComRules(Alerts entry, Resources describing the alerts and warnings reported in this section.)
   // entry slices
   * insert SectionEntrySliceDefRules (flag, 0.. , 
   Alert information , 
-  Contains alert information to be communicated. May optionally reference other resources in IPS,
+  Contains alert information to be communicated. May optionally reference other resources in the HDR.,
   FlagPatientEuCore)
 
 // -------------------------------------
@@ -96,7 +96,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Evaluation of the patient at hospital admission\, comprising objective findings such as anthropometric observations\, vital signs and physical examination\, and where relevant the functional status at admission. The admission evaluation is reported only exceptionally\, when it is relevant to ensure continuity of care after discharge.,
     $loinc#67851-6 )
   * ^comment = "Admission evaluation should be reported only exceptionally, if it is relevant to ensure continuity of care."
-  * text ^requirements = "body.admissionEvaluation.generatedNarrative"
+  * text ^requirements = "EHDSDischargeReport.body.admissionEvaluation.generatedNarrative"
 
 // -------------------------------------
 // Vital signs Section 0 .. 1
@@ -135,9 +135,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     The ability of the patient to perform normal daily activities required to meet basic needs\, fulfil usual roles and maintain health and well-being. This covers basic activities of daily living such as bathing\, feeding and toileting\, instrumental activities of daily living such as cooking\, shopping and managing one's own affairs\, and any need for the patient to be continuously assessed by third parties. Functional status may influence decisions about how to plan and administer treatments.,
     $loinc#47420-5 )
   * entry only Reference(ConditionEuCore or ClinicalImpression or Observation or DocumentReference or QuestionnaireResponse)
-    * ^short = "Optional entry used to represent disabilities and functional assessments"
-    * ^definition = "It describes capabilities of the patient to perform acts of daily living, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments."
-  * insert SectionEntrySliceComRules(Disabilities and Functional assessments, Disabilities and Functional assessments)
+  * insert SectionEntrySliceComRules(Optional entry used to represent disabilities and functional assessments, It describes capabilities of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments.)
   * insert SectionEntrySliceDefRules (condition, 0..*,
     Functional status condition entry,
      Optional entry used to represent disabilities and other conditions that may influence the functional status of the patient. It describes capabilities of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties.,
@@ -152,7 +150,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 // A section carrying textual content of the Hospital Discharge Report as
 // one narrative, used as an alternative to reporting the content of the
 // report when structured sections are not, or only partially available.
-// See obeys discharge-summary-or-hospital-course below.
+// See obeys cmp-hdr-2 below.
 // -------------------------------------
 * section contains sectionDischargeSummary 0..1
 * section[sectionDischargeSummary]
@@ -161,7 +159,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Complete narrative discharge summary,
     A section carrying textual content of the Hospital Discharge Report as one narrative\, used as an alternative to reporting the content of the report when structured sections are not\, or only partially available. Either this section or the Hospital course section\, or both\, shall be present.,
     $loinc#18842-5 )
-  * text ^requirements = "body.dischargeSummary.generatedNarrative"
+  // No corresponding element in EHDSDischargeReport 1.0.0
 
 // -------------------------------------
 // Hospital Course Section 0..1- Changed based on FHIR-52414 disposition
@@ -173,7 +171,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Significant information about course of hospital stay,
     Significant information about the course of the hospital stay\, describing the sequence of events from admission to discharge in a hospital facility. This section groups the diagnostic summary\, significant procedures\, pharmacotherapy administered during the stay\, medical devices and implants\, significant medical test results and the clinical synthesis\, and may carry a narrative account of the course of the encounter.,
     $loinc#8648-8 )
-  * text ^requirements = "body.courseOfEncounter.generatedNarrative; body.courseOfEncounter.note"
+  * text ^requirements = "EHDSDischargeReport.body.courseOfEncounter.generatedNarrative; EHDSDischargeReport.body.courseOfEncounter.note"
 
 // -------------------------------------
 // Diagnostic summary Section 0 .. 1
@@ -216,16 +214,16 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     $loinc#46264-8 )
   * entry 0..
   * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore or DocumentReference) // DeviceUseStatementEuHdr ro be revised
-  * insert SectionEntrySliceComRules(Medical Device entry, EPS Medical Devices entry slice)
+  * insert SectionEntrySliceComRules(Medical device entry, Resources describing the patient history of medical device use.)
   * insert SectionEntrySliceDefRules (deviceStatement, 0..*,
     Patient history of medical device use,
-    It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available\, or that no relevant medical device use is known. ,
+    It describes the patient history of medical device use.,
     DeviceUseStatementEuHdr)
 
 
 //   * section ..0
 
-// === EPS History of Procedures Section ===
+// === History of Procedures Section ===
 // Now uses the common macro like every other section.
 * section contains sectionProceduresHx 0..1
 * section[sectionProceduresHx]
@@ -234,8 +232,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Past procedures relevant to this encounter,
     Historical procedures performed on or for the patient that are relevant to the current encounter\, for example invasive diagnostic procedures such as cardiac catheterisation\, therapeutic procedures such as dialysis\, surgical procedures such as appendectomy\, and further biopsies\, counselling\, physiotherapy or personal support services. Results of diagnostic procedures are documented in the Significant medical test results section. Procedures performed during the current hospital stay are reported in the Significant procedures section.,
     $loinc#47519-4 )
-  * entry only Reference(Procedure or DocumentReference)
-  * insert SectionEntrySliceComRules(Slice on procedure, Slice on procedure)
+  * entry only Reference(ProcedureEuCore or DocumentReference)
+  * insert SectionEntrySliceComRules(Past procedure entry, Past procedures of the patient that are pertinent to the scope of this document.)
   // entry slices
   * entry contains procedure 0..*
   * entry[procedure] 0..*
@@ -257,7 +255,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     // $sct#1003606003 ) // "Medication history section (record artifact\)"
   * entry 0..
   * entry only Reference(MedicationStatementEuCore or MedicationRequestEuCore or MedicationDispenseEuHdr or MedicationAdministrationEuHdr)
-  * insert SectionEntrySliceComRules(Medication Use slice, Medication Use slice)
+  * insert SectionEntrySliceComRules(Pharmacotherapy entry, Medication statements\, requests\, dispenses or administrations documenting the significant drug treatment during the stay.)
   * insert SectionEntrySliceDefRules (medicationStatement, 0.. ,
       Medication Use,
       Significant medication treatments during encounter.,
@@ -296,8 +294,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
        Results collected on the patient or produced on in-vitro biologic specimens.,
        MedicalTestResultEuCore)
   * insert SectionEntrySliceDefRules (results-diagnosticReport, 0.. ,
-      DiagnosticReport,
-       DiagnosticReport resource to represent diagnostic test and procedure reports in a patient summary,
+      Diagnostic report,
+       DiagnosticReport resource to represent diagnostic test and procedure reports in the Hospital Discharge Report.,
        DiagnosticReportEuCore)
   // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or MedicalTestResultEuCore)
 
@@ -323,7 +321,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Plan of care and recommendations after discharge,
     The plan of care after discharge\, containing a narrative description of the expectations for care including proposals\, goals and order requests for monitoring\, tracking or improving the condition of the patient. Several care plans may be reported\, each linked to the conditions whose management or mitigation it addresses. Other recommendations and advice given at discharge are also reported here\, for example to consider hip replacement\, to reduce the number of cigarettes or to stop smoking\, or to increase physical exercise. Medication recommended for the period after discharge is reported in the Hospital discharge medications section.,
     $loinc#18776-5 )
-  * text ^requirements = "body.carePlan.generatedNarrative"
+  * text ^requirements = "EHDSDischargeReport.body.carePlan.generatedNarrative"
   // NOTE: in xt-EHR 0.2.1 the path is body.dischargeDetails.carePlan — verify
   //       which model version this profile aligns with.
   * entry only Reference( CarePlanEuHdr or DocumentReference) // Check if CarePlanEuHdr is needed or if we should align with EPS
@@ -352,7 +350,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Medication intended after discharge,
     Summary information on the medication recommended for the period after discharge\, defining the medicinal products that the patient is intended to take or to stop and indicating for each whether it is unchanged\, changed\, newly started or discontinued\, together with the reason for a change. Drug treatment that was administered during the stay and already discontinued before discharge is reported in the Pharmacotherapy section.,
     $loinc#75311-1 )
-  * text ^requirements = "body.medicationSummary.generatedNarrative; body.medicationSummary.note"
+  * text ^requirements = "EHDSDischargeReport.body.medicationSummary.generatedNarrative; EHDSDischargeReport.body.medicationSummary.note"
   // NOTE: in xt-EHR 0.2.1 the path is body.dischargeDetails.medicationSummary — verify.
   * entry 0..
   * entry only Reference(MedicationRequestEuCore or MedicationDispenseEuHdr or MedicationStatementEuCore)
@@ -367,8 +365,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Relevant allergies and intolerances,
     Relevant allergies and intolerances of the patient\, primarily those newly identified during the hospital stay\, describing the kind of reaction\, for example rash or anaphylaxis\, preferably the agent or allergen causing it\, and optionally the criticality and the certainty of the allergy. Any historical allergy or adverse reaction that is still active or relevant for continuity of care is also listed.,
     $loinc#48765-2 )
-  * entry only Reference(AllergyIntolerance or DocumentReference)
-  * insert SectionEntrySliceComRules(allergyOrIntolerance, allergyOrIntolerance)
+  * entry only Reference(AllergyIntoleranceEuCore or DocumentReference)
+  * insert SectionEntrySliceComRules(Allergy or intolerance entry, Relevant allergies or intolerances of the patient.)
   // entry slices
   * insert SectionEntrySliceDefRules (allergyOrIntolerance, 0.. ,
   Relevant allergies or intolerances for that patient.,
@@ -386,7 +384,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Narrative patient health history (anamnesis\),
     The health history of the patient\, or anamnesis\, in narrative form. It may provide a synthetic anamnesis\, such as a chronological summary of clustered clinical information describing the phases of a pathology\, as well as anecdotal evidence that clinicians can collect from the patient. Only history that is important for continuity of care is reported\, complementing the diagnostic summary. Structured history is recorded in the dedicated sections for problems\, procedures\, medical devices and immunizations.,
     $loinc#11329-0 )
-  * text ^requirements = "body.patientHistory.generatedNarrative"
+  * text ^requirements = "EHDSDischargeReport.body.patientHistory.generatedNarrative"
 
 // -------------------------------------
 // Problem List Section 0 .. 1
@@ -400,11 +398,11 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Clinical problems and conditions of the patient that are currently being monitored and remain relevant after discharge\, including conditions the patient suffered in the past and still suffers from. Unlike the diagnostic summary\, this section may carry a broader description of a condition and its progress\, including treatment and the response of the patient to treatment. Only conditions important for continuity of care are listed.,
     $loinc#11450-4 )
   * entry only Reference(ConditionEuCore or DocumentReference)
-  * insert SectionEntrySliceComRules(Clinical problems or conditions currently being monitored for the patient., It lists and describes clinical problems or conditions currently being monitored for the patient. This entry shall be used to document that no information about problems is available\, or that no relevant problems are known.)
+  * insert SectionEntrySliceComRules(Clinical problems or conditions currently being monitored for the patient., It lists and describes clinical problems or conditions currently being monitored for the patient.)
   // entry slices
   * insert SectionEntrySliceDefRules (problem, 0.. ,
       Clinical problems or conditions currently being monitored for the patient. ,
-      It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available\, or that no relevant problems are known. ,
+      It lists and describes clinical problems or conditions currently being monitored for the patient.,
       ConditionEuCore)
 
 // -------------------------------------
@@ -417,8 +415,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Immunization status and vaccination history,
     The immunization status and the vaccination history of the patient. The primary purpose of this section is to communicate the current immunization status\, and it may contain the entire vaccination history relevant to the period being summarised\, including the disease or agent targeted\, the vaccine or its components\, the dose within a series\, the date of administration and any planned next dose.,
     $loinc#11369-6 )
-  * entry only Reference(Immunization or DocumentReference)
-  * insert SectionEntrySliceComRules(Patient's immunization status and pertinent history., It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known.)
+  * entry only Reference(ImmunizationEuCore or DocumentReference)
+  * insert SectionEntrySliceComRules(Patient's immunization status and pertinent history., It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized.)
   * insert SectionEntrySliceDefRules (immunization,  0.. ,
     Patient's immunization status and pertinent history.,
     It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized.,
@@ -437,7 +435,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Discharge status and disposition of the patient,
     Details of the discharge of the patient\, comprising the discharge status or disposition and the condition of the patient at discharge. Structured information should be provided\, and where it is not available at least a discharge summary note should be present. The discharge date\, the type of destination such as home\, another hospital or a nursing home\, discharge against medical advice\, and the destination organisation are recorded in the encounter.,
     $loinc#8650-4 )
-  * text ^requirements = "body.dischargeDetails.generatedNarrative; body.dischargeDetails.note"
+  * text ^requirements = "EHDSDischargeReport.body.dischargeDetails.generatedNarrative; EHDSDischargeReport.body.dischargeDetails.note"
 
 // -------------------------------------------------------------
 // Attachments section
@@ -467,12 +465,12 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 
 /// ========= INVARIANTS =========
-Invariant: text-or-section
+Invariant: cmp-hdr-1
 Description: "A Composition SHALL have either text, at least one section, or both."
 Expression: "text.exists() or section.exists()"
 Severity: #error
 
-Invariant: discharge-summary-or-hospital-course
+Invariant: cmp-hdr-2
 Description: "At least one of the Discharge summary (LOINC 18842-5) or Hospital course (LOINC 8648-8) sections SHALL be present. Both may be present."
 Expression: "section.where(code.coding.where(system = 'http://loinc.org' and code = '18842-5').exists()).exists() or section.where(code.coding.where(system = 'http://loinc.org' and code = '8648-8').exists()).exists()"
 Severity: #error

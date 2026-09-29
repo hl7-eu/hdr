@@ -303,7 +303,7 @@ Usage: #inline
 * section[sectionDischargeDetails].section[=].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 
 // Objective findings at discharge (subsection)
-* section[sectionDischargeDetails].section[=].title = "Objektivní nález při propuštění"
+* section[sectionDischargeDetails].section[+].title = "Objektivní nález při propuštění"
 * section[sectionDischargeDetails].section[=].text.status = #additional
 * section[sectionDischargeDetails].section[=].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">

@@ -10,7 +10,7 @@
 
 Obligations are a means offered by HL7 FHIR to specify functional capabilities that defined actors MAY, SHOULD or SHALL apply to the data elements specified by the profiles.
 
-The current choice has been to define obligations in StructureDefinitions distinct from those used to define the structural constraints.
+Obligations are defined in StructureDefinitions distinct from those used to define the structural constraints.
 
 This page also describes the actors used for specifying the obligations.
 
@@ -48,7 +48,6 @@ This version of this guide adopts the actors specified by the Xt-EHR joint actio
       <tr><td><a href="StructureDefinition-patient-obl-eu-hdr.html">Patient: obligations</a></td><td>This profile defines obligations for the Patient resource.</td></tr>
       <tr><td><a href="StructureDefinition-specimen-obl-eu-hdr.html">Specimen: obligations</a></td><td>This profile defines obligations for the Specimen resource.</td></tr>
       <tr><td><a href="StructureDefinition-allergyIntolerance-obl-eu-hdr.html">Allergy Intolerance: obligations</a></td><td>This profile defines obligations for the AllergyIntolerance resource.</td></tr>
-      <tr><td><a href="StructureDefinition-humanName-obl-eu-hdr.html">Human Name: obligations</a></td><td>This profile defines obligations for the HumanName data type.</td></tr>
     </tbody>
    </table>
 </div>

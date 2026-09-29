@@ -3,19 +3,20 @@ Parent: Bundle
 Id: bundle-eu-hdr
 Title: "Bundle (HDR)"
 Description: "Clinical document used to represent a Hospital Discharge Report for the scope of this guide."
+* insert SetFmmAndStatusRule (2, trial-use)
 * . ^short = "Hospital Discharge Report bundle"
 * . ^definition = "Hospital Discharge Report bundle."
 * obeys bdl-hdr-1
-* obeys bdl-language-main-match
+* obeys bdl-hdr-2
 
 * identifier 1..
-  * ^short = "Instance identifier"
+  * ^short = "Document identifier"
 * language 1..1
   * ^short = "Main language of the Bundle"
   * ^definition = "The main language of the Hospital Discharge Report Bundle. This element SHALL be populated and represents the main language in which the document content is expressed. Individual resources contained in the Bundle MAY declare their own language; if populated, those resource languages should match the main language of the Bundle (regional variants of the same primary language subtag, such as fr-BE and fr-FR, are considered matching)."
 * type = #document (exactly)
 * timestamp 1.. 
-  * ^short = "Instance identifier"
+  * ^short = "Document date and time"
 * link ..0
 * entry 1..
 * entry ^slicing.discriminator[0].type = #type
@@ -35,7 +36,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 // NOTE: Bundle.entry.resource is of type Resource (abstract), so its children cannot be
 // profiled - a rule on entry.resource.language is dropped during snapshot generation.
 // The expectation on individual resource languages is therefore expressed by the
-// bdl-language-main-match invariant below and in the "Bundle and resource language"
+// bdl-hdr-2 invariant below and in the "Bundle and resource language"
 // section of the Design page.
 * entry contains
     composition 1..1 and
@@ -49,7 +50,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     diagnosticReport 0..* and
     imagingStudy 0..* and
     immunization 0..* and
-    immunizationRecommendation 0..* and
     media 0..* and
     medication 0..* and
     medicationRequest 0..* and
@@ -62,12 +62,14 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
     organization 0..* and
     observation 0..* and
     specimen 0..* and
-    familyMemberHistory 0..* and
     documentReference 0..* and
     flag 0..* and
     location 0..* and
     careplan 0..* and
-    goal 0..*
+    goal 0..* and
+    relatedPerson 0..* and
+    binary 0..* and
+    serviceRequest 0..*
 
 * entry[composition].resource only CompositionEuHdr
 * entry[patient].resource only PatientEuCore
@@ -80,7 +82,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[diagnosticReport].resource only DiagnosticReportEuCore
 * entry[imagingStudy].resource only ImagingStudy
 * entry[immunization].resource only ImmunizationEuCore
-* entry[immunizationRecommendation].resource only ImmunizationRecommendation // EuHdr
 * entry[media].resource only Media // $Media-observation-uv-ips
 * entry[medication].resource only MedicationEuCore
 * entry[medicationRequest].resource only MedicationRequestEuCore
@@ -92,13 +93,15 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[procedure].resource only ProcedureEuCore
 * entry[organization].resource only OrganizationEuCore
 * entry[observation].resource only Observation // $Observation-results-uv-ips
-* entry[specimen].resource only $Specimen-uv-ips
+* entry[specimen].resource only Specimen // $Specimen-uv-ips
 * entry[flag].resource only FlagPatientEuCore
-* entry[familyMemberHistory].resource only FamilyMemberHistory
 * entry[documentReference].resource only DocumentReference
 * entry[location].resource only LocationEuCore
-* entry[careplan].resource only CarePlan
+* entry[careplan].resource only CarePlanEuHdr
 * entry[goal].resource only GoalEuHdr
+* entry[relatedPerson].resource only RelatedPerson
+* entry[binary].resource only Binary
+* entry[serviceRequest].resource only ServiceRequest
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"
@@ -109,11 +112,11 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 
 
 Invariant: bdl-hdr-1
-Description: "An IPS document must have no additional Composition (including Composition subclass) resources besides the first."
+Description: "An HDR document must have no additional Composition (including Composition subclass) resources besides the first."
 Severity: #error
 Expression: "entry.tail().where(resource is Composition).empty()"
 
-Invariant: bdl-language-main-match
+Invariant: bdl-hdr-2
 Description: "If individual resource language values are populated, their primary language subtag SHOULD match the Bundle.language primary language subtag. Regional variants such as fr-BE and fr-FR are considered matching, and the comparison is case-insensitive."
 Severity: #warning
 Expression: "entry.resource.language.all($this.split('-').first().lower() = %resource.language.split('-').first().lower())"

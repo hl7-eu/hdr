@@ -14,7 +14,7 @@
   /* margin-top: -0.75rem;  uncomment/tweak if you want tighter vertical alignment */
 ">
   <div style="margin-bottom: 1em;">
-    <img src="xtehr-logo.png" alt="XTEHR Logo" style="max-width: 100%; height: 40px;" />
+    <img src="xtehr-logo.png" alt="Xt-EHR logo" style="max-width: 100%; height: 40px;" />
   </div>
   <div style="text-align: left;">
     <strong>Acknowledgment</strong><br/>
@@ -38,26 +38,6 @@ The content is subject to change and is provided <b>as-is</b>, without warranty 
     </div> -->
     
 
-<div xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<blockquote class="stu-note">
-	<p><b>Obligations</b></p>
-		<p>Obligations have been added to this version of the guide only as <b>informative</b> material to collect feedback about their use.</p>		
-		<p>For more details about obligations, please refer to the <a href="obligations.html">Obligations page</a>.</p>
-	</blockquote>
-</div>
-
-<div xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<blockquote class="stu-note">
-<p><b>Section Codes</b></p>
-<p>Not all the LOINC codes used in this version align with the purpose of the sections, and in some cases, temporary 'local' codes have been assigned.</p>
-<p>A collaboration with LOINC has been established to identify the most appropriate codes for the HDR sections.</p>
-<p><b>Adopters should be aware that codes may be subject to change.</b></p>
-	</blockquote>
-</div>
-
-
 ### Scope
 
 This Implementation Guide specifies a set of rules to be applied to HL7 FHIR to define how to represent a **Hospital Discharge Report** in the **European** context, consistent with the European eHealth Network (eHN) Guidelines (see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en)).
@@ -69,7 +49,7 @@ This includes both jurisdictional and cross-border scenarios.
 This guide doesn't describe how this report is exchanged.
 
 ### Purpose
-The goal of this Implementation Guide is to define a European standard for the Hospital Discharge Report, facilitating harmonization across national initiatives and laying the groundwork for the European EHR eXchange Format (EEHRxF), by specifying how to exchange personal electronic health data in the priority category of 'discharge reports' listed in Article 14 of the EHDS Regulation.
+The goal of this Implementation Guide is to define a common European specification for the Hospital Discharge Report, facilitating harmonization across national initiatives and laying the groundwork for the European EHR eXchange Format (EEHRxF), by specifying how to exchange personal electronic health data in the priority category of 'discharge reports' listed in Article 14 of the EHDS Regulation.
 
 This project is promoted by HL7 Europe and developed in collaboration with several other European and national organizations and projects.
 

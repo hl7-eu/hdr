@@ -1,7 +1,7 @@
 Profile: LaboratoryObservationEuHdrObligation
 Parent: MedicalTestResultEuCore
 Id: laboratoryObservation-obl-eu-hdr
-Title: "Laboratory Observation: obligations"
+Title: "Observation (laboratory): obligations"
 Description: "This profile defines obligations for laboratory observations in the scope of this guide."
 
 * insert SetFmmAndStatusRule ( 0, informative)

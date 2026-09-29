@@ -1,6 +1,6 @@
 This page summarizes the main changes applied to this version of the guide.
 
-### From 0.1.0-ballot to current version
+### From 0.1.0-ballot to 1.0.0
 
 #### 🔧 Model Alignment and Refactoring
 
