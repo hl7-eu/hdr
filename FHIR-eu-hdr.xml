@@ -183,10 +183,11 @@
 <page key="map-ehdsencounter" name="EHDSEncounter Mapping"/>
 <page key="map-ehdslaboratoryobservation" name="EHDSLaboratoryObservation Mapping"/>
 <page key="map-ehdsrelatedperson" name="EHDSRelatedPerson Mapping"/>
+<page key="expansion-params" name="Expansion Parameters"/>
 <page deprecated="true" key="FunctionalStatus-map" name="FunctionalStatus Relationships"/>
 <page deprecated="true" key="Header-map" name="Header Relationships"/>
 <page key="index" name="Home"/>
-<page key="hdr-mindmap" name="Hospital Discharge Report"/>
+<page deprecated="true" key="hdr-mindmap" name="Hospital Discharge Report"/>
 <page deprecated="true" key="HospitalDischargeReport-map" name="HospitalDischargeReport Relationships"/>
 <page deprecated="true" key="HospitalStay-map" name="HospitalStay Relationships"/>
 <page deprecated="true" key="InPatientEncounter-map" name="InPatientEncounter Relationships"/>
