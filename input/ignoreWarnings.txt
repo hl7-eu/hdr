@@ -9,9 +9,6 @@ bdl-hdr-2: Found a use of a collection operator on something that is not a colle
 # == Won't fixed see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/QA.20error.20with.20ActorDefinition.20in.20R4.20IG
 Unknown code 'system' in the CodeSystem 'http://hl7.org/fhir/examplescenario-actor-type' version '4.0.1'
 
-# == Won't fixed see https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/QA.20error.20with.20ActorDefinition.20in.20R4.20IG
-The value provided ('system') was not found in the value set 'Example Scenario Actor Type' (http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0), and a code is required from this value set (error message = The provided code 'http://hl7.org/fhir/examplescenario-actor-type#system' was not found in the value set 'http://hl7.org/fhir/ValueSet/examplescenario-actor-type|5.0.0'; Unknown code 'system' in the CodeSystem 'http://hl7.org/fhir/examplescenario-actor-type' version '4.0.1')
-
 
 # Obligation extension (information messages, one per obligation in the snapshots of the obligation profiles):
 # the IG Publisher adds the tooling sub-extension http://hl7.org/fhir/tools/StructureDefinition/snapshot-source
@@ -20,12 +17,11 @@ The value provided ('system') was not found in the value set 'Example Scenario A
 # The HDR obligations only use the code and actor sub-extensions, which match the defined slices.
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation%
 
+# Luigi De Luca example: the two FamilyMemberHistory entries are referenced by an additional top-level
+# "Family History" section (allowed by the open section slicing) and are kept on purpose; BundleEuHdr has no
+# familyMemberHistory entry slice (information message). Note: this also hides other Bundle entries not matching a slice.
+%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/bundle-eu-hdr%
 
-# Reference to deprecated ValueSet
-Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0
-
-# warning due to the reference to a sub-package 
-The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
 
 # duplicated anchor ids
 The html source has duplicate anchor Ids: 1
@@ -37,81 +33,32 @@ The IG is not for the international realm, and it uses SNOMED CT, so it should f
 %-obl-eu-hdr'): The Implementation Guide contains no examples for this%
 
 
-
-# See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Issue.20using.20version-specific.20packages
-The URL should refer directly to the ImplementationGuide resource (e.g. include '/ImplementationGuide/')
-The canonical URL http://hl7.eu/fhir/extensions doesn't point to an actual ImplementationGuide resource
-The canonical URL https://profiles.ihe.net/PHARM/MPD doesn't point to an actual ImplementationGuide resource
-
-
 # example url that doesn't resolve
-URL value 'https://hl7europe.org/example-identifier' does not resolve
-A definition for CodeSystem 'http://hl7europe.org/policy-rules' could not be found, so the code cannot be validated
-URL value 'http://hl7europe.org/policy-rules' does not resolve
 %A definition for CodeSystem 'urn:oid:2.16.840.1.113883.2.4.6.7' version '2.16.840.1.113883.2.4.6.7' could not be found, so the code cannot be validated.%
-A definition for CodeSystem 'http://hl7europe.org/examples/pms' could not be found, so the code cannot be validated
-URL value 'http://hl7europe.org/examples/pms' does not resolve
 
-# not resolved url
-URL value 'urn:ietf:rfc:4122' does not resolve
-URL value 'urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6' does not resolve
-URL value 'http://fhir.nl/fhir/NamingSystem/agb-z' does not resolve
-URL value 'urn:oid:2.16.840.1.113883.2.4.6.7' does not resolve
-URL value 'http://fhir.nl/fhir/NamingSystem/bsn' does not resolve
-URL value 'https://www.orpha.net' does not resolve
-Error from https://tx.fhir.org/r4: Unable to provide support for code system https://www.orpha.net
 
 # no performers in the examples
 Best Practice Recommendation: In general, all observations should have a performer
-
-# Concept Maps Groups Source and Target  are not Code Systems
-%not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed%
-%not fully defined and populated, and no targetScope is specified, so the target code checking will not be performed%
 
 
 # UCOM annotation in examples
 UCUM Codes that contain human readable annotations like {keer per dag inhaleren} can be misleading (e.g. they are ignored when comparing units). Best Practice is not to depend on annotations in the UCUM code, so this usage should be checked
 
-# Missing key for addiitonal binding
-Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained.'
 
 # not fixed version used
 %There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement'.%
 %There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/event-basedOn'.%
-%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActCode'.%
 %There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/bodySite'.%
-%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse'.%
-%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-FamilyMember'.%
 %There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/flag-detail'.%
-%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType'.%
-%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode'.%
-%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason'.%
-%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActClassExposure'.%
-%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/data-absent-reason'.%
-%There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-ActEncounterCode'.%
 %There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/flag-priority'.%
 %There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-birthPlace'.%
 %There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse'.%
 %There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-citizenship'.%
 %There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/patient-nationality'.%
-%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/procedure-targetBodyStructure'.%
-%There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/v3-ActCode'.%
 
-%There are multiple different potential matches for the url 'http://terminology.hl7.org/CodeSystem/v3-ActPriority'.%
-
-%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/humanname-fathers-family'.%
-
-%There are multiple different potential matches for the url 'http://hl7.org/fhir/StructureDefinition/humanname-mothers-family'.%
 
 # The repeating element with a pattern
 The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
-
-# Temporary code system
-Reference to experimental CodeSystem http://hl7.eu/fhir/hdr/CodeSystem/temporarySystem-hdr-eu|0.0.1-ci
-
-# deprecated extension
-The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex
-The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 
 
 # > and < chars interpreted as html tags
@@ -128,30 +75,12 @@ Found multiple matching profiles for urn:uuid:fd7f7580-5788-45dd-88ec-dca615d69c
 
 # known non-matching slices
 %This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/composition-eu-hdr%
-%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medication-eu-hdr%
-%This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/medicationRequest-eu-hdr%
 %This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/deviceUseStatement-eu-hdr%
 %This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/medicationRequest-eu-core%
 %This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/medicationStatement-eu-core%
 %This element does not match any known slice defined in the profile http://hl7.eu/fhir/hdr/StructureDefinition/encounter-eu-hdr%
 %This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/medicalTestResult-eu-core%
 
-# used local extensions not speciifed in the profile
-%This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/HumanName-eu%
-%This element does not match any known slice defined in the profile http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core%
-
-
-
-
-# Not expanded value set
-Unable to expand included value set 'http://terminology.ehdsi.eu/ValueSet/eHDSISubstance': Unable to expand imported value set: Error from https://tx.fhir.org/r4: Unable to provide support for code system https://spor.ema.europa.eu/v2/SubstanceDefinition (and Error from https://tx.fhir.org/r4: Unable to provide support for code system https://spor.ema.europa.eu/v2/SubstanceDefinition)
-
-# experimental CodeSystem temporarly used, waiting for LOINC codes assignement
-Reference to experimental CodeSystem http://hl7.eu/fhir/hdr/CodeSystem/temporarySystem-hdr-eu|0.1.0-ballot
-
-
-# not known systems
-Unable to check whether the code is in the value set 'http://fhir.ehdsi.eu/hdr/ValueSet/eHDSISubstanceWithExceptions|0.1.0-preview' because the code system https://spor.ema.europa.eu/v2/SubstanceDefinition| was not found
 
 # not known identification systems
 No definition could be found for URL value 'https://hl7europe.org/example-identifier'
@@ -166,9 +95,6 @@ No definition could be found for URL value 'urn:ietf:rfc:4122'
 No definition could be found for URL value 'urn:oid:2.16.840.1.113883.2.4.3.11.999.7.6'
 No definition could be found for URL value 'http://fhir.nl/fhir/NamingSystem/agb-z'
 No definition could be found for URL value 'http://fhir.nl/fhir/NamingSystem/bsn'
-No definition could be found for URL value 'urn:oid:2.16.840.1.113883.2.4.6.7'
-No definition could be found for URL value 'http://hl7europe.org/policy-rules'
-No definition could be found for URL value 'http://hl7europe.org/examples/pms'
 No definition could be found for URL value 'https://sukl.cz/terminology/CodeSystem/dlp-lecivepripravky'
 
 # multiple different potential versions matches
@@ -191,7 +117,6 @@ There are no valid display names found for the code http://terminology.hl7.org/C
 MSG_DRAFT
 
 # OID not assigned
-The resource ImplementationGuide/hl7.fhir.eu.hdr could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 %could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)%
 
 # XtEHR Logical model is specified using HL7 FHIR R5 (no issues)

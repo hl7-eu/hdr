@@ -85,7 +85,6 @@ Usage: #inline
 //
 * section[sectionSignificantProcedures].title = "Procedures"
 * section[=].code = $loinc#10185-7 "Hospital discharge procedure note"
-// * section[1].code[+] = $loinc#29554-3 "Surgical operation note"
 * section[=].text.status = #generated
 * section[=].text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
@@ -217,7 +216,7 @@ Usage: #inline
 
 Instance: encounter-wolff-example
 InstanceOf: EncounterEuHdr
-Title: "Encounter: Hospital Admission and Discharge"
+Title: "Encounter: Hospital admission and discharge, Reijer Wolff"
 Description: "A sample Encounter resource for a hospital admission and discharge."
 Usage: #example
 * id = "12fef60c-1fe7-4988-8286-af691889a3f3"

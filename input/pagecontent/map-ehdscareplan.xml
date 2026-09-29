@@ -9,7 +9,15 @@
       <div class="callout-wrapper">
         <div class="callout-box">
           <strong>Ongoing alignment:</strong>
-              The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
+              Future versions of the Xt-EHR models and of the EHDS Implementing Acts may require updates to these mappings.
+        </div>
+      </div>
+    </div>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Yellow rows:</strong>
+              Rows highlighted in yellow identify mappings that need further review with the Xt-EHR Joint Action.
         </div>
       </div>
     </div>

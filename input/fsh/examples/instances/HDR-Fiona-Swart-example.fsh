@@ -60,7 +60,7 @@ Usage: #example
 
 Instance: gewicht-swart
 InstanceOf: $vitalsigns
-Title: "Observation: Body Weight"
+Title: "Observation: Body weight, Fiona Swart"
 Description: "Vital signs observation representing the body weight of the patient."
 Usage: #example
 * status = #final
@@ -72,7 +72,7 @@ Usage: #example
 
 Instance: bloeddruk-swart
 InstanceOf: $vitalsigns
-Title: "Observation: Blood Pressure"
+Title: "Observation: Blood pressure, Fiona Swart"
 Description: "Vital signs observation representing the patient's blood pressure."
 Usage: #inline
 * status = #final
@@ -166,7 +166,6 @@ Description: "A planned cesarean section procedure."
 Usage: #example
 * status = #completed
 * category = $sct#386637004 "Obstetric procedure"
-// * code = $sct#80771000146107 "Planned cesarean section"
 * code = $sct#11466000 "Cesarean section"
 * subject = Reference(patient-swart) "Fiona F XXX_Swart"
 * performedPeriod.start = "2025-02-10T10:03:00+02:00"
@@ -188,23 +187,6 @@ Usage: #example
 
 // Validator complains about k[arb'U]/L , but it is valid
 
-// Instance: lab-swart-1
-// InstanceOf: Observation
-// Title: "Hepatitis B-virusoppervlakte Ag"
-// Usage: #example
-// * status = #final
-// * code = $loinc#58452-4 "Hepatitis B virus surface Ag [Units/volume] in Serum"
-// * subject = Reference(patient-swart) "Fiona F XXX_Swart"
-// * valueQuantity = 0 $ucum#k[arb'U]/L "k[arb'U]/L"
-
-// Instance: lab-swart-2
-// InstanceOf: Observation
-// Title: "Toxoplasma gondii IgG Antibody"
-// Usage: #example
-// * status = #final
-// * code = $loinc#8039-0 "Toxoplasma gondii IgG Ab [Units/volume] in Serum"
-// * subject = Reference(patient-swart) "Fiona F XXX_Swart"
-// * valueQuantity = 9 $ucum#k[arb'U]/L "k[arb'U]/L"
 
 Instance: lab-swart-3
 InstanceOf: MedicalTestResultEuCore
@@ -411,8 +393,6 @@ Usage: #inline
       </tr>
    </table>
 </div>"
-// * section[=].entry[0] = Reference(lab-swart-1)  "HBsAg"
-// * section[=].entry[+] = Reference(lab-swart-2)  "Toxoplasma IgG"
 * section[sectionSignificantResults].entry[results-medicalTestResult][0] = Reference(lab-swart-3)  "ABO group"
 * section[sectionSignificantResults].entry[results-medicalTestResult][+] = Reference(urn:uuid:a7c687cd-27dd-4b42-88c2-5e32418847ae)  "Rh D factor"
 * section[sectionSignificantResults].entry[results-medicalTestResult][+] = Reference(urn:uuid:5863804b-b0aa-4292-8bc2-13a769ad50d7)  "hemoglobin"
@@ -444,8 +424,6 @@ Usage: #example
 //3
 * entry[encounter][+].fullUrl = "http://example.org/Encounter/ziekenhuisopname-swart"
 * entry[encounter][=].resource = ziekenhuisopname-swart
-// * entry[goal][+].fullUrl = "http://example.org/Goal/goal-mobilisatie-swart"
-// * entry[goal][=].resource = goal-mobilisatie-swart
 * entry[observation][+].fullUrl = "http://example.org/Observation/alcohol-swart"
 * entry[observation][=].resource = alcohol-swart
 * entry[observation][+].fullUrl = "http://example.org/Observation/bloeddruk-swart"
@@ -453,10 +431,6 @@ Usage: #example
 * entry[observation][=].resource = bloeddruk-swart
 * entry[observation][+].fullUrl = "http://example.org/Observation/gewicht-swart"
 * entry[observation][=].resource = gewicht-swart
-// * entry[+].fullUrl = "http://example.org/Observation/lab-swart-1"
-// * entry[=].resource = lab-swart-1
-// * entry[+].fullUrl = "http://example.org/Observation/lab-swart-2"
-// * entry[=].resource = lab-swart-2
 * entry[observation][+].fullUrl = "http://example.org/Observation/lab-swart-3"
 * entry[observation][=].resource = lab-swart-3
 //8

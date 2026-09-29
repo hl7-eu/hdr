@@ -1,6 +1,6 @@
 Instance: example-covid19-vax-admin
 InstanceOf: ImmunizationEuCore
-Title: "Immunization: COVID-19"
+Title: "Immunization: COVID-19 vaccine dose administered"
 Description: "An example record of an administered COVID-19 vaccine dose."
 
 * status = #completed
@@ -23,7 +23,6 @@ Description: "An example record of an administered COVID-19 vaccine dose."
 * performer[administeringCentreOrHp].function = $v2-0443#AP
 * performer[administeringCentreOrHp].actor.display = "Dr. Alessia Bianchi"
 
-// * extension[basedOn].valueReference.reference = "ImmunizationRecommendation/example-covid19-vax-recommendation"
 
 * protocolApplied[0].targetDisease = $sct#840539006 "COVID-19"
 

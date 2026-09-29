@@ -9,7 +9,15 @@
       <div class="callout-wrapper">
         <div class="callout-box">
           <strong>Ongoing alignment:</strong>
-              The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
+              Future versions of the Xt-EHR models and of the EHDS Implementing Acts may require updates to these mappings.
+        </div>
+      </div>
+    </div>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Yellow rows:</strong>
+              Rows highlighted in yellow identify mappings that need further review with the Xt-EHR Joint Action.
         </div>
       </div>
     </div>
@@ -186,7 +194,7 @@
             <td>bodySite</td>
             <td>source-is-broader-than-target</td>
             <td>MedicalTestResultEuCore</td>
-            <td>extension[bodyStructure]</td>
+            <td>extension:bodyStructure</td>
             <td></td>
           </tr>
           <!-- result -->
@@ -222,7 +230,7 @@
           <tr>
             <td>result.uncertainty.type</td>
             <td>equivalent</td>
-            <td>MedicalTestResultEuCore</td>
+            <td>Quantity</td>
             <td>extension:uncertaintyType	</td>
             <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType extension for the
               Quantity data type.</td>
@@ -357,7 +365,7 @@
           <tr>
             <td>component.result.uncertainty.type</td>
             <td>equivalent</td>
-            <td>MedicalTestResultEuCore</td>
+            <td>Quantity</td>
             <td>extension:uncertaintyType	</td>
             <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType extension for the
               Quantity data type.</td>
@@ -482,7 +490,7 @@
             <td>related-to</td>
             <td>Organization</td>
             <td>extension:qualification</td>
-            <td>MedicalTestResultEuCore.performer may reference the laboratory Organization, or a PractitionerRole whose organization is the laboratory. Organization.qualification is preadopted from R5.</td>
+            <td>MedicalTestResultEuCore.performer may reference the laboratory Organization, or a PractitionerRole whose organisation is the laboratory. Organization.qualification is preadopted from R5.</td>
           </tr>
           <tr class="highlight-yellow">
             <td>previousResults</td>

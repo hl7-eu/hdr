@@ -4,11 +4,13 @@
 
 To address the [**Hospital Discharge Report Structure Challenge**](challenges.html), we have opted for a **flexible approach** rather than imposing a rigid format.
 
-The **"flat structure"** documented in the guide should be understood as a **"section library"** that can be reused in both **flat and nested structures**. This approach allows implementers to organize the report according to local or institutional needs while maintaining a standardized content model.
+The **"flat structure"** documented in the guide should be understood as a **"section library"** that can be reused in both **flat and nested structures**. This approach allows implementers to organise the report according to local or institutional needs while maintaining a standardised content model.
+
+The flat structure is nevertheless considered best practice. Where sub-sections are needed, see this [example](Bundle-DischargeBundle-Novak-Petr-Subsections.html) of how they can be used.
 
 In practice:
 
-1. A few sections are required.
+1. At least one of the Discharge summary or Hospital course sections SHALL be present (invariant `cmp-hdr-2`).
 2. **Section slices are open**, meaning that implementers have the freedom to include additional **"first-level" sections**.
 3. With the exception of a few specific cases, **sub-sections are allowed**, giving healthcare providers the ability to create a structure that best fits their clinical context.
 
