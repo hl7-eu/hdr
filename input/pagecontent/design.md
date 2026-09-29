@@ -32,6 +32,6 @@ Individual resources contained in `Bundle.entry.resource` **MAY** populate their
 
 For this comparison, only the **primary language subtag** is considered. Regional variants of the same language are therefore considered matching. For example, `fr-BE`, `fr-FR`, and `fr-CA` are considered matching because they share the same primary language subtag, `fr`. The comparison is case-insensitive (for example, `en-US` and `EN-gb` are considered matching).
 
-This expectation is conveyed by the warning-severity invariant `bdl-language-main-match` on the [Bundle (HDR)](StructureDefinition-bundle-eu-hdr.html) profile.
+This expectation is conveyed by the warning-severity invariant `bdl-hdr-2` on the [Bundle (HDR)](StructureDefinition-bundle-eu-hdr.html) profile.
 
 

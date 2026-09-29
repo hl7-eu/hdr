@@ -50,8 +50,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * attester.party ^short = "Who attested the composition."
 * attester.party only Reference( PractitionerEuCore or PractitionerRoleEuCore or OrganizationEuCore)
 * section 1..
-* obeys text-or-section
-* obeys discharge-summary-or-hospital-course
+* obeys cmp-hdr-1
+* obeys cmp-hdr-2
 * section ^slicing.discriminator[0].type = #value
 * section ^slicing.discriminator[=].path = "code"
 * section ^slicing.ordered = false
@@ -150,7 +150,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 // A section carrying textual content of the Hospital Discharge Report as
 // one narrative, used as an alternative to reporting the content of the
 // report when structured sections are not, or only partially available.
-// See obeys discharge-summary-or-hospital-course below.
+// See obeys cmp-hdr-2 below.
 // -------------------------------------
 * section contains sectionDischargeSummary 0..1
 * section[sectionDischargeSummary]
@@ -465,12 +465,12 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 
 /// ========= INVARIANTS =========
-Invariant: text-or-section
+Invariant: cmp-hdr-1
 Description: "A Composition SHALL have either text, at least one section, or both."
 Expression: "text.exists() or section.exists()"
 Severity: #error
 
-Invariant: discharge-summary-or-hospital-course
+Invariant: cmp-hdr-2
 Description: "At least one of the Discharge summary (LOINC 18842-5) or Hospital course (LOINC 8648-8) sections SHALL be present. Both may be present."
 Expression: "section.where(code.coding.where(system = 'http://loinc.org' and code = '18842-5').exists()).exists() or section.where(code.coding.where(system = 'http://loinc.org' and code = '8648-8').exists()).exists()"
 Severity: #error

@@ -7,7 +7,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * . ^short = "Hospital Discharge Report bundle"
 * . ^definition = "Hospital Discharge Report bundle."
 * obeys bdl-hdr-1
-* obeys bdl-language-main-match
+* obeys bdl-hdr-2
 
 * identifier 1..
   * ^short = "Document identifier"
@@ -36,7 +36,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 // NOTE: Bundle.entry.resource is of type Resource (abstract), so its children cannot be
 // profiled - a rule on entry.resource.language is dropped during snapshot generation.
 // The expectation on individual resource languages is therefore expressed by the
-// bdl-language-main-match invariant below and in the "Bundle and resource language"
+// bdl-hdr-2 invariant below and in the "Bundle and resource language"
 // section of the Design page.
 * entry contains
     composition 1..1 and
@@ -116,7 +116,7 @@ Description: "An HDR document must have no additional Composition (including Com
 Severity: #error
 Expression: "entry.tail().where(resource is Composition).empty()"
 
-Invariant: bdl-language-main-match
+Invariant: bdl-hdr-2
 Description: "If individual resource language values are populated, their primary language subtag SHOULD match the Bundle.language primary language subtag. Regional variants such as fr-BE and fr-FR are considered matching, and the comparison is case-insensitive."
 Severity: #warning
 Expression: "entry.resource.language.all($this.split('-').first().lower() = %resource.language.split('-').first().lower())"
