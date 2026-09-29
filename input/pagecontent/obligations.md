@@ -48,7 +48,6 @@ This version of this guide adopts the actors specified by the Xt-EHR joint actio
       <tr><td><a href="StructureDefinition-patient-obl-eu-hdr.html">Patient: obligations</a></td><td>This profile defines obligations for the Patient resource.</td></tr>
       <tr><td><a href="StructureDefinition-specimen-obl-eu-hdr.html">Specimen: obligations</a></td><td>This profile defines obligations for the Specimen resource.</td></tr>
       <tr><td><a href="StructureDefinition-allergyIntolerance-obl-eu-hdr.html">Allergy Intolerance: obligations</a></td><td>This profile defines obligations for the AllergyIntolerance resource.</td></tr>
-      <tr><td><a href="StructureDefinition-humanName-obl-eu-hdr.html">Human Name: obligations</a></td><td>This profile defines obligations for the HumanName data type.</td></tr>
     </tbody>
    </table>
 </div>

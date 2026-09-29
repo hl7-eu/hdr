@@ -11,7 +11,6 @@ Description: "This profile defines obligations for the Medication resource for t
 * ingredient   
   * item[x]	insert OblShallPopulateShallProcess
   * strength  insert OblShallPopulateShallDisplayProcess
-    * extension[strengthSubstance] 
   * isActive insert OblShallPopulateShallProcess
 
 * extension[productName] insert OblShallPopulateShallDisplayProcess

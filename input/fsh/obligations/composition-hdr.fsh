@@ -28,8 +28,6 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 * attester.time insert OblShallPopulateOnly
 * attester.party only Reference(PractitionerEuObligations or PractitionerRoleEuObligations or OrganizationEuObligations)
 * attester.party insert OblShallPopulateShallDisplay
-* extension[basedOn]
-* extension[compositionVersionR5]
 * extension[informationRecipient].valueReference only Reference(PractitionerRoleEuObligations or PractitionerEuObligations or DeviceEuHdrObligation or PatientEuObligations or RelatedPersonEuObligations or OrganizationEuObligations)
 
 // Presented form is part of the EHDS logical model, but the corresponding

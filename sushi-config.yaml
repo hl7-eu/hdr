@@ -391,7 +391,6 @@ groups:
         - StructureDefinition/laboratoryObservation-obl-eu-hdr
         - StructureDefinition/observation-obl-eu-hdr
         - StructureDefinition/procedure-obl-eu-hdr
-        - StructureDefinition/humanName-obl-eu-hdr
 
 
 #
