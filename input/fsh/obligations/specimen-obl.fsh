@@ -1,4 +1,4 @@
-Profile: SpecimenEuObligations
+Profile: SpecimenEuHdrObligation
 Parent: Specimen
 Id: specimen-obl-eu-hdr
 Title:    "Specimen: obligations"

@@ -1,5 +1,5 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile: MedicationStatementEuCoreObligation
+Profile: MedicationStatementEuHdrObligation
 Parent: MedicationStatementEuCore
 Id: medicationStatement-obl-eu-hdr
 Title: "MedicationStatement: obligations"
@@ -17,4 +17,3 @@ Description: "This profile defines obligations for the MedicationStatement resou
 * effective[x] insert OblShallPopulateOnly
 * note insert OblShouldPopulateOnly
 
-* identifier

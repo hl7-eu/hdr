@@ -15,14 +15,9 @@ Description: """This profile defines obligations for the Immunization resource f
 
 * patient insert OblShallPopulateShallProcess
 * occurrence[x] insert OblShallPopulateShallDisplayProcess
-* location 
-* manufacturer 
-* lotNumber 
 
 
 * performer[administeringCentreOrHp] insert OblShallPopulateShallDisplayProcess
 
 
 * protocolApplied.targetDisease insert OblShallPopulateShouldDisplayShallProcess
-* protocolApplied.doseNumberPositiveInt 
-* protocolApplied.seriesDosesPositiveInt 

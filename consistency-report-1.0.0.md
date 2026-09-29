@@ -15,7 +15,7 @@
 - The stale *"In this ballot publication…"* callouts were removed from `map-ehdscareplan.xml`, `map-ehdsdeviceuse.xml` and `map-ehdslaboratoryobservation.xml`.
 - The obligations and section-codes STU notes were removed from `index.md`; `knownIssues.md` covers both.
 - **Release blockers fixed (commit `74243ba`):**
-  - Maturity and status: every HDR profile and value set now has `SetFmmAndStatusRule (2, trial-use)` (aligned with EU Base 2.0.1), and `ProcedureEuCoreObligation` has `(0, informative)` like the other obligation profiles.
+  - Maturity and status: every HDR profile and value set now has `SetFmmAndStatusRule (2, trial-use)` (aligned with EU Base 2.0.1), and `ProcedureEuHdrObligation` has `(0, informative)` like the other obligation profiles.
   - `CarePlanEuHdrObligation` no longer has obligations on the deprecated `activity.detail`, `detail.kind` and `detail.description`. The obligations on `activity` and `activity.reference` remain.
   - Broken links fixed: `map-ehdsdischargereport.xml` (DeviceUse page link, and EU Base `map-ehdsmedicationstatement.html`), `map-ehdsrelatedperson.xml` (`patient-eu-core`) and `modelmap.xml` (`flag-patient-eu-core`).
   - `knownIssues.md` now documents the pre-release `ihe.pharm.mpd.r4#1.0.0-comment-2` dependency.
@@ -24,7 +24,7 @@
 - The IG description in `sushi-config.yaml` now refers to the EHDS logical model instead of the eHN guidelines.
 - **Bundle and Composition alignment (commit `9d1dc3d`):**
   - Removed the unreachable `immunizationRecommendation` and `familyMemberHistory` entry slices from `BundleEuHdr` and `BundleEuHdrObligation`.
-  - Added `relatedPerson`, `binary` and `serviceRequest` entry slices to `BundleEuHdr`. `BundleEuHdrObligation` narrows `relatedPerson` to `RelatedPersonEuObligations`.
+  - Added `relatedPerson`, `binary` and `serviceRequest` entry slices to `BundleEuHdr`. `BundleEuHdrObligation` narrows `relatedPerson` to `RelatedPersonEuHdrObligation`.
   - `CompositionEuHdr.author` and `extension[information-recipient]` now reference `DeviceEuHdr` instead of `Device`.
 - The 07:44 QA confirms the generated pages link to EU Base `/base/2.0.1/`.
 - **Composition and configuration (commits `8a58b9e`, `7444b53`):**
@@ -56,6 +56,9 @@
   - The commented-out `ImmunizationRecommendationEuHdrObligation` removed.
 - The §6.5 editorial improvements to the narrative pages are applied (commit `2f40f44`).
 - The FCP logos in `ig-template/content/assets/images/` are committed (`d9f3a48`).
+- The leftover laboratory IG and template comments were removed from `ig.ini` (`e01e689`).
+- Bare obligation paths with no rule (61 lines in 13 files) removed; the generated resources are unchanged (working copy, not yet committed).
+- Obligation profile names harmonised to `<Resource>EuHdrObligation`: 11 profiles renamed (e.g. `PatientEuObligations` → `PatientEuHdrObligation`, `ConditionEuCoreObligation` → `ConditionEuHdrObligation`); ids and canonical URLs unchanged (working copy, not yet committed).
 - All the above is in PR #144 (`release-1.0.0` → `master`).
 - The stale `special-url` entries (`eHDSIConditionPOA`, `eHDSITreatmentClass`) were removed from `sushi-config.yaml`.
 - The *Section LOINC codes* known issue, which mentioned temporary local codes, was removed from `knownIssues.md`.
@@ -81,7 +84,6 @@ File references are relative to the repository root. Line numbers are those of t
 |---|---|---|---|
 | Medium | Jira | `FHIR-eu-hdr.xml` in the repository has been updated, but the QA compares against the file published on GitHub and still warns that it is out of date. | Submit `template/jira-new.xml` as a PR to HL7/JIRA-Spec-Artifacts. |
 | Medium | `sushi-config.yaml:327-333` | The group id is misspelled (`eHNHospitalDishargeReport`). Its description, *"entry profiles"*, is wrong: it lists only the Bundle and Composition **obligation** profiles. The base profiles (Bundle, Composition, Encounter, CarePlan, Device, DeviceUseStatement, Goal, MedicationAdministration, MedicationDispense) and the value sets belong to no group. | Create a *Profiles* group with the base profiles. Move `bundle-obl-eu-hdr` and `composition-obl-eu-hdr` to the *Obligations* group. Add a *Terminology* group. |
-| Low | `ig.ini:5` | Leftover laboratory IG comment (`# ig = …ImplementationGuide-hl7.fhir.eu.eu-laboratory.json`). | Remove it. |
 | Low | `sushi-config.yaml` menu | Menu labels and page titles differ ("Model Maps" / "Model Map Overview", "Cross version" / "Cross version analysis"). | Harmonise the labels. |
 | Low | Dependencies | `hl7.terminology.r4` is not pinned: 7.4.0 is resolved, while EU Base uses 7.3.0. `xtehr.eu.ehds.models` is an R5 package, which the QA flags as a version mismatch. `hl7.fhir.uv.xver-r5.r4` is `0.1.0`. | Pin `hl7.terminology.r4`. Document the rest in `knownIssues.md`. |
 
@@ -152,9 +154,7 @@ All invariant expressions were checked and look correct.
 | Medium | `obligations/composition-hdr.fsh:53` | Admission evaluation is `SHALL:able-to-populate`, but the base profile says this section is reported only exceptionally. | Use `OblShouldPopulateShallProcess`. |
 | Medium | `obligations/composition-hdr.fsh` | `sectionDischargeSummary` has no obligation, although it is one arm of the `cmp-hdr-2` invariant (Hospital course is SHALL). Vital signs, Allergies, Immunizations and Attachments have entry obligations but none on the section itself. | Add section-level obligations. |
 | Low | `examples/instances/vaccination.fsh:1-21` | The commented-out `ImmunizationRecommendationEuHdr` example is still in the file, although the profile, its obligation profile and the Bundle slice are gone. | Remove it, or move it to `_attic`. |
-| Low | Many files: e.g. `condition-hdr.fsh:17-26`, `procedure-hdr.fsh:16-26`, `encounter-hdr.fsh:19-47`, `medicationRequest-hdr.fsh:27-33` | Bare paths with no rule. They generate nothing. | Add obligations, or delete them. |
 | Low | `encounter-hdr.fsh:9`, `carePlan-hdr.fsh:9`, `medicationAdministration-hdr.fsh:11`, `medicationDispense-hdr.fsh:11`, `medicationRequest-hdr.fsh:11` | Obligations on the resource root, while Composition explicitly avoids them. | Pick one convention. |
-| Low | Naming | Three naming styles: `…EuCoreObligation`, `…EuHdrObligation` and `…EuObligations`. The ids are consistent (`xxx-obl-eu-hdr`). | Harmonise the names if feasible. |
 | Low | Coverage | There are no obligation profiles for Goal, BodyStructure, DiagnosticReport and Location. `obligations.md` doesn't say so. | Document this. |
 | Info | `ignoreWarnings.txt:17` | A blanket suppression of *"obligation … does not match any known slice"* hides 544 messages. | Check the cause (the obligation extension vs `hl7.fhir.uv.extensions.r4#5.3.0`) and add a justification. |
 
@@ -203,7 +203,7 @@ All resource types used in the five example Bundles have a matching `BundleEuHdr
 | High | 7 | "Aligned with the **Xt-EHR model** v0.3.0" → "v1.0.0". |
 | High | 21-26 | *Medical Devices* and *Procedures History* are listed as removed, but `sectionMedicalDevices` (`composition-hdr.fsh:208`) and `sectionProceduresHx` (`:228`) still exist. Remove them from the list. |
 | High | 30 | *Encounter status* is listed as a removed value set, but `EncounterStatusHdrVS` is still used (`encounter-hdr.fsh:20`). Remove it from the list. |
-| Medium | – | Missing entries: FHIR-59479 (bundle and obligation entry alignment, including CarePlanEuHdr, SpecimenEuObligations and Observation in the Bundle obligation profile), FHIR-51635 (sub-section example), FHIR-59075 (EU Base 2.0.1), and `Bundle.language` 1..1 with the `bdl-hdr-2` invariant (formerly `bdl-language-main-match`). |
+| Medium | – | Missing entries: FHIR-59479 (bundle and obligation entry alignment, including CarePlanEuHdr, SpecimenEuHdrObligation and Observation in the Bundle obligation profile), FHIR-51635 (sub-section example), FHIR-59075 (EU Base 2.0.1), and `Bundle.language` 1..1 with the `bdl-hdr-2` invariant (formerly `bdl-language-main-match`). |
 | Low | 11 | "Updated `modelmap.xml`…" names a source file. Use "Updated the Model Map Overview page…". |
 | Low | 39 | The file has no trailing newline. |
 

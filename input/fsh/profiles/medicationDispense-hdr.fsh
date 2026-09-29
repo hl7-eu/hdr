@@ -19,7 +19,6 @@ Description: "This profile constrains the MedicationDispense resource for the pu
 * status ^short = "Current state of the dispensation"
 * subject only Reference( PatientEuCore )
 
-* receiver // MS // receiver
 * performer.actor 1..1
 
 * authorizingPrescription only Reference(MedicationRequestEuCore)

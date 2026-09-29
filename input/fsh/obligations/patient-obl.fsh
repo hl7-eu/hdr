@@ -1,4 +1,4 @@
-Profile: PatientEuObligations
+Profile: PatientEuHdrObligation
 Parent: PatientEuCore
 Id: patient-obl-eu-hdr
 Title: "Patient: obligations"

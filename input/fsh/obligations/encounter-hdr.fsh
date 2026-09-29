@@ -8,40 +8,24 @@ Description: "This profile defines obligations for Inpatient Encounter in HL7 FH
 
 * insert OblShallPopulateShallProcess
 
-* subject only Reference(PatientEuObligations)
-* reasonReference only Reference(ObservationEuHdrObligation or ConditionEuCoreObligation or ProcedureEuCoreObligation)
-* participant.individual only Reference(PractitionerEuObligations or PractitionerRoleEuObligations or RelatedPersonEuObligations)
-* diagnosis.condition only Reference(ConditionEuCoreObligation)
-* hospitalization.destination only Reference(OrganizationEuObligations or LocationEuCore)
+* subject only Reference(PatientEuHdrObligation)
+* reasonReference only Reference(ObservationEuHdrObligation or ConditionEuHdrObligation or ProcedureEuHdrObligation)
+* participant.individual only Reference(PractitionerEuHdrObligation or PractitionerRoleEuHdrObligation or RelatedPersonEuHdrObligation)
+* diagnosis.condition only Reference(ConditionEuHdrObligation)
+* hospitalization.destination only Reference(OrganizationEuHdrObligation or LocationEuCore)
 * location.location only Reference(LocationEuCore)
-* serviceProvider only Reference(OrganizationEuObligations)
+* serviceProvider only Reference(OrganizationEuHdrObligation)
 
-* identifier 
-* status
 * class insert OblShallPopulateShallProcess
-* type 
-* serviceType  
-* priority 
 * subject insert OblShallPopulateShallProcess
-* basedOn 
 * period  insert OblShallPopulateShallDisplayProcess
 * reasonCode  insert OblShallPopulateShallDisplayProcess
-* reasonReference 
 
 * participant[admitter]  insert OblShallPopulateShallDisplayProcess
 * participant[discharger]  insert OblShallPopulateShallDisplayProcess
 * participant[referrer] insert OblShallPopulateShallDisplayProcess
 
-* diagnosis
 * diagnosis.condition insert OblShallPopulateShallDisplayProcess
 
-* hospitalization
-  * admitSource
-  * dischargeDisposition
-  * destination 
 
-* location
-  * location
-  * period 
 
-* serviceProvider 
