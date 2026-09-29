@@ -38,7 +38,6 @@ Description: """This profile constrains the CarePlan resource for the purpose of
 * goal only Reference(GoalEuHdr)
 * goal ^requirements = "EHDSCarePlan.goal"
 
-// Add slices for patient and treatment goal ?
 
 // ---------- Activities ----------
 * activity 0..*

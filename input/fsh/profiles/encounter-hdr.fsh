@@ -30,9 +30,9 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
   * ^definition = "Allows to classify encounter using information about care provision regimen during an inpatient encounter."
   * ^requirements = "EHDSEncounter.type"
 * serviceType
-  * ^short = "Specific type of service." // voc binding needs to be descissed as it is only example
+  * ^short = "Specific type of service."
 * priority from AdmissionUrgencyHdrVS (preferred)
-  * ^short = "Encounter priority" // add voc binding
+  * ^short = "Encounter priority"
   * ^requirements = "EHDSEncounter.priority"
 * subject only Reference (PatientEuCore)
 * subject 1..
@@ -115,7 +115,6 @@ Description: "This profile defines how to represent Inpatient Encounter in HL7 F
   * dischargeDisposition ^requirements = "EHDSEncounter.dischargeDestination.type"
   * destination only Reference (OrganizationEuCore or LocationEuCore)
   * destination ^requirements = "EHDSEncounter.dischargeDestination.location[x]"
-  // add voc binding
 
 * location ^short = "Locations where the patient stayed"
 * location ^requirements = "EHDSEncounter.serviceLocation"

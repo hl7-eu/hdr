@@ -82,7 +82,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[diagnosticReport].resource only DiagnosticReportEuCore
 * entry[imagingStudy].resource only ImagingStudy
 * entry[immunization].resource only ImmunizationEuCore
-* entry[media].resource only Media // $Media-observation-uv-ips
+* entry[media].resource only Media
 * entry[medication].resource only MedicationEuCore
 * entry[medicationRequest].resource only MedicationRequestEuCore
 * entry[medicationStatement].resource only MedicationStatementEuCore
@@ -92,8 +92,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report fo
 * entry[practitionerRole].resource only PractitionerRoleEuCore
 * entry[procedure].resource only ProcedureEuCore
 * entry[organization].resource only OrganizationEuCore
-* entry[observation].resource only Observation // $Observation-results-uv-ips
-* entry[specimen].resource only Specimen // $Specimen-uv-ips
+* entry[observation].resource only Observation
+* entry[specimen].resource only Specimen
 * entry[flag].resource only FlagPatientEuCore
 * entry[documentReference].resource only DocumentReference
 * entry[location].resource only LocationEuCore

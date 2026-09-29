@@ -15,6 +15,8 @@ Decisions and conventions for this guide, read by the `fhir-ig-consistency` revi
 - **Accepted leftovers:** unused rulesets are kept; the LOINC copyright year in `LOINCCopyrightForVS` and the SNOMED-only copyright on `ConditionHdrVS` are kept.
 - **Examples:** the Novak Travel History observation is kept, and `#example` / `#inline` usage is not harmonised.
 - **Dependencies:** `hl7.terminology.r4` is not pinned; the R5 and early-version dependencies are accepted.
+- **`knownIssues.md`:** no further additions (R5 model dependency, R5 cross-version extensions, `bdl-hdr-2` false positive, unrevised obligation areas, resource types without an obligation profile).
+- **Page markup:** the `<head>/<title>` elements in the mapping page fragments and the empty `<a>` / `<p>` elements are kept.
 
 ## Conventions
 

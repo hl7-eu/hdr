@@ -11,21 +11,12 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * . ^definition = "Hospital Discharge Report composition. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 * extension contains $event-basedOn named basedOn 0..*
 * extension[basedOn].valueReference only Reference ( Resource or ServiceRequest )
-/* * extension contains DocumentPresentedForm named presentedForm 0..*
-* extension[presentedForm] ^short = "Presented form"
-* extension[presentedForm].valueAttachment
-  * contentType
-    * ^example[0].label = "pdf"
-    * ^example[0].valueCode  = $mime#application/pdf
-  * data ^short = "B64 in-line data"
-  * url ^short = "URL of the document" */
 * extension contains $composition.version-r5  named version 0..1
 * extension[version] ^short = "Business version"
 * extension contains $information-recipient named informationRecipient 0..*
 * extension[informationRecipient].valueReference only Reference( PractitionerRoleEuCore or PractitionerEuCore or DeviceEuHdr or PatientEuCore or RelatedPerson or  OrganizationEuCore)
 * identifier ^short = "HDR business identifier"
 * status ^short = "HDR status"
-// * type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * type ^short = "Kind of composition (\"Hospital Discharge Report\")"
 * type ^definition = "Specifies that this composition refer to a Hospital Discharge Report"
 * type = $loinc#34105-7 // "Hospital Discharge summary"
@@ -63,7 +54,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 * section.extension[section-note] ^definition = "Additional notes that apply to the section (but not to specific resource)."
 * section.title 1..1
 * section.code 1..1
-// * section.code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * section.text only Narrative
 
 // -------------------------------------
@@ -184,7 +174,7 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     All problems and diagnoses that affect care during the inpatient case or are important to be recorded to ensure continuity of care. The diagnostic summary contains a concise\, well specified and codeable summary of problems as they were recognised at the end of hospitalisation\, after all examinations. Additional detail on a problem may be provided in the patient history section or in the synthesis section.,
     $loinc#11535-2 )
   * entry 0..*
-  * entry only Reference( ConditionEuCore ) // check if this is too restrictive
+  * entry only Reference( ConditionEuCore )
 
 // ===================================
 // courseOfEncounter.procedures
@@ -196,10 +186,8 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Significant procedures performed during the stay,
     Significant surgical and non-surgical procedures performed during hospitalisation which are significant for continuity of care\, for example surgery and other instrumental interventions such as endoscopic or intravascular procedures\, chemotherapy\, radiotherapy\, purification methods such as dialysis or hemoperfusion\, circulation support methods such as counterpulsation\, and the administration of blood derivatives. Purely diagnostic procedures such as MRI or CT are not reported here.,
     $loinc#10185-7 )
-  // $sct#721981007)
   * entry 0..
   * entry only Reference(ProcedureEuCore)
-//   * section ..0
 
 // -------------------------------------
 // Medical Devices Section 0 .. 1
@@ -213,15 +201,13 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     The patient history of medical device use\, describing implanted and external medical devices and equipment on which the health status of the patient depends and of which health professionals need to be aware\, for example cardiac pacemakers\, implantable defibrillators\, prostheses and ferromagnetic bone implants. Devices implanted\, explanted or discontinued during the current hospital stay are reported in the Medical devices and implants section.,
     $loinc#46264-8 )
   * entry 0..
-  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore or DocumentReference) // DeviceUseStatementEuHdr ro be revised
+  * entry only Reference(DeviceUseStatementEuHdr or ProcedureEuCore or DocumentReference)
   * insert SectionEntrySliceComRules(Medical device entry, Resources describing the patient history of medical device use.)
   * insert SectionEntrySliceDefRules (deviceStatement, 0..*,
     Patient history of medical device use,
     It describes the patient history of medical device use.,
     DeviceUseStatementEuHdr)
 
-
-//   * section ..0
 
 // === History of Procedures Section ===
 // Now uses the common macro like every other section.
@@ -243,7 +229,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 // -------------------------------------
 // Pharmacotherapy Section 0 .. 1
-// TO BE REVISED
 // -------------------------------------
 * section contains sectionPharmacotherapy 0..1
 * section[sectionPharmacotherapy]
@@ -288,7 +273,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     $loinc#30954-2 )
   * entry only Reference(Observation or DiagnosticReport or DocumentReference)
   * insert SectionEntrySliceComRules(Significant medical test results, Significant medical test results slice)
-  // Review the slice definiton
   * insert SectionEntrySliceDefRules (results-medicalTestResult, 0.. ,
       Medical test results,
        Results collected on the patient or produced on in-vitro biologic specimens.,
@@ -297,7 +281,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
       Diagnostic report,
        DiagnosticReport resource to represent diagnostic test and procedure reports in the Hospital Discharge Report.,
        DiagnosticReportEuCore)
-  // * entry only Reference(Observation or $Observation-resultslab-eu-lab or ) //  or ObservationResultsRadiologyUvIps or MedicalTestResultEuCore)
 
 // -------------------------------------
 // Synthesis Section 0 .. 1
@@ -311,7 +294,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     $loinc#67781-5 )
 
 // -------------------------------------
-// === review the CarePlan profile
 // Plan of Care Section
 // -------------------------------------
 * section contains sectionPlanOfCare 0..1
@@ -322,26 +304,10 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     The plan of care after discharge\, containing a narrative description of the expectations for care including proposals\, goals and order requests for monitoring\, tracking or improving the condition of the patient. Several care plans may be reported\, each linked to the conditions whose management or mitigation it addresses. Other recommendations and advice given at discharge are also reported here\, for example to consider hip replacement\, to reduce the number of cigarettes or to stop smoking\, or to increase physical exercise. Medication recommended for the period after discharge is reported in the Hospital discharge medications section.,
     $loinc#18776-5 )
   * text ^requirements = "EHDSDischargeReport.body.carePlan.generatedNarrative"
-  // NOTE: in xt-EHR 0.2.1 the path is body.dischargeDetails.carePlan — verify
-  //       which model version this profile aligns with.
-  * entry only Reference( CarePlanEuHdr or DocumentReference) // Check if CarePlanEuHdr is needed or if we should align with EPS
-
-// -------------------------------------
-// Discharge instructions Section 0 .. 1
-// -------------------------------------
-/* REMOVED FROM THE MODEL
-* section contains sectionDischargeInstructions 0..1
-* section[sectionDischargeInstructions]
-  * insert SectionComRulesWithTitle (
-    Hospital Discharge Instructions,
-    Hospital discharge instructions,
-    Hospital Discharge Instructions,
-    $loinc#8653-8 )   //  Hospital Discharge instructions
-*/
+  * entry only Reference( CarePlanEuHdr or DocumentReference)
 
 // -------------------------------------
 // Discharge Medications Section 0 .. 1
-// mapped from medicationSummary ?
 // -------------------------------------
 * section contains sectionDischargeMedications 0..1
 * section[sectionDischargeMedications]
@@ -351,7 +317,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Summary information on the medication recommended for the period after discharge\, defining the medicinal products that the patient is intended to take or to stop and indicating for each whether it is unchanged\, changed\, newly started or discontinued\, together with the reason for a change. Drug treatment that was administered during the stay and already discontinued before discharge is reported in the Pharmacotherapy section.,
     $loinc#75311-1 )
   * text ^requirements = "EHDSDischargeReport.body.medicationSummary.generatedNarrative; EHDSDischargeReport.body.medicationSummary.note"
-  // NOTE: in xt-EHR 0.2.1 the path is body.dischargeDetails.medicationSummary — verify.
   * entry 0..
   * entry only Reference(MedicationRequestEuCore or MedicationDispenseEuHdr or MedicationStatementEuCore)
 
@@ -424,9 +389,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
 
 // -------------------------------------
 // Discharge Details Section
-// eHN flags A.2.7 as Core and xt-EHR has 1..1; the block comment previously
-// said "1 .. 1 R" while the rule said 0..1. Cardinality left UNCHANGED here —
-// see the open points below.
 // -------------------------------------
 * section contains sectionDischargeDetails 0..1
 * section[sectionDischargeDetails]
@@ -449,19 +411,6 @@ Description: "Clinical document used to represent a Hospital Discharge Report (H
     Documents and attachments associated with this report\, listed as a library of source material referenced from the report\, for example scanned source documents\, images\, or reports in PDF form. Implementations may define what kind of attachments are allowed and may ignore unexpected attachments for security reasons.,
     $loinc#77599-9 )
   * entry only Reference(DocumentReference or Binary) // Add Bundle ?
-
-
-
-
-// -------------------------------------
-/*
-* section contains sectionEncounters 0..1
-* section[sectionEncounters]
-  * insert SectionComRulesWithTitle (
-      Encounters sections,
-      Healthcare encounters pertinent to the patient,
-      This section lists and describes any healthcare encounters pertinent to the patient's current health status or historical health history.,
-      $loinc#46240-8 ) */
 
 
 /// ========= INVARIANTS =========
