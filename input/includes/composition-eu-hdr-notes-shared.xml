@@ -24,8 +24,8 @@
         opted for a <strong>flexible approach</strong> rather than imposing a rigid format. </p>
     <p> The <strong>"flat structure"</strong> documented in the guide should be understood as a sort
         of <strong>"section library"</strong> that can be reused in both <strong>flat and nested
-        structures</strong>. This approach allows implementers to organize the report according to
-        local or institutional needs while maintaining a standardized content model. </p>
+        structures</strong>. This approach allows implementers to organise the report according to
+        local or institutional needs while maintaining a standardised content model. </p>
     <p>The flat structure is nevertheless considered best practice. Where sub-sections are needed,
         see this <a href="Bundle-DischargeBundle-Novak-Petr-Subsections.html">example</a> of how
         they can be used.</p>

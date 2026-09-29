@@ -124,7 +124,6 @@ Usage: #inline
 // 
 // section
 //
-// * section[sectionPastIllnessHx].title = "Storia di malattia passata"
 * section[+].title = "Storia di malattia passata"
 * section[=].code = $loinc#11348-0 "History of Past illness note"
 * section[=].text.status = #additional
@@ -215,7 +214,7 @@ Usage: #inline
 
 Instance: encounter-ftgm-example
 InstanceOf: EncounterEuHdr
-Title: "Encounter: Hospital Admission and Discharge"
+Title: "Encounter: Hospital admission and discharge, Paolo Marcheschi"
 Description: "A sample Encounter resource for a hospital admission and discharge."
 Usage: #inline
 * id = "e4d7ab9d-2b9c-42f8-95ef-08ff5e260a8e"

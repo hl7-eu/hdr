@@ -16,7 +16,7 @@ This page also describes the actors used for specifying the obligations.
 
 ### Actors
 
-This version of this guide adopts the actors specified by the Xt-EHR joint action:
+This version of this guide adopts the actors specified by the Xt-EHR Joint Action:
 
 * the [Consumer](https://www.xt-ehr.eu/fhir/models/1.0.0/ActorDefinition-actor-consumer.html): a system that receives electronic health data originating from another system and processes or displays that data. In this role, the system is responsible for ingesting and validating the received data and for preserving the meaning, structure, and associated metadata of the information in accordance with the applicable Consumer obligations, ensuring correct interpretation and presentation to end users or other systems.
 
@@ -47,7 +47,7 @@ This version of this guide adopts the actors specified by the Xt-EHR joint actio
       <tr><td><a href="StructureDefinition-medicationStatement-obl-eu-hdr.html">MedicationStatement: obligations</a></td><td>This profile defines obligations for the MedicationStatement resource for the purpose of this guide, adapted from the MPD work.</td></tr>
       <tr><td><a href="StructureDefinition-laboratoryObservation-obl-eu-hdr.html">Observation (laboratory): obligations</a></td><td>This profile defines obligations for laboratory observations in the scope of this guide.</td></tr>
       <tr><td><a href="StructureDefinition-observation-obl-eu-hdr.html">Observation: obligations</a></td><td>This profile defines obligations for observations in the scope of this guide.</td></tr>
-      <tr><td><a href="StructureDefinition-organization-obl-eu-hdr.html">Organization: obligations</a></td><td>This profile defines obligations for an organization in FHIR for the purpose of this guide.</td></tr>
+      <tr><td><a href="StructureDefinition-organization-obl-eu-hdr.html">Organization: obligations</a></td><td>This profile defines obligations for an organisation in FHIR for the purpose of this guide.</td></tr>
       <tr><td><a href="StructureDefinition-patient-obl-eu-hdr.html">Patient: obligations</a></td><td>This profile defines obligations for a human Patient in FHIR for the purpose of this guide.</td></tr>
       <tr><td><a href="StructureDefinition-practitioner-obl-eu-hdr.html">Practitioner: obligations</a></td><td>This profile defines obligations for a health professional represented as a Practitioner in FHIR for the purpose of this guide.</td></tr>
       <tr><td><a href="StructureDefinition-practitionerRole-obl-eu-hdr.html">PractitionerRole: obligations</a></td><td>This profile defines obligations for a health professional role in FHIR for the purpose of this guide.</td></tr>

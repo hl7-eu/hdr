@@ -4,7 +4,7 @@
 
 To address the [**Hospital Discharge Report Structure Challenge**](challenges.html), we have opted for a **flexible approach** rather than imposing a rigid format.
 
-The **"flat structure"** documented in the guide should be understood as a **"section library"** that can be reused in both **flat and nested structures**. This approach allows implementers to organize the report according to local or institutional needs while maintaining a standardized content model.
+The **"flat structure"** documented in the guide should be understood as a **"section library"** that can be reused in both **flat and nested structures**. This approach allows implementers to organise the report according to local or institutional needs while maintaining a standardised content model.
 
 The flat structure is nevertheless considered best practice. Where sub-sections are needed, see this [example](Bundle-DischargeBundle-Novak-Petr-Subsections.html) of how they can be used.
 

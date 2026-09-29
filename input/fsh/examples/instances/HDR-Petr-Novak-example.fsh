@@ -132,19 +132,13 @@ Usage: #inline
 * type.coding[0].system = $loinc
 * type.coding[0].code = #34105-7
 * type.coding[0].display = "propouštěcí zpráva z nemocnice" //"Hospital Discharge summary"
-//* category[document-category] = $loinc#11503-0
 * category[+] = $loinc#LP72467-1 "Discharge summary note"
 * title = "Propouštěcí zpráva pacienta Novák Petr"
 * date = "2025-03-10T14:30:00+01:00"
-//* author[+] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a)
 * author[+] = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
-//* author[+] = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169)         // document authored by practitioner role
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)            // document subject is patient
 //Důvod přijetí je obsažen v Encouteru ReasonReference
 * encounter = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-b555306bf620)
-// * extension[presentedForm].valueAttachment.type  = http://hl7.org/fhir/related-artifact-type#documentation
-// * extension[presentedForm].valueAttachment.label = "Presented form"
-//* extension[presentedForm].valueAttachment = cz-pdfhdr-example
 * confidentiality = #N
 
 * custodian = Reference(urn:uuid:ace081ba-e0a8-4b89-a4a7-c5b7cd3c8169) // Example Organization as custodian
@@ -215,7 +209,6 @@ Usage: #inline
     </ul>
   </div>"""
 * section[sectionSignificantResults].text.status = #additional
-//* section[sectionSignificantResults].entry[0] = Reference(urn:uuid:e15aeeaf-e288-404c-9704-9c8f0b2d4e3a) // Corrected Reference to include the resource type
 * section[sectionSignificantResults].entry[0] = Reference(urn:uuid:10f5c49e-086d-4016-8dd1-10000000001b) // Corrected Reference to include the resource type
 
 // Sekce Implantáty a zdravotní pomůcky
@@ -299,10 +292,6 @@ Usage: #inline
 
 * section[sectionDischargeDetails].section[+].title = "Antropometrická data"
 * section[sectionDischargeDetails].section[=].code = $sctCZ#248326004 "Body measurements"
-// * section[sectionDischargeDetails].section[=].code.coding[0].system = $sct
-// * section[sectionDischargeDetails].section[=].code.coding[0].version = $sctCZversion
-// * section[sectionDischargeDetails].section[=].code.coding[0].code = #248326004
-// * section[sectionDischargeDetails].section[=].code.coding[0].display = "Body measurements"
 * section[sectionDischargeDetails].section[=].text.status = #additional
 * section[sectionDischargeDetails].section[=].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
@@ -383,8 +372,6 @@ Usage: #inline
 
 //Add section PatientHx
 * section[sectionPatientHx].title = "Osobní anamnéza"
-// * section[sectionPatientHx].code.coding[0].system = "http://loinc.org"
-// * section[sectionPatientHx].code.coding[0].code = #35090-0 // Patient history note
 * section[sectionPatientHx].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
     <p>Osobní anamnéza: pacient prodělal v roce 2015 apendektomii, v roce 2018 byl léčen pro hypertenzi. V roce 2020 prodělal chřipku bez komplikací. V anamnéze je také hypotyreóza, léčená substituční terapií (Euthyrox 75 µg denně).</p>
@@ -446,8 +433,6 @@ Usage: #inline
 * section[sectionPatientHx].section[=].author[0] = Reference(urn:uuid:a81e74c9-fe94-4eb1-9233-4c8f0b2d4e3a) // Example reference to a travel history observation
 
 
-//* section[sectionHospitalCourse].title = "Průběh hospitalizace - klinické shrnutí"
-
 //Stav při přijetí
 * section[sectionAdmissionEvaluation].title = "Stav při přijetí"
 * section[sectionAdmissionEvaluation].code.coding[0].system = $loinc
@@ -499,9 +484,6 @@ Usage: #inline
 
 * section[sectionAdmissionEvaluation].section[+].title = "Antropometrická data"
 * section[sectionAdmissionEvaluation].section[=].code = $sctCZ#248326004 "Body measurements"
-// * section[sectionAdmissionEvaluation].section[=].code.coding[0].system = $sctCZ
-// * section[sectionAdmissionEvaluation].section[=].code.coding[0].code = #248326004
-// * section[sectionAdmissionEvaluation].section[=].code.coding[0].display = "Body measurements"
 * section[sectionAdmissionEvaluation].section[=].text.status = #additional
 * section[sectionAdmissionEvaluation].section[=].text.div = """
   <div xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
@@ -784,9 +766,6 @@ Description: "Example of a condition (inguinal hernia, ICD-10 K40.9) with detail
 * clinicalStatus = $condition-clinical#active
 * verificationStatus = $condition-ver-status#confirmed
 * severity = $sctCZ#24484000 "těžký"
-// * severity.coding[0].system = $sctCZ
-// * severity.coding[0].code = #24484000
-// * severity.coding[0].display = "Severe"
 // Condition code
 * code.coding[0].system = $icd10
 * code.coding[0].code = #K40.9
@@ -807,9 +786,6 @@ Description: "Example of a condition (inguinal hernia, ICD-10 K40.9) with detail
 * onsetDateTime = "2023-10-01T10:00:00Z"
 //condition stage
 * stage.summary = $sctCZ#255604002 "mírný"
-// * stage[+].summary.coding[0].system = $sctCZ
-// * stage[=].summary.coding[0].code = #255604002
-// * stage[=].summary.coding[0].display = "Mild"
 
 
 //---------------------------------------------
@@ -840,7 +816,6 @@ Description: "Role of the referring practitioner at the internal medicine outpat
 * id = "3f85726c-ad2f-441b-89ce-100000000029"
 * practitioner = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000032) "MUDr. Jiří Zdvořilý"
 * organization = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000033) "Ambulance interního lékařství, MUDr. Jiří Zdvořilý"
-//* code = $cz-nrzp_povolani#L00 "Lékař"
 * specialty = $sctCZ#419192003 "interní medicína" //"Internal medicine"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\">Ambulance interního lékařství, MUDr. Jiří Zdvořilý</div>"
 * text.status = #generated
@@ -924,7 +899,6 @@ Description: "Czech HDR example of a care plan after inguinal hernia repair"
 * period.start = "2025-03-10T08:00:00+01:00"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 //další podrobnosti plánu, cíle
-//* goal = Reference(urn:uuid:620b1120-cece-44b1-89f5-20413054eb1d)
 // Activity detail
 * activity[+].detail.kind = #ServiceRequest
 * activity[=].detail.description = "Pooperační sledování, převazy, kontrola rány"
@@ -980,7 +954,6 @@ Description: "HDR example of a medication statement: Euthyrox"
 //indikace
 * reasonCode.coding[0].system = $icd10
 * reasonCode.coding[0].code = #E03.9
-//* reasonCode.coding[0].display = "Hypotyreóza NS"
 * reasonCode.text = "Hypotyreóza"
 //dávkování
 * dosage[0].text = "1 tableta denně"
@@ -991,9 +964,6 @@ Description: "HDR example of a medication statement: Euthyrox"
 * dosage[0].doseAndRate.doseQuantity.unit = "{tablet}"
 //cesta podání
 * dosage.route = $sctCZ#26643006 "perorální podání" // "Oral route"
-// * dosage[0].route.coding[0].system = $sctCZ
-// * dosage[0].route.coding[0].code = #26643006
-// * dosage[0].route.coding[0].display = "Oral route"
 // období podávání
 * effectivePeriod.start = "2025-03-01T10:15:00+01:00"
 * effectivePeriod.end = "2025-03-10T09:30:00+01:00"
@@ -1042,11 +1012,6 @@ Description: "Euthyrox tablets"
 * ingredient[0].strength.numerator.code = #"/ug"
 * ingredient[0].strength.denominator.value = 1
 * ingredient[0].strength.denominator.unit = "tableta"
-//* ingredient[0].strength.denominator.system = $ucum
-//* ingredient[0].strength.denominator.code = #"{tbl}"
-//* ingredient[0].strength.denominator.unit = "tableta"
-// * identifier[0].system = $dlp_lec_pripravky
-// * identifier[0].value = "0243131"
 
 Instance: ExampleBMI
 InstanceOf: $vitalsigns
@@ -1213,14 +1178,10 @@ Description: "Czech HDR example of a medication statement: Paracetamol"
 * id = "f34114fc-138f-4bd8-8e1a-804d14ec9986"
 * status = #active
 //stav neni adekvatni status ve slovniku, navic treba pouzit kod. system snomed
-//* statusReason.coding[0].system = $cz-medicationStatement-reason-status
-//* statusReason.coding[0].code = #continued
-//* statusReason.coding[0].display = "Pokračuje"
 * statusReason.text = "Pokračuje"
 //indikace
 * reasonCode.coding[0].system = $icd10
 * reasonCode.coding[0].code = #E03.9
-//* reasonCode.coding[0].display = "Hypotyreóza NS"
 * reasonCode.text = "Hypotyreóza"
 //dávkování
 * dosage[0].text = "Dle potřeby, max 4 tablety denně"
@@ -1229,9 +1190,6 @@ Description: "Czech HDR example of a medication statement: Paracetamol"
 * dosage[0].doseAndRate.doseQuantity.unit = "mg"
 //cesta podání
 * dosage.route = $sctCZ#26643006 "perorální podání" // "Oral route"
-// * dosage[0].route.coding[0].system = $sctCZ
-// * dosage[0].route.coding[0].code = #26643006
-// * dosage[0].route.coding[0].display = "Oral route"
 // období podávání
 * effectivePeriod.start = "2025-03-01T10:15:00+01:00"
 * effectivePeriod.end = "2025-03-10T09:30:00+01:00"
@@ -1282,12 +1240,6 @@ Description: "Paracetamol tablets"
 * ingredient[0].strength.numerator.code = #"/mg"
 * ingredient[0].strength.denominator.value = 1
 * ingredient[0].strength.denominator.unit = "tableta"
-//* ingredient[0].strength.denominator.system = $ucum
-//* ingredient[0].strength.denominator.code = #"{tbl}"
-//* ingredient[0].strength.denominator.unit = "tableta"
-// * identifier[0].system = $dlp_lec_pripravky
-// * identifier[0].value = "0243131"
-
 
 
 Instance: Medication-Ibalgin400
@@ -1325,9 +1277,6 @@ Description: "Ibalgin 400 tablets"
 * ingredient[0].strength.numerator.code = #"/mg"
 * ingredient[0].strength.denominator.value = 1
 * ingredient[0].strength.denominator.unit = "tableta"
-//* ingredient[0].strength.denominator.system = $ucum
-//* ingredient[0].strength.denominator.code = #"{tbl}"
-//* ingredient[0].strength.denominator.unit = "tableta"
 * identifier[0].system = "https://sukl.cz/terminology/CodeSystem/dlp-lecivepripravky"
 * identifier[0].value = "0207893"
 
@@ -1339,13 +1288,10 @@ Description: "Dispense of the medicinal product Ibalgin 400 mg to patient Novák
 * id = "b0001bf8-976a-4d7d-b192-8c8f0b2d4e3a"
 * language = #cs
 * status = #completed
-//* extension[recorded].valueDateTime = "2024-03-07T10:00:00Z"
 * medicationReference = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000002e)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * quantity.value = 15
 * quantity.unit = "tableta"
-//* quantity.system = $ucum
-//* quantity.code = #"{tbl}"
 * whenHandedOver = "2024-03-07"
 
 
@@ -1360,9 +1306,6 @@ Description: "HDR example of a procedure: repair of inguinal hernia"
 * id = "ffb1a62f-9050-4e33-af4b-4cdb8203c9e5"
 * status = #completed
 * code = $sctCZ#44558001 "operace tříselné kýly"
-// * code.coding[0].system = $sctCZ
-// * code.coding[0].code = #44558001
-// * code.coding[0].display = "Repair of inguinal hernia"
 * code.text = "Plastika tříselné kýly"
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * performedDateTime = "2025-03-02"
@@ -1395,7 +1338,6 @@ Description: "Example of a condition Iron deficiency anaemia secondary to blood 
 * category[2] = $sctCZ#25265005 "Did not receive therapy or drug for"
 
 
-
 //---------------------------------------------------------------------
 Instance: MedicationStatement-Ibalgin400-Novak
 InstanceOf: MedicationStatementEuCore
@@ -1408,7 +1350,6 @@ Description: "HDR example of a medication statement: Ibalgin 400"
 //indikace
 * reasonCode.coding[0].system = $icd10
 * reasonCode.coding[0].code = #E03.9
-//* reasonCode.coding[0].display = "Hypotyreóza NS"
 * reasonCode.text = "Hypotyreóza"
 //dávkování
 * dosage[0].text = "Dle potřeby, při bolesti max 3 tablety denně"
@@ -1417,9 +1358,6 @@ Description: "HDR example of a medication statement: Ibalgin 400"
 * dosage[0].doseAndRate.doseQuantity.unit = "mg"
 //cesta podání
 * dosage.route = $sctCZ#26643006 "perorální podání" // "Oral route"
-// * dosage[0].route.coding[0].system = $sctCZ
-// * dosage[0].route.coding[0].code = #26643006
-// * dosage[0].route.coding[0].display = "Oral route"
 // období podávání
 * effectivePeriod.start = "2025-03-01T10:15:00+01:00"
 * effectivePeriod.end = "2025-03-10T09:30:00+01:00"
@@ -1444,13 +1382,10 @@ Description: "Dispense of the medicinal product Euthyrox to patient Novák"
 * id = "133cea11-09c6-4147-80af-6c8f0b2d4e3a"
 * language = #cs
 * status = #completed
-//* extension[recorded].valueDateTime = "2024-03-05T10:00:00Z"
 * medicationReference = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000002c)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * quantity.value = 30
 * quantity.unit = "tableta"
-//* quantity.system = $ucum
-//* quantity.code = #"{tbl}"
 * whenHandedOver = "2024-03-05"
 
 
@@ -1462,13 +1397,10 @@ Description: "Dispense of the medicinal product Paracetamol to patient Novák"
 * id = "65c49e6d-0951-4e83-8e2c-7c8f0b2d4e3a"
 * language = #cs
 * status = #completed
-//* extension[recorded].valueDateTime = "2024-03-06T10:00:00Z"
 * medicationReference = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-10000000002d)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
 * quantity.value = 20
 * quantity.unit = "tableta"
-//* quantity.system = $ucum
-//* quantity.code = #"{tbl}"
 * whenHandedOver = "2024-03-06"
 
 Instance: Observation-Participation-in-society
@@ -1483,8 +1415,6 @@ Description: "The patient is active in community activities and volunteering."
 * effectiveDateTime = "2024-03-28"
 * performer = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)
-//* hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000023)
-//* hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000024)
 * hasMember = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000025)
 
 Instance: Observation-Social-network

@@ -490,7 +490,7 @@
             <td>related-to</td>
             <td>Organization</td>
             <td>extension:qualification</td>
-            <td>MedicalTestResultEuCore.performer may reference the laboratory Organization, or a PractitionerRole whose organization is the laboratory. Organization.qualification is preadopted from R5.</td>
+            <td>MedicalTestResultEuCore.performer may reference the laboratory Organization, or a PractitionerRole whose organisation is the laboratory. Organization.qualification is preadopted from R5.</td>
           </tr>
           <tr class="highlight-yellow">
             <td>previousResults</td>

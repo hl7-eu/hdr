@@ -30,7 +30,7 @@
 
 ### Scope
 
-This Implementation Guide specifies a set of rules to be applied to HL7 FHIR to define how to represent a **Hospital Discharge Report** in the **European** context, based on the Xt-EHR EHDS logical models, which refine the European eHealth Network (eHN) Guidelines (see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en)).
+This Implementation Guide specifies a set of rules to be applied to HL7 FHIR to define how to represent a **Hospital Discharge Report** in the **European** context, based on the Xt-EHR EHDS logical models, which refine the eHealth Network Guideline on Hospital Discharge Report (eHN HDR Guidelines; see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en)).
 
 Its main goal is to define the content components and preferred structure for composing a Hospital Discharge Report. 
 
@@ -39,9 +39,9 @@ This includes both jurisdictional and cross-border scenarios.
 This guide doesn't describe how this report is exchanged.
 
 ### Purpose
-The goal of this Implementation Guide is to define a common European specification for the Hospital Discharge Report, facilitating harmonization across national initiatives and laying the groundwork for the European EHR eXchange Format (EEHRxF), by specifying how to exchange personal electronic health data in the priority category of 'discharge reports' listed in Article 14 of the EHDS Regulation.
+The goal of this Implementation Guide is to define a common European specification for the Hospital Discharge Report, facilitating harmonisation across national initiatives and laying the groundwork for the European EHR eXchange Format (EEHRxF), by specifying how to exchange personal electronic health data in the priority category of 'discharge reports' listed in Article 14 of the EHDS Regulation.
 
-This project is promoted by HL7 Europe and developed in collaboration with several other European and national organizations and projects.
+This project is promoted by HL7 Europe and developed in collaboration with several other European and national organisations and projects.
 
 The aspiration is for this guide to be used as a basis for European national guides, the European EEHRxF and, consequently, by MyHealth@EU for EU cross-border services.
 
