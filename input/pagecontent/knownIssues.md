@@ -1,7 +1,7 @@
 
 ### Obligations
 
-Obligations are only informative for this version of the guide. Further analysis is needed for consolidating them.
+Obligations are only informative for this version of the guide. They will be consolidated in a future version based on implementer feedback.
 
 ### Dependency on a pre-release IHE package
 

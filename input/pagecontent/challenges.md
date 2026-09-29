@@ -1,4 +1,4 @@
-### HDR Structure
+### Hospital Discharge Report structure
 
 
 One of the primary challenges in implementing a standardized Hospital Discharge Report (HDR) across Europe - and even within the same country - is the variation in how different jurisdictions and healthcare settings organize discharge information. Although there is a common logical structure typically followed – consisting of **admission/anamnestic information**, **hospital course data**, and **discharge information** – the actual organization of HDRs can vary significantly in terms of how information is grouped and how sections are nested.
@@ -18,4 +18,4 @@ This Implementation Guide therefore focuses on the **Hospital Discharge Report**
 
 This scope choice is intended to support consistent implementation and testing, while remaining aligned with the EHDS priority domain. It does not imply that other types of discharge-related reports are outside the EHDS Regulation or are less relevant for continuity of care. Rather, it recognizes that additional specialized guides may be needed in the future to address other kinds of "discharge report", such as emergency department discharge reports or ambulatory visit reports.
 
-Common building blocks that can support the generation of discharge reports more generally are specified in the Base and Core Implementation Guides. These reusable elements provide a shared foundation for future specialized discharge report guides, including those covering report types beyond the hospital discharge report. They also provide an initial response to the expectation of specifying a generic "discharge report" framework.
+Common building blocks that can support the generation of discharge reports more generally are specified in the HL7 Europe Base and Core FHIR Implementation Guide. These reusable elements provide a shared foundation for future specialized discharge report guides, including those covering report types beyond the hospital discharge report. They also provide an initial response to the expectation of specifying a generic "discharge report" framework.

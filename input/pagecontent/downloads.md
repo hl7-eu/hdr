@@ -8,7 +8,7 @@ The following file contains all the value sets, profiles, extensions, list of pa
 
 - [NPM Package](package.tgz)
 
-There are also specific packages for the R4 and R4B FHIR specifications:
+Version-specific packages are also available:
 
 #### R4-specific NPM Package and Definitions
 

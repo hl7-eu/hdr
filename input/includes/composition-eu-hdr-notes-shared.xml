@@ -26,9 +26,9 @@
         of <strong>"section library"</strong> that can be reused in both <strong>flat and nested
         structures</strong>. This approach allows implementers to organize the report according to
         local or institutional needs while maintaining a standardized content model. </p>
-    <p>However the flat structure is considered to be best-practice, if sub-sections are needed here
-        is an <a href="Bundle-DischargeBundle-Novak-Petr-Subsections.html">example</a> how
-        sub-sections can be used.</p>
+    <p>The flat structure is nevertheless considered best practice. Where sub-sections are needed,
+        see this <a href="Bundle-DischargeBundle-Novak-Petr-Subsections.html">example</a> of how
+        they can be used.</p>
 
     <p>In practice:</p>
     <ol>
@@ -61,8 +61,7 @@
         start of the referenced encounter. </p>
     <p>
         <code>Condition.category</code> may also provide contextual information about the role of
-        the condition; however, a specific category or coding convention should be defined for this
-        purpose. </p>
+        the condition; however, no specific category is defined by this guide for this purpose. </p>
 
     <p></p>
 
@@ -74,10 +73,13 @@
         occurred before, during, or after the admission, and to establish the chronological order of
         observations within the encounter. This may be determined from <code>
         Observation.effective[x]</code>,compared with the period of the encounter referenced by <code>
-        Composition.encounter</code> and/or from the encounter referenced by the observation. An
-        explicit information can be also recorded in the observation.category. For this purpose a
-        value set containing relative timing SNOMED CT qualifiers can be used, e.g.: - 278307001 |
-        On admission (qualifier value) | - 2311000175105 | At discharge (qualifier value) | </p>
+        Composition.encounter</code> and/or from the encounter referenced by the observation.
+        This information can also be recorded explicitly in <code>Observation.category</code>, for
+        example using SNOMED CT relative-timing qualifiers such as:</p>
+    <ul>
+        <li>278307001 | On admission (qualifier value) |</li>
+        <li>2311000175105 | At discharge (qualifier value) |</li>
+    </ul>
 
     <p></p>
 

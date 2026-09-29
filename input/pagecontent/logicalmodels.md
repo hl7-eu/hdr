@@ -2,7 +2,7 @@
 
 The [**Xt-EHR Joint Action**](https://www.xt-ehr.eu/) has developed a set of logical data models, also referred to as information models, that are intended to support the future European Health Data Space (EHDS) Implementing Acts.
 
-These models represent evolving and refined interpretations of the data sets described in the [**eHealth Network (eHN) Guidelines**](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/eu-cooperation/ehealth-network_en#ehealth-network-guidelines). This Implementation Guide aims to align the Hospital Discharge Report specification with the relevant EHDS logical models and to provide HL7 FHIR profiles that realise the requirements identified in those models.
+These models represent refined interpretations of the data sets described in the [**eHealth Network (eHN) Guidelines**](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/eu-cooperation/ehealth-network_en#ehealth-network-guidelines). This Implementation Guide aims to align the Hospital Discharge Report specification with the relevant EHDS logical models and to provide HL7 FHIR profiles that realise the requirements identified in those models.
 
 The logical models listed below are those used by this guide, starting from the Xt-EHR `EHDSDischargeReport` model and the models directly referred to by it. Generic base models, such as `EHDSDocument` and `EHDSDataSet`, are not listed here.
 

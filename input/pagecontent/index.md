@@ -14,7 +14,7 @@
   /* margin-top: -0.75rem;  uncomment/tweak if you want tighter vertical alignment */
 ">
   <div style="margin-bottom: 1em;">
-    <img src="xtehr-logo.png" alt="XTEHR Logo" style="max-width: 100%; height: 40px;" />
+    <img src="xtehr-logo.png" alt="Xt-EHR logo" style="max-width: 100%; height: 40px;" />
   </div>
   <div style="text-align: left;">
     <strong>Acknowledgment</strong><br/>
@@ -49,7 +49,7 @@ This includes both jurisdictional and cross-border scenarios.
 This guide doesn't describe how this report is exchanged.
 
 ### Purpose
-The goal of this Implementation Guide is to define a European standard for the Hospital Discharge Report, facilitating harmonization across national initiatives and laying the groundwork for the European EHR eXchange Format (EEHRxF), by specifying how to exchange personal electronic health data in the priority category of 'discharge reports' listed in Article 14 of the EHDS Regulation.
+The goal of this Implementation Guide is to define a common European specification for the Hospital Discharge Report, facilitating harmonization across national initiatives and laying the groundwork for the European EHR eXchange Format (EEHRxF), by specifying how to exchange personal electronic health data in the priority category of 'discharge reports' listed in Article 14 of the EHDS Regulation.
 
 This project is promoted by HL7 Europe and developed in collaboration with several other European and national organizations and projects.
 
