@@ -7,7 +7,6 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 * insert SetFmmAndStatusRule ( 0, informative)
 
 // Header
-// * insert OblShallPopulateShallProcess no obligation on the entre reource
 * identifier insert OblShallPopulateShouldDisplayShallProcess
 * status insert OblShallPopulateShallDisplay
 * type insert OblShallPopulateOnly
@@ -32,7 +31,6 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
 
 // Presented form is part of the EHDS logical model, but the corresponding
 // Composition extension is not currently enabled in CompositionEuHdr.
-// * extension[presentedForm] insert OblShallPopulateShallProcess
 
 // Body
 * section insert OblShallPopulateShallProcess
@@ -113,9 +111,9 @@ Description: "This profile defines obligations for a Hospital Discharge Report (
   * entry[medicationStatement] insert OblShouldPopulateShallProcess
 
 * section[sectionSignificantResults] insert OblShouldPopulateShallProcess
-  * entry only Reference(ObservationEuHdrObligation or DiagnosticReport or DocumentReference)
+  * entry only Reference(ObservationEuHdrObligation or LaboratoryObservationEuHdrObligation or DiagnosticReport or DocumentReference)
   * entry insert OblShouldPopulateShallProcess
-  * entry[results-medicalTestResult] only Reference(ObservationEuHdrObligation)
+  * entry[results-medicalTestResult] only Reference(LaboratoryObservationEuHdrObligation)
   * entry[results-medicalTestResult] insert OblShouldPopulateShallProcess
   * entry[results-diagnosticReport] only Reference(DiagnosticReportEuCore)
   * entry[results-diagnosticReport] insert OblShouldPopulateShallProcess

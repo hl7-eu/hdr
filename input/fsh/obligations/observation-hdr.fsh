@@ -1,5 +1,5 @@
 Profile: ObservationEuHdrObligation
-Parent: MedicalTestResultEuCore
+Parent: Observation
 Id: observation-obl-eu-hdr
 Title: "Observation: obligations"
 Description: "This profile defines obligations for observations in the scope of this guide."

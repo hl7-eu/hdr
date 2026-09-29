@@ -10,7 +10,6 @@ Description:  """Hospital Discharge Report Encounter Class value set includes co
 * $v3-ActCode#ACUTE	    "inpatient acute"
 * $v3-ActCode#NONAC	    "inpatient non-acute"
 * $v3-ActCode#OBSENC	"observation encounter"
-//* $v3-ActCode#PRENC	    "pre-admission"  // should we have pre-admission if this is value set for hospital discharge report?
 * $v3-ActCode#SS	    "short stay"
 
 

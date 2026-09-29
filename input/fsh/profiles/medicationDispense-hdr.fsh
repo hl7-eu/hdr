@@ -10,7 +10,6 @@ Description: "This profile constrains the MedicationDispense resource for the pu
 
 * medication[x] only CodeableConcept or Reference(MedicationEuCore)
 
-// * medicationReference only Reference(MedicationEuCore)
 
 
 * identifier 
@@ -22,7 +21,7 @@ Description: "This profile constrains the MedicationDispense resource for the pu
 * performer.actor 1..1
 
 * authorizingPrescription only Reference(MedicationRequestEuCore)
-* quantity 1..1 // MS // dispensedQuantity 1
-* whenHandedOver 1..1 // MS // timeOfDispensation 1
+* quantity 1..1
+* whenHandedOver 1..1
 
 
