@@ -1131,7 +1131,7 @@ Description: "Example of a body height vital-sign observation"
 
 Instance: ExampleWeight
 InstanceOf: $vitalsigns
-Title: "Observation: Body weight"
+Title: "Observation: Body weight, Petr Novák"
 Description: "Example of a body weight vital-sign observation"
 
 * language = #cs
