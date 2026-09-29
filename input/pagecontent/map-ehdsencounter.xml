@@ -9,7 +9,7 @@
       <div class="callout-wrapper">
         <div class="callout-box">
           <strong>Ongoing alignment:</strong>
-              The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
+              Future versions of the Xt-EHR models and of the EHDS Implementing Acts may require updates to these mappings.
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSEncounter.html" target="_blank">
+          <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSEncounter.html" target="_blank">
             EHDSEncounter
           </a>
         </li>
@@ -90,7 +90,7 @@
             <td>related-to</td>
             <td>Encounter</td>
             <td>participant.period</td>
-            <td>Encounter does not include a dedicated authorship date element. Authorship date may be inferred from the Encounter.period. If an explicit date is required, this could be represented using an appropriate participation (participant.type='AUT').</td>
+            <td>Encounter does not include a dedicated authorship date element. If an explicit date is required, it could be represented as the period of an appropriate participation (participant.type='AUT'); otherwise it may be inferred from Encounter.period.</td>
           </tr>
           <tr>
             <td>header.status</td>
@@ -101,7 +101,7 @@
           </tr>
           <tr>
             <td>header.source</td>
-            <td>no-map</td>
+            <td>related-to</td>
             <td>Encounter</td>
             <td>participant.individual</td>
             <td>Encounter does not include a dedicated informant element. If informant details are required, this could be represented using an appropriate participation (participant.type='INF')</td>

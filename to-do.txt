@@ -1,4 +1,0 @@
-Update changes.md
-
-update status and version for the 1.0.0. publication
-

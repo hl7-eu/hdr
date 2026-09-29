@@ -9,7 +9,7 @@
       <div class="callout-wrapper">
         <div class="callout-box">
           <strong>Ongoing alignment:</strong>
-              The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
+              Future versions of the Xt-EHR models and of the EHDS Implementing Acts may require updates to these mappings.
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSDeviceUse.html" target="_blank">
+          <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDeviceUse.html" target="_blank">
         EHDSDeviceUse
           </a>
         </li>
@@ -133,7 +133,7 @@
             <td>related-to</td>
             <td>DeviceUseStatement</td>
             <td>bodySite</td>
-            <td>See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdsbodystructure.html">EHDSBodyStructure mapping</a> for details.</td>
+            <td>A body site code in bodySite, or, when laterality or other qualifiers cannot be pre-coordinated, a reference to a BodyStructureEuCore in the R5 backport extension (<code>http://hl7.org/fhir/5.0/StructureDefinition/extension-DeviceUsage.bodySite</code>) on bodySite; not both (invariant <code>dus-hdr-1</code>). See <a href="https://hl7.eu/fhir/base/2.0.1/map-ehdsbodystructure.html">EHDSBodyStructure mapping</a> for details.</td>
           </tr>
           <tr>
             <td>reason[x]</td>

@@ -5,7 +5,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <blockquote class="stu-note">
             <b>Medication Lists</b>
-            <p>The usage of several resources for expressing medication is related to the different purposes and meaning of each resource. While more clear boundaries and relationships between resources may be useful, the editors have decided to maintain a comprehensive set of options open. Reviewers are invited to provide their feedback about the usage of the Medication related resources (e.g. MedicationStatement,  MedicationRequest,...) in the medication lists used by the HDR</p>
+            <p>The usage of several resources for expressing medication is related to the different purposes and meaning of each resource. While clearer boundaries and relationships between resources may be useful, the editors have decided to keep a comprehensive set of options open. Implementers are invited to provide feedback, via HL7 Jira, on the use of medication-related resources (e.g. MedicationStatement, MedicationRequest) in the HDR medication lists.</p>
         </blockquote>
 
     </div>

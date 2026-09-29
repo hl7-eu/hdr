@@ -32,7 +32,7 @@
 
     <p>In practice:</p>
     <ol>
-        <li>A few sections are required.</li>
+        <li>At least one of the Discharge summary or Hospital course sections SHALL be present (invariant <code>cmp-hdr-2</code>).</li>
         <li>
             <strong>Section slices are open</strong>, meaning that implementers have the freedom to
             include additional <strong>"first-level" sections</strong>. </li>

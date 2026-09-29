@@ -8,9 +8,16 @@
     <div class="model-map-block">
       <div class="callout-wrapper">
         <div class="callout-box">
-          <strong>Ongoing alignment:</strong> The models are expected to continue evolving, with
-          updates incorporated into this Implementation Guide to maintain alignment with the EHDS
-          Implementing Acts. </div>
+          <strong>Ongoing alignment:</strong> Future versions of the Xt-EHR models and of the EHDS
+          Implementing Acts may require updates to these mappings. </div>
+      </div>
+    </div>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Yellow rows:</strong>
+              Rows highlighted in yellow identify mappings that need further review with the Xt-EHR Joint Action.
+        </div>
       </div>
     </div>
     <h3>EHDSDischargeReport -> Composition (HDR)</h3>
@@ -437,7 +444,7 @@
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionHospitalCourse.text</td>
-            <td></td>
+            <td>Free-text notes are included in the section narrative (text); the section-note extension may be used instead.</td>
           </tr>
 
           <!-- DISCHARGE DETAILS -->
@@ -481,7 +488,7 @@
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionDischargeDetails.text</td>
-            <td></td>
+            <td>Free-text notes are included in the section narrative (text); the section-note extension may be used instead.</td>
           </tr>
 
           <!-- MEDICATION SUMMARY -->
@@ -511,7 +518,7 @@
             <td>related-to</td>
             <td>Composition</td>
             <td>section:sectionDischargeMedications.text</td>
-            <td></td>
+            <td>Free-text notes are included in the section narrative (text); the section-note extension may be used instead.</td>
           </tr>
 
           <!-- CARE PLAN -->

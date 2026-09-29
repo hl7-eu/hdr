@@ -54,8 +54,6 @@ Usage: #example
 * entry[observation][+].fullUrl = "urn:uuid:5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d"
 * entry[observation][=].resource = ExampleHeadCircumference
 // Not referred anywhere
-// * entry[observation][+].fullUrl = "urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a"
-// * entry[observation][=].resource = ExampleAbdominalCircumference
 * entry[observation][+].fullUrl = "urn:uuid:6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b"
 * entry[observation][=].resource = ExampleHeight
 * entry[observation][+].fullUrl = "urn:uuid:5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c"
@@ -457,18 +455,6 @@ Usage: #inline
 * section[sectionAdmissionEvaluation].code.coding[0].display = "vstupní vyšetření" //"Admission evaluation note"
 * section[sectionAdmissionEvaluation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\">Pacient byl přijat na chirurgické oddělení s bolestivou pravostrannou tříselnou kýlou, která byla nevratná, bez známek strangulace. Při příjmu byl pacient v dobrém stavu, vitální funkce stabilní. Při fyzikálním vyšetření bylo zjištěno bolestivé zduření v oblasti pravého tříselného kanálu, bez známek zánětu nebo infekce. Laboratorní vyšetření ukázalo normální hodnoty krevního obrazu a biochemie, včetně TSH v normálním rozmezí. Pacient byl stabilní, bez známek dehydratace nebo hypovolemie. Byla zahájena předoperační příprava včetně interního vyšetření a laboratorních testů. Pacient byl informován o nutnosti chirurgického zákroku a souhlasil s ním. </div>" // Added required text for cardinality
 * section[sectionAdmissionEvaluation].text.status = #additional
-/* section[sectionAdmissionEvaluation].section[0].title = "Vital sings"
-* section[sectionAdmissionEvaluation].section[=].code = $loinc#8716-3 "Vital signs note"
-* section[sectionAdmissionEvaluation].section[=].text.status = #generated
-* section[sectionAdmissionEvaluation].section[=].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\">Vital signs</div>"
-* section[sectionAdmissionEvaluation].section[=].entry[0] = Reference(urn:uuid:6bec5d97-a17e-4015-8fce-7b1c0c3a2f4b)
-* section[sectionAdmissionEvaluation].section[=].entry[1] = Reference(urn:uuid:5c2ddf62-9785-493f-80c6-8b0d1e3a4b2c)
-* section[sectionAdmissionEvaluation].section[=].entry[2] = Reference(urn:uuid:7cf304de-5ae3-4621-8531-9c8f0b2d4e3a)
-* section[sectionAdmissionEvaluation].section[=].entry[3] = Reference(urn:uuid:5c363e2d-c4e1-436d-bad7-0b3f8c6a9f1d)
-* section[sectionAdmissionEvaluation].section[=].entry[4] = Reference(urn:uuid:4ba395b7-be9e-4bed-bef7-1c8f0b2d4e3a)
-* section[sectionAdmissionEvaluation].section[=].entry[5] = Reference(urn:uuid:6c626338-82ba-46a1-bcb8-2c8f0b2d4e3a) // Corrected Reference to include the resource type
-* section[sectionAdmissionEvaluation].section[=].entry[6] = Reference(urn:uuid:f0b20060-c4a8-4a74-b12a-6c8f0b2d4e3a) // Corrected Reference to include the resource type
-*/
 // --- Admission Evaluation – Functional status at admission ---
 * section[sectionAdmissionEvaluation].section[+].title = "Functional status at admission"
 * section[sectionAdmissionEvaluation].section[=].code.coding[0].system = $loinc

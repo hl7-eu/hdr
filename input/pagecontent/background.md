@@ -1,4 +1,4 @@
-This guide is part of the group of HL7 FHIR Implementation Guides published by HL7 Europe (see figure 1) to support the priority categories identified by the [European Health Data Space Regulation](https://data.consilium.europa.eu/doc/document/PE-76-2024-INIT/en/pdf) (EHDS).
+This guide is part of the group of HL7 FHIR Implementation Guides published by HL7 Europe (see figure 1) to support the priority categories identified by the [European Health Data Space Regulation](http://data.europa.eu/eli/reg/2025/327/oj) (EHDS).
 
 
 <div>
@@ -49,4 +49,4 @@ The following figure summarizes this layered approach.
 
 This activity has been carried out in a neutral working space by engaging EEHRxF-related initiatives (Xt-EHR, MyHealth@EU Architecture WG, EU-funded projects), national and regional agencies, relevant stakeholders, and interested communities (e.g. EU HL7 Affiliates, IHE Europe).
 
-More than 200 distinct participants from 29 countries contributed to this result.
+224 individual contributors from 29 countries contributed to this result.

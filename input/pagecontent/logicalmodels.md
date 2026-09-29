@@ -10,7 +10,7 @@ The logical models listed below are those used by this guide, starting from the 
       <div class="callout-wrapper">
       <div class="callout-box">
         <strong>Ongoing alignment:</strong>
-            The models are expected to continue evolving, with updates incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
+            Future versions of the Xt-EHR models and of the EHDS Implementing Acts may require updates to these mappings.
       </div>
       </div>
 </div>
@@ -36,6 +36,7 @@ The logical models listed below are those used by this guide, starting from the 
 | [EHDSHealthProfessional](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSHealthProfessional.html) | Author, attester, legal authenticator, performer, or other health professional role. |
 | [EHDSOrganisation](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSOrganisation.html) | Organisation involved in the document header, care provision, custody, or intended communication. |
 | [EHDSEncounter](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSEncounter.html) | Encounter information for the hospital episode described by the report. |
+| [EHDSDevice](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDevice.html) | Device acting as author or attester, and device used by the patient (via EHDSDeviceUse). |
 
 ---
 
