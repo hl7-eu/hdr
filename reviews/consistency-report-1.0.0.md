@@ -25,9 +25,7 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 
 ## 2. Configuration and publication
 
-| ID | Sev | Location | Finding | Fix |
-|---|---|---|---|---|
-| 2-1 | Medium | `FHIR-eu-hdr.xml` (Jira spec) | The regenerated file of the 17:17 run has correct keys: the Publisher matches artifacts to the published file (`template/jira-current.xml`) by name before id, and the two titles that collided with published names were changed (see *Fixed*). The QA still warns because it compares against the file on GitHub. The Encounter Class value set keeps the key of its former id (`ValueSet-hdr-encounterClass-eu-hdr`), as intended. | Commit `FHIR-eu-hdr.xml`, then submit `template/jira-new.xml` as a PR to HL7/JIRA-Spec-Artifacts. |
+No open items.
 
 ---
 
@@ -88,11 +86,10 @@ No open items.
 
 This section is based on the IG Publisher 2.3.4 run of 2026-09-29 17:17, built as `1.0.0` / `active` / `trial-use`.
 
-**Visible messages:** 0 errors, 1 warning and 0 information messages.
+**Visible messages:** 0 errors, 0 warnings and 0 information messages (IG Publisher run of 2026-09-30 09:14).
 
 | ID | Message | Resources | Fix |
 |---|---|---|---|
-| 7-1 | The Jira spec file is out of date (the QA compares against GitHub) | IG | Submit `template/jira-new.xml` to HL7/JIRA-Spec-Artifacts (§2). |
 
 **Publication request check:** no issues reported (version 1.0.0, milestone, trial-use, STU 1).
 
@@ -132,10 +129,9 @@ This section is based on the IG Publisher 2.3.4 run of 2026-09-29 17:17, built a
 
 ## 9. Suggested order of work
 
-1. The Jira spec file (2-1): commit it and submit it to HL7/JIRA-Spec-Artifacts.
-2. The Composition/Bundle alignment (§3.1).
-3. The remaining example items (§5) and suppressions that hide fixable issues (§7).
-4. Last, just before publication: the final check of `changes.md` (1-1).
+1. The Composition/Bundle alignment (§3.1).
+2. The remaining example items (§5) and suppressions that hide fixable issues (§7).
+3. Last, just before publication: the final check of `changes.md` (1-1).
 
 ---
 
@@ -314,5 +310,8 @@ Items reviewed and accepted as they are. They keep their id and the structure of
   - All changes are comment-only: the generated resources are identical to those of commit `5bb34f8`. Explanatory comments (e.g. on `SectionComRulesWithTitle`, the presentedForm note in the Composition obligation profile) are kept.
   - **[4-1]** `ObservationEuHdrObligation` now derives from `Observation` instead of `MedicalTestResultEuCore`, so it no longer requires `category` and `effective[x]` where the base profiles allow any Observation (Physical findings, Functional status, Vital signs, `Encounter.reasonReference`).
   - **[4-2]** `LaboratoryObservationEuHdrObligation` (parent `MedicalTestResultEuCore`) is now used for the `results-medicalTestResult` slice of the Significant results section in `CompositionEuHdrObligation`, and is allowed in that section's entries.
-- **Working copy, not yet committed:**
+- **Commit `a182811` (PR #147):**
   - **[2-1]** (part) Titles that collided with names in the published Jira spec file changed, so that the Publisher assigns the right keys: Novak `ExampleWeight` "Observation: Body weight, Petr Novák" (was taking the Swart key `Observation-gewicht-swart`), `ConditionHdrVS` "Condition Value Set (HDR)" (was taking the key of the deprecated `StructureDefinition/condition-eu-hdr`). The 17:17 run regenerated `FHIR-eu-hdr.xml` with the correct keys.
+- **IG Publisher run of 2026-09-30 09:14:**
+  - **[2-1]** The Jira spec file on HL7/JIRA-Spec-Artifacts now matches the IG; `FHIR-eu-hdr.xml` regenerated (0.1.0-ballot marked as deprecated; the Encounter Type value set keeps the key of its former id).
+  - **[7-1]** The QA warning about the Jira spec file is gone: 0 errors, 0 warnings, 0 information messages.
