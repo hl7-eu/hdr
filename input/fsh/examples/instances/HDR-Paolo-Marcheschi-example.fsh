@@ -63,7 +63,7 @@ Title: "Practitioner: Ftgm Dottore (author)"
 Description: "Author of the HDR example."
 Usage: #inline
 * id = "b61b7a93-2965-427a-96b9-972ac7d89997"
-* identifier.id = "12345"
+* identifier.value = "12345"
 * name.family = "Dottore"
 * name.given = "Ftgm"
 * telecom[0].system = #email
