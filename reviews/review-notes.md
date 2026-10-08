@@ -17,6 +17,7 @@ Decisions and conventions for this guide, read by the `fhir-ig-consistency` revi
 - **Dependencies:** `hl7.terminology.r4` is not pinned; the R5 and early-version dependencies are accepted.
 - **`knownIssues.md`:** no further additions (R5 model dependency, R5 cross-version extensions, `bdl-hdr-2` false positive, unrevised obligation areas, resource types without an obligation profile).
 - **Page markup:** the `<head>/<title>` elements in the mapping page fragments and the empty `<a>` / `<p>` elements are kept.
+- **`MedicationRequestEuHdrObligation`:** the obligation stays on `substitution.allowedCodeableConcept` (coded form); the resulting "Binding on the type slicer … allowed[x]" warning is suppressed in `ignoreWarnings.txt`.
 
 ## Conventions
 

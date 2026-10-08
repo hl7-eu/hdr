@@ -135,6 +135,8 @@ Usage: #inline
 * category[+] = $loinc#LP72467-1 "Discharge summary note"
 * title = "Propouštěcí zpráva pacienta Novák Petr"
 * date = "2025-03-10T14:30:00+01:00"
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\"><p><b>Propouštěcí zpráva pacienta Novák Petr</b></p><p>Datum: 10.03.2025 14:30. Autor: MUDr. Ivan Anděl, Nemocnice Chrudim. Ověřil (právně): MUDr. Ivan Anděl, 10.03.2025 14:30.</p></div>"
 * author[+] = Reference(urn:uuid:2b7e9637-5018-4542-9faf-d5abdee7b849)
 * subject = Reference(urn:uuid:3f85726c-ad2f-441b-89ce-100000000000)            // document subject is patient
 //Důvod přijetí je obsažen v Encouteru ReasonReference

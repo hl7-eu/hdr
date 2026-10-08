@@ -116,15 +116,19 @@ There are no valid display names found for the code http://terminology.hl7.org/C
 # Draft code system used
 MSG_DRAFT
 
-# OID not assigned
-%could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)%
+# OID not assigned (information): no OIDs are assigned to the artifacts of this guide.
+# The wording of the message changed in recent IG Publisher versions, so only its stable part is matched.
+%could usefully have an OID assigned%
 
 # XtEHR Logical model is specified using HL7 FHIR R5 (no issues)
 This IG is version 4.0.1, while the IG 'xtehr.eu.ehds.models' is from version 5.0.0
 The ImplementationGuide is based on FHIR version 4.0.1 but package xtehr.eu.ehds.models#1.0.0 is based on FHIR version 5.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
 
-# No keys defined for Additional Binding
-Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())'
+# No keys defined for Additional Binding (ext-ab-1): the additional bindings are inherited from the HL7 Europe Base
+# 2.0.1 profiles (AllergyIntoleranceEuCore, ConditionEuCore, ImmunizationEuCore, MedicationEuCore,
+# MedicationRequestEuCore, MedicationStatementEuCore), which define them without a key; HDR defines none.
+# Recent IG Publisher versions append the element path (" at ..."), so the message is matched as a pattern.
+%Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key%
 
 # Duplicate anchor Ids
 The html source has duplicate anchor Ids: 3f85726c-ad2f-441b-89ce-100000000000,Patient_3f85726c-ad2f-441b-89ce-100000000000,hc3f85726c-ad2f-441b-89ce-100000000000
@@ -135,3 +139,13 @@ Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://w
 
 # OID not assigned for this guide
 %should have an OID assigned to cater for possible use with OID based terminology systems%
+
+# Reference to draft code systems (information): FHIR core (e.g. http://hl7.org/fhir/encounter-status|4.0.1) and
+# terminology.hl7.org code systems that are published with status draft, used from the active HDR value sets
+# and in the examples. Nothing to fix in this guide.
+%Reference to draft CodeSystem%
+
+# MedicationRequestEuHdrObligation: the obligation on substitution.allowedCodeableConcept creates a type slice of
+# substitution.allowed[x]; the example binding inherited from MedicationRequestEuCore (v3-ActSubstanceAdminSubstitutionCode)
+# stays on the slicer and has no effect on the boolean form. Accepted: the obligation targets the coded form on purpose.
+%The Binding on the type slicer MedicationRequest.substitution.allowed[x] applies to all its slices, but it only makes sense for some of its types, so it has no effect on the slices for boolean%
