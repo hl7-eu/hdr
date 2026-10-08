@@ -144,3 +144,8 @@ Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'https://w
 # terminology.hl7.org code systems that are published with status draft, used from the active HDR value sets
 # and in the examples. Nothing to fix in this guide.
 %Reference to draft CodeSystem%
+
+# MedicationRequestEuHdrObligation: the obligation on substitution.allowedCodeableConcept creates a type slice of
+# substitution.allowed[x]; the example binding inherited from MedicationRequestEuCore (v3-ActSubstanceAdminSubstitutionCode)
+# stays on the slicer and has no effect on the boolean form. Accepted: the obligation targets the coded form on purpose.
+%The Binding on the type slicer MedicationRequest.substitution.allowed[x] applies to all its slices, but it only makes sense for some of its types, so it has no effect on the slices for boolean%
